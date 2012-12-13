@@ -1,0 +1,43 @@
+﻿<HTML>
+ <HEAD>
+  <TITLE>简单的树面板示例</TITLE>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <link rel="stylesheet" type="text/css" href="../../extjs2.0/resources/css/ext-all.css" />
+  <script type="text/javascript" src="../../extjs2.0/adapter/ext/ext-base.js"></script>
+  <script type="text/javascript" src="../../extjs2.0/ext-all.js"></script>
+  <script type="text/javascript" src="../../extjs2.0/source/locale/ext-lang-zh_CN.js"></script>
+  <script type="text/javascript">
+	Ext.onReady(function(){
+		
+		Ext.BLANK_IMAGE_URL = '../extjs/resources/images/default/s.gif';
+		
+		//创建根节点
+		var root = new Ext.tree.TreeNode({
+			text : '菜单根节点',
+			href : '12-12-right0.html',//设置节点对应的连接
+			hrefTarget : 'main',//设置展示连接页面的目标框架
+			expanded : true//默认展开根节点
+		});
+		//为根节点添加子节点
+		root.appendChild(new Ext.tree.TreeNode({
+			href : '12-12-right1.html',
+			hrefTarget : 'main',
+			text : '一级菜单A'
+		}))
+		root.appendChild(new Ext.tree.TreeNode({
+			href : '12-12-right2.html',
+			hrefTarget : 'main',
+			text : '一级菜单B'
+		}))
+		//创建Tree面板组件
+		var tree = new Ext.tree.TreePanel({
+			title : '树形菜单',
+			applyTo : document.body,
+			root : root
+		})
+	});
+  </script>
+ </HEAD>
+ <BODY style="margin=10 10 10 10;">
+ </BODY>
+</HTML>

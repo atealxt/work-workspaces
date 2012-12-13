@@ -1,0 +1,78 @@
+@CHARSET "UTF-8";
+
+body {
+	background: #F5F5F5;  
+}
+
+#center {
+	height: 140px;
+	margin-bottom: 10px;
+	border-top: 1px dotted #CCCCCC;
+}
+
+#bottom {
+	height: 19px;
+	border-top: 1px dotted #CCCCCC;
+	padding-top: 9px;
+	background: #FFF;
+	text-align: right;
+	font-size: 11px;
+	font-family:'lucida grande',verdana,lucida,arial,helvetica,sans-serif;
+}
+
+#logo {
+	font-size: 11px;
+	font-family: Verdana, Arial, sans;
+	float: left;
+	width: 460px;
+	height: 100px;
+	padding: 20px;
+}
+
+.bt-left {
+	float: left;
+	text-align: left;
+	padding-left: 20px;
+	width: 98%;
+}
+
+#logo li {
+	padding-left: 5px;
+	padding-top: 1px;
+	padding-bottom: 4px;
+}
+
+.FP {
+	background: url(../images/logo/environment.gif) no-repeat -17px 0px;
+	width: 16px;
+	margin-right: 4px;
+}
+
+.IE {
+	background: url(../images/logo/environment.gif) no-repeat -51px 0px;
+	width: 16px;
+	margin-right: 4px;
+}
+
+.FF {
+	background: url(../images/logo/environment.gif) no-repeat -68px 0px;
+	width: 16px;
+	margin-right: 4px;
+}
+
+.AP {
+	background: url(../images/logo/environment.gif) no-repeat -0px 0px;
+	width: 16px;
+	margin-right: 4px;
+}
+
+.EL {
+	background: url(../images/logo/environment.gif) no-repeat -34px 0px;
+	width: 16px;
+	margin-right: 4px;
+}
+
+.cross {
+	background: url(../images/logo/pdms.gif) no-repeat -85px 0px;
+	margin-right: 4px;
+}

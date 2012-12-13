@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+    <!--登录页面-->
+    <package name="A0100" namespace="/login" extends="struts-default">
+        <default-class-ref class="A0100LoginAction" />
+
+        <global-results>
+            <result name="input">/pages/login.jsp</result>
+            <result name="error">../pages/error.html</result>
+        </global-results>
+
+        <global-exception-mappings>
+            <exception-mapping  exception="java.lang.Exception" result="error"/>
+        </global-exception-mappings>
+
+        <!--welcome-->
+        <action name="welcome" >
+            <result>/pages/login.jsp</result>
+        </action>
+
+        <!--登录-->
+        <action name="A0101LoginAction" method="login">
+            <!--
+            <result type="stream">
+                <param name="inputName">imageStream</param>
+            </result>
+            
+            <result type="json"/>-->
+        </action>
+
+        <!--退出登录-->
+        <action name="A0102LogoutAction" method="logout">
+            <result>/pages/login.jsp</result>
+        </action>
+
+    </package>
+</struts>

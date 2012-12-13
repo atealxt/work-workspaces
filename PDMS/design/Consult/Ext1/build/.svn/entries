@@ -1,0 +1,16 @@
+8
+
+dir
+11
+https://127.0.0.1:8443/svn/System/SOA/build
+https://127.0.0.1:8443/svn/System
+
+
+
+2008-12-08T19:02:48.120123Z
+6
+admin
+
+
+svn:special svn:externals svn:needs-lock
+

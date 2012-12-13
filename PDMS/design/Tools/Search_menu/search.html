@@ -1,0 +1,46 @@
+﻿<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">	
+<head>
+<script type="text/javascript" src="search.js"></script>
+<title>search</title>
+</head>
+<body onload="setup()">
+<form>
+搜索页面的模板设计 <br>
+<li>必须输入搜索条件 </li>
+<li>可添加多个三级分类条件(无关键字条件除外)</li>
+<li>只能添加一个一级分类条件</li>
+<li>不能重复添加相同分类条件</li>
+<hr>
+搜索条件
+<br>	
+<select id="s1"></select>
+<select id="s2"></select>
+<select id="s3"></select>
+<br>
+关键字： <br>
+<!--
+注意不允许输入字符。
+'c='(好像可以输入，不影响，但需要测试验证。)
+-->
+<input type="text" id="text1" value=""/>
+<input type="button" id="button1" value="添加" onclick="addSearch()" />
+<hr>
+<div>已经添加的搜索条件：</div>
+<!--
+部分删除功能待加
+-->
+<div id="condition_code" style=""></div>
+<div id="condition_zh"></div>
+<input type="button" id="button2" value="搜索" onclick="getRet()" />
+<input type="button" id="button3" value="重置" onclick="condition_clear()" />
+<hr>
+<div>搜索结果</div>
+<!--
+按分类不同，显示各个Frame。
+-->
+
+</form>
+</body>
+</html>
+

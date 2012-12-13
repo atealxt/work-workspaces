@@ -1,0 +1,53 @@
+﻿<HTML>
+ <HEAD>
+  <TITLE>提示信息</TITLE>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <link rel="stylesheet" type="text/css" href="../../extjs2.0/resources/css/ext-all.css" />
+  <script type="text/javascript" src="../../extjs2.0/adapter/ext/ext-base.js"></script>
+  <script type="text/javascript" src="../../extjs2.0/ext-all.js"></script>
+  <script type="text/javascript" src="../../extjs2.0/source/locale/ext-lang-zh_CN.js"></script>
+  <script type="text/javascript">
+	Ext.onReady(function(){
+		Ext.BLANK_IMAGE_URL = '../../extjs2.0/resources/images/default/s.gif';
+		Ext.QuickTips.init();//初始化信息提示功能
+		var form = new Ext.form.FormPanel({
+			title:'提示信息（qtip）',//表单标题
+			height:100,//表单高度
+			width:300,//表单宽度
+			frame:true,//是否渲染表单
+			labelSeparator :'：',//分隔符
+			labelWidth : 60,//标签宽度
+			labelAlign : 'right',//标签对齐方式
+			applyTo :'form',
+			items:[
+				new Ext.form.TextField({//文本框
+					fieldLabel : '姓名',//标签内容
+					validateOnBlur : true,
+					validationDelay : 2500,
+					minLength:2,
+					minLengthText :'sss',
+					allowBlank : false,//是否允许为空
+					blankText    :'请填写姓名',//为空之后的提示信息
+					msgTarget :'qtip'//显示一个浮动的提示信息。
+					//msgTarget :'title'//显示一个浏览器原始的浮动提示信息。
+					//msgTarget :'under'//在字段下方显示一个提示信息。
+					//msgTarget :'side'//在字段的右边显示一个提示信息。
+				}),
+				new Ext.form.NumberField({
+					fieldLabel : '年龄',
+					allowBlank : false,
+					blankText :'请填写年龄',
+					msgTarget :'qtip'
+				})
+			]
+		})
+	});
+  </script>
+ </HEAD>
+ <BODY>
+ 	<table width=100%>
+		<tr><td>&nbsp;<td></tr>
+		<tr><td width=100></td><td><div id='form'></div><td></tr>
+	</table>
+ </BODY>
+</HTML>

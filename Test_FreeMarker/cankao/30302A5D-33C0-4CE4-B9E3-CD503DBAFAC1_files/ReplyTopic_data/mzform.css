@@ -1,0 +1,80 @@
+﻿.MzForm{top:20px; left:20px; min-width:160px; min-height:100px;}
+.MzFormContent{text-align:left; vertical-align:top; min-height:48px; min-width:130px;}
+
+.MzForm .MzFormLayer{padding:7px; position:relative; z-index:3;}
+.MzForm .MzFormCaption{height:24px; font-size:12px; vertical-align:top; text-align:left; cursor:default;background: url(/pointforum/ui/scripts/System/_resource/MzForm/icon.gif) no-repeat left 3px;}
+.MzForm .MzFormCaptionText{height:20px; line-height:24px; padding-left:18px; color:#000000; overflow:hidden; cursor:default; margin-right:5px;}
+
+.MzForm .MzFormContent{background-color:#FFFFFF;border:solid 1px #bdd3ef; cursor:default;}
+.MzForm .MzFormStatusBar{line-height:20px; font-size:12px; color:#000000; cursor:default;}
+.MzForm .MzFormButtonBar td{ height: 21px; font-size:12px; color:#000000; cursor:default; text-align:right; padding-top:3px;}
+.MzForm .MzFormButtonBar input{width:60px; height: 21px; background:url(/pointforum/ui/scripts/System/_resource/MzForm/button.gif) no-repeat; font-size:12px; border:none}
+.MzForm .MzFormButtonBar input.cancel{background-position:left -21px;}
+.MzForm .MzFormControlBar{float:right; cursor:default;line-height:normal;}
+.MzForm .MzFormControlBar img{border:none;}
+
+.MzForm .BgLayer{position:absolute; z-index:1; top:0; left:0; width:100%; height:100%; font-size:1px;}
+html>body .MzForm .BgLayer, html>body .MzFormCaption, html>body .MzFormControlBar{-moz-user-select:none;}
+ .BgLayer .midland .normal{display:none; height:100%;}
+ .BgLayer .midland .focused{display:none; height:100%;}
+
+/*--== normal background-image ==--*/
+.MzForm .MzFormLayerTable{}
+.MzForm .MzFormControlBar .Close img{width:28px; height:15px; background:url(/pointforum/ui/scripts/System/_resource/MzForm/close.gif) no-repeat;}
+.MzForm .MzFormControlBar .Minimize img{width:28px; height:15px; background:url(/pointforum/ui/scripts/System/_resource/MzForm/minimize.gif) no-repeat;}
+.MzForm .MzFormControlBar .Maximize img{width:28px; height:15px; background:url(/pointforum/ui/scripts/System/_resource/MzForm/maximize.gif) no-repeat;}
+.MzForm .BgLayer .corner{background:url(/pointforum/ui/scripts/System/_resource/MzForm/corner.gif) no-repeat; width:50px; height:50px;}
+.MzForm .BgLayer .horizontal{background:url(/pointforum/ui/scripts/System/_resource/MzForm/horizontal.gif) repeat-y left top;}
+.MzForm .BgLayer .vertical{background:url(/pointforum/ui/scripts/System/_resource/MzForm/vertical.gif) repeat-x left top;}
+
+/*--== normal ==--*/
+.MzForm .BgLayer .midland{background-color:#D7E4F2;}
+.MzForm .BgLayer .top .right{background-position:right top;}
+.MzForm .BgLayer .middle .left{background-position:left top;}
+.MzForm .BgLayer .middle .right{background-position:-50px top;}
+.MzForm .BgLayer .bottom .left{background-position:left -50px;}
+.MzForm .BgLayer .bottom .center{background-position:left -50px;}
+.MzForm .BgLayer .bottom .right{background-position:right -50px;}
+
+/*--== normal focused ==--*/
+.focused .MzFormControlBar .Close img{background-position:left -15px;}
+.focused .MzFormControlBar .Minimize img{background-position:left -15px;}
+.focused .MzFormControlBar .Maximize img{background-position:left -15px;}
+.focused .BgLayer .midland{background-color:#BDD3EF;}
+.focused .BgLayer .top .left{background-position:left -100px;}
+.focused .BgLayer .top .center{background-position:left -100px;}
+.focused .BgLayer .top .right{background-position:right -100px;}
+.focused .BgLayer .middle .left{background-position:-100px top;}
+.focused .BgLayer .middle .center{background-color:#BDD3EF;}
+.focused .BgLayer .middle .right{background-position:right top;}
+.focused .BgLayer .bottom .left{background-position:left bottom;}
+.focused .BgLayer .bottom .center{background-position:left bottom;}
+.focused .BgLayer .bottom .right{background-position:right bottom;}
+
+
+/*--== png background-image ==--*/
+.png .BgLayer .corner{background-image:url(/pointforum/ui/scripts/System/_resource/MzForm/corner.png);}
+.png .BgLayer .horizontal{background-image:url(/pointforum/ui/scripts/System/_resource/MzForm/horizontal.png);}
+.png .BgLayer .vertical{background-image:url(/pointforum/ui/scripts/System/_resource/MzForm/vertical.png);}
+.png .BgLayer .midland{background-color:transparent; height:100%;}
+.png .BgLayer .midland .normal{background-image:url(/pointforum/ui/scripts/System/_resource/MzForm/midland.png); display:block;}
+.png .BgLayer .midland .focused{background-image:url(/pointforum/ui/scripts/System/_resource/MzForm/midland_f.png);display:none;}
+.png .MzFormContent{background:transparent url(/pointforum/ui/scripts/System/_resource/MzForm/bgContent.png); border:solid 1px #666666;}
+.png .MzFormControlBar .Close img{width:44px; height:19px; background-image:url(/pointforum/ui/scripts/System/_resource/MzForm/close_png.gif);}
+.png .MzFormControlBar .Minimize img{width:26px; height:19px; background-image:url(/pointforum/ui/scripts/System/_resource/MzForm/minimize_png.gif);}
+.png .MzFormControlBar .Maximize img{width:25px; height:19px; background-image:url(/pointforum/ui/scripts/System/_resource/MzForm/maximize_png.gif);}
+
+/*--== png normal ==--*/
+.png .MzFormLayer{padding: 10px 15px 15px;}
+.png .MzFormLayerTable{background-position:left 5px;}
+.png .MzFormCaption{height:28px;}
+.png .MzFormCaptionText{line-height:28px;}
+.png .MzFormControlBar{margin-top:-1px;}
+
+/*--== png normal ==--*/
+.focused .png .MzFormControlBar .Close img{background-position:left top;}
+.focused .png .MzFormControlBar .Minimize img{background-position:left top;}
+.focused .png .MzFormControlBar .Maximize img{background-position:left top;}
+.focused .png .BgLayer .midland{background-color:transparent;}
+.focused .png .BgLayer .midland .normal{display:none;}
+.focused .png .BgLayer .midland .focused{display:block;}

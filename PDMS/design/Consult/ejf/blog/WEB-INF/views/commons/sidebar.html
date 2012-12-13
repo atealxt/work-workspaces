@@ -1,0 +1,149 @@
+﻿
+<div id="sidebar">
+<div class="rsidebar">
+<ul>
+
+
+
+
+<li><h2>About Me</h2>
+
+
+Name : Mr. WilliamRaym<br />
+Location : Chongqing China<br />
+Mail : WilliamRaym [ A T ] gmail.com
+
+
+</li>
+
+
+
+#if(!$session.user)
+  <li>
+  <h2>请您登录</h2>
+		<form method="post" id="searchform" action="/portal.ejf?cmd=login">
+		  <div>
+				 用户名:
+				   <input type="text" name="userName" id="userName" />
+			     <br />
+				   密　码:
+				   <input type="password" name="password" id="password" />
+			     <br />
+				　　　
+				<input type="submit" id="searchsubmit" value="登录" />
+			
+				　
+        <input name="register" type="button" id="register" value="注册"  onclick="location.href='portal.ejf?cmd=register'"/>
+		  </div>
+		</form>
+	</li>
+	#else
+<li>
+  <h2>$session.user.name，欢迎您登录系统!</h2>
+		
+	</li>
+	#end
+	<li class="categories">
+		<h2>类别</h2>
+		<ul>	
+		#foreach( $entry in $categoryList )
+		<li class="cat-item cat-item-16"><a href="/portal.ejf?cmd=topicList&amp;categoryId=$!{entry.id}" title="View all posts filed under $!{entry.name}">$!CommUtil.format($entry.name,20)</a> ($entry.topics.size())</li>
+		#end
+		</ul>
+	</li>
+	
+	<li class="album">
+		<h2>Album</h2>
+		<ul>	
+		#foreach( $entry in $albumCategoryList )
+		<li class="cat-item cat-item-$velocityCount"><a href="/portal.ejf?cmd=albumList&amp;categoryId=$!{entry.id}" title="View all posts filed under $!{entry.name}">$!CommUtil.format($entry.name,20)</a> ($entry.albums.size())</li>
+		#end
+		</ul>
+	</li>
+	
+#if($recentCommentList.size()>0)
+<li><h2>最近的评论</h2>
+<ul>
+#foreach( $entry in $recentCommentList )
+<li>$entry.user.name:<a href="#if($entry.album )/portal.ejf?cmd=albumShow&id=$!{entry.album.id}#else/portal.ejf?cmd=topicShow&id=$!{entry.topic.id}#end#comment-$!{entry.id}" title="$!{entry.content}">$!CommUtil.format($entry.content,20)</a></li>
+#end
+</ul>
+</li>
+#end
+
+#if($recentPostList.size()>0)
+<li><h2>最近发表的日志</h2>
+	<ul>
+#foreach( $entry in $recentPostList )
+<li><a href="/portal.ejf?cmd=topicShow&id=$!{entry.id}">$!CommUtil.format($entry.title,20)</a></li>
+#end
+	</ul>
+</li>
+#end
+
+<li><h2>收藏</h2>
+<!-- AddThis Bookmark Button BEGIN -->
+<script type="text/javascript">
+  addthis_url    = location.href;   
+  addthis_title  = document.title;  
+  addthis_pub    = 'williamraym';     
+</script><script type="text/javascript" src="http://s7.addthis.com/js/addthis_widget.php?v=12" ></script>
+<!-- AddThis Bookmark Button END -->
+</li>
+
+#if($linkList.size()>0)
+<li>
+	<h2>链接</h2>
+	#foreach( $entry in $linkList )
+	<li><a href="$!{entry.url}?refer=WLR.EASYJF.COM&Link_Area" target="_blank">$!CommUtil.format($entry.title,20)</a></li>
+	#end
+</li>
+#end
+
+
+<li><h2>饭否?</h2>
+<img src="http://b.fanfou.com/u/williamraym/m.png" />
+</li>
+
+<li><h2>音乐</h2>
+<div>
+<object type="application/x-shockwave-flash" data="/images/player.swf?soundFile=http://us.ncuhome.cn/Mail/AttachFiles/2007/12/08/200712081810283430239.mp3&amp;t=swf"
+ width="240" height="24">
+<param name="movie" value="/images/player.swf?soundFile=http://us.ncuhome.cn/Mail/AttachFiles/2007/12/08/200712081810283430239.mp3&amp;t=swf" />
+#*
+<param name="soundFile" value="http://dl.8358.net/a004.mp3" />
+*#
+<param name="t" value="swf" />
+<param name="loop" value="false" />
+<param name="play" value="false" />
+<param name="wmode" value="transparent" />
+</object>
+#*
+<embed src="/images/player.swf?soundFile=http%3A%2F%2F61.233.135.30%2Fxxweb%2Fclassweb%2F32%2Fmusic%2F%E6%B5%B7%E9%B8%A3%E5%A8%81-%E8%80%81%E4%BA%BA%E4%B8%8E%E6%B5%B7.MP3&amp;t=swf" width="290" height="24" type="application/x-shockwave-flash" loop="false" play="false" wmode="transparent" />
+*#
+</div>
+</li>
+
+<li><h2>点击来源？</h2>
+
+<div id="referer"><a href="http://www.clicki.cn/">Clicki</a></div><script src="http://www.clicki.cn/refer/feeler.php?siteid=12731&userid=12476"></script></div>
+
+</li>
+#*
+
+
+
+
+
+text-overflow :ellipsis
+
+
+<li><h2>Archives</h2>
+	<ul>
+		<li><a href='http://127.0.0.1/labs.8358.net/?m=200801' title='January 2008'>January 2008</a></li>
+	</ul>
+</li>
+*#
+</ul>
+</div>		
+</div>

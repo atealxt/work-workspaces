@@ -1,0 +1,55 @@
+﻿<HTML>
+ <HEAD>
+  <TITLE>属性表格面板PropertyGrid</TITLE>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <link rel="stylesheet" type="text/css" href="../../extjs2.0/resources/css/ext-all.css" />
+  <script type="text/javascript" src="../../extjs2.0/adapter/ext/ext-base.js"></script>
+  <script type="text/javascript" src="../../extjs2.0/ext-all.js"></script>
+  <script type="text/javascript" src="../../extjs2.0/source/locale/ext-lang-zh_CN.js"></script>
+  <script type="text/javascript">
+	Ext.onReady(function(){
+		Ext.BLANK_IMAGE_URL = '../../extjs2.0/resources/images/default/s.gif';
+		Ext.QuickTips.init();
+		Ext.form.Field.prototype.msgTarget = 'qtip';//统一指定错误信息提示方式
+
+		//创建PropertyGrid表格组件
+		var grid = new Ext.grid.PropertyGrid({
+			title : 'Ext.grid.PropertyGrid',
+			width:430,
+			height:180,
+			frame:true,
+			customEditors : {
+				"性别" : new Ext.grid.GridEditor(new Ext.form.ComboBox({
+					editable : false,
+					displayField:'sex',
+					mode: 'local',
+					triggerAction: 'all',
+					selectOnFocus:true,
+					store:new Ext.data.SimpleStore({
+						fields: ['sex'],
+						data : [['男'],['女']]
+					})
+				})),
+				"出生日期": new Ext.grid.GridEditor(new Ext.form.DateField({
+					format : 'Y年m月d日',
+					selectOnFocus:true,
+					allowBlank : false
+				}))
+			},
+			source: {
+				"员工名称" : "张三",
+				"出生日期" : new Date(2007,10,07),
+				"性别" : '男',
+				"是否已婚" : false,
+				"年龄" : 29
+			}
+		})
+		grid.getColumnModel().dateFormat = 'Y年m月d日';//设置日期格式
+		grid.render('grid-div');
+	});
+  </script>
+ </HEAD>
+ <BODY style="margin=10 10 10 10;">
+	<div id='grid-div'></div>
+ </BODY>
+</HTML>

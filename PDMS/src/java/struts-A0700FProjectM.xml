@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+    <!--所属项目管理页面-->
+    <package name="A0700" namespace="/fprojectm" extends="struts-default">
+
+        <result-types>
+            <result-type name="json" class="com.googlecode.jsonplugin.JSONResult"/>
+        </result-types>
+
+        <default-class-ref class="A0700FProjectMAction" />
+
+        <global-results>
+            <result name="input">/pages/login.jsp</result>
+            <result name="error">../pages/error.html</result>
+        </global-results>
+
+        <global-exception-mappings>
+            <exception-mapping  exception="java.lang.Exception" result="error"/>
+        </global-exception-mappings>
+
+        <!--main-->
+        <action name="A0700FProjectMAction">
+            <result>/pages/fprojectm.jsp</result>
+        </action>
+
+        <!--编辑任务-->
+        <action name="A0701EditMAction" method="editMission">
+        </action>
+
+        <!--添加新任务-->
+        <action name="A0702AddMAction" method="addMission">
+        </action>
+
+        <!--编辑组员-->
+        <action name="A0703EditGUsrAction" method="editGroupUsr">
+        </action>
+
+        <!--添加组员-->
+        <action name="A0704AddGUsrAction" method="addGroupUsr">
+        </action>
+
+        <!--编辑公告-->
+        <action name="A0705EditANAction" method="editAN">
+        </action>
+
+        <!--编辑LOGO-->
+        <action name="A0705EditLGAction" method="editLG">
+        </action>
+
+        <!--任务信息-->
+        <action name="A0706MisInfAction" method="missionInfo">
+            <result type="json"/>
+        </action>
+
+        <!--分配任务-->
+        <action name="A0707DistMAction" method="distMission">
+        </action>
+
+        <!--删除任务-->
+        <action name="A0708DelMAction" method="delMission">
+        </action>
+
+        <!--验收任务-->
+        <action name="A0709InspMAction" method="inspectMission">
+        </action>
+
+    </package>
+</struts>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd
+       http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.0.xsd
+       http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.0.xsd"
+       default-init-method="init"
+       default-destroy-method="destroy">
+
+    <bean id="UserDao" class="pdms.components.dao.impl.UserDaoImpl"/>
+    <bean id="ProjectDao" class="pdms.components.dao.impl.ProjectDaoImpl"/>
+    <bean id="IdentityDao" class="pdms.components.dao.impl.IdentityDaoImpl"/>
+    <bean id="MissionDao" class="pdms.components.dao.impl.MissionDaoImpl"/>
+    <bean id="TopicDao" class="pdms.components.dao.impl.TopicDaoImpl"/>
+    <bean id="ReplyDao" class="pdms.components.dao.impl.ReplyDaoImpl"/>
+    <bean id="FileDao" class="pdms.components.dao.impl.FileDaoImpl"/>
+    <bean id="GroupDao" class="pdms.components.dao.impl.GroupDaoImpl"/>
+    <bean id="RoleDao" class="pdms.components.dao.impl.RoleDaoImpl"/>
+    <bean id="UserProjectRelDao" class="pdms.components.dao.impl.UserProjectRelDaoImpl"/>
+
+<!--debug用
+    <bean id="EasyDao" class="pdms.platform.core.EasyDao"/>
+    <bean id="ExampleDao" class="pdms.components.dao.impl.ExampleDaoImpl"/>-->
+
+<!--
+    <bean id="UserDao" class="pdms.components.dao.UserDaoImpl" scope="prototype" />
+    <bean id="ProjectDao" class="pdms.components.dao.ProjectDaoImpl" scope="prototype" />
+    <bean id="IdentityDao" class="pdms.components.dao.IdentityDaoImpl" scope="prototype" />
+    <bean id="MissionDao" class="pdms.components.dao.MissionDaoImpl" scope="prototype" />
+    <bean id="TopicDao" class="pdms.components.dao.TopicDaoImpl" scope="prototype" />
+    <bean id="ReplyDao" class="pdms.components.dao.ReplyDaoImpl" scope="prototype" />
+
+    <bean id="EasyDao" class="pdms.platform.core.EasyDao" scope="prototype" />
+    <bean id="ExampleDao" class="pdms.components.dao.ExampleDaoImpl" scope="prototype" />
+-->
+
+</beans>

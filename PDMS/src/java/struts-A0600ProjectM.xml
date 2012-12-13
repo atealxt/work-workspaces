@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+    <!--项目管理页面-->
+    <package name="A0600" namespace="/projectm" extends="struts-default">
+
+        <result-types>
+            <result-type name="json" class="com.googlecode.jsonplugin.JSONResult"/>
+        </result-types>
+
+        <default-class-ref class="A0600ProjectMAction" />
+
+        <global-results>
+            <result name="input">/pages/login.jsp</result>
+            <result name="error">../pages/error.html</result>
+        </global-results>
+
+        <global-exception-mappings>
+            <exception-mapping  exception="java.lang.Exception" result="error"/>
+        </global-exception-mappings>
+
+        <!--main-->
+        <action name="A0600ProjectMAction">
+            <result type="json"/>
+        </action>
+
+        <!--编辑项目-->
+        <action name="A0601EditAction" method="editProject">
+        </action>
+
+        <!--添加新项目-->
+        <action name="A0602AddPrjAction" method="addProject">
+        </action>
+
+        <!--返回项目负责人列表-->
+        <action name="A0603ManAction" method="manList">
+        </action>
+
+        <!--关闭项目-->
+        <action name="A0604DelAction" method="delPrj">
+        </action>
+
+    </package>
+</struts>

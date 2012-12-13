@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+    <!--用户组管理页面-->
+    <package name="A1200" namespace="/groupm" extends="struts-default">
+
+        <result-types>
+            <result-type name="json" class="com.googlecode.jsonplugin.JSONResult"/>
+        </result-types>
+
+        <default-class-ref class="A1200GroupMAction" />
+
+        <global-results>
+            <result name="input">/pages/login.jsp</result>
+            <result name="error">../pages/error.html</result>
+        </global-results>
+
+        <global-exception-mappings>
+            <exception-mapping  exception="java.lang.Exception" result="error"/>
+        </global-exception-mappings>
+
+        <!--main-->
+        <action name="A1200GroupMAction">
+            <result type="json"/>
+        </action>
+
+        <!--编辑用户组-->
+        <action name="A1201EditAction" method="editGroup">
+        </action>
+
+        <!--添加新用户组-->
+        <action name="A1202AddGrpAction" method="addGroup">
+        </action>
+
+        <!--删除用户组-->
+        <action name="A1203DelGrpAction" method="delGroup">
+        </action>
+
+    </package>
+</struts>

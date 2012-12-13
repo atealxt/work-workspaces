@@ -1,0 +1,46 @@
+~~ FCKeditor - The text editor for Internet - http://www.fckeditor.net
+~~ Copyright (C) 2003-2008 Frederico Caldeira Knabben
+~~ 
+~~ == BEGIN LICENSE ==
+~~ 
+~~ Licensed under the terms of any of the following licenses at your
+~~ choice:
+~~ 
+~~  - GNU General Public License Version 2 or later (the "GPL")
+~~    http://www.gnu.org/licenses/gpl.html
+~~ 
+~~  - GNU Lesser General Public License Version 2.1 or later (the "LGPL")
+~~    http://www.gnu.org/licenses/lgpl.html
+~~ 
+~~  - Mozilla Public License Version 1.1 or later (the "MPL")
+~~    http://www.mozilla.org/MPL/MPL-1.1.html
+~~ 
+~~ == END LICENSE ==
+~~ @version $Id: demo.apt.vm 2540 2008-10-11 02:09:37Z mosipov $
+                                    ------------------------------
+                                           		Demo
+                                    ------------------------------
+
+Demo Web Application
+
+    [Requirements:] You need at least JRE 1.4 and a Servlet 2.4/JSP 2.0 compliant
+                    server implementation to run the demo webapp.
+
+  The demo is intended for novices, beginners, and for everyone who wants to see
+  the FCKeditor (version ${FCKeditorVersion}) in action right out of the box. It's also a good
+  reference for you to see how all integral parts work together.
+
+  It takes three simple steps to see the demo in action:
+
+   [[1]] Download the <<<fckeditor-java-demo-${currentVersion}.war>>> from the
+         {{{http://sourceforge.net/project/showfiles.php?group_id=75348&package_id=129511}download area}}.
+
+   [[2]] Deploy the <<<fckeditor-java-demo-${currentVersion}.war>>> in your servlet container
+         or application server and make sure that the context is enabled.
+        
+   [[3]] Open up your browser and point to <<<http://localhost:8080/fckeditor-java-demo-${currentVersion}>>>.
+         (assuming your server is running local at port 8080 for testing purposes)
+
+   []
+
+  You are now ready to explore the FCKeditor!

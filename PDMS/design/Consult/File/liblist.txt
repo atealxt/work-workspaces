@@ -1,0 +1,8 @@
+ hibernate3.jar
+ log4j-1.2.9.jar
+ spring.jar
+ cglib-nodep-2.1_2.jar
+ classes12.jar
+ dom4j-1.6.jar
+ ehcache-1.1.jar
+ commons-dbcp.jar

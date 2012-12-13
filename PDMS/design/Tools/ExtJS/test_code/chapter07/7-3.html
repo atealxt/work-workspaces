@@ -1,0 +1,25 @@
+﻿<HTML>
+ <HEAD>
+  <TITLE>Extjs方式的事件绑定</TITLE>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <link rel="stylesheet" type="text/css" href="../../extjs2.0/resources/css/ext-all.css" /></STYLE>
+  <script type="text/javascript" src="../../extjs2.0/adapter/ext/ext-base.js"></script>
+  <script type="text/javascript" src="../../extjs2.0/ext-all.js"></script>
+ </HEAD>
+ <BODY>
+  <input type='button' id='btn' value='ok'>
+ </BODY>
+  <script type="text/javascript">
+	Ext.onReady(function(){
+		function hello1(){
+			alert('hello1');
+		}
+		function hello2(){
+			alert('hello2');
+		}
+		var button = Ext.get('btn');
+		button.addListener('click',hello1);//绑定事件处理函数
+		button.addListener('click',hello2);
+	});
+  </script>
+</HTML>

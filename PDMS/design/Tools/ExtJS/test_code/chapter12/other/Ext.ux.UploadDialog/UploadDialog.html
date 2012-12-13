@@ -1,0 +1,288 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+
+
+
+    <meta name="author" content="南极光">
+    <meta name="Copyright" content="Csdn">
+    <meta name="description" content="ext 多文件上传控件 Ext.ux.UploadDialog 使用 ">
+    <meta name="keywords" content="南极光,ext 多文件上传控件 Ext.ux.UploadDialog 使用中的问题">
+    <link rel="Shortcut Icon" href="http://profile.csdn.net/wayfoon322/picture/1.ico">
+    <link href="UploadDialog_files/AnotherEon001_1.css" type="text/css" rel="stylesheet" media="all"><script type="text/javascript" src="UploadDialog_files/jquery-1.js"></script><script type="text/javascript" src="UploadDialog_files/jquery.js"></script><script type="text/javascript" src="UploadDialog_files/highlighter.js"></script><link href="http://blog.csdn.net/wayfoon322/rss.aspx" title="RSS" type="application/rss+xml" rel="alternate">
+    <title>
+        ext 多文件上传控件 Ext.ux.UploadDialog 使用中的问题 - 南极光经验分享 - CSDNBlog</title>
+<link type="text/css" rel="stylesheet" href="UploadDialog_files/webimPopup.css"><script src="UploadDialog_files/mystats_more.js" type="text/javascript"></script><script type="text/javascript" src="UploadDialog_files/webimPopup.js"></script><script src="UploadDialog_files/PopupMessages.html" id="webIM_popup_js495" type="text/javascript"></script></head><body id="defaultuser">
+    <div id="csdnblog_allwrap">
+        <form name="Form1" method="post" action="3541095.aspx" language="javascript" onsubmit="javascript:return WebForm_OnSubmit();" id="Form1">
+<input name="__EVENTTARGET" id="__EVENTTARGET" value="" type="hidden">
+<input name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" type="hidden">
+<input name="__VIEWSTATE" id="__VIEWSTATE" value="" type="hidden">
+
+<script type="text/javascript">
+<!--
+var theForm = document.forms['Form1'];
+if (!theForm) {
+    theForm = document.Form1;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+// -->
+</script>
+
+
+<script src="UploadDialog_files/WebResource.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+//<![CDATA[
+var Anthem_FormID = "Form1";
+//]]>
+</script>
+<script src="UploadDialog_files/WebResource.axd" type="text/javascript"></script>
+<script src="UploadDialog_files/WebResource_002.js" type="text/javascript"></script>
+<script type="text/javascript">
+<!--
+function WebForm_OnSubmit() {
+if (typeof(ValidatorOnSubmit) == "function" && ValidatorOnSubmit() == false) return false;
+return true;
+}
+// -->
+</script>
+
+        
+<div id="csdnblog_midwrap">
+    <div id="csdnblog_header">
+        
+        <h1><a id="Header1_HeaderTitle" href="http://blog.csdn.net/wayfoon322/">南极光经验分享</a></h1><h2>Java,oracle,mysql,sqlserver2005,SSH,ext</h2>
+        
+        <ul id="personalnav"><li><a href="http://hi.csdn.net/atealxt" target="_blank">欢迎 atealxt</a></li><li><a href="http://hi.csdn.net/my.html">我的首页<em></em></a></li><li><a href="http://writeblog.csdn.net/PostList.aspx">文章管理<em></em></a></li><li><a href="http://writeblog.csdn.net/PostEditPlain.aspx">写文章<em></em></a></li><li><a href="http://writeblog.csdn.net/Signout.aspx">退出</a></li></ul>
+        
+        <ul id="blogsearchsty"><li><input id="inputSearch" class="bolgsearch" onkeydown="return keyb(event)" type="text"></li><li class="selectsty"><select name="Search:ddlSearchScope" id="Search_ddlSearchScope"><option value="all">全站</option><option value="wayfoon322">当前博客</option></select></li><li><input onclick="checkNull()" value="搜索" class="bolggobtn" type="button"></li></ul>
+        
+        <ul id="menu"><li><a href="http://hi.csdn.net/wayfoon322">空间</a></li><li><a href="http://blog.csdn.net/wayfoon322" class="on">博客</a></li><li><a href="http://hi.csdn.net/wayfoon322/profile/contactlist/1.html">好友</a></li><li><a href="http://album.hi.csdn.net/" target="_blank">相册</a></li><li><a href="http://hi.csdn.net/wayfoon322/profile/notebook/1.html" class="last">留言</a></li></ul>
+    </div>
+    <div id="csdnblog_sidebar">
+        <div class="gutter">
+            <div class="aboutauthor">
+                <dl>
+                    
+                    <dt>用户操作</dt><dd class="middle"><a href="http://webim.csdn.net/Messages/wayfoon322.ashx" target="_blank">[即时聊天]</a> <a href="http://hi.csdn.net/Admin/WriteMessage.aspx?Receiver=wayfoon322" target="_blank">[发私信]</a> <a href="http://webim.csdn.net/AddFriends/wayfoon322.ashx" target="_blank">[加为好友]</a></dd><dt>    南极光<span>ID：wayfoon322</span></dt><dd class="middle">    <img src="UploadDialog_files/1_wayfoon322.jpg" alt=""></dd><dd class="middle">    <a href="http://profile.csdn.net/8/E4/edit.html"></a></dd><dd>    共<em>15534</em>次访问，排名<em>8401(-1)</em>，好友<em>10</em>人，关注者<em>11</em>人。<br>热爱技术 java，oracle, sqlserver, ext</dd><dd>    </dd><dt>wayfoon322的文章</dt><dd>原创 61 篇</dd><dd>翻译 0 篇</dd><dd>转载 12 篇</dd><dd>评论 15 篇</dd> 
+                    
+                    <dt>南极光的公告</dt><dd><a href="tencent://message/?uin=10615238&amp;Site=http://blog.csdn.net/wayfoon322&amp;Menu=yes"><img src="UploadDialog_files/pa.bin" alt="点我聊QQ" border="0"></a><br>
+java，oracle, sqlserver, ext</dd>
+
+                    <dt>最近评论</dt><dd>wayfoon322：<a href="http://blog.csdn.net/wayfoon322/archive/2008/04/12/2285577.aspx#928695" title="点击查看《回复:oracle 11g下载 Oracle 10g下载 Oracle 9i下载》">此oracle下载从2008-9-9开始已经被baidu屏蔽，你能进来下载算你幸运！</a></dd><dd>wayfoon322：<a href="http://blog.csdn.net/wayfoon322/archive/2008/04/12/2285577.aspx#886006" title="点击查看《回复:oracle11g下载Oracle 10g下载 Oracle 9i 下载》">Oracle
+9i for
+Windows下载方法：直接在浏览器输入：http://download.oracle.com/otn/nt/oracle9i/9201
+/92010NT_Disk1.zip 即可，也可以复制链接 在迅雷里面点击新建任务，将自动创建下载任务<br></a></dd><dd>强：<a href="http://blog.csdn.net/wayfoon322/archive/2008/04/12/2285577.aspx#885142" title="点击查看《回复:oracle11g下载Oracle 10g下载 Oracle 9i 下载》">哥们我是个新学者！我不太懂ORACLE 9i怎么下？上哪下？希望你看到我的留言告诉我好吗？我的QQ号是49826374我挺着急用的！谢谢你了！一定联系我啊！</a></dd><dd>wayfoon322：<a href="http://blog.csdn.net/wayfoon322/archive/2008/04/12/2285577.aspx#883433" title="点击查看《回复:oracle11g下载Oracle 10g下载 Oracle 9i 下载》">下载速度快</a></dd><dd>游客：<a href="http://blog.csdn.net/wayfoon322/archive/2008/04/12/2285577.aspx#883207" title="点击查看《回复:oracle11g下载Oracle 10g下载 Oracle 9i 下载》">网页打开好慢</a></dd>
+                    
+                    <dt>文章分类</dt><dd><div class="publiclist_sidebar"><ul><li><a href="http://blog.csdn.net/wayfoon322/category/414047.aspx">Ext 2.x专栏</a><a href="http://blog.csdn.net/wayfoon322/category/414047.aspx/rss">(RSS)</a></li><li><a href="http://blog.csdn.net/wayfoon322/category/378371.aspx">java技术</a><a href="http://blog.csdn.net/wayfoon322/category/378371.aspx/rss">(RSS)</a></li><li><a href="http://blog.csdn.net/wayfoon322/category/380313.aspx">SSH</a><a href="http://blog.csdn.net/wayfoon322/category/380313.aspx/rss">(RSS)</a></li><li><a href="http://blog.csdn.net/wayfoon322/category/382472.aspx">wap+jsp</a><a href="http://blog.csdn.net/wayfoon322/category/382472.aspx/rss">(RSS)</a></li><li><a href="http://blog.csdn.net/wayfoon322/category/378375.aspx">web2.0/ajax</a><a href="http://blog.csdn.net/wayfoon322/category/378375.aspx/rss">(RSS)</a></li><li><a href="http://blog.csdn.net/wayfoon322/category/378374.aspx">环境配置</a><a href="http://blog.csdn.net/wayfoon322/category/378374.aspx/rss">(RSS)</a></li><li><a href="http://blog.csdn.net/wayfoon322/category/457377.aspx">跨平台跨语言</a><a href="http://blog.csdn.net/wayfoon322/category/457377.aspx/rss">(RSS)</a></li><li><a href="http://blog.csdn.net/wayfoon322/category/378372.aspx">数据库</a><a href="http://blog.csdn.net/wayfoon322/category/378372.aspx/rss">(RSS)</a></li><li><a href="http://blog.csdn.net/wayfoon322/category/477704.aspx">性能/优点</a><a href="http://blog.csdn.net/wayfoon322/category/477704.aspx/rss">(RSS)</a></li></ul></div></dd><dt>收藏</dt><dd><div class="publiclist_sidebar"><ul></ul></div></dd><dt>相册</dt><dt>bolg链接</dt><dd><a href="http://www.jbossseam.com/" target="_blank">jboss seam</a></dd><dd><a href="http://hi.baidu.com/fzgspace/blog/item/e14f44e9cecbff3ab90e2d54.html" target="_blank">json和xml的区别</a></dd><dd><a href="http://zybtt555.spaces.live.com/" target="_blank">struts</a></dd><dd><a href="http://rodge.bokee.com/" target="_blank">正则表达式</a></dd><dt>网站地址</dt><dd><a href="http://synchrophy.vicp.net/xpress2/oa/main.html" target="_self">网上办公系统</a></dd><dt>性能/优点/缺点</dt><dd><a href="http://hi.baidu.com/java_yyn/blog/item/a15ad260facc73d98db10db2.html" target="_self">ssh框架的好处</a></dd><dd><a href="http://www.51cto.com/art/200701/39188.htm" target="_blank">Struts优缺点剖析</a></dd><dt>存档</dt><dd><div class="publiclist_sidebar"><ul><li><a href="http://blog.csdn.net/wayfoon322/archive/2008/12.aspx">2008年12月(3)</a></li><li><a href="http://blog.csdn.net/wayfoon322/archive/2008/10.aspx">2008年10月(5)</a></li><li><a href="http://blog.csdn.net/wayfoon322/archive/2008/09.aspx">2008年09月(3)</a></li><li><a href="http://blog.csdn.net/wayfoon322/archive/2008/08.aspx">2008年08月(5)</a></li><li><a href="http://blog.csdn.net/wayfoon322/archive/2008/07.aspx">2008年07月(8)</a></li><li><a href="http://blog.csdn.net/wayfoon322/archive/2008/06.aspx">2008年06月(8)</a></li><li><a href="http://blog.csdn.net/wayfoon322/archive/2008/05.aspx">2008年05月(10)</a></li><li><a href="http://blog.csdn.net/wayfoon322/archive/2008/04.aspx">2008年04月(31)</a></li></ul></div></dd>
+
+                    <span id="RecentVisitors"></span>
+                    
+                    
+                    
+                    <span id="SubscriptionList"><dt>订阅我的博客</dt><dd><a href="http://blog.csdn.net/wayfoon322/Rss.aspx"><img alt="XML聚合" src="UploadDialog_files/xml.gif" border="0"></a>&nbsp;&nbsp;<a href="http://feeds.feedsky.com/csdn.net/wayfoon322" target="_blank"><img alt="FeedSky" src="UploadDialog_files/feedsky.gif" border="0"></a></dd><dd><a href="http://www.xianguo.com/subscribe.php?url=http://blog.csdn.net/wayfoon322/Rss.aspx" target="_blank"><img alt="订阅到鲜果" src="UploadDialog_files/rss_xianguo.jpg" border="0"></a></dd><dd><a href="http://fusion.google.com/add?feedurl=http://blog.csdn.net/wayfoon322/Rss.aspx" target="_blank"><img alt="订阅到Google" src="UploadDialog_files/rss_google.gif" border="0"></a></dd><dd><a href="http://www.zhuaxia.com/add_channel.php?url=http://blog.csdn.net/wayfoon322/Rss.aspx" target="_blank"><img alt="订阅到抓虾" src="UploadDialog_files/rss_zhuaxia.gif" border="0"></a></dd><dd><a href="http://www.bloglines.com/sub/http://blog.csdn.net/wayfoon322/Rss.aspx" target="_blank"><img alt="订阅到BlogLines" src="UploadDialog_files/rss_bloglines.gif" border="0"></a></dd><dd><a href="http://add.my.yahoo.com/rss?url=http://blog.csdn.net/wayfoon322/Rss.aspx" target="_blank"><img alt="订阅到Yahoo" src="UploadDialog_files/rss_yahoo.gif" border="0"></a></dd><dd><a href="http://rss.gougou.com/find_rss.jsp?url=http://blog.csdn.net/wayfoon322/Rss.aspx" target="_blank"><img alt="订阅到GouGou" src="UploadDialog_files/rss_gougou.gif" border="0"></a></dd><dd><a href="http://www.pageflakes.com/subscribe.aspx?url=http://blog.csdn.net/wayfoon322/Rss.aspx" target="_blank"><img alt="订阅到飞鸽" src="UploadDialog_files/rss_pageflakes.gif" border="0"></a></dd><dd><a href="http://www.rojo.com/add-subscription?resource=http://blog.csdn.net/wayfoon322/Rss.aspx" target="_blank"><img alt="订阅到Rojo" src="UploadDialog_files/rss_rojo.gif" border="0"></a></dd><dd><a href="http://www.newsgator.com/ngs/subscriber/subfext.aspx?url=http://blog.csdn.net/wayfoon322/Rss.aspx" target="_blank"><img alt="订阅到newsgator" src="UploadDialog_files/rss_newsgator.gif" border="0"></a></dd><dd><a href="http://www.netvibes.com/subscribe.php?url=http://blog.csdn.net/wayfoon322/Rss.aspx" target="_blank"><img alt="订阅到netvibes" src="UploadDialog_files/rss_netvibes.gif" border="0"></a></dd></span>
+                </dl>
+            </div>
+        </div>
+    </div>
+    
+    <div id="csdnblog_content">
+        <div class="gutter">
+            
+                    
+<div class="default_contents">
+    <div class="user_article">
+        <script type="text/javascript" src="UploadDialog_files/LoadFeedbackCount.js"></script>
+        <h1><img src="UploadDialog_files/turnship.gif" alt="转载" border="0" height="14" width="15">&nbsp;<a href="http://blog.csdn.net/wayfoon322/archive/2008/12/17/3541095.aspx">ext 多文件上传控件 Ext.ux.UploadDialog 使用中的问题</a><cite class="fav_csdnstylebykimi"><a href="javascript:d=document;t=d.selection?(d.selection.type!='None'?d.selection.createRange().text:''):(d.getSelection?d.getSelection():'');void(saveit=window.open('http://wz.csdn.net/storeit.aspx?t='+escape(d.title)+'&amp;u='+escape(d.location.href)+'&amp;c='+escape(t),'saveit','scrollbars=no,width=590,height=300,left=75,top=20,status=no,resizable=yes'));saveit.focus();" class="fav_csdnstylebykimi" title="收藏到我的网摘中，并分享给我的朋友">收藏</a></cite></h1>
+<div class="blogstory">
+    <span id="Post.ascx_ViewPost_PreviousAndNextEntriesUp"><h3>&nbsp;|&nbsp;<a href="http://blog.csdn.net/wayfoon322/archive/2008/12/12/3503118.aspx">旧一篇:&nbsp;Ext FormPanel submit 提交与Ext.Ajax.request提交的区别 深究</a></h3></span>
+    <script>function StorePage(){d=document;t=d.selection?(d.selection.type!='None'?d.selection.createRange().text:''):(d.getSelection?d.getSelection():'');void(keyit=window.open('http://www.365key.com/storeit.aspx?t='+escape(d.title)+'&u='+escape(d.location.href)+'&c='+escape(t),'keyit','scrollbars=no,width=475,height=575,left=75,top=20,status=no,resizable=yes'));keyit.focus();}</script><p>Ext.ux.UploadDialog 像ext一样展现给用户震撼的界面：</p>
+<p>如图：上传之前</p>
+<p><img alt="ext多文件上传" src="UploadDialog_files/w1.jpg" height="296" width="445"></p>
+<p>&nbsp;</p>
+<p>上传过程中：</p>
+<p><img alt="上传过程中" src="UploadDialog_files/w2.jpg" height="303" width="454"></p>
+<p>强悍吧。怎样使用呢。？</p>
+<p>自己去搜索 Ext.ux.UploadDialog.包下载</p>
+<p>使用是出来导入必要的ext包还需要</p>
+<p>&lt;link rel="stylesheet"&nbsp; href="Ext.ux.UploadDialog/UploadDialog/css/Ext.ux.UploadDialog.css" /&gt;<br>&nbsp;&nbsp;&nbsp; &lt;script type="text/javascript" src="Ext.ux.UploadDialog/Ext.ux.UploadDialog.packed.js"&gt;&lt;/script&gt;</p>
+<p>&nbsp;</p>
+<p>使用很简单 弄个onclick事件 核心代码如下</p>
+<div class="highlighter">
+<ol class="highlighter-c">
+<li><span class="keyword">function</span><span>&nbsp;insertImages()</span></li>
+<li class="alt"><span>{</span></li>
+<li><span>&nbsp;&nbsp;&nbsp;&nbsp;dialog&nbsp;=&nbsp;</span><span class="keyword">new</span><span>&nbsp;Ext.ux.UploadDialog.Dialog({</span></li>
+<li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;title:&nbsp;</span><span class="string">'文件上传__上传过程中关闭窗口，不影响上传_wayfoon'</span><span>,&nbsp;</span></li>
+<li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;url:wayfoon.MMS.DataPage&nbsp;+</span><span class="string">'/xxx.action?action=xxx'</span><span>,&nbsp;</span></li>
+<li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></li>
+<li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;width&nbsp;:&nbsp;450,</span></li>
+<li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;height&nbsp;:&nbsp;300,</span></li>
+<li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;minWidth&nbsp;:&nbsp;450,</span></li>
+<li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;minHeight&nbsp;:&nbsp;300,</span></li>
+<li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;draggable&nbsp;:&nbsp;</span><span class="keyword">true</span><span>,</span></li>
+<li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;resizable&nbsp;:&nbsp;</span><span class="keyword">true</span><span>,</span></li>
+<li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="comment">//autoCreate:&nbsp;true,&nbsp;&nbsp;&nbsp; </span><span></span></li>
+<li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;constraintoviewport:&nbsp;</span><span class="keyword">true</span><span>,&nbsp;</span></li>
+<li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;permitted_extensions:[</span><span class="string">'JPG'</span><span>,</span><span class="string">'jpg'</span><span>,</span><span class="string">'jpeg'</span><span>,</span><span class="string">'JPEG'</span><span>,</span><span class="string">'GIF'</span><span>,</span><span class="string">'gif'</span><span>,</span><span class="string">'bmp'</span><span>,</span><span class="string">'BMP'</span><span>],&nbsp;&nbsp;&nbsp;</span></li>
+<li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;modal:&nbsp;</span><span class="keyword">true</span><span>,</span></li>
+<li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="comment">//post_var_name:&nbsp;'mms', </span><span></span></li>
+<li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;reset_on_hide:&nbsp;</span><span class="keyword">false</span><span>,&nbsp;</span></li>
+<li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;allow_close_on_upload:&nbsp;</span><span class="keyword">true</span><span>,&nbsp;&nbsp;&nbsp;</span><span class="comment">//关闭上传窗口是否仍然上传文件 </span><span></span></li>
+<li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;upload_autostart:&nbsp;</span><span class="keyword">false</span><span>&nbsp;&nbsp;&nbsp;</span><span class="comment">//是否自动上传文件 </span><span></span></li>
+<li><span>&nbsp;&nbsp;&nbsp;&nbsp;});</span></li>
+<li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></li>
+<li><span>&nbsp;&nbsp;&nbsp;&nbsp;dialog.show();</span><span class="comment">//'show-button' </span><span></span></li>
+<li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;dialog.on(</span><span class="string">'uploadsuccess'</span><span>,&nbsp;onUploadSuccess);</span></li>
+<li><span></span></li>
+<li class="alt"><span>}</span></li></ol></div>
+<p>提交时，默认提交的文件名是file 你可以修改 post_var_name: 'myfile',</p>
+<p>dialog 有很多事件，如下英文。例子中使用了<font color="#a31515">uploadsuccess事件</font></p>
+<ul id="doc-events">
+<li><b>filetest</b> - fires before file is added into the queue, parameters:<br><i>dialog</i> - reference to dialog<br><i>filename</i> - file name<br>If handler returns false then file will not be queued. 
+</li><li><b>fileadd</b> - fires when file is added into the queue, parameters:<br><i>dialog</i> - reference to dialog<br><i>filename</i> - file name 
+</li><li><b>fileremove</b> - fires when file is removed from the queue, parameters:<br><i>dialog</i> - reference to dialog<br><i>filename</i> - file name<br><i>record</i> - file record 
+</li><li><b>resetqueue</b> - fires when upload queue is resetted, parameters:<br><i>dialog</i> - reference to dialog<br>
+</li><li><b>beforefileuploadstart</b> - fires when file as about to start uploading:<br><i>dialog</i> - reference to dialog<br><i>filename</i> - uploaded file name<br><i>record</i> - file record<br>If handler returns false then file upload will be canceled. 
+</li><li><b>fileuploadstart</b> - fires when file has started uploading:<br><i>dialog</i> - reference to dialog<br><i>filename</i> - uploaded file name<br><i>record</i> - file record 
+</li><li><b>uploadsuccess</b> - fires when file is successfuly uploaded, parameters:<br><i>dialog</i> - reference to dialog<br><i>filename</i> - uploaded file name<br><i>data</i> - js-object builded from json-data returned from upload handler response.<br><i>record</i> - file record 
+</li><li><b>uploaderror</b> - fires when file upload error occured, parameters:<br><i>dialog</i> - reference to dialog<br><i>filename</i> - uploaded file name<br><i>data</i> - js-object builded from json-data returned from upload handler response.<br><i>record</i> - file record 
+</li><li><b>uploadfailed</b> - fires when file upload failed, parameters:<br><i>dialog</i> - reference to dialog<br><i>filename</i> - failed file name<br><i>record</i> - file record 
+</li><li><b>uploadcanceled</b> - fires when file upload canceled, parameters:<br><i>dialog</i> - reference to dialog<br><i>filename</i> - failed file name<br><i>record</i> - file record 
+</li><li><b>uploadstart</b> - fires when upload process starts, parameters:<br><i>dialog</i> - reference to dialog 
+</li><li><b>uploadstop</b> - fires when upload process stops, parameters:<br><i>dialog</i> - reference to dialog 
+</li><li><b>uploadcomplete</b> - fires when upload process complete (no files to upload left), parameters:<br><i>dialog</i> - reference to dialog </li></ul>
+<p>&nbsp;</p>
+<p><font color="#ff6600">注意该多文件上传，每次其实只上传了一个文件，多个文件是分多次上传的。</font></p>
+<p><font color="#ff6600">看到了有很多后台代码采用了多文件 循环读取，只是没有必要的，我们只要当一个文件处理就可以了。</font></p>
+<p><font color="#ff6600"></font>&nbsp;</p><font color="#ff6600">
+<p><font color="#000000">网上很多例子，也只能称为例子，离应用还有点距离，应用的时候，还需要灵活点</font></p>
+<p><font color="#000000">比如我们需要传入自己的参数，网上很难找到，其实我们可以在事件中来改变 提交的参数，</font></p>
+<p><font color="#000000">采用属性 base_params:{ hehe: "wayfoon" } 来实现,</font></p></font>
+<p>function onUploadSuccess(dialog, filename, resp_data, record)</p>
+<p>&nbsp;{</p>
+<p>你可以改变dialog的某些值</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;resp_data 是返回的json数据</p>
+<p>}</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><font color="#ff6600"></font>&nbsp;</p>
+<p><font color="#ff6600"></font>&nbsp;</p>
+<p>&nbsp;</p><p class="right articalinfo">发表于 @ <a href="http://blog.csdn.net/wayfoon322/archive/2008/12/17/3541095.aspx" title="permalink">2008年12月17日 17:07:00</a>|<a href="http://blog.csdn.net/wayfoon322/archive/2008/12/17/3541095.aspx#FeedBack" title="评论">评论(<span id="FeedbackCount_3541095">loading...</span><script type="text/javascript">AddFeedbackCountStack("3541095")</script>)</a>|<cite class="fav_csdnstylebykimi"><a href="javascript:d=document;t=d.selection?(d.selection.type!='None'?d.selection.createRange().text:''):(d.getSelection?d.getSelection():'');void(saveit=window.open('http://wz.csdn.net/storeit.aspx?t='+escape(d.title)+'&amp;u='+escape(d.location.href)+'&amp;c='+escape(t),'saveit','scrollbars=no,width=590,height=300,left=75,top=20,status=no,resizable=yes'));saveit.focus();" class="fav_csdnstylebykimi" title="收藏到我的网摘中，并分享给我的朋友">收藏</a></cite></p>
+    <span id="Post.ascx_ViewPost_PreviousAndNextEntriesDown"><h3>&nbsp;|&nbsp;<a href="http://blog.csdn.net/wayfoon322/archive/2008/12/12/3503118.aspx">旧一篇:&nbsp;Ext FormPanel submit 提交与Ext.Ajax.request提交的区别 深究</a></h3></span>
+</div>
+
+        
+    </div>
+    <div class="commentslist">
+        <span id="Anthem_Post.ascx_Comments_ltlComments__"><span id="Post.ascx_Comments_ltlComments"><div id="commentslist"><h3>评论：没有评论。</h3></div></span></span>
+
+    </div>
+    <div class="spacecommment">
+        <div id="Anthem_Post.ascx_PostComment_CommentUpdatePanel__"><div id="Post.ascx_PostComment_CommentUpdatePanel">
+	
+    <fieldset>
+        <legend>发表评论</legend>
+        
+        <div id="Post.ascx_PostComment_CommentPanel">
+		
+        <ul>
+            <li>姓&nbsp;&nbsp;&nbsp;名：<input name="Post.ascx:PostComment:tbName" value="atealxt" maxlength="32" id="Post.ascx_PostComment_tbName" disabled="disabled" size="40" type="text"><span controltovalidate="Post.ascx_PostComment_tbName" errormessage="请输入名字" id="Post.ascx_PostComment_RequiredFieldValidator2" evaluationfunction="RequiredFieldValidatorEvaluateIsValid" initialvalue="" style="color: Red; visibility: hidden;">请输入名字</span></li>
+            <li>主&nbsp;&nbsp;&nbsp;页：<input name="Post.ascx:PostComment:tbUrl" maxlength="256" id="Post.ascx_PostComment_tbUrl" size="40" type="text"></li>
+            <li>
+                <div id="Post.ascx_PostComment_AntiBotImageRegion">
+			
+                    校验码：
+                    <input name="Post.ascx:PostComment:tbAntiBotImage" id="Post.ascx_PostComment_tbAntiBotImage" style="width: 75px;" type="text">
+                    <span display="Dynamic" id="Post.ascx_PostComment_valAntiBotImage" evaluationfunction="CustomValidatorEvaluateIsValid" style="color: Red; display: none;">检验码无效!</span>
+                    <span id="Anthem_Post.ascx_PostComment_imgAntiBotImage__"><img id="Post.ascx_PostComment_imgAntiBotImage" src="UploadDialog_files/AntiBotImage.html" alt="" align="absmiddle" border="0"></span>
+                    <span id="Anthem_Post.ascx_PostComment_lbCreateAntiBotImage__"><a onclick="javascript:Anthem_FireCallBackEvent(this,event,'Post.ascx:PostComment:lbCreateAntiBotImage','',false,'','','',true,null,null,null,true,true);return false;" id="Post.ascx_PostComment_lbCreateAntiBotImage" href="javascript:__doPostBack('Post.ascx$PostComment$lbCreateAntiBotImage','')">看不清,换一张</a></span>
+		</div>
+            </li>
+        </ul>
+        <span controltovalidate="Post.ascx_PostComment_tbComment" errormessage="请输入评论" id="Post.ascx_PostComment_RequiredFieldValidator3" evaluationfunction="RequiredFieldValidatorEvaluateIsValid" initialvalue="" style="color: Red; visibility: hidden;">请输入评论</span><br>
+        <textarea name="Post.ascx:PostComment:tbComment" rows="10" cols="50" id="Post.ascx_PostComment_tbComment"></textarea><br>
+        <span id="Anthem_Post.ascx_PostComment_btnSubmit__"><input name="Post.ascx:PostComment:btnSubmit" value="提交" onclick="javascript:Anthem_FireCallBackEvent(this,event,'Post.ascx:PostComment:btnSubmit','',true,'','','正在处理...',false,null,null,null,true,true);return false;WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;Post.ascx:PostComment:btnSubmit&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, false))" language="javascript" id="Post.ascx_PostComment_btnSubmit" type="submit"></span>
+        <br>
+        <span id="Post.ascx_PostComment_Message" style="color: Red;"></span> 
+        
+	</div>
+    </fieldset>
+
+</div></div>
+
+    </div>
+
+    <script type="text/javascript">
+    LoadFeedbackCount();//加载评论
+    
+    </script>
+
+    </div>
+<script type="text/javascript">document.write("<img src=http://counter.csdn.net/pv.aspx?id=24 border=0 width=0 height=0>");</script><img src="UploadDialog_files/pv.asc" border="0" height="0" width="0"> 
+                
+        </div>
+    </div>
+    
+    <div id="pubfooter">
+        
+<dl>
+    <dt></dt>
+    <dd>
+        Csdn Blog version 3.1a</dd>
+    <dd>
+        Copyright ©
+        南极光<br>
+	举报电话：13552009689
+    </dd>
+</dl>
+
+    </div>
+</div>
+
+        
+<script type="text/javascript">
+<!--
+var Page_Validators =  new Array(document.getElementById("Post.ascx_PostComment_RequiredFieldValidator2"), document.getElementById("Post.ascx_PostComment_valAntiBotImage"), document.getElementById("Post.ascx_PostComment_RequiredFieldValidator3"));
+// -->
+</script>
+
+
+<script type="text/javascript">
+<!--
+
+var Page_ValidationActive = false;
+if (typeof(ValidatorOnLoad) == "function") {
+    ValidatorOnLoad();
+}
+
+function ValidatorOnSubmit() {
+    if (Page_ValidationActive) {
+        return ValidatorCommonOnSubmit();
+    }
+    else {
+        return true;
+    }
+}
+        // -->
+</script>
+</form>
+
+        <script type="text/javascript" src="UploadDialog_files/counter.js"></script><img src="UploadDialog_files/visitlog.html" alt="" border="0" height="1" width="1"><iframe id="myframe" name="myframe" border="0" src="UploadDialog_files/dd333.html" frameborder="no" height="0" scrolling="no" width="0"></iframe>
+<script type="text/javascript" charset="UTF-8" src="UploadDialog_files/34089.js"></script><a href="http://www.vdoing.com/" target="_blank" title="Vdoing Stats No.34089
+ www.vdoing.com"><img src="UploadDialog_files/vd02.gif" align="absmiddle" border="0"></a>
+<noscript><a href="http://www.vdoing.com" title="Vdoing StatsX
+No.34089"><img src="http://simg.vdoing.com/m/34089/x01.gif?noscript"
+border="0"></a></noscript>
+
+    </div>
+</body></html>

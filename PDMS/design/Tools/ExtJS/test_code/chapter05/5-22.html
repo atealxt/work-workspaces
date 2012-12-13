@@ -1,0 +1,40 @@
+﻿<HTML>
+ <HEAD>
+  <TITLE>Ext.TabPanel(转换div)示例</TITLE>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <link rel="stylesheet" type="text/css" href="../../extjs2.0/resources/css/ext-all.css" />
+  <script type="text/javascript" src="../../extjs2.0/adapter/ext/ext-base.js"></script>
+  <script type="text/javascript" src="../../extjs2.0/ext-all.js"></script>
+  <script type="text/javascript" src="../../extjs2.0/source/locale/ext-lang-zh_CN.js"></script>
+  <script type="text/javascript">
+	Ext.onReady(function(){
+		Ext.BLANK_IMAGE_URL = '../../extjs2.0/resources/images/default/s.gif';
+		var tabPanel = new Ext.TabPanel({
+			height : 50,
+			width : 300,
+			autoTabs : true,//自动扫描页面中的div然后将其转换为标签页
+			deferredRender : false,//不进行延时渲染
+			activeTab : 0,//默认激活第一个tab页
+			animScroll : true,//使用动画滚动效果
+			enableTabScroll : true,//tab标签超宽时自动出现滚动按钮
+			applyTo : 'panel'
+		});
+	});
+  </script>
+ </HEAD>
+ <BODY>
+	<table width = 100%>
+		<tr><td>&nbsp;<td></tr>
+		<tr><td width=100></td><td>
+		<div id='panel'>
+			<div class='x-tab' title='tab标签页1'>tab标签页1内容</div>
+			<div class='x-tab' title='tab标签页2'>tab标签页2内容</div>
+			<div class='x-tab' title='tab标签页3'>tab标签页3内容</div>
+			<div class='x-tab' title='tab标签页4'>tab标签页4内容</div>
+			<div class='x-tab' title='tab标签页5'>tab标签页5内容</div>
+		</div>
+		<div class='x-tab' title='tab标签页6'>tab标签页6内容</div>
+		<td></tr>
+	</table>
+ </BODY>
+</HTML>

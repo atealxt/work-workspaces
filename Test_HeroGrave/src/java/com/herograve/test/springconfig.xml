@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+	<description>spring set test</description>
+
+	<bean id="SpringTest"
+		  class="com.herograve.test.SpringTest">
+		  scope="prototype">		  
+		  <!--singleton="false">-->
+		<!--  
+		<property name="message">
+			<value>This is the</value>
+		</property>
+		-->
+	</bean>
+
+</beans>
+
+
+

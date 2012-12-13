@@ -1,0 +1,1017 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head id="Head">
+
+<title>
+	生成两个日期间的以天为间隔的折线图(web方式和控制台方式) - 新手上路，多多关照 - BlogJava
+</title><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta id="metaKeywords" name="keywords" content="生成两个日期间的以天为间隔的折线图(web方式和控制台方式)"><link id="MainCss" type="text/css" rel="stylesheet" href="another_jfreechart_example_files/style.css"><link id="RSSLink" title="RSS" type="application/rss+xml" rel="alternate" href="http://www.blogjava.net/liudecai/rss.aspx"></head><body>
+    <form name="Form1" method="post" action="251239.html" onsubmit="javascript:return WebForm_OnSubmit();" id="Form1">
+<div>
+<input name="__EVENTTARGET" id="__EVENTTARGET" value="" type="hidden">
+<input name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" type="hidden">
+<input name="__VIEWSTATE" id="__VIEWSTATE" value="" type="hidden">
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['Form1'];
+if (!theForm) {
+    theForm = document.Form1;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="another_jfreechart_example_files/WebResource.js" type="text/javascript"></script>
+
+<script language="JavaScript">
+									function ctlent(evt,id)
+											{
+												if(evt.ctrlKey && evt.keyCode == 13)
+												{	
+													try
+													{
+														TempSave(id);
+													}
+													catch(ex)
+													{
+													}
+													finally
+													{
+													    __doPostBack('AjaxHolder$PostComment$btnSubmit','')
+													}
+												}
+		
+												}</script>
+												<script language="JavaScript">function SetReplyAuhor(author){document.getElementById('AjaxHolder_PostComment_tbComment').value+="@"+author+"\n";document.getElementById('AjaxHolder_PostComment_tbComment').focus();return false}</script>
+<script src="another_jfreechart_example_files/ScriptResource.js" type="text/javascript"></script>
+<script src="another_jfreechart_example_files/ScriptResource_003.js" type="text/javascript"></script>
+<script src="another_jfreechart_example_files/ScriptResource_002.js" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+function WebForm_OnSubmit() {
+if (typeof(ValidatorOnSubmit) == "function" && ValidatorOnSubmit() == false) return false;
+return true;
+}
+//]]>
+</script>
+
+        
+<div id="top">
+	
+<h1><a id="Header1_HeaderTitle" class="headermaintitle" href="http://www.blogjava.net/liudecai/">新手上路，多多关照</a></h1>
+<p id="tagline">java后来者</p>
+</div>
+<div id="leftmenu" style="display: inline;">
+	
+		
+<h3>导航</h3>
+<ul>
+			<li><a id="MyLinks1_HomeLink" href="http://www.blogjava.net/">BlogJava</a></li>
+			<li><a id="MyLinks1_MyHomeLink" href="http://www.blogjava.net/liudecai/">首页</a></li>
+			<li><a id="MyLinks1_NewPostLink" href="http://www.blogjava.net/liudecai/admin/EditPosts.aspx?opt=1">新随笔</a></li>
+			<li><a id="MyLinks1_ContactLink" accesskey="9" href="http://www.blogjava.net/liudecai/contact.aspx?id=1">联系</a></li>
+			<li><a id="MyLinks1_Syndication" href="http://www.blogjava.net/liudecai/rss">聚合</a><a id="MyLinks1_XMLLink" href="http://www.blogjava.net/liudecai/rss"><img src="another_jfreechart_example_files/xml.gif" style="border-width: 0px;"></a>
+			</li><li><a id="MyLinks1_Admin" href="http://www.blogjava.net/liudecai/admin/EditPosts.aspx">管理</a></li>
+</ul>
+		<table id="Calendar1_entryCal" class="Cal" title="Calendar" style="border-style: solid; border-width: 1px; border-collapse: collapse;" border="0" cellpadding="0" cellspacing="0">
+	<tbody><tr><td colspan="7" style="background-color: Silver;"><table class="CalTitle" style="width: 100%; border-collapse: collapse;" border="0" cellspacing="0">
+		<tbody><tr><td class="CalNextPrev" style="width: 15%;"><a href="javascript:__doPostBack('Calendar1$entryCal','V3257')" style="color: Black;" title="Go to the previous month">&lt;</a></td><td style="width: 70%;" align="center">2009年1月</td><td class="CalNextPrev" style="width: 15%;" align="right"><a href="javascript:__doPostBack('Calendar1$entryCal','V3319')" style="color: Black;" title="Go to the next month">&gt;</a></td></tr>
+	</tbody></table></td></tr><tr><th class="CalDayHeader" abbr="日" scope="col" align="center">日</th><th class="CalDayHeader" abbr="一" scope="col" align="center">一</th><th class="CalDayHeader" abbr="二" scope="col" align="center">二</th><th class="CalDayHeader" abbr="三" scope="col" align="center">三</th><th class="CalDayHeader" abbr="四" scope="col" align="center">四</th><th class="CalDayHeader" abbr="五" scope="col" align="center">五</th><th class="CalDayHeader" abbr="六" scope="col" align="center">六</th></tr><tr><td class="CalOtherMonthDay" style="width: 14%;" align="center">28</td><td class="CalOtherMonthDay" style="width: 14%;" align="center">29</td><td class="CalOtherMonthDay" style="width: 14%;" align="center">30</td><td class="CalOtherMonthDay" style="width: 14%;" align="center">31</td><td style="width: 14%;" align="center">1</td><td style="width: 14%;" align="center">2</td><td class="CalWeekendDay" style="width: 14%;" align="center">3</td></tr><tr><td class="CalWeekendDay" style="width: 14%;" align="center">4</td><td style="width: 14%;" align="center">5</td><td style="width: 14%;" align="center">6</td><td style="width: 14%;" align="center">7</td><td style="width: 14%;" align="center"><a href="http://www.blogjava.net/liudecai/archive/2009/01/08.html"><u>8</u></a></td><td style="width: 14%;" align="center"><a href="http://www.blogjava.net/liudecai/archive/2009/01/09.html"><u>9</u></a></td><td class="CalWeekendDay" style="width: 14%;" align="center"><a href="http://www.blogjava.net/liudecai/archive/2009/01/10.html"><u>10</u></a></td></tr><tr><td class="CalWeekendDay" style="width: 14%;" align="center"><a href="http://www.blogjava.net/liudecai/archive/2009/01/11.html"><u>11</u></a></td><td style="width: 14%;" align="center">12</td><td style="width: 14%;" align="center"><a href="http://www.blogjava.net/liudecai/archive/2009/01/13.html"><u>13</u></a></td><td style="width: 14%;" align="center"><a href="http://www.blogjava.net/liudecai/archive/2009/01/14.html"><u>14</u></a></td><td class="CalTodayDay" style="width: 14%;" align="center">15</td><td style="width: 14%;" align="center">16</td><td class="CalWeekendDay" style="width: 14%;" align="center">17</td></tr><tr><td class="CalWeekendDay" style="width: 14%;" align="center">18</td><td style="width: 14%;" align="center">19</td><td style="width: 14%;" align="center">20</td><td style="width: 14%;" align="center">21</td><td style="width: 14%;" align="center">22</td><td style="width: 14%;" align="center">23</td><td class="CalWeekendDay" style="width: 14%;" align="center">24</td></tr><tr><td class="CalWeekendDay" style="width: 14%;" align="center">25</td><td style="width: 14%;" align="center">26</td><td style="width: 14%;" align="center">27</td><td style="width: 14%;" align="center">28</td><td style="width: 14%;" align="center">29</td><td style="width: 14%;" align="center">30</td><td class="CalWeekendDay" style="width: 14%;" align="center">31</td></tr><tr><td class="CalOtherMonthDay" style="width: 14%;" align="center">1</td><td class="CalOtherMonthDay" style="width: 14%;" align="center">2</td><td class="CalOtherMonthDay" style="width: 14%;" align="center">3</td><td class="CalOtherMonthDay" style="width: 14%;" align="center">4</td><td class="CalOtherMonthDay" style="width: 14%;" align="center">5</td><td class="CalOtherMonthDay" style="width: 14%;" align="center">6</td><td class="CalOtherMonthDay" style="width: 14%;" align="center">7</td></tr>
+</tbody></table>
+
+		
+<h3>公告</h3>
+	<div>柳德才 Java后来者</div>
+<div>&nbsp;</div>
+<div>java博客 ： <a href="http://www.blogjava.net/liudecai">http://www.blogjava.net/liudecai</a></div>
+<div>&nbsp;</div>
+<div>地址 ： 北京市丰台区看丹路四号院3号楼</div>
+<div>&nbsp;</div>
+<div>TEL：13691193654 </div>
+<div>&nbsp;&nbsp;&nbsp;&nbsp; 13521167341(备用）</div>
+<div>&nbsp;</div>
+<div>QQ：422157370 </div>
+<div>&nbsp;&nbsp;&nbsp; 122254291（备用）</div>
+<div>&nbsp;</div>
+<div>SKYPE:liudecai_zan</div>
+<div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ellen_zhengxiujuan(备用)</div>
+<div>&nbsp;</div>
+<div>MSN:liudecai_zan@hotmail.com<br>
+&nbsp;&nbsp;&nbsp; <a href="mailto:ellen_zhengxiujuan@hotmail.com">ellen_zhengxiujuan@hotmail.com</a>(备用）</div>
+<div><br>
+&nbsp;</div>
+<div>EMAIL：<a href="mailto:liudecai_zan@126.com">liudecai_zan@126.com</a>&nbsp;</div>
+<div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="mailto:ellen_zhengxiujuan@126.com">ellen_zhengxiujuan@126.com</a>(备用）</div>
+ 
+
+		
+<h3>留言簿</h3>
+<ul>
+	<li>
+		<a id="MyMessages1_lnkMessages" href="http://www.blogjava.net/liudecai/Contact.aspx?id=1">给我留言</a>
+	</li><li>
+		<a id="MyMessages1_lnkPublicMsgView" href="http://www.blogjava.net/liudecai/default.aspx?opt=msg">查看公开留言</a>
+	</li><li>
+		<a id="MyMessages1_lnkPrivateMsgView" href="http://www.blogjava.net/liudecai/admin/MyMessages.aspx">查看私人留言</a>
+	</li>
+</ul>
+
+		
+		<h3>随笔分类</h3>
+		
+				<ul>
+			
+				<li><a id="ArchiveLinks1_Categories_CatList_ctl00_LinkList_ctl01_Link" href="http://www.blogjava.net/liudecai/category/37225.html">Eclipse IDE(2)</a> <a id="ArchiveLinks1_Categories_CatList_ctl00_LinkList_ctl01_RssLink" title="Subscribe to Eclipse IDE(2)" href="http://www.blogjava.net/liudecai/category/37225.html/rss">(rss)</a></li>
+			
+				<li><a id="ArchiveLinks1_Categories_CatList_ctl00_LinkList_ctl02_Link" href="http://www.blogjava.net/liudecai/category/37224.html">JFreeChart(14)</a> <a id="ArchiveLinks1_Categories_CatList_ctl00_LinkList_ctl02_RssLink" title="Subscribe to JFreeChart(14)" href="http://www.blogjava.net/liudecai/category/37224.html/rss">(rss)</a></li>
+			
+				<li><a id="ArchiveLinks1_Categories_CatList_ctl00_LinkList_ctl03_Link" href="http://www.blogjava.net/liudecai/category/37226.html">在路上(6)</a> <a id="ArchiveLinks1_Categories_CatList_ctl00_LinkList_ctl03_RssLink" title="Subscribe to 在路上(6)" href="http://www.blogjava.net/liudecai/category/37226.html/rss">(rss)</a></li>
+			
+				</ul>
+			
+	
+		<h3>随笔档案</h3>
+		
+				<ul>
+			
+				<li><a id="ArchiveLinks1_Categories_CatList_ctl01_LinkList_ctl01_Link" href="http://www.blogjava.net/liudecai/archive/2009/01.html">2009年1月 (21)</a> </li>
+			
+				</ul>
+			
+	
+
+		
+<h3>阅读排行榜</h3>
+<div class="RecentComment">
+	
+			<ul style="width: 100%;">
+		
+			<li>
+				<a id="TopViewPosts_TopList_ctl01_Hyperlink1" href="http://www.blogjava.net/liudecai/archive/2009/01/10/250795.html">1.&nbsp;jfreechart应用_例题_生成饼状图(3D,不显示，只生成文件）_可以直接运行 (1134)</a>
+			</li>
+		
+			<li>
+				<a id="TopViewPosts_TopList_ctl02_Hyperlink1" href="http://www.blogjava.net/liudecai/archive/2009/01/08/250553.html">2.&nbsp;jfreechart应用_例题_生成柱状图 (不显示，只生成文件)_可以直接运行(927)</a>
+			</li>
+		
+			<li>
+				<a id="TopViewPosts_TopList_ctl03_Hyperlink1" href="http://www.blogjava.net/liudecai/archive/2009/01/09/250580.html">3.&nbsp;jfreechart应用_例题_生成饼状图(不显示，只生成文件）_可以直接运行(918)</a>
+			</li>
+		
+			<li>
+				<a id="TopViewPosts_TopList_ctl04_Hyperlink1" href="http://www.blogjava.net/liudecai/archive/2009/01/09/250648.html">4.&nbsp;jfreechart应用_例题_生成饼状图（只展示，不生成文件）_可以直接运行(869)</a>
+			</li>
+		
+			<li>
+				<a id="TopViewPosts_TopList_ctl05_Hyperlink1" href="http://www.blogjava.net/liudecai/archive/2009/01/14/251239.html">5.&nbsp;生成两个日期间的以天为间隔的折线图(web方式和控制台方式)(685)</a>
+			</li>
+		
+			</ul>
+		
+</div>
+
+		
+<h3>评论排行榜</h3>
+<div class="RecentComment">
+	
+			<ul style="">
+		
+			<li>
+				<a id="TopFeedbackPosts1_TopList_ctl01_Hyperlink1" href="http://www.blogjava.net/liudecai/archive/2009/01/14/251230.html">1.&nbsp; 遍历两个日期之间天数的算法(5)</a>
+			</li>
+		
+			<li>
+				<a id="TopFeedbackPosts1_TopList_ctl02_Hyperlink1" href="http://www.blogjava.net/liudecai/archive/2009/01/10/250795.html">2.&nbsp;jfreechart应用_例题_生成饼状图(3D,不显示，只生成文件）_可以直接运行 (3)</a>
+			</li>
+		
+			<li>
+				<a id="TopFeedbackPosts1_TopList_ctl03_Hyperlink1" href="http://www.blogjava.net/liudecai/archive/2009/01/14/251239.html">3.&nbsp;生成两个日期间的以天为间隔的折线图(web方式和控制台方式)(2)</a>
+			</li>
+		
+			<li>
+				<a id="TopFeedbackPosts1_TopList_ctl04_Hyperlink1" href="http://www.blogjava.net/liudecai/archive/2009/01/14/251250.html">4.&nbsp;MySQL配置文件my.cnf 例子最详细翻译,可以保存做笔记用[转载] (0)</a>
+			</li>
+		
+			<li>
+				<a id="TopFeedbackPosts1_TopList_ctl05_Hyperlink1" href="http://www.blogjava.net/liudecai/archive/2009/01/14/251252.html">5.&nbsp;java对象序列化所引起的循环引用的思考[转载] (0)</a>
+			</li>
+		
+			</ul>
+		
+</div>
+		
+	
+</div>
+<div id="rightmenu">
+	
+		
+<h3>常用链接</h3>
+<ul>
+		<li><a id="BlogCustomControl1_repeaterLinks_ctl01_lnkLinkItem" href="http://www.blogjava.net/liudecai/MyPosts.html">我的随笔</a></li>
+	
+		<li><a id="BlogCustomControl1_repeaterLinks_ctl02_lnkLinkItem" href="http://www.blogjava.net/liudecai/MyComments.html">我的评论</a></li>
+	
+		<li><a id="BlogCustomControl1_repeaterLinks_ctl03_lnkLinkItem" href="http://www.blogjava.net/liudecai/OtherPosts.html">我的参与</a></li>
+	
+		<li><a id="BlogCustomControl1_repeaterLinks_ctl04_lnkLinkItem" href="http://www.blogjava.net/liudecai/MyReads.html">我的阅读</a></li>
+	
+		<li><a id="BlogCustomControl1_repeaterLinks_ctl05_lnkLinkItem" href="http://www.blogjava.net/liudecai/RecentComments.html">最新评论</a></li>
+	</ul>
+		
+<h3>统计</h3>
+	<ul>
+		<li>随笔 - 22
+		</li><li>文章 - 0
+		</li><li>评论 - 12
+		</li><li>引用 - 0
+	</li>
+</ul>
+		
+		
+
+		
+<h3>最新评论
+	<a id="RecentComments1_RSSHyperlink1" href="http://www.blogjava.net/liudecai/CommentsRSS.aspx"><img src="another_jfreechart_example_files/xml.gif" style="border-width: 0px;"></a></h3>
+<div class="RecentComment">
+	
+			<ul>
+		
+			<li style="">
+				<a id="RecentComments1_CommentList_ctl01_Hyperlink1" href="http://www.blogjava.net/liudecai/archive/2009/01/15/251230.html#251405">1.&nbsp;re:  遍历两个日期之间天数的算法</a>
+			</li>
+			<li style="">
+				博主研究技能的精神不錯.提個意見.如果要遍歷最好是用calendar.add(Calendar.DAY_OF_YEAR,1);就行了.jdk已經幫你考慮了潤年及月份天數的問題了.不用再自己判斷
+			</li>
+			<li style="text-align: right; margin-right: 4px;">
+				--altchen</li>
+		
+			<li style="">
+				<a id="RecentComments1_CommentList_ctl02_Hyperlink1" href="http://www.blogjava.net/liudecai/archive/2009/01/15/251239.html#251374">2.&nbsp;re: 生成两个日期间的以天为间隔的折线图(web方式和控制台方式)</a>
+			</li>
+			<li style="">
+				评论内容较长,点击标题查看
+			</li>
+			<li style="text-align: right; margin-right: 4px;">
+				--liudecai_zan@126.com</li>
+		
+			<li style="">
+				<a id="RecentComments1_CommentList_ctl03_Hyperlink1" href="http://www.blogjava.net/liudecai/archive/2009/01/14/251230.html#251356">3.&nbsp;re:  遍历两个日期之间天数的算法</a>
+			</li>
+			<li style="">
+				评论内容较长,点击标题查看
+			</li>
+			<li style="text-align: right; margin-right: 4px;">
+				--liudecai_zan@126.com</li>
+		
+			<li style="">
+				<a id="RecentComments1_CommentList_ctl04_Hyperlink1" href="http://www.blogjava.net/liudecai/archive/2009/01/14/251230.html#251283">4.&nbsp;re:  遍历两个日期之间天数的算法</a>
+			</li>
+			<li style="">
+				是啊，多简单的事，搞那么复杂干吗
+			</li>
+			<li style="text-align: right; margin-right: 4px;">
+				--匿名</li>
+		
+			<li style="">
+				<a id="RecentComments1_CommentList_ctl05_Hyperlink1" href="http://www.blogjava.net/liudecai/archive/2009/01/14/251239.html#251251">5.&nbsp;re: 生成两个日期间的以天为间隔的折线图(web方式和控制台方式)</a>
+			</li>
+			<li style="">
+				有个图看就好了!
+			</li>
+			<li style="text-align: right; margin-right: 4px;">
+				--yz</li>
+		
+			</ul>
+		
+</div>
+		
+	
+</div>
+<div id="main">
+	
+					
+	<div class="post">
+		<h2>
+			<a id="viewpost1_TitleUrl" href="http://www.blogjava.net/liudecai/archive/2009/01/14/251239.html">生成两个日期间的以天为间隔的折线图(web方式和控制台方式)</a>
+		</h2>
+		<p>package demo;</p>
+<p>import java.awt.Color;<br>
+import java.awt.Font;<br>
+import java.io.File;<br>
+import java.io.FileOutputStream;<br>
+import java.text.ParseException;<br>
+import java.text.SimpleDateFormat;<br>
+import java.util.ArrayList;<br>
+import java.util.Calendar;<br>
+import java.util.Date;<br>
+import java.util.GregorianCalendar;<br>
+import java.util.List;</p>
+<p>import org.jfree.chart.ChartFactory;<br>
+import org.jfree.chart.ChartUtilities;<br>
+import org.jfree.chart.JFreeChart;<br>
+import org.jfree.chart.axis.CategoryAxis;<br>
+import org.jfree.chart.axis.CategoryLabelPositions;<br>
+import org.jfree.chart.axis.NumberAxis;<br>
+import org.jfree.chart.plot.CategoryPlot;<br>
+import org.jfree.chart.plot.PlotOrientation;<br>
+import org.jfree.chart.renderer.category.LineAndShapeRenderer;<br>
+import org.jfree.chart.title.TextTitle;<br>
+import org.jfree.data.category.CategoryDataset;<br>
+import org.jfree.data.general.DatasetUtilities;</p>
+<p>/**<br>
+&nbsp;* 生成两个日期间的以天为间隔的折线图<br>
+&nbsp;* @throws ParseException <br>
+&nbsp;*/<br>
+public class MyLineAndShapeChart {<br>
+&nbsp;public CategoryPlot getLineAndShapeChart() throws ParseException {&nbsp;&nbsp;<br>
+//准备生成数据源需要的要素<br>
+&nbsp;&nbsp;List&lt;String&gt; dateList = new ArrayList&lt;String&gt;();<br>
+&nbsp;&nbsp;List&lt;Double&gt; valList = new ArrayList&lt;Double&gt;();<br>
+&nbsp;&nbsp;<br>
+&nbsp;&nbsp;String start = "2008-01-21";<br>
+&nbsp;&nbsp;String end = "2008-02-08";<br>
+&nbsp;&nbsp;//字符串转换成日期<br>
+&nbsp;&nbsp;SimpleDateFormat format=new SimpleDateFormat("yyyy-MM-dd");<br>
+&nbsp;&nbsp;Date startDate=format.parse(start);<br>
+&nbsp;&nbsp;Calendar startTime=Calendar.getInstance();<br>
+&nbsp;&nbsp;startTime.clear();<br>
+&nbsp;&nbsp;startTime.setTime(startDate);<br>
+&nbsp;&nbsp;int startYear = startTime.get(Calendar.YEAR);<br>
+&nbsp;&nbsp;int startMonth = startTime.get(Calendar.MONTH);<br>
+&nbsp;&nbsp;int startDay = startTime.get(Calendar.DAY_OF_MONTH);<br>
+&nbsp;&nbsp;Date endDate=format.parse(end);<br>
+&nbsp;&nbsp;Calendar endTime=Calendar.getInstance();<br>
+&nbsp;&nbsp;endTime.clear();<br>
+&nbsp;&nbsp;endTime.setTime(endDate);<br>
+&nbsp;&nbsp;int endYear = endTime.get(Calendar.YEAR);<br>
+&nbsp;&nbsp;int endMonth = endTime.get(Calendar.MONTH);<br>
+&nbsp;&nbsp;int endDay = endTime.get(Calendar.DAY_OF_MONTH);<br>
+&nbsp;&nbsp;System.out.println("注意西方的月份从0到11，中国的月份从1到12");<br>
+&nbsp;&nbsp;System.out.println("下面输入的是中国的日期.注意其中的转换问题");<br>
+&nbsp;&nbsp;System.out.println("start date : " + start);<br>
+&nbsp;&nbsp;System.out.println("end date : " + end);<br>
+&nbsp;&nbsp;<br>
+&nbsp;&nbsp;int count = 0;<br>
+&nbsp;&nbsp;for (int x = startYear; x &lt;= endYear; x++) {<br>
+&nbsp;&nbsp;&nbsp;//罗马历法产生年份公元1582年<br>
+&nbsp;&nbsp;&nbsp;int gregorianCutoverYear = 1582;<br>
+&nbsp;&nbsp;&nbsp;boolean isLeapYear = x &gt;= gregorianCutoverYear ? <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;((x%4 == 0) &amp;&amp; ((x%100 != 0) || (x%400 == 0))) : <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(x%4 == 0);<br>
+&nbsp;&nbsp;&nbsp;//判断是否是闰年<br>
+&nbsp;&nbsp;&nbsp;//java方法<br>
+&nbsp;&nbsp;&nbsp;//boolean isLeapYear = (new GregorianCalendar()).isLeapYear(x);<br>
+&nbsp;&nbsp;&nbsp;<br>
+&nbsp;&nbsp;&nbsp;String isBigYear = "是平年";<br>
+&nbsp;&nbsp;&nbsp;if (isLeapYear) {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;isBigYear = "是闰年";<br>
+&nbsp;&nbsp;&nbsp;}<br>
+&nbsp;&nbsp;&nbsp;System.out.println(x + "年" + isBigYear);<br>
+&nbsp;&nbsp;&nbsp;<br>
+&nbsp;&nbsp;&nbsp;//获取开始月的最大天数<br>
+&nbsp;&nbsp;&nbsp;//java方法<br>
+&nbsp;&nbsp;&nbsp;//SimpleDateFormat aFormat=new SimpleDateFormat("yyyy-MM-dd");<br>
+&nbsp;&nbsp;&nbsp;//Date date = aFormat.parse(start);<br>
+&nbsp;&nbsp;&nbsp;//Calendar time = Calendar.getInstance();<br>
+&nbsp;&nbsp;&nbsp;//time.clear();<br>
+&nbsp;&nbsp;&nbsp;//time.setTime(date);<br>
+&nbsp;&nbsp;&nbsp;//int max=time.getActualMaximum(Calendar.DAY_OF_MONTH);//本月份的天数<br>
+&nbsp;&nbsp;&nbsp;//System.out.println(max); <br>
+&nbsp;&nbsp;&nbsp;<br>
+&nbsp;&nbsp;&nbsp;//获取开始月的最大天数；大月是1，3，5，7，8，10，12；小月是4，6，9，11；特殊月是2<br>
+&nbsp;&nbsp;&nbsp;int max = 0;<br>
+&nbsp;&nbsp;&nbsp;if (startMonth == 1) {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;if (isLeapYear) {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;max = 29;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;} <br>
+&nbsp;&nbsp;&nbsp;&nbsp;if (!isLeapYear) {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;max = 28;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+&nbsp;&nbsp;&nbsp;}<br>
+&nbsp;&nbsp;&nbsp;if (startMonth == 3 || startMonth == 5 || startMonth == 8 || startMonth == 10) {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;max = 30;<br>
+&nbsp;&nbsp;&nbsp;}<br>
+&nbsp;&nbsp;&nbsp;if (startMonth == 0 || startMonth == 2 || startMonth
+== 4 || startMonth == 6 || startMonth == 7 || startMonth == 9 ||
+startMonth == 11) {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;max = 31;<br>
+&nbsp;&nbsp;&nbsp;}<br>
+&nbsp;&nbsp;&nbsp;<br>
+&nbsp;&nbsp;&nbsp;//循环每个月<br>
+&nbsp;&nbsp;&nbsp;//如果在日期范围内月份循环时自增到了一年的最后一个月就将月份初始化到一月份<br>
+&nbsp;&nbsp;&nbsp;int y = 0;<br>
+&nbsp;&nbsp;&nbsp;//如果是开始日期的第一个年的月数就从开始月数循环<br>
+&nbsp;&nbsp;&nbsp;if (x == startYear) {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;y = startMonth;<br>
+&nbsp;&nbsp;&nbsp;}<br>
+&nbsp;&nbsp;&nbsp;for (; y &lt; 12; y++) {&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;//获取当月的最大天数；大月是1，3，5，7，8，10，12；小月是4，6，9，11；特殊月是2<br>
+&nbsp;&nbsp;&nbsp;&nbsp;max = 0;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;if (y == 1) {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if (isLeapYear) {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;max = 29;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;} <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if (!isLeapYear) {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;max = 28;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+&nbsp;&nbsp;&nbsp;&nbsp;if (y == 3 || y == 5 || y == 8 || y == 10) {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;max = 30;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+&nbsp;&nbsp;&nbsp;&nbsp;if (y == 0 || y == 2 || y == 4 || y == 6 || y == 7 || y == 9 || y == 11) {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;max = 31;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;int ty = y + 1;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;System.out.println(x + "年" + ty + "月");<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;//循环每一天<br>
+&nbsp;&nbsp;&nbsp;&nbsp;int z = 1;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;//如果是开始日期的第一个月的天数就从开始天数循环<br>
+&nbsp;&nbsp;&nbsp;&nbsp;if (x == startYear &amp;&amp; y == startMonth) {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;z = startDay;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+&nbsp;&nbsp;&nbsp;&nbsp;for (; z &lt;= max; z++) {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;count++;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;String str = x + "年" + ty + "月" + z + "日";//日期格式可以调整<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println(str);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;dateList.add(str);<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;double val = x + y * z * 100;//实际的值应该从数据库中获取<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;valList.add(new Double(val));<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if (x == endYear &amp;&amp; y == endMonth &amp;&amp; z == endDay) {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+<p><br>
+&nbsp;&nbsp;&nbsp;&nbsp;//如果已经遍历过了截至日期的最后月份就中止月份的循环<br>
+&nbsp;&nbsp;&nbsp;&nbsp;if (x == endYear &amp;&amp; y == endMonth) {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+&nbsp;&nbsp;&nbsp;<br>
+&nbsp;&nbsp;&nbsp;}<br>
+&nbsp;&nbsp;}<br>
+&nbsp;&nbsp;<br>
+&nbsp;&nbsp;System.out.println(start + " 到 " + end + " 的天数差：" + count);<br>
+&nbsp;&nbsp;<br>
+&nbsp;<br>
+&nbsp;&nbsp;<br>
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////<br>
+&nbsp;&nbsp;String[] rowKeys = { "上限值", "下限值", "重量" };<br>
+&nbsp;&nbsp;String[] columnKeys = new String[count];<br>
+&nbsp;&nbsp;double[][] data = new double[3][count];<br>
+&nbsp;&nbsp;<br>
+&nbsp;&nbsp;for (int i = 0; i &lt; count; i++) {<br>
+&nbsp;&nbsp;&nbsp;columnKeys[i] = dateList.get(i);<br>
+&nbsp;&nbsp;&nbsp;data[0][i] = 2500;<br>
+&nbsp;&nbsp;&nbsp;data[1][i] = 1500;<br>
+&nbsp;&nbsp;&nbsp;data[2][i] = valList.get(i).doubleValue();<br>
+&nbsp;&nbsp;}<br>
+&nbsp;&nbsp;<br>
+&nbsp;&nbsp;<br>
+&nbsp;&nbsp;///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////<br>
+&nbsp;&nbsp;CategoryDataset dataset = DatasetUtilities.createCategoryDataset(rowKeys, columnKeys, data);&nbsp;&nbsp;<br>
+&nbsp;&nbsp;<br>
+&nbsp;&nbsp;JFreeChart chart = ChartFactory.createLineChart("工艺秤日称重重量趋势图", "日期", "总量",<br>
+&nbsp;&nbsp;&nbsp;&nbsp;dataset, PlotOrientation.VERTICAL, true, true, false);</p>
+<p>&nbsp;&nbsp;chart.setTextAntiAlias(false);<br>
+&nbsp;&nbsp;chart.setBackgroundPaint(Color.WHITE);<br>
+&nbsp;&nbsp;// 设置图标题的字体重新设置title<br>
+&nbsp;&nbsp;Font font = new Font("隶书", Font.BOLD, 25);<br>
+&nbsp;&nbsp;TextTitle title = new TextTitle("工艺秤日称重重量趋势图");<br>
+&nbsp;&nbsp;title.setFont(font);<br>
+&nbsp;&nbsp;chart.setTitle(title);<br>
+&nbsp;&nbsp;// 设置面板字体<br>
+&nbsp;&nbsp;Font labelFont = new Font("SansSerif", Font.TRUETYPE_FONT, 12);</p>
+<p>&nbsp;&nbsp;chart.setBackgroundPaint(Color.WHITE);</p>
+<p>&nbsp;&nbsp;CategoryPlot categoryplot = (CategoryPlot) chart.getPlot();<br>
+&nbsp;&nbsp;// x轴 // 分类轴网格是否可见<br>
+&nbsp;&nbsp;categoryplot.setDomainGridlinesVisible(true);<br>
+&nbsp;&nbsp;// y轴 //数据轴网格是否可见<br>
+&nbsp;&nbsp;categoryplot.setRangeGridlinesVisible(true);</p>
+<p>&nbsp;&nbsp;categoryplot.setRangeGridlinePaint(Color.WHITE);// 虚线色彩</p>
+<p>&nbsp;&nbsp;categoryplot.setDomainGridlinePaint(Color.WHITE);// 虚线色彩</p>
+<p>&nbsp;&nbsp;categoryplot.setBackgroundPaint(Color.lightGray);</p>
+<p>&nbsp;&nbsp;// 设置轴和面板之间的距离<br>
+&nbsp;&nbsp;// categoryplot.setAxisOffset(new RectangleInsets(5D, 5D, 5D, 5D));</p>
+<p>&nbsp;&nbsp;CategoryAxis domainAxis = categoryplot.getDomainAxis();</p>
+<p>&nbsp;&nbsp;domainAxis.setLabelFont(labelFont);// 轴标题</p>
+<p>&nbsp;&nbsp;domainAxis.setTickLabelFont(labelFont);// 轴数值</p>
+<p>&nbsp;&nbsp;domainAxis.setCategoryLabelPositions(CategoryLabelPositions.UP_45); // 横轴上的<br>
+&nbsp;&nbsp;// Lable<br>
+&nbsp;&nbsp;// 45度倾斜<br>
+&nbsp;&nbsp;// 设置距离图片左端距离</p>
+<p>&nbsp;&nbsp;domainAxis.setLowerMargin(0.0);<br>
+&nbsp;&nbsp;// 设置距离图片右端距离<br>
+&nbsp;&nbsp;domainAxis.setUpperMargin(0.0);</p>
+<p>&nbsp;&nbsp;NumberAxis numberaxis = (NumberAxis) categoryplot.getRangeAxis();<br>
+&nbsp;&nbsp;numberaxis.setStandardTickUnits(NumberAxis.createIntegerTickUnits());<br>
+&nbsp;&nbsp;numberaxis.setAutoRangeIncludesZero(true);</p>
+<p>&nbsp;&nbsp;// 获得renderer 注意这里是下嗍造型到lineandshaperenderer！！<br>
+&nbsp;&nbsp;LineAndShapeRenderer lineandshaperenderer = (LineAndShapeRenderer) categoryplot<br>
+&nbsp;&nbsp;&nbsp;&nbsp;.getRenderer();</p>
+<p>&nbsp;&nbsp;lineandshaperenderer.setBaseShapesVisible(true); // series 点（即数据点）可见</p>
+<p>&nbsp;&nbsp;lineandshaperenderer.setBaseLinesVisible(true); // series 点（即数据点）间有连线可见</p>
+<p>&nbsp;&nbsp;// 显示折点数据<br>
+&nbsp;&nbsp;// lineandshaperenderer.setBaseItemLabelGenerator(new<br>
+&nbsp;&nbsp;// StandardCategoryItemLabelGenerator());<br>
+&nbsp;&nbsp;// lineandshaperenderer.setBaseItemLabelsVisible(true);</p>
+<p>&nbsp;&nbsp;//打印到服务器<br>
+&nbsp;&nbsp;FileOutputStream fos_jpg = null;<br>
+&nbsp;&nbsp;//String dirs = "C:/workspace/test/map/";<br>
+&nbsp;&nbsp;String dirs = "F:/test/";<br>
+&nbsp;&nbsp;String fileName = "lineAndShap.png";<br>
+&nbsp;&nbsp;String chartName = dirs + fileName;<br>
+&nbsp;&nbsp;try {<br>
+&nbsp;&nbsp;&nbsp;File file = new File(dirs);<br>
+&nbsp;&nbsp;&nbsp;if (!file.exists()) {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;file.mkdirs();<br>
+&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;&nbsp;<br>
+&nbsp;&nbsp;&nbsp;fos_jpg = new FileOutputStream(chartName);</p>
+<p>&nbsp;&nbsp;&nbsp;// 将报表保存为png文件<br>
+&nbsp;&nbsp;&nbsp;ChartUtilities.writeChartAsPNG(fos_jpg, chart, 1500, 510);<br>
+&nbsp;&nbsp;} catch (Exception e) {<br>
+&nbsp;&nbsp;&nbsp;e.printStackTrace();<br>
+&nbsp;&nbsp;&nbsp;return null;<br>
+&nbsp;&nbsp;} finally {<br>
+&nbsp;&nbsp;&nbsp;try {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;fos_jpg.close();<br>
+&nbsp;&nbsp;&nbsp;&nbsp;System.out.println("ok");<br>
+&nbsp;&nbsp;&nbsp;} catch (Exception e) {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;e.printStackTrace();<br>
+&nbsp;&nbsp;&nbsp;}<br>
+&nbsp;&nbsp;}<br>
+&nbsp;&nbsp;<br>
+&nbsp;&nbsp;//输出到浏览器<br>
+&nbsp;&nbsp;return categoryplot;<br>
+&nbsp;}<br>
+&nbsp;<br>
+servlet的doGet方法中代码</p>
+<p>&nbsp;&nbsp;response.setContentType("text/html");<br>
+&nbsp;&nbsp;System.out.println("line");<br>
+&nbsp;&nbsp;<br>
+&nbsp;&nbsp;String factory = request.getParameter("factory");<br>
+&nbsp;&nbsp;System.out.println(factory);<br>
+&nbsp;&nbsp;<br>
+&nbsp;&nbsp;MyLineAndShapeChart my = new MyLineAndShapeChart();<br>
+&nbsp;&nbsp;CategoryPlot mm = new CategoryPlot();<br>
+&nbsp;&nbsp;try {<br>
+&nbsp;&nbsp;&nbsp;mm = my.getLineAndShapeChart();<br>
+&nbsp;&nbsp;} catch (ParseException e) {<br>
+&nbsp;&nbsp;&nbsp;e.printStackTrace();<br>
+&nbsp;&nbsp;}<br>
+&nbsp;&nbsp;JFreeChart chart = new JFreeChart("ssssssss", JFreeChart.DEFAULT_TITLE_FONT,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;mm, true);<br>
+&nbsp;&nbsp;ChartRenderingInfo info = new ChartRenderingInfo(<br>
+&nbsp;&nbsp;&nbsp;&nbsp;new StandardEntityCollection());<br>
+&nbsp;&nbsp;String filename = ServletUtilities.saveChartAsPNG(chart, 500, 300,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;info, request.getSession());</p>
+<p>&nbsp;&nbsp;String graphURL = request.getContextPath()<br>
+&nbsp;&nbsp;&nbsp;&nbsp;+ "/servlet/DisplayChart?filename=" + filename;</p>
+<p>&nbsp;&nbsp;RequestDispatcher rd = request.getRequestDispatcher("../form/g.jsp");<br>
+&nbsp;&nbsp;request.getSession().setAttribute("filename", filename);<br>
+&nbsp;&nbsp;request.getSession().setAttribute("graphURL", graphURL);<br>
+&nbsp;&nbsp;rd.forward(request, response);<br>
+&nbsp;<br>
+webInfo下的g.jsp代码<br>
+&lt;%@ page contentType="text/html;charset=GBK"%&gt;<br>
+&lt;HTML&gt;<br>
+&nbsp;&lt;HEAD&gt;<br>
+&nbsp;&lt;/HEAD&gt;<br>
+&nbsp;&lt;BODY&gt;<br>
+&nbsp;&nbsp;&lt;P ALIGN="CENTER"&gt;<br>
+&nbsp;&nbsp;&nbsp;&lt;img src="${graphURL}" width=500 height=300 border=0<br>
+&nbsp;&nbsp;&nbsp;&nbsp;usemap="${filename}"&gt;<br>
+&nbsp;&nbsp;&lt;/P&gt;<br>
+&nbsp;&lt;/BODY&gt;<br>
+&lt;/HTML&gt;<br>
+<br>
+&nbsp;web.xml 文件中内容（重要）<br>
+</p>
+<p>&lt;?xml version="1.0" encoding="UTF-8"?&gt;<br>
+&lt;web-app version="2.5" xmlns="http://java.sun.com/xml/ns/javaee"<br>
+&nbsp;xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"<br>
+&nbsp;xsi:schemaLocation="http://java.sun.com/xml/ns/javaee <br>
+&nbsp;http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"&gt;<br>
+&nbsp;<br>
+&nbsp;&lt;servlet&gt;<br>
+&nbsp;&nbsp;&lt;servlet-name&gt;DisplayChart&lt;/servlet-name&gt;<br>
+&nbsp;&nbsp;&lt;servlet-class&gt;<br>
+&nbsp;&nbsp;&nbsp;org.jfree.chart.servlet.DisplayChart<br>
+&nbsp;&nbsp;&lt;/servlet-class&gt;<br>
+&nbsp;&lt;/servlet&gt;<br>
+&nbsp;&lt;servlet-mapping&gt;<br>
+&nbsp;&nbsp;&lt;servlet-name&gt;DisplayChart&lt;/servlet-name&gt;<br>
+&nbsp;&nbsp;&lt;url-pattern&gt;/servlet/DisplayChart&lt;/url-pattern&gt;<br>
+&nbsp;&lt;/servlet-mapping&gt;<br>
+<br>
+&nbsp;&lt;servlet&gt;&nbsp;&nbsp;<br>
+&lt;servlet-name&gt;AServlet&lt;/servlet-name&gt;<br>
+&nbsp;&nbsp;&lt;servlet-class&gt;servlet.AServlet&lt;/servlet-class&gt;<br>
+&nbsp;&lt;/servlet&gt;<br>
+&nbsp;&lt;servlet-mapping&gt;<br>
+&nbsp;&nbsp;&lt;servlet-name&gt;AServlet&lt;/servlet-name&gt;<br>
+&nbsp;&nbsp;&lt;url-pattern&gt;/servlet/AServlet&lt;/url-pattern&gt;<br>
+&nbsp;&lt;/servlet-mapping&gt;<br>
+&lt;/web-app&gt;<br>
+</p>
+
+		<p class="postfoot">
+			posted on 2009-01-14 11:47 <a href="http://www.blogjava.net/liudecai/">liudecai_zan@126.com</a> 阅读(685) <a href="#Post">评论(2)</a> &nbsp;<a href="http://www.blogjava.net/liudecai/admin/EditPosts.aspx?postid=251239">编辑</a> &nbsp;<a href="http://www.blogjava.net/liudecai/AddToFavorite.aspx?id=251239">收藏</a>  所属分类: <a href="http://www.blogjava.net/liudecai/category/37224.html">JFreeChart</a> 
+		</p>
+	</div>
+	<img src="another_jfreechart_example_files/251239.jpg" width="1" height="1">
+	
+<!--
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+xmlns:dc="http://purl.org/dc/elements/1.1/"
+xmlns:trackback="http://madskills.com/public/xml/rss/module/trackback/">
+<rdf:Description
+rdf:about="http://www.blogjava.net/liudecai/archive/2009/01/14/251239.html"
+dc:identifier="http://www.blogjava.net/liudecai/archive/2009/01/14/251239.html"
+dc:title="生成两个日期间的以天为间隔的折线图(web方式和控制台方式)"
+trackback:ping="http://www.blogjava.net/liudecai/services/trackbacks/251239.aspx" />
+</rdf:RDF>
+-->
+
+	<script type="text/javascript">
+//<![CDATA[
+Sys.WebForms.PageRequestManager._initialize('AjaxHolder$scriptmanager1', document.getElementById('Form1'));
+Sys.WebForms.PageRequestManager.getInstance()._updateControls(['tAjaxHolder$UpdatePanel1'], [], [], 90);
+//]]>
+</script>
+
+<div id="AjaxHolder_UpdatePanel1">
+	    
+    <a name="pagedcomment"></a>
+<a name="评论">
+</a><div id="comments">
+<h3><a name="评论">评论</a></h3>
+<a name="评论">	
+	
+			</a><h4>
+<a name="评论">				</a><a title="permalink: re: 生成两个日期间的以天为间隔的折线图(web方式和控制台方式)" href="http://www.blogjava.net/liudecai/archive/2009/01/14/251239.html#251251">#</a>&nbsp;<a name="251251"></a>re: 生成两个日期间的以天为间隔的折线图(web方式和控制台方式)
+					<span>
+						2009-01-14 13:07
+					</span>
+				<a id="AjaxHolder_Comments_CommentList_ctl00_NameLink" target="_blank">yz</a>
+			</h4>
+			<p>
+				有个图看就好了!&nbsp;&nbsp;<a onclick='return SetReplyAuhor("yz")' href="http://www.blogjava.net/liudecai/archive/2009/01/14/251239.html#post">回复</a>&nbsp;&nbsp;<a title="查看该作者发表过的评论" href="http://www.blogjava.net/comment?author=yz" target="_blank">更多评论</a>
+				<a id="AjaxHolder_Comments_CommentList_ctl00_DeleteLink" href="javascript:__doPostBack('AjaxHolder$Comments$CommentList$ctl00$DeleteLink','')"></a>&nbsp;&nbsp;<a id="AjaxHolder_Comments_CommentList_ctl00_EditLink"></a>
+			</p>
+		
+			<h4>
+				<a title="permalink: re: 生成两个日期间的以天为间隔的折线图(web方式和控制台方式)" href="http://www.blogjava.net/liudecai/archive/2009/01/14/251239.html#251374">#</a>&nbsp;<a name="251374"></a>re: 生成两个日期间的以天为间隔的折线图(web方式和控制台方式)<a name="Post"></a>
+					<span>
+						2009-01-15 08:29
+					</span>
+				<a id="AjaxHolder_Comments_CommentList_ctl01_NameLink" href="http://www.blogjava.net/liudecai/" target="_blank">liudecai_zan@126.com</a>
+			</h4>
+			<p>
+				计划数据要从数据库中取，在这里为了简化就用简单方式处理是数据不一样一边看出效果，但是效果肯定不够真实，所以就。。。。。。
+<br>double val = x + y * z * 100;//实际的值应该从数据库中获取&nbsp;&nbsp;<a onclick='return SetReplyAuhor("liudecai_zan@126.com")' href="http://www.blogjava.net/liudecai/archive/2009/01/14/251239.html#post">回复</a>&nbsp;&nbsp;<a title="查看该作者发表过的评论" href="http://www.blogjava.net/comment?author=liudecai_zan%40126.com" target="_blank">更多评论</a>
+				<a id="AjaxHolder_Comments_CommentList_ctl01_DeleteLink" href="javascript:__doPostBack('AjaxHolder$Comments$CommentList$ctl01$DeleteLink','')"></a>&nbsp;&nbsp;<a id="AjaxHolder_Comments_CommentList_ctl01_EditLink"></a>
+			</p>
+		
+</div>
+<style>
+td { font-size: 12px }
+.commentTextBox 
+{ 
+    font-family : Verdana; 
+    font-size: 13px;
+ }
+</style>
+<!--Beging Temp Save-->
+<style>.userData { BEHAVIOR: url(#default#userdata) }
+	</style>
+<div class="userData" id="CommentsPersistDiv"></div>
+
+<script type="text/javascript">
+function pageLoad()
+{
+    Sys.WebForms.PageRequestManager.getInstance().add_initializeRequest(handleInitializeRequest);
+    //Sys.WebForms.PageRequestManager.getInstance().add_endRequest(handleEndRequest);
+}
+
+function handleInitializeRequest(sender, args)
+{
+    var prm = Sys.WebForms.PageRequestManager.getInstance();
+    var eid = args.get_postBackElement().id;
+    if (eid.indexOf("DeleteLink")>0) 
+    {
+       args.get_postBackElement().innerHTML = "<font color='red'>正在删除...</font>";         
+    }    
+    else if (eid.indexOf("btnSubmit")>0) 
+    {
+       document.getElementById("AjaxHolder_PostComment_ltSubmitMsg").innerHTML="正在提交...";
+       document.getElementById("AjaxHolder_PostComment_btnSubmit").disabled = true;       
+    }   
+    else if(eid.indexOf("refreshList")>0)
+    {
+        document.getElementById("AjaxHolder_PostComment_refreshList").innerHTML="<font color='red'>正在刷新...</font>";
+    }
+   
+}	
+
+function TempSave(ElementID)
+{
+	try
+	{
+	CommentsPersistDiv.setAttribute("CommentContent",document.getElementById(ElementID).value);
+	CommentsPersistDiv.save("CommentXMLStore");
+	}
+	catch(ex)
+	{
+	}
+	
+}
+function Restore(ElementID)
+{
+	CommentsPersistDiv.load("CommentXMLStore");
+	document.getElementById(ElementID).value=CommentsPersistDiv.getAttribute("CommentContent");
+}	
+			
+			
+</script>
+<!--Ene TempSave-->
+<div id="divRefreshComments" style="text-align: right; margin-right: 10px; margin-bottom: 5px; font-size: 12px;"><a href="http://news.cnblogs.com/">IT新闻</a>&nbsp;&nbsp;<a href="http://www.blogjava.net/RequireRegister.aspx">新用户注册</a>&nbsp;&nbsp;<a id="AjaxHolder_PostComment_refreshList" href="javascript:__doPostBack('AjaxHolder$PostComment$refreshList','')">刷新评论列表</a>&nbsp;&nbsp;</div>
+<div class="commentform">
+<span id="AjaxHolder_PostComment_ltSubmitMsg" style="color: Red;"></span>
+<br>
+<a name="Feedback"></a>
+	<table border="0" cellpadding="1" cellspacing="1">
+		<tbody><tr>
+			<td colspan="3" height="5"></td>
+		</tr>
+		<tr>
+			<td width="75"></td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td width="55">标题</td>
+			<td><input name="AjaxHolder$PostComment$tbTitle" value="re: 生成两个日期间的以天为间隔的折线图(web方式和控制台方式)" id="AjaxHolder_PostComment_tbTitle" class="commenttb" style="width: 320px;" type="text"></td>
+			<td><span id="AjaxHolder_PostComment_RequiredFieldValidator1" style="color: Red; visibility: hidden;">请输入标题</span></td>
+		</tr>
+		<tr>
+			<td>姓名</td>
+			<td><input name="AjaxHolder$PostComment$tbName" value="Atea" readonly="readonly" id="AjaxHolder_PostComment_tbName" class="commenttb" style="width: 320px;" type="text"></td>
+			<td><span id="AjaxHolder_PostComment_RequiredFieldValidator2" style="color: Red; visibility: hidden;">请输入你的姓名</span></td>
+		</tr>
+		<tr>
+			<td>主页</td>
+			<td><input name="AjaxHolder$PostComment$tbUrl" value="http://www.blogjava.net/atealxt/" readonly="readonly" id="AjaxHolder_PostComment_tbUrl" class="commenttb" style="width: 320px;" type="text"></td>
+			<td><font face="宋体"></font></td>
+		</tr>
+		<tr>
+			<td colspan="3" align="left">
+				
+			</td>
+		</tr>
+		<tr>
+			<td colspan="3">内容(请不要发表任何与政治相关的内容)
+				<span id="AjaxHolder_PostComment_RequiredFieldValidator3" style="color: Red; visibility: hidden;">请输入评论内容</span><br>
+				<textarea name="AjaxHolder$PostComment$tbComment" rows="10" cols="50" id="AjaxHolder_PostComment_tbComment" class="commentTextBox" onkeydown="ctlent(event,'AjaxHolder_PostComment_tbComment')" style="width: 480px; height: 220px;"></textarea></td>
+		</tr>
+		<tr>
+			<td colspan="3">
+		<span id="AjaxHolder_PostComment_Message" style="color: Red;"></span>
+		</td>
+		</tr><tr>
+			<td colspan="3"><input id="AjaxHolder_PostComment_chkIsNotify" name="AjaxHolder$PostComment$chkIsNotify" tabindex="-1" type="checkbox"><label for="AjaxHolder_PostComment_chkIsNotify">有回复时邮件通知我</label></td>
+		</tr>
+		<tr>
+			<td height="23"><input name="AjaxHolder$PostComment$btnSubmit" value="提交" onclick="TempSave('AjaxHolder_PostComment_tbComment');WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;AjaxHolder$PostComment$btnSubmit&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, false))" id="AjaxHolder_PostComment_btnSubmit" class="commentButton" type="submit">
+				</td>
+			<td colspan="2" height="23">&nbsp;
+				<a id="AjaxHolder_PostComment_lnkLogin" href="http://www.blogjava.net/logout.aspx?ReturnURL=http://www.blogjava.net/liudecai/archive/2009/01/14/251239.html">注销</a>&nbsp;&nbsp;<a id="AjaxHolder_PostComment_linkLoginComment" onclick="if(document.getElementById('AjaxHolder_PostComment_tbComment').value != '') return confirm('未提交的评论内容将会丢失, 你真的要进入高级评论吗?');" href="http://www.blogjava.net/liudecai/archive/2009/01/14/251239.html?login=1#Post">使用高级评论</a>&nbsp;&nbsp;<a href="http://www.blogjava.net/RequireRegister.aspx">新用户注册</a>&nbsp;&nbsp;<a href="#Top">返回页首</a>&nbsp;&nbsp;<a id="AjaxHolder_PostComment_lbRestore" onclick="Restore('AjaxHolder_PostComment_tbComment'); return false;" href="http://www.blogjava.net/liudecai/archive/2009/01/14/251239.html#Post">恢复上次提交</a>&nbsp;&nbsp;&nbsp;&nbsp;<a id="AjaxHolder_PostComment_btnSubscibe" href="javascript:__doPostBack('AjaxHolder$PostComment$btnSubscibe','')">订阅回复</a>&nbsp;&nbsp;
+				</td>
+		</tr>
+		<tr>
+			<td colspan="3"><label class="CtrlEnter">[使用Ctrl+Enter键可以直接提交]</label></td>
+		</tr>
+		<tr>
+			<td colspan="3">该文被作者在 2009-01-15 09:22 编辑过</td>
+		</tr>
+		<tr>
+			<td colspan="3" height="5">&nbsp;</td>
+		</tr>
+		<tr>
+			<td colspan="3" height="5"><a id="AjaxHolder_PostComment_lbViewReaders" href="javascript:__doPostBack('AjaxHolder$PostComment$lbViewReaders','')">看看谁阅读了该文章</a></td>
+		</tr>
+		<tr>
+			<td colspan="3" height="1">&nbsp;</td>
+		</tr>
+		<tr>
+			<td colspan="3" height="5"><script type="text/javascript" src="another_jfreechart_example_files/a.htm"></script>
+			<script type="text/JavaScript">show_a4_zone("S1");</script><a href="http://a4.yeshj.com/rd/22337/" target="_blank"><img src="another_jfreechart_example_files/YU-D-S1P-22337_68.jpg" border="0"></a>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="3">
+<br>推荐图书：<br>《<a href="http://book.cnblogs.com/zt/outworkshop/" target="_blank">走出软件作坊</a>》、《<a href="http://book.cnblogs.com/zt/wtjs/" target="_blank">悟透JavaScript</a>》、《<a href="http://book.cnblogs.com/zt/head_first_design_patterns/" target="_blank">Head First 设计模式</a>》</td>
+		</tr>
+		<tr>
+			<td colspan="3" height="5">
+<div id="divRelativePosts">
+相关文章:
+	
+			<ul style="margin-top: 0px; padding-left: 0px;">
+		
+			<li style="list-style-type: none; list-style-image: none; list-style-position: outside; display: none;">
+				<a id="AjaxHolder_PostComment_ctl06_RelativePostsList_ctl01_Hyperlink1" href="http://www.blogjava.net/liudecai/archive/2009/01/14/251239.html">生成两个日期间的以天为间隔的折线图(web方式和控制台方式)</a>
+			</li>
+		
+			<li style="list-style-type: none; list-style-image: none; list-style-position: outside;">
+				<a id="AjaxHolder_PostComment_ctl06_RelativePostsList_ctl02_Hyperlink1" href="http://www.blogjava.net/liudecai/archive/2009/01/13/251123.html">深入探究JFreeChart（1）[转载] </a>
+			</li>
+		
+			<li style="list-style-type: none; list-style-image: none; list-style-position: outside;">
+				<a id="AjaxHolder_PostComment_ctl06_RelativePostsList_ctl03_Hyperlink1" href="http://www.blogjava.net/liudecai/archive/2009/01/13/251051.html">GIF、JPEG 和 PNG 的比较[转载] </a>
+			</li>
+		
+			<li style="list-style-type: none; list-style-image: none; list-style-position: outside;">
+				<a id="AjaxHolder_PostComment_ctl06_RelativePostsList_ctl04_Hyperlink1" href="http://www.blogjava.net/liudecai/archive/2009/01/11/250859.html">深入探究JFreeChart（2）[转载] </a>
+			</li>
+		
+			<li style="list-style-type: none; list-style-image: none; list-style-position: outside;">
+				<a id="AjaxHolder_PostComment_ctl06_RelativePostsList_ctl05_Hyperlink1" href="http://www.blogjava.net/liudecai/archive/2009/01/11/250847.html">jfreechart应用_例题_生成饼状图（展示，生成文件，WEB项目）_可以直接运行</a>
+			</li>
+		
+			<li style="list-style-type: none; list-style-image: none; list-style-position: outside;">
+				<a id="AjaxHolder_PostComment_ctl06_RelativePostsList_ctl06_Hyperlink1" href="http://www.blogjava.net/liudecai/archive/2009/01/11/250843.html">jfreechart应用_经典例题_生成饼状图、生成单组柱状图、生成多组柱状图、生成堆积柱状图、生成折线图</a>
+			</li>
+		
+			<li style="list-style-type: none; list-style-image: none; list-style-position: outside;">
+				<a id="AjaxHolder_PostComment_ctl06_RelativePostsList_ctl07_Hyperlink1" href="http://www.blogjava.net/liudecai/archive/2009/01/10/250795.html">jfreechart应用_例题_生成饼状图(3D,不显示，只生成文件）_可以直接运行 </a>
+			</li>
+		
+			<li style="list-style-type: none; list-style-image: none; list-style-position: outside;">
+				<a id="AjaxHolder_PostComment_ctl06_RelativePostsList_ctl08_Hyperlink1" href="http://www.blogjava.net/liudecai/archive/2009/01/10/250787.html">深入探究JFreeChart（1）[转载] </a>
+			</li>
+		
+			<li style="list-style-type: none; list-style-image: none; list-style-position: outside;">
+				<a id="AjaxHolder_PostComment_ctl06_RelativePostsList_ctl09_Hyperlink1" href="http://www.blogjava.net/liudecai/archive/2009/01/09/250648.html">jfreechart应用_例题_生成饼状图（只展示，不生成文件）_可以直接运行</a>
+			</li>
+		
+			<li style="list-style-type: none; list-style-image: none; list-style-position: outside;">
+				<a id="AjaxHolder_PostComment_ctl06_RelativePostsList_ctl10_Hyperlink1" href="http://www.blogjava.net/liudecai/archive/2009/01/09/250587.html">JFreeChart学习笔记[转载] </a>
+			</li>
+		
+			</ul>
+		
+</div>
+</td>
+		</tr>
+	
+		<tr>
+			<td colspan="3">相关链接:<script type="text/javascript">
+	function GetMeta(ametaName){
+	var METAs = document.getElementsByTagName("meta"); 
+	for (var i=0; i<METAs.length; i++) { 
+	if(METAs[i].name.toLowerCase()==ametaName){return (METAs[i].content);}
+	};
+	return "";
+	}
+	var title = document.title;
+	document.write("<div id=\"a4_ads_output\">");
+	document.write("<script type='text/javascript' src='http://a4.yeshj.com/adwords/EN017?num=5&title="+ encodeURIComponent(title) +"&tag="+ encodeURIComponent(GetMeta("keywords")) +"'></scri"+"pt>");
+	document.write("</div>");
+	</script><div id="a4_ads_output"><script type="text/javascript" src="another_jfreechart_example_files/EN017.htm"></script><a href="http://a4.yeshj.com/rd?aid=19449&amp;zid=0&amp;url=http%3a%2f%2fjp.hjenglish.com%2fpage%2f57868%2f" target="_blank">日语“我”的多种表达方式</a><br><a href="http://a4.yeshj.com/rd?aid=21938&amp;zid=0&amp;url=http%3a%2f%2fts.hjenglish.com%2fpage%2f62967" target="_blank">《越狱》插曲Home：以自由落体的方式回归</a><br><a href="http://a4.yeshj.com/rd?aid=18291&amp;zid=0&amp;url=http%3a%2f%2fwww.amazon.cn%2funion%2fasso_product.asp%3fprodid%3dbkbk857654%26source%3dcnblogs" target="_blank">图书推荐：Google是如何控制世界的</a><br><a href="http://a4.yeshj.com/rd?aid=16930&amp;zid=0&amp;url=http%3a%2f%2fwww.cnblogs.com%2fidior%2farticles%2f76600.html" target="_blank">Webservice的设计和模式</a><br><a href="http://a4.yeshj.com/rd?aid=14750&amp;zid=0&amp;url=http%3a%2f%2fts.hjenglish.com%2fmusic" target="_blank">夏蒂的音乐盒子</a><br></div></td>
+		</tr>	
+
+		<tr>
+			<td colspan="3" height="5">网站导航:<div id="blogsite">
+			<a href="http://www.cnblogs.com/">博客园</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="http://www.blogjava.net/">BlogJava</a>&nbsp;&nbsp;
+			<a href="http://www.cnweblog.com/">博客生活</a>&nbsp;&nbsp;
+			<a href="http://www.cnitblog.com/">IT博客网</a>&nbsp;&nbsp;
+			<a href="http://www.cppblog.com/">C++博客</a>&nbsp;&nbsp;
+			<a href="http://www.phpweblog.net/">PHP博客</a>&nbsp;&nbsp;
+			<a href="http://space.cnblogs.com/">博客园社区</a>
+			<br>
+			<a href="http://www.manageblog.net/">管理博客</a>&nbsp;&nbsp;
+			<a href="http://www.teachblog.net/">教师博客</a>&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="http://www.astroblog.cn/">天文博客</a>&nbsp;&nbsp;
+			<a href="http://www.cnautoblog.com/">汽车博客</a>&nbsp;&nbsp;
+			<a href="http://www.zuqiublog.com/">足球博客</a>&nbsp;&nbsp;
+			<a href="http://www.gupiaoblog.com/">股票博客</a>&nbsp;&nbsp;
+			<a href="http://www.etronblog.com/">电子博客</a>&nbsp;&nbsp;
+			</div></td>
+		</tr>
+		<tr>
+			<td colspan="3">
+				
+<br>
+<br>
+<iframe marginheight="0" marginwidth="0" src="another_jfreechart_example_files/ad.htm" style="border: 0px solid rgb(102, 102, 102);" allowtransparency="true" scrolling="no" width="468" frameborder="0" height="0"></iframe>
+<br>
+
+
+</td>
+		</tr>		
+	</tbody></table>	
+</div>
+<div id="AjaxHolder_PostComment_ValidationSummary1" style="color: Red; display: none;">
+
+	</div>
+
+</div>
+
+				
+</div>
+
+<p id="footer">
+	Powered by: 
+	<br>
+	
+	<a id="Footer1_Hyperlink3" name="Hyperlink1" href="http://www.blogjava.net/" style="font-family: Verdana; font-size: 12px;">BlogJava</a>
+	<br>
+	Copyright © liudecai_zan@126.com
+</p>
+
+
+    
+<script type="text/javascript">
+//<![CDATA[
+var Page_ValidationSummaries =  new Array(document.getElementById("AjaxHolder_PostComment_ValidationSummary1"));
+var Page_Validators =  new Array(document.getElementById("AjaxHolder_PostComment_RequiredFieldValidator1"), document.getElementById("AjaxHolder_PostComment_RequiredFieldValidator2"), document.getElementById("AjaxHolder_PostComment_RequiredFieldValidator3"));
+//]]>
+</script>
+
+<script type="text/javascript">
+//<![CDATA[
+var AjaxHolder_PostComment_RequiredFieldValidator1 = document.all ? document.all["AjaxHolder_PostComment_RequiredFieldValidator1"] : document.getElementById("AjaxHolder_PostComment_RequiredFieldValidator1");
+AjaxHolder_PostComment_RequiredFieldValidator1.controltovalidate = "AjaxHolder_PostComment_tbTitle";
+AjaxHolder_PostComment_RequiredFieldValidator1.errormessage = "请输入标题";
+AjaxHolder_PostComment_RequiredFieldValidator1.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+AjaxHolder_PostComment_RequiredFieldValidator1.initialvalue = "";
+var AjaxHolder_PostComment_RequiredFieldValidator2 = document.all ? document.all["AjaxHolder_PostComment_RequiredFieldValidator2"] : document.getElementById("AjaxHolder_PostComment_RequiredFieldValidator2");
+AjaxHolder_PostComment_RequiredFieldValidator2.controltovalidate = "AjaxHolder_PostComment_tbName";
+AjaxHolder_PostComment_RequiredFieldValidator2.errormessage = "请输入你的姓名";
+AjaxHolder_PostComment_RequiredFieldValidator2.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+AjaxHolder_PostComment_RequiredFieldValidator2.initialvalue = "";
+var AjaxHolder_PostComment_RequiredFieldValidator3 = document.all ? document.all["AjaxHolder_PostComment_RequiredFieldValidator3"] : document.getElementById("AjaxHolder_PostComment_RequiredFieldValidator3");
+AjaxHolder_PostComment_RequiredFieldValidator3.controltovalidate = "AjaxHolder_PostComment_tbComment";
+AjaxHolder_PostComment_RequiredFieldValidator3.errormessage = "请输入评论内容";
+AjaxHolder_PostComment_RequiredFieldValidator3.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+AjaxHolder_PostComment_RequiredFieldValidator3.initialvalue = "";
+var AjaxHolder_PostComment_ValidationSummary1 = document.all ? document.all["AjaxHolder_PostComment_ValidationSummary1"] : document.getElementById("AjaxHolder_PostComment_ValidationSummary1");
+AjaxHolder_PostComment_ValidationSummary1.showmessagebox = "True";
+AjaxHolder_PostComment_ValidationSummary1.showsummary = "False";
+//]]>
+</script>
+
+
+<script type="text/javascript">
+<!--
+var Page_ValidationActive = false;
+if (typeof(ValidatorOnLoad) == "function") {
+    ValidatorOnLoad();
+}
+
+function ValidatorOnSubmit() {
+    if (Page_ValidationActive) {
+        return ValidatorCommonOnSubmit();
+    }
+    else {
+        return true;
+    }
+}
+// -->
+</script>
+        
+<script type="text/javascript">
+//<![CDATA[
+
+document.getElementById('AjaxHolder_PostComment_ValidationSummary1').dispose = function() {
+    Array.remove(Page_ValidationSummaries, document.getElementById('AjaxHolder_PostComment_ValidationSummary1'));
+}
+Sys.Application.initialize();
+
+document.getElementById('AjaxHolder_PostComment_RequiredFieldValidator1').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('AjaxHolder_PostComment_RequiredFieldValidator1'));
+}
+
+document.getElementById('AjaxHolder_PostComment_RequiredFieldValidator2').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('AjaxHolder_PostComment_RequiredFieldValidator2'));
+}
+
+document.getElementById('AjaxHolder_PostComment_RequiredFieldValidator3').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('AjaxHolder_PostComment_RequiredFieldValidator3'));
+}
+//]]>
+</script>
+</form>
+    <script type="text/javascript" src="another_jfreechart_example_files/ShowHidden.js"></script>
+	<span style="display: none;"><script language="javascript" src="another_jfreechart_example_files/click.htm"></script><a href="http://count.51yes.com/index.aspx?id=48843620" target="_blank"><img src="another_jfreechart_example_files/count1.gif" alt="51YES网站统计系统" vspace="0" width="20" border="0" height="20" hspace="0"></a><iframe marginwidth="0" marginheight="0" hspace="0" vspace="0" src="another_jfreechart_example_files/sa.xml" scrolling="no" width="0" frameborder="0" height="0"></iframe></span>
+</body></html>

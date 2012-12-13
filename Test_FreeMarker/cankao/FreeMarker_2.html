@@ -1,0 +1,813 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html dir="ltr" xml:lang="zh-CN" xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>FreeMarker学习 - 企业应用 - Java - JavaEye论坛</title>
+    
+    
+    <link rel="shortcut icon" href="http://www.heypeep.com/index.php?q=aHR0cDovL3d3dy5qYXZhZXllLmNvbS9pbWFnZXMvZmF2aWNvbi5pY28%3D" type="image/x-icon">
+    <link href="http://www.heypeep.com/index.php?q=aHR0cDovL3d3dy5qYXZhZXllLmNvbS9yc3MvYm9hcmQvSmF2YQ%3D%3D" rel="alternate" title="JavaEye论坛" type="application/rss+xml">
+    <link href="FreeMarker_2_files/index_002.css" media="screen" rel="stylesheet" type="text/css">
+    
+      <link href="FreeMarker_2_files/index.css" media="screen" rel="stylesheet" type="text/css">
+  
+
+            
+            </head><body>
+    <div id="page">
+      <div id="header" class="clearfix">
+        <ul id="user_nav">
+  <li class="last"><a href="http://www.heypeep.com/index.php?q=aHR0cDovL3d3dy5qYXZhZXllLmNvbS9pbmRleC9oZWxw">帮助</a></li>
+      <li><a href="http://www.heypeep.com/index.php?q=aHR0cDovL3d3dy5qYXZhZXllLmNvbS9zaWdudXA%3D">注册</a></li>
+    <li><a href="http://www.heypeep.com/index.php?q=aHR0cDovL3d3dy5qYXZhZXllLmNvbS9sb2dpbg%3D%3D">登录</a></li>
+    <li class="highlight"><span>您还没有登录 !</span></li>  
+    
+</ul>        
+        <div id="branding">
+          <a href="http://www.heypeep.com/index.php?q=aHR0cDovL3d3dy5qYXZhZXllLmNvbQ%3D%3D"><img alt="JavaEye3.0" src="FreeMarker_2_files/index_006.gif" title="JavaEye-最棒的软件开发交流社区"></a>
+        </div>  
+        <div id="ad">
+          
+        </div>
+      </div>
+      
+      <div id="content" class="clearfix">
+        <div id="main">
+          
+
+
+          
+
+
+
+
+<div class="clearfix">
+  <div class="crumbs">
+    <a href="http://www.heypeep.com/index.php?q=aHR0cDovL3d3dy5qYXZhZXllLmNvbS9mb3J1bXM%3D">论坛首页</a> <span class="arrow">→</span>
+    <a href="http://www.heypeep.com/index.php?q=aHR0cDovL3d3dy5qYXZhZXllLmNvbS9mb3J1bXMvYm9hcmQvSmF2YQ%3D%3D">Java版</a> <span class="arrow">→</span>
+    <a href="http://www.heypeep.com/index.php?q=aHR0cDovL3d3dy5qYXZhZXllLmNvbS9mb3J1bXMvdGFnL0oyRUU%3D">企业应用</a> <span class="arrow">→</span>
+    <h1>FreeMarker学习</h1>
+  </div>
+</div>
+
+<div id="forum_tag_list">
+  <a href="http://www.heypeep.com/index.php?q=aHR0cDovL3d3dy5qYXZhZXllLmNvbS9mb3J1bXMvYm9hcmQvSmF2YQ%3D%3D">全部</a>
+      <a href="http://www.heypeep.com/index.php?q=aHR0cDovL3d3dy5qYXZhZXllLmNvbS9mb3J1bXMvdGFnL0hpYmVybmF0ZQ%3D%3D">Hibernate</a>
+      <a href="http://www.heypeep.com/index.php?q=aHR0cDovL3d3dy5qYXZhZXllLmNvbS9mb3J1bXMvdGFnL1NwcmluZw%3D%3D">Spring</a>
+      <a href="http://www.heypeep.com/index.php?q=aHR0cDovL3d3dy5qYXZhZXllLmNvbS9mb3J1bXMvdGFnL1N0cnV0cw%3D%3D">Struts</a>
+      <a href="http://www.heypeep.com/index.php?q=aHR0cDovL3d3dy5qYXZhZXllLmNvbS9mb3J1bXMvdGFnL1dlYndvcms%3D">Webwork</a>
+      <a href="http://www.heypeep.com/index.php?q=aHR0cDovL3d3dy5qYXZhZXllLmNvbS9mb3J1bXMvdGFnL2lCQVRJUw%3D%3D">iBATIS</a>
+      <a href="http://www.heypeep.com/index.php?q=aHR0cDovL3d3dy5qYXZhZXllLmNvbS9mb3J1bXMvdGFnL0oyRUU%3D">企业应用</a>
+      <a href="http://www.heypeep.com/index.php?q=aHR0cDovL3d3dy5qYXZhZXllLmNvbS9mb3J1bXMvdGFnL0Rlc2lnbi1QYXR0ZXJu">设计模式</a>
+      <a href="http://www.heypeep.com/index.php?q=aHR0cDovL3d3dy5qYXZhZXllLmNvbS9mb3J1bXMvdGFnL0RBTw%3D%3D">DAO</a>
+      <a href="http://www.heypeep.com/index.php?q=aHR0cDovL3d3dy5qYXZhZXllLmNvbS9mb3J1bXMvdGFnL09iamVjdC1Eb21haW4%3D">领域模型</a>
+      <a href="http://www.heypeep.com/index.php?q=aHR0cDovL3d3dy5qYXZhZXllLmNvbS9mb3J1bXMvdGFnL09P">OO</a>
+      <a href="http://www.heypeep.com/index.php?q=aHR0cDovL3d3dy5qYXZhZXllLmNvbS9mb3J1bXMvdGFnL1RvbWNhdA%3D%3D">Tomcat</a>
+      <a href="http://www.heypeep.com/index.php?q=aHR0cDovL3d3dy5qYXZhZXllLmNvbS9mb3J1bXMvdGFnL1NPQQ%3D%3D">SOA</a>
+      <a href="http://www.heypeep.com/index.php?q=aHR0cDovL3d3dy5qYXZhZXllLmNvbS9mb3J1bXMvdGFnL0pCb3Nz">JBoss</a>
+      <a href="http://www.heypeep.com/index.php?q=aHR0cDovL3d3dy5qYXZhZXllLmNvbS9mb3J1bXMvdGFnL0oyTUU%3D">J2ME</a>
+  </div>
+
+<div class="actions">
+  <div class="buttons"><a href="http://www.heypeep.com/index.php?q=aHR0cDovL3d3dy5qYXZhZXllLmNvbS9mb3J1bXMvMzkvdG9waWNzLzE2NTExMi9wb3N0cy9uZXc%3D" class="new_post" title="发表回复">&nbsp;</a></div>
+  <div class="wrapper">
+    <div id="forum_advert_b0"></div>
+    
+    <div class="info">浏览 2222 次</div>
+  </div>
+</div>
+
+
+
+<table id="forum_main" cellspacing="1">
+  <thead>
+    <tr>
+      <th colspan="2" class="topic_title">
+        <div class="wrapper"> <a href="http://www.heypeep.com/index.php?q=aHR0cDovL3d3dy5qYXZhZXllLmNvbS90b3BpYy8xNjUxMTI%3D">主题：FreeMarker学习</a></div>
+        <div id="topic_rate_box">精华帖 (0) :: 良好帖 (1) :: 新手帖 (0) :: 隐藏帖 (0)</div>
+      </th>
+    </tr>
+    <tr>
+      <td class="first_col">作者</td>
+      <td class="last_col">正文</td>
+    </tr>
+  </thead>
+  <tbody id="posts">
+    <tr id="p_471424">
+  <td class="postauthor">
+    <ul>
+      <li class="name">mht19840918</li>
+      <li>等级: 初级会员</li>
+      <li><a href="http://www.heypeep.com/index.php?q=aHR0cDovL21odDE5ODQwOTE4LmphdmFleWUuY29t" target="_blank"><img alt="用户头像" src="FreeMarker_2_files/index_004.jpg" title="mht19840918的博客: 陶然水岸"></a></li>
+      <li>性别: <img src="FreeMarker_2_files/index.gif" title="男"></li>
+      <li>文章: 12</li>
+      <li>积分: 0</li>
+      <li>来自: 北京</li>
+      <li><img src="FreeMarker_2_files/index_003.gif"></li>
+    </ul>
+  </td>
+  <td class="postcontent">
+    <div class="postactions">
+      <div class="description">时间：2008-02-26 关键字: <strong>freemarker</strong></div>
+      <div class="links">
+        <a href="http://www.heypeep.com/index.php?q=aHR0cDovL3d3dy5qYXZhZXllLmNvbS9mb3J1bXMvMzkvdG9waWNzLzE2NTExMi9wb3N0cy80NzE0MjQvcXVvdGU%3D">引用</a>
+        
+          
+          
+        
+      </div>
+    </div>
+    <div class="postbody clearfix"> 
+                      
+          <div id="related_topics">相关文章: <span class="close"><a href="#" title="关闭">&nbsp;</a></span>
+            <ul>
+                              <li><a href="http://www.heypeep.com/index.php?q=aHR0cDovL3d3dy5qYXZhZXllLmNvbS90b3BpYy8yNDExOTg%3D" target="_blank">FreeMarker学习笔记</a></li>
+                          </ul>
+            <br><span>推荐圈子: <a href="http://www.heypeep.com/index.php?q=aHR0cDovL2ZzaGFycC5ncm91cC5qYXZhZXllLmNvbQ%3D%3D" target="_blank">F#语言</a></span>
+            <br><a href="http://www.heypeep.com/index.php?q=aHR0cDovL3d3dy5qYXZhZXllLmNvbS93aWtpL3RvcGljLzE2NTExMg%3D%3D" target="_blank">更多相关推荐</a>
+          </div>
+FreeMarker是一个用Java编写的模板引擎，主要用来生成HTML
+Web页面，特别是基于MVC模式的应用程序。虽然FreeMarker具有一些编程的能力，但不像PHP，通常由Java程序准备要显示的数据，由
+FreeMarker模板生成页面。&nbsp;
+FreeMarker可以作为Web应用框架一个组件，但它与容器无关，在非Web应用程序环境也能工作的很好。
+FreeMarker适合作为MVC的视图组件，还能在模板中使用JSP标记库。
+<br>
+<br>&lt;html&gt;
+<br>&lt;head&gt;
+<br>&nbsp; &lt;title&gt;Welcome!&lt;/title&gt;
+<br>&lt;/head&gt;
+<br>&lt;body&gt;
+<br>&nbsp; &lt;h1&gt;Welcome ${user}!&lt;/h1&gt;
+<br>&nbsp; &lt;p&gt;Our latest product:
+<br>&nbsp; &lt;a href="${latestProduct.url}"&gt;${latestProduct.name}&lt;/a&gt;!
+<br>&lt;/body&gt;
+<br>&lt;/html&gt;&nbsp; 
+<br>上面的例子中，在简单的HTML中加入了一些由${…}包围的特定FreeMarker的指令，这个文件就称为模板了。而user、
+latestProduct.url和latestProduct.name来自于数据模型，由Java程序提供，模板设计者就不用关心数据从哪来的。
+<br>
+<br>FreeMarker模板中可以包括下面四种特定部分：
+<br>一.) 文本：直接输出
+<br>二.) FTL标记(FreeMarker模板语言标记)：类似于HTML标记，名字前加#(有些以@开始，用户自定义标记)予以区分，不会输出。
+<br>字符串－ 使用单引号或双引号限定；如果包含特殊字符需要转义符：${"It's \"quoted\" andthis is a backslash: \\"}
+<br>有一类特殊的字符串:${r"C:\foo\bar"}，输出结构为：C:\foo\bar，在引号前面加r被认为是纯文本。 
+<br>数字－直接输入，不需要引号。${08}, ${+8}, ${8.00} and ${8} 都是相同的 
+<br>布尔值－true和false，不使用引号
+<br>Sequences(序列)－由逗号分隔的变量列表，由方括号限定，类似java中的一维数组：
+<br>
+<br>&lt;#list ["winter", "spring", "summer", "autumn"] as x&gt;
+<br>${x}
+<br>&lt;/#list&gt;
+<br>输出结果：
+<br>winter
+<br>spring
+<br>summer
+<br>autumn
+<br>
+<br>例二：[2 + 2, [1, 2, 3, 4], "whatnot"]
+<br>例三：2..5，等同于[2, 3, 4, 5]；5..2，等同于[5,4,3,2]。注意方括号是不需要的。
+<br>
+<br>Hashes(散列)－由逗号分隔的键-值列表，由大括号限定，键和值之间用冒号分隔：{"name":"green mouse", "price":150}，键和值都是表达式，但是键必须是字符串。
+<br>
+<br>获取变量－${variable}，变量名只能是字母、数字、下划线、$、@和#的组合，且不能以数字开头。下列表达式是等价的：
+<br>book.author.name
+<br>book["author"].name
+<br>book.author.["name"]
+<br>book["author"]["name"]
+<br>
+<br>获取Sequence(序列)片断－使用[startindex..endindex]，例如：seq中存储了"a", "b", "c", "d","e"，那么seq[1..2]包含了b和c两个值。
+<br>
+<br>可以使用.variablename语法访问FreeMarker内置变量。
+<br>
+<br>字符串操作
+<br>{"Hello ${user}!"} &lt;==&gt; ${"Hello " + user + "!"}
+<br>${"${user}${user}${user}${user}"} &lt;==&gt; ${user + user + user + user}
+<br>
+<br>${…}只能在文本中使用，下面是错误的代码：
+<br>&lt;#if ${isBig}&gt;Wow!&lt;/#if&gt; 
+<br>&lt;#if "${isBig}"&gt;Wow!&lt;/#if&gt;&nbsp; //此处的代码也是错误的，因为if指令需要的是boolean，实际的却是个字符串
+<br>
+<br>子字符串的操作，假设user的值为"Big Joe"：
+<br>${user[0]}${user[4]}&nbsp; &lt;==&gt;&nbsp; BJ
+<br>${user[1..4]}&nbsp; &lt;==&gt; ig J 
+<br>
+<br>Sequences(序列)操作
+<br>
+<br>&lt;#list ["Joe", "Fred"] + ["Julia", "Kate"] as user&gt;
+<br>- ${user}
+<br>&lt;/#list&gt;
+<br>结果：
+<br>- Joe
+<br>- Fred
+<br>- Julia
+<br>- Kate
+<br>
+<br>Hashes(散列)操作
+<br>
+<br>&lt;#assign ages = {"Joe":23, "Fred":25} + {"Joe":30, "Julia":18}&gt;
+<br>- Joe is ${ages.Joe}
+<br>- Fred is ${ages.Fred}
+<br>- Julia is ${ages.Julia}&nbsp; 
+<br>结果：
+<br>- Joe is 30
+<br>- Fred is 25
+<br>- Julia is 18&nbsp; 
+<br>
+<br>算术运算
+<br>
+<br>&lt;#-- x的值设定为5 --&gt;
+<br>${x * x - 100}
+<br>${x / 2}
+<br>${12 % 10}
+<br>结果：
+<br>-75
+<br>2.5
+<br>2 
+<br>
+<br>注意： 操作符两边必须是数字；使用"+"时，如果一边是数字，一边是字符串，就会自动将数字转换为字符串。
+<br>
+<br>使用内建的指令int获得整数部分：
+<br>
+<br>${(x/2)?int}
+<br>${1.1?int}
+<br>${1.999?int}
+<br>${-1.1?int}
+<br>${-1.999?int}
+<br>结果：
+<br>2
+<br>1
+<br>1
+<br>-1
+<br>-1
+<br>
+<br>比较操作符－&lt;#if expression&gt;...&lt;/#if&gt;
+<br>1.)使用=（或==，完全相等）测试两个值是否相等，使用!= 测试两个值是否不相等
+<br>2.)=和!=两边必须是相同类型的值，否则会产生错误，例如&lt;#if 1 = "1"&gt;会引起错误
+<br>3.)Freemarker是精确比较，所以"x"、"x&nbsp; "和"X"是不相等的
+<br>4.)对数字和日期可以使用&lt;、&lt;=、&gt;和&gt;=，但不能用于字符串
+<br>5.)由于Freemarker会将&gt;解释成FTL标记的结束字符，所以对于&gt;和&gt;=可以使用括号来避免这种情况，例如&
+lt;#if (x &gt; y)&gt;，另一种替代的方法是，使用lt、lte、gt和gte来替代&lt;、&lt;=、&gt;和&gt;=
+<br>
+<br>逻辑操作符－&amp;&amp;(and)、||(or)、!(not)，只能用于布尔值，否则会产生错误
+<br>&lt;#if x &lt; 12 &amp;&amp; color = "green"&gt;
+<br>&nbsp; We have less than 12 things, and they are green.
+<br>&lt;/#if&gt;
+<br>&lt;#if !hot&gt; &lt;#-- here hot must be a boolean --&gt;
+<br>&nbsp; It's not hot.
+<br>&lt;/#if&gt;&nbsp; 
+<br>
+<br>内置函数－用法类似访问hash(散列)的子变量，只是使用"?"替代"."，例如：user?upper_case
+<br>下面列出常用的一些函数：
+<br>对于字符串
+<br>html－对字符串进行HTML编码
+<br>cap_first－使字符串第一个字母大写
+<br>lower_case－将字符串转换成小写
+<br>trim－去掉字符串前后的空白字符
+<br>对于Sequences(序列)
+<br>size－获得序列中元素的数目
+<br>对于数字
+<br>int－取得数字的整数部分（如-1.9?int的结果是-1）
+<br>
+<br>例一：
+<br>
+<br>&lt;#-- test的值为Tom &amp; Jerry --&gt;
+<br>${test?html}
+<br>${test?upper_case?html}
+<br>结果：
+<br>Tom &amp; Jerry
+<br>TOM &amp; JERRY 
+<br>
+<br>例二：
+<br>
+<br>&lt;#-- seasons的值为"winter", "spring", "summer", "autumn" --&gt; 
+<br>${seasons?size}
+<br>${seasons[1]?cap_first} &lt;#-- left side can by any expression --&gt;
+<br>${"horse"?cap_first}&nbsp; 
+<br>结果：
+<br>4
+<br>Spring
+<br>Horse&nbsp; 
+<br>
+<br>方法的调用
+<br>${repeat("What", 3)} 
+<br>${repeat(repeat("x", 2), 3) + repeat("What", 4)?upper_case} 
+<br>结果：
+<br>WhatWhatWhat
+<br>xxxxxxWHATWHATWHATWHAT 
+<br>
+<br>操作符优先顺序
+<br>后缀&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [subvarName] [subStringRange] . (methodParams)
+<br>一元&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; +expr、-expr、!
+<br>内建&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ?
+<br>乘法&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *、 / 、%
+<br>加法&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; +、-
+<br>关系&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;、&gt;、&lt;=、&gt;=（lt、lte、gt、gte）
+<br>相等&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; =、!=
+<br>逻辑&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &amp;&amp;
+<br>逻辑&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ||
+<br>数字范围&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ..
+<br>
+<br>三.) Interpolation：由${...}或#{...}两种类型，输出计算值，可以定义输出的格式
+<br>例一：
+<br>
+<br>&lt;#setting number_format="currency"/&gt;
+<br>&lt;#assign answer=42/&gt;
+<br>${answer}
+<br>${answer?string}&nbsp; &lt;#-- the same as ${answer} --&gt;
+<br>${answer?string.number}
+<br>${answer?string.currency}
+<br>${answer?string.percent} 
+<br>结果：
+<br>$42.00
+<br>$42.00
+<br>42
+<br>$42.00
+<br>4,200%
+<br>
+<br>例二：
+<br>
+<br>${lastUpdated?string("yyyy-MM-dd HH:mm:ss zzzz")}
+<br>${lastUpdated?string("EEE, MMM d, ''yy")}
+<br>${lastUpdated?string("EEEE, MMMM dd, yyyy, hh:mm:ss a '('zzz')'")}&nbsp; 
+<br>结果：
+<br>2003-04-08 21:24:44 Pacific Daylight Time
+<br>Tue, Apr 8, '03
+<br>Tuesday, April 08, 2003, 09:24:44 PM (PDT)
+<br>
+<br>例三：
+<br>
+<br>&lt;#assign foo=true/&gt;
+<br>${foo?string("yes", "no")}
+<br>结果：
+<br>yes
+<br>
+<br>例四：
+<br>
+<br>&lt;#-- x is 2.582 and y is 4 --&gt;
+<br>#{x; M2}&nbsp;&nbsp; &lt;#-- 2.58 --&gt;
+<br>#{y; M2}&nbsp;&nbsp; &lt;#-- 4&nbsp;&nbsp;&nbsp; --&gt;
+<br>#{x; m1}&nbsp;&nbsp; &lt;#-- 2.6 --&gt;
+<br>#{y; m1}&nbsp;&nbsp; &lt;#-- 4.0 --&gt;
+<br>#{x; m1M2} &lt;#-- 2.58 --&gt;
+<br>#{y; m1M2} &lt;#-- 4.0&nbsp; --&gt;&nbsp; 
+<br>说明：mX－小数部分最小X位；MX－小数部分最大X位。
+<br>
+<br>四.) 注释：&lt;#--和--&gt; 
+<br>
+<br>下面是一个常用的模板例子：
+<br>
+<br>&lt;p&gt;We have these animals:
+<br>&lt;table border=1&gt;
+<br>&nbsp; &lt;tr&gt;&lt;th&gt;Name&lt;th&gt;Price
+<br>&nbsp; &lt;#list animals as being&gt;
+<br>&nbsp; &lt;tr&gt;
+<br>&nbsp;&nbsp;&nbsp; &lt;td&gt;
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;#if being.size = "large"&gt;&lt;b&gt;&lt;/#if&gt;
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ${being.name}
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;#if being.size="large"&gt;&lt;/b&gt;&lt;/#if&gt;
+<br>&nbsp;&nbsp;&nbsp; &lt;td&gt;${being.price} Euros
+<br>&nbsp; &lt;/#list&gt;
+<br> &lt;/table&gt; 
+<br>&lt;#include "/copyright_footer.html"&gt;
+<br>注意点：
+<br>1.) FreeMarker是区分大小写的；
+<br>2.) FTL标记不能位于另一个FTL标记内部，例如：&lt;#if &lt;#include 'foo'&gt;='bar'&gt;...&lt;/if&gt;；
+<br>3.) ${…}只能在文本中使用；
+<br>4.) 多余的空白字符会在模板输出时去除；
+<br>5.) 如果使用的指令不存在，会产生一个错误消息。
+    </div>
+    
+    
+      <div id="topic_copyright">声明：JavaEye文章版权属于作者，受法律保护。没有作者书面许可不得转载。 </div>
+      <div id="forum_advert_b3">
+        <span>推荐链接</span>
+        <ul class="adverts"><li><a href="http://www.heypeep.com/index.php?q=aHR0cDovL3d3dy5qYXZhZXllLmNvbS9hZHZlcnRzLzExMQ%3D%3D" target="_blank"><span style="color: red; font-weight: bold;">Windows7在微软WinHEC 2008上揭开神秘面纱</span></a></li><li><a href="http://www.heypeep.com/index.php?q=aHR0cDovL3d3dy5qYXZhZXllLmNvbS9hZHZlcnRzLzEyNg%3D%3D" target="_blank"><span style="color: red; font-weight: bold;">在繁琐中挣扎还是简化自主管理？</span></a></li><li><a href="http://www.heypeep.com/index.php?q=aHR0cDovL3d3dy5qYXZhZXllLmNvbS9hZHZlcnRzLzEyOA%3D%3D" target="_blank">IBM Rational软件开发高峰论坛9月揭幕</a></li></ul>
+      </div>
+      </td>
+</tr>
+<tr>
+  <td class="postauthor"><a href="#">返回顶楼</a></td>
+  <td class="postcontent">
+    <div class="icons">
+      <a href="http://www.heypeep.com/index.php?q=aHR0cDovL21odDE5ODQwOTE4LmphdmFleWUuY29t" class="icon_www" title="浏览作者的博客">&nbsp;</a>
+      <a href="http://www.heypeep.com/index.php?q=aHR0cDovL21odDE5ODQwOTE4LmphdmFleWUuY29tL2Jsb2cvcHJvZmlsZQ%3D%3D" class="icon_profile" title="浏览作者资料">&nbsp;</a>
+      
+    </div>
+                        
+  </td>
+</tr>
+<tr class="sep2"><td colspan="2"></td></tr><tr id="p_479056">
+  <td class="postauthor">
+    <ul>
+      <li class="name">xiebiao110</li>
+      <li>等级: 初级会员</li>
+      <li><a href="http://www.heypeep.com/index.php?q=aHR0cDovL3hpZWJpYW8xMTAuamF2YWV5ZS5jb20%3D" target="_blank"><img alt="用户头像" src="FreeMarker_2_files/index_003.jpg" title="xiebiao110的博客: xiebiao110"></a></li>
+      <li>性别: <img src="FreeMarker_2_files/index.gif" title="男"></li>
+      <li>文章: 7</li>
+      <li>积分: 0</li>
+      <li>来自: 北京</li>
+      <li><img src="FreeMarker_2_files/index_003.gif"></li>
+    </ul>
+  </td>
+  <td class="postcontent">
+    <div class="postactions">
+      <div class="description">时间：2008-03-06 </div>
+      <div class="links">
+        <a href="http://www.heypeep.com/index.php?q=aHR0cDovL3d3dy5qYXZhZXllLmNvbS9mb3J1bXMvMzkvdG9waWNzLzE2NTExMi9wb3N0cy80NzkwNTYvcXVvdGU%3D">引用</a>
+        
+          
+          
+          
+        
+      </div>
+    </div>
+    <div class="postbody clearfix">
+最近发现一个FreeMarker的一个问题，我在页面中用&lt;#if
+Session.userid=""&gt;来判断session中的userid是否为空字符，但是如果你第一次单独打开这个页面的时候，会报
+Session没定义的错，但从网站的其他页面点到这个页面，就不会报错，好像是第一次访问这个页面的时候，没有初始session,不知道为什
+么？？？？ </div>
+    
+      </td>
+</tr>
+<tr>
+  <td class="postauthor"><a href="#">返回顶楼</a></td>
+  <td class="postcontent">
+    <div class="icons">
+      <a href="http://www.heypeep.com/index.php?q=aHR0cDovL3hpZWJpYW8xMTAuamF2YWV5ZS5jb20%3D" class="icon_www" title="浏览作者的博客">&nbsp;</a>
+      <a href="http://www.heypeep.com/index.php?q=aHR0cDovL3hpZWJpYW8xMTAuamF2YWV5ZS5jb20vYmxvZy9wcm9maWxl" class="icon_profile" title="浏览作者资料">&nbsp;</a>
+      
+    </div>
+    <div id="post_rate_box_479056" class="post_rate_box"><a href="#" class="good" title="好">0</a> <a href="#" class="hidden" title="差">0</a> 请登录后投票</div>                    
+  </td>
+</tr>
+<tr class="sep2"><td colspan="2"></td></tr><tr id="p_483802">
+  <td class="postauthor">
+    <ul>
+      <li class="name">mht19840918</li>
+      <li>等级: 初级会员</li>
+      <li><a href="http://www.heypeep.com/index.php?q=aHR0cDovL21odDE5ODQwOTE4LmphdmFleWUuY29t" target="_blank"><img alt="用户头像" src="FreeMarker_2_files/index_004.jpg" title="mht19840918的博客: 陶然水岸"></a></li>
+      <li>性别: <img src="FreeMarker_2_files/index.gif" title="男"></li>
+      <li>文章: 12</li>
+      <li>积分: 0</li>
+      <li>来自: 北京</li>
+      <li><img src="FreeMarker_2_files/index_003.gif"></li>
+    </ul>
+  </td>
+  <td class="postcontent">
+    <div class="postactions">
+      <div class="description">时间：2008-03-12 </div>
+      <div class="links">
+        <a href="http://www.heypeep.com/index.php?q=aHR0cDovL3d3dy5qYXZhZXllLmNvbS9mb3J1bXMvMzkvdG9waWNzLzE2NTExMi9wb3N0cy80ODM4MDIvcXVvdGU%3D">引用</a>
+        
+          
+          
+          
+        
+      </div>
+    </div>
+    <div class="postbody clearfix"> 
+      
+      首先感谢你留言，这个问题我以前也遇到过，最后没有别的办法就嵌套别的标签，
+<br>freemarker虽然有少量自己的标签，能完成最最基本的的功能，但是还是不能满足我们的需求，马上发布一个在freemarker中使用struts2标签的文章，希望对你有所帮助
+    </div>
+    
+      </td>
+</tr>
+<tr>
+  <td class="postauthor"><a href="#">返回顶楼</a></td>
+  <td class="postcontent">
+    <div class="icons">
+      <a href="http://www.heypeep.com/index.php?q=aHR0cDovL21odDE5ODQwOTE4LmphdmFleWUuY29t" class="icon_www" title="浏览作者的博客">&nbsp;</a>
+      <a href="http://www.heypeep.com/index.php?q=aHR0cDovL21odDE5ODQwOTE4LmphdmFleWUuY29tL2Jsb2cvcHJvZmlsZQ%3D%3D" class="icon_profile" title="浏览作者资料">&nbsp;</a>
+      
+    </div>
+    <div id="post_rate_box_483802" class="post_rate_box"><a href="#" class="good" title="好">0</a> <a href="#" class="hidden" title="差">0</a> 请登录后投票</div>                    
+  </td>
+</tr>
+<tr class="sep2"><td colspan="2"></td></tr><tr id="p_517756">
+  <td class="postauthor">
+    <ul>
+      <li class="name">xly_971223</li>
+      <li>等级: <img src="FreeMarker_2_files/index_004.gif" alt="五星会员" title="五星会员"></li>
+      <li><a href="http://www.heypeep.com/index.php?q=aHR0cDovL3h1bGlhbmd5b25nLmphdmFleWUuY29t" target="_blank"><img alt="用户头像" src="FreeMarker_2_files/index_002.jpg" title="xly_971223的博客: 一生一火花"></a></li>
+      <li>性别: <img src="FreeMarker_2_files/index.gif" title="男"></li>
+      <li>文章: 646</li>
+      <li>积分: 591</li>
+      <li>来自: 北京</li>
+      <li><img src="FreeMarker_2_files/index_003.gif"></li>
+    </ul>
+  </td>
+  <td class="postcontent">
+    <div class="postactions">
+      <div class="description">时间：2008-04-15 </div>
+      <div class="links">
+        <a href="http://www.heypeep.com/index.php?q=aHR0cDovL3d3dy5qYXZhZXllLmNvbS9mb3J1bXMvMzkvdG9waWNzLzE2NTExMi9wb3N0cy81MTc3NTYvcXVvdGU%3D">引用</a>
+        
+          
+          
+          
+        
+      </div>
+    </div>
+    <div class="postbody clearfix"> 
+      
+      最讨厌freemarker指令写法 &lt;#if.....<br>还是velocity来的痛快#if
+    </div>
+    
+      </td>
+</tr>
+<tr>
+  <td class="postauthor"><a href="#">返回顶楼</a></td>
+  <td class="postcontent">
+    <div class="icons">
+      <a href="http://www.heypeep.com/index.php?q=aHR0cDovL3h1bGlhbmd5b25nLmphdmFleWUuY29t" class="icon_www" title="浏览作者的博客">&nbsp;</a>
+      <a href="http://www.heypeep.com/index.php?q=aHR0cDovL3h1bGlhbmd5b25nLmphdmFleWUuY29tL2Jsb2cvcHJvZmlsZQ%3D%3D" class="icon_profile" title="浏览作者资料">&nbsp;</a>
+      
+    </div>
+    <div id="post_rate_box_517756" class="post_rate_box"><a href="#" class="good" title="好">0</a> <a href="#" class="hidden" title="差">0</a> 请登录后投票</div>                    
+  </td>
+</tr>
+<tr class="sep2"><td colspan="2"></td></tr><tr id="p_555354">
+  <td class="postauthor">
+    <ul>
+      <li class="name">wufan0023</li>
+      <li>等级: 初级会员</li>
+      <li><a href="http://www.heypeep.com/index.php?q=aHR0cDovL3d1ZmFuMDAyMy5qYXZhZXllLmNvbQ%3D%3D" target="_blank"><img alt="用户头像" src="FreeMarker_2_files/index_005.jpg" title="wufan0023的博客: wufan0023"></a></li>
+      <li>性别: <img src="FreeMarker_2_files/index.gif" title="男"></li>
+      <li>文章: 22</li>
+      <li>积分: 0</li>
+      <li>来自: hefei</li>
+      <li><img src="FreeMarker_2_files/index_003.gif"></li>
+    </ul>
+  </td>
+  <td class="postcontent">
+    <div class="postactions">
+      <div class="description">时间：2008-05-23 </div>
+      <div class="links">
+        <a href="http://www.heypeep.com/index.php?q=aHR0cDovL3d3dy5qYXZhZXllLmNvbS9mb3J1bXMvMzkvdG9waWNzLzE2NTExMi9wb3N0cy81NTUzNTQvcXVvdGU%3D">引用</a>
+        
+          
+          
+          
+        
+      </div>
+    </div>
+    <div class="postbody clearfix"> 
+      
+      <div class="quote_title">xiebiao110 写道</div><div class="quote_div">最
+近发现一个FreeMarker的一个问题，我在页面中用&lt;#if
+Session.userid=""&gt;来判断session中的userid是否为空字符，但是如果你第一次单独打开这个页面的时候，会报
+Session没定义的错，但从网站的其他页面点到这个页面，就不会报错，好像是第一次访问这个页面的时候，没有初始session,不知道为什
+么？？？？</div>
+<br>
+<br>可能是你的session对象是在其他位置定义的，如登陆时设置了session对象，而你这个页面又没有提前判断用户是否登陆，所以就会无法提
+示用户登陆，单独进入也就没有session。freemark恶心的一点也是好的一点就是有个啥变量没法传给他，他就跳出个恶心的黄色页面。 </div>
+    
+      </td>
+</tr>
+<tr>
+  <td class="postauthor"><a href="#">返回顶楼</a></td>
+  <td class="postcontent">
+    <div class="icons">
+      <a href="http://www.heypeep.com/index.php?q=aHR0cDovL3d1ZmFuMDAyMy5qYXZhZXllLmNvbQ%3D%3D" class="icon_www" title="浏览作者的博客">&nbsp;</a>
+      <a href="http://www.heypeep.com/index.php?q=aHR0cDovL3d1ZmFuMDAyMy5qYXZhZXllLmNvbS9ibG9nL3Byb2ZpbGU%3D" class="icon_profile" title="浏览作者资料">&nbsp;</a>
+      
+    </div>
+    <div id="post_rate_box_555354" class="post_rate_box"><a href="#" class="good" title="好">0</a> <a href="#" class="hidden" title="差">0</a> 请登录后投票</div>                    
+  </td>
+</tr>
+<tr class="sep2"><td colspan="2"></td></tr><tr id="p_632876">
+  <td class="postauthor">
+    <ul>
+      <li class="name">163</li>
+      <li>等级: 初级会员</li>
+      <li><a href="http://www.heypeep.com/index.php?q=aHR0cDovL3hpYW9uYS5qYXZhZXllLmNvbQ%3D%3D" target="_blank"><img alt="用户头像" src="FreeMarker_2_files/index.jpg" title="163的博客: 小美的技术博客"></a></li>
+      <li>性别: <img src="FreeMarker_2_files/index_005.gif" title="女"></li>
+      <li>文章: 3</li>
+      <li>积分: 0</li>
+      
+      <li><img src="FreeMarker_2_files/index_003.gif"></li>
+    </ul>
+  </td>
+  <td class="postcontent">
+    <div class="postactions">
+      <div class="description">时间：2008-08-15 </div>
+      <div class="links">
+        <a href="http://www.heypeep.com/index.php?q=aHR0cDovL3d3dy5qYXZhZXllLmNvbS9mb3J1bXMvMzkvdG9waWNzLzE2NTExMi9wb3N0cy82MzI4NzYvcXVvdGU%3D">引用</a>
+        
+          
+          
+          
+        
+      </div>
+    </div>
+    <div class="postbody clearfix"> 
+      
+      我将头部文件写在了一个*.lbi文件里面。在其他freemark文件中include进来
+<br>在lbi文件里面我写着：
+<br>[#if session.Userreg?exists]
+<br>	hi,[@s.property value="%{#session.Userreg.userName}"/]您好
+<br>[#else]
+<br>	&lt;hi,游客您好				
+<br>[/#if]
+<br>
+<br>
+<br>为什么输出时候把代码输出来了呢！并没有输出session中的值。是把我写的这段if什么的代码显示在页面上了呢？
+    </div>
+    
+      </td>
+</tr>
+<tr>
+  <td class="postauthor"><a href="#">返回顶楼</a></td>
+  <td class="postcontent">
+    <div class="icons">
+      <a href="http://www.heypeep.com/index.php?q=aHR0cDovL3hpYW9uYS5qYXZhZXllLmNvbQ%3D%3D" class="icon_www" title="浏览作者的博客">&nbsp;</a>
+      <a href="http://www.heypeep.com/index.php?q=aHR0cDovL3hpYW9uYS5qYXZhZXllLmNvbS9ibG9nL3Byb2ZpbGU%3D" class="icon_profile" title="浏览作者资料">&nbsp;</a>
+      
+    </div>
+    <div id="post_rate_box_632876" class="post_rate_box"><a href="#" class="good" title="好">0</a> <a href="#" class="hidden" title="差">0</a> 请登录后投票</div>                    
+  </td>
+</tr>
+<tr class="sep2"><td colspan="2"></td></tr><tr id="p_653501">
+  <td class="postauthor">
+    <ul>
+      <li class="name">mickeymak</li>
+      <li>等级: 初级会员</li>
+      <li><a href="http://www.heypeep.com/index.php?q=aHR0cDovL21pY2tleW1hay5qYXZhZXllLmNvbQ%3D%3D" target="_blank"><img alt="用户头像" src="FreeMarker_2_files/index_002.gif" title="mickeymak的博客: "></a></li>
+      <li>性别: <img src="FreeMarker_2_files/index.gif" title="男"></li>
+      <li>文章: 6</li>
+      <li>积分: 40</li>
+      <li>来自: 广州</li>
+      <li><img src="FreeMarker_2_files/index_003.gif"></li>
+    </ul>
+  </td>
+  <td class="postcontent">
+    <div class="postactions">
+      <div class="description">时间：2008-09-04 </div>
+      <div class="links">
+        <a href="http://www.heypeep.com/index.php?q=aHR0cDovL3d3dy5qYXZhZXllLmNvbS9mb3J1bXMvMzkvdG9waWNzLzE2NTExMi9wb3N0cy82NTM1MDEvcXVvdGU%3D">引用</a>
+        
+          
+          
+          
+        
+      </div>
+    </div>
+    <div class="postbody clearfix"> 
+      
+      我是用FreeMarker来做View层的显示的, 生成静态的HTML文件. 
+<br>
+<br>不过我有一个疑问, 是关于多线程并发的, 譬如有两个用户同时调用FreeMarker来生静态文件,
+其中的某一个用户先获得对象锁进行静态文件生成的动作, 进行完后会自动redirect到该生成的静态文件. 但刚想转到该文件的时候,
+另外一个用户获得了对象锁也进行静态文件的生成动作, 大家知道HTML的生成是流的操作, 生成的过程中是不能被调用显示的.
+那么第一个用户不就返回一个"Page NOT Found"的异常了吗? 请问FreeMarker是怎样handle这些多线程并发的? 谢谢~~
+</div>
+    
+      </td>
+</tr>
+<tr>
+  <td class="postauthor"><a href="#">返回顶楼</a></td>
+  <td class="postcontent">
+    <div class="icons">
+      <a href="http://www.heypeep.com/index.php?q=aHR0cDovL21pY2tleW1hay5qYXZhZXllLmNvbQ%3D%3D" class="icon_www" title="浏览作者的博客">&nbsp;</a>
+      <a href="http://www.heypeep.com/index.php?q=aHR0cDovL21pY2tleW1hay5qYXZhZXllLmNvbS9ibG9nL3Byb2ZpbGU%3D" class="icon_profile" title="浏览作者资料">&nbsp;</a>
+      
+    </div>
+    <div id="post_rate_box_653501" class="post_rate_box"><a href="#" class="good" title="好">0</a> <a href="#" class="hidden" title="差">0</a> 请登录后投票</div>                    
+  </td>
+</tr>
+<tr class="sep2"><td colspan="2"></td></tr><tr id="p_679318">
+  <td class="postauthor">
+    <ul>
+      <li class="name">qgz0910</li>
+      <li>等级: 初级会员</li>
+      <li><a href="http://www.heypeep.com/index.php?q=aHR0cDovL3FnejA5MTAuamF2YWV5ZS5jb20%3D" target="_blank"><img alt="用户头像" src="FreeMarker_2_files/index_002.gif" title="qgz0910的博客: qgz0910"></a></li>
+      <li>性别: <img src="FreeMarker_2_files/index.gif" title="男"></li>
+      <li>文章: 2</li>
+      <li>积分: 0</li>
+      <li>来自: 佛山</li>
+      <li><img src="FreeMarker_2_files/index_003.gif"></li>
+    </ul>
+  </td>
+  <td class="postcontent">
+    <div class="postactions">
+      <div class="description">时间：20 小时前 </div>
+      <div class="links">
+        <a href="http://www.heypeep.com/index.php?q=aHR0cDovL3d3dy5qYXZhZXllLmNvbS9mb3J1bXMvMzkvdG9waWNzLzE2NTExMi9wb3N0cy82NzkzMTgvcXVvdGU%3D">引用</a>
+        
+          
+          
+          
+        
+      </div>
+    </div>
+    <div class="postbody clearfix"> 
+      
+      <div class="quote_title">xiebiao110 写道</div><div class="quote_div">最
+近发现一个FreeMarker的一个问题，我在页面中用&lt;#if
+Session.userid=""&gt;来判断session中的userid是否为空字符，但是如果你第一次单独打开这个页面的时候，会报
+Session没定义的错，但从网站的其他页面点到这个页面，就不会报错，好像是第一次访问这个页面的时候，没有初始session,不知道为什
+么？？？？</div>
+<br>&nbsp; &lt;#if Session.userid=""&gt; 直接&lt;#if userid=""&gt;就OK 了 还有 请注意 所有的判断 首先判断是否为null 或者判断对象是否存在 然后才是判断他的值!
+    </div>
+    
+      </td>
+</tr>
+<tr>
+  <td class="postauthor"><a href="#">返回顶楼</a></td>
+  <td class="postcontent">
+    <div class="icons">
+      <a href="http://www.heypeep.com/index.php?q=aHR0cDovL3FnejA5MTAuamF2YWV5ZS5jb20%3D" class="icon_www" title="浏览作者的博客">&nbsp;</a>
+      <a href="http://www.heypeep.com/index.php?q=aHR0cDovL3FnejA5MTAuamF2YWV5ZS5jb20vYmxvZy9wcm9maWxl" class="icon_profile" title="浏览作者资料">&nbsp;</a>
+      
+    </div>
+    <div id="post_rate_box_679318" class="post_rate_box"><a href="#" class="good" title="好">0</a> <a href="#" class="hidden" title="差">0</a> 请登录后投票</div>                    
+  </td>
+</tr>
+<tr class="sep2"><td colspan="2"></td></tr>
+  </tbody>
+</table>
+
+
+<div class="actions">
+  <div class="buttons"><a href="http://www.heypeep.com/index.php?q=aHR0cDovL3d3dy5qYXZhZXllLmNvbS9mb3J1bXMvMzkvdG9waWNzLzE2NTExMi9wb3N0cy9uZXc%3D" class="new_post" title="发表回复">&nbsp;</a></div>
+  <div class="wrapper"></div>
+</div>
+
+<div>
+  <div class="crumbs">
+    <a href="http://www.heypeep.com/index.php?q=aHR0cDovL3d3dy5qYXZhZXllLmNvbS9mb3J1bXM%3D">论坛首页</a> <span class="arrow">→</span>
+    <a href="http://www.heypeep.com/index.php?q=aHR0cDovL3d3dy5qYXZhZXllLmNvbS9mb3J1bXMvYm9hcmQvSmF2YQ%3D%3D">Java版</a>
+     <span class="arrow">→</span> <a href="http://www.heypeep.com/index.php?q=aHR0cDovL3d3dy5qYXZhZXllLmNvbS9mb3J1bXMvdGFnL0oyRUU%3D">企业应用</a>
+    <br><br>跳转论坛:<select id="forum_urlname" name="forum[urlname]"><option value="Java" selected="selected">Java</option>
+<option value="Ruby">Ruby</option>
+<option value="AJAX">AJAX</option>
+<option value="dotnet">Microsoft .Net</option>
+<option value="Tech">综合技术</option>
+<option value="New">入门讨论</option>
+<option value="Agile">软件开发和项目管理</option>
+<option value="Industry">行业解决方案</option>
+<option value="company">厂商论坛</option>
+<option value="Job">招聘求职</option>
+<option value="Life">海阔天空</option></select>
+    <div id="forum_advert_b2"><span>JavaEye推荐</span><ul class="adverts"></ul></div>
+  </div>
+  
+  
+</div>
+
+<div style="display: none;">
+  <form action="http://www.heypeep.com/index.php?q=aHR0cDovL3d3dy5qYXZhZXllLmNvbS9wb3N0cy9yYXRl" id="post_rate_form" method="post">
+    <input id="post_rate_id" name="id" type="hidden">
+    <input id="post_rate_type" name="type" type="hidden">
+  </form>	
+</div>
+
+
+        </div>
+        <div id="nav">
+<div class="wrapper">
+<ul>
+<li><a href="http://www.heypeep.com/index.php?q=aHR0cDovL3d3dy5qYXZhZXllLmNvbS8%3D">首页</a></li>
+<li><a href="http://www.heypeep.com/index.php?q=aHR0cDovL3d3dy5qYXZhZXllLmNvbS9uZXdz">新闻</a></li>
+<li><a href="http://www.heypeep.com/index.php?q=aHR0cDovL3d3dy5qYXZhZXllLmNvbS9mb3J1bXM%3D" class="selected">论坛</a></li>
+<li><a href="http://www.heypeep.com/index.php?q=aHR0cDovL3d3dy5qYXZhZXllLmNvbS9hc2s%3D">问答</a></li>
+<li><a href="http://www.heypeep.com/index.php?q=aHR0cDovL3d3dy5qYXZhZXllLmNvbS93aWtp">知识库</a></li>
+<li><a href="http://www.heypeep.com/index.php?q=aHR0cDovL3d3dy5qYXZhZXllLmNvbS9ibG9ncw%3D%3D">博客</a></li>
+<li><a href="http://www.heypeep.com/index.php?q=aHR0cDovL3d3dy5qYXZhZXllLmNvbS9ncm91cHM%3D">圈子</a></li>
+<li><a href="http://www.heypeep.com/index.php?q=aHR0cDovL2pvYi5qYXZhZXllLmNvbQ%3D%3D" target="_blank">招聘 <span style="border: 1px solid rgb(43, 228, 43); padding: 0pt 2px; background-color: rgb(125, 232, 101); font-size: 11px;">New</span></a></li>
+<li><a href="http://www.heypeep.com/index.php?q=aHR0cDovL3d3dy5qYXZhZXllLmNvbS9pbmRleC9zZXJ2aWNl">服务</a></li>
+<li class="last"><a href="http://www.heypeep.com/index.php?q=aHR0cDovL3d3dy5qYXZhZXllLmNvbS9zZWFyY2g%3D">搜索</a></li>
+</ul>
+</div>
+</div>
+
+<div id="channel_nav">
+  <ul>
+    <li><a href="http://www.heypeep.com/index.php?q=aHR0cDovL2phdmEuamF2YWV5ZS5jb20%3D">Java</a></li>
+    <li><a href="http://www.heypeep.com/index.php?q=aHR0cDovL3J1YnkuamF2YWV5ZS5jb20%3D">Ruby</a></li>
+    <li><a href="http://www.heypeep.com/index.php?q=aHR0cDovL2FqYXguamF2YWV5ZS5jb20%3D">AJAX</a></li>
+    <li><a href="http://www.heypeep.com/index.php?q=aHR0cDovL2FnaWxlLmphdmFleWUuY29t">敏捷</a></li>
+    <li><a href="http://www.heypeep.com/index.php?q=aHR0cDovL2Jvb2suamF2YWV5ZS5jb20%3D">图书</a></li>
+    <li><a href="http://www.heypeep.com/index.php?q=aHR0cDovL29yYWNsZS5qYXZhZXllLmNvbQ%3D%3D">Oracle</a></li>
+    <li class="last"><a href="http://www.heypeep.com/index.php?q=aHR0cDovL3ByaW1ldG9uLmphdmFleWUuY29t">普元</a></li>
+  </ul>
+</div>
+      </div>
+      <div id="footer">
+  <div id="site_nav">
+    <ul>
+      <li><a href="http://www.heypeep.com/index.php?q=aHR0cDovL3d3dy5qYXZhZXllLmNvbS9pbmRleC9zZXJ2aWNl">广告服务</a></li>
+      <li><a href="http://www.heypeep.com/index.php?q=aHR0cDovL3dlYm1hc3Rlci5qYXZhZXllLmNvbQ%3D%3D">JavaEye黑板报</a></li>
+      <li><a href="http://www.heypeep.com/index.php?q=aHR0cDovL3d3dy5qYXZhZXllLmNvbS9pbmRleC9zaXRlbWFw">网站地图</a></li>
+      <li><a href="http://www.heypeep.com/index.php?q=aHR0cDovL3d3dy5qYXZhZXllLmNvbS9pbmRleC9hYm91dHVz">关于我们</a></li>
+      <li><a href="http://www.heypeep.com/index.php?q=aHR0cDovL3d3dy5qYXZhZXllLmNvbS9pbmRleC9jb250YWN0dXM%3D">联系我们</a></li>
+      <li class="last"><a href="http://www.heypeep.com/index.php?q=aHR0cDovL3d3dy5qYXZhZXllLmNvbS9pbmRleC9mcmllbmRfbGlua3M%3D">友情链接</a></li>
+    </ul>
+  </div>
+  <div id="copyright">
+    © 2003-2008 JavaEye.com.   All rights reserved. 上海炯耐计算机软件有限公司 [ 沪ICP备05023328号 ] 
+  </div>
+</div>      
+    </div>
+  </body></html>

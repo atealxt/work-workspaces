@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE struts-config PUBLIC
+          "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN"
+          "http://jakarta.apache.org/struts/dtds/struts-config_1_2.dtd">
+
+
+<struts-config>
+    <form-beans>
+        <form-bean name="firsttestForm" type="com.mytest.firsttest.firsttest"/>
+    </form-beans>
+    
+    <global-exceptions>   
+    </global-exceptions>
+
+    <global-forwards>
+        <forward name="welcome"  path="/Welcome.do"/>
+        <forward name="firsttest" path="/firsttest.do" />        
+        <forward name="test1_Dispatch" path="/test1_Dispatch.do" />       
+    </global-forwards>
+
+    <action-mappings>
+        <action path="/Welcome" forward="/welcomeStruts.jsp"/>
+        
+        <action path="/firsttest"
+    		type="com.mytest.firsttest.firsttestAction"
+    		name="firsttestForm"
+    		scope="request"
+    		validate="false">
+            <forward name="display" path="/firsttest.jsp" />
+        </action>
+        
+	<action path="/test1_Dispatch"
+                name="firsttestForm"
+    		type="com.mytest.firsttest.test1_DispatchAction"
+    		scope="request"
+                parameter="action"
+    		validate="false">
+            <forward name="test1_submit1" path="/test1_submit1.do" />
+            <forward name="test1_submit2" path="/test1_submit2.do" />     
+        </action>  
+        
+        <action path="/test1_submit1"
+    		type="com.mytest.firsttest.test1_submit1Action"
+    		name="firsttestForm"
+    		scope="request"
+    		validate="false">
+            <forward name="display" path="/test1_Dispatch.jsp" />
+        </action>
+        
+        <action path="/test1_submit2"
+    		type="com.mytest.firsttest.test1_submit2Action"
+    		name="firsttestForm"
+    		scope="request"
+    		validate="false">
+            <forward name="display" path="/test1_Dispatch.jsp" />
+        </action>
+        
+        <action path="/test2_ajaxTest"
+    		type="com.mytest.firsttest.test2_ajaxAction"
+    		name="firsttestForm"
+    		scope="request"
+    		validate="false">
+        </action>
+        
+        <action path="/test3_session" 
+                type="com.mytest.firsttest.test3_sessionAction"
+                name="firsttestForm"
+                scope="session"
+    		validate="false">
+            <forward name="display" path="/test3_session.jsp" />                    
+        </action>
+        
+        
+    </action-mappings>
+    
+    <controller processorClass="org.apache.struts.tiles.TilesRequestProcessor"/>
+
+    <message-resources parameter="com/myapp/struts/ApplicationResource"/>    
+    
+    <plug-in className="org.apache.struts.tiles.TilesPlugin" >
+        <set-property property="definitions-config" value="/WEB-INF/tiles-defs.xml" />      
+        <set-property property="moduleAware" value="true" />
+    </plug-in>
+    
+    <plug-in className="org.apache.struts.validator.ValidatorPlugIn">
+        <set-property
+            property="pathnames"
+            value="/WEB-INF/validator-rules.xml,/WEB-INF/validation.xml"/>
+    </plug-in>
+  
+</struts-config>

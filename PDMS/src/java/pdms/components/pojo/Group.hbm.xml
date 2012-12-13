@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="pdms.components.pojo">
+  <class name="Group" table="Groups">
+    <cache usage="read-only"/>
+    <!--<cache usage="read-write"/>-->
+    <comment>用户组表</comment>
+    <id access="field" column="id" name="id" type="int">
+      <generator class="native"/>
+    </id>
+    <property name="name" not-null="true" type="string">
+      <column length="32" name="name">
+        <comment>名称</comment>
+      </column>
+    </property>
+    <set lazy="false" name="identities" table="Groups_Identity_Relation">
+      <comment>用户组角色关系表</comment>
+      <key column="group_id" not-null="true"/>
+      <many-to-many class="Identity">
+        <column name="identity_id">
+          <comment>角色ID</comment>
+        </column>
+      </many-to-many>
+    </set>
+    <set lazy="false" name="roles" table="Groups_Role_Relation">
+      <comment>用户组权限关系表</comment>
+      <key column="group_id" not-null="true"/>
+      <many-to-many class="Role">
+        <column name="role_id">
+          <comment>权限ID</comment>
+        </column>
+      </many-to-many>
+    </set>
+    <set name="users" table="User_Group_Relation">
+      <!--<cache usage="read-write"/>-->
+      <comment>用户与用户组关系表</comment>
+      <key column="group_id" not-null="true"/>
+      <many-to-many class="User">
+        <column name="user_id">
+          <comment>用户ID</comment>
+        </column>
+      </many-to-many>
+    </set>
+  </class>
+</hibernate-mapping>

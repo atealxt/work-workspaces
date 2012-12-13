@@ -1,0 +1,32 @@
+.icon-sys {
+	background-image: url(../images/icon/system.gif) !important;
+}
+
+.icon-fun {
+	background-image: url(../images/icon/propertyInfo.gif) !important;
+}
+
+.icon-help {
+	background-image: url(images/icon/infoMenu.gif) !important;
+}
+
+.icon-add {
+	background-image: url(../images/16_16/add_16.gif) !important;
+}
+
+.icon-edit {
+	background-image: url(../images/16_16/edit_16.gif) !important;
+}
+
+.icon-del {
+	background-image: url(../images/16_16/del_16.gif) !important;
+}
+
+.icon-ref {
+	background-image: url(../images/16_16/ref_16.gif) !important;
+}
+
+.icon-srch {
+	background-image: url(../images/16_16/srch_16.gif) !important;
+}
+

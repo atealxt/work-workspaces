@@ -1,0 +1,71 @@
+<!--ff3下无效-->
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" type="text/css" href="../../extjs2.0/resources/css/ext-all.css" />
+<script type="text/javascript" src="../../extjs2.0/adapter/ext/ext-base.js"></script>
+<script type="text/javascript" src="../../extjs2.0/ext-all.js"></script>
+<script type="text/javascript" src="../../extjs2.0/source/locale/ext-lang-zh_CN.js"></script>
+<style type="text/css">
+.special-css{
+	font-size:11pt;
+	color:#CC0000;
+	padding:5px;
+
+}
+td{
+	font-size:11pt;
+	color:black;
+	padding:5px;
+
+}
+.click-css{
+	font-size:11pt;
+	color:green;
+	padding:5px;
+
+}
+.focus-css{
+	font-size:11pt;
+	color:yellow;
+	padding:5px;
+
+}
+.mouseover-css{
+	font-size:11pt;
+	color:blue;
+	padding:5px;
+
+}
+</style>
+<script language="javascript">
+Ext.onReady(function(){
+	var el = Ext.get("the-id");
+	function fn1(){
+		Ext.Msg.alert("提示","您在id为'the_id'的Element上按下了ctrl+c键");
+	}
+	el.addClass("special-css");//为元素添加样式表
+	el.focus();//将焦点移到el元素上
+	el.addClassOnFocus("focus-css");//为得到和失去焦点添加和移除css类
+	el.addClassOnOver("mouseover-css");//为鼠标移入移出事件添加和移除css类
+	el.addClassOnClick("click-css");//为点击事件添加和移除css类
+	el.setWidth(280);//将元素的宽度设为100相素
+	el.setWidth(280, true);//将元素的宽度设为100并带有动画效果
+	el.addKeyMap({key : "c",ctrl : true,fn:fn1,scope:el});//绑定el元素当键盘按下ctrl+c键时将呼叫fn函数
+	el.addKeyListener({key:"g",ctrl:true},fn1,el);//和上面的addKeyMap的功能相同，只是参数的传递方式不同
+});
+</script>
+</head>
+<body>
+	<table border="0" cellspacing="1" cellpadding="3" align="center" width="280" height="180" bgcolor="#3399CC">
+		<tr>
+			<td bgcolor="#F3FAF9">测试样例</td>
+		</tr>
+		<tr>
+			<td bgcolor="#FBFFFF">
+				<div id="the-id">　　通过取得Element id为“the_id”的div并为该Div绑定一些事件，如：为鼠标移过该Div时改变样式表等</div>
+			</td>
+		</tr>
+	</table>
+</body>
+</html>

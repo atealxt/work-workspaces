@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE sqlMap PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN"
+    "http://ibatis.apache.org/dtd/sql-map-2.dtd">
+
+<sqlMap namespace="${object_name}">
+	
+	<cacheModel id="${object_name.toLowerCase()}Cache" type="LRU">
+		<flushInterval hours="24"/>
+		<property name="size" value="1000" />
+	</cacheModel>
+
+	<typeAlias alias="${object_name.toLowerCase()}" type="${package}.model.${object_name}Model"/>
+	
+	<resultMap id="${object_name.toLowerCase()}Result" class="${object_name.toLowerCase()}">
+	#foreach( $col in $list )
+		<result property="${col.columnName}" column="${col.dbColumnName}"/>
+	#end
+	</resultMap>
+	
+	<insert id="create${object_name}" parameterClass="${object_name.toLowerCase()}">
+		insert into ${table_name} (
+	#foreach( $col in $list )
+		#if(${col.prikey})
+			${col.dbColumnName}
+		#else
+		<isNotNull prepend="," property="${col.columnName}">
+			${col.dbColumnName}
+		</isNotNull>
+		#end
+	#end
+		)values(
+	#foreach( $col in $list )
+		#if(${col.prikey})
+			#${col.columnName}#
+		#else
+		<isNotNull prepend="," property="${col.columnName}">
+			#${col.columnName}#
+		</isNotNull>
+		#end
+	#end
+		)
+	</insert>
+		
+	<update id="update${object_name}" parameterClass="${object_name.toLowerCase()}">
+		update ${table_name} set 
+	#foreach( $col in $list )
+		#if(${col.prikey})
+			${col.dbColumnName}=#${col.columnName}#
+		#else
+		<isNotNull prepend="," property="${col.columnName}">
+			${col.dbColumnName}=#${col.columnName}#
+		</isNotNull>
+		#end
+	#end
+		where 
+	#foreach( $col in $list )
+		#if(${col.prikey})
+			${col.dbColumnName}=#${col.columnName}#
+		#end
+	#end
+		
+	</update>
+	
+	<delete id="delete${object_name}" parameterClass="${object_name.toLowerCase()}">
+		delete from ${table_name} 
+		where 
+	#foreach( $col in $list )
+		#if($col.prikey)
+			${col.dbColumnName}=#${col.columnName}#
+		#end
+	#end
+	</delete>
+	
+	<select id="get${object_name}" resultMap="${object_name.toLowerCase()}Result" parameterClass="${object_name.toLowerCase()}">
+		select * from ${table_name} 
+		where 
+	#foreach( $col in $list )
+		#if(${col.prikey})
+			${col.dbColumnName}=#${col.columnName}#
+		#end
+	#end
+	</select>
+	
+	<select id="get${object_name}List" resultMap="${object_name.toLowerCase()}Result" parameterClass="${object_name.toLowerCase()}">
+		select * from ${table_name}
+		<dynamic prepend="where">
+	#foreach( $col in $list )
+		<isNotNull prepend="and" property="${col.columnName}">
+			${col.dbColumnName}=#${col.columnName}#
+		</isNotNull>
+	#end
+		</dynamic> 
+	</select>
+	
+	<select id="get${object_name}Count" resultClass="int" parameterClass="${object_name.toLowerCase()}">
+		select count(*) from ${table_name}
+		<dynamic prepend="where">
+	#foreach( $col in $list )
+			<isNotNull prepend="and" property="${col.columnName}">
+				${col.dbColumnName}=#${col.columnName}#
+			</isNotNull>
+	#end
+		</dynamic> 
+	</select>
+
+</sqlMap>

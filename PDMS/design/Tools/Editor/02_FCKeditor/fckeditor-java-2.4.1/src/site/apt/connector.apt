@@ -1,0 +1,110 @@
+~~ FCKeditor - The text editor for Internet - http://www.fckeditor.net
+~~ Copyright (C) 2003-2008 Frederico Caldeira Knabben
+~~
+~~ == BEGIN LICENSE ==
+~~
+~~ Licensed under the terms of any of the following licenses at your
+~~ choice:
+~~
+~~  - GNU General Public License Version 2 or later (the "GPL")
+~~    http://www.gnu.org/licenses/gpl.html
+~~
+~~  - GNU Lesser General Public License Version 2.1 or later (the "LGPL")
+~~    http://www.gnu.org/licenses/lgpl.html
+~~
+~~  - Mozilla Public License Version 1.1 or later (the "MPL")
+~~    http://www.mozilla.org/MPL/MPL-1.1.html
+~~
+~~ == END LICENSE ==
+~~ @version $Id: connector.apt 2191 2008-07-08 18:14:52Z mosipov $
+                        ------------------------------
+                           File Browser Connector
+                        ------------------------------
+
+Connector activation
+
+  The Connector is not mandatory. If you do <not> plan to provide file
+  interaction, you can skip this section.
+
+    [Hint:] The Connector by default is not present and disabled for security
+            reasons!
+
+  It takes two steps to enable it:
+
+  [[1]]  Declare the ConnectorServlet in your <<<web.xml>>>
+
++------------------------------------------------------------------------------+
+  <web-app version="2.4">
+    ...
+    <servlet>
+      <servlet-name>Connector</servlet-name>
+        <servlet-class>
+          net.fckeditor.connector.ConnectorServlet
+      </servlet-class>
+      <load-on-startup>1</load-on-startup>
+    </servlet>
+    ...
+    <servlet-mapping>
+      <servlet-name>Connector</servlet-name>
+      <url-pattern>
+        /fckeditor/editor/filemanager/connectors/*
+      </url-pattern>
+    </servlet-mapping>
+    ...
+  </web-app>
++------------------------------------------------------------------------------+
+
+  Assuming you installed the editor in the <<</fckeditor>>> folder in your webapp.\
+  The Connector is now declared but <still> disabled. The response is going to
+  be an error message.
+
+  [[2]] Create a <<<fckeditor.properties>>> file in your classpath and add:
+
++------------------------------------------------------------------------------+
+  connector.userActionImpl=net.fckeditor.requestcycle.impl.UserActionImpl
++------------------------------------------------------------------------------+
+
+  []
+
+  The Connector is now enabled.
+
+Extending the Connector
+
+    [Hint:]  Skip this section if you are not interested in extending the
+             Connector.
+
+  The basic idea of extending the Connector is to provide interfaces for
+  user-dependent interactions which can be implemented by the web application
+  developer. All methods are passed the current <<<HttpServletRequest>>> instance
+  in order to retrieve request and/or session attributes to assemble a user-specific
+  return value. We intentionally do not impose any constraints or indorse any
+  particular implementation approach to give you the freedom to implement the
+  interfaces the way it fits best in your environment.
+
+  Supply the fully-qualified class names of the implementing classes as described
+  in the {{{properties.html}configuration settings}}.
+
+  Right now, the integration pack provides two interfaces to extend the Connector:
+
+  [[1]] {{{java-core/apidocs/net/fckeditor/requestcycle/UserPathBuilder.html}<<<net.fckeditor.requestcycle.UserPathBuilder>>>}}
+
+        This interface consists only of one method <<<String getUserFilesPath(final HttpServletRequest)>>>.
+        You are able to construct a user-dependent <<<UserFilesPath>>>, e.g.
+        <<</userfiles/johndoe>>>.
+
+  [[2]] {{{java-core/apidocs/net/fckeditor/requestcycle/UserAction.html}<<<net.fckeditor.requestcycle.UserAction>>>}}
+
+        There are two methods to authorize users to do file-based actions:
+
+        * <<<boolean isEnabledForFileBrowsing(final HttpServletRequest)>>> denoting
+          the user's ability to browse files on the server.
+  
+        * <<<boolean isEnabledForFileUpload(final HttpServletRequest)>>> denoting
+          the user's ability to upload files to the server.
+
+        []
+
+        For those who want to enable all users to browse and upload files, there 
+        is a ready-to-use implementation <<<{{{java-core/apidocs/net/fckeditor/requestcycle/impl/UserActionImpl.html}UserActionImpl}}>>>.
+
+  []

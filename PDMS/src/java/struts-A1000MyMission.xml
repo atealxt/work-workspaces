@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+    <!--我的任务页面-->
+    <package name="A1000" namespace="/mymisson" extends="struts-default">
+
+        <result-types>
+            <result-type name="json" class="com.googlecode.jsonplugin.JSONResult"/>
+        </result-types>
+        
+        <default-class-ref class="A1000MyMissionAction" />
+
+        <global-results>
+            <result name="input">/pages/login.jsp</result>
+            <result name="error">../pages/error.html</result>
+        </global-results>
+
+        <global-exception-mappings>
+            <exception-mapping  exception="java.lang.Exception" result="error"/>
+        </global-exception-mappings>
+
+        <!--main-->
+        <action name="A1000MyMissionAction">
+            <result type="json"/>
+        </action>
+
+        <!--提交任务-->
+        <action name="A1001SubmAction" method="submitMission">
+        </action>
+
+        <!--受取任务-->
+        <action name="A1002RevAction" method="receiveMission">
+        </action>
+
+    </package>
+</struts>

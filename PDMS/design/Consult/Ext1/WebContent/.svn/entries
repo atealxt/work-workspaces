@@ -1,0 +1,91 @@
+8
+
+dir
+11
+https://127.0.0.1:8443/svn/System/SOA/WebContent
+https://127.0.0.1:8443/svn/System
+
+
+
+2008-12-09T18:51:28.142003Z
+11
+admin
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+6a5171dd-9f07-d045-9c23-843b323693ed
+
+main.jsp
+file
+18
+
+
+
+2008-12-10T23:49:04.415857Z
+a193eefebdff151fee47684362a259c2
+2008-12-11T00:07:48.623200Z
+18
+admin
+
+META-INF
+dir
+
+fileUpload
+dir
+
+Images
+dir
+
+lib
+dir
+
+WEB-INF
+dir
+
+index.html
+file
+
+
+
+
+2008-11-26T01:32:15.912465Z
+4822e7cd2818518f26d383e18fd09fc5
+2008-12-03T21:20:26.465394Z
+2
+admin
+
+default.css
+file
+
+
+
+
+2008-11-06T00:12:08.442615Z
+acf72e6c58f4e79a935230f58517a0ff
+2008-12-03T21:20:26.465394Z
+2
+admin
+
+about.html
+file
+
+
+
+
+2008-10-29T16:42:47.381472Z
+1420183ed19022d073043434770e9bff
+2008-12-03T21:20:26.465394Z
+2
+admin
+

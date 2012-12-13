@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+
+<struts-config>
+
+	<data-sources />
+	<form-beans>
+		<form-bean name="loginForm" type="com.form.LoginForm" />
+	</form-beans>
+
+	<global-exceptions />
+	<global-forwards />
+	<action-mappings>
+		<!-- 这时， type="com.action.LoginHandler"已经不起作用了，你都可以删掉它-->
+		<action attribute="loginForm" name="loginForm" path="/login"
+			scope="request" type="com.action.LoginHandler">
+			<forward name="success" path="/success.jsp" />
+			<forward name="failure" path="/login.jsp" />
+		</action>
+	</action-mappings>
+	<!-- 同样要注意controller元素的摆放位置
+		这里，controller元素用于将对Action的管理权从Struts手里抢过来，交给Spring进行统一管理
+	 -->
+	<controller>
+		<set-property property="processorClass"
+			value="org.springframework.web.struts.DelegatingRequestProcessor" />
+	</controller>
+	<message-resources parameter="com.ApplicationResources" />
+
+	<!-- 注意插件元素plug-in的摆放位置哦
+		其中，/WEB-INF/classes/springConfig.xml就是我们spring配置文件的编译后存放路径
+	-->
+	<plug-in
+		className="org.springframework.web.struts.ContextLoaderPlugIn">
+		<set-property property="contextConfigLocation"
+			value="/WEB-INF/classes/springConfig.xml" />
+	</plug-in>
+</struts-config>
+

@@ -1,0 +1,75 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+	
+	<title>$!{title}-$blog.title</title>
+#parse("/commons/header.html")
+	</head>
+<body>
+
+#parse("/commons/nav.html")
+
+<div id="main">
+	<div id="content"> 
+		<div class="entry">
+			<div class="post" id="post-$!{id}">
+				<h2><a href="/portal.ejf?cmd=albumShow&id=$!{id}" rel="bookmark" title="Permanent Link: $!{title}">$!{title}</a></h2>
+				<abbr title="$!{CommUtil.format($inputTime)}">$!{CommUtil.format($inputTime)}</abbr><br /> <!-- by $!{b.author} -->
+#if( $path )
+<center>
+<img id="list-$velocityCount" src="$!{path}" alt="$!{title}" /><br />
+$!{intro}
+</center>
+<br />
+#end
+				<div style=""><font class="Apple-style-span" color="#0000EE"><span class="Apple-style-span" style="text-decoration: underline;"><br /></span></font></div>
+			</div>
+		</div>
+
+<div class="entry">
+<!-- You can start editing here. -->
+
+<div class="boxcomments">
+	<ol class="commentlist">
+	<li class="commenthead">
+#if ( $comments.size()<1 )
+<h2 id="comments">No Response to &#8220;$!{title}&#8221;</h2></li>
+#else
+<h2 id="comments">$comments.size() Response to &#8220;$!{title}&#8221;</h2></li>
+#foreach( $cl in $comments)
+<li class="mycomment" id="comment-$!{cl.id}">
+	<p>$!{cl.content}</p>
+	<p style="margin-bottom:5px;">By <strong><a href='http://www.easyjf.com/?refer=simple-blog' rel='external nofollow'>$!cl.user.name</a></strong> on <a href="#comment-$!{cl.id}" title="">$!{cl.inputTime}</a> </p>
+</li>
+#end
+#end		
+	</ol>
+
+
+	<form action="/portal.ejf?cmd=albumComment" method="post" id="commentform">
+
+	<h3 id="respond">Post a Comment</h3>
+#if($session.user)
+<p>You are logged in as <a href="/portal.ejf?cmd=profile&user=$session.user.name">$!{session.user.name}</a>. To logout, <a href="/portal.ejf?cmd=logout" title="Log out of this account">click here</a>.
+<p><textarea name="content" id="content" cols="5" rows="10" tabindex="4"></textarea></p>
+
+		<p><input name="submit" type="submit" id="submit" tabindex="5" value="Submit Comment" />
+		<input type="hidden" name="albumId" value="$!{id}" /></p>
+#else
+
+对不起，您还没有登录，请先<a href="?cmd=login">登录</a>再参与讨论！
+#end
+	
+$html.getToken()
+	</form>
+	
+</div>
+</div>
+	</div>
+
+#parse("/commons/sidebar.html")
+
+</div>
+#parse("/commons/footer.html")
+</body>
+</html>

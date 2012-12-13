@@ -1,0 +1,14 @@
+#Fat Jar Configuration File
+#Fri Aug 07 22:38:09 CST 2009
+onejar.license.required=false
+manifest.classpath=
+manifest.removesigners=true
+onejar.checkbox=false
+jarname=tool.jar
+manifest.mergeall=true
+manifest.mainclass=
+manifest.file=<createnew>
+jarname.isextern=false
+onejar.expand=
+excludes=<po|SSH>~org/~ywq/~entity/;<po|SSH>~org/~ywq/~service/;<po|SSH>~org/~ywq/~struts/;<po|SSH>~org/~ywq/~test/;<po|SSH>~applicationContext.xml;<po|SSH>~hibernate.cfg.xml;<jar|javaee.jar>;<jar|jsf-impl.jar>;<jar|jsf-api.jar>;<jar|jstl-1.2.jar>;<jar|commons-beanutils-1.7.0.jar>;<jar|commons-chain-1.1.jar>;<jar|commons-digester-1.8.jar>;<jar|commons-io-1.1.jar>;<jar|commons-validator-1.3.1.jar>;<jar|struts-core-1.3.8.jar>;<jar|struts-el-1.3.8.jar>;<jar|struts-extras-1.3.8.jar>;<jar|struts-faces-1.3.8.jar>;<jar|struts-mailreader-dao-1.3.8.jar>;<jar|struts-scripting-1.3.8.jar>;<jar|struts-taglib-1.3.8.jar>;<jar|struts-tiles-1.3.8.jar>;<jar|aopalliance.jar>;<jar|asm-commons-2.2.3.jar>;<jar|asm-util-2.2.3.jar>;<jar|aspectjrt.jar>;<jar|aspectjweaver.jar>;<jar|cglib-nodep-2.1_3.jar>;<jar|commons-attributes-api.jar>;<jar|commons-attributes-compiler.jar>;<jar|commons-codec.jar>;<jar|commons-fileupload.jar>;<jar|commons-httpclient.jar>;<jar|commons-io.jar>;<jar|commons-logging.jar>;<jar|cos.jar>;<jar|freemarker.jar>;<jar|itext-1.3.jar>;<jar|jakarta-oro-2.0.8.jar>;<jar|jasperreports-1.3.4.jar>;<jar|jxl.jar>;<jar|log4j-1.2.14.jar>;<jar|poi-2.5.1.jar>;<jar|portlet-api.jar>;<jar|spring-agent.jar>;<jar|spring-aop.jar>;<jar|spring-beans.jar>;<jar|spring-context.jar>;<jar|spring-core.jar>;<jar|spring-portlet.jar>;<jar|spring-struts.jar>;<jar|spring-tomcat-weaver.jar>;<jar|spring-web.jar>;<jar|spring-webmvc.jar>;<jar|struts.jar>;<jar|velocity-1.5.jar>;<jar|velocity-tools-view-1.3.jar>;<jar|commons-logging-1.0.4.jar>;<jar|antlr-2.7.6rc1.jar>;<jar|asm-attrs.jar>;<jar|asm.jar>;<jar|cglib-2.1.3.jar>;<jar|dom4j-1.6.1.jar>;<jar|ehcache-1.1.jar>;<jar|hibernate3.jar>;<jar|jaas.jar>;<jar|jaxen-1.1-beta-7.jar>;<jar|jdbc2_0-stdext.jar>;<jar|jta.jar>;<jar|log4j-1.2.11.jar>;<jar|mysql-connector-java-5.0.8-bin.jar>;<jar|spring-dao.jar>;<jar|spring-hibernate3.jar>;<jar|spring-ibatis.jar>;<jar|spring-jdbc.jar>;<jar|spring-jdo.jar>;<jar|spring-jpa.jar>;<jar|xerces-2.6.2.jar>;<jar|xml-apis.jar>;<jar|commons-dbcp.jar>;<jar|commons-lang.jar>;<jar|junit.jar>;<jar|commons-collections.jar>;<jar|commons-pool.jar>
+includes=

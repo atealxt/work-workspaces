@@ -1,0 +1,55 @@
+package ${package}.service;
+
+import java.util.List;
+
+import ${package}.ibatis.${object_name}DAOImpl;
+import ${package}.model.${object_name}Model;
+
+ /**
+ *
+ * <p>Title: </p>
+ * <p>Description: </p>
+ * <p>Copyright: Copyright (c) 2008</p>
+ * <p>Company: ${company}</p>
+ * @author ${author}
+ * @version 1.0
+ */
+public class ${object_name}ServiceImpl implements I${object_name}Service{
+	
+	private ${object_name}DAOImpl ${object_name.toLowerCase()}DAO;
+	
+	public void set${object_name.substring(0,1)}${object_name.substring(1).toLowerCase()}DAO(${object_name}DAOImpl ${object_name.toLowerCase()}DAO) {
+		this.${object_name.toLowerCase()}DAO = ${object_name.toLowerCase()}DAO;
+	}
+
+	public int create${object_name}(${object_name}Model model) {
+		return ${object_name.toLowerCase()}DAO.create${object_name}(model);
+	}
+
+	public int delete${object_name}(${object_name}Model model) {
+		return ${object_name.toLowerCase()}DAO.delete${object_name}(model);
+	}
+
+	public ${object_name}Model get${object_name}(${object_name}Model model) {
+		return ${object_name.toLowerCase()}DAO.get${object_name}(model);
+	}
+
+	public int get${object_name}Count(${object_name}Model model) {
+		return ${object_name.toLowerCase()}DAO.get${object_name}Count(model);
+	}
+
+	public List<${object_name}Model> get${object_name}List(${object_name}Model model) {
+		return ${object_name.toLowerCase()}DAO.get${object_name}List(model);
+	}
+
+	public List<${object_name}Model> get${object_name}List(int start, int count, ${object_name}Model model) {
+		return ${object_name.toLowerCase()}DAO.get${object_name}List(start, count, model);
+	}
+
+	public int update${object_name}(${object_name}Model model) {
+		return ${object_name.toLowerCase()}DAO.update${object_name}(model);
+	}
+
+
+}
+

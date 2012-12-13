@@ -1,0 +1,50 @@
+﻿<HTML>
+ <HEAD>
+  <TITLE>远程数据源的组合框示例</TITLE>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <link rel="stylesheet" type="text/css" href="../../extjs2.0/resources/css/ext-all.css" />
+  <script type="text/javascript" src="../../extjs2.0/adapter/ext/ext-base.js"></script>
+  <script type="text/javascript" src="../../extjs2.0/ext-all.js"></script>
+  <script type="text/javascript" src="../../extjs2.0/source/locale/ext-lang-zh_CN.js"></script>
+  <script type="text/javascript">
+	Ext.onReady(function(){
+		Ext.BLANK_IMAGE_URL = '../../extjs2.0/resources/images/default/s.gif';
+		Ext.QuickTips.init();
+		var store = new Ext.data.SimpleStore({
+			proxy : new Ext.data.HttpProxy({//读取远程数据的代理
+				url : 'bookSearchServer.jsp'//远程地址
+			}),
+			fields : ['bookName']
+		});
+		var form = new Ext.form.FormPanel({
+			title:'Ext.form.ComboBox远程数据源示例',
+			labelSeparator :'：',//分隔符
+			labelWidth : 80,//标签宽度
+			bodyStyle:'padding:5 5 5 5',//表单边距
+			frame : true,
+			height:100,
+			width:270,
+			applyTo :'form',
+			items:[
+			new Ext.form.ComboBox({
+				id:'book',
+				allQuery:'allbook',//查询全部信息的查询字符串
+				loadingText : '正在加载书籍信息',//加载数据时显示的提示信息
+				minChars : 3,//下拉列表框自动选择前用户需要输入的最小字符数量
+				queryDelay : 300,//查询延迟时间
+				queryParam : 'searchbook',//查询的名字
+				fieldLabel:'书籍列表',
+				triggerAction: 'all',//单击触发按钮显示全部数据
+				store : store,//设置数据源
+				displayField:'bookName',//定义要显示的字段
+				mode: 'remote'//远程模式,
+			})
+			]
+		})
+	});
+  </script>
+ </HEAD>
+ <BODY>
+	 <div style="padding: 20 20 20 20"><div id='form'/></div>
+ </BODY>
+</HTML>

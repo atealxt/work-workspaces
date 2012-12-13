@@ -1,0 +1,30 @@
+﻿<HTML>
+ <HEAD>
+  <TITLE>applyTo及renderTo的用法</TITLE>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <link rel="stylesheet" type="text/css" href="../../extjs2.0/resources/css/ext-all.css" />
+  <script type="text/javascript" src="../../extjs2.0/adapter/ext/ext-base.js"></script>
+  <script type="text/javascript" src="../../extjs2.0/ext-all.js"></script>
+  <script type="text/javascript" src="../../extjs2.0/source/locale/ext-lang-zh_CN.js"></script>
+  <script type="text/javascript">
+	Ext.onReady(function(){
+		var ProgressBar = new Ext.ProgressBar({
+			text:'使用applyTo为进度条定位',//进度条上显示的文字
+			width:300,//设定进度条的宽度
+			//在id为'ProgressBar1'的div元素之后追加一个进度条组件。
+			applyTo:'ProgressBar1'
+			//applyTo可以接受元素ID或元素本身作为参数，如下也是正确的写法
+			//applyTo:document.getElementById('ProgressBar1')
+			//renderTo:'ProgressBar2'
+			//renderTo:document.getElementById('ProgressBar1')
+		});
+	});
+  </script>
+ </HEAD>
+ <BODY>
+	<div id='ProgressBar1'></div>
+	<table id='ProgressBar2'></table>
+	<table><tr id='ProgressBar3'></tr></table>
+	<table><tr><td  id='ProgressBar4'></td></tr></table>
+ </BODY>
+</HTML>

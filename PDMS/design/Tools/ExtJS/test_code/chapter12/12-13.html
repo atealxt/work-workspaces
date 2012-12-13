@@ -1,0 +1,46 @@
+﻿<HTML>
+ <HEAD>
+  <TITLE>简单的树面板示例</TITLE>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <link rel="stylesheet" type="text/css" href="../../extjs2.0/resources/css/ext-all.css" />
+  <script type="text/javascript" src="../../extjs2.0/adapter/ext/ext-base.js"></script>
+  <script type="text/javascript" src="../../extjs2.0/ext-all.js"></script>
+  <script type="text/javascript" src="../../extjs2.0/source/locale/ext-lang-zh_CN.js"></script>
+  <script type="text/javascript">
+	Ext.onReady(function(){
+		//创建根节点
+		var root = new Ext.tree.TreeNode({
+			text : '菜单根节点',
+			uiProvider : Ext.tree.RootTreeNodeUI,
+			expanded : true//默认展开根节点
+		});
+		var node = new Ext.tree.TreeNode({
+			text : '一级菜单A'
+		});
+		node.appendChild(new Ext.tree.TreeNode({
+			text : '二级菜单A'
+		}));
+		node.appendChild(new Ext.tree.TreeNode({
+			text : '二级菜单B'
+		}));
+		//为根节点添加子节点
+		root.appendChild(node);
+		root.appendChild(new Ext.tree.TreeNode({
+			text : '一级菜单B'
+		}));
+		//创建Tree面板组件
+		var tree = new Ext.tree.TreePanel({
+			title : '树形菜单',
+			width : 200,
+			height : 150,
+			enableDD : true,//允许拖动树节点
+			applyTo : 'tree-div',
+			root : root
+		});
+	});
+  </script>
+ </HEAD>
+ <BODY style="margin=10 10 10 10;">
+	<div id="tree-div"/>
+ </BODY>
+</HTML>

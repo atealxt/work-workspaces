@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+
+	<bean id="mySessionFactory"
+		class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
+		<property name="configLocation">
+			<value>classpath:hibernate.cfg.xml</value>
+		</property>
+	</bean>
+	<!-- 配置UserDao的bean，设置其sessionFactory属性让其依赖mySessionFactory -->
+	<bean name="userDao" class="com.dao.UserDao">
+		<property name="sessionFactory" ref="mySessionFactory"></property>
+	</bean>
+	<!-- 那么，如何来用Spring集成Struts呢，换句话说，Struts如何调用Spring管理的bean对象呢 
+		这就需要我们，再次地进行Struts配置，为其添加Spring提供的集成插件，从而将原先由Struts框架
+		管理的Action对象交给Spring来管理
+		
+	-->
+	<!-- 开始配置Struts的Action -->
+	<bean name="/login" class="com.action.LoginHandler">
+		<property name="myUserDao" ref="userDao"></property>
+	</bean>
+	<!-- 至此，我们配置性的工作全部结束！ -->
+</beans>

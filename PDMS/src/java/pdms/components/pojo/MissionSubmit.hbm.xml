@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="pdms.components.pojo">
+  <class name="MissionSubmit" table="Mission_Submit">
+    <comment>任务提交表</comment>
+    <id access="field" column="id" length="32" name="id" type="string">
+      <generator class="uuid"/>
+    </id>
+    <property name="submitInfo" not-null="true" type="string">
+      <column length="1024" name="submitInfo">
+        <comment>提交信息</comment>
+      </column>
+    </property>
+    <!--
+        <property name="uploadFileName" type="string">
+            <column name="uploadFileName">
+                <comment>上传文件名</comment>
+            </column>
+        </property>
+
+        <property name="fileContent" type="java.sql.Blob">
+            <column name="fileContent">
+                <comment>上传文件内容</comment>
+            </column>
+        </property>
+-->
+    <property name="submitDate" type="java.util.Date">
+      <column name="submitDate">
+        <comment>上传日期</comment>
+      </column>
+    </property>
+    <many-to-one class="Mission" name="mission">
+      <column name="mission_id">
+        <comment>任务ID</comment>
+      </column>
+    </many-to-one>
+    <many-to-one class="UploadFile" name="uploadFile">
+      <column name="file_id">
+        <comment>附件(文件)ID</comment>
+      </column>
+    </many-to-one>
+  </class>
+</hibernate-mapping>

@@ -1,0 +1,74 @@
+~~ FCKeditor - The text editor for Internet - http://www.fckeditor.net
+~~ Copyright (C) 2003-2008 Frederico Caldeira Knabben
+~~ 
+~~ == BEGIN LICENSE ==
+~~ 
+~~ Licensed under the terms of any of the following licenses at your
+~~ choice:
+~~ 
+~~  - GNU General Public License Version 2 or later (the "GPL")
+~~    http://www.gnu.org/licenses/gpl.html
+~~ 
+~~  - GNU Lesser General Public License Version 2.1 or later (the "LGPL")
+~~    http://www.gnu.org/licenses/lgpl.html
+~~ 
+~~  - Mozilla Public License Version 1.1 or later (the "MPL")
+~~    http://www.mozilla.org/MPL/MPL-1.1.html
+~~ 
+~~ == END LICENSE ==
+~~ @version $Id: installation.apt.vm 2540 2008-10-11 02:09:37Z mosipov $
+                        ------------------------------
+                                Installation
+                        ------------------------------
+
+Installation Guide
+
+  After downloading an appropriate distribution, you need to install it into
+  your webapp. Read the applying topics in this guide from top to bottom.
+
+* Integration pack installation
+
+  Installing the integration pack, it's dependencies, and a required SLF4J binding.
+
+** Using Maven 2
+
+   If you have already declared the depedency reference as described in the
+   {{{download.html}download guide}}, Maven has already installed everything for
+   you. Declare the chosen SFL4J binding and corresponding backend (may be optional)
+   in the dependencies section of your POM within the <runtime> scope.
+
+** Manual installation
+
+   Simply put the downloaded core jar, it's dependencies and your favorite SFL4J
+   binding together with the corresponding backend (may be optional) in to your 
+   classpath (usually <<<WEB-INF/lib>>>) and you are ready to go.
+
+* FCKeditor installation
+
+  Although the public distribution is fine, it still contains a lot of superfluous
+  files for a Java environment. Use the following <<<Ant>>> target on the FCKeditor
+  ${FCKeditorVersion} zip file (1,31 MiB) to create a cleaner and smaller distribution
+  zip file (0,99 MiB). After the minification you can unzip the smaller distribution zip
+  file into your webapp.
+
++------------------------------------------------------------------------------+
+<target name="clean-fckeditor" description="Creates a clean FCKeditor distribution">
+  <!-- Adapt these properties to your needs -->
+  <property name="fckeditor-tmp" location="fckeditor-tmp" />
+  <property name="fckeditor-basename" value="FCKeditor_${FCKeditorVersion}" />
+  <property name="fckeditor-destfile" value="${fckeditor-basename}_clean.zip" />
+
+  <delete file="${fckeditor-destfile}" />
+  <unzip dest="${fckeditor-tmp}" src="${fckeditor-basename}.zip" />
+  <zip destfile="${fckeditor-destfile}">
+    <zipfileset dir="${fckeditor-tmp}/fckeditor" prefix="fckeditor">
+      <include name="_samples/_plugins/" />
+      <include name="editor/" />
+      <include name="fckconfig.js" />
+      <include name="*.xml" />
+      <exclude name="editor/filemanager/connectors/" />
+    </zipfileset>
+  </zip>
+  <delete dir="${fckeditor-tmp}" />
+</target>
++------------------------------------------------------------------------------+

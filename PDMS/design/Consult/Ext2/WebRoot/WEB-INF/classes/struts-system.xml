@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN" "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<package
+		name="system"
+		extends="struts2"
+		namespace="/system">
+		
+		<action name="user" class="userAction">
+			<result name="list" type="dispatcher">/system/user/list.jsp</result>		
+		</action>
+		
+		<action name="group" class="groupAction">
+		</action>
+		
+		<action name="resource" class="resourceAction">
+		</action>
+		
+		<action name="role" class="roleAction">
+		</action>
+		
+		<action name="roleresource" class="roleresourceAction">
+		</action>
+		
+	</package>
+	
+</struts>

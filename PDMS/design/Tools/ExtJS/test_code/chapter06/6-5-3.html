@@ -1,0 +1,67 @@
+﻿<html>
+<head>
+<title>定制个性化风格</title>
+<link rel="stylesheet" type="text/css" href="../../extjs2.0/resources/css/ext-all.css" />
+<script type="text/javascript" src="../../extjs2.0/adapter/ext/ext-base.js"></script>
+<script type="text/javascript" src="../../extjs2.0/ext-all.js"></script>
+<script type="text/javascript">
+//定义使用改变个性化定制的控件
+//该控制实际上为一个可供选择样式表值的下拉框
+//当改变下拉框的选择时则调用Ext.util.CSS.swapStyleSheet来替换其样式表路径
+Ext.ux.ThemeChange = Ext.extend(Ext.form.ComboBox,{
+	editable : false,
+	displayField : 'theme',
+	valueField : 'css',
+	typeAhead : true,
+	mode : 'local',
+	value : '默认',
+	readonly : true,
+	triggerAction : 'all',
+	selectOnFocus : true,
+	initComponent : function(){
+		var themes = [
+				['默认', 'ext-all.css'],
+				['黑色', 'xtheme-black.css'],
+				['巧克力色', 'xtheme-chocolate.css'],
+				['深灰色', 'xtheme-darkgray.css'],
+				['浅灰色', 'xtheme-gray.css'],
+				['绿色', 'xtheme-green.css'],
+				['橄榄色', 'xtheme-olive.css'],
+				['椒盐色', 'xtheme-peppermint.css'],
+				['粉色', 'xtheme-pink.css'],
+				['紫色', 'xtheme-purple.css'],
+				['暗蓝色', 'xtheme-slate.css'],
+				['靛青色', 'xtheme-indigo.css'],
+				['深夜', 'xtheme-midnight.css'],
+				['银白色', 'xtheme-silverCherry.css']
+		];
+		this.store = new Ext.data.SimpleStore({
+			fields : ['theme', 'css'],
+			data : themes
+		});
+	},
+	initEvents : function(){
+		this.on('collapse', function(){
+			//实际改变风格样式的处理
+			Ext.util.CSS.swapStyleSheet('theme', '../../extjs2.0/resources/css/'+ this.getValue());
+		});
+	}
+});
+Ext.reg('xthemeChange', Ext.ux.ThemeChange);
+
+Ext.onReady(function(){
+	//实例化一个可以改变风格样式的组件
+	var pan = new Ext.Panel({
+		title:'定制个性化风格',
+		items:new Ext.ux.ThemeChange(),
+		height:200,
+		width:300
+	});
+	pan.render("hr_panel");
+});
+</script>
+</head>
+<body>
+	<table cellspacing="5" cellpadding="5"><tr><td><div id="hr_panel"></div></td></tr></table>
+</body>
+</html>

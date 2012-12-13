@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+  <class catalog="hibernatequickuse" name="com.herograve.hbn.autocreatecode.Topic" table="topic">
+    <id access="field" length="32" name="id" type="string">
+      <generator class="uuid"/>
+    </id>
+    <property name="info" type="string"/>
+    <many-to-one class="com.herograve.hbn.autocreatecode.Topictype" column="typeid" name="type"/>
+    <set cascade="all" name="types" table="hibernatequickuse.topic_topictype">
+      <key column="topic_id" not-null="true"/>
+      <many-to-many class="com.herograve.hbn.autocreatecode.Topictype" column="topictype_id"/>
+    </set>
+  </class>
+</hibernate-mapping>

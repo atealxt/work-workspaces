@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.m2.entity"  schema="m2">
+  <class name="Function" table="M2_FUNCTION">
+    <id name="id" column="ID" type="java.lang.Integer">
+      <generator class="native"></generator>
+    </id>
+    <property name="name" column="NAME" type="java.lang.String" length="50"/>
+    <property name="resource" column="RESOURCE" type="java.lang.String" length="20"/>
+    <property name="params" column="PARAMS" type="java.lang.String" length="30"/>
+    <property name="description" column="DESCRIPTION" type="java.lang.String" length="20"/>
+    <many-to-one name="funcTree" column="FUNC_TREE_ID" class="FuncTree" />
+     
+  </class>
+</hibernate-mapping>

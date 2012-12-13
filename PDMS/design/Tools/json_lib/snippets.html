@@ -1,0 +1,1010 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html><head>
+
+
+
+
+
+
+
+
+
+
+
+  
+    <title>Maven - Json-lib::Snippets</title>
+    <style type="text/css" media="all">
+      @import url("./css/maven-base2.css");
+      @import url("./css/maven-theme.css");
+      @import url("./css/site.css");
+      @import url("./css/SyntaxHighlighter.css");
+    </style>
+    <link rel="stylesheet" href="snippets_files/print.htm" type="text/css" media="print">
+        <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+        <script language="javaScript" src="snippets_files/shCore.js"></script>
+    <script language="javaScript" src="snippets_files/shBrushGroovy.js"></script>
+    <script language="javaScript" src="snippets_files/shBrushJava.js"></script>
+    <script language="javaScript" src="snippets_files/shBrushJScript.js"></script>
+    <script language="javaScript" src="snippets_files/shBrushRuby.js"></script>
+    <script language="javaScript" src="snippets_files/shBrushXml.js"></script>
+  </head><body class="composite">
+    <div id="banner">
+                  <a href="" id="bannerLeft">
+    
+                                            <img src="snippets_files/json-lib.png" alt="">
+    
+            </a>
+                    <div class="clear">
+        <hr>
+      </div>
+    </div>
+    <div id="breadcrumbs">
+          
+  
+
+  
+    
+  
+  
+    
+            <div class="xleft">
+        Last Published: 12/08/2008
+                      </div>
+            <div class="xright">      <a href="http://www.json.org/">Json.org</a>
+          |
+          <a href="http://maven.apache.org/maven2/">Maven 2</a>
+          
+  
+
+  
+    
+  
+  
+    
+  </div>
+      <div class="clear">
+        <hr>
+      </div>
+    </div>
+    <div id="leftColumn">
+      <div id="navcolumn">
+           
+  
+
+  
+    
+  
+  
+    
+                   <h5>Json-lib</h5>
+        <ul>
+              
+    <li class="none">
+              <a href="http://json-lib.sourceforge.net/index.html">Introduction</a>
+        </li>
+              
+    <li class="none">
+              <a href="https://sourceforge.net/project/showfiles.php?group_id=171425">Download</a>
+        </li>
+              
+    <li class="none">
+              <a href="http://json-lib.sourceforge.net/features.html">Feature List</a>
+        </li>
+              
+    <li class="none">
+              <a href="http://json-lib.sourceforge.net/usage.html">Getting Started</a>
+        </li>
+              
+    <li class="none">
+              <a href="http://json-lib.sourceforge.net/advanced.html">Advanced features</a>
+        </li>
+              
+    <li class="none">
+              <strong>Snippets</strong>
+        </li>
+              
+    <li class="none">
+              <a href="http://json-lib.sourceforge.net/groovy.html">Groovy integration</a>
+        </li>
+              
+    <li class="none">
+              <a href="http://json-lib.sourceforge.net/jruby.html">JRuby integration</a>
+        </li>
+              
+    <li class="none">
+              <a href="http://json-lib.sourceforge.net/package.html">Build instructions</a>
+        </li>
+              
+    <li class="none">
+              <a href="http://json-lib.sourceforge.net/users.html">Who is using it?</a>
+        </li>
+              
+    <li class="none">
+              <a href="http://json-lib.sourceforge.net/faq.html">FAQ</a>
+        </li>
+              
+    <li class="none">
+              <a href="http://json-lib.sourceforge.net/changes-report.html">Changes</a>
+        </li>
+              
+    <li class="none">
+              <a href="http://json-lib.sourceforge.net/apidocs/index.html">Javadoc (jdk13)</a>
+        </li>
+              
+    <li class="none">
+              <a href="http://json-lib.sourceforge.net/apidocs/jdk15/index.html">Javadoc (jdk15)</a>
+        </li>
+          </ul>
+          <h5>Project Documentation</h5>
+        <ul>
+              
+                
+              
+      
+            
+      
+            
+      
+            
+      
+            
+      
+            
+      
+            
+      
+            
+      
+              
+        <li class="collapsed">
+              <a href="http://json-lib.sourceforge.net/project-info.html">Project Information</a>
+              </li>
+              
+                
+              
+      
+            
+      
+            
+      
+            
+      
+            
+      
+            
+      
+            
+      
+            
+      
+              
+        <li class="collapsed">
+              <a href="http://json-lib.sourceforge.net/project-reports.html">Project Reports</a>
+              </li>
+          </ul>
+                                             
+                        
+                        
+            <a href="http://sourceforge.net/" title="Hosted on SourceForge.net" id="poweredBy">
+                            <img alt="Hosted on SourceForge.net" src="snippets_files/sflogo.png">
+            </a>
+                                
+                        
+                        
+            <a href="https://sourceforge.net/donate/index.php?group_id=171425" title="Donations" id="poweredBy">
+                            <img alt="Donations" src="snippets_files/project-support.jpg">
+            </a>
+                                
+                        
+                        
+            <a href="http://maven.apache.org/" title="Build with Maven 2" id="poweredBy">
+                            <img alt="Build with Maven 2" src="snippets_files/maven-feather.png">
+            </a>
+                                
+                        
+                        
+            <a href="http://javatoolbox.org/" title="Listed at JavaToolbox" id="poweredBy">
+                            <img alt="Listed at JavaToolbox" src="snippets_files/javatoolbox.png">
+            </a>
+                                
+                        
+                        
+            <a href="http://www.linuxlinks.com/" title="Listed at LinuxLinks" id="poweredBy">
+                            <img alt="Listed at LinuxLinks" src="snippets_files/newlogo2.gif">
+            </a>
+                               
+  
+
+  
+    
+  
+  
+    
+        </div>
+    </div>
+    <div id="bodyColumn">
+      <div id="contentBox">
+        <div class="section"><h2><a name="Snippets"></a>
+Snippets</h2>
+<a name="JavaJSON"></a>
+<div class="section"><h3><a name="From_Java_to_JSON"></a>
+From Java to JSON</h3>
+<ol type="1"><li><a href="#Creating%20a%20JSONObject%20from%20scratch">Creating a JSONObject from scratch</a>
+</li>
+<li><a href="#Creating%20a%20JSONObject%20from%20a%20JSON%20formatted%20string">Creating a JSONObject from a JSON formatted string</a>
+</li>
+<li><a href="#Creating%20a%20JSONObject%20from%20a%20Map">Creating a JSONObject from a Map</a>
+</li>
+<li><a href="#Creating%20a%20JSONObject%20from%20a%20JavaBean">Creating a JSONObject from a JavaBean</a>
+</li>
+<li><a href="#Creating%20a%20JSONArray%20from%20scratch">Creating a JSONArray from scratch</a>
+</li>
+<li><a href="#Creating%20a%20JSONArray%20from%20a%20JSON%20formatted%20string">Creating a JSONArray from a JSON formatted string</a>
+</li>
+<li><a href="#Creating%20a%20JSONArray%20from%20a%20Collection">Creating a JSONArray from a Collection</a>
+</li>
+<li><a href="#Creating%20a%20JSONArray%20from%20an%20array">Creating a JSONArray from an array</a>
+</li>
+<li><a href="#JavaScript%20functions">JavaScript functions</a>
+</li>
+<li><a href="#Exclude%20properties">Exclude properties</a>
+</li>
+<li><a href="#Exclude%20properties%20%28with%20filters%29">Exclude properties (with filters)</a>
+</li>
+</ol>
+</div>
+<a name="JSONJava"></a>
+<div class="section"><h3><a name="From_JSON_to_Java"></a>
+From JSON to Java</h3>
+<ol type="1"><li><a href="#JSONObject%20to%20DynaBean">JSONObject to DynaBean</a>
+</li>
+<li><a href="#JSONObject%20to%20JavaBean">JSONObject to JavaBean</a>
+</li>
+<li><a href="#JSONArray%20to%20List">JSONArray to List</a>
+</li>
+<li><a href="#JSONArray%20to%20array">JSONArray to array</a>
+</li>
+<li><a href="#JSONArray%20to%20array%20%28type%20conversion%29">JSONArray to array (type conversion)</a>
+</li>
+<li><a href="#JSONObject%20to%20JavaBean,%20exclude%20properties%20with%20filters">JSONObject to JavaBean, exclude properties with filters</a>
+</li>
+</ol>
+</div>
+<a name="JSONXML"></a>
+<div class="section"><h3><a name="From_JSON_to_XML"></a>
+From JSON to XML</h3>
+<ol type="1"><li><a href="#JSONObject%20to%20XML">JSONObject to XML</a>
+</li>
+<li><a href="#JSONObject%20to%20XML%20%28no%20type%20hints%29">JSONObject to XML (no type hints)</a>
+</li>
+<li><a href="#JSONObject%20to%20XML%20%28with%20json%20prefix%29">JSONObject to XML (with json prefix)</a>
+</li>
+<li><a href="#JSONObject%20to%20XML%20%28change%20node%20names%29">JSONObject to XML (change node names)</a>
+</li>
+<li><a href="#JSONArray%20to%20XML">JSONArray to XML</a>
+</li>
+<li><a href="#JSONArray%20to%20XML%20%28no%20type%20hints%29">JSONArray to XML (no type hints)</a>
+</li>
+<li><a href="#JSONArray%20to%20XML%20%28with%20json%20prefix%29">JSONArray to XML (with json prefix)</a>
+</li>
+<li><a href="#Flatten%20JSONArray%20into%20parent">Flatten JSONArray into parent</a>
+</li>
+</ol>
+</div>
+<a name="XMLJSON"></a>
+<div class="section"><h3><a name="From_XML_to_JSON"></a>
+From XML to JSON</h3>
+<ol type="1"><li><a href="#XML%20to%20JSONObject">XML to JSONObject</a>
+</li>
+</ol>
+</div>
+<a name="Groovy"></a>
+<div class="section"><h3><a name="Groovy_Support"></a>
+Groovy Support</h3>
+<ol type="1"><li><a href="#Using%20the%20JsonGroovyBuilder">Using the JsonGroovyBuilder</a>
+</li>
+</ol>
+</div>
+<a name="JRuby"></a>
+<div class="section"><h3><a name="JRuby_Support"></a>
+JRuby Support</h3>
+<ol type="1"><li><a href="#Creating%20a%20JSONObject">Creating a JSONObject</a>
+</li>
+<li><a href="#Append%20elements%20to%20JSONObject%20with%20%3C%3C%20%28array%29">Append elements to JSONObject with &lt;&lt; (array)</a>
+</li>
+<li><a href="#Append%20elements%20to%20JSONObject%20with%20%3C%3C%20%28hash%29">Append elements to JSONObject with &lt;&lt; (hash)</a>
+</li>
+</ol>
+</div>
+</div>
+<div class="section"><h2><a name="From_Java_to_JSON"></a>
+From Java to JSON</h2>
+<div class="section"><h3><a name="Creating_a_JSONObject_from_scratch"></a>
+Creating a JSONObject from scratch</h3>
+<div class="dp-highlighter nogutter"><div class="bar"></div><ol class="dp-j" start="1"><li class="alt"><span><span>JSONObject&nbsp;jsonObject&nbsp;=&nbsp;</span><span class="keyword">new</span><span>&nbsp;JSONObject()&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.element(&nbsp;<span class="string">"string"</span><span>,&nbsp;</span><span class="string">"JSON"</span><span>&nbsp;)&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.element(&nbsp;<span class="string">"integer"</span><span>,&nbsp;</span><span class="string">"1"</span><span>&nbsp;)&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.element(&nbsp;<span class="string">"double"</span><span>,&nbsp;</span><span class="string">"2.0"</span><span>&nbsp;)&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.element(&nbsp;<span class="string">"boolean"</span><span>,&nbsp;</span><span class="string">"true"</span><span>&nbsp;);&nbsp;&nbsp;</span></span></li><li class=""><span>assertEquals(&nbsp;<span class="string">"JSON"</span><span>,&nbsp;jsonObject.getString(</span><span class="string">"string"</span><span>)&nbsp;);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span></li><li class="alt"><span>assertEquals(&nbsp;<span class="number">1</span><span>,&nbsp;jsonObject.getInt(</span><span class="string">"integer"</span><span>)&nbsp;);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span></li><li class=""><span>assertEquals(&nbsp;<span class="number">2</span><span>.0d,&nbsp;jsonObject.getDouble(</span><span class="string">"double"</span><span>),&nbsp;0d&nbsp;);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span></li><li class="alt"><span>assertTrue(&nbsp;jsonObject.getBoolean(<span class="string">"boolean"</span><span>)&nbsp;);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span></li></ol></div><textarea style="display: none;" cols="80" rows="9" class="java:nocontrols:nogutter" name="srccode">JSONObject jsonObject = new JSONObject()
+                              .element( "string", "JSON" )
+                              .element( "integer", "1" )
+                              .element( "double", "2.0" )
+                              .element( "boolean", "true" );
+assertEquals( "JSON", jsonObject.getString("string") );      
+assertEquals( 1, jsonObject.getInt("integer") );      
+assertEquals( 2.0d, jsonObject.getDouble("double"), 0d );      
+assertTrue( jsonObject.getBoolean("boolean") );      
+</textarea>[<a href="#Snippets">Index</a>
+|<a href="#JavaJSON">From Java to JSON</a>
+]
+         </div>
+<div class="section"><h3><a name="Creating_a_JSONObject_from_a_JSON_formatted_string"></a>
+Creating a JSONObject from a JSON formatted string</h3>
+<div class="dp-highlighter nogutter"><div class="bar"></div><ol class="dp-j" start="1"><li class="alt"><span><span>String&nbsp;str&nbsp;=&nbsp;</span><span class="string">"{'string':'JSON',&nbsp;'integer':&nbsp;1,&nbsp;'double':&nbsp;2.0,&nbsp;'boolean':&nbsp;true}"</span><span>;&nbsp;&nbsp;</span></span></li><li class=""><span>JSONObject&nbsp;jsonObject&nbsp;=&nbsp;(JSONObject)&nbsp;JSONSerializer.toJSON(&nbsp;str&nbsp;);&nbsp;&nbsp;</span></li><li class="alt"><span>assertEquals(&nbsp;<span class="string">"JSON"</span><span>,&nbsp;jsonObject.getString(</span><span class="string">"string"</span><span>)&nbsp;);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span></li><li class=""><span>assertEquals(&nbsp;<span class="number">1</span><span>,&nbsp;jsonObject.getInt(</span><span class="string">"integer"</span><span>)&nbsp;);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span></li><li class="alt"><span>assertEquals(&nbsp;<span class="number">2</span><span>.0d,&nbsp;jsonObject.getDouble(</span><span class="string">"double"</span><span>),&nbsp;0d&nbsp;);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span></li><li class=""><span>assertTrue(&nbsp;jsonObject.getBoolean(<span class="string">"boolean"</span><span>)&nbsp;);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span></li></ol></div><textarea style="display: none;" cols="80" rows="6" class="java:nocontrols:nogutter" name="srccode">String str = "{'string':'JSON', 'integer': 1, 'double': 2.0, 'boolean': true}";
+JSONObject jsonObject = (JSONObject) JSONSerializer.toJSON( str );
+assertEquals( "JSON", jsonObject.getString("string") );      
+assertEquals( 1, jsonObject.getInt("integer") );      
+assertEquals( 2.0d, jsonObject.getDouble("double"), 0d );      
+assertTrue( jsonObject.getBoolean("boolean") );      
+</textarea>[<a href="#Snippets">Index</a>
+|<a href="#JavaJSON">From Java to JSON</a>
+]
+         </div>
+<div class="section"><h3><a name="Creating_a_JSONObject_from_a_Map"></a>
+Creating a JSONObject from a Map</h3>
+<div class="dp-highlighter nogutter"><div class="bar"></div><ol class="dp-j" start="1"><li class="alt"><span><span>Map&nbsp;map&nbsp;=&nbsp;</span><span class="keyword">new</span><span>&nbsp;HashMap();&nbsp;&nbsp;</span></span></li><li class=""><span>map.put(&nbsp;<span class="string">"string"</span><span>,&nbsp;</span><span class="string">"JSON"</span><span>&nbsp;);&nbsp;&nbsp;</span></span></li><li class="alt"><span>map.put(&nbsp;<span class="string">"integer"</span><span>,&nbsp;</span><span class="string">"1"</span><span>&nbsp;);&nbsp;&nbsp;</span></span></li><li class=""><span>map.put(&nbsp;<span class="string">"double"</span><span>,&nbsp;</span><span class="string">"2.0"</span><span>&nbsp;);&nbsp;&nbsp;</span></span></li><li class="alt"><span>map.put(&nbsp;<span class="string">"boolean"</span><span>,&nbsp;</span><span class="string">"true"</span><span>&nbsp;);&nbsp;&nbsp;</span></span></li><li class=""><span>JSONObject&nbsp;jsonObject&nbsp;=&nbsp;(JSONObject)&nbsp;JSONSerializer.toJSON(&nbsp;map&nbsp;);&nbsp;&nbsp;</span></li><li class="alt"><span>assertEquals(&nbsp;<span class="string">"JSON"</span><span>,&nbsp;jsonObject.getString(</span><span class="string">"string"</span><span>)&nbsp;);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span></li><li class=""><span>assertEquals(&nbsp;<span class="number">1</span><span>,&nbsp;jsonObject.getInt(</span><span class="string">"integer"</span><span>)&nbsp;);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span></li><li class="alt"><span>assertEquals(&nbsp;<span class="number">2</span><span>.0d,&nbsp;jsonObject.getDouble(</span><span class="string">"double"</span><span>),&nbsp;0d&nbsp;);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span></li><li class=""><span>assertTrue(&nbsp;jsonObject.getBoolean(<span class="string">"boolean"</span><span>)&nbsp;);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span></li></ol></div><textarea style="display: none;" cols="80" rows="10" class="java:nocontrols:nogutter" name="srccode">Map map = new HashMap();
+map.put( "string", "JSON" );
+map.put( "integer", "1" );
+map.put( "double", "2.0" );
+map.put( "boolean", "true" );
+JSONObject jsonObject = (JSONObject) JSONSerializer.toJSON( map );
+assertEquals( "JSON", jsonObject.getString("string") );      
+assertEquals( 1, jsonObject.getInt("integer") );      
+assertEquals( 2.0d, jsonObject.getDouble("double"), 0d );      
+assertTrue( jsonObject.getBoolean("boolean") );      
+</textarea>[<a href="#Snippets">Index</a>
+|<a href="#JavaJSON">From Java to JSON</a>
+]
+         </div>
+<div class="section"><h3><a name="Creating_a_JSONObject_from_a_JavaBean"></a>
+Creating a JSONObject from a JavaBean</h3>
+<div class="dp-highlighter nogutter"><div class="bar"></div><ol class="dp-j" start="1"><li class="alt"><span><span class="keyword">public</span><span>&nbsp;</span><span class="keyword">class</span><span>&nbsp;MyJavaBean&nbsp;{&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;<span class="keyword">private</span><span>&nbsp;String&nbsp;string;&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;<span class="keyword">private</span><span>&nbsp;</span><span class="keyword">int</span><span>&nbsp;integer;&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;<span class="keyword">private</span><span>&nbsp;</span><span class="keyword">double</span><span>&nbsp;dooble;&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;<span class="keyword">private</span><span>&nbsp;</span><span class="keyword">boolean</span><span>&nbsp;bool;&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;</span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;<span class="comment">//&nbsp;getters&nbsp;&amp;&nbsp;setters</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span>}&nbsp;&nbsp;</span></li><li class="alt"><span>&nbsp;&nbsp;</span></li><li class=""><span>MyJavaBean&nbsp;bean&nbsp;=&nbsp;<span class="keyword">new</span><span>&nbsp;MyJavaBean();&nbsp;&nbsp;</span></span></li><li class="alt"><span>bean.setString(&nbsp;<span class="string">"JSON"</span><span>&nbsp;);&nbsp;&nbsp;</span></span></li><li class=""><span>bean.setInteger(&nbsp;<span class="number">1</span><span>&nbsp;);&nbsp;&nbsp;</span></span></li><li class="alt"><span>bean.setDooble(&nbsp;<span class="number">2</span><span>.0d&nbsp;);&nbsp;&nbsp;</span></span></li><li class=""><span>bean.setBool(&nbsp;<span class="keyword">true</span><span>&nbsp;);&nbsp;&nbsp;</span></span></li><li class="alt"><span>JSONObject&nbsp;jsonObject&nbsp;=&nbsp;(JSONObject)&nbsp;JSONSerializer.toJSON(&nbsp;bean&nbsp;);&nbsp;&nbsp;</span></li><li class=""><span>assertEquals(&nbsp;<span class="string">"JSON"</span><span>,&nbsp;jsonObject.getString(</span><span class="string">"string"</span><span>)&nbsp;);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span></li><li class="alt"><span>assertEquals(&nbsp;<span class="number">1</span><span>,&nbsp;jsonObject.getInt(</span><span class="string">"integer"</span><span>)&nbsp;);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span></li><li class=""><span>assertEquals(&nbsp;<span class="number">2</span><span>.0d,&nbsp;jsonObject.getDouble(</span><span class="string">"dooble"</span><span>),&nbsp;0d&nbsp;);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span></li><li class="alt"><span>assertTrue(&nbsp;jsonObject.getBoolean(<span class="string">"bool"</span><span>)&nbsp;);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span></li></ol></div><textarea style="display: none;" cols="80" rows="20" class="java:nocontrols:nogutter" name="srccode">public class MyJavaBean {
+   private String string;
+   private int integer;
+   private double dooble;
+   private boolean bool;
+
+   // getters &amp; setters
+}
+
+MyJavaBean bean = new MyJavaBean();
+bean.setString( "JSON" );
+bean.setInteger( 1 );
+bean.setDooble( 2.0d );
+bean.setBool( true );
+JSONObject jsonObject = (JSONObject) JSONSerializer.toJSON( bean );
+assertEquals( "JSON", jsonObject.getString("string") );      
+assertEquals( 1, jsonObject.getInt("integer") );      
+assertEquals( 2.0d, jsonObject.getDouble("dooble"), 0d );      
+assertTrue( jsonObject.getBoolean("bool") );      
+</textarea>[<a href="#Snippets">Index</a>
+|<a href="#JavaJSON">From Java to JSON</a>
+]
+         </div>
+<div class="section"><h3><a name="Creating_a_JSONArray_from_scratch"></a>
+Creating a JSONArray from scratch</h3>
+<div class="dp-highlighter nogutter"><div class="bar"></div><ol class="dp-j" start="1"><li class="alt"><span><span>JSONArray&nbsp;jsonArray&nbsp;=&nbsp;</span><span class="keyword">new</span><span>&nbsp;JSONArray()&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.element(&nbsp;<span class="string">"JSON"</span><span>&nbsp;)&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.element(&nbsp;<span class="string">"1"</span><span>&nbsp;)&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.element(&nbsp;<span class="string">"2.0"</span><span>&nbsp;)&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.element(&nbsp;<span class="string">"true"</span><span>&nbsp;);&nbsp;&nbsp;</span></span></li><li class=""><span>assertEquals(&nbsp;<span class="string">"JSON"</span><span>,&nbsp;jsonArray.getString(</span><span class="number">0</span><span>)&nbsp;);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span></li><li class="alt"><span>assertEquals(&nbsp;<span class="number">1</span><span>,&nbsp;jsonArray.getInt(</span><span class="number">1</span><span>)&nbsp;);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span></li><li class=""><span>assertEquals(&nbsp;<span class="number">2</span><span>.0d,&nbsp;jsonArray.getDouble(</span><span class="number">2</span><span>),&nbsp;0d&nbsp;);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span></li><li class="alt"><span>assertTrue(&nbsp;jsonArray.getBoolean(<span class="number">3</span><span>)&nbsp;);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span></li></ol></div><textarea style="display: none;" cols="80" rows="9" class="java:nocontrols:nogutter" name="srccode">JSONArray jsonArray = new JSONArray()
+                              .element( "JSON" )
+                              .element( "1" )
+                              .element( "2.0" )
+                              .element( "true" );
+assertEquals( "JSON", jsonArray.getString(0) );      
+assertEquals( 1, jsonArray.getInt(1) );      
+assertEquals( 2.0d, jsonArray.getDouble(2), 0d );      
+assertTrue( jsonArray.getBoolean(3) );      
+</textarea>[<a href="#Snippets">Index</a>
+|<a href="#JavaJSON">From Java to JSON</a>
+]
+         </div>
+<div class="section"><h3><a name="Creating_a_JSONArray_from_a_JSON_formatted_string"></a>
+Creating a JSONArray from a JSON formatted string</h3>
+<div class="dp-highlighter nogutter"><div class="bar"></div><ol class="dp-j" start="1"><li class="alt"><span><span>String&nbsp;str&nbsp;=&nbsp;</span><span class="string">"['JSON',&nbsp;1,&nbsp;2.0,&nbsp;true]"</span><span>;&nbsp;&nbsp;</span></span></li><li class=""><span>JSONArray&nbsp;jsonArray&nbsp;=&nbsp;(JSONArray)&nbsp;JSONSerializer.toJSON(&nbsp;str&nbsp;);&nbsp;&nbsp;</span></li><li class="alt"><span>assertEquals(&nbsp;<span class="string">"JSON"</span><span>,&nbsp;jsonArray.getString(</span><span class="number">0</span><span>)&nbsp;);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span></li><li class=""><span>assertEquals(&nbsp;<span class="number">1</span><span>,&nbsp;jsonArray.getInt(</span><span class="number">1</span><span>)&nbsp;);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span></li><li class="alt"><span>assertEquals(&nbsp;<span class="number">2</span><span>.0d,&nbsp;jsonArray.getDouble(</span><span class="number">2</span><span>),&nbsp;0d&nbsp;);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span></li><li class=""><span>assertTrue(&nbsp;jsonArray.getBoolean(<span class="number">3</span><span>)&nbsp;);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span></li></ol></div><textarea style="display: none;" cols="80" rows="6" class="java:nocontrols:nogutter" name="srccode">String str = "['JSON', 1, 2.0, true]";
+JSONArray jsonArray = (JSONArray) JSONSerializer.toJSON( str );
+assertEquals( "JSON", jsonArray.getString(0) );      
+assertEquals( 1, jsonArray.getInt(1) );      
+assertEquals( 2.0d, jsonArray.getDouble(2), 0d );      
+assertTrue( jsonArray.getBoolean(3) );      
+</textarea>[<a href="#Snippets">Index</a>
+|<a href="#JavaJSON">From Java to JSON</a>
+]
+         </div>
+<div class="section"><h3><a name="Creating_a_JSONArray_from_a_Collection"></a>
+Creating a JSONArray from a Collection</h3>
+<div class="dp-highlighter nogutter"><div class="bar"></div><ol class="dp-j" start="1"><li class="alt"><span><span>List&nbsp;list&nbsp;=&nbsp;</span><span class="keyword">new</span><span>&nbsp;ArrayList();&nbsp;&nbsp;</span></span></li><li class=""><span>list.add(&nbsp;<span class="string">"JSON"</span><span>&nbsp;);&nbsp;&nbsp;</span></span></li><li class="alt"><span>list.add(&nbsp;<span class="string">"1"</span><span>&nbsp;);&nbsp;&nbsp;</span></span></li><li class=""><span>list.add(&nbsp;<span class="string">"2.0"</span><span>&nbsp;);&nbsp;&nbsp;</span></span></li><li class="alt"><span>list.add(&nbsp;<span class="string">"true"</span><span>&nbsp;);&nbsp;&nbsp;</span></span></li><li class=""><span>JSONArray&nbsp;jsonArray&nbsp;=&nbsp;(JSONArray)&nbsp;JSONSerializer.toJSON(&nbsp;list&nbsp;);&nbsp;&nbsp;</span></li><li class="alt"><span>assertEquals(&nbsp;<span class="string">"JSON"</span><span>,&nbsp;jsonArray.getString(</span><span class="number">0</span><span>)&nbsp;);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span></li><li class=""><span>assertEquals(&nbsp;<span class="number">1</span><span>,&nbsp;jsonArray.getInt(</span><span class="number">1</span><span>)&nbsp;);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span></li><li class="alt"><span>assertEquals(&nbsp;<span class="number">2</span><span>.0d,&nbsp;jsonArray.getDouble(</span><span class="number">2</span><span>),&nbsp;0d&nbsp;);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span></li><li class=""><span>assertTrue(&nbsp;jsonArray.getBoolean(<span class="number">3</span><span>)&nbsp;);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span></li></ol></div><textarea style="display: none;" cols="80" rows="9" class="java:nocontrols:nogutter" name="srccode">List list = new ArrayList();
+list.add( "JSON" );
+list.add( "1" );
+list.add( "2.0" );
+list.add( "true" );
+JSONArray jsonArray = (JSONArray) JSONSerializer.toJSON( list );
+assertEquals( "JSON", jsonArray.getString(0) );      
+assertEquals( 1, jsonArray.getInt(1) );      
+assertEquals( 2.0d, jsonArray.getDouble(2), 0d );      
+assertTrue( jsonArray.getBoolean(3) );      
+</textarea>[<a href="#Snippets">Index</a>
+|<a href="#JavaJSON">From Java to JSON</a>
+]
+         </div>
+<div class="section"><h3><a name="Creating_a_JSONArray_from_an_array"></a>
+Creating a JSONArray from an array</h3>
+<div class="dp-highlighter nogutter"><div class="bar"></div><ol class="dp-j" start="1"><li class="alt"><span><span>Object[]&nbsp;array&nbsp;=&nbsp;</span><span class="keyword">new</span><span>&nbsp;Object[]{&nbsp;</span><span class="string">"JSON"</span><span>,&nbsp;</span><span class="string">"1"</span><span>,&nbsp;</span><span class="string">"2.0"</span><span>,&nbsp;</span><span class="string">"true"</span><span>&nbsp;};&nbsp;&nbsp;</span></span></li><li class=""><span>JSONArray&nbsp;jsonArray&nbsp;=&nbsp;(JSONArray)&nbsp;JSONSerializer.toJSON(&nbsp;array&nbsp;);&nbsp;&nbsp;</span></li><li class="alt"><span>assertEquals(&nbsp;<span class="string">"JSON"</span><span>,&nbsp;jsonArray.getString(</span><span class="number">0</span><span>)&nbsp;);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span></li><li class=""><span>assertEquals(&nbsp;<span class="number">1</span><span>,&nbsp;jsonArray.getInt(</span><span class="number">1</span><span>)&nbsp;);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span></li><li class="alt"><span>assertEquals(&nbsp;<span class="number">2</span><span>.0d,&nbsp;jsonArray.getDouble(</span><span class="number">2</span><span>),&nbsp;0d&nbsp;);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span></li><li class=""><span>assertTrue(&nbsp;jsonArray.getBoolean(<span class="number">3</span><span>)&nbsp;);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span></li></ol></div><textarea style="display: none;" cols="80" rows="6" class="java:nocontrols:nogutter" name="srccode">Object[] array = new Object[]{ "JSON", "1", "2.0", "true" };
+JSONArray jsonArray = (JSONArray) JSONSerializer.toJSON( array );
+assertEquals( "JSON", jsonArray.getString(0) );      
+assertEquals( 1, jsonArray.getInt(1) );      
+assertEquals( 2.0d, jsonArray.getDouble(2), 0d );      
+assertTrue( jsonArray.getBoolean(3) );      
+</textarea>[<a href="#Snippets">Index</a>
+|<a href="#JavaJSON">From Java to JSON</a>
+]
+         </div>
+<div class="section"><h3><a name="JavaScript_functions"></a>
+JavaScript functions</h3>
+<div class="dp-highlighter nogutter"><div class="bar"></div><ol class="dp-j" start="1"><li class="alt"><span><span>String&nbsp;str&nbsp;=&nbsp;</span><span class="string">"{'func':&nbsp;function(&nbsp;param&nbsp;){&nbsp;doSomethingWithParam(param);&nbsp;}}"</span><span>;&nbsp;&nbsp;</span></span></li><li class=""><span>JSONObject&nbsp;jsonObject&nbsp;=&nbsp;(JSONObject)&nbsp;JSONSerializer.toJSON(&nbsp;str&nbsp;);&nbsp;&nbsp;</span></li><li class="alt"><span>JSONFunction&nbsp;func&nbsp;=&nbsp;(JSONFunction)&nbsp;jsonObject.get(<span class="string">"func"</span><span>);&nbsp;&nbsp;</span></span></li><li class=""><span>ArrayAssertions.assertEquals(&nbsp;<span class="keyword">new</span><span>&nbsp;String[]{</span><span class="string">"param"</span><span>},&nbsp;func.getParams()&nbsp;);&nbsp;&nbsp;</span></span></li><li class="alt"><span>assertEquals(&nbsp;<span class="string">"doSomethingWithParam(param);"</span><span>,&nbsp;func.getText()&nbsp;);&nbsp;&nbsp;</span></span></li></ol></div><textarea style="display: none;" cols="80" rows="5" class="java:nocontrols:nogutter" name="srccode">String str = "{'func': function( param ){ doSomethingWithParam(param); }}";
+JSONObject jsonObject = (JSONObject) JSONSerializer.toJSON( str );
+JSONFunction func = (JSONFunction) jsonObject.get("func");
+ArrayAssertions.assertEquals( new String[]{"param"}, func.getParams() );
+assertEquals( "doSomethingWithParam(param);", func.getText() );
+</textarea>[<a href="#Snippets">Index</a>
+|<a href="#JavaJSON">From Java to JSON</a>
+]
+         </div>
+<div class="section"><h3><a name="Exclude_properties"></a>
+Exclude properties</h3>
+<div class="dp-highlighter nogutter"><div class="bar"></div><ol class="dp-j" start="1"><li class="alt"><span><span>String&nbsp;str&nbsp;=&nbsp;</span><span class="string">"{'string':'JSON',&nbsp;'integer':&nbsp;1,&nbsp;'double':&nbsp;2.0,&nbsp;'boolean':&nbsp;true}"</span><span>;&nbsp;&nbsp;</span></span></li><li class=""><span>JsonConfig&nbsp;jsonConfig&nbsp;=&nbsp;<span class="keyword">new</span><span>&nbsp;JsonConfig();&nbsp;&nbsp;</span></span></li><li class="alt"><span>jsonConfig.setExcludes(&nbsp;<span class="keyword">new</span><span>&nbsp;String[]{&nbsp;</span><span class="string">"double"</span><span>,&nbsp;</span><span class="string">"boolean"</span><span>&nbsp;}&nbsp;);&nbsp;&nbsp;</span></span></li><li class=""><span>JSONObject&nbsp;jsonObject&nbsp;=&nbsp;(JSONObject)&nbsp;JSONSerializer.toJSON(&nbsp;str,&nbsp;jsonConfig&nbsp;);&nbsp;&nbsp;</span></li><li class="alt"><span>assertEquals(&nbsp;<span class="string">"JSON"</span><span>,&nbsp;jsonObject.getString(</span><span class="string">"string"</span><span>)&nbsp;);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span></li><li class=""><span>assertEquals(&nbsp;<span class="number">1</span><span>,&nbsp;jsonObject.getInt(</span><span class="string">"integer"</span><span>)&nbsp;);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span></li><li class="alt"><span>assertFalse(&nbsp;jsonObject.has(<span class="string">"double"</span><span>)&nbsp;);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span></li><li class=""><span>assertFalse(&nbsp;jsonObject.has(<span class="string">"boolean"</span><span>)&nbsp;);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span></li></ol></div><textarea style="display: none;" cols="80" rows="8" class="java:nocontrols:nogutter" name="srccode">String str = "{'string':'JSON', 'integer': 1, 'double': 2.0, 'boolean': true}";
+JsonConfig jsonConfig = new JsonConfig();
+jsonConfig.setExcludes( new String[]{ "double", "boolean" } );
+JSONObject jsonObject = (JSONObject) JSONSerializer.toJSON( str, jsonConfig );
+assertEquals( "JSON", jsonObject.getString("string") );      
+assertEquals( 1, jsonObject.getInt("integer") );      
+assertFalse( jsonObject.has("double") );   
+assertFalse( jsonObject.has("boolean") );   
+</textarea>[<a href="#Snippets">Index</a>
+|<a href="#JavaJSON">From Java to JSON</a>
+]
+         </div>
+<div class="section"><h3><a name="Exclude_properties_with_filters"></a>
+Exclude properties (with filters)</h3>
+<div class="dp-highlighter nogutter"><div class="bar"></div><ol class="dp-j" start="1"><li class="alt"><span><span>String&nbsp;str&nbsp;=&nbsp;</span><span class="string">"{'string':'JSON',&nbsp;'integer':&nbsp;1,&nbsp;'double':&nbsp;2.0,&nbsp;'boolean':&nbsp;true}"</span><span>;&nbsp;&nbsp;</span></span></li><li class=""><span>JsonConfig&nbsp;jsonConfig&nbsp;=&nbsp;<span class="keyword">new</span><span>&nbsp;JsonConfig();&nbsp;&nbsp;</span></span></li><li class="alt"><span>jsonConfig.setJsonPropertyFilter(&nbsp;<span class="keyword">new</span><span>&nbsp;PropertyFilter(){&nbsp;&nbsp;&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;<span class="keyword">public</span><span>&nbsp;</span><span class="keyword">boolean</span><span>&nbsp;apply(&nbsp;Object&nbsp;source,&nbsp;String&nbsp;name,&nbsp;Object&nbsp;value&nbsp;)&nbsp;{&nbsp;&nbsp;&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">if</span><span>(&nbsp;</span><span class="string">"double"</span><span>.equals(value)&nbsp;||&nbsp;</span><span class="string">"boolean"</span><span>.equals(value)&nbsp;){&nbsp;&nbsp;&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">return</span><span>&nbsp;</span><span class="keyword">true</span><span>;&nbsp;&nbsp;&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;&nbsp;&nbsp;</span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">return</span><span>&nbsp;</span><span class="keyword">false</span><span>;&nbsp;&nbsp;&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;&nbsp;&nbsp;</span></li><li class=""><span>});&nbsp;&nbsp;&nbsp;&nbsp;</span></li><li class="alt"><span>JSONObject&nbsp;jsonObject&nbsp;=&nbsp;(JSONObject)&nbsp;JSONSerializer.toJSON(&nbsp;str,&nbsp;jsonConfig&nbsp;);&nbsp;&nbsp;</span></li><li class=""><span>assertEquals(&nbsp;<span class="string">"JSON"</span><span>,&nbsp;jsonObject.getString(</span><span class="string">"string"</span><span>)&nbsp;);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span></li><li class="alt"><span>assertEquals(&nbsp;<span class="number">1</span><span>,&nbsp;jsonObject.getInt(</span><span class="string">"integer"</span><span>)&nbsp;);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span></li><li class=""><span>assertFalse(&nbsp;jsonObject.has(<span class="string">"double"</span><span>)&nbsp;);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span></li><li class="alt"><span>assertFalse(&nbsp;jsonObject.has(<span class="string">"boolean"</span><span>)&nbsp;);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span></li></ol></div><textarea style="display: none;" cols="80" rows="15" class="java:nocontrols:nogutter" name="srccode">String str = "{'string':'JSON', 'integer': 1, 'double': 2.0, 'boolean': true}";
+JsonConfig jsonConfig = new JsonConfig();
+jsonConfig.setJsonPropertyFilter( new PropertyFilter(){  
+   public boolean apply( Object source, String name, Object value ) {  
+      if( "double".equals(value) || "boolean".equals(value) ){  
+         return true;  
+      }  
+      return false;  
+   }  
+});  
+JSONObject jsonObject = (JSONObject) JSONSerializer.toJSON( str, jsonConfig );
+assertEquals( "JSON", jsonObject.getString("string") );      
+assertEquals( 1, jsonObject.getInt("integer") );      
+assertFalse( jsonObject.has("double") );   
+assertFalse( jsonObject.has("boolean") );   
+</textarea>[<a href="#Snippets">Index</a>
+|<a href="#JavaJSON">From Java to JSON</a>
+]
+         </div>
+</div>
+<div class="section"><h2><a name="From_JSON_to_Java"></a>
+From JSON to Java</h2>
+<div class="section"><h3><a name="JSONObject_to_DynaBean"></a>
+JSONObject to DynaBean</h3>
+<div class="dp-highlighter nogutter"><div class="bar"></div><ol class="dp-j" start="1"><li class="alt"><span><span>String&nbsp;str&nbsp;=&nbsp;</span><span class="string">"{'string':'JSON',&nbsp;'integer':&nbsp;1,&nbsp;'double':&nbsp;2.0,&nbsp;'boolean':&nbsp;true}"</span><span>;&nbsp;&nbsp;</span></span></li><li class=""><span>JSONObject&nbsp;jsonObject&nbsp;=&nbsp;(JSONObject)&nbsp;JSONSerializer.toJSON(&nbsp;str&nbsp;);&nbsp;&nbsp;</span></li><li class="alt"><span>DynaBean&nbsp;bean&nbsp;=&nbsp;(DynaBean)&nbsp;JSONSerializer.toJava(&nbsp;jsonObject&nbsp;);&nbsp;&nbsp;</span></li><li class=""><span>assertEquals(&nbsp;<span class="string">"JSON"</span><span>,&nbsp;bean.get(</span><span class="string">"string"</span><span>)&nbsp;);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span></li><li class="alt"><span>assertEquals(&nbsp;<span class="keyword">new</span><span>&nbsp;Integer(</span><span class="number">1</span><span>),&nbsp;bean.get(</span><span class="string">"integer"</span><span>)&nbsp;);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span></li><li class=""><span>assertEquals(&nbsp;<span class="keyword">new</span><span>&nbsp;Double(</span><span class="number">2.0</span><span>),&nbsp;bean.get(</span><span class="string">"double"</span><span>)&nbsp;);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span></li><li class="alt"><span>assertEquals(&nbsp;Boolean.TRUE,&nbsp;bean.get(<span class="string">"boolean"</span><span>)&nbsp;);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span></li></ol></div><textarea style="display: none;" cols="80" rows="7" class="java:nocontrols:nogutter" name="srccode">String str = "{'string':'JSON', 'integer': 1, 'double': 2.0, 'boolean': true}";
+JSONObject jsonObject = (JSONObject) JSONSerializer.toJSON( str );
+DynaBean bean = (DynaBean) JSONSerializer.toJava( jsonObject );
+assertEquals( "JSON", bean.get("string") );      
+assertEquals( new Integer(1), bean.get("integer") );      
+assertEquals( new Double(2.0), bean.get("double") );      
+assertEquals( Boolean.TRUE, bean.get("boolean") );   
+</textarea>[<a href="#Snippets">Index</a>
+|<a href="#JSONJava">From JSON to Java</a>
+]
+         </div>
+<div class="section"><h3><a name="JSONObject_to_JavaBean"></a>
+JSONObject to JavaBean</h3>
+<div class="dp-highlighter nogutter"><div class="bar"></div><ol class="dp-j" start="1"><li class="alt"><span><span class="keyword">public</span><span>&nbsp;</span><span class="keyword">class</span><span>&nbsp;MyJavaBean&nbsp;{&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;<span class="keyword">private</span><span>&nbsp;String&nbsp;string;&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;<span class="keyword">private</span><span>&nbsp;</span><span class="keyword">int</span><span>&nbsp;integer;&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;<span class="keyword">private</span><span>&nbsp;</span><span class="keyword">double</span><span>&nbsp;dooble;&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;<span class="keyword">private</span><span>&nbsp;</span><span class="keyword">boolean</span><span>&nbsp;bool;&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;</span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;<span class="comment">//&nbsp;getters&nbsp;&amp;&nbsp;setters</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span>}&nbsp;&nbsp;</span></li><li class="alt"><span>&nbsp;&nbsp;</span></li><li class=""><span>MyJavaBean&nbsp;bean&nbsp;=&nbsp;<span class="keyword">new</span><span>&nbsp;MyJavaBean();&nbsp;&nbsp;</span></span></li><li class="alt"><span>bean.setString(&nbsp;<span class="string">"JSON"</span><span>&nbsp;);&nbsp;&nbsp;</span></span></li><li class=""><span>bean.setInteger(&nbsp;<span class="number">1</span><span>&nbsp;);&nbsp;&nbsp;</span></span></li><li class="alt"><span>bean.setDooble(&nbsp;<span class="number">2</span><span>.0d&nbsp;);&nbsp;&nbsp;</span></span></li><li class=""><span>bean.setBool(&nbsp;<span class="keyword">true</span><span>&nbsp;);&nbsp;&nbsp;</span></span></li><li class="alt"><span>JSONObject&nbsp;jsonObject&nbsp;=&nbsp;(JSONObject)&nbsp;JSONSerializer.toJSON(&nbsp;bean&nbsp;);&nbsp;&nbsp;</span></li><li class=""><span>JsonConfig&nbsp;jsonConfig&nbsp;=&nbsp;<span class="keyword">new</span><span>&nbsp;JsonConfig();&nbsp;&nbsp;</span></span></li><li class="alt"><span>jsonConfig.setRootClass(&nbsp;MyJavaBean.<span class="keyword">class</span><span>&nbsp;);&nbsp;&nbsp;</span></span></li><li class=""><span>MyJavaBean&nbsp;bean2&nbsp;=&nbsp;(MyJavaBean)&nbsp;JSONSerializer.toJava(&nbsp;jsonObject,&nbsp;jsonConfig&nbsp;);&nbsp;&nbsp;</span></li><li class="alt"><span>assertNotNull(&nbsp;bean2&nbsp;);&nbsp;&nbsp;</span></li><li class=""><span>assertEquals(&nbsp;<span class="string">"JSON"</span><span>,&nbsp;bean2.getString()&nbsp;);&nbsp;&nbsp;</span></span></li><li class="alt"><span>assertEquals(&nbsp;<span class="number">1</span><span>,&nbsp;bean2.getInteger()&nbsp;);&nbsp;&nbsp;</span></span></li><li class=""><span>assertEquals(&nbsp;<span class="number">2</span><span>.0d,&nbsp;bean2.getDooble(),&nbsp;0d&nbsp;);&nbsp;&nbsp;</span></span></li><li class="alt"><span>assertTrue(&nbsp;bean2.getBool()&nbsp;);&nbsp;&nbsp;</span></li></ol></div><textarea style="display: none;" cols="80" rows="25" class="java:nocontrols:nogutter" name="srccode">public class MyJavaBean {
+   private String string;
+   private int integer;
+   private double dooble;
+   private boolean bool;
+
+   // getters &amp; setters
+}
+
+MyJavaBean bean = new MyJavaBean();
+bean.setString( "JSON" );
+bean.setInteger( 1 );
+bean.setDooble( 2.0d );
+bean.setBool( true );
+JSONObject jsonObject = (JSONObject) JSONSerializer.toJSON( bean );
+JsonConfig jsonConfig = new JsonConfig();
+jsonConfig.setRootClass( MyJavaBean.class );
+MyJavaBean bean2 = (MyJavaBean) JSONSerializer.toJava( jsonObject, jsonConfig );
+assertNotNull( bean2 );
+assertEquals( "JSON", bean2.getString() );
+assertEquals( 1, bean2.getInteger() );
+assertEquals( 2.0d, bean2.getDooble(), 0d );
+assertTrue( bean2.getBool() );
+</textarea>[<a href="#Snippets">Index</a>
+|<a href="#JSONJava">From JSON to Java</a>
+]
+         </div>
+<div class="section"><h3><a name="JSONArray_to_List"></a>
+JSONArray to List</h3>
+<div class="dp-highlighter nogutter"><div class="bar"></div><ol class="dp-j" start="1"><li class="alt"><span><span>List&nbsp;input&nbsp;=&nbsp;</span><span class="keyword">new</span><span>&nbsp;ArrayList();&nbsp;&nbsp;</span></span></li><li class=""><span>input.add(&nbsp;<span class="string">"JSON"</span><span>&nbsp;);&nbsp;&nbsp;</span></span></li><li class="alt"><span>input.add(&nbsp;<span class="string">"1"</span><span>&nbsp;);&nbsp;&nbsp;</span></span></li><li class=""><span>input.add(&nbsp;<span class="string">"2.0"</span><span>&nbsp;);&nbsp;&nbsp;</span></span></li><li class="alt"><span>input.add(&nbsp;<span class="string">"true"</span><span>&nbsp;);&nbsp;&nbsp;</span></span></li><li class=""><span>JSONArray&nbsp;jsonArray&nbsp;=&nbsp;(JSONArray)&nbsp;JSONSerializer.toJSON(&nbsp;input&nbsp;);&nbsp;&nbsp;</span></li><li class="alt"><span>List&nbsp;output&nbsp;=&nbsp;(List)&nbsp;JSONSerializer.toJava(&nbsp;jsonArray&nbsp;);&nbsp;&nbsp;</span></li><li class=""><span>ArrayAssertions.assertEquals(&nbsp;input,&nbsp;output&nbsp;);&nbsp;&nbsp;</span></li></ol></div><textarea style="display: none;" cols="80" rows="5" class="java:nocontrols:nogutter" name="srccode">List input = new ArrayList();
+input.add( "JSON" );
+input.add( "1" );
+input.add( "2.0" );
+input.add( "true" );
+JSONArray jsonArray = (JSONArray) JSONSerializer.toJSON( input );
+List output = (List) JSONSerializer.toJava( jsonArray );
+ArrayAssertions.assertEquals( input, output );
+</textarea>[<a href="#Snippets">Index</a>
+|<a href="#JSONJava">From JSON to Java</a>
+]
+         </div>
+<div class="section"><h3><a name="JSONArray_to_array"></a>
+JSONArray to array</h3>
+<div class="dp-highlighter nogutter"><div class="bar"></div><ol class="dp-j" start="1"><li class="alt"><span><span>List&nbsp;input&nbsp;=&nbsp;</span><span class="keyword">new</span><span>&nbsp;ArrayList();&nbsp;&nbsp;</span></span></li><li class=""><span>input.add(&nbsp;<span class="string">"JSON"</span><span>&nbsp;);&nbsp;&nbsp;</span></span></li><li class="alt"><span>input.add(&nbsp;<span class="string">"1"</span><span>&nbsp;);&nbsp;&nbsp;</span></span></li><li class=""><span>input.add(&nbsp;<span class="string">"2.0"</span><span>&nbsp;);&nbsp;&nbsp;</span></span></li><li class="alt"><span>input.add(&nbsp;<span class="string">"true"</span><span>&nbsp;);&nbsp;&nbsp;</span></span></li><li class=""><span>JSONArray&nbsp;jsonArray&nbsp;=&nbsp;(JSONArray)&nbsp;JSONSerializer.toJSON(&nbsp;input&nbsp;);&nbsp;&nbsp;</span></li><li class="alt"><span>JsonConfig&nbsp;jsonConfig&nbsp;=&nbsp;<span class="keyword">new</span><span>&nbsp;JsonConfig();&nbsp;&nbsp;</span></span></li><li class=""><span>jsonConfig.setArrayMode(&nbsp;JsonConfig.MODE_OBJECT_ARRAY&nbsp;);&nbsp;&nbsp;</span></li><li class="alt"><span>Object[]&nbsp;output&nbsp;=&nbsp;(Object[])&nbsp;JSONSerializer.toJava(&nbsp;jsonArray,&nbsp;jsonConfig&nbsp;);&nbsp;&nbsp;</span></li><li class=""><span>Object[]&nbsp;expected&nbsp;=&nbsp;<span class="keyword">new</span><span>&nbsp;Object[]{&nbsp;</span><span class="string">"JSON"</span><span>,&nbsp;</span><span class="string">"1"</span><span>,&nbsp;</span><span class="string">"2.0"</span><span>,&nbsp;</span><span class="string">"true"</span><span>&nbsp;};&nbsp;&nbsp;</span></span></li><li class="alt"><span>ArrayAssertions.assertEquals(&nbsp;expected,&nbsp;output);&nbsp;&nbsp;</span></li></ol></div><textarea style="display: none;" cols="80" rows="5" class="java:nocontrols:nogutter" name="srccode">List input = new ArrayList();
+input.add( "JSON" );
+input.add( "1" );
+input.add( "2.0" );
+input.add( "true" );
+JSONArray jsonArray = (JSONArray) JSONSerializer.toJSON( input );
+JsonConfig jsonConfig = new JsonConfig();
+jsonConfig.setArrayMode( JsonConfig.MODE_OBJECT_ARRAY );
+Object[] output = (Object[]) JSONSerializer.toJava( jsonArray, jsonConfig );
+Object[] expected = new Object[]{ "JSON", "1", "2.0", "true" };
+ArrayAssertions.assertEquals( expected, output);
+</textarea>[<a href="#Snippets">Index</a>
+|<a href="#JSONJava">From JSON to Java</a>
+]
+         </div>
+<div class="section"><h3><a name="JSONArray_to_array_type_conversion"></a>
+JSONArray to array (type conversion)</h3>
+<div class="dp-highlighter nogutter"><div class="bar"></div><ol class="dp-j" start="1"><li class="alt"><span><span>List&nbsp;input&nbsp;=&nbsp;</span><span class="keyword">new</span><span>&nbsp;ArrayList();&nbsp;&nbsp;</span></span></li><li class=""><span>input.add(&nbsp;<span class="string">"1"</span><span>&nbsp;);&nbsp;&nbsp;</span></span></li><li class="alt"><span>input.add(&nbsp;<span class="string">"2"</span><span>&nbsp;);&nbsp;&nbsp;</span></span></li><li class=""><span>input.add(&nbsp;<span class="string">"3.0"</span><span>&nbsp;);&nbsp;&nbsp;</span></span></li><li class="alt"><span>JSONArray&nbsp;jsonArray&nbsp;=&nbsp;(JSONArray)&nbsp;JSONSerializer.toJSON(&nbsp;input&nbsp;);&nbsp;&nbsp;</span></li><li class=""><span>JsonConfig&nbsp;jsonConfig&nbsp;=&nbsp;<span class="keyword">new</span><span>&nbsp;JsonConfig();&nbsp;&nbsp;</span></span></li><li class="alt"><span>jsonConfig.setArrayMode(&nbsp;JsonConfig.MODE_OBJECT_ARRAY&nbsp;);&nbsp;&nbsp;</span></li><li class=""><span>jsonConfig.setRootClass(&nbsp;Integer.TYPE&nbsp;);&nbsp;&nbsp;</span></li><li class="alt"><span><span class="keyword">int</span><span>[]&nbsp;output&nbsp;=&nbsp;(</span><span class="keyword">int</span><span>[])&nbsp;JSONSerializer.toJava(&nbsp;jsonArray,&nbsp;jsonConfig&nbsp;);&nbsp;&nbsp;</span></span></li><li class=""><span><span class="keyword">int</span><span>[]&nbsp;expected&nbsp;=&nbsp;</span><span class="keyword">new</span><span>&nbsp;</span><span class="keyword">int</span><span>[]{&nbsp;</span><span class="number">1</span><span>,&nbsp;</span><span class="number">2</span><span>,&nbsp;</span><span class="number">3</span><span>&nbsp;};&nbsp;&nbsp;</span></span></li><li class="alt"><span>ArrayAssertions.assertEquals(&nbsp;expected,&nbsp;output);&nbsp;&nbsp;</span></li></ol></div><textarea style="display: none;" cols="80" rows="5" class="java:nocontrols:nogutter" name="srccode">List input = new ArrayList();
+input.add( "1" );
+input.add( "2" );
+input.add( "3.0" );
+JSONArray jsonArray = (JSONArray) JSONSerializer.toJSON( input );
+JsonConfig jsonConfig = new JsonConfig();
+jsonConfig.setArrayMode( JsonConfig.MODE_OBJECT_ARRAY );
+jsonConfig.setRootClass( Integer.TYPE );
+int[] output = (int[]) JSONSerializer.toJava( jsonArray, jsonConfig );
+int[] expected = new int[]{ 1, 2, 3 };
+ArrayAssertions.assertEquals( expected, output);
+</textarea>[<a href="#Snippets">Index</a>
+|<a href="#JSONJava">From JSON to Java</a>
+]
+         </div>
+<div class="section"><h3><a name="JSONObject_to_JavaBean_exclude_properties_with_filters"></a>
+JSONObject to JavaBean, exclude properties with filters</h3>
+<div class="dp-highlighter nogutter"><div class="bar"></div><ol class="dp-j" start="1"><li class="alt"><span><span class="keyword">public</span><span>&nbsp;</span><span class="keyword">class</span><span>&nbsp;MyJavaBean&nbsp;{&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;<span class="keyword">private</span><span>&nbsp;String&nbsp;string;&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;<span class="keyword">private</span><span>&nbsp;</span><span class="keyword">int</span><span>&nbsp;integer;&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;<span class="keyword">private</span><span>&nbsp;</span><span class="keyword">double</span><span>&nbsp;dooble&nbsp;=&nbsp;0d;&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;<span class="keyword">private</span><span>&nbsp;</span><span class="keyword">boolean</span><span>&nbsp;bool;&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;</span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;<span class="comment">//&nbsp;getters&nbsp;&amp;&nbsp;setters</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span>}&nbsp;&nbsp;</span></li><li class="alt"><span>&nbsp;&nbsp;</span></li><li class=""><span>MyJavaBean&nbsp;bean&nbsp;=&nbsp;<span class="keyword">new</span><span>&nbsp;MyJavaBean();&nbsp;&nbsp;</span></span></li><li class="alt"><span>bean.setString(&nbsp;<span class="string">"JSON"</span><span>&nbsp;);&nbsp;&nbsp;</span></span></li><li class=""><span>bean.setInteger(&nbsp;<span class="number">1</span><span>&nbsp;);&nbsp;&nbsp;</span></span></li><li class="alt"><span>bean.setDooble(&nbsp;<span class="number">2</span><span>.0d&nbsp;);&nbsp;&nbsp;</span></span></li><li class=""><span>bean.setBool(&nbsp;<span class="keyword">true</span><span>&nbsp;);&nbsp;&nbsp;</span></span></li><li class="alt"><span>JSONObject&nbsp;jsonObject&nbsp;=&nbsp;(JSONObject)&nbsp;JSONSerializer.toJSON(&nbsp;bean&nbsp;);&nbsp;&nbsp;</span></li><li class=""><span>JsonConfig&nbsp;jsonConfig&nbsp;=&nbsp;<span class="keyword">new</span><span>&nbsp;JsonConfig();&nbsp;&nbsp;</span></span></li><li class="alt"><span>jsonConfig.setRootClass(&nbsp;MyJavaBean.<span class="keyword">class</span><span>&nbsp;);&nbsp;&nbsp;</span></span></li><li class=""><span>jsonConfig.setJavaPropertyFilter(&nbsp;<span class="keyword">new</span><span>&nbsp;PropertyFilter(){&nbsp;&nbsp;&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;<span class="keyword">public</span><span>&nbsp;</span><span class="keyword">boolean</span><span>&nbsp;apply(&nbsp;Object&nbsp;source,&nbsp;String&nbsp;name,&nbsp;Object&nbsp;value&nbsp;)&nbsp;{&nbsp;&nbsp;&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">if</span><span>(&nbsp;</span><span class="string">"bool"</span><span>.equals(&nbsp;name&nbsp;)&nbsp;||&nbsp;</span><span class="string">"dooble"</span><span>.equals(&nbsp;name&nbsp;)&nbsp;){&nbsp;&nbsp;&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">return</span><span>&nbsp;</span><span class="keyword">true</span><span>;&nbsp;&nbsp;&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;&nbsp;&nbsp;</span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">return</span><span>&nbsp;</span><span class="keyword">false</span><span>;&nbsp;&nbsp;&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;&nbsp;&nbsp;</span></li><li class="alt"><span>});&nbsp;&nbsp;&nbsp;</span></li><li class=""><span>MyJavaBean&nbsp;bean2&nbsp;=&nbsp;(MyJavaBean)&nbsp;JSONSerializer.toJava(&nbsp;jsonObject,&nbsp;jsonConfig&nbsp;);&nbsp;&nbsp;</span></li><li class="alt"><span>assertNotNull(&nbsp;bean2&nbsp;);&nbsp;&nbsp;</span></li><li class=""><span>assertEquals(&nbsp;<span class="string">"JSON"</span><span>,&nbsp;bean2.getString()&nbsp;);&nbsp;&nbsp;</span></span></li><li class="alt"><span>assertEquals(&nbsp;<span class="number">1</span><span>,&nbsp;bean2.getInteger()&nbsp;);&nbsp;&nbsp;</span></span></li><li class=""><span>assertEquals(&nbsp;0d,&nbsp;bean2.getDooble(),&nbsp;0d&nbsp;);&nbsp;&nbsp;</span></li><li class="alt"><span>assertFalse(&nbsp;bean2.getBool()&nbsp;);&nbsp;&nbsp;</span></li></ol></div><textarea style="display: none;" cols="80" rows="5" class="java:nocontrols:nogutter" name="srccode">public class MyJavaBean {
+   private String string;
+   private int integer;
+   private double dooble = 0d;
+   private boolean bool;
+
+   // getters &amp; setters
+}
+
+MyJavaBean bean = new MyJavaBean();
+bean.setString( "JSON" );
+bean.setInteger( 1 );
+bean.setDooble( 2.0d );
+bean.setBool( true );
+JSONObject jsonObject = (JSONObject) JSONSerializer.toJSON( bean );
+JsonConfig jsonConfig = new JsonConfig();
+jsonConfig.setRootClass( MyJavaBean.class );
+jsonConfig.setJavaPropertyFilter( new PropertyFilter(){  
+   public boolean apply( Object source, String name, Object value ) {  
+      if( "bool".equals( name ) || "dooble".equals( name ) ){  
+         return true;  
+      }  
+      return false;  
+   }  
+}); 
+MyJavaBean bean2 = (MyJavaBean) JSONSerializer.toJava( jsonObject, jsonConfig );
+assertNotNull( bean2 );
+assertEquals( "JSON", bean2.getString() );
+assertEquals( 1, bean2.getInteger() );
+assertEquals( 0d, bean2.getDooble(), 0d );
+assertFalse( bean2.getBool() );
+</textarea>[<a href="#Snippets">Index</a>
+|<a href="#JSONJava">From JSON to Java</a>
+]
+         </div>
+</div>
+<div class="section"><h2><a name="From_JSON_to_XML"></a>
+From JSON to XML</h2>
+<div class="section"><h3><a name="JSONObject_to_XML"></a>
+JSONObject to XML</h3>
+<div class="dp-highlighter nogutter"><div class="bar"></div><ol class="dp-j" start="1"><li class="alt"><span><span>String&nbsp;str&nbsp;=&nbsp;</span><span class="string">"{'name':'JSON','integer':1,'double':2.0,'boolean':true,'nested':{'id':42},'array':[1,2,3]}"</span><span>;&nbsp;&nbsp;</span></span></li><li class=""><span>JSON&nbsp;json&nbsp;=&nbsp;JSONSerializer.toJSON(&nbsp;str&nbsp;);&nbsp;&nbsp;</span></li><li class="alt"><span>XMLSerializer&nbsp;xmlSerializer&nbsp;=&nbsp;<span class="keyword">new</span><span>&nbsp;XMLSerializer();&nbsp;&nbsp;</span></span></li><li class=""><span>String&nbsp;xml&nbsp;=&nbsp;xmlSerializer.write(&nbsp;json&nbsp;);&nbsp;&nbsp;</span></li><li class="alt"><span>System.out.println(xml);&nbsp;&nbsp;</span></li></ol></div><textarea style="display: none;" cols="80" rows="5" class="java:nocontrols:nogutter" name="srccode">String str = "{'name':'JSON','integer':1,'double':2.0,'boolean':true,'nested':{'id':42},'array':[1,2,3]}";
+JSON json = JSONSerializer.toJSON( str );
+XMLSerializer xmlSerializer = new XMLSerializer();
+String xml = xmlSerializer.write( json );
+System.out.println(xml);
+</textarea><div class="dp-highlighter nogutter"><div class="bar"></div><ol class="dp-xml" start="1"><li class="alt"><span><span class="tag">&lt;?</span><span class="tag-name">xml</span><span>&nbsp;</span><span class="attribute">version</span><span>=</span><span class="attribute-value">"1.0"</span><span>&nbsp;</span><span class="attribute">encoding</span><span>=</span><span class="attribute-value">"UTF-8"</span><span class="tag">?&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span><span class="tag">&lt;</span><span class="tag-name">o</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;<span class="tag">&lt;</span><span class="tag-name">boolean</span><span>&nbsp;</span><span class="attribute">type</span><span>=</span><span class="attribute-value">"boolean"</span><span class="tag">&gt;</span><span>true</span><span class="tag">&lt;/</span><span class="tag-name">boolean</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;<span class="tag">&lt;</span><span class="tag-name">double</span><span>&nbsp;</span><span class="attribute">type</span><span>=</span><span class="attribute-value">"number"</span><span class="tag">&gt;</span><span>2.0</span><span class="tag">&lt;/</span><span class="tag-name">double</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;<span class="tag">&lt;</span><span class="tag-name">integer</span><span>&nbsp;</span><span class="attribute">type</span><span>=</span><span class="attribute-value">"number"</span><span class="tag">&gt;</span><span>1</span><span class="tag">&lt;/</span><span class="tag-name">integer</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;<span class="tag">&lt;</span><span class="tag-name">name</span><span>&nbsp;</span><span class="attribute">type</span><span>=</span><span class="attribute-value">"string"</span><span class="tag">&gt;</span><span>JSON</span><span class="tag">&lt;/</span><span class="tag-name">name</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;<span class="tag">&lt;</span><span class="tag-name">nested</span><span>&nbsp;</span><span class="attribute">class</span><span>=</span><span class="attribute-value">"object"</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;</span><span class="tag-name">id</span><span>&nbsp;</span><span class="attribute">type</span><span>=</span><span class="attribute-value">"number"</span><span class="tag">&gt;</span><span>42</span><span class="tag">&lt;/</span><span class="tag-name">id</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;<span class="tag">&lt;/</span><span class="tag-name">nested</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;<span class="tag">&lt;</span><span class="tag-name">array</span><span>&nbsp;</span><span class="attribute">class</span><span>=</span><span class="attribute-value">"array"</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;</span><span class="tag-name">e</span><span>&nbsp;</span><span class="attribute">type</span><span>=</span><span class="attribute-value">"number"</span><span class="tag">&gt;</span><span>1</span><span class="tag">&lt;/</span><span class="tag-name">e</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;</span><span class="tag-name">e</span><span>&nbsp;</span><span class="attribute">type</span><span>=</span><span class="attribute-value">"number"</span><span class="tag">&gt;</span><span>2</span><span class="tag">&lt;/</span><span class="tag-name">e</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;</span><span class="tag-name">e</span><span>&nbsp;</span><span class="attribute">type</span><span>=</span><span class="attribute-value">"number"</span><span class="tag">&gt;</span><span>3</span><span class="tag">&lt;/</span><span class="tag-name">e</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;<span class="tag">&lt;/</span><span class="tag-name">array</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class="alt"><span><span class="tag">&lt;/</span><span class="tag-name">o</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li></ol></div><textarea style="display: none;" cols="80" rows="5" class="xml:nocontrols:nogutter" name="srccode">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;o&gt;
+   &lt;boolean type="boolean"&gt;true&lt;/boolean&gt;
+   &lt;double type="number"&gt;2.0&lt;/double&gt;
+   &lt;integer type="number"&gt;1&lt;/integer&gt;
+   &lt;name type="string"&gt;JSON&lt;/name&gt;
+   &lt;nested class="object"&gt;
+      &lt;id type="number"&gt;42&lt;/id&gt;
+   &lt;/nested&gt;
+   &lt;array class="array"&gt;
+      &lt;e type="number"&gt;1&lt;/e&gt;
+      &lt;e type="number"&gt;2&lt;/e&gt;
+      &lt;e type="number"&gt;3&lt;/e&gt;
+   &lt;/array&gt;
+&lt;/o&gt;
+</textarea>[<a href="#Snippets">Index</a>
+|<a href="#JSONXML">From JSON to XML</a>
+]
+         </div>
+<div class="section"><h3><a name="JSONObject_to_XML_no_type_hints"></a>
+JSONObject to XML (no type hints)</h3>
+<div class="dp-highlighter nogutter"><div class="bar"></div><ol class="dp-j" start="1"><li class="alt"><span><span>String&nbsp;str&nbsp;=&nbsp;</span><span class="string">"{'name':'JSON','integer':1,'double':2.0,'boolean':true,'nested':{'id':42},'array':[1,2,3]}"</span><span>;&nbsp;&nbsp;</span></span></li><li class=""><span>JSON&nbsp;json&nbsp;=&nbsp;JSONSerializer.toJSON(&nbsp;str&nbsp;);&nbsp;&nbsp;</span></li><li class="alt"><span>XMLSerializer&nbsp;xmlSerializer&nbsp;=&nbsp;<span class="keyword">new</span><span>&nbsp;XMLSerializer();&nbsp;&nbsp;</span></span></li><li class=""><span>xmlSerializer.setTypeHintsEnabled(&nbsp;<span class="keyword">false</span><span>&nbsp;);&nbsp;&nbsp;</span></span></li><li class="alt"><span>String&nbsp;xml&nbsp;=&nbsp;xmlSerializer.write(&nbsp;json&nbsp;);&nbsp;&nbsp;</span></li><li class=""><span>System.out.println(xml);&nbsp;&nbsp;</span></li></ol></div><textarea style="display: none;" cols="80" rows="5" class="java:nocontrols:nogutter" name="srccode">String str = "{'name':'JSON','integer':1,'double':2.0,'boolean':true,'nested':{'id':42},'array':[1,2,3]}";
+JSON json = JSONSerializer.toJSON( str );
+XMLSerializer xmlSerializer = new XMLSerializer();
+xmlSerializer.setTypeHintsEnabled( false );
+String xml = xmlSerializer.write( json );
+System.out.println(xml);
+</textarea><div class="dp-highlighter nogutter"><div class="bar"></div><ol class="dp-xml" start="1"><li class="alt"><span><span class="tag">&lt;?</span><span class="tag-name">xml</span><span>&nbsp;</span><span class="attribute">version</span><span>=</span><span class="attribute-value">"1.0"</span><span>&nbsp;</span><span class="attribute">encoding</span><span>=</span><span class="attribute-value">"UTF-8"</span><span class="tag">?&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span><span class="tag">&lt;</span><span class="tag-name">o</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;<span class="tag">&lt;</span><span class="tag-name">boolean</span><span class="tag">&gt;</span><span>true</span><span class="tag">&lt;/</span><span class="tag-name">boolean</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;<span class="tag">&lt;</span><span class="tag-name">double</span><span class="tag">&gt;</span><span>2.0</span><span class="tag">&lt;/</span><span class="tag-name">double</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;<span class="tag">&lt;</span><span class="tag-name">integer</span><span class="tag">&gt;</span><span>1</span><span class="tag">&lt;/</span><span class="tag-name">integer</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;<span class="tag">&lt;</span><span class="tag-name">name</span><span class="tag">&gt;</span><span>JSON</span><span class="tag">&lt;/</span><span class="tag-name">name</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;<span class="tag">&lt;</span><span class="tag-name">nested</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;</span><span class="tag-name">id</span><span class="tag">&gt;</span><span>42</span><span class="tag">&lt;/</span><span class="tag-name">id</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;<span class="tag">&lt;/</span><span class="tag-name">nested</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;<span class="tag">&lt;</span><span class="tag-name">array</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;</span><span class="tag-name">e</span><span class="tag">&gt;</span><span>1</span><span class="tag">&lt;/</span><span class="tag-name">e</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;</span><span class="tag-name">e</span><span class="tag">&gt;</span><span>2</span><span class="tag">&lt;/</span><span class="tag-name">e</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;</span><span class="tag-name">e</span><span class="tag">&gt;</span><span>3</span><span class="tag">&lt;/</span><span class="tag-name">e</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;<span class="tag">&lt;/</span><span class="tag-name">nested</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class="alt"><span><span class="tag">&lt;/</span><span class="tag-name">o</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li></ol></div><textarea style="display: none;" cols="80" rows="5" class="xml:nocontrols:nogutter" name="srccode">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;o&gt;
+   &lt;boolean&gt;true&lt;/boolean&gt;
+   &lt;double&gt;2.0&lt;/double&gt;
+   &lt;integer&gt;1&lt;/integer&gt;
+   &lt;name&gt;JSON&lt;/name&gt;
+   &lt;nested&gt;
+      &lt;id&gt;42&lt;/id&gt;
+   &lt;/nested&gt;
+   &lt;array&gt;
+      &lt;e&gt;1&lt;/e&gt;
+      &lt;e&gt;2&lt;/e&gt;
+      &lt;e&gt;3&lt;/e&gt;
+   &lt;/nested&gt;
+&lt;/o&gt;
+</textarea>[<a href="#Snippets">Index</a>
+|<a href="#JSONXML">From JSON to XML</a>
+]
+         </div>
+<div class="section"><h3><a name="JSONObject_to_XML_with_json_prefix"></a>
+JSONObject to XML (with json prefix)</h3>
+<div class="dp-highlighter nogutter"><div class="bar"></div><ol class="dp-j" start="1"><li class="alt"><span><span>String&nbsp;str&nbsp;=&nbsp;</span><span class="string">"{'name':'JSON','integer':1,'double':2.0,'boolean':true,'nested':{'id':42},'array':[1,2,3]}"</span><span>;&nbsp;&nbsp;</span></span></li><li class=""><span>JSON&nbsp;json&nbsp;=&nbsp;JSONSerializer.toJSON(&nbsp;str&nbsp;);&nbsp;&nbsp;</span></li><li class="alt"><span>XMLSerializer&nbsp;xmlSerializer&nbsp;=&nbsp;<span class="keyword">new</span><span>&nbsp;XMLSerializer();&nbsp;&nbsp;</span></span></li><li class=""><span>xmlSerializer.setTypeHintsCompatibility(&nbsp;<span class="keyword">false</span><span>&nbsp;);&nbsp;&nbsp;</span></span></li><li class="alt"><span>String&nbsp;xml&nbsp;=&nbsp;xmlSerializer.write(&nbsp;json&nbsp;);&nbsp;&nbsp;</span></li><li class=""><span>System.out.println(xml);&nbsp;&nbsp;</span></li></ol></div><textarea style="display: none;" cols="80" rows="5" class="java:nocontrols:nogutter" name="srccode">String str = "{'name':'JSON','integer':1,'double':2.0,'boolean':true,'nested':{'id':42},'array':[1,2,3]}";
+JSON json = JSONSerializer.toJSON( str );
+XMLSerializer xmlSerializer = new XMLSerializer();
+xmlSerializer.setTypeHintsCompatibility( false );
+String xml = xmlSerializer.write( json );
+System.out.println(xml);
+</textarea><div class="dp-highlighter nogutter"><div class="bar"></div><ol class="dp-xml" start="1"><li class="alt"><span><span class="tag">&lt;?</span><span class="tag-name">xml</span><span>&nbsp;</span><span class="attribute">version</span><span>=</span><span class="attribute-value">"1.0"</span><span>&nbsp;</span><span class="attribute">encoding</span><span>=</span><span class="attribute-value">"UTF-8"</span><span class="tag">?&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span><span class="tag">&lt;</span><span class="tag-name">o</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;<span class="tag">&lt;</span><span class="tag-name">boolean</span><span>&nbsp;</span><span class="attribute">json_type</span><span>=</span><span class="attribute-value">"boolean"</span><span class="tag">&gt;</span><span>true</span><span class="tag">&lt;/</span><span class="tag-name">boolean</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;<span class="tag">&lt;</span><span class="tag-name">double</span><span>&nbsp;</span><span class="attribute">json_type</span><span>=</span><span class="attribute-value">"number"</span><span class="tag">&gt;</span><span>2.0</span><span class="tag">&lt;/</span><span class="tag-name">double</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;<span class="tag">&lt;</span><span class="tag-name">integer</span><span>&nbsp;</span><span class="attribute">json_type</span><span>=</span><span class="attribute-value">"number"</span><span class="tag">&gt;</span><span>1</span><span class="tag">&lt;/</span><span class="tag-name">integer</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;<span class="tag">&lt;</span><span class="tag-name">name</span><span>&nbsp;</span><span class="attribute">json_type</span><span>=</span><span class="attribute-value">"string"</span><span class="tag">&gt;</span><span>JSON</span><span class="tag">&lt;/</span><span class="tag-name">name</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;<span class="tag">&lt;</span><span class="tag-name">nested</span><span>&nbsp;</span><span class="attribute">json_class</span><span>=</span><span class="attribute-value">"object"</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;</span><span class="tag-name">id</span><span>&nbsp;</span><span class="attribute">json_type</span><span>=</span><span class="attribute-value">"number"</span><span class="tag">&gt;</span><span>42</span><span class="tag">&lt;/</span><span class="tag-name">id</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;<span class="tag">&lt;/</span><span class="tag-name">nested</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;<span class="tag">&lt;</span><span class="tag-name">array</span><span>&nbsp;</span><span class="attribute">json_class</span><span>=</span><span class="attribute-value">"array"</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;</span><span class="tag-name">e</span><span>&nbsp;</span><span class="attribute">json_type</span><span>=</span><span class="attribute-value">"number"</span><span class="tag">&gt;</span><span>1</span><span class="tag">&lt;/</span><span class="tag-name">e</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;</span><span class="tag-name">e</span><span>&nbsp;</span><span class="attribute">json_type</span><span>=</span><span class="attribute-value">"number"</span><span class="tag">&gt;</span><span>2</span><span class="tag">&lt;/</span><span class="tag-name">e</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;</span><span class="tag-name">e</span><span>&nbsp;</span><span class="attribute">json_type</span><span>=</span><span class="attribute-value">"number"</span><span class="tag">&gt;</span><span>3</span><span class="tag">&lt;/</span><span class="tag-name">e</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;<span class="tag">&lt;/</span><span class="tag-name">array</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class="alt"><span><span class="tag">&lt;/</span><span class="tag-name">o</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li></ol></div><textarea style="display: none;" cols="80" rows="5" class="xml:nocontrols:nogutter" name="srccode">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;o&gt;
+   &lt;boolean json_type="boolean"&gt;true&lt;/boolean&gt;
+   &lt;double json_type="number"&gt;2.0&lt;/double&gt;
+   &lt;integer json_type="number"&gt;1&lt;/integer&gt;
+   &lt;name json_type="string"&gt;JSON&lt;/name&gt;
+   &lt;nested json_class="object"&gt;
+      &lt;id json_type="number"&gt;42&lt;/id&gt;
+   &lt;/nested&gt;
+   &lt;array json_class="array"&gt;
+      &lt;e json_type="number"&gt;1&lt;/e&gt;
+      &lt;e json_type="number"&gt;2&lt;/e&gt;
+      &lt;e json_type="number"&gt;3&lt;/e&gt;
+   &lt;/array&gt;
+&lt;/o&gt;
+</textarea>[<a href="#Snippets">Index</a>
+|<a href="#JSONXML">From JSON to XML</a>
+]
+         </div>
+<div class="section"><h3><a name="JSONObject_to_XML_change_node_names"></a>
+JSONObject to XML (change node names)</h3>
+<div class="dp-highlighter nogutter"><div class="bar"></div><ol class="dp-j" start="1"><li class="alt"><span><span>String&nbsp;str&nbsp;=&nbsp;</span><span class="string">"{'name':'JSON','integer':1,'double':2.0,'boolean':true,'nested':{'id':42},'array':[1,2,3]}"</span><span>;&nbsp;&nbsp;</span></span></li><li class=""><span>JSON&nbsp;json&nbsp;=&nbsp;JSONSerializer.toJSON(&nbsp;str&nbsp;);&nbsp;&nbsp;</span></li><li class="alt"><span>XMLSerializer&nbsp;xmlSerializer&nbsp;=&nbsp;<span class="keyword">new</span><span>&nbsp;XMLSerializer();&nbsp;&nbsp;</span></span></li><li class=""><span>xmlSerializer.setRootName(&nbsp;<span class="string">"root"</span><span>&nbsp;);&nbsp;&nbsp;</span></span></li><li class="alt"><span>xmlSerializer.setElementName(&nbsp;<span class="string">"element"</span><span>&nbsp;);&nbsp;&nbsp;</span></span></li><li class=""><span>String&nbsp;xml&nbsp;=&nbsp;xmlSerializer.write(&nbsp;json&nbsp;);&nbsp;&nbsp;</span></li><li class="alt"><span>System.out.println(xml);&nbsp;&nbsp;</span></li></ol></div><textarea style="display: none;" cols="80" rows="5" class="java:nocontrols:nogutter" name="srccode">String str = "{'name':'JSON','integer':1,'double':2.0,'boolean':true,'nested':{'id':42},'array':[1,2,3]}";
+JSON json = JSONSerializer.toJSON( str );
+XMLSerializer xmlSerializer = new XMLSerializer();
+xmlSerializer.setRootName( "root" );
+xmlSerializer.setElementName( "element" );
+String xml = xmlSerializer.write( json );
+System.out.println(xml);
+</textarea><div class="dp-highlighter nogutter"><div class="bar"></div><ol class="dp-xml" start="1"><li class="alt"><span><span class="tag">&lt;?</span><span class="tag-name">xml</span><span>&nbsp;</span><span class="attribute">version</span><span>=</span><span class="attribute-value">"1.0"</span><span>&nbsp;</span><span class="attribute">encoding</span><span>=</span><span class="attribute-value">"UTF-8"</span><span class="tag">?&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span><span class="tag">&lt;</span><span class="tag-name">root</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;<span class="tag">&lt;</span><span class="tag-name">boolean</span><span>&nbsp;</span><span class="attribute">type</span><span>=</span><span class="attribute-value">"boolean"</span><span class="tag">&gt;</span><span>true</span><span class="tag">&lt;/</span><span class="tag-name">boolean</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;<span class="tag">&lt;</span><span class="tag-name">double</span><span>&nbsp;</span><span class="attribute">type</span><span>=</span><span class="attribute-value">"number"</span><span class="tag">&gt;</span><span>2.0</span><span class="tag">&lt;/</span><span class="tag-name">double</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;<span class="tag">&lt;</span><span class="tag-name">integer</span><span>&nbsp;</span><span class="attribute">type</span><span>=</span><span class="attribute-value">"number"</span><span class="tag">&gt;</span><span>1</span><span class="tag">&lt;/</span><span class="tag-name">integer</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;<span class="tag">&lt;</span><span class="tag-name">name</span><span>&nbsp;</span><span class="attribute">type</span><span>=</span><span class="attribute-value">"string"</span><span class="tag">&gt;</span><span>JSON</span><span class="tag">&lt;/</span><span class="tag-name">name</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;<span class="tag">&lt;</span><span class="tag-name">nested</span><span>&nbsp;</span><span class="attribute">class</span><span>=</span><span class="attribute-value">"object"</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;</span><span class="tag-name">id</span><span>&nbsp;</span><span class="attribute">type</span><span>=</span><span class="attribute-value">"number"</span><span class="tag">&gt;</span><span>42</span><span class="tag">&lt;/</span><span class="tag-name">id</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;<span class="tag">&lt;/</span><span class="tag-name">nested</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;<span class="tag">&lt;</span><span class="tag-name">array</span><span>&nbsp;</span><span class="attribute">class</span><span>=</span><span class="attribute-value">"array"</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;</span><span class="tag-name">element</span><span>&nbsp;</span><span class="attribute">type</span><span>=</span><span class="attribute-value">"number"</span><span class="tag">&gt;</span><span>1</span><span class="tag">&lt;/</span><span class="tag-name">e</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;</span><span class="tag-name">element</span><span>&nbsp;</span><span class="attribute">type</span><span>=</span><span class="attribute-value">"number"</span><span class="tag">&gt;</span><span>2</span><span class="tag">&lt;/</span><span class="tag-name">e</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;</span><span class="tag-name">element</span><span>&nbsp;</span><span class="attribute">type</span><span>=</span><span class="attribute-value">"number"</span><span class="tag">&gt;</span><span>3</span><span class="tag">&lt;/</span><span class="tag-name">e</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;<span class="tag">&lt;/</span><span class="tag-name">array</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class="alt"><span><span class="tag">&lt;/</span><span class="tag-name">root</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li></ol></div><textarea style="display: none;" cols="80" rows="5" class="xml:nocontrols:nogutter" name="srccode">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;root&gt;
+   &lt;boolean type="boolean"&gt;true&lt;/boolean&gt;
+   &lt;double type="number"&gt;2.0&lt;/double&gt;
+   &lt;integer type="number"&gt;1&lt;/integer&gt;
+   &lt;name type="string"&gt;JSON&lt;/name&gt;
+   &lt;nested class="object"&gt;
+      &lt;id type="number"&gt;42&lt;/id&gt;
+   &lt;/nested&gt;
+   &lt;array class="array"&gt;
+      &lt;element type="number"&gt;1&lt;/e&gt;
+      &lt;element type="number"&gt;2&lt;/e&gt;
+      &lt;element type="number"&gt;3&lt;/e&gt;
+   &lt;/array&gt;
+&lt;/root&gt;
+</textarea>[<a href="#Snippets">Index</a>
+|<a href="#JSONXML">From JSON to XML</a>
+]
+         </div>
+<div class="section"><h3><a name="JSONArray_to_XML"></a>
+JSONArray to XML</h3>
+<div class="dp-highlighter nogutter"><div class="bar"></div><ol class="dp-j" start="1"><li class="alt"><span><span>String&nbsp;str&nbsp;=&nbsp;</span><span class="string">"['JSON',&nbsp;1,&nbsp;2.0,&nbsp;true,&nbsp;{'id':42},&nbsp;[1,2,3]]"</span><span>;&nbsp;&nbsp;</span></span></li><li class=""><span>JSON&nbsp;json&nbsp;=&nbsp;JSONSerializer.toJSON(&nbsp;str&nbsp;);&nbsp;&nbsp;</span></li><li class="alt"><span>XMLSerializer&nbsp;xmlSerializer&nbsp;=&nbsp;<span class="keyword">new</span><span>&nbsp;XMLSerializer();&nbsp;&nbsp;</span></span></li><li class=""><span>String&nbsp;xml&nbsp;=&nbsp;xmlSerializer.write(&nbsp;json&nbsp;);&nbsp;&nbsp;</span></li><li class="alt"><span>System.out.println(xml);&nbsp;&nbsp;</span></li></ol></div><textarea style="display: none;" cols="80" rows="5" class="java:nocontrols:nogutter" name="srccode">String str = "['JSON', 1, 2.0, true, {'id':42}, [1,2,3]]";
+JSON json = JSONSerializer.toJSON( str );
+XMLSerializer xmlSerializer = new XMLSerializer();
+String xml = xmlSerializer.write( json );
+System.out.println(xml);
+</textarea><div class="dp-highlighter nogutter"><div class="bar"></div><ol class="dp-xml" start="1"><li class="alt"><span><span class="tag">&lt;?</span><span class="tag-name">xml</span><span>&nbsp;</span><span class="attribute">version</span><span>=</span><span class="attribute-value">"1.0"</span><span>&nbsp;</span><span class="attribute">encoding</span><span>=</span><span class="attribute-value">"UTF-8"</span><span class="tag">?&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span><span class="tag">&lt;</span><span class="tag-name">a</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;<span class="tag">&lt;</span><span class="tag-name">e</span><span>&nbsp;</span><span class="attribute">type</span><span>=</span><span class="attribute-value">"string"</span><span class="tag">&gt;</span><span>JSON</span><span class="tag">&lt;/</span><span class="tag-name">e</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;<span class="tag">&lt;</span><span class="tag-name">e</span><span>&nbsp;</span><span class="attribute">type</span><span>=</span><span class="attribute-value">"number"</span><span class="tag">&gt;</span><span>1</span><span class="tag">&lt;/</span><span class="tag-name">e</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;<span class="tag">&lt;</span><span class="tag-name">e</span><span>&nbsp;</span><span class="attribute">type</span><span>=</span><span class="attribute-value">"number"</span><span class="tag">&gt;</span><span>2.0</span><span class="tag">&lt;/</span><span class="tag-name">e</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;<span class="tag">&lt;</span><span class="tag-name">e</span><span>&nbsp;</span><span class="attribute">type</span><span>=</span><span class="attribute-value">"boolean"</span><span class="tag">&gt;</span><span>true</span><span class="tag">&lt;/</span><span class="tag-name">e</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;<span class="tag">&lt;</span><span class="tag-name">e</span><span>&nbsp;</span><span class="attribute">class</span><span>=</span><span class="attribute-value">"object"</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;</span><span class="tag-name">id</span><span>&nbsp;</span><span class="attribute">type</span><span>=</span><span class="attribute-value">"number"</span><span class="tag">&gt;</span><span>42</span><span class="tag">&lt;/</span><span class="tag-name">id</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;<span class="tag">&lt;/</span><span class="tag-name">e</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;<span class="tag">&lt;</span><span class="tag-name">e</span><span>&nbsp;</span><span class="attribute">class</span><span>=</span><span class="attribute-value">"array"</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;</span><span class="tag-name">e</span><span>&nbsp;</span><span class="attribute">type</span><span>=</span><span class="attribute-value">"number"</span><span class="tag">&gt;</span><span>1</span><span class="tag">&lt;/</span><span class="tag-name">e</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;</span><span class="tag-name">e</span><span>&nbsp;</span><span class="attribute">type</span><span>=</span><span class="attribute-value">"number"</span><span class="tag">&gt;</span><span>2</span><span class="tag">&lt;/</span><span class="tag-name">e</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;</span><span class="tag-name">e</span><span>&nbsp;</span><span class="attribute">type</span><span>=</span><span class="attribute-value">"number"</span><span class="tag">&gt;</span><span>3</span><span class="tag">&lt;/</span><span class="tag-name">e</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;<span class="tag">&lt;/</span><span class="tag-name">e</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class="alt"><span><span class="tag">&lt;/</span><span class="tag-name">a</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li></ol></div><textarea style="display: none;" cols="80" rows="5" class="xml:nocontrols:nogutter" name="srccode">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;a&gt;
+   &lt;e type="string"&gt;JSON&lt;/e&gt;
+   &lt;e type="number"&gt;1&lt;/e&gt;
+   &lt;e type="number"&gt;2.0&lt;/e&gt;
+   &lt;e type="boolean"&gt;true&lt;/e&gt;
+   &lt;e class="object"&gt;
+      &lt;id type="number"&gt;42&lt;/id&gt;
+   &lt;/e&gt;
+   &lt;e class="array"&gt;
+      &lt;e type="number"&gt;1&lt;/e&gt;
+      &lt;e type="number"&gt;2&lt;/e&gt;
+      &lt;e type="number"&gt;3&lt;/e&gt;
+   &lt;/e&gt;
+&lt;/a&gt;
+</textarea>[<a href="#Snippets">Index</a>
+|<a href="#JSONXML">From JSON to XML</a>
+]
+         </div>
+<div class="section"><h3><a name="JSONArray_to_XML_no_type_hints"></a>
+JSONArray to XML (no type hints)</h3>
+<div class="dp-highlighter nogutter"><div class="bar"></div><ol class="dp-j" start="1"><li class="alt"><span><span>String&nbsp;str&nbsp;=&nbsp;</span><span class="string">"['JSON',&nbsp;1,&nbsp;2.0,&nbsp;true,&nbsp;{'id':42},&nbsp;[1,2,3]]"</span><span>;&nbsp;&nbsp;</span></span></li><li class=""><span>JSON&nbsp;json&nbsp;=&nbsp;JSONSerializer.toJSON(&nbsp;str&nbsp;);&nbsp;&nbsp;</span></li><li class="alt"><span>XMLSerializer&nbsp;xmlSerializer&nbsp;=&nbsp;<span class="keyword">new</span><span>&nbsp;XMLSerializer();&nbsp;&nbsp;</span></span></li><li class=""><span>xmlSerializer.setTypeHintsEnabled(&nbsp;<span class="keyword">false</span><span>&nbsp;);&nbsp;&nbsp;</span></span></li><li class="alt"><span>String&nbsp;xml&nbsp;=&nbsp;xmlSerializer.write(&nbsp;json&nbsp;);&nbsp;&nbsp;</span></li><li class=""><span>System.out.println(xml);&nbsp;&nbsp;</span></li></ol></div><textarea style="display: none;" cols="80" rows="5" class="java:nocontrols:nogutter" name="srccode">String str = "['JSON', 1, 2.0, true, {'id':42}, [1,2,3]]";
+JSON json = JSONSerializer.toJSON( str );
+XMLSerializer xmlSerializer = new XMLSerializer();
+xmlSerializer.setTypeHintsEnabled( false );
+String xml = xmlSerializer.write( json );
+System.out.println(xml);
+</textarea><div class="dp-highlighter nogutter"><div class="bar"></div><ol class="dp-xml" start="1"><li class="alt"><span><span class="tag">&lt;?</span><span class="tag-name">xml</span><span>&nbsp;</span><span class="attribute">version</span><span>=</span><span class="attribute-value">"1.0"</span><span>&nbsp;</span><span class="attribute">encoding</span><span>=</span><span class="attribute-value">"UTF-8"</span><span class="tag">?&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span><span class="tag">&lt;</span><span class="tag-name">a</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;<span class="tag">&lt;</span><span class="tag-name">e</span><span class="tag">&gt;</span><span>JSON</span><span class="tag">&lt;/</span><span class="tag-name">e</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;<span class="tag">&lt;</span><span class="tag-name">e</span><span class="tag">&gt;</span><span>1</span><span class="tag">&lt;/</span><span class="tag-name">e</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;<span class="tag">&lt;</span><span class="tag-name">e</span><span class="tag">&gt;</span><span>2.0</span><span class="tag">&lt;/</span><span class="tag-name">e</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;<span class="tag">&lt;</span><span class="tag-name">e</span><span class="tag">&gt;</span><span>true</span><span class="tag">&lt;/</span><span class="tag-name">e</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;<span class="tag">&lt;</span><span class="tag-name">e</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;</span><span class="tag-name">id</span><span class="tag">&gt;</span><span>42</span><span class="tag">&lt;/</span><span class="tag-name">id</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;<span class="tag">&lt;/</span><span class="tag-name">e</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;<span class="tag">&lt;</span><span class="tag-name">e</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;</span><span class="tag-name">e</span><span class="tag">&gt;</span><span>1</span><span class="tag">&lt;/</span><span class="tag-name">e</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;</span><span class="tag-name">e</span><span class="tag">&gt;</span><span>2</span><span class="tag">&lt;/</span><span class="tag-name">e</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;</span><span class="tag-name">e</span><span class="tag">&gt;</span><span>3</span><span class="tag">&lt;/</span><span class="tag-name">e</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;<span class="tag">&lt;/</span><span class="tag-name">e</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class="alt"><span><span class="tag">&lt;/</span><span class="tag-name">a</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li></ol></div><textarea style="display: none;" cols="80" rows="5" class="xml:nocontrols:nogutter" name="srccode">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;a&gt;
+   &lt;e&gt;JSON&lt;/e&gt;
+   &lt;e&gt;1&lt;/e&gt;
+   &lt;e&gt;2.0&lt;/e&gt;
+   &lt;e&gt;true&lt;/e&gt;
+   &lt;e&gt;
+      &lt;id&gt;42&lt;/id&gt;
+   &lt;/e&gt;
+   &lt;e&gt;
+      &lt;e&gt;1&lt;/e&gt;
+      &lt;e&gt;2&lt;/e&gt;
+      &lt;e&gt;3&lt;/e&gt;
+   &lt;/e&gt;
+&lt;/a&gt;
+</textarea>[<a href="#Snippets">Index</a>
+|<a href="#JSONXML">From JSON to XML</a>
+]
+	 </div>
+<div class="section"><h3><a name="JSONArray_to_XML_with_json_prefix"></a>
+JSONArray to XML (with json prefix)</h3>
+<div class="dp-highlighter nogutter"><div class="bar"></div><ol class="dp-j" start="1"><li class="alt"><span><span>String&nbsp;str&nbsp;=&nbsp;</span><span class="string">"['JSON',&nbsp;1,&nbsp;2.0,&nbsp;true,&nbsp;{'id':42},&nbsp;[1,2,3]]"</span><span>;&nbsp;&nbsp;</span></span></li><li class=""><span>JSON&nbsp;json&nbsp;=&nbsp;JSONSerializer.toJSON(&nbsp;str&nbsp;);&nbsp;&nbsp;</span></li><li class="alt"><span>XMLSerializer&nbsp;xmlSerializer&nbsp;=&nbsp;<span class="keyword">new</span><span>&nbsp;XMLSerializer();&nbsp;&nbsp;</span></span></li><li class=""><span>xmlSerializer.setTypeHintsCompatibility(&nbsp;<span class="keyword">false</span><span>&nbsp;);&nbsp;&nbsp;</span></span></li><li class="alt"><span>String&nbsp;xml&nbsp;=&nbsp;xmlSerializer.write(&nbsp;json&nbsp;);&nbsp;&nbsp;</span></li><li class=""><span>System.out.println(xml);&nbsp;&nbsp;</span></li></ol></div><textarea style="display: none;" cols="80" rows="5" class="java:nocontrols:nogutter" name="srccode">String str = "['JSON', 1, 2.0, true, {'id':42}, [1,2,3]]";
+JSON json = JSONSerializer.toJSON( str );
+XMLSerializer xmlSerializer = new XMLSerializer();
+xmlSerializer.setTypeHintsCompatibility( false );
+String xml = xmlSerializer.write( json );
+System.out.println(xml);
+</textarea><div class="dp-highlighter nogutter"><div class="bar"></div><ol class="dp-xml" start="1"><li class="alt"><span><span class="tag">&lt;?</span><span class="tag-name">xml</span><span>&nbsp;</span><span class="attribute">version</span><span>=</span><span class="attribute-value">"1.0"</span><span>&nbsp;</span><span class="attribute">encoding</span><span>=</span><span class="attribute-value">"UTF-8"</span><span class="tag">?&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span><span class="tag">&lt;</span><span class="tag-name">a</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;<span class="tag">&lt;</span><span class="tag-name">e</span><span>&nbsp;</span><span class="attribute">json_type</span><span>=</span><span class="attribute-value">"string"</span><span class="tag">&gt;</span><span>JSON</span><span class="tag">&lt;/</span><span class="tag-name">e</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;<span class="tag">&lt;</span><span class="tag-name">e</span><span>&nbsp;</span><span class="attribute">json_type</span><span>=</span><span class="attribute-value">"number"</span><span class="tag">&gt;</span><span>1</span><span class="tag">&lt;/</span><span class="tag-name">e</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;<span class="tag">&lt;</span><span class="tag-name">e</span><span>&nbsp;</span><span class="attribute">json_type</span><span>=</span><span class="attribute-value">"number"</span><span class="tag">&gt;</span><span>2.0</span><span class="tag">&lt;/</span><span class="tag-name">e</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;<span class="tag">&lt;</span><span class="tag-name">e</span><span>&nbsp;</span><span class="attribute">json_type</span><span>=</span><span class="attribute-value">"boolean"</span><span class="tag">&gt;</span><span>true</span><span class="tag">&lt;/</span><span class="tag-name">e</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;<span class="tag">&lt;</span><span class="tag-name">e</span><span>&nbsp;</span><span class="attribute">json_class</span><span>=</span><span class="attribute-value">"object"</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;</span><span class="tag-name">id</span><span>&nbsp;</span><span class="attribute">json_type</span><span>=</span><span class="attribute-value">"number"</span><span class="tag">&gt;</span><span>42</span><span class="tag">&lt;/</span><span class="tag-name">id</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;<span class="tag">&lt;/</span><span class="tag-name">e</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;<span class="tag">&lt;</span><span class="tag-name">e</span><span>&nbsp;</span><span class="attribute">json_class</span><span>=</span><span class="attribute-value">"array"</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;</span><span class="tag-name">e</span><span>&nbsp;</span><span class="attribute">json_type</span><span>=</span><span class="attribute-value">"number"</span><span class="tag">&gt;</span><span>1</span><span class="tag">&lt;/</span><span class="tag-name">e</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;</span><span class="tag-name">e</span><span>&nbsp;</span><span class="attribute">json_type</span><span>=</span><span class="attribute-value">"number"</span><span class="tag">&gt;</span><span>2</span><span class="tag">&lt;/</span><span class="tag-name">e</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;</span><span class="tag-name">e</span><span>&nbsp;</span><span class="attribute">json_type</span><span>=</span><span class="attribute-value">"number"</span><span class="tag">&gt;</span><span>3</span><span class="tag">&lt;/</span><span class="tag-name">e</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;<span class="tag">&lt;/</span><span class="tag-name">e</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class="alt"><span><span class="tag">&lt;/</span><span class="tag-name">a</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li></ol></div><textarea style="display: none;" cols="80" rows="5" class="xml:nocontrols:nogutter" name="srccode">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;a&gt;
+   &lt;e json_type="string"&gt;JSON&lt;/e&gt;
+   &lt;e json_type="number"&gt;1&lt;/e&gt;
+   &lt;e json_type="number"&gt;2.0&lt;/e&gt;
+   &lt;e json_type="boolean"&gt;true&lt;/e&gt;
+   &lt;e json_class="object"&gt;
+      &lt;id json_type="number"&gt;42&lt;/id&gt;
+   &lt;/e&gt;
+   &lt;e json_class="array"&gt;
+      &lt;e json_type="number"&gt;1&lt;/e&gt;
+      &lt;e json_type="number"&gt;2&lt;/e&gt;
+      &lt;e json_type="number"&gt;3&lt;/e&gt;
+   &lt;/e&gt;
+&lt;/a&gt;
+</textarea>[<a href="#Snippets">Index</a>
+|<a href="#JSONXML">From JSON to XML</a>
+]
+	 </div>
+<div class="section"><h3><a name="Flatten_JSONArray_into_parent"></a>
+Flatten JSONArray into parent</h3>
+<div class="dp-highlighter nogutter"><div class="bar"></div><ol class="dp-j" start="1"><li class="alt"><span><span>String&nbsp;str&nbsp;=&nbsp;</span><span class="string">"{'number':&nbsp;[1,2,3]}"</span><span>;&nbsp;&nbsp;</span></span></li><li class=""><span>JSONObject&nbsp;json&nbsp;=&nbsp;(JSONObject)&nbsp;JSONSerializer.toJSON(&nbsp;str&nbsp;);&nbsp;&nbsp;</span></li><li class="alt"><span>XMLSerializer&nbsp;xmlSerializer&nbsp;=&nbsp;<span class="keyword">new</span><span>&nbsp;XMLSerializer();&nbsp;&nbsp;</span></span></li><li class=""><span>xmlSerializer.setTypeHintsEnabled(&nbsp;<span class="keyword">false</span><span>&nbsp;);&nbsp;&nbsp;</span></span></li><li class="alt"><span>String&nbsp;xml&nbsp;=&nbsp;xmlSerializer.write(&nbsp;json&nbsp;);&nbsp;&nbsp;</span></li><li class=""><span>System.out.println(&nbsp;xml&nbsp;);&nbsp;&nbsp;</span></li><li class="alt"><span>json.getJSONArray(&nbsp;<span class="string">"number"</span><span>&nbsp;).setExpandElements(&nbsp;</span><span class="keyword">true</span><span>&nbsp;);&nbsp;&nbsp;</span></span></li><li class=""><span>xml&nbsp;=&nbsp;xmlSerializer.write(&nbsp;json&nbsp;);&nbsp;&nbsp;</span></li><li class="alt"><span>System.out.println(&nbsp;xml&nbsp;);&nbsp;&nbsp;</span></li></ol></div><textarea style="display: none;" cols="80" rows="5" class="java:nocontrols:nogutter" name="srccode">String str = "{'number': [1,2,3]}";
+JSONObject json = (JSONObject) JSONSerializer.toJSON( str );
+XMLSerializer xmlSerializer = new XMLSerializer();
+xmlSerializer.setTypeHintsEnabled( false );
+String xml = xmlSerializer.write( json );
+System.out.println( xml );
+json.getJSONArray( "number" ).setExpandElements( true );
+xml = xmlSerializer.write( json );
+System.out.println( xml );
+</textarea><div class="dp-highlighter nogutter"><div class="bar"></div><ol class="dp-xml" start="1"><li class="alt"><span><span class="tag">&lt;?</span><span class="tag-name">xml</span><span>&nbsp;</span><span class="attribute">version</span><span>=</span><span class="attribute-value">"1.0"</span><span>&nbsp;</span><span class="attribute">encoding</span><span>=</span><span class="attribute-value">"UTF-8"</span><span class="tag">?&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span><span class="tag">&lt;</span><span class="tag-name">o</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;<span class="tag">&lt;</span><span class="tag-name">number</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;</span><span class="tag-name">e</span><span class="tag">&gt;</span><span>1</span><span class="tag">&lt;/</span><span class="tag-name">e</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;</span><span class="tag-name">e</span><span class="tag">&gt;</span><span>2</span><span class="tag">&lt;/</span><span class="tag-name">e</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;</span><span class="tag-name">e</span><span class="tag">&gt;</span><span>3</span><span class="tag">&lt;/</span><span class="tag-name">e</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;<span class="tag">&lt;/</span><span class="tag-name">number</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span><span class="tag">&lt;/</span><span class="tag-name">o</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;</span></li><li class=""><span><span class="tag">&lt;?</span><span class="tag-name">xml</span><span>&nbsp;</span><span class="attribute">version</span><span>=</span><span class="attribute-value">"1.0"</span><span>&nbsp;</span><span class="attribute">encoding</span><span>=</span><span class="attribute-value">"UTF-8"</span><span class="tag">?&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class="alt"><span><span class="tag">&lt;</span><span class="tag-name">o</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;<span class="tag">&lt;</span><span class="tag-name">number</span><span class="tag">&gt;</span><span>1</span><span class="tag">&lt;/</span><span class="tag-name">number</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;<span class="tag">&lt;</span><span class="tag-name">number</span><span class="tag">&gt;</span><span>2</span><span class="tag">&lt;/</span><span class="tag-name">number</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;<span class="tag">&lt;</span><span class="tag-name">number</span><span class="tag">&gt;</span><span>3</span><span class="tag">&lt;/</span><span class="tag-name">number</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class="alt"><span><span class="tag">&lt;/</span><span class="tag-name">o</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li></ol></div><textarea style="display: none;" cols="80" rows="5" class="xml:nocontrols:nogutter" name="srccode">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;o&gt;
+   &lt;number&gt;
+      &lt;e&gt;1&lt;/e&gt;
+      &lt;e&gt;2&lt;/e&gt;
+      &lt;e&gt;3&lt;/e&gt;
+   &lt;/number&gt;
+&lt;/o&gt;
+
+&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;o&gt;
+   &lt;number&gt;1&lt;/number&gt;
+   &lt;number&gt;2&lt;/number&gt;
+   &lt;number&gt;3&lt;/number&gt;
+&lt;/o&gt;
+</textarea>[<a href="#Snippets">Index</a>
+|<a href="#JSONXML">From JSON to XML</a>
+]
+	 </div>
+</div>
+<div class="section"><h2><a name="From_XML_to_JSON"></a>
+From XML to JSON</h2>
+<div class="section"><h3><a name="XML_to_JSONObject"></a>
+XML to JSONObject</h3>
+<div class="dp-highlighter nogutter"><div class="bar"></div><ol class="dp-xml" start="1"><li class="alt"><span><span class="tag">&lt;</span><span class="tag-name">o</span><span>&nbsp;</span><span class="attribute">number</span><span>=</span><span class="attribute-value">"1"</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;first&nbsp;&nbsp;</span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;<span class="tag">&lt;</span><span class="tag-name">string</span><span class="tag">&gt;</span><span>json</span><span class="tag">&lt;/</span><span class="tag-name">string</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;<span class="tag">&lt;</span><span class="tag-name">array</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;</span><span class="tag-name">e</span><span class="tag">&gt;</span><span>1</span><span class="tag">&lt;/</span><span class="tag-name">e</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;</span><span class="tag-name">e</span><span class="tag">&gt;</span><span>true</span><span class="tag">&lt;/</span><span class="tag-name">e</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;<span class="tag">&lt;/</span><span class="tag-name">array</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span><span class="tag">&lt;/</span><span class="tag-name">o</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li></ol></div><textarea style="display: none;" cols="80" rows="5" class="xml:nocontrols:nogutter" name="srccode">&lt;o number="1"&gt;
+   first
+   &lt;string&gt;json&lt;/string&gt;
+   &lt;array&gt;
+      &lt;e&gt;1&lt;/e&gt;
+      &lt;e&gt;true&lt;/e&gt;
+   &lt;/array&gt;
+&lt;/o&gt;
+</textarea><div class="dp-highlighter nogutter"><div class="bar"></div><ol class="dp-j" start="1"><li class="alt"><span><span>String&nbsp;xml&nbsp;=&nbsp;...&nbsp;&nbsp;</span></span></li><li class=""><span>XMLSerializer&nbsp;xmlSerializer&nbsp;=&nbsp;<span class="keyword">new</span><span>&nbsp;XMLSerializer();&nbsp;&nbsp;</span></span></li><li class="alt"><span>JSON&nbsp;json&nbsp;=&nbsp;xmlSerializer.read(&nbsp;xml&nbsp;);&nbsp;&nbsp;</span></li><li class=""><span>System.out.println(&nbsp;json.toString(<span class="number">2</span><span>)&nbsp;);&nbsp;&nbsp;</span></span></li></ol></div><textarea style="display: none;" cols="80" rows="5" class="java:nocontrols:nogutter" name="srccode">String xml = ...
+XMLSerializer xmlSerializer = new XMLSerializer();
+JSON json = xmlSerializer.read( xml );
+System.out.println( json.toString(2) );
+</textarea><div class="dp-highlighter nogutter"><div class="bar"></div><ol class="dp-c" start="1"><li class="alt"><span><span>{&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;<span class="string">"string"</span><span>:&nbsp;</span><span class="string">"json"</span><span>,&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;<span class="string">"#text"</span><span>:&nbsp;</span><span class="string">"first"</span><span>,&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;<span class="string">"array"</span><span>:&nbsp;&nbsp;&nbsp;[&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="string">"1"</span><span>,&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="string">"true"</span><span>&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;],&nbsp;&nbsp;</span></li><li class=""><span>&nbsp;&nbsp;<span class="string">"@number"</span><span>:&nbsp;</span><span class="string">"1"</span><span>&nbsp;&nbsp;</span></span></li><li class="alt"><span>}&nbsp;&nbsp;</span></li></ol></div><textarea style="display: none;" cols="80" rows="5" class="js:nocontrols:nogutter" name="srccode">{
+  "string": "json",
+  "#text": "first",
+  "array":   [
+    "1",
+    "true"
+  ],
+  "@number": "1"
+}
+</textarea>[<a href="#Snippets">Index</a>
+|<a href="#XMLJSON">From XML to JSON</a>
+]
+	 </div>
+</div>
+<div class="section"><h2><a name="Groovy_Support"></a>
+Groovy Support</h2>
+<div class="section"><h3><a name="Using_the_JsonGroovyBuilder"></a>
+Using the JsonGroovyBuilder</h3>
+<p>The following snippets produce the same JSON output</p>
+<div class="dp-highlighter nogutter"><div class="bar"></div><ol class="dp-g" start="1"><li class="alt"><span><span class="keyword">def</span><span>&nbsp;builder&nbsp;=&nbsp;</span><span class="keyword">new</span><span>&nbsp;JsonGroovyBuilder()&nbsp;&nbsp;</span></span></li><li class=""><span><span class="keyword">def</span><span>&nbsp;books&nbsp;=&nbsp;builder.books&nbsp;{&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;book&nbsp;=&nbsp;[title:&nbsp;<span class="string">"Groovy&nbsp;in&nbsp;Action"</span><span>,&nbsp;author:&nbsp;</span><span class="string">"Dierk&nbsp;Konig"</span><span>]&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;book&nbsp;=&nbsp;[title:&nbsp;<span class="string">"Groovy&nbsp;in&nbsp;Action"</span><span>,&nbsp;author:&nbsp;</span><span class="string">"Dierk&nbsp;Konig"</span><span>]&nbsp;&nbsp;</span></span></li><li class="alt"><span>}&nbsp;&nbsp;</span></li></ol></div><textarea style="display: none;" cols="80" rows="5" class="groovy:nocontrols:nogutter" name="srccode">def builder = new JsonGroovyBuilder()
+def books = builder.books {
+   book = [title: "Groovy in Action", author: "Dierk Konig"]
+   book = [title: "Groovy in Action", author: "Dierk Konig"]
+}
+</textarea><div class="dp-highlighter nogutter"><div class="bar"></div><ol class="dp-g" start="1"><li class="alt"><span><span class="keyword">def</span><span>&nbsp;builder&nbsp;=&nbsp;</span><span class="keyword">new</span><span>&nbsp;JsonGroovyBuilder()&nbsp;&nbsp;</span></span></li><li class=""><span><span class="keyword">def</span><span>&nbsp;books&nbsp;=&nbsp;builder.books&nbsp;{&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;book&nbsp;=&nbsp;<span class="keyword">new</span><span>&nbsp;Book(title:&nbsp;</span><span class="string">"Groovy&nbsp;in&nbsp;Action"</span><span>,&nbsp;author:&nbsp;</span><span class="string">"Dierk&nbsp;Konig"</span><span>)&nbsp;&nbsp;</span></span></li><li class=""><span>}&nbsp;&nbsp;</span></li></ol></div><textarea style="display: none;" cols="80" rows="5" class="groovy:nocontrols:nogutter" name="srccode">def builder = new JsonGroovyBuilder()
+def books = builder.books {
+   book = new Book(title: "Groovy in Action", author: "Dierk Konig")
+}
+</textarea><div class="dp-highlighter nogutter"><div class="bar"></div><ol class="dp-g" start="1"><li class="alt"><span><span class="keyword">def</span><span>&nbsp;builder&nbsp;=&nbsp;</span><span class="keyword">new</span><span>&nbsp;JsonGroovyBuilder()&nbsp;&nbsp;</span></span></li><li class=""><span><span class="keyword">def</span><span>&nbsp;books&nbsp;=&nbsp;builder.books&nbsp;{&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;book&nbsp;=&nbsp;{&nbsp;&nbsp;</span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;title&nbsp;=&nbsp;<span class="string">"Groovy&nbsp;in&nbsp;Action"</span><span>&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;author=&nbsp;<span class="string">"Dierk&nbsp;Konig"</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;</span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;book&nbsp;=&nbsp;{&nbsp;&nbsp;</span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;title&nbsp;=&nbsp;<span class="string">"Groovy&nbsp;in&nbsp;Action"</span><span>&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;author=&nbsp;<span class="string">"Dierk&nbsp;Konig"</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;</span></li><li class="alt"><span>}&nbsp;&nbsp;</span></li></ol></div><textarea style="display: none;" cols="80" rows="5" class="groovy:nocontrols:nogutter" name="srccode">def builder = new JsonGroovyBuilder()
+def books = builder.books {
+   book = {
+      title = "Groovy in Action"
+      author= "Dierk Konig"
+   }
+   book = {
+      title = "Groovy in Action"
+      author= "Dierk Konig"
+   }
+}
+</textarea><div class="dp-highlighter nogutter"><div class="bar"></div><ol class="dp-g" start="1"><li class="alt"><span><span class="keyword">def</span><span>&nbsp;builder&nbsp;=&nbsp;</span><span class="keyword">new</span><span>&nbsp;JsonGroovyBuilder()&nbsp;&nbsp;</span></span></li><li class=""><span><span class="keyword">def</span><span>&nbsp;books&nbsp;=&nbsp;builder.books&nbsp;{&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;<span class="number">2</span><span>.</span><span class="method">times</span><span>&nbsp;{&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;book&nbsp;=&nbsp;{&nbsp;&nbsp;</span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;title&nbsp;=&nbsp;<span class="string">"Groovy&nbsp;in&nbsp;Action"</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;author=&nbsp;<span class="string">"Dierk&nbsp;Konig"</span><span>&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;</span></li><li class=""><span>&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;</span></li><li class="alt"><span>}&nbsp;&nbsp;</span></li></ol></div><textarea style="display: none;" cols="80" rows="5" class="groovy:nocontrols:nogutter" name="srccode">def builder = new JsonGroovyBuilder()
+def books = builder.books {
+   2.times {
+      book = {
+         title = "Groovy in Action"
+         author= "Dierk Konig"
+      }
+   }
+}
+</textarea><div class="dp-highlighter nogutter"><div class="bar"></div><ol class="dp-g" start="1"><li class="alt"><span><span class="keyword">def</span><span>&nbsp;builder&nbsp;=&nbsp;</span><span class="keyword">new</span><span>&nbsp;JsonGroovyBuilder()&nbsp;&nbsp;</span></span></li><li class=""><span><span class="keyword">def</span><span>&nbsp;books&nbsp;=&nbsp;builder.books&nbsp;{&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;<span class="number">2</span><span>.</span><span class="method">times</span><span>&nbsp;{&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;book&nbsp;{&nbsp;&nbsp;</span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;title&nbsp;=&nbsp;<span class="string">"Groovy&nbsp;in&nbsp;Action"</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;author=&nbsp;<span class="string">"Dierk&nbsp;Konig"</span><span>&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;</span></li><li class=""><span>&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;</span></li><li class="alt"><span>}&nbsp;&nbsp;</span></li></ol></div><textarea style="display: none;" cols="80" rows="5" class="groovy:nocontrols:nogutter" name="srccode">def builder = new JsonGroovyBuilder()
+def books = builder.books {
+   2.times {
+      book {
+         title = "Groovy in Action"
+         author= "Dierk Konig"
+      }
+   }
+}
+</textarea><div class="dp-highlighter nogutter"><div class="bar"></div><ol class="dp-g" start="1"><li class="alt"><span><span class="keyword">def</span><span>&nbsp;builder&nbsp;=&nbsp;</span><span class="keyword">new</span><span>&nbsp;JsonGroovyBuilder()&nbsp;&nbsp;</span></span></li><li class=""><span><span class="keyword">def</span><span>&nbsp;books&nbsp;=&nbsp;builder.books&nbsp;{&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;book&nbsp;{&nbsp;&nbsp;</span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;title&nbsp;=&nbsp;<span class="string">"Groovy&nbsp;in&nbsp;Action"</span><span>&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;author=&nbsp;<span class="string">"Dierk&nbsp;Konig"</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;</span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;book&nbsp;{&nbsp;&nbsp;</span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;title&nbsp;=&nbsp;<span class="string">"Groovy&nbsp;in&nbsp;Action"</span><span>&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;author=&nbsp;<span class="string">"Dierk&nbsp;Konig"</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;</span></li><li class="alt"><span>}&nbsp;&nbsp;</span></li></ol></div><textarea style="display: none;" cols="80" rows="5" class="groovy:nocontrols:nogutter" name="srccode">def builder = new JsonGroovyBuilder()
+def books = builder.books {
+   book {
+      title = "Groovy in Action"
+      author= "Dierk Konig"
+   }
+   book {
+      title = "Groovy in Action"
+      author= "Dierk Konig"
+   }
+}
+</textarea><div class="dp-highlighter nogutter"><div class="bar"></div><ol class="dp-c" start="1"><li class="alt"><span><span>{&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;<span class="string">"books"</span><span>:&nbsp;{&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="string">"book"</span><span>:&nbsp;[&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;&nbsp;</span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="string">"title"</span><span>:&nbsp;</span><span class="string">"Groovy&nbsp;in&nbsp;Action"</span><span>,&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="string">"author"</span><span>:&nbsp;</span><span class="string">"Dierk&nbsp;Konig"</span><span>&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;},&nbsp;&nbsp;</span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;&nbsp;</span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="string">"title"</span><span>:&nbsp;</span><span class="string">"Groovy&nbsp;in&nbsp;Action"</span><span>,&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="string">"author"</span><span>:&nbsp;</span><span class="string">"Dierk&nbsp;Konig"</span><span>&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;</span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;]&nbsp;&nbsp;</span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;</span></li><li class=""><span>}&nbsp;&nbsp;</span></li></ol></div><textarea style="display: none;" cols="80" rows="5" class="js:nocontrols:nogutter" name="srccode">{
+   "books": {
+      "book": [
+         {
+	    "title": "Groovy in Action",
+	    "author": "Dierk Konig"
+	 },
+         {
+	    "title": "Groovy in Action",
+	    "author": "Dierk Konig"
+	 }
+      ]
+   }
+}
+</textarea>[<a href="#Snippets">Index</a>
+|<a href="#Groovy">Groovy Support</a>
+]
+	 </div>
+</div>
+<div class="section"><h2><a name="JRuby_Support"></a>
+JRuby Support</h2>
+<div class="section"><h3><a name="Creating_a_JSONObject"></a>
+Creating a JSONObject</h3>
+<div class="dp-highlighter nogutter"><div class="bar"></div><ol class="dp-rb" start="1"><li class="alt"><span><span>json&nbsp;=&nbsp;JSONObject.</span><span class="keyword">new</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span>json.element(<span class="string">"string"</span><span>,</span><span class="string">"json"</span><span>).element(</span><span class="string">"bool"</span><span>,</span><span class="keyword">true</span><span>)&nbsp;&nbsp;</span></span></li><li class="alt"><span>json[<span class="string">"integer"</span><span>]&nbsp;=&nbsp;1&nbsp;&nbsp;</span></span></li><li class=""><span>assert_equal&nbsp;<span class="string">"json"</span><span>,&nbsp;json[</span><span class="string">"string"</span><span>]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span></li><li class="alt"><span>assert_equal&nbsp;<span class="keyword">true</span><span>,&nbsp;json[</span><span class="string">"bool"</span><span>]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span></li><li class=""><span>assert_equal&nbsp;1,&nbsp;json[<span class="string">"integer"</span><span>]&nbsp;&nbsp;&nbsp;&nbsp;</span></span></li></ol></div><textarea style="display: none;" cols="80" rows="5" class="ruby:nocontrols:nogutter" name="srccode">json = JSONObject.new
+json.element("string","json").element("bool",true)
+json["integer"] = 1
+assert_equal "json", json["string"]  		
+assert_equal true, json["bool"]  		
+assert_equal 1, json["integer"]  
+</textarea>[<a href="#Snippets">Index</a>
+|<a href="#JRuby">JRuby Support</a>
+]
+	 </div>
+<div class="section"><h3><a name="Append_elements_to_JSONObject_with__array"></a>
+Append elements to JSONObject with &lt;&lt; (array)</h3>
+<div class="dp-highlighter nogutter"><div class="bar"></div><ol class="dp-rb" start="1"><li class="alt"><span><span>json&nbsp;=&nbsp;JSONObject.</span><span class="keyword">new</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span>json&nbsp;&amp;&amp;&nbsp;[<span class="string">"key"</span><span>,</span><span class="string">"value"</span><span>]&nbsp;&nbsp;</span></span></li><li class="alt"><span>assert&nbsp;!json.empty?&nbsp;&nbsp;</span></li><li class=""><span>assert_equal&nbsp;<span class="string">"value"</span><span>,&nbsp;json[</span><span class="string">"key"</span><span>]&nbsp;&nbsp;</span></span></li></ol></div><textarea style="display: none;" cols="80" rows="5" class="ruby:nocontrols:nogutter" name="srccode">json = JSONObject.new
+json &amp;&amp; ["key","value"]
+assert !json.empty?
+assert_equal "value", json["key"]
+</textarea>[<a href="#Snippets">Index</a>
+|<a href="#JRuby">JRuby Support</a>
+]
+	 </div>
+<div class="section"><h3><a name="Append_elements_to_JSONObject_with__hash"></a>
+Append elements to JSONObject with &lt;&lt; (hash)</h3>
+<div class="dp-highlighter nogutter"><div class="bar"></div><ol class="dp-rb" start="1"><li class="alt"><span><span>json&nbsp;=&nbsp;JSONObject.</span><span class="keyword">new</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span>json&nbsp;&amp;&nbsp;{<span class="string">"key1"</span><span>&nbsp;=&gt;&nbsp;</span><span class="string">"value1"</span><span>,&nbsp;</span><span class="string">"key2"</span><span>&nbsp;=&gt;&nbsp;</span><span class="string">"value2"</span><span>&nbsp;}&nbsp;&nbsp;</span></span></li><li class="alt"><span>assert&nbsp;!json.empty?&nbsp;&nbsp;</span></li><li class=""><span>assert_equal&nbsp;2,&nbsp;json.size()&nbsp;&nbsp;</span></li><li class="alt"><span>assert_equal&nbsp;<span class="string">"value1"</span><span>,&nbsp;json[</span><span class="string">"key1"</span><span>]&nbsp;&nbsp;</span></span></li><li class=""><span>assert_equal&nbsp;<span class="string">"value2"</span><span>,&nbsp;json[</span><span class="string">"key2"</span><span>]&nbsp;&nbsp;</span></span></li></ol></div><textarea style="display: none;" cols="80" rows="5" class="ruby:nocontrols:nogutter" name="srccode">json = JSONObject.new
+json &amp; {"key1" =&gt; "value1", "key2" =&gt; "value2" }
+assert !json.empty?
+assert_equal 2, json.size()
+assert_equal "value1", json["key1"]
+assert_equal "value2", json["key2"]
+</textarea>[<a href="#Snippets">Index</a>
+|<a href="#JRuby">JRuby Support</a>
+]
+	 </div>
+</div>
+
+      </div>
+    </div>
+    <div class="clear">
+      <hr>
+    </div>
+    <div id="footer">
+      <div class="xright">©  
+          2006-2008
+    
+          Json-lib
+          
+  
+
+  
+    
+  
+  
+    
+  </div>
+      <div class="clear">
+        <hr>
+      </div>
+    </div>
+    <script language="javascript">
+      dp.SyntaxHighlighter.HighlightAll('srccode');
+    </script>
+  </body></html>

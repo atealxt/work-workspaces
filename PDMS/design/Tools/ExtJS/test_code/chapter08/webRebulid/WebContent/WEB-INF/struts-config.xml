@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts-config PUBLIC
+	  "-//Apache Software Foundation//DTD Struts Configuration 1.3//EN"
+	  "http://struts.apache.org/dtds/struts-config_1_3.dtd">
+<struts-config>
+	<action-mappings>
+		<action path="/book" type="action.BookAction" parameter="method">
+			<forward name="bookTypeList" path="/pages/bookTypeList.jsp"/>
+			<forward name="toBookTypeList" path="/book.do?method=showBookTypeList" redirect="true"/>
+			<forward name="bookList" path="/pages/bookList.jsp"/>
+			<forward name="toBookList" path="/book.do?method=showBookList" redirect="true"/>
+			<forward name="addBook" path="/pages/addBook.jsp"/>
+			<forward name="addBookType" path="/pages/addBookType.jsp"/>
+			<forward name="modifyBook" path="/pages/modifyBook.jsp"/>
+			<forward name="modifyBookType" path="/pages/modifyBookType.jsp"/>
+			<forward name="error" path="/pages/error.jsp"/>
+			<forward name="message" path="/pages/msg.jsp"/>
+		</action>
+		<action path="/bookext" type="action.BookActionExt" parameter="method">
+			<forward name="bookList" path="/pagesExt/bookList.jsp"/>
+			<forward name="bookTypeList" path="/pagesExt/bookTypeList.jsp"/>
+		</action>
+	</action-mappings>
+</struts-config>

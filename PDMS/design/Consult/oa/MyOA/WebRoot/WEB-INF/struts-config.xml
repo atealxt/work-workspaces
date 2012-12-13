@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+
+<struts-config>
+	<!-- 
+		<data-sources>
+		<data-source type="org.apache.commons.dbcp.BasicDataSource">
+		<set-property property="driverClassName"
+		value="org.gjt.mm.mysql.Driver" />
+		<set-property property="url"
+		value="jdbc:mysql://localhost:3306/demo" />
+		<set-property property="username" value="root" />
+		<set-property property="password" value="" />
+		<set-property property="maxActive" value="10" />
+		<set-property property="maxWait" value="5000" />
+		<set-property property="defaultAutoCommit" value="false" />
+		<set-property property="defaultReadOnly" value="false" />
+		<set-property property="validationQuery"
+		value="SELECT COUNT(*) FROM user" />
+		</data-source>
+		</data-sources>
+	-->
+	<form-beans>
+		<form-bean name="pageForm"
+			type="com.oa.struts.forms.PageForm">
+		</form-bean>
+		<form-bean name="loginForm"
+			type="com.oa.struts.forms.LoginForm">
+		</form-bean>
+		<form-bean name="personForm"
+			type="com.oa.struts.forms.PersonForm">
+		</form-bean>
+		<form-bean name="registerForm"
+			type="com.oa.struts.forms.RegisterForm">
+		</form-bean>
+		<form-bean name="upfileForm"
+			type="com.oa.struts.forms.UpfileForm">
+		</form-bean>
+		<form-bean name="addressForm"
+			type="com.oa.struts.forms.AddressForm">
+		</form-bean>
+		<form-bean name="scheduleForm"
+			type="com.oa.struts.forms.ScheduleForm">
+		</form-bean>
+		<form-bean name="worklogForm"
+			type="com.oa.struts.forms.WorklogForm">
+		</form-bean>
+		<form-bean name="smsForm"
+			type="com.oa.struts.forms.SmsForm">
+		</form-bean>
+		<form-bean name="noticeForm"
+			type="com.oa.struts.forms.NoticeForm">
+		</form-bean>
+		<form-bean name="meetingForm"
+			type="com.oa.struts.forms.MeetingForm">
+		</form-bean>
+	</form-beans>
+
+	<global-exceptions />
+	<global-forwards>
+		<forward name="welcome" path="/welcome.do" />
+		<forward name="login" path="/login.do" />
+		<forward name="index" path="/login.jsp" />
+	</global-forwards>
+
+	<action-mappings>
+		<action path="/index" forward="/login.jsp" />
+		<action path="/welcome" forward="/welcome.jsp" />
+
+		<action path="/login" name="loginForm" scope="request"
+			type="org.springframework.web.struts.DelegatingActionProxy"
+			input="/login.jsp">
+			<forward name="success" path="/welcome.jsp" />
+			<forward name="failure" path="/login.jsp" />
+		</action>
+
+		<action path="/logout"
+			type="org.springframework.web.struts.DelegatingActionProxy">
+			<forward name="logout" path="/login.jsp" />
+		</action>
+
+		<action path="/register" parameter="method" name="registerForm"
+			scope="request"
+			type="org.springframework.web.struts.DelegatingActionProxy"
+			input="/register.jsp">
+			<forward name="success" path="/login.jsp" />
+			<forward name="failure" path="/register.jsp" />
+		</action>
+
+		<!-- 通讯录模块 -->
+		<action path="/address" parameter="method" name="pageForm"
+			scope="request"
+			type="org.springframework.web.struts.DelegatingActionProxy">
+			<forward name="list" path="/address/address.jsp" />
+		</action>
+		<action path="/address_add" parameter="method"
+			name="addressForm" scope="request"
+			type="org.springframework.web.struts.DelegatingActionProxy"
+			input="/address/address_add.jsp">
+			<forward name="list" path="/address/address.jsp" />
+			<forward name="add" path="/address/address_add.jsp" />
+		</action>
+		<action path="/address_edit" parameter="method"
+			name="addressForm" scope="request"
+			type="org.springframework.web.struts.DelegatingActionProxy"
+			input="/address/address_edit.jsp">
+			<forward name="list" path="/address/address.jsp" />
+			<forward name="edit" path="/address/address_edit.jsp" />
+		</action>
+		<action path="/address_view" parameter="method"
+			name="addressForm" scope="request"
+			type="org.springframework.web.struts.DelegatingActionProxy"
+			input="/address/address_view.jsp">
+			<forward name="list" path="/address/address.jsp" />
+			<forward name="view" path="/address/address_view.jsp" />
+		</action>
+		
+		<!-- 人力资源管理模块 -->
+		<action path="/person" parameter="method" name="pageForm"
+			scope="request"
+			type="org.springframework.web.struts.DelegatingActionProxy">
+			<forward name="list" path="/person/person.jsp" />
+		</action>
+		<action path="/person_add" parameter="method"
+			name="personForm" scope="request"
+			type="org.springframework.web.struts.DelegatingActionProxy"
+			input="/person/person_add.jsp">
+			<forward name="list" path="/person/person.jsp" />
+			<forward name="add" path="/person/person_add.jsp" />
+		</action>
+		<action path="/person_edit" parameter="method"
+			name="personForm" scope="request"
+			type="org.springframework.web.struts.DelegatingActionProxy"
+			input="/person/person_edit.jsp">
+			<forward name="list" path="/person/person.jsp" />
+			<forward name="edit" path="/person/person_edit.jsp" />
+			<forward name="mywelcome" path="/welcome.jsp" />
+		</action>
+		<action path="/person_view" parameter="method"
+			name="personForm" scope="request"
+			type="org.springframework.web.struts.DelegatingActionProxy"
+			input="/person/person_view.jsp">
+			<forward name="list" path="/person/person.jsp" />
+			<forward name="view" path="/person/person_view.jsp" />
+		</action>
+
+		<!-- 日程安排模块 -->
+		<action path="/schedule" parameter="method" name="pageForm"
+			scope="request"
+			type="org.springframework.web.struts.DelegatingActionProxy">
+			<forward name="list" path="/schedule/schedule.jsp" />
+		</action>
+		<action path="/schedule_add" parameter="method"
+			name="scheduleForm" scope="request"
+			type="org.springframework.web.struts.DelegatingActionProxy"
+			input="/schedule/schedule_add.jsp">
+			<forward name="list" path="/schedule/schedule.jsp" />
+			<forward name="add" path="/schedule/schedule_add.jsp" />
+		</action>
+		<action path="/schedule_edit" parameter="method"
+			name="scheduleForm" scope="request"
+			type="org.springframework.web.struts.DelegatingActionProxy"
+			input="/schedule/schedule_edit.jsp">
+			<forward name="list" path="/schedule/schedule.jsp" />
+			<forward name="edit" path="/schedule/schedule_edit.jsp" />
+		</action>
+		<action path="/schedule_view" parameter="method"
+			name="scheduleForm" scope="request"
+			type="org.springframework.web.struts.DelegatingActionProxy"
+			input="/schedule/schedule_view.jsp">
+			<forward name="list" path="/schedule/schedule.jsp" />
+			<forward name="view" path="/schedule/schedule_view.jsp" />
+		</action>
+
+		<!-- 工作日志 -->
+		<action path="/worklog" parameter="method" name="pageForm"
+			scope="request"
+			type="org.springframework.web.struts.DelegatingActionProxy">
+			<forward name="list" path="/worklog/worklog.jsp" />
+		</action>
+		<action path="/worklog_add" parameter="method"
+			name="worklogForm" scope="request"
+			type="org.springframework.web.struts.DelegatingActionProxy"
+			input="/worklog/worklog_add.jsp">
+			<forward name="list" path="/worklog/worklog.jsp" />
+			<forward name="add" path="/worklog/worklog_add.jsp" />
+		</action>
+		<action path="/worklog_edit" parameter="method"
+			name="worklogForm" scope="request"
+			type="org.springframework.web.struts.DelegatingActionProxy"
+			input="/worklog/worklog_edit.jsp">
+			<forward name="list" path="/worklog/worklog/worklog.jsp" />
+			<forward name="edit" path="/worklog/worklog_edit.jsp" />
+		</action>
+		<action path="/worklog_view" parameter="method"
+			name="worklogForm" scope="request"
+			type="org.springframework.web.struts.DelegatingActionProxy"
+			input="/worklog/worklog_view.jsp">
+			<forward name="list" path="/worklog/worklog/worklog.jsp" />
+			<forward name="view" path="/worklog/worklog_view.jsp" />
+		</action>
+
+		<!-- 短消息管理 -->
+		<action path="/sms" parameter="method" name="pageForm"
+			scope="request"
+			type="org.springframework.web.struts.DelegatingActionProxy">
+			<forward name="list" path="/sms/sms.jsp" />
+		</action>
+		<action path="/sms_add" parameter="method" name="smsForm"
+			scope="request"
+			type="org.springframework.web.struts.DelegatingActionProxy"
+			input="/sms/sms_add.jsp">
+			<forward name="list" path="/sms/sms.jsp" />
+			<forward name="add" path="/sms/sms_add.jsp" />
+		</action>
+		<action path="/sms_view" parameter="method" name="smsForm"
+			scope="request"
+			type="org.springframework.web.struts.DelegatingActionProxy"
+			input="/sms/sms_view.jsp">
+			<forward name="list" path="/sms/sms.jsp" />
+			<forward name="view" path="/sms/sms_view.jsp" />
+		</action>
+		
+		<!-- 文档管理 -->
+		<action path="/file" parameter="method" name="pageForm"
+			scope="request"
+			type="org.springframework.web.struts.DelegatingActionProxy">
+			<forward name="list" path="/myfile/look_file.jsp" />
+		</action>
+		<action path="/file_up" parameter="method" name="upfileForm"
+			scope="request"
+			type="org.springframework.web.struts.DelegatingActionProxy"
+			input="/myfile/up_file.jsp">
+			<forward name="list" path="/myfile/look_file.jsp" />
+			<forward name="up" path="/myfile/up_file.jsp" />
+		</action>
+		<action path="/file_view" parameter="method" name="upfileForm"
+			scope="request"
+			type="org.springframework.web.struts.DelegatingActionProxy"
+			input="/myfile/look_siglefile.jsp">
+			<forward name="list" path="/myfile/look_file.jsp" />
+			<forward name="view" path="/myfile/look_siglefile.jsp" />
+		</action>
+		<action path="/file_download" parameter="method" name="upfileForm"
+			scope="request"
+			type="org.springframework.web.struts.DelegatingActionProxy">
+		</action>
+
+		<!-- 公告管理 -->
+		<action path="/notice" parameter="method" name="pageForm"
+			scope="request"
+			type="org.springframework.web.struts.DelegatingActionProxy">
+			<forward name="list" path="/notice/notice.jsp" />
+		</action>
+		<action path="/notice_add" parameter="method" name="noticeForm"
+			scope="request"
+			type="org.springframework.web.struts.DelegatingActionProxy"
+			input="/notice/notice_add.jsp">
+			<forward name="list" path="/notice/notice.jsp" />
+			<forward name="add" path="/notice/notice_add.jsp" />
+		</action>
+		<action path="/notice_edit" parameter="method" name="noticeForm"
+			scope="request"
+			type="org.springframework.web.struts.DelegatingActionProxy"
+			input="/notice/notice_edit.jsp">
+			<forward name="list" path="/notice/notice.jsp" />
+			<forward name="edit" path="/notice/notice_edit.jsp" />
+		</action>
+		<action path="/notice_view" parameter="method" name="noticeForm"
+			scope="request"
+			type="org.springframework.web.struts.DelegatingActionProxy"
+			input="/notice/notice_view.jsp">
+			<forward name="list" path="/notice/notice.jsp" />
+			<forward name="view" path="/notice/notice_view.jsp" />
+		</action>
+
+		<!-- 会议管理 -->
+		<action path="/meeting" parameter="method" name="pageForm"
+			scope="request"
+			type="org.springframework.web.struts.DelegatingActionProxy">
+			<forward name="list" path="/meeting/meeting.jsp" />
+		</action>
+		<action path="/meeting_add" parameter="method"
+			name="meetingForm" scope="request"
+			type="org.springframework.web.struts.DelegatingActionProxy"
+			input="/meeting/meeting_add.jsp">
+			<forward name="list" path="/meeting/meeting.jsp" />
+			<forward name="add" path="/meeting/meeting_add.jsp" />
+		</action>
+		<action path="/meeting_edit" parameter="method"
+			name="meetingForm" scope="request"
+			type="org.springframework.web.struts.DelegatingActionProxy"
+			input="/meeting/meeting_edit.jsp">
+			<forward name="list" path="/meeting/meeting.jsp" />
+			<forward name="edit" path="/meeting/meeting_edit.jsp" />
+		</action>
+		<action path="/meeting_view" parameter="method"
+			name="meetingForm" scope="request"
+			type="org.springframework.web.struts.DelegatingActionProxy"
+			input="/meeting/meeting_view.jsp">
+			<forward name="list" path="/meeting/meeting.jsp" />
+			<forward name="view" path="/meeting/meeting_view.jsp" />
+		</action>
+	</action-mappings>
+
+	<!-- 
+		<controller processorClass="org.springframework.web.struts.DelegatingRequestProcessor" />
+	-->
+
+	<message-resources
+		parameter="com.oa.struts.resources.ApplicationResources" />
+
+	<!-- 
+		<plug-in
+		className="org.springframework.web.struts.ContextLoaderPlugIn">
+		<set-property property="contextConfigLocation"
+		value="/WEB-INF/applicationContext.xml" />
+		</plug-in>
+	-->
+
+</struts-config>
+

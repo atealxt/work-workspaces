@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- The contents of this file will be loaded for each web application -->
+<Context path="/SOA">
+  <!-- Default set of monitored resources -->
+  <WatchedResource>WEB-INF/web.xml</WatchedResource>
+  <!-- Uncomment this to disable session persistence across Tomcat restarts -->
+  <!--
+    <Manager pathname="" />
+    -->
+    <Resource auth="Container" driverClassName="org.postgresql.Driver" maxActive="20" maxIdle="10" maxWait="-1" name="jdbc/Fortune-Sun" password="test" type="javax.sql.DataSource" url="jdbc:postgresql://127.0.0.1:5432/Fortune-Sun" username="test"/>
+	<Resource auth="Container" driverClassName="org.postgresql.Driver" maxActive="20" maxIdle="10" maxWait="-1" name="jdbc/Collaboration" password="test" type="javax.sql.DataSource" url="jdbc:postgresql://127.0.0.1:5432/Collaboration" username="test"/>
+  <ResourceLink global="jdbc/Fortune-Sun" name="jdbc/Fortune-Sun" type="javax.sql.DataSourcer"/>
+  <ResourceLink global="jdbc/Collaboration" name="jdbc/Collaboration" type="javax.sql.DataSourcer"/>
+</Context>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<setting>
+	<nameset>
+	    <name>CS&amp;S</name>
+	</nameset>
+	
+	<ipset>
+		<server>172.16.98.193</server>
+	</ipset>
+</setting>

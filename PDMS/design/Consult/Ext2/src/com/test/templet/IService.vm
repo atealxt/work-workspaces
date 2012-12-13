@@ -1,0 +1,34 @@
+package ${package}.service;
+
+import java.util.List;
+
+import ${package}.model.${object_name}Model;
+
+ /**
+ *
+ * <p>Title: </p>
+ * <p>Description: </p>
+ * <p>Copyright: Copyright (c) 2008</p>
+ * <p>Company: ${company}</p>
+ * @author ${author}
+ * @version 1.0
+ */
+public interface I${object_name}Service {
+	
+	//
+	public int create${object_name}(${object_name}Model model);
+	//
+    public int update${object_name}(${object_name}Model model);
+    //
+    public int delete${object_name}(${object_name}Model model);
+    //
+    public List<${object_name}Model> get${object_name}List(${object_name}Model model);
+    //
+    public int get${object_name}Count(${object_name}Model model);
+    //
+    public List<${object_name}Model> get${object_name}List(int start,int count,${object_name}Model model);
+    //
+    public ${object_name}Model get${object_name}(${object_name}Model model);
+    
+}
+

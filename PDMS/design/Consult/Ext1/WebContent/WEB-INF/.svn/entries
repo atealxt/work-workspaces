@@ -1,0 +1,55 @@
+8
+
+dir
+11
+https://127.0.0.1:8443/svn/System/SOA/WebContent/WEB-INF
+https://127.0.0.1:8443/svn/System
+
+
+
+2008-12-08T19:02:05.752718Z
+4
+admin
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+6a5171dd-9f07-d045-9c23-843b323693ed
+
+lib
+dir
+
+log4j.properties
+file
+
+
+
+
+2008-12-06T02:17:06.363923Z
+9b67105eb7d512575ed8a7f994f446d0
+2008-12-08T19:02:05.752718Z
+4
+admin
+
+web.xml
+file
+
+
+
+
+2008-11-29T00:44:43.202988Z
+cd5a6e4c43d918bd439ff29362fd97da
+2008-12-03T21:20:26.465394Z
+2
+admin
+

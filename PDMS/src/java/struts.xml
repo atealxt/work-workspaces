@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+
+    <!--when set to true, Struts will act much more friendly for developers-->
+    <!--but show -ERROR- com.opensymphony.xwork2.interceptor.ParametersInterceptor-->
+    <constant name="struts.devMode" value="false"/>
+    <!--Standard UI theme-->
+    <constant name="struts.ui.theme" value="simple"/>
+    <!--This can be used to set your default locale and encoding scheme-->
+    <constant name="struts.i18n.encoding" value="UTF-8"/>
+    <!--<constant name="struts.locale" value="en_US"/>-->
+
+    <!--struts2-spring-plugin-->
+    <constant name="struts.objectFactory" value="spring"/>
+
+    <!--import file-->
+    <include file="struts-default.xml"/>
+    <include file="struts-A0000Test.xml"/>
+    <include file="struts-A0100Login.xml"/>
+    <include file="struts-A0200Main.xml"/>
+    <include file="struts-A0300Project.xml"/>
+    <include file="struts-A0400Topic.xml"/>
+    <include file="struts-A0500UserM.xml"/>
+    <include file="struts-A0600ProjectM.xml"/>
+    <include file="struts-A0700FProjectM.xml"/>
+    <include file="struts-A0800User.xml"/>
+    <include file="struts-A0900File.xml"/>
+    <include file="struts-A1000MyMission.xml"/>
+    <include file="struts-A1100Search.xml"/>
+    <include file="struts-A1200GroupM.xml"/>
+    <include file="struts-A1300Chart.xml"/>
+
+</struts>

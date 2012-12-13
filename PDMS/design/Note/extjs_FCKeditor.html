@@ -1,0 +1,3359 @@
+<html dir="ltr" lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+
+	
+<meta name="keywords" content="[2.0 A.1] FCKeditor Form Field Extention, Ext, Ext JS, Ext JavaScript, Ext JavaScript Library, yui-ext, JavaScript, widgets, grid, tree, ajax, javascript library, js library">
+<meta name="description" content="[2.0 A.1] FCKeditor Form Field Extention Ext: Help">
+
+
+
+<link rel="stylesheet" type="text/css" href="extjs_FCKeditor_files/extjs.css">
+	<link rel="stylesheet" type="text/css" href="extjs_FCKeditor_files/core.css">
+	
+	<script type="text/javascript" src="extjs_FCKeditor_files/extjs.js"></script>
+	<script type="text/javascript" src="extjs_FCKeditor_files/site.js"></script>
+
+<!-- CSS Stylesheet -->
+<style type="text/css" id="vbulletin_css">
+<!--
+/* vBulletin 3 CSS For Style 'Ext JS' (styleid: 2) */
+body
+{
+	background: #fff;
+	color: #555555;
+}
+a:link, body_alink
+{
+	color: #175c9e;
+	text-decoration: none;
+}
+a:visited, body_avisited
+{
+	color: #175c9e;
+	text-decoration: none;
+}
+a:hover, a:active, body_ahover
+{
+	color: #385F95;
+	text-decoration: underline;
+}
+.page
+{
+	background: #FFFFFF;
+	color: #000000;
+}
+.tborder
+{
+	background: #ffffff;
+	color: #000000;
+	border: 1px solid #dadada;
+}
+.tcat
+{
+	background: #ddd url(/assets/images/item-hd.gif) repeat-x 0 bottom;
+	color: #222;
+	font-size: 12px;
+	font-weight:bold;
+	padding:3px;
+}
+.tcat a:link, .tcat_alink
+{
+	color: #222;
+	text-decoration: none;
+}
+.tcat a:visited, .tcat_avisited
+{
+	color: #222;
+	text-decoration: none;
+}
+.tcat a:hover, .tcat a:active, .tcat_ahover
+{
+	color: #222;
+	text-decoration: underline;
+}
+.thead
+{
+	background: #f9f9f9 url(/assets/images/item-hd4.gif) repeat-x 0 bottom;
+	color: #444;
+	font-size: 11px;
+	border-bottom:1px solid #dadada;
+}
+.thead a:link, .thead_alink
+{
+	color: #444;
+}
+.thead a:visited, .thead_avisited
+{
+	color: #444;
+}
+.thead a:hover, .thead a:active, .thead_ahover
+{
+	color: #444;
+}
+.tfoot
+{
+	background: #f9f9f9 url(/assets/images/item-hd4.gif) repeat-x 0 bottom;
+	color: #222;
+	font-size: 11px;
+	padding:3px;
+}
+.tfoot a:link, .tfoot_alink
+{
+	color: #222;
+}
+.tfoot a:visited, .tfoot_avisited
+{
+	color: #222;
+}
+.tfoot a:hover, .tfoot a:active, .tfoot_ahover
+{
+	color: #222;
+}
+.alt1, .alt1Active
+{
+	background: #ffffff;
+	color: #000000;
+}
+.alt2, .alt2Active
+{
+	background: #ffffff;
+	color: #000000;
+}
+td.inlinemod
+{
+	background: #FFFFCC;
+	color: #000000;
+}
+.wysiwyg
+{
+	background: #f1f1f1;
+	color: #000000;
+	font: 10pt verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+}
+textarea, .bginput
+{
+	font: 10pt verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+}
+.button
+{
+	font: 11px verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+}
+select
+{
+	font: 11px verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+}
+option, optgroup
+{
+	font-size: 11px;
+	font-family: verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+}
+.smallfont
+{
+	font: 11px verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+}
+.time
+{
+	color: #666686;
+}
+.navbar
+{
+	font: 11px verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+}
+.highlight
+{
+	color: #FF0000;
+	font-weight: bold;
+}
+.fjsel
+{
+	background: #3E5C92;
+	color: #E0E0F6;
+}
+.fjdpth0
+{
+	background: #F7F7F7;
+	color: #000000;
+}
+.panel
+{
+	background: #f1f1f1;
+	color: #000000;
+	padding: 10px;
+	border:0 none;
+}
+.panelsurround
+{
+	background: #f1f1f1;
+	color: #000000;
+}
+legend
+{
+	color: #22229C;
+	font: 11px tahoma, verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+}
+.vbmenu_control
+{
+	background: #ddd url(/assets/images/item-hd.gif) repeat-x 0 bottom;
+	color: #222;
+	padding: 3px 6px 3px 6px;
+	white-space: nowrap;
+}
+.vbmenu_control a:link, .vbmenu_control_alink
+{
+	color: #222;
+	text-decoration: none;
+}
+.vbmenu_control a:visited, .vbmenu_control_avisited
+{
+	color: #222;
+	text-decoration: none;
+}
+.vbmenu_control a:hover, .vbmenu_control a:active, .vbmenu_control_ahover
+{
+	color: #000;
+	text-decoration: underline;
+}
+.vbmenu_popup
+{
+	background: #FFFFFF;
+	color: #000000;
+	border: 1px solid #dadada;
+}
+.vbmenu_option
+{
+	background: #FFFFFF;
+	color: #555555;
+	white-space: nowrap;
+	cursor: pointer;
+	padding:3px 12px;
+}
+.vbmenu_option a:link, .vbmenu_option_alink
+{
+	color: #175c9e;
+	text-decoration: none;
+}
+.vbmenu_option a:visited, .vbmenu_option_avisited
+{
+	color: #175c9e;
+	text-decoration: none;
+}
+.vbmenu_option a:hover, .vbmenu_option a:active, .vbmenu_option_ahover
+{
+	color: #175c9e;
+	text-decoration: underline;
+}
+.vbmenu_hilite
+{
+	background: #eee;
+	white-space: nowrap;
+	cursor: pointer;
+	padding:3px 12px;
+}
+.vbmenu_hilite a:link, .vbmenu_hilite_alink
+{
+	color: #175c9e;
+	text-decoration: none;
+}
+.vbmenu_hilite a:visited, .vbmenu_hilite_avisited
+{
+	color: #175c9e;
+	text-decoration: none;
+}
+.vbmenu_hilite a:hover, .vbmenu_hilite a:active, .vbmenu_hilite_ahover
+{
+	color: #175c9e;
+	text-decoration: none;
+}
+.forum-nav-bar td.vbmenu_control, #threadslist td.vbmenu_control{
+     background:#f9f9f9 url(/assets/images/item-hd4.gif) repeat-x 0 bottom;
+}
+
+.announcements .alt2 strong, .announcements .alt2 .announce-link {
+   color:#789030;
+   font-weight:bold;
+}
+.announcements td.alt1,.announcements td.alt2 {
+    background-color:#e7e9db;
+}
+
+/* ***** styling for 'big' usernames on postbit etc. ***** */
+.bigusername { font-size: 14pt; }
+
+/* ***** small padding on 'thead' elements ***** */
+td.thead, div.thead { padding: 4px; }
+
+/* ***** basic styles for multi-page nav elements */
+.pagenav a { text-decoration: none; }
+.pagenav td { padding: 2px 4px 2px 4px; }
+
+/* ***** define margin and font-size for elements inside panels ***** */
+.fieldset { margin-bottom: 6px; }
+.fieldset, .fieldset td, .fieldset p, .fieldset li { font-size: 11px; }
+
+/* ***** don't change the following ***** */
+form { display: inline; }
+label { cursor: default; }
+.normal { font-weight: normal; }
+.inlineimg { vertical-align: middle; }
+
+td { padding: 3px; }
+#threadslist td#imod { background: #EBECEE url(/assets/images/item-hd4.gif) 0 0px repeat-x }
+
+td.alt1,td.alt1Active,td.alt2 {
+   border-left:1px solid #dddddd;
+   border-bottom:1px solid #dddddd;
+padding:8px;
+}
+td.alt1 table td,td.alt1Active table td,td.alt2 table td {
+   padding:0;
+}
+
+.controlbar iframe { border: 2px solid #C8D9ED; }
+#hd a:link { color: #FFFFFF; }
+
+ul, ol { margin-left:30pt; }
+
+.vbmenu_popup {
+    border:1px solid;
+    border-color:#ccc #aaa #aaa #ccc !important;
+}
+.smallfont {
+    font-family:verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+    font-size:11px;
+}
+
+#bd .codeblock{
+   border:1px solid #ddd;
+   font-size:12px;
+   background:#fafafa;
+   width:840px;
+}
+
+#bd .codeblock pre {
+    margin: 0px;width: 830px;padding:5px;overflow:hidden;white-space: pre-wrap; white-space: -moz-pre-wrap; white-space: -pre-wrap; white-space: -o-pre-wrap; word-wrap: break-word; text-align: left; background:#fafafa; overflow:auto; max-height:500px;
+line-height:15px;
+}
+.ext-border-box #bd .codeblock pre {
+   width:840px;
+}
+
+
+#bd .codeblock pre code {
+    line-height:15px !important;
+}
+#bd .codeblock pre code * {
+    line-height:15px !important;
+}
+
+#bd .quote {
+   font-size:11px;
+}
+#bd .inner-quote {
+   border:1px solid #ebebeb;
+   padding:5px;
+}
+
+
+#bd .quote-hd {
+   background:#fafafa;
+   padding:5px 0;
+}
+
+#bd .quote-orig {
+   font-size:11px;
+   margin-bottom:5px;
+}
+-->
+</style>
+
+<!-- / CSS Stylesheet -->
+
+<script type="text/javascript">
+<!--
+var SESSIONURL = "";
+var IMGDIR_MISC = "images/misc";
+var vb_disable_ajax = parseInt("0", 10);
+// -->
+</script>
+
+<script type="text/javascript" src="extjs_FCKeditor_files/vbulletin_global.js"></script>
+<script type="text/javascript" src="extjs_FCKeditor_files/vbulletin_menu.js"></script>
+
+<link rel="alternate" type="application/rss+xml" title="Ext JS Forums RSS Feed" href="http://extjs.com/forum/external.php?type=RSS2">
+
+<link rel="alternate" type="application/rss+xml" title="Ext JS Forums - Ext: Help - RSS Feed" href="http://extjs.com/forum/external.php?type=RSS2&amp;forumids=9">
+
+
+	<title>[2.0 A.1] FCKeditor Form Field Extention - Ext JS Forums</title>
+	<script type="text/javascript" src="extjs_FCKeditor_files/vbulletin_post_loader.js"></script>
+</head><body class="ext-gecko ext-linux" id="ext-gen2" onload="">
+<div id="viewport">
+
+<div id="hd">
+	<a style="position: absolute; display: block; top: 5px; left: 750px; width: 182px; height: 55px;" href="http://extjs.com/conference/">
+		<img src="extjs_FCKeditor_files/signup.gif" border="0" height="55" width="182">
+	</a><h1><a href="http://extjs.com/" title="Home"><span>Ext</span></a></h1>
+<!--<div id="msg-ct"><div id="msg"><div id="msg-inner"></div></div></div>-->
+	
+	<table class="nav main-nav" cellspacing="0">
+		<tbody><tr>
+		<td><a id="home-link" href="http://extjs.com/"><span>Home</span></a></td><td><a id="products-link" href="http://extjs.com/products"><span>Products</span></a></td><td class="active"><a id="support-link" href="http://extjs.com/support"><span>Support</span></a></td><td><a id="jobs-link" href="http://jobs.extjs.com/"><span>Jobs</span></a></td><td><a id="company-link" href="http://extjs.com/company"><span>Company</span></a></td><td><a id="blog-link" href="http://extjs.com/blog"><span>Blog</span></a></td><td><a id="store-link" href="http://extjs.com/store"><span>Store</span></a></td>		</tr>
+	</tbody></table>
+
+	
+	<table class="sub-nav" cellspacing="0">
+		<tbody><tr>
+		<td><a href="http://extjs.com/">Home</a></td><td class="spacer"><img src="extjs_FCKeditor_files/c-sep.gif"></td><td><a href="http://extjs.com/support/">Support</a></td><td class="spacer"><img src="extjs_FCKeditor_files/c-sep.gif"></td><td><a href="http://extjs.com/forum/">Forums</a></td>		</tr>
+	</tbody></table>
+
+<div id="google-search" style="position: absolute; left: 680px; top: 72px;">
+	<form action="http://www.google.com/cse" id="cse-search-box">
+	<input name="cx" value="001733999371871106761:jgc8jk2xgwe" type="hidden">
+<input name="ie" value="UTF-8" type="hidden">
+	<input id="gsearch-box" name="q" style="width: 200px; font-size: 11px; font-family: arial,tahoma,sans-serif;" value="Search with google" type="text">
+	<input name="sa" value="Search" style="font-size: 11px; font-family: arial,tahoma,sans-serif;" type="submit">
+	</form>
+	</div>
+
+</div>
+	
+<div id="bd">
+
+<!-- content table -->
+
+<br>
+
+<!-- breadcrumb, login, pm info -->
+<table class="tborder forum-nav" align="center" border="0" cellpadding="6" cellspacing="1" width="100%">
+<tbody><tr>
+	<td class="alt1" width="100%">
+		
+			<table border="0" cellpadding="0" cellspacing="0">
+			<tbody><tr valign="bottom">
+				<td><a href="#" onclick="history.back(1); return false;"><img title="Go Back" src="extjs_FCKeditor_files/navbits_start.gif" alt="Go Back" border="0"></a></td>
+				<td>&nbsp;</td>
+				<td width="100%"><span class="navbar"><a href="http://extjs.com/forum/index.php" accesskey="1">Ext JS Forums</a></span> 
+	<span class="navbar">&gt; <a href="http://extjs.com/forum/forumdisplay.php?f=19">Ext JS Community Forums (2.0)</a></span>
+
+
+	<span class="navbar">&gt; <a href="http://extjs.com/forum/forumdisplay.php?f=9">Ext: Help</a></span>
+
+</td>
+			</tr>
+			<tr>
+				<td class="navbar" style="font-size: 10pt; padding-top: 1px;" colspan="3"><a href="http://extjs.com/forum/showthread.php?t=17423"><img title="Reload this Page" class="inlineimg" src="extjs_FCKeditor_files/navbits_finallink_ltr.gif" alt="Reload this Page" border="0"></a> <strong>
+	[2.0 A.1] FCKeditor Form Field Extention
+
+</strong></td>
+			</tr>
+			</tbody></table>			
+		
+	</td>	
+	
+	
+	
+		<td class="alt2" nowrap="nowrap" valign="top">
+		<div class="smallfont">
+			<strong>Welcome, atealxt.</strong><br>
+			You last visited: 02-21-2009 at <span class="time">09:25 PM</span>
+			<br><a href="http://extjs.com/forum/private.php">Private Messages</a>: Unread 0, Total 0.
+			
+		</div>
+		</td>
+		
+		
+	
+</tr>
+</tbody></table>
+<!-- / breadcrumb, login, pm info -->
+
+<!-- nav buttons bar -->
+<div class="forum-nav-bar" align="center">
+	<table class="tborder" style="border-top-width: 0px;" align="center" border="0" cellpadding="6" cellspacing="0" width="100%">
+	<tbody><tr align="center">
+		
+			<td class="vbmenu_control"><a href="http://extjs.com/forum/usercp.php">User CP</a></td>
+		
+		
+		
+		<td class="vbmenu_control"><a href="http://extjs.com/forum/faq.php" accesskey="5">FAQ</a></td>
+		<td class="vbmenu_control"><a href="http://extjs.com/forum/memberlist.php">Members List</a></td>
+				
+			
+				
+				<td class="vbmenu_control"><a href="http://extjs.com/forum/search.php?do=getnew" accesskey="2">New Posts</a></td>
+				
+				<td style="cursor: pointer;" id="navbar_search" class="vbmenu_control"><a href="http://extjs.com/forum/search.php" accesskey="4" rel="nofollow">Search</a> <script type="text/javascript"> vbmenu_register("navbar_search"); </script> <img alt="" title="" src="extjs_FCKeditor_files/menu_open.gif" border="0"></td>
+			
+			
+				<td style="cursor: pointer;" id="usercptools" class="vbmenu_control"><a href="http://extjs.com/forum/showthread.php?t=17423&amp;nojs=1#usercptools">Quick Links</a> <script type="text/javascript"> vbmenu_register("usercptools"); </script> <img alt="" title="" src="extjs_FCKeditor_files/menu_open.gif" border="0"></td>		
+			
+		
+		
+		
+			<td class="vbmenu_control"><a href="http://extjs.com/forum/login.php?do=logout&amp;logouthash=a92f8813c6b4611e0b612a71e8db0a3d" onclick="return log_out('Are you sure you want to log out?')">Log Out</a></td>
+		
+	</tr>
+	</tbody></table>
+</div>
+<!-- / nav buttons bar -->
+
+<br>
+
+
+
+<!-- NAVBAR POPUP MENUS -->
+	
+	
+	<!-- header quick search form -->
+	<div class="vbmenu_popup" id="navbar_search_menu" style="display: none;">
+		<table border="0" cellpadding="4" cellspacing="1">
+		<tbody><tr>
+			<td class="thead">Search Forums</td>
+		</tr>
+		<tr>
+			<td class="vbmenu_option" title="nohilite">
+				<form action="search.php?do=process" method="post">
+				    <input name="do" value="process" type="hidden">
+				    <input name="quicksearch" value="1" type="hidden">
+				    <input name="childforums" value="1" type="hidden">
+				    <input name="exactname" value="1" type="hidden">
+				    <input name="s" value="" type="hidden">
+				    <div><input class="bginput" name="query" size="25" tabindex="1001" type="text"><input class="button" value="Go" tabindex="1004" type="submit"></div>
+				    <div style="margin-top: 6px;">
+					<label for="rb_nb_sp0"><input name="showposts" value="0" id="rb_nb_sp0" tabindex="1002" checked="checked" type="radio">Show Threads</label>
+					&nbsp;
+					<label for="rb_nb_sp1"><input name="showposts" value="1" id="rb_nb_sp1" tabindex="1003" type="radio">Show Posts</label>
+				    </div>                   
+				</form>
+			</td>
+		</tr>
+		<tr>
+			<td class="vbmenu_option"><a href="http://extjs.com/forum/search.php" accesskey="4" rel="nofollow">Advanced Search</a></td>
+		</tr>
+		
+		</tbody></table>
+		
+	</div>
+	<!-- / header quick search form -->
+	
+
+	
+	<!-- user cp tools menu -->
+	<div class="vbmenu_popup" id="usercptools_menu" style="display: none;">
+		<table border="0" cellpadding="4" cellspacing="1">
+		
+		<tbody><tr><td class="thead">Quick Links</td></tr>		
+		<tr><td class="vbmenu_option"><a href="http://extjs.com/forum/search.php?do=getdaily">Today's Posts</a></td></tr>
+		<tr><td class="vbmenu_option"><a href="http://extjs.com/forum/forumdisplay.php?do=markread">Mark Forums Read</a></td></tr>
+		<tr><td class="vbmenu_option"><a href="#" onclick="window.open('misc.php?do=buddylist&amp;focus=1','buddylist','statusbar=no,menubar=no,toolbar=no,scrollbars=yes,resizable=yes,width=250,height=300'); return false;">Open Buddy List</a></td></tr>
+		
+				
+		<tr><td class="thead"><a href="http://extjs.com/forum/usercp.php">User Control Panel</a></td></tr>
+		<tr><td class="vbmenu_option"><a href="http://extjs.com/forum/profile.php?do=editsignature">Edit Signature</a></td></tr>
+		<!--<tr><td class="vbmenu_option"><a href="profile.php?do=editavatar">Edit Avatar</a></td></tr>-->
+		<tr><td class="vbmenu_option"><a href="http://extjs.com/forum/profile.php?do=editprofile">Edit Profile</a></td></tr>
+		<tr><td class="vbmenu_option"><a href="http://extjs.com/forum/profile.php?do=editoptions">Edit Options</a></td></tr>
+		
+
+		<tr><td class="thead">Miscellaneous</td></tr>
+		<tr><td class="vbmenu_option"><a href="http://extjs.com/forum/private.php" rel="nofollow">Private Messages</a></td></tr>
+		<tr><td class="vbmenu_option"><a href="http://extjs.com/forum/subscription.php" rel="nofollow">Subscribed Threads</a></td></tr>
+		<tr><td class="vbmenu_option"><a href="http://extjs.com/forum/member.php?u=54038">My Profile</a></td></tr>
+		<tr><td class="vbmenu_option"><a href="http://extjs.com/forum/online.php">Who's Online</a></td></tr>
+		
+		</tbody></table>
+	</div>
+	<!-- / user cp tools menu -->
+	
+<!-- / NAVBAR POPUP MENUS -->
+
+<!-- PAGENAV POPUP -->
+
+	<div class="vbmenu_popup" id="pagenav_menu" style="display: none; position: absolute; z-index: 50;">
+		<table border="0" cellpadding="4" cellspacing="1">
+		<tbody><tr>
+			<td class="thead" nowrap="nowrap">Go to Page...</td>
+		</tr>
+		<tr>
+			<td class="vbmenu_option" title="">
+			<form action="index.php" method="get" onsubmit="return this.gotopage()" id="pagenav_form">
+				<input class="bginput" id="pagenav_itxt" style="font-size: 11px;" size="4" type="text">
+				<input class="button" id="pagenav_ibtn" value="Go" type="button">
+			</form>
+			</td>
+		</tr>
+		</tbody></table>
+	</div>
+
+<!-- / PAGENAV POPUP -->
+
+
+
+
+
+
+<a name="poststop" id="poststop"></a>
+
+<!-- controls above postbits -->
+<table style="margin-bottom: 3px;" border="0" cellpadding="0" cellspacing="0" width="100%">
+<tbody><tr valign="bottom">
+	
+		<td class="smallfont"><a href="http://extjs.com/forum/newreply.php?do=newreply&amp;noquote=1&amp;p=83103" rel="nofollow"><img title="Reply" src="extjs_FCKeditor_files/reply.gif" alt="Reply" border="0"></a></td>
+	
+	<td align="right"><div class="pagenav" align="right">
+<table class="tborder" border="0" cellpadding="3" cellspacing="1">
+<tbody><tr>
+	<td class="vbmenu_control" style="font-weight: normal;">Page 1 of 8</td>
+	
+	
+		<td class="alt2"><span class="smallfont" title="Showing results 1 to 10 of 72"><strong>1</strong></span></td>
+ <td class="alt1"><a class="smallfont" href="http://extjs.com/forum/showthread.php?t=17423&amp;page=2" title="Show results 11 to 20 of 72">2</a></td><td class="alt1"><a class="smallfont" href="http://extjs.com/forum/showthread.php?t=17423&amp;page=3" title="Show results 21 to 30 of 72">3</a></td>
+	<td class="alt1"><a class="smallfont" href="http://extjs.com/forum/showthread.php?t=17423&amp;page=2" title="Next Page - Results 11 to 20 of 72">&gt;</a></td>
+	<td class="alt1"><a class="smallfont" href="http://extjs.com/forum/showthread.php?t=17423&amp;page=8" title="Last Page - Results 71 to 72 of 72">Last <strong>»</strong></a></td>
+	<td style="cursor: pointer;" id="pagenav.51" class="vbmenu_control" title=""> <img alt="" title="" src="extjs_FCKeditor_files/menu_open.gif" border="0"></td>
+</tr>
+</tbody></table>
+</div></td>
+</tr>
+</tbody></table>
+<!-- / controls above postbits -->
+
+<!-- toolbar -->
+<table class="tborder" style="border-bottom-width: 0px;" align="center" border="0" cellpadding="6" cellspacing="1" width="100%">
+<tbody><tr>
+	<td class="tcat" width="100%">
+		<div class="smallfont">
+		
+			<a href="http://extjs.com/forum/showthread.php?t=17423&amp;goto=newpost"><img title="View First Unread" class="inlineimg" src="extjs_FCKeditor_files/firstnew.gif" alt="View First Unread" border="0"></a>
+			<a href="http://extjs.com/forum/showthread.php?t=17423&amp;goto=newpost"><strong>View First Unread</strong></a>
+		
+		&nbsp;
+		</div>
+	</td>
+	<td style="cursor: pointer;" class="vbmenu_control" id="threadtools" nowrap="nowrap">
+		<a href="http://extjs.com/forum/showthread.php?t=17423&amp;nojs=1#goto_threadtools">Thread Tools</a>
+		<script type="text/javascript"> vbmenu_register("threadtools"); </script> <img alt="" title="" src="extjs_FCKeditor_files/menu_open.gif" border="0">
+	</td>
+	
+		<td style="cursor: pointer;" class="vbmenu_control" id="threadsearch" nowrap="nowrap">
+			<a href="http://extjs.com/forum/showthread.php?t=17423&amp;nojs=1#goto_threadsearch">Search this Thread</a>
+			<script type="text/javascript"> vbmenu_register("threadsearch"); </script> <img alt="" title="" src="extjs_FCKeditor_files/menu_open.gif" border="0">
+		</td>
+	
+	
+		<td style="cursor: pointer;" class="vbmenu_control" id="threadrating" nowrap="nowrap">
+			<a href="http://extjs.com/forum/showthread.php?t=17423&amp;nojs=1#goto_threadrating"><span id="threadrating_current">Rating: <img title="Thread Rating: 1 votes, 5.00 average." class="inlineimg" src="extjs_FCKeditor_files/rating_5.gif" alt="Thread Rating: 1 votes, 5.00 average." border="0"></span></a>
+			<script type="text/javascript"> vbmenu_register("threadrating"); </script> <img alt="" title="" src="extjs_FCKeditor_files/menu_open.gif" border="0">
+		</td>
+	
+	
+	
+	
+	
+</tr>
+</tbody></table>
+<!-- / toolbar -->
+
+
+
+<!-- end content table -->
+
+<!-- / end content table -->
+
+
+
+
+<script type="text/javascript" src="extjs_FCKeditor_files/vbulletin_ajax_reputation.js"></script>
+
+
+<div id="posts"><!-- post #83103 -->
+
+	
+	<div id="edit83103" style="padding: 0px 0px 6px;">
+	<!-- this is not the last post shown on the page -->	
+
+
+
+<table class="tborder" id="post83103" align="center" border="0" cellpadding="6" cellspacing="1" width="100%">
+<tbody><tr>
+	<td class="thead">
+		<div class="normal" style="float: right;">
+			&nbsp;
+			#<a href="http://extjs.com/forum/showthread.php?p=83103#post83103" rel="nofollow" id="postcount83103" name="1"><strong>1</strong></a> &nbsp;
+			
+				<span id="reputationmenu_83103"><a href="http://extjs.com/forum/reputation.php?p=83103" rel="nofollow" id="reputation_83103"><img title="Add to stashx's Reputation" class="inlineimg" src="extjs_FCKeditor_files/reputation.gif" alt="Add to stashx's Reputation" border="0"></a></span>
+				<script type="text/javascript"> vbrep_register("83103")</script>&nbsp;
+			
+			
+			<a href="http://extjs.com/forum/report.php?p=83103" rel="nofollow"><img title="Report Post" class="inlineimg" src="extjs_FCKeditor_files/report.gif" alt="Report Post" border="0"></a> &nbsp;
+			
+			
+		</div>
+		
+		<div class="normal">
+			<!-- status icon and date -->
+			<a name="post83103"><img title="Old" class="inlineimg" src="extjs_FCKeditor_files/post_old.gif" alt="Old" border="0"></a>
+			
+				11-07-2007, 04:14 PM
+			
+			
+			<!-- / status icon and date -->
+		</div>
+	</td>
+</tr>
+<tr>
+	<td class="alt2" style="padding: 0px;">
+		<!-- user info -->
+		<table border="0" cellpadding="0" cellspacing="6" width="100%">
+		<tbody><tr>
+			
+			<td nowrap="nowrap">
+			
+				<div id="postmenu_83103">
+					
+					<a class="bigusername" href="http://extjs.com/forum/member.php?u=15941">stashx</a>
+					<img title="stashx is offline" class="inlineimg" src="extjs_FCKeditor_files/user_offline.gif" alt="stashx is offline" border="0">
+
+
+					<script type="text/javascript"> vbmenu_register("postmenu_83103", true); </script>
+					
+				</div>
+				
+				<div class="smallfont">Ext User</div>
+				
+				
+				
+			</td>
+			<td width="100%">&nbsp;</td>
+			<td nowrap="nowrap" valign="top">
+				
+				<div class="smallfont">
+					<div>Join Date: Nov 2007</div>
+					
+					
+					<div>
+						Posts: 4
+					</div>
+					
+					<div><span id="repdisplay_83103_15941"><img title="stashx is infamous around these parts" class="inlineimg" src="extjs_FCKeditor_files/reputation_pos.gif" alt="stashx is infamous around these parts" border="0"></span></div>
+					
+					<div>    </div>
+				</div>
+				
+			</td>
+		</tr>
+		</tbody></table>
+		<!-- / user info -->
+	</td>
+</tr>
+<tr>
+	<td class="alt1" id="td_post_83103">
+	<!-- message, attachments, sig -->
+	
+		
+		
+		
+			<!-- icon and title -->
+			<div class="smallfont">
+				<img title="Arrow" class="inlineimg" src="extjs_FCKeditor_files/icon2.gif" alt="Arrow" border="0">
+				<strong>[2.0 A.1] FCKeditor Form Field Extention</strong>
+			</div>
+			<hr style="color: rgb(255, 255, 255);" size="1">
+			<!-- / icon and title -->
+		
+		
+		<!-- message -->
+		<div id="post_message_83103">Hi there all...<br>
+I'm new in ExtJS and i have to admit it, it's a very VERY good job... <img src="extjs_FCKeditor_files/1.gif" alt="" title="Smile" class="inlineimg" border="0"><br>
+<br>
+So i've started using it and i liked it. The thing is that i needed
+something better than the default HTML editor so i turned to FCKeditor.
+My problem was that i didn't find it usefull to manually convert every
+textarea I needed into FCK (as discussed in previous threads) because
+the fields are dynamically created inside dynamically created tabs etc.
+So i thought "how difficult would be to create an FCKeditor extension
+for the ExtJS Form Fields...". Well, it is...<img src="extjs_FCKeditor_files/2.gif" alt="" title="Frown" class="inlineimg" border="0"> I think this is why no one has done it yet...<br>
+<br>
+Anyway, i have done something that, surprisingly enough, it works!!! I
+am almost certain that it's not the optimum way to do it. This is why
+I'm asking for some help from anyone out there who could help to modify
+it and make it better, more useful and perhaps even a real extension...
+<br>
+<br>
+In the following code, I'm Using FCKeditor 2.5 Beta and Ext JS Library 2.0 Alpha 1.<br>
+<br>
+I've developed it based on the TextArea.js.<br>
+<br>
+File ext.FCKeditor.js:<br>
+<div style="margin: 5px 20px 20px;" class="codeblock">
+	<pre dir="ltr">Ext.form.FCKeditor = function(config){
+	Ext.form.FCKeditor.superclass.constructor.call(this, config);
+	this.FCKid=0;
+	this.MyisLoaded=false;
+	this.MyValue='';
+};
+
+Ext.extend(Ext.form.FCKeditor, Ext.form.TextArea,  {
+	onRender : function(ct, position){
+        if(!this.el){
+            this.defaultAutoCreate = {
+                tag: "textarea",
+                style:"width:100px;height:60px;",
+                autocomplete: "off"
+            };
+        }
+        Ext.form.TextArea.superclass.onRender.call(this, ct, position);
+        if(this.grow){
+            this.textSizeEl = Ext.DomHelper.append(document.body, {
+                tag: "pre", cls: "x-form-grow-sizer"
+            });
+            if(this.preventScrollbars){
+                this.el.setStyle("overflow", "hidden");
+            }
+            this.el.setHeight(this.growMin);
+        }
+		if (this.FCKid==0) this.FCKid=get_FCKeditor_id_value()
+		setTimeout("loadFCKeditor('"+this.name+"');",100);
+    },
+    setValue : function(value){
+    	this.MyValue=value;
+    	if (this.FCKid==0) this.FCKid=get_FCKeditor_id_value()
+    	FCKeditorSetValue(this.FCKid,this.name,value)
+    	Ext.form.TextArea.superclass.setValue.apply(this,[value]);
+    },
+    
+   
+    
+    getValue : function(){
+    	if (this.MyisLoaded){
+    		value=FCKeditorGetValue(this.name);
+    		Ext.form.TextArea.superclass.setValue.apply(this,[value]);
+			return Ext.form.TextArea.superclass.getValue(this);
+    	}else{
+    		return this.MyValue;
+    	}
+    },
+    
+    getRawValue : function(){
+    	if (this.MyisLoaded){
+    		value=FCKeditorGetValue(this.name);
+    		Ext.form.TextArea.superclass.setRawValue.apply(this,[value]);
+			return Ext.form.TextArea.superclass.getRawValue(this);
+    	}else{
+    		return this.MyValue;
+    	}
+    }
+});
+Ext.reg('fckeditor', Ext.form.FCKeditor);
+
+
+function loadFCKeditor(element){
+	oFCKeditor = new FCKeditor( element ) ;
+	oFCKeditor.ToolbarSet = sFCKeditorToolbar ;
+	oFCKeditor.Config['SkinPath'] = sFCKeditorSkinPath ;
+	oFCKeditor.Config['PreloadImages'] = sFCKeditorSkinPath + 'images/toolbar.start.gif' + ';' +
+				sFCKeditorSkinPath + 'images/toolbar.end.gif' + ';' +
+				sFCKeditorSkinPath + 'images/toolbar.bg.gif' + ';' +
+				sFCKeditorSkinPath + 'images/toolbar.buttonarrow.gif' ;
+	oFCKeditor.BasePath	= sFCKeditorBasePath ;
+	oFCKeditor.Config['BaseHref']	= sFCKeditorBaseHref ;
+	oFCKeditor.Height = 260 ;
+	oFCKeditor.ReplaceTextarea() ;
+
+}
+function FCKeditor_OnComplete(editorInstance){
+
+    Ext.getCmp(editorInstance.Name).MyisLoaded=true;
+
+    editorInstance.Events.AttachEvent('OnStatusChange', function(){
+    	Ext.getCmp(editorInstance.Name).setValue();
+    })
+}
+var FCKeditor_value=new Array();
+function FCKeditorSetValue(id,name,value){
+	if ((id!=undefined)&amp;&amp;(name!=undefined)){
+		if (value!=undefined) FCKeditor_value[id]=value;
+		else if (FCKeditor_value[id]==undefined) FCKeditor_value[id]='';
+		var oEditor = FCKeditorAPI.GetInstance(name) ;
+		
+		if(oEditor!=undefined) oEditor.SetData(FCKeditor_value[id])
+	}
+}
+function FCKeditorGetValue(name){
+	if ((id!=undefined)&amp;&amp;(name!=undefined)){
+		var oEditor = FCKeditorAPI.GetInstance(name) ;
+		data='';
+		if(oEditor!=undefined) data=oEditor.GetData()
+		return data;
+	}
+}
+var FCKeditor_id_value;
+function get_FCKeditor_id_value(){
+	if (!FCKeditor_id_value){
+		FCKeditor_id_value=0;
+	}
+	FCKeditor_id_value=FCKeditor_id_value+1;
+	return FCKeditor_id_value;
+}</pre>
+</div>You have to load this file when you include the ext library and
+you also have to add this code (with the appropriate modifications to
+match your settings) after the inclusion: <br>
+<br>
+<div style="margin: 5px 20px 20px;" class="codeblock">
+	<pre dir="ltr">&lt;script type="text/javascript"&gt;
+var sFCKeditorToolbar = 'Default';
+var sFCKeditorBasePath = '../clientscripts/FCKeditor/';
+var sFCKeditorBaseHref = 'http://localhost/test/';
+var sFCKeditorSkinPath = '../editor/skins/office2003/';
+&lt;/script&gt;</pre>
+</div>That's it! In order to use it simply add the following lines in
+the items of a form. This will give you an FCKEditor in that form <img src="extjs_FCKeditor_files/1.gif" alt="" title="Smile" class="inlineimg" border="0"><br>
+<br>
+<div style="margin: 5px 20px 20px;" class="codeblock">
+	<pre dir="ltr">{
+	<b>xtype:'fckeditor'</b>,
+	name:'content_1',
+	id:'content_1',
+	fieldLabel:'Content',
+	height:270
+}</pre>
+</div>I hope you got the main idea...<br>
+<br>
+I look forward for any comments, suggestions, help, modifications, ...., anything...<br>
+<br>
+Let's make it real...<img src="extjs_FCKeditor_files/14.gif" alt="" title="Cool" class="inlineimg" border="0"><br>
+StashX</div>
+		<!-- / message -->
+	
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	
+		<div style="margin-top: 10px;" align="right">
+			<!-- controls -->
+			
+			
+			
+				<a href="http://extjs.com/forum/newreply.php?do=newreply&amp;p=83103" rel="nofollow"><img title="Reply With Quote" src="extjs_FCKeditor_files/quote_002.gif" alt="Reply With Quote" border="0"></a>
+			
+			
+				<a href="http://extjs.com/forum/newreply.php?do=newreply&amp;p=83103" rel="nofollow" onclick="return false"><img title="Multi-Quote This Message" src="extjs_FCKeditor_files/multiquote_off.gif" alt="Multi-Quote This Message" id="mq_83103" border="0"></a>
+			
+			
+				<a href="http://extjs.com/forum/newreply.php?do=newreply&amp;p=83103" rel="nofollow" id="qr_83103" onclick="return false"><img title="Quick reply to this message" src="extjs_FCKeditor_files/quickreply.gif" alt="Quick reply to this message" border="0"></a>
+			
+			
+			
+			
+				
+			
+			
+			<!-- / controls -->
+		</div>
+		
+	<!-- message, attachments, sig -->
+	
+	</td>
+</tr>
+</tbody></table>
+
+
+<!-- post 83103 popup menu -->
+<div class="vbmenu_popup" id="postmenu_83103_menu" style="display: none;">
+	<table border="0" cellpadding="4" cellspacing="1">
+	<tbody><tr>
+		<td class="thead">stashx</td>
+	</tr>
+	
+		<tr><td class="vbmenu_option"><a href="http://extjs.com/forum/member.php?u=15941">View Public Profile</a></td></tr>
+	
+	
+		<tr><td class="vbmenu_option"><a href="http://extjs.com/forum/private.php?do=newpm&amp;u=15941" rel="nofollow">Send a private message to stashx</a></td></tr>
+	
+	
+	
+	
+		<tr><td class="vbmenu_option"><a href="http://extjs.com/forum/search.php?do=finduser&amp;u=15941" rel="nofollow">Find all posts by stashx</a></td></tr>
+	
+	
+	<tr><td class="vbmenu_option"><a href="http://extjs.com/forum/profile.php?do=addlist&amp;userlist=buddy&amp;u=15941">Add stashx to Your Buddy List</a></td></tr>
+	
+	
+	</tbody></table>
+</div>
+<!-- / post 83103 popup menu -->
+
+
+	</div>
+	
+
+<!-- / post #83103 --><!-- post #83111 -->
+
+	
+	<div id="edit83111" style="padding: 0px 0px 6px;">
+	<!-- this is not the last post shown on the page -->	
+
+
+
+<table class="tborder" id="post83111" align="center" border="0" cellpadding="6" cellspacing="1" width="100%">
+<tbody><tr>
+	<td class="thead">
+		<div class="normal" style="float: right;">
+			&nbsp;
+			#<a href="http://extjs.com/forum/showthread.php?p=83111#post83111" rel="nofollow" id="postcount83111" name="2"><strong>2</strong></a> &nbsp;
+			
+				<span id="reputationmenu_83111"><a href="http://extjs.com/forum/reputation.php?p=83111" rel="nofollow" id="reputation_83111"><img title="Add to stashx's Reputation" class="inlineimg" src="extjs_FCKeditor_files/reputation.gif" alt="Add to stashx's Reputation" border="0"></a></span>
+				<script type="text/javascript"> vbrep_register("83111")</script>&nbsp;
+			
+			
+			<a href="http://extjs.com/forum/report.php?p=83111" rel="nofollow"><img title="Report Post" class="inlineimg" src="extjs_FCKeditor_files/report.gif" alt="Report Post" border="0"></a> &nbsp;
+			
+			
+		</div>
+		
+		<div class="normal">
+			<!-- status icon and date -->
+			<a name="post83111"><img title="Old" class="inlineimg" src="extjs_FCKeditor_files/post_old.gif" alt="Old" border="0"></a>
+			
+				11-07-2007, 04:42 PM
+			
+			
+			<!-- / status icon and date -->
+		</div>
+	</td>
+</tr>
+<tr>
+	<td class="alt2" style="padding: 0px;">
+		<!-- user info -->
+		<table border="0" cellpadding="0" cellspacing="6" width="100%">
+		<tbody><tr>
+			
+			<td nowrap="nowrap">
+			
+				<div id="postmenu_83111">
+					
+					<a class="bigusername" href="http://extjs.com/forum/member.php?u=15941">stashx</a>
+					<img title="stashx is offline" class="inlineimg" src="extjs_FCKeditor_files/user_offline.gif" alt="stashx is offline" border="0">
+
+
+					<script type="text/javascript"> vbmenu_register("postmenu_83111", true); </script>
+					
+				</div>
+				
+				<div class="smallfont">Ext User</div>
+				
+				
+				
+			</td>
+			<td width="100%">&nbsp;</td>
+			<td nowrap="nowrap" valign="top">
+				
+				<div class="smallfont">
+					<div>Join Date: Nov 2007</div>
+					
+					
+					<div>
+						Posts: 4
+					</div>
+					
+					<div><span id="repdisplay_83111_15941"><img title="stashx is infamous around these parts" class="inlineimg" src="extjs_FCKeditor_files/reputation_pos.gif" alt="stashx is infamous around these parts" border="0"></span></div>
+					
+					<div>    </div>
+				</div>
+				
+			</td>
+		</tr>
+		</tbody></table>
+		<!-- / user info -->
+	</td>
+</tr>
+<tr>
+	<td class="alt1" id="td_post_83111">
+	<!-- message, attachments, sig -->
+	
+		
+		
+		
+			<!-- icon and title -->
+			<div class="smallfont">
+				<img title="Default" class="inlineimg" src="extjs_FCKeditor_files/icon1.gif" alt="Default" border="0">
+				
+			</div>
+			<hr style="color: rgb(255, 255, 255);" size="1">
+			<!-- / icon and title -->
+		
+		
+		<!-- message -->
+		<div id="post_message_83111">here are some screen shots from action <img src="extjs_FCKeditor_files/4.gif" alt="" title="Big Smile" class="inlineimg" border="0"></div>
+		<!-- / message -->
+	
+		
+		<!-- attachments -->
+			<div style="padding: 6px;">
+			
+			
+				<fieldset class="fieldset">
+					<legend>Attached Thumbnails</legend>
+					<div style="padding: 3px;">
+					<a href="http://extjs.com/forum/attachment.php?attachmentid=2597&amp;d=1194424862"><img title="Click image for larger version
+
+Name:	fck_ext1.jpg
+Views:	1160
+Size:	41.2 KB
+ID:	2597" class="thumbnail" src="extjs_FCKeditor_files/attachment.jpeg" alt="Click image for larger version
+
+Name:	fck_ext1.jpg
+Views:	1160
+Size:	41.2 KB
+ID:	2597" border="0"></a>
+&nbsp;<a href="http://extjs.com/forum/attachment.php?attachmentid=2598&amp;d=1194424913"><img title="Click image for larger version
+
+Name:	fck_ext2.jpg
+Views:	762
+Size:	41.2 KB
+ID:	2598" class="thumbnail" src="extjs_FCKeditor_files/attachment_002.jpeg" alt="Click image for larger version
+
+Name:	fck_ext2.jpg
+Views:	762
+Size:	41.2 KB
+ID:	2598" border="0"></a>
+&nbsp;
+					</div>
+				</fieldset>
+			
+		
+			
+			
+			
+			
+			
+			
+			
+			
+			</div>
+		<!-- / attachments -->
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	
+		<div style="margin-top: 10px;" align="right">
+			<!-- controls -->
+			
+			
+			
+				<a href="http://extjs.com/forum/newreply.php?do=newreply&amp;p=83111" rel="nofollow"><img title="Reply With Quote" src="extjs_FCKeditor_files/quote_002.gif" alt="Reply With Quote" border="0"></a>
+			
+			
+				<a href="http://extjs.com/forum/newreply.php?do=newreply&amp;p=83111" rel="nofollow" onclick="return false"><img title="Multi-Quote This Message" src="extjs_FCKeditor_files/multiquote_off.gif" alt="Multi-Quote This Message" id="mq_83111" border="0"></a>
+			
+			
+				<a href="http://extjs.com/forum/newreply.php?do=newreply&amp;p=83111" rel="nofollow" id="qr_83111" onclick="return false"><img title="Quick reply to this message" src="extjs_FCKeditor_files/quickreply.gif" alt="Quick reply to this message" border="0"></a>
+			
+			
+			
+			
+				
+			
+			
+			<!-- / controls -->
+		</div>
+		
+	<!-- message, attachments, sig -->
+	
+	</td>
+</tr>
+</tbody></table>
+
+
+<!-- post 83111 popup menu -->
+<div class="vbmenu_popup" id="postmenu_83111_menu" style="display: none;">
+	<table border="0" cellpadding="4" cellspacing="1">
+	<tbody><tr>
+		<td class="thead">stashx</td>
+	</tr>
+	
+		<tr><td class="vbmenu_option"><a href="http://extjs.com/forum/member.php?u=15941">View Public Profile</a></td></tr>
+	
+	
+		<tr><td class="vbmenu_option"><a href="http://extjs.com/forum/private.php?do=newpm&amp;u=15941" rel="nofollow">Send a private message to stashx</a></td></tr>
+	
+	
+	
+	
+		<tr><td class="vbmenu_option"><a href="http://extjs.com/forum/search.php?do=finduser&amp;u=15941" rel="nofollow">Find all posts by stashx</a></td></tr>
+	
+	
+	<tr><td class="vbmenu_option"><a href="http://extjs.com/forum/profile.php?do=addlist&amp;userlist=buddy&amp;u=15941">Add stashx to Your Buddy List</a></td></tr>
+	
+	
+	</tbody></table>
+</div>
+<!-- / post 83111 popup menu -->
+
+
+	</div>
+	
+
+<!-- / post #83111 --><!-- post #87149 -->
+
+	
+	<div id="edit87149" style="padding: 0px 0px 6px;">
+	<!-- this is not the last post shown on the page -->	
+
+
+
+<table class="tborder" id="post87149" align="center" border="0" cellpadding="6" cellspacing="1" width="100%">
+<tbody><tr>
+	<td class="thead">
+		<div class="normal" style="float: right;">
+			&nbsp;
+			#<a href="http://extjs.com/forum/showthread.php?p=87149#post87149" rel="nofollow" id="postcount87149" name="3"><strong>3</strong></a> &nbsp;
+			
+				<span id="reputationmenu_87149"><a href="http://extjs.com/forum/reputation.php?p=87149" rel="nofollow" id="reputation_87149"><img title="Add to michiel's Reputation" class="inlineimg" src="extjs_FCKeditor_files/reputation.gif" alt="Add to michiel's Reputation" border="0"></a></span>
+				<script type="text/javascript"> vbrep_register("87149")</script>&nbsp;
+			
+			
+			<a href="http://extjs.com/forum/report.php?p=87149" rel="nofollow"><img title="Report Post" class="inlineimg" src="extjs_FCKeditor_files/report.gif" alt="Report Post" border="0"></a> &nbsp;
+			
+			
+		</div>
+		
+		<div class="normal">
+			<!-- status icon and date -->
+			<a name="post87149"><img title="Old" class="inlineimg" src="extjs_FCKeditor_files/post_old.gif" alt="Old" border="0"></a>
+			
+				11-15-2007, 10:36 PM
+			
+			
+			<!-- / status icon and date -->
+		</div>
+	</td>
+</tr>
+<tr>
+	<td class="alt2" style="padding: 0px;">
+		<!-- user info -->
+		<table border="0" cellpadding="0" cellspacing="6" width="100%">
+		<tbody><tr>
+			
+			<td nowrap="nowrap">
+			
+				<div id="postmenu_87149">
+					
+					<a class="bigusername" href="http://extjs.com/forum/member.php?u=9940">michiel</a>
+					<img title="michiel is offline" class="inlineimg" src="extjs_FCKeditor_files/user_offline.gif" alt="michiel is offline" border="0">
+
+
+					<script type="text/javascript"> vbmenu_register("postmenu_87149", true); </script>
+					
+				</div>
+				
+				<div class="smallfont">Ext User</div>
+				
+				
+				
+			</td>
+			<td width="100%">&nbsp;</td>
+			<td nowrap="nowrap" valign="top">
+				
+				<div class="smallfont">
+					<div>Join Date: Aug 2007</div>
+					
+					
+					<div>
+						Posts: 57
+					</div>
+					
+					<div><span id="repdisplay_87149_9940"><img title="michiel is infamous around these parts" class="inlineimg" src="extjs_FCKeditor_files/reputation_pos.gif" alt="michiel is infamous around these parts" border="0"></span></div>
+					
+					<div>    </div>
+				</div>
+				
+			</td>
+		</tr>
+		</tbody></table>
+		<!-- / user info -->
+	</td>
+</tr>
+<tr>
+	<td class="alt1" id="td_post_87149">
+	<!-- message, attachments, sig -->
+	
+		
+		
+		
+			<!-- icon and title -->
+			<div class="smallfont">
+				<img title="Default" class="inlineimg" src="extjs_FCKeditor_files/icon1.gif" alt="Default" border="0">
+				
+			</div>
+			<hr style="color: rgb(255, 255, 255);" size="1">
+			<!-- / icon and title -->
+		
+		
+		<!-- message -->
+		<div id="post_message_87149">Hi, I tried to use your code .. but a get an error on line 63 of ext.FCKeditor.js:<br>
+<br>
+<div style="margin: 5px 20px 20px;" class="codeblock">
+	<pre dir="ltr">FCKeditor is not defined
+[Break on this error] oFCKeditor = new FCKeditor( element ) ;</pre>
+</div>Am I doing something wrong?</div>
+		<!-- / message -->
+	
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	
+		<div style="margin-top: 10px;" align="right">
+			<!-- controls -->
+			
+			
+			
+				<a href="http://extjs.com/forum/newreply.php?do=newreply&amp;p=87149" rel="nofollow"><img title="Reply With Quote" src="extjs_FCKeditor_files/quote_002.gif" alt="Reply With Quote" border="0"></a>
+			
+			
+				<a href="http://extjs.com/forum/newreply.php?do=newreply&amp;p=87149" rel="nofollow" onclick="return false"><img title="Multi-Quote This Message" src="extjs_FCKeditor_files/multiquote_off.gif" alt="Multi-Quote This Message" id="mq_87149" border="0"></a>
+			
+			
+				<a href="http://extjs.com/forum/newreply.php?do=newreply&amp;p=87149" rel="nofollow" id="qr_87149" onclick="return false"><img title="Quick reply to this message" src="extjs_FCKeditor_files/quickreply.gif" alt="Quick reply to this message" border="0"></a>
+			
+			
+			
+			
+				
+			
+			
+			<!-- / controls -->
+		</div>
+		
+	<!-- message, attachments, sig -->
+	
+	</td>
+</tr>
+</tbody></table>
+
+
+<!-- post 87149 popup menu -->
+<div class="vbmenu_popup" id="postmenu_87149_menu" style="display: none;">
+	<table border="0" cellpadding="4" cellspacing="1">
+	<tbody><tr>
+		<td class="thead">michiel</td>
+	</tr>
+	
+		<tr><td class="vbmenu_option"><a href="http://extjs.com/forum/member.php?u=9940">View Public Profile</a></td></tr>
+	
+	
+		<tr><td class="vbmenu_option"><a href="http://extjs.com/forum/private.php?do=newpm&amp;u=9940" rel="nofollow">Send a private message to michiel</a></td></tr>
+	
+	
+	
+	
+		<tr><td class="vbmenu_option"><a href="http://extjs.com/forum/search.php?do=finduser&amp;u=9940" rel="nofollow">Find all posts by michiel</a></td></tr>
+	
+	
+	<tr><td class="vbmenu_option"><a href="http://extjs.com/forum/profile.php?do=addlist&amp;userlist=buddy&amp;u=9940">Add michiel to Your Buddy List</a></td></tr>
+	
+	
+	</tbody></table>
+</div>
+<!-- / post 87149 popup menu -->
+
+
+	</div>
+	
+
+<!-- / post #87149 --><!-- post #87158 -->
+
+	
+	<div id="edit87158" style="padding: 0px 0px 6px;">
+	<!-- this is not the last post shown on the page -->	
+
+
+
+<table class="tborder" id="post87158" align="center" border="0" cellpadding="6" cellspacing="1" width="100%">
+<tbody><tr>
+	<td class="thead">
+		<div class="normal" style="float: right;">
+			&nbsp;
+			#<a href="http://extjs.com/forum/showthread.php?p=87158#post87158" rel="nofollow" id="postcount87158" name="4"><strong>4</strong></a> &nbsp;
+			
+				<span id="reputationmenu_87158"><a href="http://extjs.com/forum/reputation.php?p=87158" rel="nofollow" id="reputation_87158"><img title="Add to michiel's Reputation" class="inlineimg" src="extjs_FCKeditor_files/reputation.gif" alt="Add to michiel's Reputation" border="0"></a></span>
+				<script type="text/javascript"> vbrep_register("87158")</script>&nbsp;
+			
+			
+			<a href="http://extjs.com/forum/report.php?p=87158" rel="nofollow"><img title="Report Post" class="inlineimg" src="extjs_FCKeditor_files/report.gif" alt="Report Post" border="0"></a> &nbsp;
+			
+			
+		</div>
+		
+		<div class="normal">
+			<!-- status icon and date -->
+			<a name="post87158"><img title="Old" class="inlineimg" src="extjs_FCKeditor_files/post_old.gif" alt="Old" border="0"></a>
+			
+				11-15-2007, 10:52 PM
+			
+			
+			<!-- / status icon and date -->
+		</div>
+	</td>
+</tr>
+<tr>
+	<td class="alt2" style="padding: 0px;">
+		<!-- user info -->
+		<table border="0" cellpadding="0" cellspacing="6" width="100%">
+		<tbody><tr>
+			
+			<td nowrap="nowrap">
+			
+				<div id="postmenu_87158">
+					
+					<a class="bigusername" href="http://extjs.com/forum/member.php?u=9940">michiel</a>
+					<img title="michiel is offline" class="inlineimg" src="extjs_FCKeditor_files/user_offline.gif" alt="michiel is offline" border="0">
+
+
+					<script type="text/javascript"> vbmenu_register("postmenu_87158", true); </script>
+					
+				</div>
+				
+				<div class="smallfont">Ext User</div>
+				
+				
+				
+			</td>
+			<td width="100%">&nbsp;</td>
+			<td nowrap="nowrap" valign="top">
+				
+				<div class="smallfont">
+					<div>Join Date: Aug 2007</div>
+					
+					
+					<div>
+						Posts: 57
+					</div>
+					
+					<div><span id="repdisplay_87158_9940"><img title="michiel is infamous around these parts" class="inlineimg" src="extjs_FCKeditor_files/reputation_pos.gif" alt="michiel is infamous around these parts" border="0"></span></div>
+					
+					<div>    </div>
+				</div>
+				
+			</td>
+		</tr>
+		</tbody></table>
+		<!-- / user info -->
+	</td>
+</tr>
+<tr>
+	<td class="alt1" id="td_post_87158">
+	<!-- message, attachments, sig -->
+	
+		
+		
+		
+			<!-- icon and title -->
+			<div class="smallfont">
+				<img title="Default" class="inlineimg" src="extjs_FCKeditor_files/icon1.gif" alt="Default" border="0">
+				
+			</div>
+			<hr style="color: rgb(255, 255, 255);" size="1">
+			<!-- / icon and title -->
+		
+		
+		<!-- message -->
+		<div id="post_message_87158">Sorry .. my bad. There was an error in the path to fckeditor.js. The script works fine. Thanks!</div>
+		<!-- / message -->
+	
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	
+		<div style="margin-top: 10px;" align="right">
+			<!-- controls -->
+			
+			
+			
+				<a href="http://extjs.com/forum/newreply.php?do=newreply&amp;p=87158" rel="nofollow"><img title="Reply With Quote" src="extjs_FCKeditor_files/quote_002.gif" alt="Reply With Quote" border="0"></a>
+			
+			
+				<a href="http://extjs.com/forum/newreply.php?do=newreply&amp;p=87158" rel="nofollow" onclick="return false"><img title="Multi-Quote This Message" src="extjs_FCKeditor_files/multiquote_off.gif" alt="Multi-Quote This Message" id="mq_87158" border="0"></a>
+			
+			
+				<a href="http://extjs.com/forum/newreply.php?do=newreply&amp;p=87158" rel="nofollow" id="qr_87158" onclick="return false"><img title="Quick reply to this message" src="extjs_FCKeditor_files/quickreply.gif" alt="Quick reply to this message" border="0"></a>
+			
+			
+			
+			
+				
+			
+			
+			<!-- / controls -->
+		</div>
+		
+	<!-- message, attachments, sig -->
+	
+	</td>
+</tr>
+</tbody></table>
+
+
+<!-- post 87158 popup menu -->
+<div class="vbmenu_popup" id="postmenu_87158_menu" style="display: none;">
+	<table border="0" cellpadding="4" cellspacing="1">
+	<tbody><tr>
+		<td class="thead">michiel</td>
+	</tr>
+	
+		<tr><td class="vbmenu_option"><a href="http://extjs.com/forum/member.php?u=9940">View Public Profile</a></td></tr>
+	
+	
+		<tr><td class="vbmenu_option"><a href="http://extjs.com/forum/private.php?do=newpm&amp;u=9940" rel="nofollow">Send a private message to michiel</a></td></tr>
+	
+	
+	
+	
+		<tr><td class="vbmenu_option"><a href="http://extjs.com/forum/search.php?do=finduser&amp;u=9940" rel="nofollow">Find all posts by michiel</a></td></tr>
+	
+	
+	<tr><td class="vbmenu_option"><a href="http://extjs.com/forum/profile.php?do=addlist&amp;userlist=buddy&amp;u=9940">Add michiel to Your Buddy List</a></td></tr>
+	
+	
+	</tbody></table>
+</div>
+<!-- / post 87158 popup menu -->
+
+
+	</div>
+	
+
+<!-- / post #87158 --><!-- post #91315 -->
+
+	
+	<div id="edit91315" style="padding: 0px 0px 6px;">
+	<!-- this is not the last post shown on the page -->	
+
+
+
+<table class="tborder" id="post91315" align="center" border="0" cellpadding="6" cellspacing="1" width="100%">
+<tbody><tr>
+	<td class="thead">
+		<div class="normal" style="float: right;">
+			&nbsp;
+			#<a href="http://extjs.com/forum/showthread.php?p=91315#post91315" rel="nofollow" id="postcount91315" name="5"><strong>5</strong></a> &nbsp;
+			
+				<span id="reputationmenu_91315"><a href="http://extjs.com/forum/reputation.php?p=91315" rel="nofollow" id="reputation_91315"><img title="Add to kpitn's Reputation" class="inlineimg" src="extjs_FCKeditor_files/reputation.gif" alt="Add to kpitn's Reputation" border="0"></a></span>
+				<script type="text/javascript"> vbrep_register("91315")</script>&nbsp;
+			
+			
+			<a href="http://extjs.com/forum/report.php?p=91315" rel="nofollow"><img title="Report Post" class="inlineimg" src="extjs_FCKeditor_files/report.gif" alt="Report Post" border="0"></a> &nbsp;
+			
+			
+		</div>
+		
+		<div class="normal">
+			<!-- status icon and date -->
+			<a name="post91315"><img title="Old" class="inlineimg" src="extjs_FCKeditor_files/post_old.gif" alt="Old" border="0"></a>
+			
+				11-26-2007, 06:16 PM
+			
+			
+			<!-- / status icon and date -->
+		</div>
+	</td>
+</tr>
+<tr>
+	<td class="alt2" style="padding: 0px;">
+		<!-- user info -->
+		<table border="0" cellpadding="0" cellspacing="6" width="100%">
+		<tbody><tr>
+			
+			<td nowrap="nowrap">
+			
+				<div id="postmenu_91315">
+					
+					<a class="bigusername" href="http://extjs.com/forum/member.php?u=17743">kpitn</a>
+					<img title="kpitn is offline" class="inlineimg" src="extjs_FCKeditor_files/user_offline.gif" alt="kpitn is offline" border="0">
+
+
+					<script type="text/javascript"> vbmenu_register("postmenu_91315", true); </script>
+					
+				</div>
+				
+				<div class="smallfont">Ext User</div>
+				
+				
+				
+			</td>
+			<td width="100%">&nbsp;</td>
+			<td nowrap="nowrap" valign="top">
+				
+				<div class="smallfont">
+					<div>Join Date: Nov 2007</div>
+					
+					
+					<div>
+						Posts: 4
+					</div>
+					
+					<div><span id="repdisplay_91315_17743"><img title="kpitn is infamous around these parts" class="inlineimg" src="extjs_FCKeditor_files/reputation_pos.gif" alt="kpitn is infamous around these parts" border="0"></span></div>
+					
+					<div>    </div>
+				</div>
+				
+			</td>
+		</tr>
+		</tbody></table>
+		<!-- / user info -->
+	</td>
+</tr>
+<tr>
+	<td class="alt1" id="td_post_91315">
+	<!-- message, attachments, sig -->
+	
+		
+		
+		
+			<!-- icon and title -->
+			<div class="smallfont">
+				<img title="Default" class="inlineimg" src="extjs_FCKeditor_files/icon1.gif" alt="Default" border="0">
+				
+			</div>
+			<hr style="color: rgb(255, 255, 255);" size="1">
+			<!-- / icon and title -->
+		
+		
+		<!-- message -->
+		<div id="post_message_91315">Thx<br>
+<br>
+I can display fckeditor in my page, but :<br>
+with this code :<br>
+<div style="margin: 5px 20px 20px;" class="codeblock">
+	<pre dir="ltr">		xtype:'fckeditor',
+		name:'fck_description',
+		id:'fck_description',
+		height:'100%',
+		width:'100%',
+		value:'test',</pre>
+</div>I have this error<br>
+FCKeditorAPI is not defined<br>
+var oEditor = FCKeditorAPI.GetInstance(name) ;<br>
+<br>
+How do you initialise your fck field ?</div>
+		<!-- / message -->
+	
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	
+		<div style="margin-top: 10px;" align="right">
+			<!-- controls -->
+			
+			
+			
+				<a href="http://extjs.com/forum/newreply.php?do=newreply&amp;p=91315" rel="nofollow"><img title="Reply With Quote" src="extjs_FCKeditor_files/quote_002.gif" alt="Reply With Quote" border="0"></a>
+			
+			
+				<a href="http://extjs.com/forum/newreply.php?do=newreply&amp;p=91315" rel="nofollow" onclick="return false"><img title="Multi-Quote This Message" src="extjs_FCKeditor_files/multiquote_off.gif" alt="Multi-Quote This Message" id="mq_91315" border="0"></a>
+			
+			
+				<a href="http://extjs.com/forum/newreply.php?do=newreply&amp;p=91315" rel="nofollow" id="qr_91315" onclick="return false"><img title="Quick reply to this message" src="extjs_FCKeditor_files/quickreply.gif" alt="Quick reply to this message" border="0"></a>
+			
+			
+			
+			
+				
+			
+			
+			<!-- / controls -->
+		</div>
+		
+	<!-- message, attachments, sig -->
+	
+	</td>
+</tr>
+</tbody></table>
+
+
+<!-- post 91315 popup menu -->
+<div class="vbmenu_popup" id="postmenu_91315_menu" style="display: none;">
+	<table border="0" cellpadding="4" cellspacing="1">
+	<tbody><tr>
+		<td class="thead">kpitn</td>
+	</tr>
+	
+		<tr><td class="vbmenu_option"><a href="http://extjs.com/forum/member.php?u=17743">View Public Profile</a></td></tr>
+	
+	
+		<tr><td class="vbmenu_option"><a href="http://extjs.com/forum/private.php?do=newpm&amp;u=17743" rel="nofollow">Send a private message to kpitn</a></td></tr>
+	
+	
+	
+	
+		<tr><td class="vbmenu_option"><a href="http://extjs.com/forum/search.php?do=finduser&amp;u=17743" rel="nofollow">Find all posts by kpitn</a></td></tr>
+	
+	
+	<tr><td class="vbmenu_option"><a href="http://extjs.com/forum/profile.php?do=addlist&amp;userlist=buddy&amp;u=17743">Add kpitn to Your Buddy List</a></td></tr>
+	
+	
+	</tbody></table>
+</div>
+<!-- / post 91315 popup menu -->
+
+
+	</div>
+	
+
+<!-- / post #91315 --><!-- post #94343 -->
+
+	
+	<div id="edit94343" style="padding: 0px 0px 6px;">
+	<!-- this is not the last post shown on the page -->	
+
+
+
+<table class="tborder" id="post94343" align="center" border="0" cellpadding="6" cellspacing="1" width="100%">
+<tbody><tr>
+	<td class="thead">
+		<div class="normal" style="float: right;">
+			&nbsp;
+			#<a href="http://extjs.com/forum/showthread.php?p=94343#post94343" rel="nofollow" id="postcount94343" name="6"><strong>6</strong></a> &nbsp;
+			
+				<span id="reputationmenu_94343"><a href="http://extjs.com/forum/reputation.php?p=94343" rel="nofollow" id="reputation_94343"><img title="Add to BKrisz79's Reputation" class="inlineimg" src="extjs_FCKeditor_files/reputation.gif" alt="Add to BKrisz79's Reputation" border="0"></a></span>
+				<script type="text/javascript"> vbrep_register("94343")</script>&nbsp;
+			
+			
+			<a href="http://extjs.com/forum/report.php?p=94343" rel="nofollow"><img title="Report Post" class="inlineimg" src="extjs_FCKeditor_files/report.gif" alt="Report Post" border="0"></a> &nbsp;
+			
+			
+		</div>
+		
+		<div class="normal">
+			<!-- status icon and date -->
+			<a name="post94343"><img title="Old" class="inlineimg" src="extjs_FCKeditor_files/post_old.gif" alt="Old" border="0"></a>
+			
+				12-03-2007, 11:14 PM
+			
+			
+			<!-- / status icon and date -->
+		</div>
+	</td>
+</tr>
+<tr>
+	<td class="alt2" style="padding: 0px;">
+		<!-- user info -->
+		<table border="0" cellpadding="0" cellspacing="6" width="100%">
+		<tbody><tr>
+			
+			<td nowrap="nowrap">
+			
+				<div id="postmenu_94343">
+					
+					<a class="bigusername" href="http://extjs.com/forum/member.php?u=18367">BKrisz79</a>
+					<img title="BKrisz79 is offline" class="inlineimg" src="extjs_FCKeditor_files/user_offline.gif" alt="BKrisz79 is offline" border="0">
+
+
+					<script type="text/javascript"> vbmenu_register("postmenu_94343", true); </script>
+					
+				</div>
+				
+				<div class="smallfont">Ext User</div>
+				
+				
+				
+			</td>
+			<td width="100%">&nbsp;</td>
+			<td nowrap="nowrap" valign="top">
+				
+				<div class="smallfont">
+					<div>Join Date: Dec 2007</div>
+					
+					
+					<div>
+						Posts: 41
+					</div>
+					
+					<div><span id="repdisplay_94343_18367"><img title="BKrisz79 is infamous around these parts" class="inlineimg" src="extjs_FCKeditor_files/reputation_pos.gif" alt="BKrisz79 is infamous around these parts" border="0"></span></div>
+					
+					<div>    </div>
+				</div>
+				
+			</td>
+		</tr>
+		</tbody></table>
+		<!-- / user info -->
+	</td>
+</tr>
+<tr>
+	<td class="alt1" id="td_post_94343">
+	<!-- message, attachments, sig -->
+	
+		
+		
+		
+			<!-- icon and title -->
+			<div class="smallfont">
+				<img title="Default" class="inlineimg" src="extjs_FCKeditor_files/icon1.gif" alt="Default" border="0">
+				
+			</div>
+			<hr style="color: rgb(255, 255, 255);" size="1">
+			<!-- / icon and title -->
+		
+		
+		<!-- message -->
+		<div id="post_message_94343">Hi,<br>
+<br>
+I read Michiel's post about fckeditor error:<br>
+FCKeditor is not defined<br>
+[Break on this error] oFCKeditor = new FCKeditor( element ) ;<br>
+<br>
+Which path was wrong because I got the same message:<br>
+<br>
+My program<br>
+Site URL: <a href="http://localhost/mmmoritel.hu/" target="_blank">http://localhost/mmmoritel.hu/</a><br>
+my html run in a directory: <a href="http://localhost/mmmoritel.hu/modules/forum/" target="_blank">http://localhost/mmmoritel.hu/modules/forum/</a><br>
+The extjs is under: <a href="http://localhost/mmmoritel.hu/extjs/" target="_blank">http://localhost/mmmoritel.hu/extjs/</a><br>
+FCKEditor ext.FCKEditor.js: <a href="http://localhost/mmmoritel.hu/extjs/extensions/" target="_blank">http://localhost/mmmoritel.hu/extjs/extensions/</a><br>
+FCKEditor: <a href="http://localhost/mmmoritel.hu/modules/editor" target="_blank">http://localhost/mmmoritel.hu/modules/editor</a><br>
+SKIN: <a href="http://localhost/mmmoritel.hu/modules/editor/editor/" target="_blank">http://localhost/mmmoritel.hu/modules/editor/editor/</a><br>
+<br>
+<br>
+My path in the programs:<br>
+<br>
+PHP Code:<br>
+        &lt;script type="text/javascript"&gt; <br>
+            var sFCKeditorToolbar = 'Default'; <br>
+            var sFCKeditorBasePath = '../editor/'; <br>
+            var sFCKeditorBaseHref = 'http://localhost/mmmoritel.hu/'; <br>
+            var sFCKeditorSkinPath = '../editor/editor/skins/office2003/'; <br>
+        &lt;/script&gt;  <br>
+<br>
+Can u tell me what I made wrong?<br>
+thanx in advance.</div>
+		<!-- / message -->
+	
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	
+		<div style="margin-top: 10px;" align="right">
+			<!-- controls -->
+			
+			
+			
+				<a href="http://extjs.com/forum/newreply.php?do=newreply&amp;p=94343" rel="nofollow"><img title="Reply With Quote" src="extjs_FCKeditor_files/quote_002.gif" alt="Reply With Quote" border="0"></a>
+			
+			
+				<a href="http://extjs.com/forum/newreply.php?do=newreply&amp;p=94343" rel="nofollow" onclick="return false"><img title="Multi-Quote This Message" src="extjs_FCKeditor_files/multiquote_off.gif" alt="Multi-Quote This Message" id="mq_94343" border="0"></a>
+			
+			
+				<a href="http://extjs.com/forum/newreply.php?do=newreply&amp;p=94343" rel="nofollow" id="qr_94343" onclick="return false"><img title="Quick reply to this message" src="extjs_FCKeditor_files/quickreply.gif" alt="Quick reply to this message" border="0"></a>
+			
+			
+			
+			
+				
+			
+			
+			<!-- / controls -->
+		</div>
+		
+	<!-- message, attachments, sig -->
+	
+	</td>
+</tr>
+</tbody></table>
+
+
+<!-- post 94343 popup menu -->
+<div class="vbmenu_popup" id="postmenu_94343_menu" style="display: none;">
+	<table border="0" cellpadding="4" cellspacing="1">
+	<tbody><tr>
+		<td class="thead">BKrisz79</td>
+	</tr>
+	
+		<tr><td class="vbmenu_option"><a href="http://extjs.com/forum/member.php?u=18367">View Public Profile</a></td></tr>
+	
+	
+		<tr><td class="vbmenu_option"><a href="http://extjs.com/forum/private.php?do=newpm&amp;u=18367" rel="nofollow">Send a private message to BKrisz79</a></td></tr>
+	
+	
+	
+	
+		<tr><td class="vbmenu_option"><a href="http://extjs.com/forum/search.php?do=finduser&amp;u=18367" rel="nofollow">Find all posts by BKrisz79</a></td></tr>
+	
+	
+	<tr><td class="vbmenu_option"><a href="http://extjs.com/forum/profile.php?do=addlist&amp;userlist=buddy&amp;u=18367">Add BKrisz79 to Your Buddy List</a></td></tr>
+	
+	
+	</tbody></table>
+</div>
+<!-- / post 94343 popup menu -->
+
+
+	</div>
+	
+
+<!-- / post #94343 --><!-- post #94387 -->
+
+	
+	<div id="edit94387" style="padding: 0px 0px 6px;">
+	<!-- this is not the last post shown on the page -->	
+
+
+
+<table class="tborder" id="post94387" align="center" border="0" cellpadding="6" cellspacing="1" width="100%">
+<tbody><tr>
+	<td class="thead">
+		<div class="normal" style="float: right;">
+			&nbsp;
+			#<a href="http://extjs.com/forum/showthread.php?p=94387#post94387" rel="nofollow" id="postcount94387" name="7"><strong>7</strong></a> &nbsp;
+			
+				<span id="reputationmenu_94387"><a href="http://extjs.com/forum/reputation.php?p=94387" rel="nofollow" id="reputation_94387"><img title="Add to BKrisz79's Reputation" class="inlineimg" src="extjs_FCKeditor_files/reputation.gif" alt="Add to BKrisz79's Reputation" border="0"></a></span>
+				<script type="text/javascript"> vbrep_register("94387")</script>&nbsp;
+			
+			
+			<a href="http://extjs.com/forum/report.php?p=94387" rel="nofollow"><img title="Report Post" class="inlineimg" src="extjs_FCKeditor_files/report.gif" alt="Report Post" border="0"></a> &nbsp;
+			
+			
+		</div>
+		
+		<div class="normal">
+			<!-- status icon and date -->
+			<a name="post94387"><img title="Old" class="inlineimg" src="extjs_FCKeditor_files/post_old.gif" alt="Old" border="0"></a>
+			
+				12-04-2007, 12:28 AM
+			
+			
+			<!-- / status icon and date -->
+		</div>
+	</td>
+</tr>
+<tr>
+	<td class="alt2" style="padding: 0px;">
+		<!-- user info -->
+		<table border="0" cellpadding="0" cellspacing="6" width="100%">
+		<tbody><tr>
+			
+			<td nowrap="nowrap">
+			
+				<div id="postmenu_94387">
+					
+					<a class="bigusername" href="http://extjs.com/forum/member.php?u=18367">BKrisz79</a>
+					<img title="BKrisz79 is offline" class="inlineimg" src="extjs_FCKeditor_files/user_offline.gif" alt="BKrisz79 is offline" border="0">
+
+
+					<script type="text/javascript"> vbmenu_register("postmenu_94387", true); </script>
+					
+				</div>
+				
+				<div class="smallfont">Ext User</div>
+				
+				
+				
+			</td>
+			<td width="100%">&nbsp;</td>
+			<td nowrap="nowrap" valign="top">
+				
+				<div class="smallfont">
+					<div>Join Date: Dec 2007</div>
+					
+					
+					<div>
+						Posts: 41
+					</div>
+					
+					<div><span id="repdisplay_94387_18367"><img title="BKrisz79 is infamous around these parts" class="inlineimg" src="extjs_FCKeditor_files/reputation_pos.gif" alt="BKrisz79 is infamous around these parts" border="0"></span></div>
+					
+					<div>    </div>
+				</div>
+				
+			</td>
+		</tr>
+		</tbody></table>
+		<!-- / user info -->
+	</td>
+</tr>
+<tr>
+	<td class="alt1" id="td_post_94387">
+	<!-- message, attachments, sig -->
+	
+		
+		
+		
+			<!-- icon and title -->
+			<div class="smallfont">
+				<img title="Default" class="inlineimg" src="extjs_FCKeditor_files/icon1.gif" alt="Default" border="0">
+				
+			</div>
+			<hr style="color: rgb(255, 255, 255);" size="1">
+			<!-- / icon and title -->
+		
+		
+		<!-- message -->
+		<div id="post_message_94387">Ok
+I forget to load the original fckeditor.js . After that there is no
+error message, but something goes wrong it looks like this:<br>
+<img src="extjs_FCKeditor_files/fckeditor.html" alt="" border="0"></div>
+		<!-- / message -->
+	
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	
+		<div style="margin-top: 10px;" align="right">
+			<!-- controls -->
+			
+			
+			
+				<a href="http://extjs.com/forum/newreply.php?do=newreply&amp;p=94387" rel="nofollow"><img title="Reply With Quote" src="extjs_FCKeditor_files/quote_002.gif" alt="Reply With Quote" border="0"></a>
+			
+			
+				<a href="http://extjs.com/forum/newreply.php?do=newreply&amp;p=94387" rel="nofollow" onclick="return false"><img title="Multi-Quote This Message" src="extjs_FCKeditor_files/multiquote_off.gif" alt="Multi-Quote This Message" id="mq_94387" border="0"></a>
+			
+			
+				<a href="http://extjs.com/forum/newreply.php?do=newreply&amp;p=94387" rel="nofollow" id="qr_94387" onclick="return false"><img title="Quick reply to this message" src="extjs_FCKeditor_files/quickreply.gif" alt="Quick reply to this message" border="0"></a>
+			
+			
+			
+			
+				
+			
+			
+			<!-- / controls -->
+		</div>
+		
+	<!-- message, attachments, sig -->
+	
+	</td>
+</tr>
+</tbody></table>
+
+
+<!-- post 94387 popup menu -->
+<div class="vbmenu_popup" id="postmenu_94387_menu" style="display: none;">
+	<table border="0" cellpadding="4" cellspacing="1">
+	<tbody><tr>
+		<td class="thead">BKrisz79</td>
+	</tr>
+	
+		<tr><td class="vbmenu_option"><a href="http://extjs.com/forum/member.php?u=18367">View Public Profile</a></td></tr>
+	
+	
+		<tr><td class="vbmenu_option"><a href="http://extjs.com/forum/private.php?do=newpm&amp;u=18367" rel="nofollow">Send a private message to BKrisz79</a></td></tr>
+	
+	
+	
+	
+		<tr><td class="vbmenu_option"><a href="http://extjs.com/forum/search.php?do=finduser&amp;u=18367" rel="nofollow">Find all posts by BKrisz79</a></td></tr>
+	
+	
+	<tr><td class="vbmenu_option"><a href="http://extjs.com/forum/profile.php?do=addlist&amp;userlist=buddy&amp;u=18367">Add BKrisz79 to Your Buddy List</a></td></tr>
+	
+	
+	</tbody></table>
+</div>
+<!-- / post 94387 popup menu -->
+
+
+	</div>
+	
+
+<!-- / post #94387 --><!-- post #96052 -->
+
+	
+	<div id="edit96052" style="padding: 0px 0px 6px;">
+	<!-- this is not the last post shown on the page -->	
+
+
+
+<table class="tborder" id="post96052" align="center" border="0" cellpadding="6" cellspacing="1" width="100%">
+<tbody><tr>
+	<td class="thead">
+		<div class="normal" style="float: right;">
+			&nbsp;
+			#<a href="http://extjs.com/forum/showthread.php?p=96052#post96052" rel="nofollow" id="postcount96052" name="8"><strong>8</strong></a> &nbsp;
+			
+				<span id="reputationmenu_96052"><a href="http://extjs.com/forum/reputation.php?p=96052" rel="nofollow" id="reputation_96052"><img title="Add to dawesi's Reputation" class="inlineimg" src="extjs_FCKeditor_files/reputation.gif" alt="Add to dawesi's Reputation" border="0"></a></span>
+				<script type="text/javascript"> vbrep_register("96052")</script>&nbsp;
+			
+			
+			<a href="http://extjs.com/forum/report.php?p=96052" rel="nofollow"><img title="Report Post" class="inlineimg" src="extjs_FCKeditor_files/report.gif" alt="Report Post" border="0"></a> &nbsp;
+			
+			
+		</div>
+		
+		<div class="normal">
+			<!-- status icon and date -->
+			<a name="post96052"><img title="Old" class="inlineimg" src="extjs_FCKeditor_files/post_old.gif" alt="Old" border="0"></a>
+			
+				12-07-2007, 07:29 AM
+			
+			
+			<!-- / status icon and date -->
+		</div>
+	</td>
+</tr>
+<tr>
+	<td class="alt2" style="padding: 0px;">
+		<!-- user info -->
+		<table border="0" cellpadding="0" cellspacing="6" width="100%">
+		<tbody><tr>
+			<td class="alt2"><a href="http://extjs.com/forum/member.php?u=1596"><img title="dawesi's Avatar" src="extjs_FCKeditor_files/image.png" alt="dawesi's Avatar" border="0" height="50" width="50"></a></td>
+			<td nowrap="nowrap">
+			
+				<div id="postmenu_96052">
+					
+					<a class="bigusername" href="http://extjs.com/forum/member.php?u=1596">dawesi</a>
+					<img title="dawesi is offline" class="inlineimg" src="extjs_FCKeditor_files/user_offline.gif" alt="dawesi is offline" border="0">
+
+
+					<script type="text/javascript"> vbmenu_register("postmenu_96052", true); </script>
+					
+				</div>
+				
+				<div class="smallfont"><b>Ext JS Premium Member</b></div>
+				
+				
+				
+			</td>
+			<td width="100%">&nbsp;</td>
+			<td nowrap="nowrap" valign="top">
+				
+				<div class="smallfont">
+					<div>Join Date: Apr 2007</div>
+					<div>Location: Melbourne, Australia</div>
+					
+					<div>
+						Posts: 279
+					</div>
+					
+					<div><span id="repdisplay_96052_1596"><img title="dawesi is on a distinguished road" class="inlineimg" src="extjs_FCKeditor_files/reputation_pos.gif" alt="dawesi is on a distinguished road" border="0"></span></div>
+					
+					<div><a href="#" onclick="imwindow('icq', '1596', 500, 450); return false;"><img title="Send a message via ICQ to dawesi" src="extjs_FCKeditor_files/im_icq.gif" alt="Send a message via ICQ to dawesi" border="0"></a> <a href="#" onclick="imwindow('aim', '1596', 400, 200); return false;"><img title="Send a message via AIM to dawesi" src="extjs_FCKeditor_files/im_aim.gif" alt="Send a message via AIM to dawesi" border="0"></a> <a href="#" onclick="imwindow('msn', '1596', 400, 200); return false;"><img title="Send a message via MSN to dawesi" src="extjs_FCKeditor_files/im_msn.gif" alt="Send a message via MSN to dawesi" border="0"></a> <a href="#" onclick="imwindow('yahoo', '1596', 400, 200); return false;"><img title="Send a message via Yahoo to dawesi" src="extjs_FCKeditor_files/im_yahoo.gif" alt="Send a message via Yahoo to dawesi" border="0"></a> <a href="#" onclick="imwindow('skype', '1596', 400, 285); return false;"><img title="Send a message via Skype™ to dawesi" src="extjs_FCKeditor_files/dawesi.png" alt="Send a message via Skype™ to dawesi" border="0"></a></div>
+				</div>
+				
+			</td>
+		</tr>
+		</tbody></table>
+		<!-- / user info -->
+	</td>
+</tr>
+<tr>
+	<td class="alt1" id="td_post_96052">
+	<!-- message, attachments, sig -->
+	
+		
+		
+		
+			<!-- icon and title -->
+			<div class="smallfont">
+				<img title="Default" class="inlineimg" src="extjs_FCKeditor_files/icon1.gif" alt="Default" border="0">
+				<strong>Ext.form.FCKeditor Extension</strong>
+			</div>
+			<hr style="color: rgb(255, 255, 255);" size="1">
+			<!-- / icon and title -->
+		
+		
+		<!-- message -->
+		<div id="post_message_96052">Nice Job, Can you post this on the extensions page...<br>
+<br>
+<a href="http://extjs.com/learn/Ext_Extensions" target="_blank">http://extjs.com/learn/Ext_Extensions</a><br>
+<br>
+Thanks</div>
+		<!-- / message -->
+	
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	
+		<div style="margin-top: 10px;" align="right">
+			<!-- controls -->
+			
+			
+			
+				<a href="http://extjs.com/forum/newreply.php?do=newreply&amp;p=96052" rel="nofollow"><img title="Reply With Quote" src="extjs_FCKeditor_files/quote_002.gif" alt="Reply With Quote" border="0"></a>
+			
+			
+				<a href="http://extjs.com/forum/newreply.php?do=newreply&amp;p=96052" rel="nofollow" onclick="return false"><img title="Multi-Quote This Message" src="extjs_FCKeditor_files/multiquote_off.gif" alt="Multi-Quote This Message" id="mq_96052" border="0"></a>
+			
+			
+				<a href="http://extjs.com/forum/newreply.php?do=newreply&amp;p=96052" rel="nofollow" id="qr_96052" onclick="return false"><img title="Quick reply to this message" src="extjs_FCKeditor_files/quickreply.gif" alt="Quick reply to this message" border="0"></a>
+			
+			
+			
+			
+				
+			
+			
+			<!-- / controls -->
+		</div>
+		
+	<!-- message, attachments, sig -->
+	
+	</td>
+</tr>
+</tbody></table>
+
+
+<!-- post 96052 popup menu -->
+<div class="vbmenu_popup" id="postmenu_96052_menu" style="display: none;">
+	<table border="0" cellpadding="4" cellspacing="1">
+	<tbody><tr>
+		<td class="thead">dawesi</td>
+	</tr>
+	
+		<tr><td class="vbmenu_option"><a href="http://extjs.com/forum/member.php?u=1596">View Public Profile</a></td></tr>
+	
+	
+		<tr><td class="vbmenu_option"><a href="http://extjs.com/forum/private.php?do=newpm&amp;u=1596" rel="nofollow">Send a private message to dawesi</a></td></tr>
+	
+	
+	
+		<tr><td class="vbmenu_option"><a href="http://www.ext-ui.com/">Visit dawesi's homepage!</a></td></tr>
+	
+	
+		<tr><td class="vbmenu_option"><a href="http://extjs.com/forum/search.php?do=finduser&amp;u=1596" rel="nofollow">Find all posts by dawesi</a></td></tr>
+	
+	
+	<tr><td class="vbmenu_option"><a href="http://extjs.com/forum/profile.php?do=addlist&amp;userlist=buddy&amp;u=1596">Add dawesi to Your Buddy List</a></td></tr>
+	
+	
+	</tbody></table>
+</div>
+<!-- / post 96052 popup menu -->
+
+
+	</div>
+	
+
+<!-- / post #96052 --><!-- post #96162 -->
+
+	
+	<div id="edit96162" style="padding: 0px 0px 6px;">
+	<!-- this is not the last post shown on the page -->	
+
+
+
+<table class="tborder" id="post96162" align="center" border="0" cellpadding="6" cellspacing="1" width="100%">
+<tbody><tr>
+	<td class="thead">
+		<div class="normal" style="float: right;">
+			&nbsp;
+			#<a href="http://extjs.com/forum/showthread.php?p=96162#post96162" rel="nofollow" id="postcount96162" name="9"><strong>9</strong></a> &nbsp;
+			
+				<span id="reputationmenu_96162"><a href="http://extjs.com/forum/reputation.php?p=96162" rel="nofollow" id="reputation_96162"><img title="Add to BKrisz79's Reputation" class="inlineimg" src="extjs_FCKeditor_files/reputation.gif" alt="Add to BKrisz79's Reputation" border="0"></a></span>
+				<script type="text/javascript"> vbrep_register("96162")</script>&nbsp;
+			
+			
+			<a href="http://extjs.com/forum/report.php?p=96162" rel="nofollow"><img title="Report Post" class="inlineimg" src="extjs_FCKeditor_files/report.gif" alt="Report Post" border="0"></a> &nbsp;
+			
+			
+		</div>
+		
+		<div class="normal">
+			<!-- status icon and date -->
+			<a name="post96162"><img title="Old" class="inlineimg" src="extjs_FCKeditor_files/post_old.gif" alt="Old" border="0"></a>
+			
+				12-07-2007, 03:11 PM
+			
+			
+			<!-- / status icon and date -->
+		</div>
+	</td>
+</tr>
+<tr>
+	<td class="alt2" style="padding: 0px;">
+		<!-- user info -->
+		<table border="0" cellpadding="0" cellspacing="6" width="100%">
+		<tbody><tr>
+			
+			<td nowrap="nowrap">
+			
+				<div id="postmenu_96162">
+					
+					<a class="bigusername" href="http://extjs.com/forum/member.php?u=18367">BKrisz79</a>
+					<img title="BKrisz79 is offline" class="inlineimg" src="extjs_FCKeditor_files/user_offline.gif" alt="BKrisz79 is offline" border="0">
+
+
+					<script type="text/javascript"> vbmenu_register("postmenu_96162", true); </script>
+					
+				</div>
+				
+				<div class="smallfont">Ext User</div>
+				
+				
+				
+			</td>
+			<td width="100%">&nbsp;</td>
+			<td nowrap="nowrap" valign="top">
+				
+				<div class="smallfont">
+					<div>Join Date: Dec 2007</div>
+					
+					
+					<div>
+						Posts: 41
+					</div>
+					
+					<div><span id="repdisplay_96162_18367"><img title="BKrisz79 is infamous around these parts" class="inlineimg" src="extjs_FCKeditor_files/reputation_pos.gif" alt="BKrisz79 is infamous around these parts" border="0"></span></div>
+					
+					<div>    </div>
+				</div>
+				
+			</td>
+		</tr>
+		</tbody></table>
+		<!-- / user info -->
+	</td>
+</tr>
+<tr>
+	<td class="alt1" id="td_post_96162">
+	<!-- message, attachments, sig -->
+	
+		
+		
+		
+			<!-- icon and title -->
+			<div class="smallfont">
+				<img title="Default" class="inlineimg" src="extjs_FCKeditor_files/icon1.gif" alt="Default" border="0">
+				
+			</div>
+			<hr style="color: rgb(255, 255, 255);" size="1">
+			<!-- / icon and title -->
+		
+		
+		<!-- message -->
+		<div id="post_message_96162">I would be appriciate if you can link a live demo about this.</div>
+		<!-- / message -->
+	
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	
+		<div style="margin-top: 10px;" align="right">
+			<!-- controls -->
+			
+			
+			
+				<a href="http://extjs.com/forum/newreply.php?do=newreply&amp;p=96162" rel="nofollow"><img title="Reply With Quote" src="extjs_FCKeditor_files/quote_002.gif" alt="Reply With Quote" border="0"></a>
+			
+			
+				<a href="http://extjs.com/forum/newreply.php?do=newreply&amp;p=96162" rel="nofollow" onclick="return false"><img title="Multi-Quote This Message" src="extjs_FCKeditor_files/multiquote_off.gif" alt="Multi-Quote This Message" id="mq_96162" border="0"></a>
+			
+			
+				<a href="http://extjs.com/forum/newreply.php?do=newreply&amp;p=96162" rel="nofollow" id="qr_96162" onclick="return false"><img title="Quick reply to this message" src="extjs_FCKeditor_files/quickreply.gif" alt="Quick reply to this message" border="0"></a>
+			
+			
+			
+			
+				
+			
+			
+			<!-- / controls -->
+		</div>
+		
+	<!-- message, attachments, sig -->
+	
+	</td>
+</tr>
+</tbody></table>
+
+
+<!-- post 96162 popup menu -->
+<div class="vbmenu_popup" id="postmenu_96162_menu" style="display: none;">
+	<table border="0" cellpadding="4" cellspacing="1">
+	<tbody><tr>
+		<td class="thead">BKrisz79</td>
+	</tr>
+	
+		<tr><td class="vbmenu_option"><a href="http://extjs.com/forum/member.php?u=18367">View Public Profile</a></td></tr>
+	
+	
+		<tr><td class="vbmenu_option"><a href="http://extjs.com/forum/private.php?do=newpm&amp;u=18367" rel="nofollow">Send a private message to BKrisz79</a></td></tr>
+	
+	
+	
+	
+		<tr><td class="vbmenu_option"><a href="http://extjs.com/forum/search.php?do=finduser&amp;u=18367" rel="nofollow">Find all posts by BKrisz79</a></td></tr>
+	
+	
+	<tr><td class="vbmenu_option"><a href="http://extjs.com/forum/profile.php?do=addlist&amp;userlist=buddy&amp;u=18367">Add BKrisz79 to Your Buddy List</a></td></tr>
+	
+	
+	</tbody></table>
+</div>
+<!-- / post 96162 popup menu -->
+
+
+	</div>
+	
+
+<!-- / post #96162 --><!-- post #99966 -->
+
+	
+	<div id="edit99966" style="padding: 0px 0px 6px;">
+		
+
+
+
+<table class="tborder" id="post99966" align="center" border="0" cellpadding="6" cellspacing="1" width="100%">
+<tbody><tr>
+	<td class="thead">
+		<div class="normal" style="float: right;">
+			&nbsp;
+			#<a href="http://extjs.com/forum/showthread.php?p=99966#post99966" rel="nofollow" id="postcount99966" name="10"><strong>10</strong></a> &nbsp;
+			
+				<span id="reputationmenu_99966"><a href="http://extjs.com/forum/reputation.php?p=99966" rel="nofollow" id="reputation_99966"><img title="Add to jgarcia@tdg-i.com's Reputation" class="inlineimg" src="extjs_FCKeditor_files/reputation.gif" alt="Add to jgarcia@tdg-i.com's Reputation" border="0"></a></span>
+				<script type="text/javascript"> vbrep_register("99966")</script>&nbsp;
+			
+			
+			<a href="http://extjs.com/forum/report.php?p=99966" rel="nofollow"><img title="Report Post" class="inlineimg" src="extjs_FCKeditor_files/report.gif" alt="Report Post" border="0"></a> &nbsp;
+			
+			
+		</div>
+		
+		<div class="normal">
+			<!-- status icon and date -->
+			<a name="post99966"><img title="Old" class="inlineimg" src="extjs_FCKeditor_files/post_old.gif" alt="Old" border="0"></a>
+			
+				12-18-2007, 05:42 AM
+			
+			
+			<!-- / status icon and date -->
+		</div>
+	</td>
+</tr>
+<tr>
+	<td class="alt2" style="padding: 0px;">
+		<!-- user info -->
+		<table border="0" cellpadding="0" cellspacing="6" width="100%">
+		<tbody><tr>
+			<td class="alt2"><a href="http://extjs.com/forum/member.php?u=172"><img title="jgarcia@tdg-i.com's Avatar" src="extjs_FCKeditor_files/image.jpeg" alt="jgarcia@tdg-i.com's Avatar" border="0" height="80" width="80"></a></td>
+			<td nowrap="nowrap">
+			
+				<div id="postmenu_99966">
+					
+					<a class="bigusername" href="http://extjs.com/forum/member.php?u=172">jgarcia@tdg-i.com</a>
+					<img title="jgarcia@tdg-i.com is offline" class="inlineimg" src="extjs_FCKeditor_files/user_offline.gif" alt="jgarcia@tdg-i.com is offline" border="0">
+
+
+					<script type="text/javascript"> vbmenu_register("postmenu_99966", true); </script>
+					
+				</div>
+				
+				<div class="smallfont"><b>Ext JS Premium Member</b></div>
+				
+				
+				
+			</td>
+			<td width="100%">&nbsp;</td>
+			<td nowrap="nowrap" valign="top">
+				
+				<div class="smallfont">
+					<div>Join Date: Apr 2007</div>
+					<div>Location: Fredneck MD, NYC, DC</div>
+					
+					<div>
+						Posts: 7,416
+					</div>
+					
+					<div><span id="repdisplay_99966_172"><img title="jgarcia@tdg-i.com is on a distinguished road" class="inlineimg" src="extjs_FCKeditor_files/reputation_pos.gif" alt="jgarcia@tdg-i.com is on a distinguished road" border="0"></span></div>
+					
+					<div> <a href="#" onclick="imwindow('aim', '172', 400, 200); return false;"><img title="Send a message via AIM to jgarcia@tdg-i.com" src="extjs_FCKeditor_files/im_aim.gif" alt="Send a message via AIM to jgarcia@tdg-i.com" border="0"></a>  <a href="#" onclick="imwindow('yahoo', '172', 400, 200); return false;"><img title="Send a message via Yahoo to jgarcia@tdg-i.com" src="extjs_FCKeditor_files/im_yahoo.gif" alt="Send a message via Yahoo to jgarcia@tdg-i.com" border="0"></a> <a href="#" onclick="imwindow('skype', '172', 400, 285); return false;"><img title="Send a message via Skype™ to jgarcia@tdg-i.com" src="extjs_FCKeditor_files/tdg_innovations.png" alt="Send a message via Skype™ to jgarcia@tdg-i.com" border="0"></a></div>
+				</div>
+				
+			</td>
+		</tr>
+		</tbody></table>
+		<!-- / user info -->
+	</td>
+</tr>
+<tr>
+	<td class="alt1" id="td_post_99966">
+	<!-- message, attachments, sig -->
+	
+		
+		
+		
+			<!-- icon and title -->
+			<div class="smallfont">
+				<img title="Default" class="inlineimg" src="extjs_FCKeditor_files/icon1.gif" alt="Default" border="0">
+				
+			</div>
+			<hr style="color: rgb(255, 255, 255);" size="1">
+			<!-- / icon and title -->
+		
+		
+		<!-- message -->
+		<div id="post_message_99966"><div class="quote" style="margin: 5px 20px 20px; width: 820px;">
+	<div class="smallfont quote-hd" style="margin-bottom: 2px;">Quote:</div>
+	<table border="0" cellpadding="6" cellspacing="0" width="100%">
+	<tbody><tr>
+		<td class="alt2 inner-quote">
+			
+				<div class="quote-orig">
+					Originally Posted by <strong>dawesi</strong>
+					<a href="http://extjs.com/forum/showthread.php?p=96052#post96052" rel="nofollow"><img title="View Post" class="inlineimg" src="extjs_FCKeditor_files/viewpost.gif" alt="View Post" border="0"></a>
+				</div>
+				<div style="font-style: italic;">Nice Job, Can you post this on the extensions page...<br>
+<br>
+<a href="http://extjs.com/learn/Ext_Extensions" target="_blank">http://extjs.com/learn/Ext_Extensions</a><br>
+<br>
+Thanks</div>
+			
+		</td>
+	</tr>
+	</tbody></table>
+</div>Ditto!! <br>
+<br>
+My preliminary tests show that this sucker is awesome and works!</div>
+		<!-- / message -->
+	
+		
+		
+		
+		
+		
+		<!-- sig -->
+			<div>
+				__________________<br>
+				<b>My Blog :</b> <a href="http://www.tdg-i.com/" target="_blank">TDG Innovations LLC</a> || <a href="http://extjs.com/forum/showthread.php?p=286084#post286084%22" target="_blank">[Book] - Ext JS In Action</a> || <a href="http://tdg-i.com/category/extjs/ext-and-javascript-screencasts" target="_blank">Ext JS screencasts</a> || <a href="http://extjs.com/forum/showthread.php?t=55214" target="_blank">ext-doc</a><br>
+<br>
+<b>My <i><u>free</u></i> extensions/plugins:</b><br>
+<a href="http://tdg-i.com/63/how-to-integrate-the-progress-bar-with-the-paging-toolbar" target="_blank">Progressbar inside paging toolbar</a> || <a href="http://tdg-i.com/60/updates-to-the-tab-panel-scroller-menu-released-earlier-today" target="_blank">Tab panel scroller menu</a> || <a href="http://tdg-i.com/54/extuxpluginswindowdrawers-10-beta-1-released" target="_blank">Window drawers</a> || <a href="http://tdg-i.com/52/tdgiiconmgr-and-iconbrowser-update" target="_blank">Icon Manager</a><br>
+<a href="http://tdg-i.com/22/gridview-override-adding-showall-button-and-columnviews-filter-sets" target="_blank">Grid view custom 'view' filter</a><br>
+<br>
+<br>
+<b>Help the community help you - </b> Post your code in PHP, CODE or HTML tags.<br>
+If you are using EXT in  a production environment, please consider <a href="http://extjs.com/store" target="_blank">supporting them and buy a support subscription!</a>
+			</div>
+		<!-- / sig -->
+		
+		
+		
+		
+		
+	
+		<div style="margin-top: 10px;" align="right">
+			<!-- controls -->
+			
+			
+			
+				<a href="http://extjs.com/forum/newreply.php?do=newreply&amp;p=99966" rel="nofollow"><img title="Reply With Quote" src="extjs_FCKeditor_files/quote_002.gif" alt="Reply With Quote" border="0"></a>
+			
+			
+				<a href="http://extjs.com/forum/newreply.php?do=newreply&amp;p=99966" rel="nofollow" onclick="return false"><img title="Multi-Quote This Message" src="extjs_FCKeditor_files/multiquote_off.gif" alt="Multi-Quote This Message" id="mq_99966" border="0"></a>
+			
+			
+				<a href="http://extjs.com/forum/newreply.php?do=newreply&amp;p=99966" rel="nofollow" id="qr_99966" onclick="return false"><img title="Quick reply to this message" src="extjs_FCKeditor_files/quickreply.gif" alt="Quick reply to this message" border="0"></a>
+			
+			
+			
+			
+				
+			
+			
+			<!-- / controls -->
+		</div>
+		
+	<!-- message, attachments, sig -->
+	
+	</td>
+</tr>
+</tbody></table>
+
+
+<!-- post 99966 popup menu -->
+<div class="vbmenu_popup" id="postmenu_99966_menu" style="display: none;">
+	<table border="0" cellpadding="4" cellspacing="1">
+	<tbody><tr>
+		<td class="thead">jgarcia@tdg-i.com</td>
+	</tr>
+	
+		<tr><td class="vbmenu_option"><a href="http://extjs.com/forum/member.php?u=172">View Public Profile</a></td></tr>
+	
+	
+		<tr><td class="vbmenu_option"><a href="http://extjs.com/forum/private.php?do=newpm&amp;u=172" rel="nofollow">Send a private message to jgarcia@tdg-i.com</a></td></tr>
+	
+	
+	
+		<tr><td class="vbmenu_option"><a href="http://tdg-i.com/">Visit jgarcia@tdg-i.com's homepage!</a></td></tr>
+	
+	
+		<tr><td class="vbmenu_option"><a href="http://extjs.com/forum/search.php?do=finduser&amp;u=172" rel="nofollow">Find all posts by jgarcia@tdg-i.com</a></td></tr>
+	
+	
+	<tr><td class="vbmenu_option"><a href="http://extjs.com/forum/profile.php?do=addlist&amp;userlist=buddy&amp;u=172">Add jgarcia@tdg-i.com to Your Buddy List</a></td></tr>
+	
+	
+	</tbody></table>
+</div>
+<!-- / post 99966 popup menu -->
+
+
+	</div>
+	
+
+<!-- / post #99966 --><div id="lastpost"></div></div>
+
+<!-- start content table -->
+
+<!-- / start content table -->
+
+<!-- controls below postbits -->
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tbody><tr valign="top">
+	
+		<td class="smallfont"><a href="http://extjs.com/forum/newreply.php?do=newreply&amp;noquote=1&amp;p=99966" rel="nofollow"><img title="Reply" src="extjs_FCKeditor_files/reply.gif" alt="Reply" border="0"></a></td>
+		
+	
+		<td align="right"><div class="pagenav" align="right">
+<table class="tborder" border="0" cellpadding="3" cellspacing="1">
+<tbody><tr>
+	<td class="vbmenu_control" style="font-weight: normal;">Page 1 of 8</td>
+	
+	
+		<td class="alt2"><span class="smallfont" title="Showing results 1 to 10 of 72"><strong>1</strong></span></td>
+ <td class="alt1"><a class="smallfont" href="http://extjs.com/forum/showthread.php?t=17423&amp;page=2" title="Show results 11 to 20 of 72">2</a></td><td class="alt1"><a class="smallfont" href="http://extjs.com/forum/showthread.php?t=17423&amp;page=3" title="Show results 21 to 30 of 72">3</a></td>
+	<td class="alt1"><a class="smallfont" href="http://extjs.com/forum/showthread.php?t=17423&amp;page=2" title="Next Page - Results 11 to 20 of 72">&gt;</a></td>
+	<td class="alt1"><a class="smallfont" href="http://extjs.com/forum/showthread.php?t=17423&amp;page=8" title="Last Page - Results 71 to 72 of 72">Last <strong>»</strong></a></td>
+	<td style="cursor: pointer;" id="pagenav.179" class="vbmenu_control" title=""> <img alt="" title="" src="extjs_FCKeditor_files/menu_open.gif" border="0"></td>
+</tr>
+</tbody></table>
+</div>
+						
+		</td>
+	
+</tr>
+</tbody></table>
+<!-- / controls below postbits -->
+
+
+
+
+<br>
+
+<div class="smallfont" align="center">
+	<strong>«</strong>
+		<a href="http://extjs.com/forum/showthread.php?t=17423&amp;goto=nextoldest" rel="nofollow">Previous Thread</a>
+		|
+		<a href="http://extjs.com/forum/showthread.php?t=17423&amp;goto=nextnewest" rel="nofollow">Next Thread</a>
+	<strong>»</strong>
+</div>
+
+
+<br>
+
+
+<script type="text/javascript" src="extjs_FCKeditor_files/vbulletin_multi_quote.js"></script>
+<script type="text/javascript">
+var mqlimit = 0;
+</script>
+
+
+
+<!-- ajax errors table -->
+<table class="tborder" style="display: none; position: absolute;" id="ajax_post_errors" border="0" cellpadding="6" cellspacing="1">
+<tbody><tr>
+	<td class="thead">
+		<span style="float: right;"><input class="button" value=" X " onclick="vB_QuickEditor.hide_errors()" unselectable="true" type="button"></span>
+		vBulletin Message
+	</td>
+</tr>
+<tr>
+	<td class="alt2" colspan="2" id="ajax_post_errors_message">&nbsp;</td>
+</tr>
+<tr>
+	<td class="tfoot" colspan="2" align="center"><a href="#" onclick="vB_QuickEditor.abort(); return false;">Cancel Changes</a></td>
+</tr>
+</tbody></table>
+<!-- / ajax errors table -->
+
+<!-- scripts for quick reply and quick edit -->
+<!-- EDITOR SCRIPTS -->
+<script type="text/javascript" src="extjs_FCKeditor_files/vbulletin_textedit.js"></script>
+<script type="text/javascript">
+<!--
+var fontoptions = new Array("Arial", "Arial Black", "Arial Narrow", "Book Antiqua", "Century Gothic", "Comic Sans MS", "Courier New", "Fixedsys", "Franklin Gothic Medium", "Garamond", "Georgia", "Impact", "Lucida Console", "Lucida Sans Unicode", "Microsoft Sans Serif", "Palatino Linotype", "System", "Tahoma", "Times New Roman", "Trebuchet MS", "Verdana");
+var sizeoptions = new Array(1, 2, 3, 4, 5, 6, 7);
+var smilieoptions = new Array(); smilieoptions = {  };
+
+var istyles = new Array(); istyles = { "pi_button_normal" : [ "#F4F5EB", "#000000", "1px", "0 none" ], "pi_button_down" : [ "#98B5E2", "#000000", "0px", "1px solid #316AC5" ], "pi_button_hover" : [ "#C1D2EE", "#000000", "0px", "1px solid #316AC5" ], "pi_button_selected" : [ "#F1F6F8", "#000000", "0px", "1px solid #316AC5" ], "pi_menu_down" : [ "#98B5E2", "#316AC5", "0px", "1px solid #316AC5" ], "pi_menu_hover" : [ "#C1D2EE", "#316AC5", "0px", "1px solid #316AC5" ], "pi_menu_normal" : [ "#FFFFFF", "#000000", "0px", "1px solid #FFFFFF" ], "pi_popup_down" : [ "#98B5E2", "#000000", "0px", "1px solid #316AC5" ] };
+
+var smiliewindow_x = 240;
+var smiliewindow_y = 280;
+
+var ignorequotechars = 1;
+
+// vB Phrases
+vbphrase["wysiwyg_please_wait"]          = "Please wait for the WYSIWYG editor to finish loading...";
+vbphrase["wysiwyg_initialized"]          = "WYSIWYG Editor initialized for %1$s in %2$s seconds.";
+vbphrase["wysiwyg_command_invalid"]      = "This command is invalid or not implemented.";
+vbphrase["moz_must_select_text"]         = "Mozilla requires that you must select some text for this function to work";
+vbphrase["moz_edit_config_file"]         = "You need to edit your Mozilla config file to allow this action.";
+vbphrase["enter_tag_option"]             = "Please enter the option for your %1$s tag:";
+vbphrase["must_select_text_to_use"]      = "You must select some text to use this function.";
+vbphrase["browser_is_safari_no_wysiwyg"] = "The Safari browser does not support WYSIWYG mode.";
+vbphrase["enter_option_x_tag"]           = "Enter the option for the [%1$s] tag:";
+vbphrase["enter_text_to_be_formatted"]   = "Enter the text to be formatted";
+vbphrase["enter_link_text"]              = "Enter the text to be displayed for the link (optional):";
+vbphrase["enter_list_type"]              = "What type of list do you want? Enter '1' for a numbered list, enter 'a' for an alphabetical list, or leave blank for a list with bullet points:";
+vbphrase["enter_list_item"]              = "Enter a list item.\r\nLeave the box empty or press 'Cancel' to complete the list:";
+vbphrase["must_enter_subject"]           = "You must enter a title / subject!";
+vbphrase["message_too_short"]            = "The message you have entered is too short. Please lengthen your message to at least %1$s characters.";
+vbphrase["enter_link_url"]               = "Please enter the URL of your link:";
+vbphrase["enter_image_url"]              = "Please enter the URL of your image:";
+vbphrase["enter_email_link"]             = "Please enter the email address for the link:";
+vbphrase["complete_image_verification"]  = "You did not complete the Image Verification";
+vbphrase["iespell_not_installed"]        = "ieSpell is a spell-checking tool for Internet Explorer.\r\n\r\nIf you would like to download ieSpell, click OK; otherwise click Cancel.\r\n\r\nieSpell can be downloaded from http://www.iespell.com";
+vbphrase["click_quick_reply_icon"]       = "Please click one of the Quick Reply icons in the posts above to activate Quick Reply.";
+vbphrase["insert_all"]                   = "Insert All";
+
+//-->
+</script>
+<!-- END EDITOR SCRIPTS -->
+
+<!-- EDITOR STYLES -->
+<link rel="stylesheet" type="text/css" href="extjs_FCKeditor_files/vbulletin_editor.css">
+<style type="text/css">
+<!--
+.vBulletin_editor {
+	background: #F4F5EB;
+	padding: 6px;
+}
+.imagebutton {
+	background: #F4F5EB;
+	color: #000000;
+	padding: 1px;
+	border: 0 none;
+}
+.ocolor, .ofont, .osize, .osmilie, .osyscoloar, .smilietitle {
+	background: #FFFFFF;
+	color: #000000;
+	border: 1px solid #FFFFFF;
+}
+.popup_pickbutton {
+	border: 1px solid #FFFFFF;
+}
+.popup_feedback {
+	background: #FFFFFF;
+	color: #000000;
+	border-right: 1px solid #FFFFFF;
+}
+.popupwindow {
+	background: #FFFFFF;
+}
+#fontOut, #sizeOut, .popup_feedback div {
+	background: #FFFFFF;
+	color: #000000;
+}
+.alt_pickbutton {
+	border-left: 1px solid #F4F5EB;
+}
+.popup_feedback input, .popup_feedback div
+{
+	border: 0px solid;
+	padding: 0px 2px 0px 2px;
+	cursor: default;
+	font: 11px tahoma;
+	overflow: hidden;
+}
+-->
+</style>
+<!-- END EDITOR STYLES -->
+
+<script type="text/javascript" src="extjs_FCKeditor_files/vbulletin_quick_edit.js"></script>
+<script type="text/javascript">
+<!--
+vB_AJAX_QuickEdit_Init('posts');
+//-->
+</script>
+
+<!-- / scripts for quick reply and quick edit -->
+
+
+
+
+<!-- quick reply -->
+<script type="text/javascript" src="extjs_FCKeditor_files/vbulletin_quick_reply.js"></script>
+<form action="newreply.php?do=postreply&amp;t=17423" method="post" name="vbform" onsubmit="return qr_prepare_submit(this, 1);" id="qrform">
+<table class="tborder" align="center" border="0" cellpadding="6" cellspacing="1" width="100%">
+<thead>
+	<tr>
+		<td class="tcat" colspan="2">
+			
+			Quick Reply
+		</td>
+	</tr>
+</thead>
+<tbody id="qr_error_tbody" style="display: none;">
+<tr>
+	<td class="thead">The following errors occurred when this message was submitted</td>
+</tr>
+<tr>
+	<td class="alt1" id="qr_error_td"></td>
+</tr>
+<tr>
+	<td class="tfoot" align="center"><span class="smallfont"><a href="#" onclick="return qr_hide_errors()">Okay</a></span></td>
+</tr>
+</tbody>
+<tbody id="collapseobj_quickreply" style="">
+<tr>
+	<td class="panelsurround" align="center">
+		<div class="panel">	
+			<table align="center" border="0" cellpadding="0" cellspacing="0">
+			<tbody><tr>
+				<td class="smallfont" align="left">Message:</td>
+			</tr>
+			<tr>
+				<td id="vB_Editor_QR" class="vBulletin_editor" align="left">
+		<script type="text/javascript">
+		<!--
+			var threaded_mode = 0;
+			var require_click = 1;
+			var is_last_page = 0; // leave for people with cached JS files
+			var allow_ajax_qr = 0;
+			var ajax_last_post = 1235596981;
+		// -->
+		</script>
+		
+<div id="vB_Editor_QR_controls" class="controlbar">
+	<table border="0" cellpadding="0" cellspacing="0" width="100%">
+	<tbody><tr>
+		<td><div class="imagebutton" id="vB_Editor_QR_cmd_removeformat"><img title="Remove Text Formatting" src="extjs_FCKeditor_files/removeformat.gif" alt="Remove Text Formatting" height="20" width="21"></div></td>
+		<td><img src="extjs_FCKeditor_files/separator.gif" alt="" height="20" width="6"></td>
+	
+		<td><div class="imagebutton" id="vB_Editor_QR_cmd_bold"><img title="Bold" src="extjs_FCKeditor_files/bold.gif" alt="Bold" height="20" width="21"></div></td>
+		<td><div class="imagebutton" id="vB_Editor_QR_cmd_italic"><img title="Italic" src="extjs_FCKeditor_files/italic.gif" alt="Italic" height="20" width="21"></div></td>
+		<td><div class="imagebutton" id="vB_Editor_QR_cmd_underline"><img title="Underline" src="extjs_FCKeditor_files/underline.gif" alt="Underline" height="20" width="21"></div></td>
+		<td><img src="extjs_FCKeditor_files/separator.gif" alt="" height="20" width="6"></td>
+	
+	
+		<td><div class="imagebutton" id="vB_Editor_QR_popup_forecolor" title="Colors">
+			<table border="0" cellpadding="0" cellspacing="0">
+			<tbody><tr>
+				<td id="vB_Editor_QR_color_out"><img src="extjs_FCKeditor_files/color.gif" alt="" height="16" width="21"><br><img src="extjs_FCKeditor_files/clear.gif" id="vB_Editor_QR_color_bar" alt="" style="background-color: black;" height="4" width="21"></td>
+				<td class="alt_pickbutton"><img src="extjs_FCKeditor_files/menupop.gif" alt="" height="16" width="11"></td>
+			</tr>
+			</tbody></table>
+		</div></td>
+	
+		<td><img src="extjs_FCKeditor_files/separator.gif" alt="" height="20" width="6"></td>
+	
+		<td><div class="imagebutton" id="vB_Editor_QR_cmd_createlink"><img title="Insert Link" src="extjs_FCKeditor_files/createlink.gif" alt="Insert Link" height="20" width="21"></div></td>
+	
+	
+		<td><div class="imagebutton" id="vB_Editor_QR_cmd_insertimage"><img title="Insert Image" src="extjs_FCKeditor_files/insertimage.gif" alt="Insert Image" height="20" width="21"></div></td>
+	
+		<td><img src="extjs_FCKeditor_files/separator.gif" alt="" height="20" width="6"></td>
+		<td><div class="imagebutton" id="vB_Editor_QR_cmd_wrap0_quote"><img title="Wrap [QUOTE] tags around selected text" src="extjs_FCKeditor_files/quote.gif" alt="Wrap [QUOTE] tags around selected text" height="20" width="21"></div></td>
+	<td width="100%">&nbsp;</td>
+	
+		<td>
+			<div class="imagebutton" id="vB_Editor_QR_cmd_resize_0_99"><img title="Decrease Size" src="extjs_FCKeditor_files/resize_0.gif" alt="Decrease Size" height="9" width="21"></div>
+			<div class="imagebutton" id="vB_Editor_QR_cmd_resize_1_99"><img title="Increase Size" src="extjs_FCKeditor_files/resize_1.gif" alt="Increase Size" height="9" width="21"></div>
+		</td>
+	
+		<td><img src="extjs_FCKeditor_files/separator.gif" alt="" height="20" width="6"></td>
+		<td><div style="border: 1px solid rgb(49, 106, 197); padding: 0px; background: rgb(241, 246, 248) none repeat scroll 0% 0%; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial; color: rgb(0, 0, 0);" class="imagebutton" id="vB_Editor_QR_cmd_switchmode"><img title="Switch Editor Mode" src="extjs_FCKeditor_files/switchmode.gif" alt="Switch Editor Mode" height="20" width="21"></div></td>
+	
+	</tr>
+	</tbody></table>
+</div>
+
+<div class="controlbar">
+	
+	<textarea name="message" id="vB_Editor_QR_textarea" rows="10" cols="60" style="width: 640px; height: 100px; display: none;" tabindex="1" dir="ltr">Please click one of the Quick Reply icons in the posts above to activate Quick Reply.</textarea>
+	
+<iframe style="border: medium none ; width: 0px; height: 0px;" tabindex="1" id="vB_Editor_QR_iframe"></iframe><div style="border: 2px inset ; width: 640px; height: 100px;" class="wysiwyg" id="vB_Editor_QR_hider"><div style="margin: 8px;">Please click one of the Quick Reply icons in the posts above to activate Quick Reply.</div></div></div>
+
+<input name="wysiwyg" id="vB_Editor_QR_mode" value="1" type="hidden">
+<input name="styleid" value="0" type="hidden">
+
+<script type="text/javascript">
+<!--
+vB_Editor['vB_Editor_QR'] = new vB_Text_Editor('vB_Editor_QR', 1, '9', '1');
+var QR_EditorID = 'vB_Editor_QR';
+//-->
+</script>
+	</td>
+			</tr>
+			<tr>
+				<td align="left">
+				
+					<fieldset class="fieldset" style="margin: 3px 0px 0px;">
+						<legend>Options</legend>
+						<div>
+							
+							<label for="qr_quickreply"><input disabled="disabled" name="quickreply" value="1" id="qr_quickreply" accesskey="w" tabindex="4" type="checkbox">Quote message in reply?</label>
+						</div>
+					</fieldset>
+				
+				</td>
+			</tr>
+			</tbody></table>
+		</div>	
+
+		<div style="margin-top: 6px;">
+			<input name="fromquickreply" value="1" type="hidden">
+			<input name="s" value="" type="hidden">
+			<input name="do" value="postreply" type="hidden">
+			<input name="t" value="17423" id="qr_threadid" type="hidden">
+			<input name="p" value="0" id="qr_postid" type="hidden">
+			<input name="parseurl" value="1" type="hidden">
+			<input name="loggedinuser" value="54038" type="hidden">
+			<input class="button" value="Post Quick Reply" accesskey="s" title="(Alt + S)" name="sbutton" tabindex="2" id="qr_submit" onclick="clickedelm = this.value" type="submit">
+			<input class="button" value="Go Advanced" accesskey="x" title="(Alt + X)" name="preview" tabindex="3" id="qr_preview" onclick="clickedelm = this.value" type="submit">
+		</div>
+
+		<div id="qr_posting_msg" style="display: none; margin-top: 6px;" align="center">
+			<img title="Posting Quick Reply - Please Wait" style="vertical-align: middle;" src="extjs_FCKeditor_files/progress.gif" alt="Posting Quick Reply - Please Wait">&nbsp;<strong>Posting Quick Reply - Please Wait</strong>
+		</div>	
+	</td>
+</tr>
+</tbody>
+</table>
+</form>
+
+
+	<!-- Mozilla work around for focusing on QR in WYSIWYG mode -->
+	<div id="qr_scroll"></div>
+
+
+<br>
+
+<script type="text/javascript">
+<!--
+	// initialize quick reply
+	qr_init();
+//-->
+</script>
+
+<!-- end quick reply -->
+
+
+<!-- currently active users -->
+
+	<table class="tborder" align="center" border="0" cellpadding="6" cellspacing="1" width="100%">
+	<tbody><tr>
+		<td class="tcat" colspan="2">
+			Currently Active Users Viewing This Thread: 2 <span class="normal">(1 members and 1 guests)</span>
+		</td>
+	</tr>
+	<tr>
+		<td class="alt1" colspan="2">
+			<span class="smallfont"><a href="http://extjs.com/forum/member.php?u=54038">atealxt</a></span>
+		</td>
+	</tr>
+	</tbody></table>
+
+<!-- end currently active users -->
+
+
+<!-- popup menu contents -->
+<br>
+
+<!-- thread tools menu -->
+<div class="vbmenu_popup" id="threadtools_menu" style="display: none;">
+<form action="postings.php?t=17423&amp;pollid=" method="post" name="threadadminform">
+	<table border="0" cellpadding="4" cellspacing="1">
+	<tbody><tr>
+		<td class="thead">Thread Tools<a name="goto_threadtools"></a></td>
+	</tr>
+	<tr>
+		<td class="vbmenu_option"><img title="Show Printable Version" class="inlineimg" src="extjs_FCKeditor_files/printer.gif" alt="Show Printable Version"> <a href="http://extjs.com/forum/printthread.php?t=17423" accesskey="3" rel="nofollow">Show Printable Version</a></td>
+	</tr>
+	<tr>
+		<td class="vbmenu_option"><img title="Email this Page" class="inlineimg" src="extjs_FCKeditor_files/sendtofriend.gif" alt="Email this Page"> <a href="http://extjs.com/forum/sendmessage.php?do=sendtofriend&amp;t=17423" rel="nofollow">Email this Page</a></td>
+	</tr>
+	
+	<tr>
+		<td class="vbmenu_option"><img title="Subscription" class="inlineimg" src="extjs_FCKeditor_files/subscribe.gif" alt="Subscription">
+		
+			<a href="http://extjs.com/forum/subscription.php?do=addsubscription&amp;t=17423" rel="nofollow">Subscribe to this Thread</a>
+		
+		</td>
+	</tr>
+	
+	
+	
+	</tbody></table>
+</form>
+</div>
+<!-- / thread tools menu -->
+
+<!-- **************************************************** -->
+
+
+<!-- thread search menu -->
+<div class="vbmenu_popup" id="threadsearch_menu" style="display: none;">
+<form action="search.php?do=process&amp;searchthreadid=17423" method="post">
+	<table border="0" cellpadding="4" cellspacing="1">
+	<tbody><tr>
+		<td class="thead">Search this Thread<a name="goto_threadsearch"></a></td>
+	</tr>
+	<tr>
+		<td class="vbmenu_option" title="nohilite">
+			<input name="s" value="" type="hidden">
+			<input name="do" value="process" type="hidden">
+			<input name="searchthreadid" value="17423" type="hidden">
+			<input class="bginput" name="query" size="25" type="text"><input class="button" value="Go" type="submit"><br>
+		</td>
+	</tr>
+	<tr>
+		<td class="vbmenu_option"><a href="http://extjs.com/forum/search.php?searchthreadid=17423">Advanced Search</a></td>
+	</tr>
+	</tbody></table>
+</form>
+</div>
+<!-- / thread search menu -->
+
+
+<!-- **************************************************** -->
+
+
+	<!-- thread rating menu -->
+	<div class="vbmenu_popup" id="threadrating_menu" style="display: none;">
+	<form action="threadrate.php?t=17423" method="post" id="showthread_threadrate_form">
+		<table border="0" cellpadding="4" cellspacing="1">
+		<tbody><tr>
+			<td class="thead">Rate This Thread<a name="goto_threadrating"></a></td>
+		</tr>
+		
+		<tr>
+			<td class="vbmenu_option" title="nohilite" id="threadrating_options">
+			<div><img title="Excellent" class="inlineimg" src="extjs_FCKeditor_files/rating_5.gif" alt="Excellent"><label for="vote5"><input name="vote" id="vote5" value="5" type="radio">Excellent</label></div>
+			<div><img title="Good" class="inlineimg" src="extjs_FCKeditor_files/rating_4.gif" alt="Good"><label for="vote4"><input name="vote" id="vote4" value="4" type="radio">Good</label></div>
+			<div><img title="Average" class="inlineimg" src="extjs_FCKeditor_files/rating_3.gif" alt="Average"><label for="vote3"><input name="vote" id="vote3" value="3" type="radio">Average</label></div>
+			<div><img title="Bad" class="inlineimg" src="extjs_FCKeditor_files/rating_2.gif" alt="Bad"><label for="vote2"><input name="vote" id="vote2" value="2" type="radio">Bad</label></div>
+			<div><img title="Terrible" class="inlineimg" src="extjs_FCKeditor_files/rating_1.gif" alt="Terrible"><label for="vote1"><input name="vote" id="vote1" value="1" type="radio">Terrible</label></div>
+			</td>
+		</tr>
+		<tr id="threadrating_submit">
+			<td class="vbmenu_option" title="nohilite" align="center">
+				<input name="s" value="be943e2a47d8583f1922c34b69b9e82b" type="hidden">
+				<input name="t" value="17423" type="hidden">
+				<input name="pp" value="10" type="hidden">
+				<input name="page" value="1" type="hidden">
+				<input value="Vote Now" class="button" type="button">
+			</td>
+		</tr>
+		
+		</tbody></table>
+	</form>
+	</div>
+	<!-- / thread rating menu -->
+
+	<script type="text/javascript" src="extjs_FCKeditor_files/vbulletin_ajax_threadrate.js"></script>
+	<script type="text/javascript">
+	<!--
+	vB_AJAX_ThreadRate_Init('showthread_threadrate_form');
+	var threadid = 17423;
+	//-->
+	</script>
+
+
+<!-- / popup menu contents -->
+
+
+<!-- forum rules and admin links -->
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
+<tbody><tr valign="bottom">
+	<td class="smallfont" align="left">
+		<table class="tborder" border="0" cellpadding="6" cellspacing="1" width="180">
+<thead>
+<tr>
+	<td class="thead">
+		Posting Rules
+	</td>
+</tr>
+</thead>
+<tbody id="collapseobj_forumrules" style="">
+<tr>
+	<td class="alt1" nowrap="nowrap"><div class="smallfont">
+		
+		<div>You <strong>may </strong> post new threads</div>
+		<div>You <strong>may </strong> post replies</div>
+		<div>You <strong>may </strong> post attachments</div>
+		<div>You <strong>may </strong> edit your posts</div>
+		<hr>
+		
+		<div><a href="http://extjs.com/forum/misc.php?do=bbcode" target="_blank">vB code</a> is <strong>On</strong></div>
+		<div><a href="http://extjs.com/forum/misc.php?do=showsmilies" target="_blank">Smilies</a> are <strong>On</strong></div>
+		<div><a href="http://extjs.com/forum/misc.php?do=bbcode#imgcode" target="_blank">[IMG]</a> code is <strong>On</strong></div>
+		<div>HTML code is <strong>Off</strong></div>
+	</div></td>
+</tr>
+</tbody>
+</table>
+	</td>
+	<td class="smallfont" align="right">
+		<table border="0" cellpadding="0" cellspacing="0">
+		
+		<tbody><tr>
+			<td>
+			<div class="smallfont" style="text-align: left; white-space: nowrap;">
+	<form action="forumdisplay.php" method="get">
+	<input name="s" value="" type="hidden">
+	<input name="daysprune" value="" type="hidden">
+	<strong>Forum Jump</strong><br>
+	<select name="f" onchange="this.form.submit();">
+		<optgroup label="Site Areas">
+			<option value="cp">User Control Panel</option>
+			<option value="pm">Private Messages</option>
+			<option value="subs">Subscriptions</option>
+			<option value="wol">Who's Online</option>
+			<option value="search">Search Forums</option>
+			<option value="home">Forums Home</option>
+		</optgroup>
+		<optgroup label="Forums">
+		<option value="10" class="fjdpth0"> Ext JS Premium Forums</option>
+<option value="11" class="fjdpth1">&nbsp; &nbsp;  Ext: Premium Help</option>
+<option value="4" class="fjdpth1">&nbsp; &nbsp;  Ext: Feature Requests</option>
+<option value="22" class="fjdpth0"> Ext JS General Forums</option>
+<option value="6" class="fjdpth1">&nbsp; &nbsp;  Ext: Open Discussion</option>
+<option value="7" class="fjdpth1">&nbsp; &nbsp;  Ext: Examples and Extras</option>
+<option value="19" class="fjdpth0"> Ext JS Community Forums (2.0)</option>
+<option value="9" class="fjsel" selected="selected">&nbsp; &nbsp;  Ext: Help</option>
+<option value="20" class="fjdpth1">&nbsp; &nbsp;  Ext: Bugs</option>
+<option value="21" class="fjdpth1">&nbsp; &nbsp;  Ext: User Extensions and Plugins</option>
+<option value="1" class="fjdpth0"> Ext JS Community Forums (1.x)</option>
+<option value="5" class="fjdpth1">&nbsp; &nbsp;  Ext 1.x: Help</option>
+<option value="3" class="fjdpth1">&nbsp; &nbsp;  Ext 1.x: Bugs</option>
+<option value="18" class="fjdpth1">&nbsp; &nbsp;  Ext 1.x: User Extensions</option>
+<option value="24" class="fjdpth0"> Ext GWT Premium Forums</option>
+<option value="25" class="fjdpth1">&nbsp; &nbsp;  Gxt: Premium Help</option>
+<option value="26" class="fjdpth1">&nbsp; &nbsp;  Gxt: Feature Requests</option>
+<option value="29" class="fjdpth0"> Ext GWT Community Forums</option>
+<option value="33" class="fjdpth1">&nbsp; &nbsp;  Gxt: Open Discussion</option>
+<option value="30" class="fjdpth1">&nbsp; &nbsp;  Gxt: Help</option>
+<option value="31" class="fjdpth1">&nbsp; &nbsp;  Gxt: Bugs</option>
+<option value="32" class="fjdpth1">&nbsp; &nbsp;  Gxt: User Extensions and Plugins</option>
+<option value="34" class="fjdpth0"> Ext International</option>
+<option value="35" class="fjdpth1">&nbsp; &nbsp;  Ext Japan: プレミアムヘルプ</option>
+<option value="36" class="fjdpth1">&nbsp; &nbsp;  Ext Japan: オープンディスカッション</option>
+<option value="37" class="fjdpth1">&nbsp; &nbsp;  Ext Japan: ヘルプ</option>
+<option value="38" class="fjdpth1">&nbsp; &nbsp;  Ext Japan: サンプル、プラグイン、拡張</option>
+<option value="12" class="fjdpth0"> Related Projects</option>
+<option value="15" class="fjdpth1">&nbsp; &nbsp;  Ext.nd for Notes/Domino</option>
+<option value="23" class="fjdpth1">&nbsp; &nbsp;  Ext.air for Adobe AIR</option>
+<option value="8" class="fjdpth1">&nbsp; &nbsp;  JS Builder</option>
+
+		</optgroup>
+	</select><input class="button" value="Go" type="submit">
+	</form>
+</div>
+			</td>
+		</tr>		
+		</tbody></table>
+	</td>
+</tr>
+</tbody></table>
+<!-- /forum rules and admin links -->
+
+<br>
+
+
+
+<div style="clear: both;"></div>
+</div><!-- end bd -->
+<!-- /content area table -->
+
+<div class="smallfont" align="center">All times are GMT +8. The time now is <span class="time">09:21 PM</span>.</div>
+<br>
+
+<form action="index.php" method="get">
+<table class="page" align="center" border="0" cellpadding="6" cellspacing="0" width="100%">
+<tbody><tr>
+	
+	
+		<td class="tfoot">
+			<select name="langid" onchange="switch_id(this, 'lang')">
+				<optgroup label="Quick Language Chooser">
+					<option value="1" class="" selected="selected">-- English (US)</option>
+<option value="4" class="">-- Espanol</option>
+<option value="14" class="">-- Japanese</option>
+
+				</optgroup>
+			</select>
+		</td>
+	
+</tr>
+</tbody></table>
+</form>
+
+
+
+<div id="ft">
+	<table class="nav" cellspacing="0">
+		<tbody><tr>
+		<td class="active"><a id="home-footer-link" href="http://extjs.com/">Home</a></td><td><a id="products-footer-link" href="http://extjs.com/products">Products</a></td><td><a id="support-footer-link" href="http://extjs.com/support">Support</a></td><td><a id="jobs-footer-link" href="http://jobs.extjs.com/">Jobs</a></td><td><a id="company-footer-link" href="http://extjs.com/company">Company</a></td><td><a id="blog-footer-link" href="http://extjs.com/blog">Blog</a></td><td><a id="store-footer-link" href="http://extjs.com/store">Store</a></td>		</tr>
+
+	</tbody></table>
+	<div class="copy">© 2006-2008 Ext, LLC</div>
+	<div class="copy">Powered by vBulletin® Version 3.6.7<br>Copyright ©2000 - 2009, Jelsoft Enterprises Ltd. </div>
+</div>
+
+</div><!-- end viewport -->
+
+
+
+<script src="extjs_FCKeditor_files/urchin.js" type="text/javascript"> </script>
+<script type="text/javascript">
+_uacct = "UA-1396058-1";
+urchinTracker();
+</script>
+
+
+<script type="text/javascript">
+<!--
+	// Main vBulletin Javascript Initialization
+	vBulletin_init();
+//-->
+</script>
+
+<div class="flyout-menu" id="products-menu" style="display: none;">
+	<div style="width: 200px;">
+	<h3><a href="http://extjs.com/products/extjs">Ext JS</a></h3>
+	<p>Cross-browser JavaScript library for building rich internet applications</p>
+	<ul>
+		<li><a href="http://extjs.com/products/extjs">Overview</a></li>
+		<li><a href="http://extjs.com/products/extjs/download.php">Download</a></li>
+		<li><a href="http://extjs.com/deploy/dev/examples/samples.html">Samples &amp; Demos</a></li>
+		<li><a href="http://extjs.com/deploy/dev/docs/">API Documentation</a></li>
+		<li><a href="http://extjs.com/products/license.php">Licensing &amp; Open Source</a></li>
+		<li><a href="http://extjs.com/store/extjs/">Purchase</a></li>
+	</ul>
+	<br>
+	<h3><a href="http://extjs.com/products/gxt">Ext GWT</a></h3>
+	<p>Java library for building rich internet applications with GWT</p>
+	<ul>
+		<li><a href="http://extjs.com/products/gxt">Overview</a></li>
+		<li><a href="http://extjs.com/products/gxt/download.php">Download</a></li>
+		<li><a href="http://extjs.com/examples/">Samples &amp; Demos</a></li>
+		<li><a href="http://extjs.com/deploy/gxtdocs/">API Documentation</a></li>
+		<li><a href="http://extjs.com/products/license.php">Licensing &amp; Open Source</a></li>
+		<li><a href="http://extjs.com/store/gxt/">Purchase</a></li>
+	</ul>
+	</div>
+</div>
+
+<div class="flyout-menu" id="support-menu" style="display: none;">
+	<div style="width: 200px;">
+	
+	<h3><a href="http://extjs.com/support">Support Subscriptions</a></h3>
+	<p>With 1-on-1 email and phone support, we solve your Ext JS, GWT, CSS and JavaScript issues</p>
+	<ul>
+		<li><a href="http://extjs.com/store/extjs/#support-table">Ext JS Subscriptions</a></li>
+		<li><a href="http://extjs.com/store/gxt/#support-table">Ext GWT Subscriptions</a></li>
+	</ul>
+	<br>
+	
+	<h3><a href="http://extjs.com/support/training">Training</a></h3>
+	<p>Get up to speed quickly with on-site training provided by Ext</p>
+	<ul>
+		<li><a href="http://extjs.com/support/training/extjs">Ext JS Training</a></li>
+		<li><a href="http://extjs.com/support/training/gxt">Ext GWT Training</a></li>
+	</ul>
+	<br>
+	
+	<h3><a href="http://extjs.com/forum">Community</a></h3>
+	<p>The Ext community forums and wiki</p>
+	<ul>
+		<li><a href="http://extjs.com/forum">Forums</a></li>
+		<li><a href="http://extjs.com/learn">Learning Center</a></li>
+	</ul>
+	<br>	
+	<h3><a href="http://extjs.com/support/services/">Ext Solutions</a></h3>
+	<p>Enterprise consulting and custom development</p>
+	<ul>
+		<li><a href="http://extjs.com/support/services/">Find out more »</a></li>
+	</ul>
+	</div>
+</div>
+
+
+<div class="flyout-menu" id="store-menu" style="display: none;">
+	<div style="width: 200px;">
+	<h3><a href="http://extjs.com/store/extjs/">Ext JS</a></h3>
+	<ul>
+		<li><a href="http://extjs.com/store/extjs/">Licenses</a></li>
+		<li><a href="http://extjs.com/store/extjs/#support-table">Support Subscriptions</a></li>
+	</ul>
+	<br>
+	<h3><a href="http://extjs.com/store/gxt/">Ext GWT</a></h3>
+	<ul>
+		<li><a href="http://extjs.com/store/gxt/">Licenses</a></li>
+		<li><a href="http://extjs.com/store/gxt/#support-table">Support Subscriptions</a></li>
+	</ul>
+	<br>
+	<h3><a href="http://extjs.com/store/faq.php">Help</a></h3>
+	<ul>
+		<li><a href="http://extjs.com/store/faq.php">Ordering FAQ</a></li>
+	</ul>
+	</div>
+</div>
+
+<!-- temp -->
+<div style="display: none;">
+	<!-- thread rate -->
+	
+		<!-- thread ratings form here -->
+	
+	<!-- / thread rate -->
+</div>
+
+</body></html>

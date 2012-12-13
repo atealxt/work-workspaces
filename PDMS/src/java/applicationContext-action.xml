@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd
+       http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.0.xsd
+       http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.0.xsd"
+       default-init-method="init"
+       default-destroy-method="destroy">
+
+    <bean name="test" class="pdms.platform.action.A0000TestAction" scope="prototype">
+        <property name="testService" ref="A0000TestService" />
+    </bean>
+
+    <bean name="A0100LoginAction" class="pdms.platform.action.A0100LoginAction" scope="prototype">
+        <property name="loginService" ref="A0100LoginService" />
+    </bean>
+
+    <bean name="A0200MainAction" class="pdms.platform.action.A0200MainAction" scope="prototype">
+        <property name="mainService" ref="A0200MainService" />
+    </bean>
+
+    <bean name="A0300ProjectAction" class="pdms.platform.action.A0300ProjectAction" scope="prototype">
+        <property name="projectService" ref="A0300ProjectService" />
+    </bean>
+
+    <bean name="A0400TopicAction" class="pdms.platform.action.A0400TopicAction" scope="prototype">
+        <property name="topicService" ref="A0400TopicService" />
+    </bean>
+
+    <bean name="A0500UserMAction" class="pdms.platform.action.A0500UserMAction" scope="prototype">
+        <property name="userMService" ref="A0500UserMService" />
+    </bean>
+
+    <bean name="A0600ProjectMAction" class="pdms.platform.action.A0600ProjectMAction" scope="prototype">
+        <property name="projectMService" ref="A0600ProjectMService" />
+    </bean>
+
+    <bean name="A0700FProjectMAction" class="pdms.platform.action.A0700FProjectMAction" scope="prototype">
+        <property name="fprojectMService" ref="A0700FProjectMService" />
+    </bean>
+
+    <bean name="A0800UserAction" class="pdms.platform.action.A0800UserAction" scope="prototype">
+        <property name="userService" ref="A0800UserService" />
+    </bean>
+
+    <bean name="A0900FileAction" class="pdms.platform.action.A0900FileAction" scope="prototype">
+        <property name="fileService" ref="A0900FileService" />
+    </bean>
+
+    <bean name="A1000MyMissionAction" class="pdms.platform.action.A1000MyMissionAction" scope="prototype">
+        <property name="mymissionService" ref="A1000MyMissionService" />
+    </bean>
+
+    <bean name="A1100SearchAction" class="pdms.platform.action.A1100SearchAction" scope="prototype">
+        <property name="searchService" ref="A1100SearchService" />
+    </bean>
+
+    <bean name="A1200GroupMAction" class="pdms.platform.action.A1200GroupMAction" scope="prototype">
+        <property name="groupMService" ref="A1200GroupMService" />
+    </bean>
+
+    <bean name="A1300ChartAction" class="pdms.platform.action.A1300ChartAction" scope="prototype">
+        <property name="chartService" ref="A1300ChartService" />
+    </bean>
+
+</beans>

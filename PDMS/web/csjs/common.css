@@ -1,0 +1,126 @@
+td,body,input,select {font-size: 12px;}
+
+body {
+    margin: 0px;
+    font-size: 12px;
+    line-height: 168%;
+}
+
+a:link {
+    color: #0044B6;
+    text-decoration: none;
+    cursor:pointer;
+}
+a:visited {
+    color: #0044B6;
+    text-decoration: none;
+    cursor:pointer;
+}
+a:hover {
+    color: #FF0000;
+    cursor:pointer;
+}
+a:active {
+    color: #0044B6;
+    text-decoration: none;
+    cursor:pointer;
+}
+
+p{
+    font-family:tahoma;
+    color:black;
+    font-weight:bold
+}
+
+iframe{margin: 0pt; width: 100%;}
+
+/*table start*/
+td{
+    line-height: 168%;
+    vertical-align: middle;
+    font-size:9pt;
+    padding: 5px;
+}
+
+th{
+    font-family:tahoma;
+    font-size:10pt;
+    font-weight:bold;
+    color:#333333;
+    padding: 5px;
+    border:2px solid #006699;
+    vertical-align:middle;
+    text-align: center;
+    background-color: #E1E1E1;
+}
+th.name{
+    border:2px double #006699;
+    text-align:left;
+    font-weight: bold;
+    color: #003366;
+    padding: 5px;
+
+    margin-left: 100px;
+    padding-left: 100px;
+}
+
+tr.even{ background-color:#FFFFFF;}
+tr.odd{background-color:#EEF2FF}
+td.pname{
+    border:2px double #006699;
+    text-align:left;
+    font-weight: bold;
+    color: #003366;
+}
+td.pdate{text-align:center; border:2px double #006699;width: 170px;}
+td.pnumber{text-align:center; border:2px double #006699;width: 40px;}
+td.plogo{text-align:center; border:2px double #006699;width: 20px;}
+td.info{
+    text-align:left;
+    font-size: 9pt;
+    font-family: verdana, arial, helvetica;
+    padding: 5px;
+    border: 2px double #006699;
+}
+
+/*table end*/
+
+#all-content {
+    display:none;
+}
+#loading-mask{
+    position:absolute;
+    left:0;
+    top:0;
+    width:100%;
+    height:100%;
+    z-index:20000;
+    background-color:white;
+}
+#loading{
+    position:absolute;
+    left:45%;
+    top:40%;
+    padding:2px;
+    z-index:20001;
+    height:auto;
+}
+#loading a {
+    color:#225588;
+}
+#loading .loading-indicator{
+    background:white;
+    color:#444;
+    font:bold 13px tahoma,arial,helvetica;
+    padding:10px;
+    margin:0;
+    height:auto;
+    width:300px;
+}
+#loading-msg {
+    font: normal 10px arial,tahoma,sans-serif;
+}
+
+.treebg {
+    background-image:url(../images/tree_back.png) !important;
+}

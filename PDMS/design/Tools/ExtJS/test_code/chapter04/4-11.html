@@ -1,0 +1,45 @@
+﻿<HTML>
+ <HEAD>
+  <TITLE>转换select组件为Ext.form.ComboBox的示例</TITLE>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <link rel="stylesheet" type="text/css" href="../../extjs2.0/resources/css/ext-all.css" />  
+  <script type="text/javascript" src="../../extjs2.0/adapter/ext/ext-base.js"></script>
+  <script type="text/javascript" src="../../extjs2.0/ext-all.js"></script>
+  <script type="text/javascript" src="../../extjs2.0/source/locale/ext-lang-zh_CN.js"></script>
+  <script type="text/javascript">
+	Ext.onReady(function(){
+		Ext.BLANK_IMAGE_URL = '../../extjs2.0/resources/images/default/s.gif';
+		var form = new Ext.form.FormPanel({
+			title:'转换select组件为Ext.form.ComboBox的示例',
+			labelSeparator :'：',//分隔符
+			labelWidth : 80,//标签宽度
+			bodyStyle:'padding:5 5 5 5',//表单边距
+			frame : true,
+			height:80,
+			width:270,
+			applyTo :'form',
+			items:[
+			new Ext.form.ComboBox({
+				name:'level',
+				fieldLabel:'职称等级',
+				lazyRender : true,
+				triggerAction: 'all',//单击触发按钮显示全部数据
+				transform : 'levelName'
+			})
+			]
+		})
+	});
+  </script>
+ </HEAD>
+ <BODY>
+	<div style="padding: 20 20 20 20"><div id='form'/></div>
+	<SELECT ID="levelName">
+		<OPTION VALUE="1">高级工程师</OPTION>
+		<OPTION VALUE="2">中级工程师</OPTION>
+		<OPTION VALUE="3" SELECTED>初级工程师</OPTION>
+		<OPTION VALUE="4">高级经济师</OPTION>
+		<OPTION VALUE="5">中级经济师</OPTION>
+		<OPTION VALUE="6">初级经济师</OPTION>
+	</SELECT>
+ </BODY>
+</HTML>

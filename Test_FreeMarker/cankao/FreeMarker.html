@@ -1,0 +1,1443 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head id="Head">
+
+<title>
+	FreeMarker开发指南 - 昆明小虫 - 博客园
+</title><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta id="metaKeywords" name="keywords" content="FreeMarker开发指南"><meta name="description" content="FreeMarke开发指南1概念2指令if,else,elseifswitch,case,default,breaklist,breakincludeImportcompressescape,noescapea"><link id="CommondCss" type="text/css" rel="stylesheet" href="FreeMarker_files/common.css"><link id="MainCss" type="text/css" rel="stylesheet" href="FreeMarker_files/style.css"><link id="RSSLink" title="RSS" type="application/rss+xml" rel="alternate" href="http://www.cnblogs.com/ynlxc/rss">
+    <script src="FreeMarker_files/common.js" type="text/javascript"></script>
+</head><body>
+    <form name="Form1" method="post" action="529974.html" onsubmit="javascript:return WebForm_OnSubmit();" id="Form1">
+<div>
+<input name="__EVENTTARGET" id="__EVENTTARGET" value="" type="hidden">
+<input name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" type="hidden">
+<input name="__VIEWSTATE" id="__VIEWSTATE" value="" type="hidden">
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['Form1'];
+if (!theForm) {
+    theForm = document.Form1;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="FreeMarker_files/WebResource.js" type="text/javascript"></script>
+
+<script language="JavaScript">
+									function ctlent(evt,id)
+											{
+												if(evt.ctrlKey && evt.keyCode == 13)
+												{	
+													try
+													{
+														TempSave(id);
+													}
+													catch(ex)
+													{
+													}
+													finally
+													{
+													    __doPostBack('AjaxHolder$PostComment$btnSubmit','')
+													}
+												}
+		
+												}</script>
+												<script language="JavaScript">function SetReplyAuhor(author){document.getElementById('AjaxHolder_PostComment_tbComment').value+="@"+author+"\n";document.getElementById('AjaxHolder_PostComment_tbComment').focus();return false}</script>
+<script src="FreeMarker_files/ScriptResource.js" type="text/javascript"></script>
+<script src="FreeMarker_files/ScriptResource_003.js" type="text/javascript"></script>
+<script src="FreeMarker_files/ScriptResource_002.js" type="text/javascript"></script>
+<script src="FreeMarker_files/js.js" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+function WebForm_OnSubmit() {
+if (typeof(ValidatorOnSubmit) == "function" && ValidatorOnSubmit() == false) return false;
+return true;
+}
+//]]>
+</script>
+
+        
+<table class="Framework" width="100%" cellpadding="0" cellspacing="0">
+	<tbody><tr>
+		<td colspan="3">
+			
+<div id="top">
+<table cellpadding="10" cellspacing="0">
+	<tbody><tr>
+		<td nowrap="nowrap">
+			<h1><a id="Header1_HeaderTitle" class="headermaintitle" href="http://ynlxc.cnblogs.com/">昆明小虫</a></h1>
+			这是最好的时期,也是最坏的时期...这是希望的春天，也是失望的冬天...动起来...时刻准备着...
+		</td>
+	</tr>
+</tbody></table>
+</div>
+<div id="sub">
+	<div id="sub-right">
+<div class="BlogStats">posts - 97, comments - 150, trackbacks - 1, articles - 0</div></div>
+	
+&nbsp;
+<a id="Header1_MyLinks1_HomeLink" href="http://www.cnblogs.com/">博客园</a>&nbsp;::
+<a id="Header1_MyLinks1_MyHomeLink" href="http://ynlxc.cnblogs.com/">首页</a>&nbsp;::
+&nbsp;::
+<a id="Header1_MyLinks1_ContactLink" accesskey="9" href="http://www.cnblogs.com/ynlxc/contact.aspx?id=1">联系</a>&nbsp;::
+<a id="Header1_MyLinks1_Syndication" href="http://ynlxc.cnblogs.com/rss">订阅</a>
+<a id="Header1_MyLinks1_XMLLink" class="XMLLink" href="http://ynlxc.cnblogs.com/rss"><img src="FreeMarker_files/xml.gif" alt="订阅" style="border-width: 0px;"></a>&nbsp;::
+<a id="Header1_MyLinks1_Admin" href="http://www.cnblogs.com/ynlxc/admin/EditPosts.aspx">管理</a>
+
+</div>
+		</td>
+	</tr>
+	<tr>
+		<td class="LeftCell">
+			<div id="leftmenu">
+	
+		
+<div id="Cal">
+<img src="FreeMarker_files/icon-group.jpg" vspace="2" align="left" hspace="5"><h3>日历</h3>
+<table id="Calendar1_entryCal" title="Calendar" style="border-width: 0px; color: Black; background-color: rgb(238, 238, 221); font-family: Verdana; height: 180px; width: 178px; border-collapse: collapse;" border="0" cellpadding="0" cellspacing="0">
+	<tbody><tr><td colspan="7" style="background-color: rgb(238, 238, 238);"><table style="color: rgb(102, 102, 102); font-family: Verdana; font-size: 13px; font-weight: bold; width: 100%; border-collapse: collapse;" border="0" cellspacing="0">
+		<tbody><tr><td style="width: 15%;" valign="bottom"><a href="javascript:__doPostBack('Calendar1$entryCal','V2435')" style="color: Black;" title="Go to the previous month">&lt;</a></td><td style="width: 70%;" align="center">2006年10月</td><td style="width: 15%;" valign="bottom" align="right"><a href="javascript:__doPostBack('Calendar1$entryCal','V2496')" style="color: Black;" title="Go to the next month">&gt;</a></td></tr>
+	</tbody></table></td></tr><tr><th abbr="日" scope="col" style="background-color: rgb(221, 221, 204); font-size: 12px;" align="center">日</th><th abbr="一" scope="col" style="background-color: rgb(221, 221, 204); font-size: 12px;" align="center">一</th><th abbr="二" scope="col" style="background-color: rgb(221, 221, 204); font-size: 12px;" align="center">二</th><th abbr="三" scope="col" style="background-color: rgb(221, 221, 204); font-size: 12px;" align="center">三</th><th abbr="四" scope="col" style="background-color: rgb(221, 221, 204); font-size: 12px;" align="center">四</th><th abbr="五" scope="col" style="background-color: rgb(221, 221, 204); font-size: 12px;" align="center">五</th><th abbr="六" scope="col" style="background-color: rgb(221, 221, 204); font-size: 12px;" align="center">六</th></tr><tr><td style="color: Gray; font-size: 11px; width: 14%;" align="center">24</td><td style="color: Gray; font-size: 11px; width: 14%;" align="center">25</td><td style="color: Gray; font-size: 11px; width: 14%;" align="center">26</td><td style="color: Gray; font-size: 11px; width: 14%;" align="center">27</td><td style="color: Gray; font-size: 11px; width: 14%;" align="center">28</td><td style="color: Gray; font-size: 11px; width: 14%;" align="center">29</td><td style="color: Gray; font-size: 11px; width: 14%;" align="center">30</td></tr><tr><td style="font-size: 11px; width: 14%;" align="center">1</td><td style="font-size: 11px; width: 14%;" align="center">2</td><td style="font-size: 11px; width: 14%;" align="center">3</td><td style="font-size: 11px; width: 14%;" align="center">4</td><td style="font-size: 11px; width: 14%;" align="center">5</td><td style="font-size: 11px; width: 14%;" align="center">6</td><td style="font-size: 11px; width: 14%;" align="center">7</td></tr><tr><td style="font-size: 11px; width: 14%;" align="center">8</td><td style="font-size: 11px; width: 14%;" align="center">9</td><td style="font-size: 11px; width: 14%;" align="center">10</td><td style="font-size: 11px; width: 14%;" align="center">11</td><td style="font-size: 11px; width: 14%;" align="center"><a href="http://www.cnblogs.com/ynlxc/archive/2006/10/12.html"><u>12</u></a></td><td style="font-size: 11px; width: 14%;" align="center">13</td><td style="font-size: 11px; width: 14%;" align="center">14</td></tr><tr><td style="font-size: 11px; width: 14%;" align="center">15</td><td style="font-size: 11px; width: 14%;" align="center"><a href="http://www.cnblogs.com/ynlxc/archive/2006/10/16.html"><u>16</u></a></td><td style="font-size: 11px; width: 14%;" align="center">17</td><td style="font-size: 11px; width: 14%;" align="center">18</td><td style="font-size: 11px; width: 14%;" align="center">19</td><td style="font-size: 11px; width: 14%;" align="center">20</td><td style="font-size: 11px; width: 14%;" align="center">21</td></tr><tr><td style="font-size: 11px; width: 14%;" align="center">22</td><td style="font-size: 11px; width: 14%;" align="center">23</td><td style="font-size: 11px; width: 14%;" align="center">24</td><td style="font-size: 11px; width: 14%;" align="center">25</td><td style="font-size: 11px; width: 14%;" align="center">26</td><td style="font-size: 11px; width: 14%;" align="center">27</td><td style="font-size: 11px; width: 14%;" align="center">28</td></tr><tr><td style="font-size: 11px; width: 14%;" align="center">29</td><td style="font-size: 11px; width: 14%;" align="center">30</td><td style="font-size: 11px; width: 14%;" align="center">31</td><td style="color: Gray; font-size: 11px; width: 14%;" align="center">1</td><td style="color: Gray; font-size: 11px; width: 14%;" align="center">2</td><td style="color: Gray; font-size: 11px; width: 14%;" align="center">3</td><td style="color: Gray; font-size: 11px; width: 14%;" align="center">4</td></tr>
+</tbody></table>
+</div>
+
+		
+<div id="cell">
+<div id="news">
+<img src="FreeMarker_files/icon-group.jpg" vspace="2" align="left" hspace="5"><h3>公告</h3>
+	MSN:ynlxc@hotmail.com
+Mail:kmlxc@126.com
+</div>
+</div>
+
+	
+	
+<div class="catListInteraction">
+<div id="cell">
+<img src="FreeMarker_files/icon-group.jpg" vspace="2" align="left" hspace="5">
+<h3 class="catListTitle">与我互动</h3>
+<ul>
+ <li>
+     <a id="Singlecolumn2_ctl00_lnkSendMsg" class="sendMsg" href="http://space.cnblogs.com/msg/send/%e6%98%86%e6%98%8e%e5%b0%8f%e8%99%ab">给我发短消息</a>
+ </li>
+</ul>
+</div>
+</div>
+<ul><li>
+<div id="cnblogsgooglead" width="180" height="150">
+<script type="text/javascript"><!--
+google_ad_client = "pub-4210569241504288";
+google_ad_width = 180;
+google_ad_height = 150;
+google_ad_format = "180x150_as";
+google_ad_channel ="";
+google_ad_type = "text";
+//--></script>
+<script type="text/javascript" src="FreeMarker_files/show_ads.js">
+</script><iframe name="google_ads_frame" src="FreeMarker_files/ads.htm" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" width="180" frameborder="0" height="150"></iframe>
+</div>
+<div id="cnblogsgoogleadcode" style="display: none;"></div>
+</li></ul>
+<div id="cell">
+<img src="FreeMarker_files/icon-group.jpg" vspace="2" align="left" hspace="5">
+<h3>常用链接</h3>
+<ul>
+
+		<li><a id="Singlecolumn2_ctl02_rptMainLinks_ctl00_lnkLinkItem" href="http://www.cnblogs.com/ynlxc/MyPosts.html">我的随笔</a></li>
+	
+		<li><a id="Singlecolumn2_ctl02_rptMainLinks_ctl01_lnkLinkItem" href="http://space.cnblogs.com/ynlxc">我的空间</a></li>
+	
+		<li><a id="Singlecolumn2_ctl02_rptMainLinks_ctl02_lnkLinkItem" href="http://space.cnblogs.com/msg/recent">我的短信</a></li>
+	
+		<li><a id="Singlecolumn2_ctl02_rptMainLinks_ctl03_lnkLinkItem" href="http://www.cnblogs.com/ynlxc/MyComments.html">我的评论</a></li>
+	
+<li><a id="itemListLink" onclick="this.blur();WarpClass('itemListLink', 'itemListLin_con');return false;" href="#">更多链接</a></li>
+</ul>
+<div id="itemListLin_con" style="display: none;">
+<ul>
+		<li><a id="Singlecolumn2_ctl02_repeaterLinks_ctl01_lnkLinkItem" href="http://www.cnblogs.com/ynlxc/OtherPosts.html">我的参与</a></li>
+	
+		<li><a id="Singlecolumn2_ctl02_repeaterLinks_ctl02_lnkLinkItem" href="http://www.cnblogs.com/ynlxc/MyNews.html">我的新闻</a></li>
+	
+		<li><a id="Singlecolumn2_ctl02_repeaterLinks_ctl03_lnkLinkItem" href="http://www.cnblogs.com/ynlxc/RecentComments.html">最新评论</a></li>
+	
+		<li><a id="Singlecolumn2_ctl02_repeaterLinks_ctl04_lnkLinkItem" href="http://www.cnblogs.com/ynlxc/tag/">我的标签</a></li>
+	</ul>
+</div>
+</div>
+<div id="cell">
+<img src="FreeMarker_files/icon-group.jpg" vspace="2" align="left" hspace="5"><h3>留言簿<span style="font-size: 11px; font-weight: normal;">(1)</span></h3>
+<ul>
+	<li>
+		<a id="Singlecolumn2__207a60a64c2d_lnkMessages" href="http://www.cnblogs.com/ynlxc/Contact.aspx?id=1">给我留言</a>
+	</li><li>
+		<a id="Singlecolumn2__207a60a64c2d_lnkPublicMsgView" href="http://www.cnblogs.com/ynlxc/default.aspx?opt=msg">查看公开留言</a>
+	</li><li>
+		<a id="Singlecolumn2__207a60a64c2d_lnkPrivateMsgView" href="http://www.cnblogs.com/ynlxc/admin/MyMessages.aspx">查看私人留言</a>
+	</li>
+</ul>
+</div>
+
+
+		<div id="cell">
+		<img src="FreeMarker_files/icon-group.jpg" vspace="2" align="left" hspace="5"><h3>随笔分类</h3>
+		
+				<ul>
+			
+				<li><a id="Singlecolumn2_Categories_CatList_ctl00_LinkList_ctl01_RssLink" title="Subscribe to .NET(6)" href="http://www.cnblogs.com/ynlxc/category/30230.html/rss"><img title="Subscribe to .NET(6)" src="FreeMarker_files/xmlsmall.gif" style="border-width: 0px;"></a><a id="Singlecolumn2_Categories_CatList_ctl00_LinkList_ctl01_Link" href="http://www.cnblogs.com/ynlxc/category/30230.html">.NET(6)</a>
+				</li>
+			
+				<li><a id="Singlecolumn2_Categories_CatList_ctl00_LinkList_ctl02_RssLink" title="Subscribe to eBook(5)" href="http://www.cnblogs.com/ynlxc/category/31211.html/rss"><img title="Subscribe to eBook(5)" src="FreeMarker_files/xmlsmall.gif" style="border-width: 0px;"></a><a id="Singlecolumn2_Categories_CatList_ctl00_LinkList_ctl02_Link" href="http://www.cnblogs.com/ynlxc/category/31211.html">eBook(5)</a>
+				</li>
+			
+				<li><a id="Singlecolumn2_Categories_CatList_ctl00_LinkList_ctl03_RssLink" title="Subscribe to Eclipse Dev in Action(1)" href="http://www.cnblogs.com/ynlxc/category/55458.html/rss"><img title="Subscribe to Eclipse Dev in Action(1)" src="FreeMarker_files/xmlsmall.gif" style="border-width: 0px;"></a><a id="Singlecolumn2_Categories_CatList_ctl00_LinkList_ctl03_Link" href="http://www.cnblogs.com/ynlxc/category/55458.html">Eclipse Dev in Action(1)</a>
+				</li>
+			
+				<li><a id="Singlecolumn2_Categories_CatList_ctl00_LinkList_ctl04_RssLink" title="Subscribe to Favorite(20)" href="http://www.cnblogs.com/ynlxc/category/35210.html/rss"><img title="Subscribe to Favorite(20)" src="FreeMarker_files/xmlsmall.gif" style="border-width: 0px;"></a><a id="Singlecolumn2_Categories_CatList_ctl00_LinkList_ctl04_Link" href="http://www.cnblogs.com/ynlxc/category/35210.html">Favorite(20)</a>
+				</li>
+			
+				<li><a id="Singlecolumn2_Categories_CatList_ctl00_LinkList_ctl05_RssLink" title="Subscribe to Go to 大连!(1)" href="http://www.cnblogs.com/ynlxc/category/100833.html/rss"><img title="Subscribe to Go to 大连!(1)" src="FreeMarker_files/xmlsmall.gif" style="border-width: 0px;"></a><a id="Singlecolumn2_Categories_CatList_ctl00_LinkList_ctl05_Link" href="http://www.cnblogs.com/ynlxc/category/100833.html">Go to 大连!(1)</a>
+				</li>
+			
+				<li><a id="Singlecolumn2_Categories_CatList_ctl00_LinkList_ctl06_RssLink" title="Subscribe to JAVA(5)" href="http://www.cnblogs.com/ynlxc/category/36617.html/rss"><img title="Subscribe to JAVA(5)" src="FreeMarker_files/xmlsmall.gif" style="border-width: 0px;"></a><a id="Singlecolumn2_Categories_CatList_ctl00_LinkList_ctl06_Link" href="http://www.cnblogs.com/ynlxc/category/36617.html">JAVA(5)</a>
+				</li>
+			
+				<li><a id="Singlecolumn2_Categories_CatList_ctl00_LinkList_ctl07_RssLink" title="Subscribe to Java Framework(5)" href="http://www.cnblogs.com/ynlxc/category/55459.html/rss"><img title="Subscribe to Java Framework(5)" src="FreeMarker_files/xmlsmall.gif" style="border-width: 0px;"></a><a id="Singlecolumn2_Categories_CatList_ctl00_LinkList_ctl07_Link" href="http://www.cnblogs.com/ynlxc/category/55459.html">Java Framework(5)</a>
+				</li>
+			
+				<li><a id="Singlecolumn2_Categories_CatList_ctl00_LinkList_ctl08_RssLink" title="Subscribe to Other(43)" href="http://www.cnblogs.com/ynlxc/category/38079.html/rss"><img title="Subscribe to Other(43)" src="FreeMarker_files/xmlsmall.gif" style="border-width: 0px;"></a><a id="Singlecolumn2_Categories_CatList_ctl00_LinkList_ctl08_Link" href="http://www.cnblogs.com/ynlxc/category/38079.html">Other(43)</a>
+				</li>
+			
+				<li><a id="Singlecolumn2_Categories_CatList_ctl00_LinkList_ctl09_RssLink" title="Subscribe to PM(5)" href="http://www.cnblogs.com/ynlxc/category/39684.html/rss"><img title="Subscribe to PM(5)" src="FreeMarker_files/xmlsmall.gif" style="border-width: 0px;"></a><a id="Singlecolumn2_Categories_CatList_ctl00_LinkList_ctl09_Link" href="http://www.cnblogs.com/ynlxc/category/39684.html">PM(5)</a>
+				</li>
+			
+				<li><a id="Singlecolumn2_Categories_CatList_ctl00_LinkList_ctl10_RssLink" title="Subscribe to SQL Script(3)" href="http://www.cnblogs.com/ynlxc/category/39942.html/rss"><img title="Subscribe to SQL Script(3)" src="FreeMarker_files/xmlsmall.gif" style="border-width: 0px;"></a><a id="Singlecolumn2_Categories_CatList_ctl00_LinkList_ctl10_Link" href="http://www.cnblogs.com/ynlxc/category/39942.html">SQL Script(3)</a>
+				</li>
+			
+				<li><a id="Singlecolumn2_Categories_CatList_ctl00_LinkList_ctl11_RssLink" title="Subscribe to 轻松一下,再继续...(5)" href="http://www.cnblogs.com/ynlxc/category/54243.html/rss"><img title="Subscribe to 轻松一下,再继续...(5)" src="FreeMarker_files/xmlsmall.gif" style="border-width: 0px;"></a><a id="Singlecolumn2_Categories_CatList_ctl00_LinkList_ctl11_Link" href="http://www.cnblogs.com/ynlxc/category/54243.html">轻松一下,再继续...(5)</a>
+				</li>
+			
+				</ul>
+			</div>
+	
+		<div id="cell">
+		<img src="FreeMarker_files/icon-group.jpg" vspace="2" align="left" hspace="5"><h3>随笔档案</h3>
+		
+				<ul>
+			
+				<li><a id="Singlecolumn2_Categories_CatList_ctl01_LinkList_ctl01_Link" href="http://www.cnblogs.com/ynlxc/archive/2007/07.html">2007年7月 (1)</a>
+				</li>
+			
+				<li><a id="Singlecolumn2_Categories_CatList_ctl01_LinkList_ctl02_Link" href="http://www.cnblogs.com/ynlxc/archive/2007/05.html">2007年5月 (1)</a>
+				</li>
+			
+				<li><a id="Singlecolumn2_Categories_CatList_ctl01_LinkList_ctl03_Link" href="http://www.cnblogs.com/ynlxc/archive/2007/04.html">2007年4月 (2)</a>
+				</li>
+			
+				<li><a id="Singlecolumn2_Categories_CatList_ctl01_LinkList_ctl04_Link" href="http://www.cnblogs.com/ynlxc/archive/2007/03.html">2007年3月 (1)</a>
+				</li>
+			
+				<li><a id="Singlecolumn2_Categories_CatList_ctl01_LinkList_ctl05_Link" href="http://www.cnblogs.com/ynlxc/archive/2007/02.html">2007年2月 (1)</a>
+				</li>
+			
+				<li><a id="Singlecolumn2_Categories_CatList_ctl01_LinkList_ctl06_Link" href="http://www.cnblogs.com/ynlxc/archive/2007/01.html">2007年1月 (1)</a>
+				</li>
+			
+				<li><a id="Singlecolumn2_Categories_CatList_ctl01_LinkList_ctl07_Link" href="http://www.cnblogs.com/ynlxc/archive/2006/12.html">2006年12月 (2)</a>
+				</li>
+			
+				<li><a id="Singlecolumn2_Categories_CatList_ctl01_LinkList_ctl08_Link" href="http://www.cnblogs.com/ynlxc/archive/2006/11.html">2006年11月 (3)</a>
+				</li>
+			
+				<li><a id="Singlecolumn2_Categories_CatList_ctl01_LinkList_ctl09_Link" href="http://www.cnblogs.com/ynlxc/archive/2006/10.html">2006年10月 (2)</a>
+				</li>
+			
+				<li><a id="Singlecolumn2_Categories_CatList_ctl01_LinkList_ctl10_Link" href="http://www.cnblogs.com/ynlxc/archive/2006/09.html">2006年9月 (1)</a>
+				</li>
+			
+				<li><a id="Singlecolumn2_Categories_CatList_ctl01_LinkList_ctl11_Link" href="http://www.cnblogs.com/ynlxc/archive/2006/08.html">2006年8月 (4)</a>
+				</li>
+			
+				<li><a id="Singlecolumn2_Categories_CatList_ctl01_LinkList_ctl12_Link" href="http://www.cnblogs.com/ynlxc/archive/2006/07.html">2006年7月 (4)</a>
+				</li>
+			
+				<li><a id="Singlecolumn2_Categories_CatList_ctl01_LinkList_ctl13_Link" href="http://www.cnblogs.com/ynlxc/archive/2006/06.html">2006年6月 (4)</a>
+				</li>
+			
+				<li><a id="Singlecolumn2_Categories_CatList_ctl01_LinkList_ctl14_Link" href="http://www.cnblogs.com/ynlxc/archive/2006/05.html">2006年5月 (3)</a>
+				</li>
+			
+				<li><a id="Singlecolumn2_Categories_CatList_ctl01_LinkList_ctl15_Link" href="http://www.cnblogs.com/ynlxc/archive/2006/04.html">2006年4月 (12)</a>
+				</li>
+			
+				<li><a id="Singlecolumn2_Categories_CatList_ctl01_LinkList_ctl16_Link" href="http://www.cnblogs.com/ynlxc/archive/2006/03.html">2006年3月 (6)</a>
+				</li>
+			
+				<li><a id="Singlecolumn2_Categories_CatList_ctl01_LinkList_ctl17_Link" href="http://www.cnblogs.com/ynlxc/archive/2006/02.html">2006年2月 (20)</a>
+				</li>
+			
+				<li><a id="Singlecolumn2_Categories_CatList_ctl01_LinkList_ctl18_Link" href="http://www.cnblogs.com/ynlxc/archive/2006/01.html">2006年1月 (2)</a>
+				</li>
+			
+				<li><a id="Singlecolumn2_Categories_CatList_ctl01_LinkList_ctl19_Link" href="http://www.cnblogs.com/ynlxc/archive/2005/12.html">2005年12月 (2)</a>
+				</li>
+			
+				<li><a id="Singlecolumn2_Categories_CatList_ctl01_LinkList_ctl20_Link" href="http://www.cnblogs.com/ynlxc/archive/2005/11.html">2005年11月 (8)</a>
+				</li>
+			
+				<li><a id="Singlecolumn2_Categories_CatList_ctl01_LinkList_ctl21_Link" href="http://www.cnblogs.com/ynlxc/archive/2005/10.html">2005年10月 (3)</a>
+				</li>
+			
+				<li><a id="Singlecolumn2_Categories_CatList_ctl01_LinkList_ctl22_Link" href="http://www.cnblogs.com/ynlxc/archive/2005/09.html">2005年9月 (9)</a>
+				</li>
+			
+				<li><a id="Singlecolumn2_Categories_CatList_ctl01_LinkList_ctl23_Link" href="http://www.cnblogs.com/ynlxc/archive/2005/07.html">2005年7月 (5)</a>
+				</li>
+			
+				</ul>
+			</div>
+	
+		<div id="cell">
+		<img src="FreeMarker_files/icon-group.jpg" vspace="2" align="left" hspace="5"><h3>相册</h3>
+		
+				<ul>
+			
+				<li><a id="Singlecolumn2_Categories_CatList_ctl02_LinkList_ctl01_Link" href="http://www.cnblogs.com/ynlxc/gallery/47974.html">瞬间.怀念</a>
+				</li>
+			
+				<li><a id="Singlecolumn2_Categories_CatList_ctl02_LinkList_ctl02_Link" href="http://www.cnblogs.com/ynlxc/gallery/53987.html">小人物,小故事</a>
+				</li>
+			
+				</ul>
+			</div>
+	
+		<div id="cell">
+		<img src="FreeMarker_files/icon-group.jpg" vspace="2" align="left" hspace="5"><h3>.NET Link</h3>
+		
+				<ul>
+			
+				<li><a id="Singlecolumn2_Categories_CatList_ctl03_LinkList_ctl01_Link" href="http://blog.csdn.net/flygoldfish" target="_blank">.NET 打印</a>
+				</li>
+			
+				<li><a id="Singlecolumn2_Categories_CatList_ctl03_LinkList_ctl02_Link" href="http://quickstart.chinaaspx.com/quickstart/howto/doc/" target="_blank">.NET常见任务参考</a>
+				</li>
+			
+				<li><a id="Singlecolumn2_Categories_CatList_ctl03_LinkList_ctl03_Link" href="http://cn.codeof.com/articles/.net/database-applications/" target="_blank">ADO.NET FAQ</a>
+				</li>
+			
+				<li><a id="Singlecolumn2_Categories_CatList_ctl03_LinkList_ctl04_Link" href="http://csharp-source.net/" target="_blank">Csharp's OpenSource Project</a>
+				</li>
+			
+				<li><a id="Singlecolumn2_Categories_CatList_ctl03_LinkList_ctl05_Link" href="http://gforge.osdn.net.cn/" target="_blank">gforge.osdn.net.cn</a>
+				</li>
+			<li style="margin-top: 2px;">开源项目全程生命周期开发管理</li>
+				<li><a id="Singlecolumn2_Categories_CatList_ctl03_LinkList_ctl06_Link" href="http://www.oracle.com/technology/global/cn/sample_code/tech/windows/odpnet/howto/index.html" target="_blank">ODP.NET 示例</a>
+				</li>
+			
+				<li><a id="Singlecolumn2_Categories_CatList_ctl03_LinkList_ctl07_Link" href="http://www.cnblogs.com/ocean/" target="_blank">SPS资源</a>
+				</li>
+			
+				<li><a id="Singlecolumn2_Categories_CatList_ctl03_LinkList_ctl08_Link" href="http://www.kkio.com/index.php" target="_blank">卡卡网络</a>
+				</li>
+			
+				<li><a id="Singlecolumn2_Categories_CatList_ctl03_LinkList_ctl09_Link" href="http://www.agilelabs.cn/">敏捷实验室</a>
+				</li>
+			
+				<li><a id="Singlecolumn2_Categories_CatList_ctl03_LinkList_ctl10_Link" href="http://dev.yesky.com/msdn/" target="_blank">天极微软开发专栏</a>
+				</li>
+			
+				<li><a id="Singlecolumn2_Categories_CatList_ctl03_LinkList_ctl11_Link" href="http://www.chinaaspx.com/comm/dotnetbbs/Forum.aspx?Forum_ID=5&amp;Type=good" target="_blank">中国DotNet论坛精华贴</a>
+				</li>
+			
+				</ul>
+			</div>
+	
+		<div id="cell">
+		<img src="FreeMarker_files/icon-group.jpg" vspace="2" align="left" hspace="5"><h3>DB Link</h3>
+		
+				<ul>
+			
+				<li><a id="Singlecolumn2_Categories_CatList_ctl04_LinkList_ctl01_Link" href="http://www.itpub.net/" target="_blank">ITPUB论坛</a>
+				</li>
+			
+				<li><a id="Singlecolumn2_Categories_CatList_ctl04_LinkList_ctl02_Link" href="http://www.cnoug.org/index.php" target="_blank">ORACLE技术中国用户讨论组</a>
+				</li>
+			
+				<li><a id="Singlecolumn2_Categories_CatList_ctl04_LinkList_ctl03_Link" href="http://blog.csdn.net/yzsind/category/50284.aspx?PageNumber=2" target="_blank">PL/SQL DEV</a>
+				</li>
+			
+				<li><a id="Singlecolumn2_Categories_CatList_ctl04_LinkList_ctl04_Link" href="http://www.onlinedatabase.cn/%20" target="_blank">数据库在线</a>
+				</li>
+			
+				</ul>
+			</div>
+	
+		<div id="cell">
+		<img src="FreeMarker_files/icon-group.jpg" vspace="2" align="left" hspace="5"><h3>Design Link</h3>
+		
+				<ul>
+			
+				<li><a id="Singlecolumn2_Categories_CatList_ctl05_LinkList_ctl01_Link" href="http://www.68design.net/" target="_blank">Cool站</a>
+				</li>
+			
+				<li><a id="Singlecolumn2_Categories_CatList_ctl05_LinkList_ctl02_Link" href="http://www.sinker.cn/" target="_blank">Sinker</a>
+				</li>
+			
+				<li><a id="Singlecolumn2_Categories_CatList_ctl05_LinkList_ctl03_Link" href="http://www.superdesign.com.cn/show.htm" target="_blank">北京超级设计联盟</a>
+				</li>
+			
+				<li><a id="Singlecolumn2_Categories_CatList_ctl05_LinkList_ctl04_Link" href="http://www.desk9.com/" target="_blank">高分辨率壁纸</a>
+				</li>
+			
+				<li><a id="Singlecolumn2_Categories_CatList_ctl05_LinkList_ctl05_Link" href="http://www.rgbcn.net/index.asp" target="_blank">幻色中国-论坛首页</a>
+				</li>
+			
+				<li><a id="Singlecolumn2_Categories_CatList_ctl05_LinkList_ctl06_Link" href="http://www.mydeskcity.com/" target="_blank">经典桌面资源站MYDESKCITY</a>
+				</li>
+			
+				<li><a id="Singlecolumn2_Categories_CatList_ctl05_LinkList_ctl07_Link" href="http://moban.7880.com/" target="_blank">模板大全</a>
+				</li>
+			
+				<li><a id="Singlecolumn2_Categories_CatList_ctl05_LinkList_ctl08_Link" href="http://www.chinaui.com/" target="_blank">中国人机界面设计门户</a>
+				</li>
+			
+				</ul>
+			</div>
+	
+		<div id="cell">
+		<img src="FreeMarker_files/icon-group.jpg" vspace="2" align="left" hspace="5"><h3>Good-fellowship Link</h3>
+		
+				<ul>
+			
+				<li><a id="Singlecolumn2_Categories_CatList_ctl06_LinkList_ctl01_Link" href="http://www.5ai7.net/">5ai7.net</a>
+				</li>
+			
+				<li><a id="Singlecolumn2_Categories_CatList_ctl06_LinkList_ctl02_Link" href="http://www.narchitecture.net/Default.aspx" target="_blank">dotNet,java开源项目研究</a>
+				</li>
+			
+				<li><a id="Singlecolumn2_Categories_CatList_ctl06_LinkList_ctl03_Link" href="http://blog.csdn.net/patriotlml">Drink Drank Drunk</a>
+				</li>
+			
+				<li><a id="Singlecolumn2_Categories_CatList_ctl06_LinkList_ctl04_Link" href="http://blog.csdn.net/kanji/" target="_blank">kanji的专栏(日文软件开发)</a>
+				</li>
+			
+				<li><a id="Singlecolumn2_Categories_CatList_ctl06_LinkList_ctl05_Link" href="http://www.blogjava.net/oksonic/" target="_blank">oksonic's博客</a>
+				</li>
+			
+				<li><a id="Singlecolumn2_Categories_CatList_ctl06_LinkList_ctl06_Link" href="http://www.springside.org.cn/" target="_blank">spring学习</a>
+				</li>
+			
+				<li><a id="Singlecolumn2_Categories_CatList_ctl06_LinkList_ctl07_Link" href="http://www.vchome.net/">VCHOME</a>
+				</li>
+			
+				<li><a id="Singlecolumn2_Categories_CatList_ctl06_LinkList_ctl08_Link" href="http://www.z-w.cn/vinsin/">vinsin</a>
+				</li>
+			
+				<li><a id="Singlecolumn2_Categories_CatList_ctl06_LinkList_ctl09_Link" href="http://bulo.hjenglish.com/ynlxc/" target="_blank">俺的部落，俺做主</a>
+				</li>
+			
+				<li><a id="Singlecolumn2_Categories_CatList_ctl06_LinkList_ctl10_Link" href="http://bbs.enfamily.cn/mt_dict.asp" target="_blank">不错的在线翻译</a>
+				</li>
+			
+				<li><a id="Singlecolumn2_Categories_CatList_ctl06_LinkList_ctl11_Link" href="http://www.blogjava.net/nuanfengls-118123/" target="_blank">程序员的28种能力</a>
+				</li>
+			
+				<li><a id="Singlecolumn2_Categories_CatList_ctl06_LinkList_ctl12_Link" href="http://www.blogjava.net/scud" target="_blank">飞云小侠-WebWork2学习</a>
+				</li>
+			
+				<li><a id="Singlecolumn2_Categories_CatList_ctl06_LinkList_ctl13_Link" href="http://blog.csdn.net/javamxj/" target="_blank">分享Java快乐</a>
+				</li>
+			
+				<li><a id="Singlecolumn2_Categories_CatList_ctl06_LinkList_ctl14_Link" href="http://blog.csdn.net/hxcfindjob/" target="_blank">胡祥春开发专栏</a>
+				</li>
+			
+				<li><a id="Singlecolumn2_Categories_CatList_ctl06_LinkList_ctl15_Link" href="http://jp.hjenglish.com/menu.htm" target="_blank">沪江日语节目单</a>
+				</li>
+			
+				<li><a id="Singlecolumn2_Categories_CatList_ctl06_LinkList_ctl16_Link" href="http://blog.csdn.net/forgetdavi/" target="_blank">尖叫的土豆(Ext技术)</a>
+				</li>
+			
+				<li><a id="Singlecolumn2_Categories_CatList_ctl06_LinkList_ctl17_Link" href="http://www.joyjp.cn/" target="_blank">乐乐日语论坛</a>
+				</li>
+			
+				<li><a id="Singlecolumn2_Categories_CatList_ctl06_LinkList_ctl18_Link" href="http://jinyong.cnblogs.com/" target="_blank">命运有自己的梦！</a>
+				</li>
+			
+				<li><a id="Singlecolumn2_Categories_CatList_ctl06_LinkList_ctl19_Link" href="http://bulo.hjenglish.com/group/100340/" target="_blank">日语能力考试3、4级</a>
+				</li>
+			
+				<li><a id="Singlecolumn2_Categories_CatList_ctl06_LinkList_ctl20_Link" href="http://www.blogjava.net/sliverfancy/">为了活着～</a>
+				</li>
+			
+				<li><a id="Singlecolumn2_Categories_CatList_ctl06_LinkList_ctl21_Link" href="http://blog.sina.com.cn/u/1047799802" target="_blank">想飞的鸟</a>
+				</li>
+			
+				<li><a id="Singlecolumn2_Categories_CatList_ctl06_LinkList_ctl22_Link" href="http://blog.csdn.net/Drate/category/82930.aspx">项目管理经验</a>
+				</li>
+			
+				<li><a id="Singlecolumn2_Categories_CatList_ctl06_LinkList_ctl23_Link" href="http://blog.hjenglish.com/xinran/" target="_blank">欣然的旅程</a>
+				</li>
+			
+				<li><a id="Singlecolumn2_Categories_CatList_ctl06_LinkList_ctl24_Link" href="http://bbs.englishvod.net/" target="_blank">雅信达英语互动社区</a>
+				</li>
+			
+				<li><a id="Singlecolumn2_Categories_CatList_ctl06_LinkList_ctl25_Link" href="http://wj.cnblogs.com/">叶子的家(Castle学习)</a>
+				</li>
+			
+				</ul>
+			</div>
+	
+		<div id="cell">
+		<img src="FreeMarker_files/icon-group.jpg" vspace="2" align="left" hspace="5"><h3>JAVA Link</h3>
+		
+				<ul>
+			
+				<li><a id="Singlecolumn2_Categories_CatList_ctl07_LinkList_ctl01_Link" href="http://www.okajax.com/" target="_blank">Ajax中国</a>
+				</li>
+			
+				<li><a id="Singlecolumn2_Categories_CatList_ctl07_LinkList_ctl02_Link" href="http://dev2dev.bea.com.cn/index.html" target="_blank">BEA dev2dev 在线</a>
+				</li>
+			
+				<li><a id="Singlecolumn2_Categories_CatList_ctl07_LinkList_ctl03_Link" href="http://www.ajaxjs.com/" target="_blank">ExtJS</a>
+				</li>
+			
+				<li><a id="Singlecolumn2_Categories_CatList_ctl07_LinkList_ctl04_Link" href="http://www.nit-pro.org/" target="_blank">IT nit-pro 考试</a>
+				</li>
+			
+				<li><a id="Singlecolumn2_Categories_CatList_ctl07_LinkList_ctl05_Link" href="http://www.open-open.com/" target="_blank">Java's OpenSource Project</a>
+				</li>
+			
+				<li><a id="Singlecolumn2_Categories_CatList_ctl07_LinkList_ctl06_Link" href="http://www.javarss.com.cn/" target="_blank">Java中文博览</a>
+				</li>
+			
+				<li><a id="Singlecolumn2_Categories_CatList_ctl07_LinkList_ctl07_Link" href="http://www.js66.com/java/index.php" target="_blank">JSF站点</a>
+				</li>
+			
+				<li><a id="Singlecolumn2_Categories_CatList_ctl07_LinkList_ctl08_Link" href="http://www.jdon.com/" target="_blank">J道</a>
+				</li>
+			
+				<li><a id="Singlecolumn2_Categories_CatList_ctl07_LinkList_ctl09_Link" href="http://www.tangsemopensource.com/" target="_blank">opensource</a>
+				</li>
+			
+				<li><a id="Singlecolumn2_Categories_CatList_ctl07_LinkList_ctl10_Link" href="http://spring.jactiongroup.net/" target="_blank">SpringFramework中文论坛</a>
+				</li>
+			
+				<li><a id="Singlecolumn2_Categories_CatList_ctl07_LinkList_ctl11_Link" href="http://www.springside.org.cn/">Springside</a>
+				</li>
+			
+				<li><a id="Singlecolumn2_Categories_CatList_ctl07_LinkList_ctl12_Link" href="http://blog.itpub.net/category/1476/5553" target="_blank">Spring中文资料</a>
+				</li>
+			
+				<li><a id="Singlecolumn2_Categories_CatList_ctl07_LinkList_ctl13_Link" href="http://www.blogjava.net/max/category/16130.html" target="_blank">Struts 2.0系列</a>
+				</li>
+			
+				<li><a id="Singlecolumn2_Categories_CatList_ctl07_LinkList_ctl14_Link" href="http://webwork.javascud.org/" target="_blank">WebWork中文站点</a>
+				</li>
+			
+				<li><a id="Singlecolumn2_Categories_CatList_ctl07_LinkList_ctl15_Link" href="http://www.javaeye.com/" target="_blank">www.javaeye.com</a>
+				</li>
+			
+				<li><a id="Singlecolumn2_Categories_CatList_ctl07_LinkList_ctl16_Link" href="http://www.matrix.org.cn/" target="_blank">www.matrix.org.cn</a>
+				</li>
+			
+				<li><a id="Singlecolumn2_Categories_CatList_ctl07_LinkList_ctl17_Link" href="http://www.mldn.cn/" target="_blank">魔乐在线</a>
+				</li>
+			
+				<li><a id="Singlecolumn2_Categories_CatList_ctl07_LinkList_ctl18_Link" href="http://java.ccidnet.com/" target="_blank">赛迪网JAVA开发专题</a>
+				</li>
+			
+				<li><a id="Singlecolumn2_Categories_CatList_ctl07_LinkList_ctl19_Link" href="http://bbs.tech.ccidnet.com/" target="_blank">赛迪网技术社区</a>
+				</li>
+			
+				<li><a id="Singlecolumn2_Categories_CatList_ctl07_LinkList_ctl20_Link" href="http://www.eclipseworld.org/bbs/index.php" target="_blank">中国Eclipse社区</a>
+				</li>
+			
+				<li><a id="Singlecolumn2_Categories_CatList_ctl07_LinkList_ctl21_Link" href="http://www.cn-java.com/" target="_blank">中文JAVA技术网</a>
+				</li>
+			
+				</ul>
+			</div>
+	
+		<div id="cell">
+		<img src="FreeMarker_files/icon-group.jpg" vspace="2" align="left" hspace="5"><h3>Job rule</h3>
+		
+				<ul>
+			
+				<li><a id="Singlecolumn2_Categories_CatList_ctl08_LinkList_ctl01_Link" href="http://blog.csdn.net/jobchanceleo" target="_blank">职业生涯顾问Leo</a>
+				</li>
+			
+				</ul>
+			</div>
+	
+		<div id="cell">
+		<img src="FreeMarker_files/icon-group.jpg" vspace="2" align="left" hspace="5"><h3>Other Link</h3>
+		
+				<ul>
+			
+				<li><a id="Singlecolumn2_Categories_CatList_ctl09_LinkList_ctl01_Link" href="http://www-128.ibm.com/developerworks/cn/" target="_blank">IBM's resource for developers</a>
+				</li>
+			
+				<li><a id="Singlecolumn2_Categories_CatList_ctl09_LinkList_ctl02_Link" href="http://www.ibook8.com/book/chengxu.htm" target="_blank">爱书吧（程序设计相关电子书下载）</a>
+				</li>
+			
+				<li><a id="Singlecolumn2_Categories_CatList_ctl09_LinkList_ctl03_Link" href="http://www.hjenglish.com/" target="_blank">沪江英语</a>
+				</li>
+			
+				<li><a id="Singlecolumn2_Categories_CatList_ctl09_LinkList_ctl04_Link" href="http://bbs.musicool.cn/index.php">极品音乐</a>
+				</li>
+			
+				<li><a id="Singlecolumn2_Categories_CatList_ctl09_LinkList_ctl05_Link" href="http://www.jysls.com/" target="_blank">教育手拉手</a>
+				</li>
+			
+				<li><a id="Singlecolumn2_Categories_CatList_ctl09_LinkList_ctl06_Link" href="http://column.bokee.com/blogger/name/_%C1%D6%B4%EF.html" target="_blank">林达博客</a>
+				</li>
+			
+				<li><a id="Singlecolumn2_Categories_CatList_ctl09_LinkList_ctl07_Link" href="http://www.chinadforce.com/index.php" target="_blank">龙族联盟论坛</a>
+				</li>
+			
+				<li><a id="Singlecolumn2_Categories_CatList_ctl09_LinkList_ctl08_Link" href="http://www.eimhe.com/" target="_blank">美河学习在线</a>
+				</li>
+			
+				<li><a id="Singlecolumn2_Categories_CatList_ctl09_LinkList_ctl09_Link" href="http://so138.com/index.aspx" target="_blank">千源网</a>
+				</li>
+			
+				<li><a id="Singlecolumn2_Categories_CatList_ctl09_LinkList_ctl10_Link" href="http://www.sooweb.net/" target="_blank">软件下载（速度特快）</a>
+				</li>
+			
+				<li><a id="Singlecolumn2_Categories_CatList_ctl09_LinkList_ctl11_Link" href="http://www.eduwz.net/" target="_blank">西南师大</a>
+				</li>
+			
+				<li><a id="Singlecolumn2_Categories_CatList_ctl09_LinkList_ctl12_Link" href="http://bbs.hzmjp.com/forums.html" target="_blank">现代日语学习论坛</a>
+				</li>
+			
+				<li><a id="Singlecolumn2_Categories_CatList_ctl09_LinkList_ctl13_Link" href="http://www.neworiental.org/" target="_blank">新东方学习</a>
+				</li>
+			
+				<li><a id="Singlecolumn2_Categories_CatList_ctl09_LinkList_ctl14_Link" href="http://www.tomore.com/" target="_blank">中国盟动力</a>
+				</li>
+			
+				<li><a id="Singlecolumn2_Categories_CatList_ctl09_LinkList_ctl15_Link" href="http://www.cncode.com/default.html" target="_blank">中国源码中心</a>
+				</li>
+			
+				</ul>
+			</div>
+	
+
+<script language="JavaScript">
+function SearchGoogle(key,evt,site)
+		{
+			if(evt.keyCode==13 || evt.keyCode==0)
+			{
+				key.focus();
+				var keystr = encodeURIComponent(key.value);
+				url = "http://www.google.com/search?q=";
+				url = url+keystr;
+				url += "&ie=UTF-8&oe=GB2312&hl=zh-CN&domains="+site+"&sitesearch="+site;
+				window.location = url;
+				return false;			
+			}
+			
+		}
+</script>
+<div id="cell">
+<img src="FreeMarker_files/icon-group.jpg" vspace="2" align="left" hspace="5"><h3>搜索</h3>
+<ul>
+	<li><input style="width: 130px;" name="q" id="q" onkeydown="return SearchGoogle(document.getElementById('q'),event,'http://www.cnblogs.com/ynlxc/')" type="text">&nbsp;<input onclick="SearchGoogle(document.getElementById('q'),event,'http://www.cnblogs.com/ynlxc/')" value="搜索" name="sa" type="button"></li></ul>
+</div>
+<div id="cell">
+<img src="FreeMarker_files/icon-group.jpg" vspace="2" align="left" hspace="5"><h3>积分与排名</h3>
+<ul>
+	<li>
+		积分 -
+		52197
+	</li><li>
+		排名 -
+		755
+	</li>
+</ul>
+</div>
+
+<div id="cell">
+<img src="FreeMarker_files/icon-group.jpg" vspace="2" align="left" hspace="5"><h3>最新评论
+	<a id="Singlecolumn2__451f81bc8aff_RSSHyperlink1" href="http://www.cnblogs.com/ynlxc/CommentsRSS.aspx"><img src="FreeMarker_files/xml.gif" style="border-width: 0px;"></a></h3>
+<div class="RecentComment">
+	
+			<ul>
+		
+			<li style="">
+				<a id="Singlecolumn2__451f81bc8aff_CommentList_ctl01_Hyperlink1" href="http://www.cnblogs.com/ynlxc/archive/2008/06/21/371141.html#1231993">1.&nbsp;re: 史上最撼人魂魄的英文天籁:班得瑞全集17CD(下载!!!)</a>
+			</li>
+			<li style="">
+				下载不了啊，请加我的QQ：626296810
+			</li>
+			<li style="text-align: right; margin-right: 4px;">
+				--阿忆</li>
+		
+			<li style="">
+				<a id="Singlecolumn2__451f81bc8aff_CommentList_ctl02_Hyperlink1" href="http://www.cnblogs.com/ynlxc/archive/2008/06/16/303527.html#1226768">2.&nbsp;re: SQL排序规则：无法解决 equal to 操作的排序规则冲突</a>
+			</li>
+			<li style="">
+				Mark
+			</li>
+			<li style="text-align: right; margin-right: 4px;">
+				--清风笑</li>
+		
+			<li style="">
+				<a id="Singlecolumn2__451f81bc8aff_CommentList_ctl03_Hyperlink1" href="http://www.cnblogs.com/ynlxc/archive/2008/06/13/371141.html#1224794">3.&nbsp;re: 史上最撼人魂魄的英文天籁:班得瑞全集17CD(下载!!!)</a>
+			</li>
+			<li style="">
+				我喜欢音乐，喜欢那分空灵，那分安然自在，人应该活的自由一些，我只想做我自己，过着傻瓜一样的生活！
+			</li>
+			<li style="text-align: right; margin-right: 4px;">
+				--王建</li>
+		
+			<li style="">
+				<a id="Singlecolumn2__451f81bc8aff_CommentList_ctl04_Hyperlink1" href="http://www.cnblogs.com/ynlxc/archive/2008/06/13/371141.html#1224784">4.&nbsp;re: 史上最撼人魂魄的英文天籁:班得瑞全集17CD(下载!!!)</a>
+			</li>
+			<li style="">
+				很好.谢谢~
+			</li>
+			<li style="text-align: right; margin-right: 4px;">
+				--微雨落花</li>
+		
+			<li style="">
+				<a id="Singlecolumn2__451f81bc8aff_CommentList_ctl05_Hyperlink1" href="http://www.cnblogs.com/ynlxc/archive/2008/05/31/371141.html#1214615">5.&nbsp;re: 史上最撼人魂魄的英文天籁:班得瑞全集17CD(下载!!!)</a>
+			</li>
+			<li style="">
+				据说班得瑞原版专辑只有十二张,分别是:[情境音乐]仙境、[优美名曲]寂静山林、[自然音乐]春野、[冥想音乐]蓝色天际、[放松音乐]迷雾森林、[心灵音乐]日光海岸、[灵感音乐]梦花园、[清晰音乐]琉璃湖...
+			</li>
+			<li style="text-align: right; margin-right: 4px;">
+				--TCPIP</li>
+		
+			</ul>
+		
+</div>
+</div>
+
+<div id="cell">
+<img src="FreeMarker_files/icon-group.jpg" vspace="2" align="left" hspace="5"><h3>阅读排行榜</h3>
+<div class="RecentComment">
+	
+			<ul style="">
+		
+			<li>
+				<a id="Singlecolumn2__5f2bb2033b0_TopList_ctl01_Hyperlink1" href="http://www.cnblogs.com/ynlxc/archive/2006/04/10/371141.html">1.&nbsp;史上最撼人魂魄的英文天籁:班得瑞全集17CD(下载!!!)(9223)</a>
+			</li>
+		
+			<li>
+				<a id="Singlecolumn2__5f2bb2033b0_TopList_ctl02_Hyperlink1" href="http://www.cnblogs.com/ynlxc/archive/2005/07/26/200112.html">2.&nbsp;。NET and JAVA电子书，与大家分享（全为PDF格式，包括原码，不断更新中……）(4870)</a>
+			</li>
+		
+			<li>
+				<a id="Singlecolumn2__5f2bb2033b0_TopList_ctl03_Hyperlink1" href="http://www.cnblogs.com/ynlxc/archive/2005/07/26/200111.html">3.&nbsp;打破超星封锁——PDG转PDF新方法[转贴](4815)</a>
+			</li>
+		
+			<li>
+				<a id="Singlecolumn2__5f2bb2033b0_TopList_ctl04_Hyperlink1" href="http://www.cnblogs.com/ynlxc/archive/2006/10/16/529974.html">4.&nbsp;FreeMarker开发指南(4010)</a>
+			</li>
+		
+			<li>
+				<a id="Singlecolumn2__5f2bb2033b0_TopList_ctl05_Hyperlink1" href="http://www.cnblogs.com/ynlxc/archive/2005/09/22/242178.html">5.&nbsp;TaskVision（C#版）在Win2003上完美安装（说明：访问的库是本地的）(2830)</a>
+			</li>
+		
+			</ul>
+		
+</div>
+</div>
+
+<div id="cell">
+<img src="FreeMarker_files/icon-group.jpg" vspace="2" align="left" hspace="5"><h3>评论排行榜</h3>
+<div class="RecentComment">
+	
+			<ul style="">
+		
+			<li>
+				<a id="Singlecolumn2__341a999db7ca_TopList_ctl01_Hyperlink1" href="http://www.cnblogs.com/ynlxc/archive/2005/07/26/200112.html">1.&nbsp;。NET and JAVA电子书，与大家分享（全为PDF格式，包括原码，不断更新中……）(26)</a>
+			</li>
+		
+			<li>
+				<a id="Singlecolumn2__341a999db7ca_TopList_ctl02_Hyperlink1" href="http://www.cnblogs.com/ynlxc/archive/2005/09/22/242178.html">2.&nbsp;TaskVision（C#版）在Win2003上完美安装（说明：访问的库是本地的）(16)</a>
+			</li>
+		
+			<li>
+				<a id="Singlecolumn2__341a999db7ca_TopList_ctl03_Hyperlink1" href="http://www.cnblogs.com/ynlxc/archive/2006/04/10/371141.html">3.&nbsp;史上最撼人魂魄的英文天籁:班得瑞全集17CD(下载!!!)(14)</a>
+			</li>
+		
+			<li>
+				<a id="Singlecolumn2__341a999db7ca_TopList_ctl04_Hyperlink1" href="http://www.cnblogs.com/ynlxc/archive/2006/07/06/444306.html">4.&nbsp;张学友全集MP3(13)</a>
+			</li>
+		
+			<li>
+				<a id="Singlecolumn2__341a999db7ca_TopList_ctl05_Hyperlink1" href="http://www.cnblogs.com/ynlxc/archive/2006/10/12/527616.html">5.&nbsp;上海，我的奋斗岁月（非常精彩）(12)</a>
+			</li>
+		
+			</ul>
+		
+</div>
+</div>
+
+<ul><li>
+<div id="cnblogsgooglead" width="180" height="150"></div>
+<div id="cnblogsgoogleadcode" style="display: none;">
+<script type="text/javascript"><!--
+google_ad_client = "pub-4210569241504288";
+google_ad_width = 180;
+google_ad_height = 150;
+google_ad_format = "180x150_as";
+google_ad_channel ="";
+google_ad_type = "text";
+//--></script>
+<script type="text/javascript" src="FreeMarker_files/show_ads.js">
+</script><iframe name="google_ads_frame" src="FreeMarker_files/ads_002.htm" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" width="180" frameborder="0" height="150"></iframe>
+</div>
+</li></ul>
+</div>
+		</td>
+		<td class="MainCell">
+			<div id="main">
+				
+					<script type="text/javascript">
+//<![CDATA[
+Sys.WebForms.PageRequestManager._initialize('AjaxHolder$scriptmanager1', document.getElementById('Form1'));
+Sys.WebForms.PageRequestManager.getInstance()._updateControls(['tAjaxHolder$UpdatePanel1'], [], [], 90);
+//]]>
+</script>
+
+	<div class="post">
+		<div class="posthead">
+			<h2>
+				<a id="AjaxHolder_ctl01_TitleUrl" class="singleposttitle" href="http://www.cnblogs.com/ynlxc/archive/2006/10/16/529974.html">FreeMarker开发指南</a>
+			</h2>
+ 			Posted on 2006-10-16 09:53 <a href="http://ynlxc.cnblogs.com/">昆明小虫</a> 阅读(4010) <a href="#Post">评论(11)</a> &nbsp;<a href="http://www.cnblogs.com/ynlxc/admin/EditPosts.aspx?postid=529974">编辑</a> <a href="http://www.cnblogs.com/ynlxc/AddToFavorite.aspx?id=529974">收藏</a>  所属分类: <a href="http://www.cnblogs.com/ynlxc/category/55459.html">Java Framework</a> 
+			<img src="FreeMarker_files/529974.jpeg" width="1" height="1">
+			
+<!--
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+xmlns:dc="http://purl.org/dc/elements/1.1/"
+xmlns:trackback="http://madskills.com/public/xml/rss/module/trackback/">
+<rdf:Description
+rdf:about="http://www.cnblogs.com/ynlxc/archive/2006/10/16/529974.html"
+dc:identifier="http://www.cnblogs.com/ynlxc/archive/2006/10/16/529974.html"
+dc:title="FreeMarker开发指南"
+trackback:ping="http://www.cnblogs.com/ynlxc/services/trackbacks/529974.aspx" />
+</rdf:RDF>
+-->
+
+		</div>
+		<div class="postbody"><p align="center">FreeMarke开发指南</p>
+<p><br>1概念<br>2指令<br>if, else, elseif&nbsp;<br>switch, case, default, break<br>list, break&nbsp;<br>include&nbsp;<br>Import&nbsp;<br>compress&nbsp;<br>escape, noescape&nbsp;<br>assign&nbsp;<br>global&nbsp;<br>setting&nbsp;<br>macro, nested, return<br>t, lt, rt&nbsp;<br>3一些常用方法或注意事项&nbsp;<br>表达式转换类&nbsp;<br>数字循环&nbsp;<br>对浮点取整数&nbsp;<br>给变量默认值&nbsp;<br>判断对象是不是null&nbsp;<br>常用格式化日期&nbsp;<br>添加全局共享变量数据模型&nbsp;<br>直接调用java对象的方法&nbsp;<br>字符串处理(内置方法)&nbsp;<br>在模板里对sequences和hashes初始化&nbsp;<br>注释标志&nbsp;<br>sequences内置方法&nbsp;<br>hashes内置方法&nbsp;<br>4 freemarker在web开发中注意事项&nbsp;<br>web中常用的几个对象&nbsp;<br>view中值的搜索顺序&nbsp;<br>在模板里ftl里使用标签&nbsp;<br>如何初始化共享变量&nbsp;<br>与webwork整合配置&nbsp;<br>5高级方法&nbsp;<br>自定义方法&nbsp;<br>自定义 Transforms&nbsp;</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<br>1概念<br>最常用的3个概念<br>sequence&nbsp; 序列，对应java里的list、数组等非键值对的集合<br>hash&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 键值对的集合<br>namespace 对一个ftl文件的引用,利用这个名字可以访问到该ftl文件的资源</p>
+<p>2指令<br>if, else, elseif<br>语法<br>&lt;#if condition&gt;<br>&nbsp; ...<br>&lt;#elseif condition2&gt;<br>&nbsp; ...<br>&lt;#elseif condition3&gt;<br>&nbsp; ...<br>...<br>&lt;#else&gt;<br>&nbsp; ...<br>&lt;/#if&gt;<br>用例<br>&lt;#if x = 1&gt;<br>&nbsp; x is 1<br>&lt;/#if&gt;</p>
+<p>&lt;#if x = 1&gt;<br>&nbsp; x is 1<br>&lt;#else&gt;<br>&nbsp; x is not 1<br>&lt;/#if&gt;</p>
+<p>switch, case, default, break<br>语法<br>&lt;#switch value&gt;<br>&nbsp; &lt;#case refValue1&gt;<br>&nbsp;&nbsp;&nbsp; ...<br>&nbsp;&nbsp;&nbsp; &lt;#break&gt;<br>&nbsp; &lt;#case refValue2&gt;<br>&nbsp;&nbsp;&nbsp; ...<br>&nbsp;&nbsp;&nbsp; &lt;#break&gt;<br>&nbsp; ...<br>&nbsp; &lt;#case refValueN&gt;<br>&nbsp;&nbsp;&nbsp; ...<br>&nbsp;&nbsp;&nbsp; &lt;#break&gt;<br>&nbsp; &lt;#default&gt;<br>&nbsp;&nbsp;&nbsp; ...<br>&lt;/#switch&gt;</p>
+<p>用例<br>字符串<br>&lt;#switch being.size&gt;<br>&nbsp; &lt;#case "small"&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp; This will be processed if it is small<br>&nbsp;&nbsp;&nbsp;&nbsp; &lt;#break&gt;<br>&nbsp; &lt;#case "medium"&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp; This will be processed if it is medium<br>&nbsp;&nbsp;&nbsp;&nbsp; &lt;#break&gt;<br>&nbsp; &lt;#case "large"&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp; This will be processed if it is large<br>&nbsp;&nbsp;&nbsp;&nbsp; &lt;#break&gt;<br>&nbsp; &lt;#default&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp; This will be processed if it is neither<br>&lt;/#switch&gt;<br>数字<br>&lt;#switch x&gt;<br>&nbsp; &lt;#case x = 1&gt;<br>&nbsp;&nbsp;&nbsp; 1<br>&nbsp; &lt;#case x = 2&gt;<br>&nbsp;&nbsp;&nbsp; 2<br>&nbsp; &lt;#default&gt;<br>&nbsp;&nbsp;&nbsp; d<br>&lt;/#switch&gt;</p>
+<p>如果x=1 输出 1 2, x=2输出 2, x=3 输出d</p>
+<p>list, break<br>语法<br>&lt;#list sequence as item&gt;<br>...<br>&lt;#if item = "spring"&gt;&lt;#break&gt;&lt;/#if&gt;<br>...<br>&lt;/#list&gt;<br>关键字<br>item_index:是list当前值的下标<br>item_has_next:判断list是否还有值</p>
+<p>用例<br>&lt;#assign seq = ["winter", "spring", "summer", "autumn"]&gt;<br>&lt;#list seq as x&gt;<br>&nbsp; ${x_index + 1}. ${x}&lt;#if x_has_next&gt;,&lt;/#if&gt;<br>&lt;/#list&gt;</p>
+<p>输出<br>&nbsp; 1. winter,<br>&nbsp; 2. spring,<br>&nbsp; 3. summer,<br>&nbsp; 4. autumn&nbsp;&nbsp; </p>
+<p><br>include<br>语法<br>&lt;#include filename&gt;<br>or<br>&lt;#include filename options&gt;<br>options包含两个属性<br>encoding=”GBK” 编码格式<br>parse=true 是否作为ftl语法解析,默认是true，false就是以文本方式引入.注意在ftl文件里布尔值都是直接赋值的如parse=true,而不是parse=”true”<br>用例<br>/common/copyright.ftl包含内容<br>Copyright 2001-2002 ${me}&lt;br&gt;<br>All rights reserved.&nbsp; <br>模板文件<br>&lt;#assign me = "Juila Smith"&gt;<br>&lt;h1&gt;Some test&lt;/h1&gt;<br>&lt;p&gt;Yeah.<br>&lt;hr&gt;<br>&lt;#include "/common/copyright.ftl" encoding=”GBK”&gt; <br>输出结果<br>&lt;h1&gt;Some test&lt;/h1&gt;<br>&lt;p&gt;Yeah.<br>&lt;hr&gt;<br>Copyright 2001-2002 Juila Smith<br>All rights reserved.&nbsp; </p>
+<p>Import<br>语法<br>&lt;#import path as hash&gt;<br>类似于java里的import,它导入文件，然后就可以在当前文件里使用被导入文件里的宏组件</p>
+<p>用例</p>
+<p>假设mylib.ftl里定义了宏copyright那么我们在其他模板页面里可以这样使用<br>&lt;#import "/libs/mylib.ftl" as my&gt;</p>
+<p>&lt;@my.copyright date="1999-2002"/&gt;</p>
+<p>"my"在freemarker里被称作namespace</p>
+<p>compress<br>语法<br>&lt;#compress&gt;<br>&nbsp; ...<br>&lt;/#compress&gt;<br>用来压缩空白空间和空白的行<br>用例<br>&lt;#assign x = "&nbsp;&nbsp;&nbsp; moo&nbsp; \n\n&nbsp;&nbsp; "&gt;<br>(&lt;#compress&gt;<br>&nbsp; 1 2&nbsp; 3&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp; 5<br>&nbsp; ${moo}<br>&nbsp; test only</p>
+<p>&nbsp; I said, test only</p>
+<p>&lt;/#compress&gt;)&nbsp; <br>输出<br>(1 2 3 4 5<br>moo<br>test only<br>I said, test only) <br>escape, noescape<br>语法<br>&lt;#escape identifier as expression&gt;<br>&nbsp; ...<br>&nbsp; &lt;#noescape&gt;...&lt;/#noescape&gt;<br>&nbsp; ...<br>&lt;/#escape&gt;<br>用例<br>主要使用在相似的字符串变量输出，比如某一个模块的所有字符串输出都必须是html安全的，这个时候就可以使用该表达式<br>&lt;#escape x as x?html&gt;<br>&nbsp; First name: ${firstName}<br>&nbsp; &lt;#noescape&gt;Last name: ${lastName}&lt;/#noescape&gt;<br>&nbsp; Maiden name: ${maidenName}<br>&lt;/#escape&gt;<br>相同表达式&nbsp; <br>&nbsp; First name: ${firstName?html}<br>&nbsp; Last name: ${lastName }<br>&nbsp; Maiden name: ${maidenName?html}<br>assign<br>语法<br>&lt;#assign name=value&gt;<br>or<br>&lt;#assign name1=value1 name2=value2 ... nameN=valueN&gt;<br>or<br>&lt;#assign same as above... in namespacehash&gt;<br>or<br>&lt;#assign name&gt;<br>&nbsp; capture this<br>&lt;/#assign&gt;<br>or<br>&lt;#assign name in namespacehash&gt;<br>&nbsp; capture this<br>&lt;/#assign&gt;<br>用例<br>生成变量,并且给变量赋值<br>给seasons赋予序列值<br>&lt;#assign seasons = ["winter", "spring", "summer", "autumn"]&gt;</p>
+<p>给变量test加1<br>&lt;#assign test = test + 1&gt;</p>
+<p>给my namespage 赋予一个变量bgColor,下面可以通过my.bgColor来访问这个变量<br>&lt;#import "/mylib.ftl" as my&gt;<br>&lt;#assign bgColor="red" in my&gt;</p>
+<p>将一段输出的文本作为变量保存在x里<br>下面的阴影部分输出的文本将被赋值给x<br>&lt;#assign x&gt;<br>&nbsp; &lt;#list 1..3 as n&gt;<br>&nbsp;&nbsp;&nbsp; ${n} &lt;@myMacro /&gt;<br>&nbsp; &lt;/#list&gt;<br>&lt;/#assign&gt;<br>Number of words: ${x?word_list?size}<br>${x}</p>
+<p>&lt;#assign x&gt;Hello ${user}!&lt;/#assign&gt;&nbsp;&nbsp;&nbsp;&nbsp; error<br>&lt;#assign x=” Hello ${user}!”&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; true</p>
+<p>同时也支持中文赋值，如：<br>&lt;#assign 语法&gt;<br>&nbsp; java<br>&lt;/#assign&gt;<br>${语法}<br>打印输出:<br>java<br>global<br>语法<br>&lt;#global name=value&gt;<br>or<br>&lt;#global name1=value1 name2=value2 ... nameN=valueN&gt;<br>or<br>&lt;#global name&gt;<br>&nbsp; capture this<br>&lt;/#global&gt;</p>
+<p>全局赋值语法，利用这个语法给变量赋值，那么这个变量在所有的namespace中是可见的,如果这个变量被当前的assign语法覆盖
+如&lt;#global x=2&gt; &lt;#assign x=1&gt;
+在当前页面里x=2将被隐藏，或者通过${.global.x}来访问</p>
+<p>setting<br>语法<br>&lt;#setting name=value&gt;<br>用来设置整个系统的一个环境<br>locale<br>number_format<br>boolean_format<br>date_format, time_format, datetime_format<br>time_zone<br>classic_compatible<br>用例<br>假如当前是匈牙利的设置，然后修改成美国<br>${1.2}<br>&lt;#setting locale="en_US"&gt;<br>${1.2}&nbsp; <br>输出<br>1,2<br>1.2<br>因为匈牙利是采用“,”作为十进制的分隔符，美国是用“.”</p>
+<p>&nbsp;</p>
+<p>macro, nested, return<br>语法</p>
+<p>&lt;#macro name param1 param2 ... paramN&gt;<br>&nbsp; ...<br>&nbsp; &lt;#nested loopvar1, loopvar2, ..., loopvarN&gt;<br>&nbsp; ...<br>&nbsp; &lt;#return&gt;<br>&nbsp; ...<br>&lt;/#macro&gt;<br>用例<br>&lt;#macro test foo bar="Bar" baaz=-1&gt;<br>&nbsp; Test text, and the params: ${foo}, ${bar}, ${baaz}<br>&lt;/#macro&gt;<br>&lt;@test foo="a" bar="b" baaz=5*5-2/&gt;<br>&lt;@test foo="a" bar="b"/&gt;<br>&lt;@test foo="a" baaz=5*5-2/&gt;<br>&lt;@test foo="a"/&gt; <br>输出<br>&nbsp; Test text, and the params: a, b, 23<br>&nbsp; Test text, and the params: a, b, -1<br>&nbsp; Test text, and the params: a, Bar, 23<br>&nbsp; Test text, and the params: a, Bar, -1<br>定义循环输出的宏<br>&lt;#macro list title items&gt;<br>&nbsp; &lt;p&gt;${title?cap_first}:<br>&nbsp; &lt;ul&gt;<br>&nbsp;&nbsp;&nbsp; &lt;#list items as x&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;li&gt;${x?cap_first}<br>&nbsp;&nbsp;&nbsp; &lt;/#list&gt;<br>&nbsp; &lt;/ul&gt;<br>&lt;/#macro&gt;<br>&lt;@list items=["mouse", "elephant", "python"] title="Animals"/&gt;<br>输出结果&nbsp; <br>&lt;p&gt;Animals:<br>&nbsp; &lt;ul&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;li&gt;Mouse<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;li&gt;Elephant<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;li&gt;Python<br>&nbsp; &lt;/ul&gt;<br>包含body的宏<br>&lt;#macro repeat count&gt;<br>&nbsp; &lt;#list 1..count as x&gt;<br>&nbsp;&nbsp;&nbsp; &lt;#nested x, x/2, x==count&gt;<br>&nbsp; &lt;/#list&gt;<br>&lt;/#macro&gt;<br>&lt;@repeat count=4 ; c halfc last&gt;<br>&nbsp; ${c}. ${halfc}&lt;#if last&gt; Last!&lt;/#if&gt;<br>&lt;<a>/@repeat</a>&gt; <br>输出<br>1. 0.5<br>&nbsp; 2. 1<br>&nbsp; 3. 1.5<br>&nbsp; 4. 2 Last!</p>
+<p>&nbsp;</p>
+<p><br>t, lt, rt<br>语法<br>&lt;#t&gt; 去掉左右空白和回车换行</p>
+<p>&lt;#lt&gt;去掉左边空白和回车换行</p>
+<p>&lt;#rt&gt;去掉右边空白和回车换行</p>
+<p>&lt;#nt&gt;取消上面的效果</p>
+<p><br>3一些常用方法或注意事项</p>
+<p><br>表达式转换类<br>${expression}计算expression并输出<br>#{ expression }数字计算#{ expression ;format}安格式输出数字format为M和m<br>M表示小数点后最多的位数,m表示小数点后最少的位数如#{121.2322;m2M2}输出121.23</p>
+<p>&nbsp;</p>
+<p><br>数字循环<br>1..5 表示从1到5，原型number..number<br>对浮点取整数<br>${123.23?int} 输出123<br>给变量默认值<br>${var?default(“hello world&lt;br&gt;”)?html}如果var is null那么将会被hello world&lt;br&gt;替代</p>
+<p>判断对象是不是null<br>&nbsp;&nbsp;&nbsp; &lt;#if mouse?exists&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Mouse found<br>&lt;#else&gt;<br>也可以直接${mouse?if_exists})输出布尔形<br>常用格式化日期<br>&nbsp;openingTime必须是Date型,详细查看freemarker文档 Reference-&gt;build-in referece-&gt;build-in for date</p>
+<p>${openingTime?date}<br>${openingTime?date_time}<br>${openingTime?time}</p>
+<p>添加全局共享变量数据模型<br>在代码里的实现<br>&nbsp;&nbsp;&nbsp; cfg = Configuration.getDefaultConfiguration();<br>cfg.setSharedVariable("global", "you good"); <br>页面实现可以通过global指令,具体查看指令里的global部分<br>直接调用java对象的方法<br>${object.methed(args)}&nbsp; </p>
+<p>字符串处理(内置方法)<br>html安全输出<br>“abc&lt;table&gt;sdfsf”?html <br>返回安全的html输出,替换掉html代码<br>xml安全输出<br>var?xml&nbsp;&nbsp; <br>substring的用法<br>&lt;#assign user=”hello jeen”&gt;<br>${user[0]}${user[4]} <br>${user[1..4]}<br>输出 :<br>ho<br>ello&nbsp; <br>类似String.split的用法 <br>&nbsp;“abc;def;ghi”?split(“;”)返回sequence<br>将字符串按空格转化成sequence,然后取sequence的长度<br>&nbsp;&nbsp;&nbsp;&nbsp; var?word_list&nbsp; 效果同 var?split(“ ”) <br>&nbsp;var?word_list?size</p>
+<p>取得字符串长度<br>var?length</p>
+<p>大写输出字符<br>var?upper_case</p>
+<p>小写输出字符<br>var?lower_case</p>
+<p>首字符大写<br>var?cap_first</p>
+<p>首字符小写<br>var?uncap_first</p>
+<p>去掉字符串前后空格 <br>var?trim</p>
+<p>每个单词的首字符大写<br>var?capitalize</p>
+<p>类似String.indexof: <br>&nbsp;“babcdabcd”?index_of(“abc”) 返回1<br>&nbsp;“babcdabcd”?index_of(“abc”,2) 返回5<br>类似String.lastIndexOf <br>&nbsp;last_index_of和String.lastIndexOf类似,同上</p>
+<p>下面两个可能在代码生成的时候使用（在引号前加”\”）<br>j_string: 在字符串引号前加”\”<br>&nbsp;&lt;#assign beanName = 'The "foo" bean.'&gt;<br>&nbsp;String BEAN_NAME = "${beanName?j_string}";<br>打印输出:<br>&nbsp;String BEAN_NAME = "The \"foo\" bean.";<br>js_string:<br>&nbsp;&lt;#assign user = "Big Joe's \"right hand\"."&gt;<br>&lt;script&gt;<br>&nbsp; alert("Welcome ${user}!");<br>&lt;/script&gt;&nbsp; <br>打印输出<br>&nbsp;alert("Welcome Big Joe\'s \"right hand\"!");</p>
+<p>替换字符串 replace<br>${s?replace(‘ba’, ‘XY’ )}<br>${s?replace(‘ba’, ‘XY’ , ‘规则参数’)}将s里的所有的ba替换成xy 规则参数包含: i r m s c f 具体含义如下:<br>·&nbsp;i: 大小写不区分.<br>·&nbsp;f: 只替换第一个出现被替换字符串的字符串<br>·&nbsp;r:&nbsp; XY是正则表达式<br>·&nbsp;m:
+Multi-line mode for regular expressions. In multi-line mode the
+expressions ^ and $ match just after or just before, respectively, a
+line terminator or the end of the string. By default these expressions
+only match at the beginning and the end of the entire string.<br>·&nbsp;s:
+Enables dotall mode for regular expressions (same as Perl singe-line
+mode). In dotall mode, the expression . matches any character,
+including a line terminator. By default this expression does not match
+line terminators.<br>·&nbsp;c: Permits whitespace and comments in regular expressions.</p>
+<p><br>在模板里对sequences和hashes初始化<br>sequences&nbsp; </p>
+<p>1.&nbsp;[“you”,”me”,”he”] <br>2.&nbsp;1..100<br>3.&nbsp;[ {“Akey”:”Avalue”},{“Akey1”:”Avalue1”},<br>{“Bkey”:”Bvalue”},{“Bkey1”:”Bvalue1”},<br>]</p>
+<p>&nbsp; <br>hashes&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {“you”:”a”,”me”:”b”,”he”:”c”}</p>
+<p><br>注释标志<br>&lt;#-- <br>这里是注释 <br>--&gt;<br>旧版本的freemarker采用的是&lt;#comment&gt; 注释 &lt;/#comment&gt;方法</p>
+<p>sequences内置方法<br>sequence?first<br>返回sequence的第一个值;前提条件sequence不能是null<br>sequence?last<br>&nbsp;返回sequence最后一个值<br>sequence?reverse<br>&nbsp;反转sequence的值<br>sequence?size<br>&nbsp;返回sequence的大小<br>sequence?sort<br>&nbsp;对sequence按里面的对象toString()的结果进行排序<br>sequence?sort_by(value)<br>对sequence 按里面的对象的属性value进行排序<br>如: sequence里面放入的是10 个user对象，user对象里面包含name,age等属性<br>sequence?sort_by(name) 表示所有的user按user.name进行排序<br>hashes内置方法<br>hash?keys<br>&nbsp;返回hash里的所有keys, 返回结果类型sequence<br>hash?values<br>&nbsp;返回hash里的所有value, 返回结果类型sequence<br>4 freemarker在web开发中注意事项<br>freemarker与webwork整合<br>web中常用的几个对象<br>Freemarker的ftl文件中直接使用内部对象:<br>${Request ["a"]}<br>${RequestParameters["a"]}<br>${Session ["a"]}<br>${Application ["a"]}<br>${JspTaglibs ["a"]}</p>
+<p>与webwork整合之后 通过配置的servlet 已经把request,session等对象置入了数据模型中<br>在view中存在下面的对象<br>&nbsp; 我们可以在ftl中${req}来打印req对象<br>·&nbsp;req - the current HttpServletRequest <br>·&nbsp;res - the current HttpServletResponse <br>·&nbsp;stack - the current OgnlValueStack <br>·&nbsp;ognl - the OgnlTool instance <br>·&nbsp;webwork - an instance of FreemarkerWebWorkUtil <br>·&nbsp;action - the current WebWork action <br>·&nbsp;exception - optional the Exception instance, if the view is a JSP exception or Servlet exception view <br>view中值的搜索顺序<br>${name}将会以下面的顺序查找name值<br>·&nbsp;freemarker variables <br>·&nbsp;value stack <br>·&nbsp;request attributes <br>·&nbsp;session attributes <br>·&nbsp;servlet context attributes <br>在模板里ftl里使用标签<br>注意，如果标签的属性值是数字，那么必须采用nubmer=123方式给属性赋值<br>JSP页面<br>&lt;<a href="mailto:%@page">%@page</a> contentType="text/html;charset=ISO-8859-2" language="java"%&gt;<br>&lt;<a href="mailto:%@taglib">%@taglib</a> uri="/WEB-INF/struts-html.tld" prefix="html"%&gt;<br>&lt;<a href="mailto:%@taglib">%@taglib</a> uri="/WEB-INF/struts-bean.tld" prefix="bean"%&gt;</p>
+<p>&lt;html&gt;<br>&nbsp; &lt;body&gt;<br>&nbsp;&nbsp;&nbsp; &lt;h1&gt;&lt;bean:message key="welcome.title"/&gt;&lt;/h1&gt;<br>&nbsp;&nbsp;&nbsp; &lt;html:errors/&gt;<br>&nbsp;&nbsp;&nbsp; &lt;html:form action="/query"&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Keyword: &lt;html:text property="keyword"/&gt;&lt;br&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Exclude: &lt;html:text property="exclude"/&gt;&lt;br&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;html:submit value="Send"/&gt;<br>&nbsp;&nbsp;&nbsp; &lt;/html:form&gt;<br>&nbsp; &lt;/body&gt;<br>&lt;/html&gt; <br>模板ftl页面<br>&lt;#assign html=JspTaglibs["/WEB-INF/struts-html.tld"]&gt;<br>&lt;#assign bean=JspTaglibs["/WEB-INF/struts-bean.tld"]&gt;</p>
+<p>&lt;html&gt;<br>&nbsp; &lt;body&gt;<br>&nbsp;&nbsp;&nbsp; &lt;h1&gt;&lt;@bean.message key="welcome.title"/&gt;&lt;/h1&gt;<br>&nbsp;&nbsp;&nbsp; &lt;@html.errors/&gt;<br>&nbsp;&nbsp;&nbsp; &lt;@html.form action="/query"&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Keyword: &lt;@html.text property="keyword"/&gt;&lt;br&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Exclude: &lt;@html.text property="exclude"/&gt;&lt;br&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;@html.submit value="Send"/&gt;<br>&nbsp;&nbsp;&nbsp; &lt;<a>/@html.form</a>&gt;<br>&nbsp; &lt;/body&gt;<br>&lt;/html&gt;&nbsp; </p>
+<p><br>如何初始化共享变量<br>1．&nbsp;初始化全局共享数据模型<br>freemark在web上使用的时候对共享数据的初始化支持的不够,不能在配置初始化的时候实现，而必须通过ftl文件来初始化全局变量。这是不能满主需求的，我们需要在servlet init的时候留出一个接口来初始化系统的共享数据<br>具
+体到和webwork整合,因为本身webwork提供了整合servlet,如果要增加全局共享变量，可以通过修改
+com.opensymphony.webwork.views.freemarker.FreemarkerServlet来实现,我们可以在这个
+servlet初始化的时候来初始化全局共享变量<br>与webwork整合配置<br>配置web.xml<br>&lt;servlet&gt;<br>&nbsp;&nbsp;&nbsp; &lt;servlet-name&gt;freemarker&lt;/servlet-name&gt;<br>&nbsp;&nbsp;&nbsp; &lt;servlet-class&gt;com.opensymphony.webwork.views.freemarker.FreemarkerServlet&lt;/servlet-class&gt;<br>&nbsp;&nbsp;&nbsp; &lt;init-param&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;param-name&gt;TemplatePath&lt;/param-name&gt;<br>&lt;param-value&gt;/&lt;/param-value&gt;<br>&lt;!—模板载入文件夹，这里相对context root，递归获取该文件夹下的所有模板--&gt;<br>&nbsp;&nbsp;&nbsp; &lt;/init-param&gt;<br>&nbsp;&nbsp;&nbsp; &lt;init-param&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;param-name&gt;NoCache&lt;/param-name&gt; &lt;!—是否对模板缓存--&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;param-value&gt;true&lt;/param-value&gt;<br>&nbsp;&nbsp;&nbsp; &lt;/init-param&gt;<br>&nbsp;&nbsp;&nbsp; &lt;init-param&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;param-name&gt;ContentType&lt;/param-name&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;param-value&gt;text/html&lt;/param-value&gt;<br>&nbsp;&nbsp;&nbsp; &lt;/init-param&gt;<br>&nbsp;&nbsp;&nbsp; &lt;init-param&gt;<br>&lt;param-name&gt;template_update_delay&lt;/param-name&gt;<br>&lt;!—模板更新时间,0表示每次都更新,这个适合开发时候--&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;param-value&gt;0&lt;/param-value&gt;<br>&nbsp;&nbsp;&nbsp; &lt;/init-param&gt;<br>&nbsp;&nbsp;&nbsp; &lt;init-param&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;param-name&gt;default_encoding&lt;/param-name&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;param-value&gt;GBK&lt;/param-value&gt;<br>&nbsp;&nbsp;&nbsp; &lt;/init-param&gt;<br>&nbsp;&nbsp;&nbsp; &lt;init-param&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;param-name&gt;number_format&lt;/param-name&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;param-value&gt;0.##########&lt;/param-value&gt;&lt;!—数字显示格式--&gt;<br>&nbsp;&nbsp;&nbsp; &lt;/init-param&gt;<br>&nbsp;&nbsp;&nbsp; &lt;load-on-startup&gt;1&lt;/load-on-startup&gt;<br>&nbsp; &lt;/servlet&gt;<br>&nbsp; &lt;servlet-mapping&gt;<br>&nbsp;&nbsp;&nbsp; &lt;servlet-name&gt;freemarker&lt;/servlet-name&gt;<br>&nbsp;&nbsp;&nbsp; &lt;url-pattern&gt;*.ftl&lt;/url-pattern&gt;<br>&nbsp; &lt;/servlet-mapping&gt;</p>
+<p>5高级方法<br>自定义方法<br>${timer("yyyy-MM-dd H:mm:ss", x)}<br>${timer("yyyy-MM-dd ", x)} </p>
+<p>在模板中除了可以通过对象来调用方法外（${object.methed(args)}）也可以直接调用java实现的方法，java类必须实现接
+口TemplateMethodModel的方法exec(List args). 下面以把毫秒的时间转换成按格式输出的时间为例子<br>public class LongToDate implements TemplateMethodModel {<br>&nbsp;&nbsp;&nbsp; <br>public TemplateModel exec(List args) throws TemplateModelException {<br>SimpleDateFormat mydate = new SimpleDateFormat((String) args.get(0)));<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; return mydate.format(new Date(Long.parseLong((String)args.get(1)));<br>&nbsp;&nbsp;&nbsp; }<br>}&nbsp; <br>将LongToDate对象放入到数据模型中<br>root.put("timer", new IndexOfMethod());<br>ftl模板里使用<br>&lt;#assign x = "123112455445"&gt;<br>${timer("yyyy-MM-dd H:mm:ss", x)}<br>${timer("yyyy-MM-dd ", x)} </p>
+<p>输出<br>2001-10-12 5:21:12<br>2001-10-12</p>
+<p>自定义 Transforms<br>实现自定义的&lt;@transform&gt;文本或表达式&lt;<a>/@transform</a>&gt;的功能,允许对中间的最终文本进行解析转换</p>
+<p>例子：实现&lt;@upcase&gt;str&lt;<a>/@upcase</a>&gt; 将str转换成STR 的功能</p>
+<p>代码如下：<br>import java.io.*;<br>import java.util.*;<br>import freemarker.template.TemplateTransformModel;</p>
+<p>class UpperCaseTransform implements TemplateTransformModel {</p>
+<p>&nbsp;&nbsp;&nbsp; public Writer getWriter(Writer out, Map args) {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; return new UpperCaseWriter(out);<br>&nbsp;&nbsp;&nbsp; }</p>
+<p>&nbsp;&nbsp;&nbsp; private class UpperCaseWriter extends Writer {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; private Writer out;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; UpperCaseWriter (Writer out) {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; this.out = out;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; public void write(char[] cbuf, int off, int len)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; throws IOException {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; out.write(new String(cbuf, off, len).toUpperCase());<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; public void flush() throws IOException {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; out.flush();<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; public void close() {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br>&nbsp;&nbsp;&nbsp; }<br>}&nbsp; <br>然后将此对象put到数据模型中<br>root.put("upcase", new UpperCaseTransform());</p>
+<p>在view(ftl)页面中可以如下方式使用</p>
+<p>&lt;@upcase&gt;<br>hello world<br>&lt;<a>/@upcase</a>&gt;</p>
+<p>打印输出:<br>HELLO WORLD<br><br>
+<table class="TableEdit" id="TableEdit" width="100%">
+    <tbody>
+        <tr>
+            <td><a id="Editor_Edit_hlEntryLink" title="view: FreeMarke开发指南" href="http://www.cnblogs.com/ynlxc/archive/2006/10/16/529974.html" target="_blank"><font color="#002c99">http://www.cnblogs.com/ynlxc/archive/2006/10/16/529974.html</font></a></td>
+        </tr>
+    </tbody>
+</table>
+</p>
+</div>
+	</div>
+<div id="AjaxHolder_UpdatePanel1">
+	    
+    <a name="pagedcomment"></a>
+<h3>Feedback</h3>
+	
+			<div class="post">
+				<div class="posthead">
+					<h2>
+						<a title="permalink: re: FreeMarke开发指南" href="http://www.cnblogs.com/ynlxc/archive/2006/10/16/529974.html#556371">#1楼</a>&nbsp;<a name="556371"></a>
+						&nbsp;&nbsp;<a onclick='return SetReplyAuhor("jinyong")' href="http://www.cnblogs.com/ynlxc/archive/2006/10/16/529974.html#post">回复</a>&nbsp;&nbsp;<a onclick="GetQuote(556371);return false" href="http://www.cnblogs.com/ynlxc/archive/2006/10/16/529974.html#post">引用</a>&nbsp;&nbsp;<a title="查看该作者发表过的评论" href="http://www.cnblogs.com/CommentsByAuthor.aspx?author=jinyong" target="_blank">查看</a>&nbsp;&nbsp;<a id="AjaxHolder_Comments_CommentList_ctl00_DeleteLink" href="javascript:__doPostBack('AjaxHolder$Comments$CommentList$ctl00$DeleteLink','')"></a>&nbsp;&nbsp;<a id="AjaxHolder_Comments_CommentList_ctl00_EditLink"></a>
+					</h2>
+					2006-11-10 11:55 by <a id="AjaxHolder_Comments_CommentList_ctl00_NameLink" href="http://jinyong.cnblogs.com/" target="_blank">jinyong</a>&nbsp;<a href="http://space.cnblogs.com/msg/send/jinyong" title="给此人发送站内短消息" class="sendMsg2This">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+				</div>
+				<div class="postbody">啊么，是什么啊？</div>
+			</div>
+		
+			<div class="post">
+				<div class="posthead">
+					<h2>
+						<a title="permalink: re: FreeMarke开发指南" href="http://www.cnblogs.com/ynlxc/archive/2006/10/16/529974.html#700823">#2楼</a>&nbsp;<a name="700823"></a>
+						&nbsp;&nbsp;<a onclick='return SetReplyAuhor("huozhe")' href="http://www.cnblogs.com/ynlxc/archive/2006/10/16/529974.html#post">回复</a>&nbsp;&nbsp;<a onclick="GetQuote(700823);return false" href="http://www.cnblogs.com/ynlxc/archive/2006/10/16/529974.html#post">引用</a>&nbsp;&nbsp;<a title="查看该作者发表过的评论" href="http://www.cnblogs.com/CommentsByAuthor.aspx?author=huozhe+%5b%e6%9c%aa%e6%b3%a8%e5%86%8c%e7%94%a8%e6%88%b7%5d" target="_blank">查看</a>&nbsp;&nbsp;<a id="AjaxHolder_Comments_CommentList_ctl01_DeleteLink" href="javascript:__doPostBack('AjaxHolder$Comments$CommentList$ctl01$DeleteLink','')"></a>&nbsp;&nbsp;<a id="AjaxHolder_Comments_CommentList_ctl01_EditLink"></a>
+					</h2>
+					2007-04-05 10:19 by <a id="AjaxHolder_Comments_CommentList_ctl01_NameLink" target="_blank">huozhe [未注册用户]</a>
+				</div>
+				<div class="postbody">非常好！
+<br>希望楼主继续共享freemark相关文章，谢谢! 
+<br>我的邮箱：huozheviva@gmail.com</div>
+			</div>
+		
+			<div class="post">
+				<div class="posthead">
+					<h2>
+						<a title="permalink: re: FreeMarke开发指南" href="http://www.cnblogs.com/ynlxc/archive/2006/10/16/529974.html#708257">#3楼</a>&nbsp;<a name="708257"></a>
+						&nbsp;&nbsp;<a onclick='return SetReplyAuhor("北海唯有时光")' href="http://www.cnblogs.com/ynlxc/archive/2006/10/16/529974.html#post">回复</a>&nbsp;&nbsp;<a onclick="GetQuote(708257);return false" href="http://www.cnblogs.com/ynlxc/archive/2006/10/16/529974.html#post">引用</a>&nbsp;&nbsp;<a title="查看该作者发表过的评论" href="http://www.cnblogs.com/CommentsByAuthor.aspx?author=%e5%8c%97%e6%b5%b7%e5%94%af%e6%9c%89%e6%97%b6%e5%85%89+%5b%e6%9c%aa%e6%b3%a8%e5%86%8c%e7%94%a8%e6%88%b7%5d" target="_blank">查看</a>&nbsp;&nbsp;<a id="AjaxHolder_Comments_CommentList_ctl02_DeleteLink" href="javascript:__doPostBack('AjaxHolder$Comments$CommentList$ctl02$DeleteLink','')"></a>&nbsp;&nbsp;<a id="AjaxHolder_Comments_CommentList_ctl02_EditLink"></a>
+					</h2>
+					2007-04-11 09:26 by <a id="AjaxHolder_Comments_CommentList_ctl02_NameLink" href="http://gdf/" target="_blank">北海唯有时光 [未注册用户]</a>
+				</div>
+				<div class="postbody">root.put("timer", new IndexOfMethod());-------LongToDate()[应该是这样的。]</div>
+			</div>
+		
+			<div class="post">
+				<div class="posthead">
+					<h2>
+						<a title="permalink: re: FreeMarker开发指南" href="http://www.cnblogs.com/ynlxc/archive/2006/10/16/529974.html#825034">#4楼</a>&nbsp;<a name="825034"></a>
+						&nbsp;&nbsp;<a onclick='return SetReplyAuhor("北海唯有时光 ")' href="http://www.cnblogs.com/ynlxc/archive/2006/10/16/529974.html#post">回复</a>&nbsp;&nbsp;<a onclick="GetQuote(825034);return false" href="http://www.cnblogs.com/ynlxc/archive/2006/10/16/529974.html#post">引用</a>&nbsp;&nbsp;<a title="查看该作者发表过的评论" href="http://www.cnblogs.com/CommentsByAuthor.aspx?author=%e5%8c%97%e6%b5%b7%e5%94%af%e6%9c%89%e6%97%b6%e5%85%89++%5b%e6%9c%aa%e6%b3%a8%e5%86%8c%e7%94%a8%e6%88%b7%5d" target="_blank">查看</a>&nbsp;&nbsp;<a id="AjaxHolder_Comments_CommentList_ctl03_DeleteLink" href="javascript:__doPostBack('AjaxHolder$Comments$CommentList$ctl03$DeleteLink','')"></a>&nbsp;&nbsp;<a id="AjaxHolder_Comments_CommentList_ctl03_EditLink"></a>
+					</h2>
+					2007-07-20 09:54 by <a id="AjaxHolder_Comments_CommentList_ctl03_NameLink" href="http://hi.baidu.com/1919" target="_blank">北海唯有时光  [未注册用户]</a>
+				</div>
+				<div class="postbody">我是在做butterfly时候，用到freework的！感觉还行，1！谢谢作者！</div>
+			</div>
+		
+			<div class="post">
+				<div class="posthead">
+					<h2>
+						<a title="permalink: re: FreeMarker开发指南" href="http://www.cnblogs.com/ynlxc/archive/2006/10/16/529974.html#889911">#5楼</a>&nbsp;<a name="889911"></a>
+						&nbsp;&nbsp;<a onclick='return SetReplyAuhor("neoman")' href="http://www.cnblogs.com/ynlxc/archive/2006/10/16/529974.html#post">回复</a>&nbsp;&nbsp;<a onclick="GetQuote(889911);return false" href="http://www.cnblogs.com/ynlxc/archive/2006/10/16/529974.html#post">引用</a>&nbsp;&nbsp;<a title="查看该作者发表过的评论" href="http://www.cnblogs.com/CommentsByAuthor.aspx?author=neoman+%5b%e6%9c%aa%e6%b3%a8%e5%86%8c%e7%94%a8%e6%88%b7%5d" target="_blank">查看</a>&nbsp;&nbsp;<a id="AjaxHolder_Comments_CommentList_ctl04_DeleteLink" href="javascript:__doPostBack('AjaxHolder$Comments$CommentList$ctl04$DeleteLink','')"></a>&nbsp;&nbsp;<a id="AjaxHolder_Comments_CommentList_ctl04_EditLink"></a>
+					</h2>
+					2007-09-11 16:47 by <a id="AjaxHolder_Comments_CommentList_ctl04_NameLink" href="http://blog.csdn.net/neoman" target="_blank">neoman [未注册用户]</a>
+				</div>
+				<div class="postbody">多谢,正是我所需要的,收藏了</div>
+			</div>
+		
+			<div class="post">
+				<div class="posthead">
+					<h2>
+						<a title="permalink: re: FreeMarker开发指南" href="http://www.cnblogs.com/ynlxc/archive/2006/10/16/529974.html#896677">#6楼</a>&nbsp;<a name="896677"></a>
+						&nbsp;&nbsp;<a onclick='return SetReplyAuhor("心月狐")' href="http://www.cnblogs.com/ynlxc/archive/2006/10/16/529974.html#post">回复</a>&nbsp;&nbsp;<a onclick="GetQuote(896677);return false" href="http://www.cnblogs.com/ynlxc/archive/2006/10/16/529974.html#post">引用</a>&nbsp;&nbsp;<a title="查看该作者发表过的评论" href="http://www.cnblogs.com/CommentsByAuthor.aspx?author=%e5%bf%83%e6%9c%88%e7%8b%90+%5b%e6%9c%aa%e6%b3%a8%e5%86%8c%e7%94%a8%e6%88%b7%5d" target="_blank">查看</a>&nbsp;&nbsp;<a id="AjaxHolder_Comments_CommentList_ctl05_DeleteLink" href="javascript:__doPostBack('AjaxHolder$Comments$CommentList$ctl05$DeleteLink','')"></a>&nbsp;&nbsp;<a id="AjaxHolder_Comments_CommentList_ctl05_EditLink"></a>
+					</h2>
+					2007-09-18 09:30 by <a id="AjaxHolder_Comments_CommentList_ctl05_NameLink" target="_blank">心月狐 [未注册用户]</a>
+				</div>
+				<div class="postbody">谢谢了  不过我还有写地方不懂哦
+<br>我的QQ 122410832
+<br>希望能帮帮忙</div>
+			</div>
+		
+			<div class="post">
+				<div class="posthead">
+					<h2>
+						<a title="permalink: re: FreeMarker开发指南" href="http://www.cnblogs.com/ynlxc/archive/2006/10/16/529974.html#936378">#7楼</a>&nbsp;<a name="936378"></a>
+						&nbsp;&nbsp;<a onclick='return SetReplyAuhor("信鸽")' href="http://www.cnblogs.com/ynlxc/archive/2006/10/16/529974.html#post">回复</a>&nbsp;&nbsp;<a onclick="GetQuote(936378);return false" href="http://www.cnblogs.com/ynlxc/archive/2006/10/16/529974.html#post">引用</a>&nbsp;&nbsp;<a title="查看该作者发表过的评论" href="http://www.cnblogs.com/CommentsByAuthor.aspx?author=%e4%bf%a1%e9%b8%bd+%5b%e6%9c%aa%e6%b3%a8%e5%86%8c%e7%94%a8%e6%88%b7%5d" target="_blank">查看</a>&nbsp;&nbsp;<a id="AjaxHolder_Comments_CommentList_ctl06_DeleteLink" href="javascript:__doPostBack('AjaxHolder$Comments$CommentList$ctl06$DeleteLink','')"></a>&nbsp;&nbsp;<a id="AjaxHolder_Comments_CommentList_ctl06_EditLink"></a>
+					</h2>
+					2007-10-24 16:56 by <a id="AjaxHolder_Comments_CommentList_ctl06_NameLink" href="http://www.xingew.com/" target="_blank">信鸽 [未注册用户]</a>
+				</div>
+				<div class="postbody">不错</div>
+			</div>
+		
+			<div class="post">
+				<div class="posthead">
+					<h2>
+						<a title="permalink: re: FreeMarker开发指南" href="http://www.cnblogs.com/ynlxc/archive/2006/10/16/529974.html#949921">#8楼</a>&nbsp;<a name="949921"></a>
+						&nbsp;&nbsp;<a onclick='return SetReplyAuhor("luoduyu")' href="http://www.cnblogs.com/ynlxc/archive/2006/10/16/529974.html#post">回复</a>&nbsp;&nbsp;<a onclick="GetQuote(949921);return false" href="http://www.cnblogs.com/ynlxc/archive/2006/10/16/529974.html#post">引用</a>&nbsp;&nbsp;<a title="查看该作者发表过的评论" href="http://www.cnblogs.com/CommentsByAuthor.aspx?author=luoduyu+%5b%e6%9c%aa%e6%b3%a8%e5%86%8c%e7%94%a8%e6%88%b7%5d" target="_blank">查看</a>&nbsp;&nbsp;<a id="AjaxHolder_Comments_CommentList_ctl07_DeleteLink" href="javascript:__doPostBack('AjaxHolder$Comments$CommentList$ctl07$DeleteLink','')"></a>&nbsp;&nbsp;<a id="AjaxHolder_Comments_CommentList_ctl07_EditLink"></a>
+					</h2>
+					2007-11-05 15:43 by <a id="AjaxHolder_Comments_CommentList_ctl07_NameLink" target="_blank">luoduyu [未注册用户]</a>
+				</div>
+				<div class="postbody">如果翻译的不准，还是直接贴e文吧，免得误了别人</div>
+			</div>
+		
+			<div class="post">
+				<div class="posthead">
+					<h2>
+						<a title="permalink: re: FreeMarker开发指南" href="http://www.cnblogs.com/ynlxc/archive/2006/10/16/529974.html#1139093">#9楼</a>&nbsp;<a name="1139093"></a>
+						&nbsp;&nbsp;<a onclick='return SetReplyAuhor("路过")' href="http://www.cnblogs.com/ynlxc/archive/2006/10/16/529974.html#post">回复</a>&nbsp;&nbsp;<a onclick="GetQuote(1139093);return false" href="http://www.cnblogs.com/ynlxc/archive/2006/10/16/529974.html#post">引用</a>&nbsp;&nbsp;<a title="查看该作者发表过的评论" href="http://www.cnblogs.com/CommentsByAuthor.aspx?author=%e8%b7%af%e8%bf%87+%5b%e6%9c%aa%e6%b3%a8%e5%86%8c%e7%94%a8%e6%88%b7%5d" target="_blank">查看</a>&nbsp;&nbsp;<a id="AjaxHolder_Comments_CommentList_ctl08_DeleteLink" href="javascript:__doPostBack('AjaxHolder$Comments$CommentList$ctl08$DeleteLink','')"></a>&nbsp;&nbsp;<a id="AjaxHolder_Comments_CommentList_ctl08_EditLink"></a>
+					</h2>
+					2008-04-06 13:07 by <a id="AjaxHolder_Comments_CommentList_ctl08_NameLink" target="_blank">路过 [未注册用户]</a>
+				</div>
+				<div class="postbody">建议直接用e文吧</div>
+			</div>
+		
+			<div class="post">
+				<div class="posthead">
+					<h2>
+						<a title="permalink: re: FreeMarker开发指南" href="http://www.cnblogs.com/ynlxc/archive/2006/10/16/529974.html#1163379">#10楼</a>&nbsp;<a name="1163379"></a>
+						&nbsp;&nbsp;<a onclick='return SetReplyAuhor("luguo")' href="http://www.cnblogs.com/ynlxc/archive/2006/10/16/529974.html#post">回复</a>&nbsp;&nbsp;<a onclick="GetQuote(1163379);return false" href="http://www.cnblogs.com/ynlxc/archive/2006/10/16/529974.html#post">引用</a>&nbsp;&nbsp;<a title="查看该作者发表过的评论" href="http://www.cnblogs.com/CommentsByAuthor.aspx?author=luguo+%5b%e6%9c%aa%e6%b3%a8%e5%86%8c%e7%94%a8%e6%88%b7%5d" target="_blank">查看</a>&nbsp;&nbsp;<a id="AjaxHolder_Comments_CommentList_ctl09_DeleteLink" href="javascript:__doPostBack('AjaxHolder$Comments$CommentList$ctl09$DeleteLink','')"></a>&nbsp;&nbsp;<a id="AjaxHolder_Comments_CommentList_ctl09_EditLink"></a>
+					</h2>
+					2008-04-21 10:00 by <a id="AjaxHolder_Comments_CommentList_ctl09_NameLink" target="_blank">luguo [未注册用户]</a>
+				</div>
+				<div class="postbody">怎么直接调用java的方法</div>
+			</div>
+		
+			<div class="post">
+				<div class="posthead">
+					<h2>
+						<a title="permalink: re: FreeMarker开发指南" href="http://www.cnblogs.com/ynlxc/archive/2006/10/16/529974.html#1190283">#11楼</a>&nbsp;<a name="1190283"></a><a name="Post"></a>
+						&nbsp;&nbsp;<a onclick='return SetReplyAuhor("tangyangyang")' href="http://www.cnblogs.com/ynlxc/archive/2006/10/16/529974.html#post">回复</a>&nbsp;&nbsp;<a onclick="GetQuote(1190283);return false" href="http://www.cnblogs.com/ynlxc/archive/2006/10/16/529974.html#post">引用</a>&nbsp;&nbsp;<a title="查看该作者发表过的评论" href="http://www.cnblogs.com/CommentsByAuthor.aspx?author=tangyangyang+%5b%e6%9c%aa%e6%b3%a8%e5%86%8c%e7%94%a8%e6%88%b7%5d" target="_blank">查看</a>&nbsp;&nbsp;<a id="AjaxHolder_Comments_CommentList_ctl10_DeleteLink" href="javascript:__doPostBack('AjaxHolder$Comments$CommentList$ctl10$DeleteLink','')"></a>&nbsp;&nbsp;<a id="AjaxHolder_Comments_CommentList_ctl10_EditLink"></a>
+					</h2>
+					2008-05-09 17:14 by <a id="AjaxHolder_Comments_CommentList_ctl10_NameLink" href="http://wu/" target="_blank">tangyangyang [未注册用户]</a>
+				</div>
+				<div class="postbody">谢谢楼主,分享FreeMarke,有没有相关FreeMarke资料,我想学习一下,谢谢楼主了,我的邮箱:tyh729@Tom.Com,再次感谢!</div>
+			</div>
+		
+<style>
+td { font-size: 12px }
+.commentTextBox 
+{ 
+    font-family : Verdana; 
+    font-size: 13px;
+ }
+ 
+a.blue:visited,
+a.blue:active,
+a.blue:link,
+a.blue:hover
+{
+	color:blue;
+	
+}
+</style>
+<!--Beging Temp Save-->
+<style>.userData { BEHAVIOR: url(#default#userdata) }
+	</style>
+<div class="userData" id="CommentsPersistDiv"></div>
+
+<script type="text/javascript">
+function pageLoad()
+{
+    Sys.WebForms.PageRequestManager.getInstance().add_initializeRequest(handleInitializeRequest);
+    //Sys.WebForms.PageRequestManager.getInstance().add_endRequest(handleEndRequest);
+}
+
+function handleInitializeRequest(sender, args)
+{
+    var prm = Sys.WebForms.PageRequestManager.getInstance();
+    var eid = args.get_postBackElement().id;
+    if (eid.indexOf("DeleteLink")>0) 
+    {
+       args.get_postBackElement().innerHTML = "<font color='red'>正在删除...</font>";         
+    }    
+    else if (eid.indexOf("btnSubmit")>0) 
+    {
+       document.getElementById("AjaxHolder_PostComment_ltSubmitMsg").innerHTML="正在提交...";
+       document.getElementById("AjaxHolder_PostComment_btnSubmit").disabled = true;       
+    }   
+    else if(eid.indexOf("refreshList")>0)
+    {
+        document.getElementById("AjaxHolder_PostComment_refreshList").innerHTML="<font color='red'>正在刷新...</font>";
+    }
+   
+}	
+
+function TempSave(ElementID)
+{
+	try
+	{
+	CommentsPersistDiv.setAttribute("CommentContent",document.getElementById(ElementID).value);
+	CommentsPersistDiv.save("CommentXMLStore");
+	}
+	catch(ex)
+	{
+	}
+	
+}
+function Restore(ElementID)
+{
+	CommentsPersistDiv.load("CommentXMLStore");
+	document.getElementById(ElementID).value=CommentsPersistDiv.getAttribute("CommentContent");
+}	
+			
+			
+</script>
+<!--Ene TempSave-->
+<div id="divRefreshComments" style="text-align: right; margin-right: 10px; margin-bottom: 5px; font-size: 12px;"><a href="http://space.cnblogs.com/">社区</a>&nbsp;&nbsp;<a href="http://news.cnblogs.com/">新闻</a>&nbsp;&nbsp;<a href="http://www.cnblogs.com/RequireRegister.aspx">新用户注册</a>&nbsp;&nbsp;<a id="AjaxHolder_PostComment_refreshList" href="javascript:__doPostBack('AjaxHolder$PostComment$refreshList','')">刷新评论列表</a>&nbsp;&nbsp;</div>
+<div class="commentform">
+<span id="AjaxHolder_PostComment_ltSubmitMsg" style="color: Red;"></span>
+<br>
+<a name="Feedback"></a>
+	<table border="0" cellpadding="1" cellspacing="1">
+		<tbody><tr>
+			<td width="75"></td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td width="55">标题</td>
+			<td><input name="AjaxHolder$PostComment$tbTitle" value="re: FreeMarker开发指南" id="AjaxHolder_PostComment_tbTitle" class="commenttb" type="text"></td>
+			<td><span id="AjaxHolder_PostComment_RequiredFieldValidator1" style="color: Red; visibility: hidden;">请输入标题</span></td>
+		</tr>
+		<tr>
+			<td>姓名</td>
+			<td><input name="AjaxHolder$PostComment$tbName" id="AjaxHolder_PostComment_tbName" class="commenttb" type="text"></td>
+			<td><span id="AjaxHolder_PostComment_RequiredFieldValidator2" style="color: Red; visibility: hidden;">请输入你的姓名</span></td>
+		</tr>
+		<tr>
+			<td>主页</td>
+			<td><input name="AjaxHolder$PostComment$tbUrl" id="AjaxHolder_PostComment_tbUrl" class="commenttb" type="text"></td>
+			<td><font face="宋体"></font></td>
+		</tr>
+		<tr id="AjaxHolder_PostComment_trEmail">
+		<td>Email</td>
+		<td><input name="AjaxHolder$PostComment$tbEmail" id="AjaxHolder_PostComment_tbEmail" class="commenttb" type="text">(只有博主才能看到)<span id="AjaxHolder_PostComment_revContactMail" style="color: Red; visibility: hidden;">邮件地址无效</span></td>
+		<td></td>
+	</tr>
+	
+		<tr>
+			<td colspan="3" align="left">
+				<table id="AjaxHolder_PostComment_tbCaptchaImage" class="CommentForm" border="0" cellpadding="0" cellspacing="0">
+		<tbody><tr>
+			<td colspan="3">
+							<span id="AjaxHolder_PostComment_Requiredfieldvalidator4" style="color: Red; display: none;">请输入验证码</span>
+							<span id="AjaxHolder_PostComment_lblImage" style="color: Red; font-weight: bold;"></span>
+						</td>
+		</tr>
+		<tr>
+			<td width="78">验证码</td>
+			<td><input name="AjaxHolder$PostComment$CodeNumberTextBox" id="AjaxHolder_PostComment_CodeNumberTextBox" type="text">*&nbsp;&nbsp;<img src="FreeMarker_files/JpegImage.jpeg"><a id="AjaxHolder_PostComment_lkbChangeCode" href="javascript:__doPostBack('AjaxHolder$PostComment$lkbChangeCode','')">看不清,换一张</a></td>
+			<td align="left"></td>
+		</tr>
+	</tbody></table>
+	
+			</td>
+		</tr>
+		<tr>
+			<td colspan="3">内容(请不要发表任何与政治相关的内容)
+				<span id="AjaxHolder_PostComment_RequiredFieldValidator3" style="color: Red; visibility: hidden;">请输入评论内容</span><br>
+				<textarea name="AjaxHolder$PostComment$tbComment" rows="2" cols="20" id="AjaxHolder_PostComment_tbComment" class="commentTextBox" onkeydown="ctlent(event,'AjaxHolder_PostComment_tbComment')"></textarea></td>
+		</tr>
+		<tr>
+			<td colspan="3">
+		<span id="AjaxHolder_PostComment_Message" style="color: Red;"></span>
+		</td>
+		</tr><tr>
+			<td colspan="3"><input id="AjaxHolder_PostComment_chkRemember" name="AjaxHolder$PostComment$chkRemember" checked="checked" tabindex="-1" type="checkbox"><label for="AjaxHolder_PostComment_chkRemember">Remember Me?</label></td>
+		</tr>
+		<tr>
+			<td height="23"><input name="AjaxHolder$PostComment$btnSubmit" value="提交" onclick="TempSave('AjaxHolder_PostComment_tbComment');WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;AjaxHolder$PostComment$btnSubmit&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, false))" id="AjaxHolder_PostComment_btnSubmit" class="commentButton" type="submit">
+				</td>
+			<td colspan="2" height="23">&nbsp;
+				<a id="AjaxHolder_PostComment_lnkLogin" href="http://www.cnblogs.com/login.aspx?ReturnURL=http://www.cnblogs.com/ynlxc/archive/2006/10/16/529974.html&amp;SourceURL=/ynlxc/archive/2006/10/16/529974.html">登录</a>&nbsp;&nbsp;<a id="AjaxHolder_PostComment_linkLoginComment" onclick="if(document.getElementById('AjaxHolder_PostComment_tbComment').value != '') return confirm('未提交的评论内容将会丢失, 你真的要进入高级评论吗?');" href="http://www.cnblogs.com/ynlxc/archive/2006/10/16/529974.html?login=1#Post">使用高级评论</a>&nbsp;&nbsp;<a href="http://www.cnblogs.com/RequireRegister.aspx">新用户注册</a>&nbsp;&nbsp;<a href="#Top">返回页首</a>&nbsp;&nbsp;<a id="AjaxHolder_PostComment_lbRestore" onclick="Restore('AjaxHolder_PostComment_tbComment'); return false;" href="http://www.cnblogs.com/ynlxc/archive/2006/10/16/529974.html#Post">恢复上次提交</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				</td>
+		</tr>
+		<tr>
+			<td colspan="3"><label class="CtrlEnter">[使用Ctrl+Enter键可以直接提交]</label></td>
+		</tr>
+		<tr>
+			<td colspan="3">该文被作者在 2007-04-29 17:29 编辑过</td>
+		</tr>
+		<tr>
+			<td colspan="3" height="3">&nbsp;</td>
+		</tr>		
+		<tr>
+			<td colspan="3"></td>
+		</tr>	
+		<tr>
+			<td colspan="3" height="10"><a href="http://m.cnblogs.com/12613/529974.html">另存</a>&nbsp;&nbsp;<a href="http://m.cnblogs.com/12613/529974.html">打印</a></td>
+		</tr>
+		<tr>
+			<td colspan="3">
+<div id="AjaxHolder_PostComment_RelativePosts1_divRelativePosts" style="margin-top: 2px;">
+所属分类的其他文章:<br>
+
+		<span style="list-style-type: none; list-style-image: none; list-style-position: outside;">
+			· <a href="http://www.cnblogs.com/ynlxc/archive/2007/04/29/732574.html">FreeMarker if 指令的一个小BUG</a><br>
+		</span>
+	
+		<span style="list-style-type: none; list-style-image: none; list-style-position: outside;">
+			· <a href="http://www.cnblogs.com/ynlxc/archive/2007/04/29/731914.html">FreeMarker如何获取页面请求的参数?</a><br>
+		</span>
+	
+		<span style="list-style-type: none; list-style-image: none; list-style-position: outside;">
+			· <a href="http://www.cnblogs.com/ynlxc/archive/2006/11/07/552754.html">WebWork Bug</a><br>
+		</span>
+	
+		<span style="list-style-type: none; list-style-image: none; list-style-position: outside; display: none;">
+			· <a href="http://www.cnblogs.com/ynlxc/archive/2006/10/16/529974.html">FreeMarker开发指南</a><br>
+		</span>
+	
+		<span style="list-style-type: none; list-style-image: none; list-style-position: outside;">
+			· <a href="http://www.cnblogs.com/ynlxc/archive/2006/04/19/378950.html">Struts详细流程图</a><br>
+		</span>
+	
+</div>
+最新IT新闻:<br>
+
+            · <a href="http://news.cnblogs.com/n/37480/" target="_blank">Firefox 3.0市场占有率已超4%</a><br>
+	
+            · <a href="http://news.cnblogs.com/n/37479/" target="_blank">Adobe Reader 9发布 支持Flash播放</a><br>
+	
+            · <a href="http://news.cnblogs.com/n/37478/" target="_blank">苹果官方iPhone 3G新功能演示视频</a><br>
+	
+            · <a href="http://news.cnblogs.com/n/37477/" target="_blank">一些开发者离开Google前往微软</a><br>
+	
+            · <a href="http://news.cnblogs.com/n/37474/" target="_blank">微软收购新兴搜索网站Powerset</a><br>
+	
+<div style="margin-top: 5px;">
+<a href="http://news.cnblogs.com/">博客园新闻频道</a>&nbsp;&nbsp;<a href="http://www.cnblogs.com/">博客园首页</a>&nbsp;&nbsp;<a href="http://space.cnblogs.com/">社区</a>
+</div>
+</td>
+		</tr>
+		
+		<tr>
+			<td colspan="3" height="5">&nbsp;</td>
+		</tr>	
+		<tr>
+			<td colspan="3">
+<script type="text/javascript"><!--
+google_ad_client = "pub-4210569241504288";
+google_ad_width = 468;
+google_ad_height = 60;
+google_ad_format = "468x60_as";
+google_ad_type = "text";
+google_ad_channel ="";
+google_color_link = "6699CC";
+//--></script>
+<script type="text/javascript" src="FreeMarker_files/show_ads.js">
+</script><iframe name="google_ads_frame" src="FreeMarker_files/ads_003.htm" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" width="468" frameborder="0" height="60"></iframe>
+<br>
+<br></td>
+		</tr>
+	</tbody></table>	
+</div>
+<div id="AjaxHolder_PostComment_ValidationSummary1" style="color: Red; display: none;">
+
+	</div>
+
+</div>
+<script language="javascript">
+
+function GetQuote(id)
+{
+    //www.cnblogs.com.ICommentService.GetCommentText(id,SetQuote);
+    BlogServer.WebService.AjaxWS.GetComment(id,SetQuote);
+}
+
+ function SetQuote(result)
+{
+    document.getElementById('AjaxHolder_PostComment_tbComment').value += ("--引用--------------------------------------------------\n"+result+"\n--------------------------------------------------------\n");
+    document.getElementById('AjaxHolder_PostComment_tbComment').focus(); 
+}
+
+function Favorite(entryID,title,url,element)
+{
+    document.getElementById(element.id).innerHTML = "<span style='color:red'>正在收藏...</span>";
+    BlogServer.WebService.AjaxWS.AddToFavorites(entryID,title,url,OnFavoriteSuccess);
+    document.getElementById(element.id).removeAttribute("href");
+    document.getElementById(element.id).removeAttribute("onclick");
+}
+
+function OnFavoriteSuccess(result)
+{
+    if(result == "请先登录")
+    {
+        window.location.href = "../../../../../login.aspx?ReturnUrl=" + window.location.href;
+    }
+    else
+    {
+        var returnstr = result.split(",");
+        var id = "lnkFavorite"+returnstr[0];
+        document.getElementById(id).innerHTML = "<span style='color:red'>" + returnstr[1] + "</span>";
+    }
+}
+</script>
+
+				
+			</div>
+		</td>
+	</tr>
+	<tr>
+		<td colspan="2" class="FooterCell">
+			
+<p id="footer">
+	Powered by: 
+	<br>
+	
+	<a id="Footer1_Hyperlink3" name="Hyperlink1" href="http://www.cnblogs.com/" style="font-family: Verdana; font-size: 12px;">博客园</a>
+	<br>
+	Copyright © 昆明小虫
+</p>
+
+		</td>
+	</tr>
+</tbody></table>
+<div id="lefttemp" style="display: none;"></div>
+
+    
+<script type="text/javascript">
+//<![CDATA[
+var Page_ValidationSummaries =  new Array(document.getElementById("AjaxHolder_PostComment_ValidationSummary1"));
+var Page_Validators =  new Array(document.getElementById("AjaxHolder_PostComment_RequiredFieldValidator1"), document.getElementById("AjaxHolder_PostComment_RequiredFieldValidator2"), document.getElementById("AjaxHolder_PostComment_revContactMail"), document.getElementById("AjaxHolder_PostComment_Requiredfieldvalidator4"), document.getElementById("AjaxHolder_PostComment_RequiredFieldValidator3"));
+//]]>
+</script>
+
+<script type="text/javascript">
+//<![CDATA[
+var AjaxHolder_PostComment_RequiredFieldValidator1 = document.all ? document.all["AjaxHolder_PostComment_RequiredFieldValidator1"] : document.getElementById("AjaxHolder_PostComment_RequiredFieldValidator1");
+AjaxHolder_PostComment_RequiredFieldValidator1.controltovalidate = "AjaxHolder_PostComment_tbTitle";
+AjaxHolder_PostComment_RequiredFieldValidator1.errormessage = "请输入标题";
+AjaxHolder_PostComment_RequiredFieldValidator1.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+AjaxHolder_PostComment_RequiredFieldValidator1.initialvalue = "";
+var AjaxHolder_PostComment_RequiredFieldValidator2 = document.all ? document.all["AjaxHolder_PostComment_RequiredFieldValidator2"] : document.getElementById("AjaxHolder_PostComment_RequiredFieldValidator2");
+AjaxHolder_PostComment_RequiredFieldValidator2.controltovalidate = "AjaxHolder_PostComment_tbName";
+AjaxHolder_PostComment_RequiredFieldValidator2.errormessage = "请输入你的姓名";
+AjaxHolder_PostComment_RequiredFieldValidator2.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+AjaxHolder_PostComment_RequiredFieldValidator2.initialvalue = "";
+var AjaxHolder_PostComment_revContactMail = document.all ? document.all["AjaxHolder_PostComment_revContactMail"] : document.getElementById("AjaxHolder_PostComment_revContactMail");
+AjaxHolder_PostComment_revContactMail.controltovalidate = "AjaxHolder_PostComment_tbEmail";
+AjaxHolder_PostComment_revContactMail.errormessage = "邮件地址无效";
+AjaxHolder_PostComment_revContactMail.evaluationfunction = "RegularExpressionValidatorEvaluateIsValid";
+AjaxHolder_PostComment_revContactMail.validationexpression = "^([0-9a-zA-Z+-._]([+-._\\w]*[0-9a-zA-Z+-._])*@([0-9a-zA-Z][-\\w]*\\.)+[a-zA-Z]{2,9})$";
+var AjaxHolder_PostComment_Requiredfieldvalidator4 = document.all ? document.all["AjaxHolder_PostComment_Requiredfieldvalidator4"] : document.getElementById("AjaxHolder_PostComment_Requiredfieldvalidator4");
+AjaxHolder_PostComment_Requiredfieldvalidator4.controltovalidate = "AjaxHolder_PostComment_CodeNumberTextBox";
+AjaxHolder_PostComment_Requiredfieldvalidator4.errormessage = "请输入验证码";
+AjaxHolder_PostComment_Requiredfieldvalidator4.display = "Dynamic";
+AjaxHolder_PostComment_Requiredfieldvalidator4.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+AjaxHolder_PostComment_Requiredfieldvalidator4.initialvalue = "";
+var AjaxHolder_PostComment_RequiredFieldValidator3 = document.all ? document.all["AjaxHolder_PostComment_RequiredFieldValidator3"] : document.getElementById("AjaxHolder_PostComment_RequiredFieldValidator3");
+AjaxHolder_PostComment_RequiredFieldValidator3.controltovalidate = "AjaxHolder_PostComment_tbComment";
+AjaxHolder_PostComment_RequiredFieldValidator3.errormessage = "请输入评论内容";
+AjaxHolder_PostComment_RequiredFieldValidator3.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+AjaxHolder_PostComment_RequiredFieldValidator3.initialvalue = "";
+var AjaxHolder_PostComment_ValidationSummary1 = document.all ? document.all["AjaxHolder_PostComment_ValidationSummary1"] : document.getElementById("AjaxHolder_PostComment_ValidationSummary1");
+AjaxHolder_PostComment_ValidationSummary1.showmessagebox = "True";
+AjaxHolder_PostComment_ValidationSummary1.showsummary = "False";
+//]]>
+</script>
+
+
+<script type="text/javascript">
+<!--
+var Page_ValidationActive = false;
+if (typeof(ValidatorOnLoad) == "function") {
+    ValidatorOnLoad();
+}
+
+function ValidatorOnSubmit() {
+    if (Page_ValidationActive) {
+        return ValidatorCommonOnSubmit();
+    }
+    else {
+        return true;
+    }
+}
+// -->
+</script>
+        
+<script type="text/javascript">
+//<![CDATA[
+
+document.getElementById('AjaxHolder_PostComment_ValidationSummary1').dispose = function() {
+    Array.remove(Page_ValidationSummaries, document.getElementById('AjaxHolder_PostComment_ValidationSummary1'));
+}
+Sys.Application.initialize();
+
+document.getElementById('AjaxHolder_PostComment_RequiredFieldValidator1').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('AjaxHolder_PostComment_RequiredFieldValidator1'));
+}
+
+document.getElementById('AjaxHolder_PostComment_RequiredFieldValidator2').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('AjaxHolder_PostComment_RequiredFieldValidator2'));
+}
+
+document.getElementById('AjaxHolder_PostComment_revContactMail').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('AjaxHolder_PostComment_revContactMail'));
+}
+
+document.getElementById('AjaxHolder_PostComment_Requiredfieldvalidator4').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('AjaxHolder_PostComment_Requiredfieldvalidator4'));
+}
+
+document.getElementById('AjaxHolder_PostComment_RequiredFieldValidator3').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('AjaxHolder_PostComment_RequiredFieldValidator3'));
+}
+//]]>
+</script>
+</form>
+    <script type="text/javascript" src="FreeMarker_files/ShowHidden.js"></script>
+	<span style="display: none;"><script language="javascript" src="FreeMarker_files/click.htm"></script><a href="http://count.51yes.com/index.aspx?id=47631097" target="_blank"><img src="FreeMarker_files/count1.gif" alt="51YES网站统计系统" vspace="0" width="20" border="0" height="20" hspace="0"></a><iframe marginwidth="0" marginheight="0" hspace="0" vspace="0" src="FreeMarker_files/sa.xml" scrolling="no" width="0" frameborder="0" height="0"></iframe></span> 
+</body></html>

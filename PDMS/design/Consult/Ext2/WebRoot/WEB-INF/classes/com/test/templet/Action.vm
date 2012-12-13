@@ -1,0 +1,89 @@
+package ${package}.struts;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.apache.log4j.Logger;
+
+import com.opensymphony.xwork2.ActionSupport;
+import com.opensymphony.xwork2.ModelDriven;
+import com.opensymphony.xwork2.Preparable;
+
+import ${package}.model.${object_name}Model;
+import ${package}.service.${object_name}ServiceImpl;
+
+ /**
+ *
+ * <p>Title: </p>
+ * <p>Description: </p>
+ * <p>Copyright: Copyright (c) 2008</p>
+ * <p>Company: ${company}</p>
+ * @author ${author}
+ * @version 1.0
+ */
+public class ${object_name}Action extends ActionSupport implements ModelDriven<${object_name}Model>,Preparable{
+	
+	private final Logger log = Logger.getLogger(this.getClass());
+	
+	private ${object_name}Model model;
+	
+	private List<${object_name}Model> modelList; 
+	
+	private ${object_name}ServiceImpl ${object_name.toLowerCase()}Service;
+	
+	public String create(){
+		
+		return "success";
+	}
+	
+	public String update() {
+
+		return "success";
+	}
+
+	public String delete() {
+		
+		return "success";
+	}
+
+	public String view() {
+		
+		
+		return "success";
+	}
+	
+	public String list() {
+		
+		
+		return "success";
+	}
+	
+	//----------------------------------------------------------------------
+	
+	public void set${object_name.substring(0,1)}${object_name.substring(1).toLowerCase()}Service(${object_name}ServiceImpl ${object_name.toLowerCase()}Service) {
+		this.${object_name.toLowerCase()}Service = ${object_name.toLowerCase()}Service;
+	}
+	
+	public List<${object_name}Model> getModelList() {
+		return modelList;
+	}
+
+	public void setModelList(List<${object_name}Model> modelList) {
+		this.modelList = modelList;
+	}
+	
+	public void setModel(${object_name}Model model) {
+		this.model = model;
+	}
+
+	public ${object_name}Model getModel() {
+
+		return model;
+	}	
+	
+	public void prepare() throws Exception {
+		model = new ${object_name}Model();
+		modelList = new ArrayList<${object_name}Model>();
+	}
+	
+}

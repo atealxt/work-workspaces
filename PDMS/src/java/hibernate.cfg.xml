@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="connection.url">jdbc:mysql://localhost:3306/pdms</property>
+        <property name="connection.username">root</property>
+        <property name="connection.password">sa</property>
+        <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+        <property name="hibernate.show_sql">false</property>
+        <property name="hibernate.format_sql">true</property>
+        <property name="hibernate.current_session_context_class">thread</property>
+
+        <!--batch loading.在进行数据查询操作前，自动在当前session中查找可合并的条件来同时进行查询。-->
+        <!--batch updating.批量更新。-->
+        <property name="hibernate.jdbc.batch_size">5</property>
+        <!--JDBC result set fetch size-->
+        <property name="hibernate.jdbc.fetch_size">30</property>
+
+        <!-- C3P0连接池设定--> 
+        <property name="hibernate.connection.provider_class">org.hibernate.connection.C3P0ConnectionProvider</property>
+        <property name="hibernate.c3p0.max_size">20</property>
+        <property name="hibernate.c3p0.min_size">5</property>
+        <property name="hibernate.c3p0.timeout">120</property>
+        <property name="hibernate.c3p0.max_statements">100</property>
+        <property name="hibernate.c3p0.idle_test_period">120</property>
+        <property name="hibernate.c3p0.acquire_increment">2</property>
+
+        <!--sf cache-->
+        <property name="hibernate.cache.provider_class">org.hibernate.cache.EhCacheProvider</property>
+        <!--query cache-->
+        <property name="hibernate.cache.use_query_cache">true</property>
+        
+        <!--mapping file-->
+        <mapping resource="pdms/components/pojo/Example.hbm.xml" />
+        <mapping resource="pdms/components/pojo/Operate.hbm.xml" />
+        <mapping resource="pdms/components/pojo/Function.hbm.xml" />
+        <mapping resource="pdms/components/pojo/Role.hbm.xml" />
+        <mapping resource="pdms/components/pojo/Identity.hbm.xml" />
+        <mapping resource="pdms/components/pojo/User.hbm.xml" />
+        <mapping resource="pdms/components/pojo/Group.hbm.xml" />
+        <mapping resource="pdms/components/pojo/Project.hbm.xml" />
+        <mapping resource="pdms/components/pojo/UserProjectRel.hbm.xml" />
+        <mapping resource="pdms/components/pojo/Mission.hbm.xml" />
+        <mapping resource="pdms/components/pojo/Topic.hbm.xml" />
+        <mapping resource="pdms/components/pojo/Reply.hbm.xml" />
+        <mapping resource="pdms/components/pojo/UploadFile.hbm.xml" />
+        <mapping resource="pdms/components/pojo/MissionSubmit.hbm.xml" />
+
+        
+
+    </session-factory>
+</hibernate-configuration>

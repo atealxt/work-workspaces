@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+  <class name="org.py.hib.relation.many2many.Student" table="student">
+    <id column="sid" length="32" name="id" type="java.lang.String">
+      <generator class="uuid"/>
+    </id>
+    <property column="name" length="128" name="name" not-null="true" type="java.lang.String"/>
+    <set cascade="save-update" inverse="false" name="teachers" table="teacher_student_relation">
+      <key column="student_id" not-null="true"/>
+      <many-to-many class="org.py.hib.relation.many2many.Teacher" column="teacher_id"/>
+    </set>
+  </class>
+</hibernate-mapping>

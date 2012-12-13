@@ -1,0 +1,86 @@
+﻿<HTML>
+ <HEAD>
+  <TITLE>提示信息</TITLE>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <link rel="stylesheet" type="text/css" href="../../extjs2.0/resources/css/ext-all.css" />
+  <script type="text/javascript" src="../../extjs2.0/adapter/ext/ext-base.js"></script>
+  <script type="text/javascript" src="../../extjs2.0/ext-all.js"></script>
+  <script type="text/javascript" src="../../extjs2.0/source/locale/ext-lang-zh_CN.js"></script>
+  <script type="text/javascript">
+Ext.onReady(function() {  
+	
+	Ext.QuickTips.init();  
+Ext.form.Field.prototype.msgTarget = 'side';   
+
+	
+    var form = new Ext.form.FormPanel({  
+        baseCls: 'x-plain',  
+        labelWidth: 80,  
+        url:'upload_csharp.aspx',  
+        fileUpload:true,  
+        defaultType: 'textfield',  
+  
+        items: [{  
+            xtype: 'textfield',  
+            fieldLabel: 'File Name',  
+            name: 'userfile',  
+            inputType: 'file',  
+            allowBlank: false,  
+            blankText: 'File can\'t not empty.',  
+            anchor: '90%'  // anchor width by percentage  
+        }]  
+    });  
+  
+    var win = new Ext.Window({  
+        title: 'Upload file',  
+        width: 400,  
+        height:200,  
+        minWidth: 300,  
+        minHeight: 100,  
+        layout: 'fit',  
+        plain:true,  
+        bodyStyle:'padding:5px;',  
+        buttonAlign:'center',  
+        items: form,  
+  
+        buttons: [{  
+            text: 'Upload',  
+            handler: function() {  
+                if(form.form.isValid()){  
+                    Ext.MessageBox.show({  
+                           title: 'Please wait',  
+                           msg: 'Uploading...',  
+                           progressText: '',  
+                           width:300,  
+                           progress:true,  
+                           closable:false,  
+                           animEl: 'loding'  
+                       });  
+                    form.getForm().submit({      
+                        success: function(form, action){  
+                           Ext.Msg.alert('Message from extjs.org.cn',action.result.msg);  
+                           win.hide();    
+                        },      
+                       failure: function(){      
+                          Ext.Msg.alert('Error', 'File upload failure.');      
+                       }  
+                    })               
+                }  
+           }  
+        },{  
+            text: 'Close',  
+            handler:function(){win.hide();}  
+        }]  
+    });  
+    win.show();  
+});  
+
+  </script>
+ </HEAD>
+ <BODY>
+ 	<table width=100%>
+		<tr><td>&nbsp;<td></tr>
+		<tr><td width=100></td><td><div id='form'></div><td></tr>
+	</table>
+ </BODY>
+</HTML>

@@ -1,0 +1,36 @@
+<HTML>
+ <HEAD>
+  <TITLE>Ext.data.ScriptTagProxy</TITLE>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <link rel="stylesheet" type="text/css" href="../../extjs2.0/resources/css/ext-all.css" />
+  <script type="text/javascript" src="../../extjs2.0/adapter/ext/ext-base.js"></script>
+  <script type="text/javascript" src="../../extjs2.0/ext-all.js"></script>
+  <script type="text/javascript" src="../../extjs2.0/source/locale/ext-lang-zh_CN.js"></script>
+  <script type="text/javascript">
+	Ext.onReady(function(){
+		//创建ScriptTagProxy代理
+		var scriptTagProxy = new Ext.data.ScriptTagProxy({
+			//于当前服务器处于不同域中的url地址
+			url : 'http://192.168.0.102:8080/scriptTagProxyServer.jsp'
+		})
+		//创建记录类型Person，mapping值为字段值对应数组中数据的索引位置
+		var Person = Ext.data.Record.create([
+			{name: 'personName',mapping: 1},
+			{name: 'personAge',mapping: 2},
+		]);
+		//创建数据解析器，id:0表示用数组中索引为0的数据作为记录id
+		var arrayReader = new Ext.data.ArrayReader({id:0},Person);
+		//读取数据
+		scriptTagProxy.load(null,arrayReader,callBack);
+		//load方法的回调函数
+		function callBack(result){
+			var records = result.records;
+			var totalRecords = result.totalRecords;
+			alert('跨域读取数据，记录总是：'+totalRecords);
+		}
+	});
+  </script>
+ </HEAD>
+ <BODY style="margin=10 10 10 10;">
+ </BODY>
+</HTML>

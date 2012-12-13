@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/System/!svn/ver/9/SOA/src/com/soa/userbean
+END
+Log4jApp.java
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/System/!svn/ver/4/SOA/src/com/soa/userbean/Log4jApp.java
+END
+MyTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/System/!svn/ver/2/SOA/src/com/soa/userbean/MyTest.java
+END
+InitDB.java
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/System/!svn/ver/23/SOA/src/com/soa/userbean/InitDB.java
+END
+UserInfo.java
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/System/!svn/ver/2/SOA/src/com/soa/userbean/UserInfo.java
+END

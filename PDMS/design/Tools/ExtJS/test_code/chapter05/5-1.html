@@ -1,0 +1,42 @@
+﻿<HTML>
+ <HEAD>
+  <TITLE>标准面板（Panel）</TITLE>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <link rel="stylesheet" type="text/css" href="../../extjs2.0/resources/css/ext-all.css" />
+  <script type="text/javascript" src="../../extjs2.0/adapter/ext/ext-base.js"></script>
+  <script type="text/javascript" src="../../extjs2.0/ext-all.js"></script>
+  <script type="text/javascript" src="../../extjs2.0/source/locale/ext-lang-zh_CN.js"></script>
+  <script type="text/javascript">
+	Ext.onReady(function(){
+		Ext.BLANK_IMAGE_URL = '../../extjs2.0/resources/images/default/s.gif';
+		new Ext.Panel({
+			title:'面板头部（header）',
+			tbar : ['顶端工具栏(top toolbars)'],
+			bbar : ['底端工具栏(bottom toolbars)'],
+			height:200,
+			width:300,
+			frame:true,
+			applyTo :'panel',
+			bodyStyle:'background-color:#FFFFFF',
+			html:'<div>面板体（body）</div>',
+			tools : [
+				{id:'toggle'},
+				{id:'close'},
+				{id:'maximize'}
+			],
+			buttons:[
+				new Ext.Button({
+					text:'面板底部（footer）'
+				})
+			]
+		})
+	});
+  </script>
+ </HEAD>
+ <BODY>
+ 	<table width=100%>
+		<tr><td>&nbsp;<td></tr>
+		<tr><td width=100></td><td><div id='panel'></div><td></tr>
+	</table>
+ </BODY>
+</HTML>

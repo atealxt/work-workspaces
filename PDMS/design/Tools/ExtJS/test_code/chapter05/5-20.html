@@ -1,0 +1,37 @@
+﻿<HTML>
+ <HEAD>
+  <TITLE>Ext.Viewport示例</TITLE>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <link rel="stylesheet" type="text/css" href="../../extjs2.0/resources/css/ext-all.css" />
+  <script type="text/javascript" src="../../extjs2.0/adapter/ext/ext-base.js"></script>
+  <script type="text/javascript" src="../../extjs2.0/ext-all.js"></script>
+  <script type="text/javascript" src="../../extjs2.0/source/locale/ext-lang-zh_CN.js"></script>
+  <script type="text/javascript">
+	Ext.onReady(function(){
+		Ext.BLANK_IMAGE_URL = '../../extjs2.0/resources/images/default/s.gif';
+		new Ext.Viewport({
+			title : 'Ext.Viewport示例',
+			layout:'border',//表格布局
+			items: [
+			{
+				title: 'north Panel',
+				html : '上边',
+				region: 'north',//指定子面板所在区域为north
+				height: 100
+			},{
+				title: 'West Panel',
+				html : '左边',
+				region:'west',//指定子面板所在区域为west
+				width: 150
+			},{
+				title: 'Main Content',
+				html : '中间',
+				region:'center'//指定子面板所在区域为center
+			}]
+		});
+	});
+  </script>
+ </HEAD>
+ <BODY>
+ </BODY>
+</HTML>

@@ -1,0 +1,79 @@
+package com.oa.hibernate.dao;
+
+import java.util.List;
+
+import org.hibernate.Criteria;
+import org.hibernate.Session;
+import org.hibernate.criterion.Order;
+import org.hibernate.criterion.Projections;
+import org.hibernate.criterion.Restrictions;
+import org.springframework.orm.hibernate3.support.HibernateDaoSupport;
+
+import com.oa.hibernate.beans.Meeting;
+import com.oa.hibernate.beans.User;
+import com.oa.struts.util.Pager;
+
+public class MeetingDAO extends HibernateDaoSupport implements IMeetingDAO {
+	
+	/**
+	 * when have pageSize and pageNo parameters
+	 */
+	public Pager findPager(final int pageSize,
+			final int pageNo) {		
+		Session session = getHibernateTemplate().getSessionFactory().openSession();
+		
+		// set query condition
+		Criteria criteria = session.createCriteria(Meeting.class);
+		
+		// get total count
+		int rowCount = ((Integer) criteria.setProjection(
+				Projections.rowCount()).uniqueResult()).intValue();
+		criteria.setProjection(null);
+		
+		// get current page list
+		int startIndex = pageSize * (pageNo - 1);
+		criteria.addOrder(Order.desc("starttime"));
+		criteria.addOrder(Order.desc("endtime"));
+		criteria.setFirstResult(startIndex);
+		criteria.setMaxResults(pageSize);
+		List result = criteria.list();
+		
+		session.close();
+
+		return new Pager(pageSize, pageNo, rowCount, result);
+	}
+
+	public Meeting findById(String id) {
+		return (Meeting) getHibernateTemplate().get(Meeting.class,
+				new Integer(id));
+	}
+
+	public void insert(Meeting meeting) {
+		getHibernateTemplate().save(meeting);
+	}
+
+	public void update(Meeting meeting) {
+		getHibernateTemplate().update(meeting);
+	}
+
+	public void delete(String id) {
+		Object p = getHibernateTemplate().load(Meeting.class, new Integer(id));
+		getHibernateTemplate().delete(p);
+	}
+	
+	public int getCount(final String isread)
+	{
+        Session session = getHibernateTemplate().getSessionFactory().openSession();
+		
+		// set query condition
+		Criteria criteria = session.createCriteria(Meeting.class);
+		criteria.add(Restrictions.eq("isRead", isread));
+		
+		// get total count
+		int count = ((Integer) criteria.setProjection(
+				Projections.rowCount()).uniqueResult()).intValue();
+		criteria.setProjection(null);
+		return count;
+	}
+
+}

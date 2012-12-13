@@ -1,0 +1,54 @@
+﻿<!--
+待研究，结合Hib的具体分页实现。
+-->
+
+<HTML>
+ <HEAD>
+  <TITLE>表格数据分页</TITLE>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <link rel="stylesheet" type="text/css" href="../../extjs2.0/resources/css/ext-all.css" />
+  <script type="text/javascript" src="../../extjs2.0/adapter/ext/ext-base.js"></script>
+  <script type="text/javascript" src="../../extjs2.0/ext-all.js"></script>
+  <script type="text/javascript" src="../../extjs2.0/source/locale/ext-lang-zh_CN.js"></script>
+  <script type="text/javascript">
+	Ext.onReady(function(){
+		
+		Ext.BLANK_IMAGE_URL = '../../extjs2.0/resources/images/default/s.gif';
+		
+		//定义数据集对象
+		var store = new Ext.data.Store({//配置分组数据集
+			autoLoad :{params : {start : 0,limit : 2}},
+			reader: new Ext.data.JsonReader(),
+			proxy : new Ext.data.HttpProxy({
+				url : 'jsonServer.jsp'
+			})
+		})
+		//创建Grid表格组件
+		var grid = new Ext.grid.GridPanel({
+			title : '表格数据分页',
+			applyTo : 'grid-div',
+			width:450,
+			height:200,
+			frame:true,
+			tbar : new Ext.PagingToolbar({//分页工具栏 //bbar
+				store : store,
+				pageSize : 2,
+				displayInfo : true,
+				displayMsg : '第 {0} 条到 {1} 条，一共 {2} 条',
+				emptyMsg : "没有记录"
+			}),
+			store: store,
+			columns: [//配置表格列
+				new Ext.grid.RowNumberer(),//表格行号组件
+				{header: "id", width: 50, dataIndex: 'personId', sortable: true},
+				{header: "姓名", width: 80, dataIndex: 'personName', sortable: true},
+				{header: "年龄", width: 80, dataIndex: 'personAge', sortable: true}
+			]
+		})
+	});
+  </script>
+ </HEAD>
+ <BODY style="margin=10 10 10 10;">
+	<div id='grid-div'></div>
+ </BODY>
+</HTML>

@@ -1,0 +1,13 @@
+sql sequence:
+
+create_database_herograve.sql
+
+create_table_userlevel.sql
+create_table_userlevelshow.sql
+create_table_user.sql
+create_table_userinfo.sql
+create_table_usertemp.sql
+
+create_table_topicarea.sql
+create_table_topictitle.sql
+create_table_topicinfo.sql

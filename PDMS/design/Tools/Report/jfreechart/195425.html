@@ -1,0 +1,437 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html dir="ltr" xml:lang="zh-CN" xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Struts2 jfreechart example  - bluelzx - JavaEye技术网站</title>
+    <meta name="description" content="struts2  插件机制支持jfreechart . http://cwiki.apache.org/WW/jfreechart-plugin.html   Chart example in struts.xml  &nbsp; &lt;action name= viewModerationChart  class= myapp.actions.ViewModerationChartAction &gt;  ...">
+    <meta name="keywords" content="  Struts2 jfreechart example ">
+    <link rel="shortcut icon" href="http://bluelzx.javaeye.com/images/favicon.ico" type="image/x-icon">
+    <link href="http://bluelzx.javaeye.com/rss" rel="alternate" title="bluelzx" type="application/rss+xml"> 
+    <link href="195425_files/blog.css" media="screen" rel="stylesheet" type="text/css">
+<link href="195425_files/blue.css" media="screen" rel="stylesheet" type="text/css">
+    <script src="195425_files/application.js" type="text/javascript"></script>
+      <link href="195425_files/SyntaxHighlighter.css" media="screen" rel="stylesheet" type="text/css">
+  <script src="195425_files/shCoreCommon.js" type="text/javascript"></script>
+  <style>
+    div#main {background-color: transparent; border: 0; padding: 0px; width: 740px;}
+  </style>
+  <link href="195425_files/ui.css" media="screen" rel="stylesheet" type="text/css">
+  <script src="195425_files/compress.js" type="text/javascript"></script>
+  <style type="text/css">.dp-xml .cdata { color: #ff1493; }.dp-xml .tag, .dp-xml .tag-name { color: #069; font-weight: bold; }.dp-xml .attribute { color: red; }.dp-xml .attribute-value { color: blue; }</style><style type="text/css">.dp-j .annotation { color: #646464; }.dp-j .number { color: #C00000; }</style></head><body>
+    <div id="header">
+      <div id="blog_site_nav">
+  <a href="http://www.javaeye.com/" class="homepage">首页</a>
+  <a href="http://www.javaeye.com/news">新闻</a>
+  <a href="http://www.javaeye.com/forums">论坛</a>
+  <a href="http://www.javaeye.com/blogs">博客</a>
+  <a href="http://job.javaeye.com/">招聘</a>
+  <a href="#" onclick="return false;" id="msna"><u>更多</u> <small>▼</small></a>
+  <div class="quick_menu" style="display: none;">
+    <a href="http://www.javaeye.com/ask">问答</a>
+    <a href="http://www.javaeye.com/wiki">知识库</a>
+    <a href="http://www.javaeye.com/groups">圈子</a>
+    <a href="http://www.javaeye.com/search">搜索</a>
+  </div>
+</div>
+      <div id="user_nav">
+      <a href="http://atealxt.javaeye.com/" class="welcome" title="查看我的博客首页">欢迎 atealxt</a>
+    
+    
+      <a href="http://atealxt.javaeye.com/app/messages" title="发送站内短信">收件箱</a>
+    
+    <div class="quick_menu" style="display: none;">
+      <a href="http://atealxt.javaeye.com/app/messages/new">写新短信</a>
+      <a href="http://atealxt.javaeye.com/app/messages">收件箱</a>
+      <a href="http://atealxt.javaeye.com/app/messages/sent">发件箱</a>
+    </div>
+    <a href="http://atealxt.javaeye.com/app/subscriptions" title="查看我的订阅">订 阅</a>
+    <div class="quick_menu" style="display: none;">
+      <a href="http://atealxt.javaeye.com/app/subscriptions">我的订阅</a>
+      <a href="http://atealxt.javaeye.com/app/subscriptions/participation">我的参与</a>
+      <a href="http://atealxt.javaeye.com/app/subscriptions/all">全站动态</a>
+      <a href="http://atealxt.javaeye.com/app/my_activities">我的回复</a>
+      <a href="http://atealxt.javaeye.com/app/my_activities/activities">我的动态</a>
+    </div>
+    <a href="http://atealxt.javaeye.com/admin" title="管理我的博客">博 客</a>
+    
+      <a href="http://atealxt.javaeye.com/app/my_groups" title="查看我的圈子">圈 子</a>
+    
+    <a href="http://atealxt.javaeye.com/admin/profile">设置</a>
+    <a href="http://bluelzx.javaeye.com/logout" class="last" onclick="var f = document.createElement('form'); f.style.display = 'none'; this.parentNode.appendChild(f); f.method = 'POST'; f.action = this.href;var m = document.createElement('input'); m.setAttribute('type', 'hidden'); m.setAttribute('name', '_method'); m.setAttribute('value', 'put'); f.appendChild(m);f.submit();return false;">退出</a>
+  </div>
+
+
+
+    </div>
+    
+    <div id="page">
+      <div id="branding" class="clearfix">
+        <div id="blog_name"><h1><a href="http://bluelzx.javaeye.com/">bluelzx</a></h1></div>
+        <div id="blog_preview"></div>
+        <div id="blog_domain">永久域名 <a href="http://bluelzx.javaeye.com/">http://bluelzx.javaeye.com</a></div>
+      </div>
+      
+      
+      <div id="content" class="clearfix">
+        <div id="main">
+          
+
+
+          
+
+
+<div class="blog_main"> 
+  <div id="blog_nav">
+    
+    <div id="pre_next">
+      <a href="http://bluelzx.javaeye.com/blog/195513" class="next">重构 </a>
+      |
+      <a href="http://bluelzx.javaeye.com/blog/195422" class="pre">jfreechart 初级</a>
+    </div>
+  </div>
+  <div class="blog_title">
+    <div class="date"><span class="year">2008</span><span class="sep_year">-</span><span class="month">05</span><span class="sep_month">-</span><span class="day">21</span></div>
+    <h3 class="" title=""><a href="http://bluelzx.javaeye.com/blog/195425">Struts2 jfreechart example </a></h3>
+        
+  </div>
+
+  <div class="blog_content">
+    <p>struts2  插件机制支持jfreechart .
+<a href="http://cwiki.apache.org/WW/jfreechart-plugin.html">http://cwiki.apache.org/WW/jfreechart-plugin.html</a>
+
+</p>
+<p>Chart example in struts.xml
+</p>
+<p>&nbsp;</p>
+<div class="dp-highlighter"><div class="bar"><div class="tools">Xml代码 <embed src="195425_files/clipboard_new.swf" flashvars="clipboard=%3Caction%20name%3D%22viewModerationChart%22%20class%3D%22myapp.actions.ViewModerationChartAction%22%3E%0A%20%20%3Cresult%20name%3D%22success%22%20type%3D%22chart%22%3E%0A%20%20%20%20%3Cparam%20name%3D%22width%22%3E400%3C%2Fparam%3E%0A%20%20%20%20%3Cparam%20name%3D%22height%22%3E300%3C%2Fparam%3E%20%0A%20%20%3C%2Fresult%3E%0A%3C%2Faction%3E%0A%0A" quality="high" allowscriptaccess="always" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" height="15" width="14"></div></div><ol class="dp-xml" start="1"><li><span><span class="tag">&lt;</span><span class="tag-name">action</span><span>&nbsp;</span><span class="attribute">name</span><span>=</span><span class="attribute-value">"viewModerationChart"</span><span>&nbsp;</span><span class="attribute">class</span><span>=</span><span class="attribute-value">"myapp.actions.ViewModerationChartAction"</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li><span>&nbsp;&nbsp;<span class="tag">&lt;</span><span class="tag-name">result</span><span>&nbsp;</span><span class="attribute">name</span><span>=</span><span class="attribute-value">"success"</span><span>&nbsp;</span><span class="attribute">type</span><span>=</span><span class="attribute-value">"chart"</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;</span><span class="tag-name">param</span><span>&nbsp;</span><span class="attribute">name</span><span>=</span><span class="attribute-value">"width"</span><span class="tag">&gt;</span><span>400</span><span class="tag">&lt;/</span><span class="tag-name">param</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;</span><span class="tag-name">param</span><span>&nbsp;</span><span class="attribute">name</span><span>=</span><span class="attribute-value">"height"</span><span class="tag">&gt;</span><span>300</span><span class="tag">&lt;/</span><span class="tag-name">param</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;&nbsp;</span></span></li><li><span>&nbsp;&nbsp;<span class="tag">&lt;/</span><span class="tag-name">result</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li><span><span class="tag">&lt;/</span><span class="tag-name">action</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li></ol></div><pre style="display: none;" name="code" class="xml">&lt;action name="viewModerationChart" class="myapp.actions.ViewModerationChartAction"&gt;
+  &lt;result name="success" type="chart"&gt;
+    &lt;param name="width"&gt;400&lt;/param&gt;
+    &lt;param name="height"&gt;300&lt;/param&gt; 
+  &lt;/result&gt;
+&lt;/action&gt;
+
+</pre>
+&nbsp;
+<p>&nbsp;</p>
+<p> 
+  
+Struts Action that provides a chart</p>
+<div class="dp-highlighter"><div class="bar"><div class="tools">Java代码 <embed src="195425_files/clipboard_new.swf" flashvars="clipboard=public%20class%20ViewModerationChartAction%20extends%20ActionSupport%20%7B%20%0Aprivate%20JFreeChart%20chart%3B%20%0Apublic%20String%20execute()%20throws%20Exception%20%7B%20%0A%2F%2F%20chart%20creation%20logic...%20XYSeries%20dataSeries%20%3D%20new%20XYSeries(new%20Integer(1))%3B%0A%26nbsp%3B%2F%2Fpass%20a%20key%20for%20this%20serie%20for%20(int%20i%20%3D%200%3B%20i%20%3C%3D%20100%3B%20i%2B%2B)%20%7B%0A%26nbsp%3BdataSeries.add(i%2C%20RandomUtils.nextInt())%3B%20%7D%20%0AXYSeriesCollection%20xyDataset%20%3D%20new%20XYSeriesCollection(dataSeries)%3B%20%0AValueAxis%20xAxis%20%3D%20new%20NumberAxis(%22Raw%20Marks%22)%3B%20%0AValueAxis%20yAxis%20%3D%20new%20NumberAxis(%22Moderated%20Marks%22)%3B%20%0A%2F%2F%20set%20my%20chart%20variable%20chart%20%3D%20new%20JFreeChart(%20%22Moderation%20Function%22%2C%20JFreeChart.DEFAULT_TITLE_FONT%2C%20new%20XYPlot(%20xyDataset%2C%20xAxis%2C%20yAxis%2C%20new%20StandardXYItemRenderer(StandardXYItemRenderer.LINES))%2C%20false)%3B%0A%26nbsp%3Bchart.setBackgroundPaint(java.awt.Color.white)%3B%0A%26nbsp%3Breturn%20super.SUCCESS%3B%20%0A%7D%20%0Apublic%20JFreeChart%20getChart()%20%7B%20%0Areturn%20chart%3B%0A%26nbsp%3B%7D%0A%26nbsp%3B%7D" quality="high" allowscriptaccess="always" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" height="15" width="14"></div></div><ol class="dp-j" start="1"><li><span><span class="keyword">public</span><span>&nbsp;</span><span class="keyword">class</span><span>&nbsp;ViewModerationChartAction&nbsp;</span><span class="keyword">extends</span><span>&nbsp;ActionSupport&nbsp;{&nbsp;&nbsp;&nbsp;</span></span></li><li><span><span class="keyword">private</span><span>&nbsp;JFreeChart&nbsp;chart;&nbsp;&nbsp;&nbsp;</span></span></li><li><span><span class="keyword">public</span><span>&nbsp;String&nbsp;execute()&nbsp;</span><span class="keyword">throws</span><span>&nbsp;Exception&nbsp;{&nbsp;&nbsp;&nbsp;</span></span></li><li><span><span class="comment">//&nbsp;chart&nbsp;creation&nbsp;logic...&nbsp;XYSeries&nbsp;dataSeries&nbsp;=&nbsp;new&nbsp;XYSeries(new&nbsp;Integer(1));</span><span>&nbsp;&nbsp;</span></span></li><li><span>&nbsp;<span class="comment">//pass&nbsp;a&nbsp;key&nbsp;for&nbsp;this&nbsp;serie&nbsp;for&nbsp;(int&nbsp;i&nbsp;=&nbsp;0;&nbsp;i&nbsp;&lt;=&nbsp;100;&nbsp;i++)&nbsp;{</span><span>&nbsp;&nbsp;</span></span></li><li><span>&nbsp;dataSeries.add(i,&nbsp;RandomUtils.nextInt());&nbsp;}&nbsp;&nbsp;&nbsp;</span></li><li><span>XYSeriesCollection&nbsp;xyDataset&nbsp;=&nbsp;<span class="keyword">new</span><span>&nbsp;XYSeriesCollection(dataSeries);&nbsp;&nbsp;&nbsp;</span></span></li><li><span>ValueAxis&nbsp;xAxis&nbsp;=&nbsp;<span class="keyword">new</span><span>&nbsp;NumberAxis(</span><span class="string">"Raw&nbsp;Marks"</span><span>);&nbsp;&nbsp;&nbsp;</span></span></li><li><span>ValueAxis&nbsp;yAxis&nbsp;=&nbsp;<span class="keyword">new</span><span>&nbsp;NumberAxis(</span><span class="string">"Moderated&nbsp;Marks"</span><span>);&nbsp;&nbsp;&nbsp;</span></span></li><li><span><span class="comment">//&nbsp;set&nbsp;my&nbsp;chart&nbsp;variable&nbsp;chart&nbsp;=&nbsp;new&nbsp;JFreeChart(&nbsp;"Moderation&nbsp;Function",&nbsp;JFreeChart.DEFAULT_TITLE_FONT,&nbsp;new&nbsp;XYPlot(&nbsp;xyDataset,&nbsp;xAxis,&nbsp;yAxis,&nbsp;new&nbsp;StandardXYItemRenderer(StandardXYItemRenderer.LINES)),&nbsp;false);</span><span>&nbsp;&nbsp;</span></span></li><li><span>&nbsp;chart.setBackgroundPaint(java.awt.Color.white);&nbsp;&nbsp;</span></li><li><span>&nbsp;<span class="keyword">return</span><span>&nbsp;</span><span class="keyword">super</span><span>.SUCCESS;&nbsp;&nbsp;&nbsp;</span></span></li><li><span>}&nbsp;&nbsp;&nbsp;</span></li><li><span><span class="keyword">public</span><span>&nbsp;JFreeChart&nbsp;getChart()&nbsp;{&nbsp;&nbsp;&nbsp;</span></span></li><li><span><span class="keyword">return</span><span>&nbsp;chart;&nbsp;&nbsp;</span></span></li><li><span>&nbsp;}&nbsp;&nbsp;</span></li><li><span>&nbsp;}&nbsp;&nbsp;</span></li></ol></div><pre style="display: none;" name="code" class="java">public class ViewModerationChartAction extends ActionSupport { 
+private JFreeChart chart; 
+public String execute() throws Exception { 
+// chart creation logic... XYSeries dataSeries = new XYSeries(new Integer(1));
+&nbsp;//pass a key for this serie for (int i = 0; i &lt;= 100; i++) {
+&nbsp;dataSeries.add(i, RandomUtils.nextInt()); } 
+XYSeriesCollection xyDataset = new XYSeriesCollection(dataSeries); 
+ValueAxis xAxis = new NumberAxis("Raw Marks"); 
+ValueAxis yAxis = new NumberAxis("Moderated Marks"); 
+// set my chart variable chart = new JFreeChart( "Moderation Function", JFreeChart.DEFAULT_TITLE_FONT, new XYPlot( xyDataset, xAxis, yAxis, new StandardXYItemRenderer(StandardXYItemRenderer.LINES)), false);
+&nbsp;chart.setBackgroundPaint(java.awt.Color.white);
+&nbsp;return super.SUCCESS; 
+} 
+public JFreeChart getChart() { 
+return chart;
+&nbsp;}
+&nbsp;}</pre>
+&nbsp;
+<p>&nbsp;</p>
+  </div>
+  
+  
+
+  
+
+  <div class="blog_bottom">
+    <ul>
+      <li>21:15</li>
+      <li>浏览 (545)</li>
+            <li><a href="#comments">评论</a> (0)</li>
+      <li>分类: <a href="http://bluelzx.javaeye.com/category/32498">报表 report </a></li>
+      
+      
+        <li><a href="http://atealxt.javaeye.com/app/user_favorites?user_favorite%5Btitle%5D=Struts2+jfreechart+example+&amp;user_favorite%5Burl%5D=http%3A%2F%2Fbluelzx.javaeye.com%2Fblog%2F195425" target="_blank" class="favorite">收藏</a></li>
+        
+      
+      
+      <li class="last"><a href="http://www.javaeye.com/wiki/topic/195425" target="_blank" class="more">相关推荐</a></li>
+    </ul>
+  </div>
+
+  
+  
+
+  <div class="blog_comment">
+    <h5>评论</h5>
+    <a id="comments" name="comments"></a>
+    
+    
+    
+  </div>
+
+  <div class="blog_comment">
+    <h5>发表评论</h5>
+          
+      <form action="/blog/195425" id="comment_form" method="post" onsubmit="return false;">        
+
+
+  <input value="true" id="editor_bbcode_flag" type="hidden">
+
+
+
+<div id="editor_main"><div class="clearfix" id="editor_wrapper"><div id="bbcode_emotions"><h5>表情图标</h5><img src="195425_files/icon_biggrin.gif"><img src="195425_files/icon_smile.gif"><img src="195425_files/icon_sad.gif"><img src="195425_files/icon_surprised.gif"><img src="195425_files/icon_eek.gif"><img src="195425_files/icon_confused.gif"><img src="195425_files/icon_cool.gif"><img src="195425_files/icon_lol.gif"><img src="195425_files/icon_mad.gif"><img src="195425_files/icon_razz.gif"><img src="195425_files/icon_redface.gif"><img src="195425_files/icon_cry.gif"><img src="195425_files/icon_evil.gif"><img src="195425_files/icon_twisted.gif"><img src="195425_files/icon_rolleyes.gif"><img src="195425_files/icon_wink.gif"><img src="195425_files/icon_exclaim.gif"><img src="195425_files/icon_question.gif"><img src="195425_files/icon_idea.gif"><img src="195425_files/icon_arrow.gif"></div><div id="bbcode_controllers"><div id="bbcode_toolbar"><input id="button_bold" value="B" type="button"><input id="button_italic" value="I" type="button"><input id="button_underline" value="U" type="button"><input value="Quote" type="button"><input value="Code" type="button"><input value="List" type="button"><input value="List=" type="button"><input value="Img" type="button"><input value="URL" type="button"><input value="Flash" type="button"><br>字体颜色: <select id="select_color"><option value="black" style="color: black;">标准</option><option value="darkred" style="color: darkred;">深红</option><option value="red" style="color: red;">红色</option><option value="orange" style="color: orange;">橙色</option><option value="brown" style="color: brown;">棕色</option><option value="yellow" style="color: yellow;">黄色</option><option value="green" style="color: green;">绿色</option><option value="olive" style="color: olive;">橄榄</option><option value="cyan" style="color: cyan;">青色</option><option value="blue" style="color: blue;">蓝色</option><option value="darkblue" style="color: darkblue;">深蓝</option><option value="indigo" style="color: indigo;">靛蓝</option><option value="violet" style="color: violet;">紫色</option><option value="gray" style="color: gray;">灰色</option><option value="white" style="color: white;">白色</option><option value="black" style="color: black;">黑色</option></select>&nbsp;字体大小: <select id="select_font"><option value="0">标准</option><option value="xx-small">1 (xx-small)</option><option value="x-small">2 (x-small)</option><option value="small">3 (small)</option><option value="medium">4 (medium)</option><option value="large">5 (large)</option><option value="x-large">6 (x-large)</option><option value="xx-large">7 (xx-large)</option></select>&nbsp;对齐: <select id="select_align"><option value="0">标准</option><option value="left">居左</option><option value="center">居中</option><option value="right">居右</option></select></div><div id="bbcode_tooltip">提示：选择您需要装饰的文字, 按上列按钮即可添加上相应的标签</div><textarea class="validate-richeditor bad-words min-length-5" cols="40" id="editor_body" name="comment[body]" rows="20" style="width: 500px; height: 350px;"></textarea></div></div></div>
+
+
+<script type="text/javascript">
+  var editor = new Control.TextArea.Editor("editor_body", "bbcode", false);
+</script>
+        <p style="text-align: right; padding-right: 30px;"> <input class="submit" id="submit_button" name="commit" value="提交" type="submit"></p>
+      <img src="195425_files/spinner.gif" style="display: none;" id="_form_spinner_"></form>
+      <script type="text/javascript">
+        new Validation("comment_form", {immediate: false, onFormValidate: function(result, form){
+  
+          if(result) {
+            new Ajax.Request('/blog/create_comment/195425', {
+              onSuccess:function(response){
+                Element.scrollTo($('comments'));
+                $('comments').insert({after:response.responseText})
+                $('editor_body').value = "";
+                $('_form_spinner_').hide();
+              }, parameters:Form.serialize(form)
+            });
+          }
+  
+      }});
+      </script>
+      </div>
+</div>
+
+
+<script type="text/javascript">
+  dp.SyntaxHighlighter.ClipboardSwf = '/javascripts/syntaxhighlighter/clipboard.swf';
+  dp.SyntaxHighlighter.HighlightAll('code', true, true);
+
+  fix_image_size($$('div.blog_content img'), 700);
+  function quote_comment(link) {
+    quote_user = $(link).previous(0).innerHTML;
+    quote_body = $(link).up().next().innerHTML.stripTags();
+    editor.bbcode_editor.textarea.insertAfterSelection('[quote="'+quote_user+'"]\n' + quote_body + '\n[/quote]\n');
+  }
+</script>
+
+
+        </div>
+        
+        <div id="local">
+          <div class="local_top"></div>
+          <div id="blog_owner">
+            <div id="blog_owner_logo"><a href="http://bluelzx.javaeye.com/"><img alt="用户头像" src="195425_files/user-logo.gif" title="bluelzx的博客: bluelzx"></a></div>
+            <div id="blog_owner_name">bluelzx</div>
+          </div>
+          <div id="blog_actions">
+            <ul>
+              <li>浏览: 26267 次</li>
+              
+              <li>来自: ...</li>
+              <li><img src="195425_files/offline.gif"></li>              
+              <li><a href="http://bluelzx.javaeye.com/blog/profile">详细资料</a> <a href="http://atealxt.javaeye.com/app/messages/new?message%5Breceiver_name%5D=bluelzx">发送短消息</a> <a href="http://bluelzx.javaeye.com/blog/guest_book">留言簿</a></li>
+            </ul>
+            <h5>搜索本博客</h5>
+            <form action="/blog/search" method="get">              <input class="text" id="query" name="query" style="margin-left: 10px; width: 110px;" type="text">
+              <input class="submit" value="搜索" type="submit">
+            </form>          </div>
+          
+            <div id="user_visits" class="clearfix">
+              <h5>最近访客</h5>
+              
+                <div class="left"><span class="logo"><a href="http://atealxt.javaeye.com/" target="_blank"><img alt="用户头像" src="195425_files/user-logo-thumb.gif" title="atealxt的博客: atealxt"></a></span> <a href="http://atealxt.javaeye.com/" target="_blank">atealxt</a></div>
+              
+                <div class="left"><span class="logo"><a href="http://songrubo.javaeye.com/" target="_blank"><img alt="用户头像" src="195425_files/0b40b73b-be24-3bd7-bf66-060439976bf3-thumb.gif" title="songrubo的博客: "></a></span> <a href="http://songrubo.javaeye.com/" target="_blank">songrubo</a></div>
+              
+                <div class="left"><span class="logo"><a href="http://java520.javaeye.com/" target="_blank"><img alt="用户头像" src="195425_files/user-logo-thumb.gif" title="java520的博客: java520"></a></span> <a href="http://java520.javaeye.com/" target="_blank">java520</a></div>
+              
+                <div class="left"><span class="logo"><a href="http://sandy-leen.javaeye.com/" target="_blank"><img alt="用户头像" src="195425_files/user-logo-thumb.gif" title="sandy_leen的博客: "></a></span> <a href="http://sandy-leen.javaeye.com/" target="_blank">sandy_leen</a></div>
+              
+              <div class="left" id="more_user_visits"><a href="http://bluelzx.javaeye.com/blog/user_visits">&gt;&gt;更多访客</a></div>
+            </div>
+          
+                      <div id="blog_menu">
+              <h5>博客分类</h5>				
+              <ul>
+                <li><a href="http://bluelzx.javaeye.com/">全部博客 (97)</a></li>
+                
+                  <li><a href="http://bluelzx.javaeye.com/category/31611">hibernate (3)</a></li>
+                
+                  <li><a href="http://bluelzx.javaeye.com/category/31612">ubuntu (5)</a></li>
+                
+                  <li><a href="http://bluelzx.javaeye.com/category/31613">flex (4)</a></li>
+                
+                  <li><a href="http://bluelzx.javaeye.com/category/31615">java (11)</a></li>
+                
+                  <li><a href="http://bluelzx.javaeye.com/category/31969">spring (3)</a></li>
+                
+                  <li><a href="http://bluelzx.javaeye.com/category/32143">javascript (6)</a></li>
+                
+                  <li><a href="http://bluelzx.javaeye.com/category/32432">menu navigation (2)</a></li>
+                
+                  <li><a href="http://bluelzx.javaeye.com/category/32433">struts2 (2)</a></li>
+                
+                  <li><a href="http://bluelzx.javaeye.com/category/32470">上传 upload (6)</a></li>
+                
+                  <li><a href="http://bluelzx.javaeye.com/category/32471">分页 pagination (13)</a></li>
+                
+                  <li><a href="http://bluelzx.javaeye.com/category/32472">sitemesh (2)</a></li>
+                
+                  <li><a href="http://bluelzx.javaeye.com/category/32476">ajax (4)</a></li>
+                
+                  <li><a href="http://bluelzx.javaeye.com/category/32498">报表 report  (3)</a></li>
+                
+                  <li><a href="http://bluelzx.javaeye.com/category/32516">测试 (5)</a></li>
+                
+                  <li><a href="http://bluelzx.javaeye.com/category/32517">重构 (1)</a></li>
+                
+                  <li><a href="http://bluelzx.javaeye.com/category/32564">验证码 captcha (5)</a></li>
+                
+                  <li><a href="http://bluelzx.javaeye.com/category/32581">java email (1)</a></li>
+                
+                  <li><a href="http://bluelzx.javaeye.com/category/32649">acegi (3)</a></li>
+                
+                  <li><a href="http://bluelzx.javaeye.com/category/32790">设计模式 (1)</a></li>
+                
+                  <li><a href="http://bluelzx.javaeye.com/category/32791">ＯＯ设计原则 (1)</a></li>
+                
+                  <li><a href="http://bluelzx.javaeye.com/category/39337">css (1)</a></li>
+                
+                  <li><a href="http://bluelzx.javaeye.com/category/40334">jbpm (1)</a></li>
+                
+                  <li><a href="http://bluelzx.javaeye.com/category/47086">关怀人文 (0)</a></li>
+                
+              </ul>
+            </div>
+            
+              <div id="blog_album">
+                <h5>我的相册</h5>
+                <div class="picture_thumb" style="float: none;">
+                  <div><span class="thumb_box"><a href="http://bluelzx.javaeye.com/album"><img alt="065970ae-5176-3de3-9566-7c95b677ad54-thumb" src="195425_files/065970ae-5176-3de3-9566-7c95b677ad54-thumb.png"></a></span></div>
+                  <span>Screenshot-2.png<br> <a href="http://bluelzx.javaeye.com/album">共 3 张</a></span>
+                </div>
+              </div>
+            
+            
+            <div id="blog_others">
+              <h5>其他分类</h5>
+              <ul>
+                <li><a href="http://bluelzx.javaeye.com/blog/favorite">我的收藏</a> (31)</li>
+                                
+                                <li><a href="http://bluelzx.javaeye.com/blog/forum">我的论坛帖子</a> (4)</li>
+                <li><a href="http://bluelzx.javaeye.com/blog/article">我的精华良好贴</a> (0)</li>
+                              </ul>
+            </div>
+            
+            <div id="recent_groups">
+              <h5>最近加入圈子</h5>
+              <ul>
+                
+              </ul>
+            </div>
+            
+            
+                          <div id="month_blogs">
+                <h5>存档</h5>
+                <ul>
+                  
+                    <li><a href="http://bluelzx.javaeye.com/blog/monthblog/2008-11">2008-11</a> (2)</li>
+                  
+                    <li><a href="http://bluelzx.javaeye.com/blog/monthblog/2008-09">2008-09</a> (1)</li>
+                  
+                    <li><a href="http://bluelzx.javaeye.com/blog/monthblog/2008-08">2008-08</a> (2)</li>
+                  
+                  <li><a href="http://bluelzx.javaeye.com/blog/monthblog_more">更多存档...</a></li>
+                </ul>
+              </div>
+                        <div id="recent_comments">
+              <h5>最新评论</h5>
+              <ul>
+                
+                  <li>
+                    <a href="http://bluelzx.javaeye.com/blog/195165#comments" title="基于struts2+spring+hibernate+jquery的jmesa分页实现样例(转)">基于struts2+spring+hiber ...</a><br>
+                    yongtree 写道怎样做数据库的分页处理啊mysql limit m,n或者数 ...<br>
+                    -- by <a href="http://bluelzx.javaeye.com/" target="_blank">bluelzx</a>
+                  </li>
+                
+                  <li>
+                    <a href="http://bluelzx.javaeye.com/blog/195165#comments" title="基于struts2+spring+hibernate+jquery的jmesa分页实现样例(转)">基于struts2+spring+hiber ...</a><br>
+                    etao528 写道最近正在学习这方面的知识，能否提供一份源代码谢谢哦！哈etao ...<br>
+                    -- by <a href="http://bluelzx.javaeye.com/" target="_blank">bluelzx</a>
+                  </li>
+                
+                  <li>
+                    <a href="http://bluelzx.javaeye.com/blog/195165#comments" title="基于struts2+spring+hibernate+jquery的jmesa分页实现样例(转)">基于struts2+spring+hiber ...</a><br>
+                    怎样做数据库的分页处理啊 <br>
+                    -- by <a href="http://yongtree.javaeye.com/" target="_blank">yongtree</a>
+                  </li>
+                
+                  <li>
+                    <a href="http://bluelzx.javaeye.com/blog/195301#comments" title="Ajax File Upload - For Struts 2">Ajax File Upload - For S ...</a><br>
+                    pom.xml放在什么地方?能解答一下吗?<br>
+                    -- by <a href="http://ws715.javaeye.com/" target="_blank">ws715</a>
+                  </li>
+                
+                  <li>
+                    <a href="http://bluelzx.javaeye.com/blog/193365#comments" title="javascript === ">javascript === </a><br>
+                    那我也很无知，受教了 <br>
+                    -- by <a href="http://lengyubing.javaeye.com/" target="_blank">lengyubing</a>
+                  </li>
+                
+              </ul>
+            </div>
+            <div id="comments_top">
+              <h5>评论排行榜</h5>
+              <ul>
+                
+                  <li><a href="http://bluelzx.javaeye.com/blog/195165">基于struts2+spring+hibernate+jquery的jm ...</a></li>
+                
+                  <li><a href="http://bluelzx.javaeye.com/blog/193365">javascript === </a></li>
+                
+                  <li><a href="http://bluelzx.javaeye.com/blog/199365">30个开源的AS3工程</a></li>
+                
+                  <li><a href="http://bluelzx.javaeye.com/blog/195301">Ajax File Upload - For Struts 2</a></li>
+                
+                  <li><a href="http://bluelzx.javaeye.com/blog/202247">Eclipse快捷键大全(转载) </a></li>
+                
+              </ul>
+            </div>
+            <div id="rss">
+              <ul>
+                <li><a href="http://bluelzx.javaeye.com/rss" target="_blank"><img alt="Rss" src="195425_files/rss.png"></a></li>
+                <li><a href="http://fusion.google.com/add?feedurl=http://bluelzx.javaeye.com/rss" target="_blank"><img alt="Rss_google" src="195425_files/rss_google.gif"></a></li>
+                <li><a href="http://www.zhuaxia.com/add_channel.php?url=http://bluelzx.javaeye.com/rss" target="_blank"><img alt="Rss_zhuaxia" src="195425_files/rss_zhuaxia.gif"></a></li>
+                <li><a href="http://www.xianguo.com/subscribe.php?url=http://bluelzx.javaeye.com/rss" target="_blank"><img alt="Rss_xianguo" src="195425_files/rss_xianguo.jpg"></a></li>
+                <li><a href="http://www.google.com/search?hl=zh-CN&amp;q=RSS">[什么是RSS?]</a></li>
+              </ul>
+            </div>
+            <div class="local_bottom"></div>
+          
+        </div>
+      </div>
+      
+      <div id="footer" class="clearfix">            	
+        <div id="copyright">
+          <hr>
+          声明：JavaEye文章版权属于作者，受法律保护。没有作者书面许可不得转载。若作者同意转载，必须以超链接形式标明文章原始出处和作者。<br>
+          © 2003-2009 JavaEye.com.   All rights reserved. 上海炯耐计算机软件有限公司 [ 沪ICP备05023328号 ] 
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script><script src="195425_files/ga.js" type="text/javascript"></script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-535605-1");
+pageTracker._setDomainName("javaeye.com");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+
+  </body></html>

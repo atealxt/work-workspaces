@@ -1,0 +1,57 @@
+﻿<HTML>
+ <HEAD>
+  <TITLE>使用items配置项的示例</TITLE>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <link rel="stylesheet" type="text/css" href="../../extjs2.0/resources/css/ext-all.css" />
+  <script type="text/javascript" src="../../extjs2.0/adapter/ext/ext-base.js"></script>
+  <script type="text/javascript" src="../../extjs2.0/ext-all.js"></script>
+  <script type="text/javascript" src="../../extjs2.0/source/locale/ext-lang-zh_CN.js"></script>
+  <script type="text/javascript">
+	Ext.onReady(function(){
+		Ext.BLANK_IMAGE_URL = '../../extjs2.0/resources/images/default/s.gif';
+		var panel = new Ext.Panel({
+			header : true,
+			title:'使用items进行面板嵌套',
+			frame:true,//渲染面板
+			collapsible : true,//允许展开和收缩
+			height : 200,
+			width : 250,
+			applyTo :'panel',
+			defaults : {//设置默认属性
+				bodyStyle:'background-color:#FFFFFF',//设置面板体的背景色
+				height : 80,//子面板高度为80
+				collapsible : true,//允许展开和收缩
+				autoScroll : true//自动显示滚动条
+			},
+			items: [
+				new Ext.Panel({
+					title : '嵌套面板一',
+					contentEl : 'localElement'//加载本地资源
+				}),
+				new Ext.Panel({
+					title : '嵌套面板二',
+					autoLoad : 'page1.html'//加载远程页面
+				})
+			]
+		})
+	});
+  </script>
+ </HEAD>
+ <BODY>
+ 	<table >
+		<tr><td>&nbsp;<td></tr>
+		<tr><td width=100></td><td>
+		<div id='panel'>
+		<td></tr>
+	</table>
+	<table border=1 id='localElement'>
+		<tr><th colspan=2>本地资源---员工列表</th></tr>
+		<tr>
+			<th width = 60>序号</th><th width = 80>姓名</th>
+		<tr>
+		<tr><td>1</td><td>张三</td></tr>
+		<tr><td>2</td><td>李四</td></tr>
+		<tr><td>3</td><td>王五</td></tr>
+	</table>
+ </BODY>
+</HTML>

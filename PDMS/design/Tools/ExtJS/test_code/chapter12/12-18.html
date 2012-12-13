@@ -1,0 +1,39 @@
+﻿<HTML>
+ <HEAD>
+  <TITLE>Ext.tree.TreeEditor示例</TITLE>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <link rel="stylesheet" type="text/css" href="../../extjs2.0/resources/css/ext-all.css" />
+  <script type="text/javascript" src="../../extjs2.0/adapter/ext/ext-base.js"></script>
+  <script type="text/javascript" src="../../extjs2.0/ext-all.js"></script>
+  <script type="text/javascript" src="../../extjs2.0/source/locale/ext-lang-zh_CN.js"></script>
+  <script type="text/javascript">
+	Ext.onReady(function(){
+		//创建根节点
+		var root = new Ext.tree.TreeNode({
+			text : '菜单根节点',
+			expanded : true//默认展开根节点
+		});
+		//为根节点添加子节点
+		root.appendChild(new Ext.tree.TreeNode({
+			text : '一级菜单A'
+		}));
+		root.appendChild(new Ext.tree.TreeNode({
+			text : '一级菜单B'
+		}));
+		//创建Tree面板组件
+		var tree = new Ext.tree.TreePanel({
+			title : 'TreeEditor示例',
+			width : 200,
+			height : 150,
+			applyTo : 'tree-div',
+			root : root
+		});
+		//创建树节点编辑器
+		new Ext.tree.TreeEditor(tree);
+	});
+  </script>
+ </HEAD>
+ <BODY style="margin=10 10 10 10;">
+	<div id="tree-div"/>
+ </BODY>
+</HTML>

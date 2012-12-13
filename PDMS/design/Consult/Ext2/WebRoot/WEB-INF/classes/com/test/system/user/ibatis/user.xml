@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE sqlMap PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN"
+    "http://ibatis.apache.org/dtd/sql-map-2.dtd">
+
+<sqlMap namespace="User">
+
+	<cacheModel id="userCache" type="LRU">
+		<flushInterval hours="24" />
+		<property name="size" value="1000" />
+	</cacheModel>
+
+	<typeAlias alias="user" type="com.test.system.user.model.UserModel" />
+
+	<resultMap id="userResult" class="user">
+		<result property="u_id" column="U_ID" />
+		<result property="g_id" column="G_ID" />
+		<result property="loginname" column="LOGINNAME" />
+		<result property="password" column="PASSWORD" />
+		<result property="username" column="USERNAME" />
+		<result property="mobilephone" column="MOBILEPHONE" />
+		<result property="email" column="EMAIL" />
+		<result property="createtime" column="CREATETIME" />
+		<result property="u_type" column="U_TYPE" />
+		<result property="lastlogintime" column="LASTLOGINTIME" />
+		<result property="logincount" column="LOGINCOUNT" />
+		<result property="status" column="STATUS" />
+	</resultMap>
+
+	<insert id="createUser" parameterClass="user">
+		insert into T_SYS_USER ( U_ID
+		<isNotNull prepend="," property="g_id">G_ID</isNotNull>
+		<isNotNull prepend="," property="loginname">
+			LOGINNAME
+		</isNotNull>
+		<isNotNull prepend="," property="password">PASSWORD</isNotNull>
+		<isNotNull prepend="," property="username">USERNAME</isNotNull>
+		<isNotNull prepend="," property="mobilephone">
+			MOBILEPHONE
+		</isNotNull>
+		<isNotNull prepend="," property="email">EMAIL</isNotNull>
+		<isNotNull prepend="," property="createtime">
+			CREATETIME
+		</isNotNull>
+		<isNotNull prepend="," property="u_type">U_TYPE</isNotNull>
+		<isNotNull prepend="," property="lastlogintime">
+			LASTLOGINTIME
+		</isNotNull>
+		<isNotNull prepend="," property="logincount">
+			LOGINCOUNT
+		</isNotNull>
+		<isNotNull prepend="," property="status">STATUS</isNotNull>
+		)values( NEXT VALUE FOR T_SYS_USER_SEQ
+		<isNotNull prepend="," property="g_id">#g_id#</isNotNull>
+		<isNotNull prepend="," property="loginname">
+			#loginname#
+		</isNotNull>
+		<isNotNull prepend="," property="password">
+			#password#
+		</isNotNull>
+		<isNotNull prepend="," property="username">
+			#username#
+		</isNotNull>
+		<isNotNull prepend="," property="mobilephone">
+			#mobilephone#
+		</isNotNull>
+		<isNotNull prepend="," property="email">#email#</isNotNull>
+		<isNotNull prepend="," property="createtime">
+			#createtime#
+		</isNotNull>
+		<isNotNull prepend="," property="u_type">#u_type#</isNotNull>
+		<isNotNull prepend="," property="lastlogintime">
+			#lastlogintime#
+		</isNotNull>
+		<isNotNull prepend="," property="logincount">
+			#logincount#
+		</isNotNull>
+		<isNotNull prepend="," property="status">#status#</isNotNull>
+		)
+	</insert>
+
+	<update id="updateUser" parameterClass="user">
+		update T_SYS_USER set U_ID=#u_id#
+		<isNotNull prepend="," property="g_id">G_ID=#g_id#</isNotNull>
+		<isNotNull prepend="," property="loginname">
+			LOGINNAME=#loginname#
+		</isNotNull>
+		<isNotNull prepend="," property="password">
+			PASSWORD=#password#
+		</isNotNull>
+		<isNotNull prepend="," property="username">
+			USERNAME=#username#
+		</isNotNull>
+		<isNotNull prepend="," property="mobilephone">
+			MOBILEPHONE=#mobilephone#
+		</isNotNull>
+		<isNotNull prepend="," property="email">
+			EMAIL=#email#
+		</isNotNull>
+		<isNotNull prepend="," property="createtime">
+			CREATETIME=#createtime#
+		</isNotNull>
+		<isNotNull prepend="," property="u_type">
+			U_TYPE=#u_type#
+		</isNotNull>
+		<isNotNull prepend="," property="lastlogintime">
+			LASTLOGINTIME=#lastlogintime#
+		</isNotNull>
+		<isNotNull prepend="," property="logincount">
+			LOGINCOUNT=#logincount#
+		</isNotNull>
+		<isNotNull prepend="," property="status">
+			STATUS=#status#
+		</isNotNull>
+		where U_ID=#u_id#
+
+	</update>
+
+	<delete id="deleteUser" parameterClass="user">
+		delete from T_SYS_USER where U_ID=#u_id#
+	</delete>
+
+	<select id="getUser" resultMap="userResult" parameterClass="user">
+		select * from T_SYS_USER
+		<dynamic prepend="where">
+			<isNotNull prepend="and" property="u_id">
+				U_ID=#u_id#
+			</isNotNull>
+			<isNotNull prepend="and" property="loginname">
+				LOGINNAME=#loginname#
+			</isNotNull>
+			<isNotNull prepend="and" property="password">
+				PASSWORD=#password#
+			</isNotNull>
+		</dynamic>
+	</select>
+
+	<select id="getUserList" resultMap="userResult"
+		parameterClass="user">
+		select * from T_SYS_USER
+		<dynamic prepend="where">
+			<isNotNull prepend="and" property="u_id">
+				U_ID=#u_id#
+			</isNotNull>
+			<isNotNull prepend="and" property="g_id">
+				G_ID=#g_id#
+			</isNotNull>
+			<isNotNull prepend="and" property="loginname">
+				LOGINNAME=#loginname#
+			</isNotNull>
+			<isNotNull prepend="and" property="password">
+				PASSWORD=#password#
+			</isNotNull>
+			<isNotNull prepend="and" property="username">
+				USERNAME like #username#
+			</isNotNull>
+			<isNotNull prepend="and" property="mobilephone">
+				MOBILEPHONE=#mobilephone#
+			</isNotNull>
+			<isNotNull prepend="and" property="email">
+				EMAIL=#email#
+			</isNotNull>
+			<isNotNull prepend="and" property="createtime">
+				CREATETIME=#createtime#
+			</isNotNull>
+			<isNotNull prepend="and" property="u_type">
+				U_TYPE=#u_type#
+			</isNotNull>
+			<isNotNull prepend="and" property="lastlogintime">
+				LASTLOGINTIME=#lastlogintime#
+			</isNotNull>
+			<isNotNull prepend="and" property="logincount">
+				LOGINCOUNT=#logincount#
+			</isNotNull>
+			<isNotNull prepend="and" property="status">
+				STATUS=#status#
+			</isNotNull>
+		</dynamic>
+	</select>
+
+	<select id="getUserCount" resultClass="int" parameterClass="user">
+		select count(*) from T_SYS_USER
+		<dynamic prepend="where">
+			<isNotNull prepend="and" property="u_id">
+				U_ID=#u_id#
+			</isNotNull>
+			<isNotNull prepend="and" property="g_id">
+				G_ID=#g_id#
+			</isNotNull>
+			<isNotNull prepend="and" property="loginname">
+				LOGINNAME=#loginname#
+			</isNotNull>
+			<isNotNull prepend="and" property="password">
+				PASSWORD=#password#
+			</isNotNull>
+			<isNotNull prepend="and" property="username">
+				USERNAME like #username#
+			</isNotNull>
+			<isNotNull prepend="and" property="mobilephone">
+				MOBILEPHONE=#mobilephone#
+			</isNotNull>
+			<isNotNull prepend="and" property="email">
+				EMAIL=#email#
+			</isNotNull>
+			<isNotNull prepend="and" property="createtime">
+				CREATETIME=#createtime#
+			</isNotNull>
+			<isNotNull prepend="and" property="u_type">
+				U_TYPE=#u_type#
+			</isNotNull>
+			<isNotNull prepend="and" property="lastlogintime">
+				LASTLOGINTIME=#lastlogintime#
+			</isNotNull>
+			<isNotNull prepend="and" property="logincount">
+				LOGINCOUNT=#logincount#
+			</isNotNull>
+			<isNotNull prepend="and" property="status">
+				STATUS=#status#
+			</isNotNull>
+		</dynamic>
+	</select>
+
+</sqlMap>

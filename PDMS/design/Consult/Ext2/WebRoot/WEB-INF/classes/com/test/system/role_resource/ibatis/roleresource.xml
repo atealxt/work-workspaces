@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE sqlMap PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN"
+    "http://ibatis.apache.org/dtd/sql-map-2.dtd">
+
+<sqlMap namespace="RoleResource">
+
+	<cacheModel id="roleresourceCache" type="LRU">
+		<flushInterval hours="24" />
+		<property name="size" value="1000" />
+	</cacheModel>
+
+	<typeAlias alias="roleresource"
+		type="com.test.system.role_resource.model.RoleResourceModel" />
+
+	<resultMap id="roleresourceResult" class="roleresource">
+		<result property="id" column="ID" />
+		<result property="r_id" column="R_ID" />
+		<result property="s_id" column="S_ID" />
+	</resultMap>
+
+	<insert id="createRoleResource" parameterClass="roleresource">
+		insert into T_ROLE_RESOURCE ( ID
+		<isNotNull prepend="," property="r_id">R_ID</isNotNull>
+		<isNotNull prepend="," property="s_id">S_ID</isNotNull>
+		)values( NEXT VALUE FOR T_ROLE_RESOURCE_SEQ
+		<isNotNull prepend="," property="r_id">#r_id#</isNotNull>
+		<isNotNull prepend="," property="s_id">#s_id#</isNotNull>
+		)
+	</insert>
+
+	<update id="updateRoleResource" parameterClass="roleresource">
+		update T_ROLE_RESOURCE set ID=#id#
+		<isNotNull prepend="," property="r_id">R_ID=#r_id#</isNotNull>
+		<isNotNull prepend="," property="s_id">S_ID=#s_id#</isNotNull>
+		where ID=#id#
+
+	</update>
+
+	<delete id="deleteRoleResource" parameterClass="roleresource">
+		delete from T_ROLE_RESOURCE where R_ID=#r_id#
+		<isNotNull prepend="or" property="s_id">
+			S_ID=#s_id#
+		</isNotNull>
+	</delete>
+
+	<select id="getRoleResource" resultMap="roleresourceResult"
+		parameterClass="roleresource">
+		select * from T_ROLE_RESOURCE where ID=#id#
+	</select>
+
+	<select id="getRoleResourceList" resultMap="roleresourceResult"
+		parameterClass="roleresource">
+		select * from T_ROLE_RESOURCE
+		<dynamic prepend="where">
+			<isNotNull prepend="and" property="id">ID=#id#</isNotNull>
+			<isNotNull prepend="and" property="r_id">
+				R_ID=#r_id#
+			</isNotNull>
+			<isNotNull prepend="and" property="s_id">
+				S_ID=#s_id#
+			</isNotNull>
+		</dynamic>
+	</select>
+
+	<select id="getRoleResourceCount" resultClass="int"
+		parameterClass="roleresource">
+		select count(*) from T_ROLE_RESOURCE
+		<dynamic prepend="where">
+			<isNotNull prepend="and" property="id">ID=#id#</isNotNull>
+			<isNotNull prepend="and" property="r_id">
+				R_ID=#r_id#
+			</isNotNull>
+			<isNotNull prepend="and" property="s_id">
+				S_ID=#s_id#
+			</isNotNull>
+		</dynamic>
+	</select>
+	
+</sqlMap>

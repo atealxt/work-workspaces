@@ -1,0 +1,106 @@
+~~ FCKeditor - The text editor for Internet - http://www.fckeditor.net
+~~ Copyright (C) 2003-2008 Frederico Caldeira Knabben
+~~ 
+~~ == BEGIN LICENSE ==
+~~ 
+~~ Licensed under the terms of any of the following licenses at your
+~~ choice:
+~~ 
+~~  - GNU General Public License Version 2 or later (the "GPL")
+~~    http://www.gnu.org/licenses/gpl.html
+~~ 
+~~  - GNU Lesser General Public License Version 2.1 or later (the "LGPL")
+~~    http://www.gnu.org/licenses/lgpl.html
+~~ 
+~~  - Mozilla Public License Version 1.1 or later (the "MPL")
+~~    http://www.mozilla.org/MPL/MPL-1.1.html
+~~ 
+~~ == END LICENSE ==
+~~ @version $Id: installation.apt.vm 2162 2008-07-03 18:11:08Z mosipov $
+                        ------------------------------
+                                Download
+                        ------------------------------
+
+Download Guide
+
+  We provide several distributions for different purposes. Choose a distribution
+  which fits best in your environment. Every distribution is available in our
+  {{{http://sourceforge.net/project/showfiles.php?group_id=75348&package_id=129511}download area}}.
+
+* Binary distribution
+
+    [Requirements:] You need at least JRE 1.4 and a Servlet 2.4/JSP 2.0 compliant 
+                    server implementation to run the integration pack.
+
+** Using Maven 2
+
+   Declare a dependency reference to the library in the dependencies section of 
+   your POM and Maven 2 will do the rest for you:
+
++------------------------------------------------------------------------------+
+<dependency>
+  <groupId>net.fckeditor</groupId>
+  <artifactId>java-core</artifactId>
+  <version>${currentVersion}</version>
+</dependency>
++------------------------------------------------------------------------------+
+
+** Manual download
+
+   We provide two binary distributions, read on to learn more!
+
+   * <<<fckeditor-java-core-${currentVersion}.jar>>>
+
+     The core library for those who have all dependencies already present.
+
+   * <<<fckeditor-java-${currentVersion}-bin.zip>>> (or <<<tar.gz>>>)
+
+     If you are starting from scratch, this distribution fits best. This package
+     comes with pre-built jars, all dependencies, the entire documentation for
+     offline usage and the license file.
+
+     The pre-built jars are:
+
+*---------------------------------------------------+--------------------------------------+
+|| File                                             || Description                        ||
+*---------------------------------------------------+--------------------------------------+
+| fckeditor-java-core-${currentVersion}.jar         | main jar                             |
+*---------------------------------------------------+--------------------------------------+
+| fckeditor-java-core-${currentVersion}-javadoc.jar | optional javadoc for IDE integration |
+*---------------------------------------------------+--------------------------------------+
+
+     The <<<lib>>> folder contains the following dependencies:
+
+*--------------------------------------------+----------------------------------+
+|| File                                      || Description                    ||
+*--------------------------------------------+----------------------------------+
+| commons-fileupload-1.2.1.jar               | Apache Commons FileUpload library|
+*--------------------------------------------+----------------------------------+
+| commons-io-1.3.2.jar                       | Apache Commons IO library        |
+*--------------------------------------------+----------------------------------+
+| slf4j-api-${slf4jVersion}.jar              | Simple logging facade library    |
+*--------------------------------------------+----------------------------------+
+
+   []
+
+* Source distribution
+
+    [Requirements:] You need at least Maven 2.0.8 and JDK 5 to compile the
+                    integration pack.
+
+  * <<<fckeditor-java-${currentVersion}-src.zip>>> (or <<<tar.gz>>>)
+
+    If you want to checkout the integration pack's source code, refit to your
+    needs (obeying the license terms) or compile yourself, this is the perfect
+    distribution for you.
+
+  []
+
+A word on Logging
+
+    [Attention:] Do <not> skip this section otherwise your application will <<fail>>!
+
+  We use the state-of-the-art logging facade <<<SLF4J>>>. To make SFL4J work at
+  runtime, you have to add <<one>> binding and the corresponding backend (may
+  be optional) into your classpath. Please check the {{{http://slf4j.org}SLF4J website}}
+  for more information on bindings and the API itself.

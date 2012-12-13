@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+  <class name="org.py.hib.relation.one2many.Child" table="child">
+    <id column="id" length="32" name="id" type="java.lang.String">
+      <generator class="uuid"/>
+    </id>
+    <property column="name" length="128" name="name" not-null="true" type="java.lang.String"/>
+    <many-to-one class="org.py.hib.relation.one2many.Father" column="father_id" name="father"/>
+  </class>
+</hibernate-mapping>

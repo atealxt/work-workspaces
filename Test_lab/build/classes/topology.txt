@@ -1,0 +1,11 @@
+## X a
+# Y b
+a b 2
+a c 1
+b c 2
+b d 4
+d e 2
+c e 6
+d f 3
+e f 2
+c d 4

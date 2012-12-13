@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<data>
+   <row>
+       <guid>111</guid>
+       <createDate>2008-05-01</createDate>
+       <title>aaa</title>
+       <type>typeA</type>
+   </row>
+   <row>
+       <grid>222</grid>
+       <createDate>2008-05-20</createDate>
+       <title>bbb</title>
+       <type>typeB</type>
+   </row>
+</data>

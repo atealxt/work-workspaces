@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+  <class name="com.herograve.hbn.component.TUser" table="TUser">
+    <id access="field" length="32" name="id" type="string">
+      <generator class="uuid"/>
+    </id>
+    <component class="com.herograve.hbn.component.Name" name="name">
+      <property name="firstname" type="string"/>
+      <property name="lastname" type="string"/>
+    </component>
+    <component class="com.herograve.hbn.component.Contact" name="contact">
+      <property name="zipcode" type="string"/>
+      <property name="tel" type="string"/>
+      <property name="address" type="string"/>
+    </component>
+  </class>
+</hibernate-mapping>

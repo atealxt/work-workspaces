@@ -1,0 +1,58 @@
+﻿<HTML>
+ <HEAD>
+  <TITLE>Ext.tree.MultiSelectionModel示例</TITLE>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <link rel="stylesheet" type="text/css" href="../../extjs2.0/resources/css/ext-all.css" />
+  <script type="text/javascript" src="../../extjs2.0/adapter/ext/ext-base.js"></script>
+  <script type="text/javascript" src="../../extjs2.0/ext-all.js"></script>
+  <script type="text/javascript" src="../../extjs2.0/source/locale/ext-lang-zh_CN.js"></script>
+  <script type="text/javascript">
+	Ext.onReady(function(){
+		//创建根节点
+		var root = new Ext.tree.TreeNode({
+			text : '菜单根节点',
+			expanded : true//默认展开根节点
+		});
+		var node = new Ext.tree.TreeNode({
+			text : '一级菜单A'
+		});
+		node.appendChild(new Ext.tree.TreeNode({
+			text : '二级菜单A'
+		}));
+		node.appendChild(new Ext.tree.TreeNode({
+			text : '二级菜单B'
+		}));
+		//为根节点添加子节点
+		root.appendChild(node);
+		root.appendChild(new Ext.tree.TreeNode({
+			text : '一级菜单B'
+		}));
+		//创建Tree面板组件
+		var tree = new Ext.tree.TreePanel({
+			tbar : [{
+				text : '取得被选节点',
+				handler : function(){
+					var sm = tree.getSelectionModel();//取得树的选择模式对象
+					var nodeArray = sm.getSelectedNodes();//取得当前选中的节点
+					var length = nodeArray.length;
+					if(length != 0){
+						alert("当前选中"+length+"个节点。");//显示节点文本
+					}else{
+						alert("当前未选择任何节点。");
+					}
+				}
+			}],
+			title : 'MultiSelectionModel示例',
+			width : 200,
+			height : 150,
+			applyTo : 'tree-div',
+			selModel : new Ext.tree.MultiSelectionModel(),//设置树的多选模式
+			root : root
+		});
+	});
+  </script>
+ </HEAD>
+ <BODY style="margin=10 10 10 10;">
+	<div id="tree-div"/>
+ </BODY>
+</HTML>

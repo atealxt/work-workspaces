@@ -1,0 +1,486 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html dir="ltr" xml:lang="zh-CN" xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Ext.ux.TabCloseMenu插件的使用（TabPanel右键关闭菜单） 示例 - crabdave - JavaEye技术网站</title>
+    <meta name="description" content="Ext.ux.TabCloseMenu插件的使用（TabPanel右键关闭菜单） 示例 效果： &nbsp;  创建调用的HTML： &lt;html&gt;&lt;head&gt;&lt;meta http-equiv= Content-Type  content= text/html; charset=GBK  /&gt;&lt;title&gt;&lt;/title&gt;&lt;link rel= s ...">
+    <meta name="keywords" content="ext.ux.tabclosemenu插件的使用（tabpanel右键关闭菜单） 示例  Ext.ux.TabCloseMenu插件的使用（TabPanel右键关闭菜单） 示例">
+    <link rel="shortcut icon" href="http://crabdave.javaeye.com/images/favicon.ico" type="image/x-icon">
+    <link href="http://crabdave.javaeye.com/rss" rel="alternate" title="crabdave" type="application/rss+xml">
+    <link href="TabPanel_right_click_files/blog.css" media="screen" rel="stylesheet" type="text/css">
+<link href="TabPanel_right_click_files/blue.css" media="screen" rel="stylesheet" type="text/css">
+    <script src="TabPanel_right_click_files/application.js" type="text/javascript"></script>
+      <link href="TabPanel_right_click_files/SyntaxHighlighter.css" media="screen" rel="stylesheet" type="text/css">
+  <script src="TabPanel_right_click_files/shCoreCommon.js" type="text/javascript"></script>
+  <style>
+    div#main {background-color: transparent; border: 0; padding: 0px; width: 740px;}
+  </style>
+  <link href="TabPanel_right_click_files/ui.css" media="screen" rel="stylesheet" type="text/css">
+  <script src="TabPanel_right_click_files/compress.js" type="text/javascript"></script>
+  </head><body>
+    <div id="header">
+      <div id="blog_site_nav">
+  <a href="http://www.javaeye.com/" class="homepage">首页</a>
+  <a href="http://www.javaeye.com/news">新闻</a>
+  <a href="http://www.javaeye.com/forums">论坛</a>
+  <a href="http://www.javaeye.com/blogs">博客</a>
+  <a href="http://job.javaeye.com/">招聘</a>
+  <a href="#" onclick="return false;" id="msna"><u>更多</u> <small>▼</small></a>
+  <div class="quick_menu" style="display: none;">
+    <a href="http://www.javaeye.com/ask">问答</a>
+    <a href="http://www.javaeye.com/wiki">知识库</a>
+    <a href="http://www.javaeye.com/groups">圈子</a>
+    <a href="http://www.javaeye.com/search">搜索</a>
+  </div>
+</div>
+      <div id="user_nav">
+      <a href="http://atealxt.javaeye.com/" class="welcome" title="查看我的博客首页">欢迎 atealxt</a>
+    
+      <a href="http://app.javaeye.com/messages" title="发送站内短信">收件箱</a>
+    
+    
+      <a href="http://app.javaeye.com/feed" title="查看我的订阅">订 阅</a>
+    
+    <div class="quick_menu" style="left: 724px; display: none;">
+      <a href="http://app.javaeye.com/feed">我的订阅</a>
+      <a href="http://app.javaeye.com/feed/my">我的参与</a>
+      <a href="http://app.javaeye.com/feed/all">全站动态</a>
+    </div>
+    
+    <a href="http://app.javaeye.com/" title="我的应用首页">应 用</a>
+    <div class="quick_menu" style="left: 770px; display: none;">
+      <a href="http://app.javaeye.com/chat">闲 聊</a>
+      <a href="http://app.javaeye.com/links">收 藏</a>
+      <a href="http://app.javaeye.com/profile">个人资料</a>
+    </div>
+    <a href="http://atealxt.javaeye.com/admin" title="管理我的博客">博 客</a>
+    
+      <a href="http://app.javaeye.com/mygroup" title="查看我的圈子">圈 子</a>
+    
+    <a href="http://crabdave.javaeye.com/logout" class="nobg" onclick="var f = document.createElement('form'); f.style.display = 'none'; this.parentNode.appendChild(f); f.method = 'POST'; f.action = this.href;var m = document.createElement('input'); m.setAttribute('type', 'hidden'); m.setAttribute('name', '_method'); m.setAttribute('value', 'put'); f.appendChild(m);f.submit();return false;">退出</a>
+  </div>
+
+    </div>
+
+    <div id="page">
+      <div id="branding" class="clearfix">
+        <div id="blog_name"><h1><a href="http://crabdave.javaeye.com/">crabdave</a></h1></div>
+        <div id="blog_preview"></div>
+        <div id="blog_domain">永久域名 <a href="http://crabdave.javaeye.com/">http://crabdave.javaeye.com</a></div>
+      </div>
+      
+      
+      <div id="content" class="clearfix">
+        <div id="main">
+          
+
+
+          
+
+
+<div class="blog_main"> 
+  <div id="blog_nav">
+    
+    <div id="pre_next">
+      <a href="http://crabdave.javaeye.com/blog/328023" class="next">ExtJS编写的youtube视频播放组件 示例</a>
+      |
+      <a href="http://crabdave.javaeye.com/blog/327343" class="pre">Ext.ux.form.BrowseButton组件的使用（上传 ...</a>
+    </div>
+  </div>
+  <div class="blog_title">
+    <div class="date"><span class="year">2009</span><span class="sep_year">-</span><span class="month">02</span><span class="sep_month">-</span><span class="day">13</span></div>
+    <h3 class="type_reprint" title="转载"><a href="http://crabdave.javaeye.com/blog/327978">Ext.ux.TabCloseMenu插件的使用（<span class="hilite1">TabPanel</span>右键关闭菜单） 示例</a></h3>
+        <strong>关键字: ext.ux.tabclosemenu插件的使用（<span class="hilite1">tabpanel</span>右键关闭菜单） 示例</strong>
+  </div>
+
+  <div class="blog_content">
+    <p style="text-align: center;"><strong><span style="font-size: medium;">Ext.ux.TabCloseMenu插件的使用（<span class="hilite1">TabPanel</span>右键关闭菜单） 示例</span></strong></p>
+<p><strong>效果：</strong></p>
+<p>&nbsp;</p>
+<p style="text-align: center;"><img src="TabPanel_right_click_files/32cd32a3-2a45-3e6a-8513-d65a7c48c2f5.jpg" alt="" height="100" width="176"></p>
+<p><strong>创建调用的HTML：</strong></p>
+<p>&lt;html&gt;<br>&lt;head&gt;<br>&lt;meta http-equiv="Content-Type" content="text/html; charset=GBK" /&gt;<br>&lt;title&gt;&lt;/title&gt;<br>&lt;link rel="stylesheet" type="text/css" href="extjs/resources/css/ext-all.css" /&gt;<br>&nbsp;&lt;script type="text/javascript" src="extjs/adapter/ext/ext-base.js"&gt;&lt;/script&gt;<br>&nbsp;&lt;script type="text/javascript" src="extjs/ext-all.js"&gt;&lt;/script&gt;<br>&nbsp;&lt;script type="text/javascript" src="./TabCloseMenu.js"&gt;&lt;/script&gt;<br>&lt;style type="text/css"&gt;<br>&lt;/style&gt;<br>&lt;script&gt;<br>Ext.onReady(function(){<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; new Ext.<span class="hilite1">TabPanel</span>({<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; renderTo : document.body,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; region:'fit',<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; deferredRender:false,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; activeTab:0,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; resizeTabs:true, // turn on tab resizing<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; minTabWidth: 115,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; tabWidth:135,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; enableTabScroll:true,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+items:[{title:"title1",id:'tab1',closable:true},{title:"title2",id:'tab2',closable:true},{title:"title3",id:'tab3',closable:true}],<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; plugins: new Ext.ux.TabCloseMenu()<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; });<br>});<br>&lt;/script&gt;<br>&lt;/head&gt;<br>&lt;body&gt;<br>&lt;/body&gt;<br>&lt;/html&gt;</p>
+<p>&nbsp;</p>
+<p><strong>Ext.ux.TabCloseMenu文件源码：</strong></p>
+<p>/*<br>&nbsp;* Ext JS Library 2.2<br>&nbsp;* Copyright(c) 2006-2008, Ext JS, LLC.<br>&nbsp;* <a href="mailto:licensing@extjs.com">licensing@extjs.com</a><br>&nbsp;* <br>&nbsp;* <a href="http://extjs.com/license">http://extjs.com/license</a><br>&nbsp;*/</p>
+<p><br>// Very simple plugin for adding a close context menu to tabs</p>
+<p>Ext.ux.TabCloseMenu = function(){<br>&nbsp;&nbsp;&nbsp; var tabs, menu, ctxItem;<br>&nbsp;&nbsp;&nbsp; this.init = function(tp){<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; tabs = tp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; tabs.on('contextmenu', onContextMenu);<br>&nbsp;&nbsp;&nbsp; }</p>
+<p>&nbsp;&nbsp;&nbsp; function onContextMenu(ts, item, e){<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if(!menu){ // create context menu on first right click<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; menu = new Ext.menu.Menu([{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; id: tabs.id + '-close',<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; text: '关闭标签',<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; handler : function(){<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+tabs.remove(ctxItem);<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; },{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; id: tabs.id + '-close-others',<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; text: '关闭其他标签',<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; handler : function(){<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+tabs.items.each(function(item){<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+if(item.closable &amp;&amp; item != ctxItem){<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+tabs.remove(item);<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+}<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; });<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; },{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; id: tabs.id + '-close-all',<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; text: '关闭全部标签',<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; handler : function(){<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+tabs.items.each(function(item){<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+if(item.closable){<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+tabs.remove(item);<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+}<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; });<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }]);<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ctxItem = item;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; var items = menu.items;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; items.get(tabs.id + '-close').setDisabled(!item.closable);<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; var disableOthers = true;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; tabs.items.each(function(){<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if(this != item &amp;&amp; this.closable){<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; disableOthers = false;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; return false;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; });<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; items.get(tabs.id + '-close-others').setDisabled(disableOthers);<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; var disableAll = true;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; tabs.items.each(function(){<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if(this.closable){<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; disableAll = false;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; return false;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; });<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; items.get(tabs.id + '-close-all').setDisabled(disableAll);<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; menu.showAt(e.getPoint());<br>&nbsp;&nbsp;&nbsp; }<br>};</p>
+  </div>
+  
+  
+
+  
+
+  <div class="blog_bottom">
+    <ul>
+      <li>10:35</li>
+      <li>浏览 (86)</li>
+            <li><a href="#comments">评论</a> (1)</li>
+      <li>分类: <a href="http://crabdave.javaeye.com/category/55330">ExtJS</a></li>
+      
+      
+        <li><a href="http://app.javaeye.com/links?user_favorite%5Btitle%5D=Ext.ux.TabCloseMenu%E6%8F%92%E4%BB%B6%E7%9A%84%E4%BD%BF%E7%94%A8%EF%BC%88TabPanel%E5%8F%B3%E9%94%AE%E5%85%B3%E9%97%AD%E8%8F%9C%E5%8D%95%EF%BC%89+%E7%A4%BA%E4%BE%8B&amp;user_favorite%5Burl%5D=http%3A%2F%2Fcrabdave.javaeye.com%2Fblog%2F327978" target="_blank" class="favorite">收藏</a></li>
+        
+      
+      
+      <li class="last"><a href="http://www.javaeye.com/wiki/topic/327978" target="_blank" class="more">相关推荐</a></li>
+    </ul>
+  </div>
+
+  
+  <div>
+      <script type="text/javascript">
+      alimama_pid="mm_11869632_1463873_3621604"; 
+      alimama_titlecolor="0000FF"; 
+      alimama_descolor ="000000"; 
+      alimama_bgcolor="FFFFFF"; 
+      alimama_bordercolor="E6E6E6"; 
+      alimama_linkcolor="008000"; 
+      alimama_bottomcolor="FFFFFF"; 
+      alimama_anglesize="0"; 
+      alimama_bgpic="0"; 
+      alimama_icon="0"; 
+      alimama_sizecode="14"; 
+      alimama_width=468; 
+      alimama_height=60; 
+      alimama_type=2; 
+      </script>
+      <script src="TabPanel_right_click_files/inf.js" type="text/javascript">
+      </script><img src="TabPanel_right_click_files/alimamal.html" name="alimamatmpf0.7138572563304811" id="alimamatmpf0.7138572563304811" style="border: 0px none ; margin: 0px; padding: 0px; width: 0px; height: 0px; vertical-align: baseline;" border="0"><iframe name="alimamaf0.7138572563304811" id="alimamaf0.7138572563304811" border="0" marginwidth="0" marginheight="0" style="width: 655px; height: 81px;" src="TabPanel_right_click_files/alimama.html" frameborder="0" scrolling="no"></iframe>  
+    </div>
+
+  <div class="blog_comment">
+    <h5>评论</h5>
+    <a id="comments" name="comments"></a>
+    <div id="bc903576">
+  <div class="comment_title">
+    <a href="http://bevis-cn.javaeye.com/" target="_blank">bevis.cn</a>
+    2009-02-28&nbsp;&nbsp;
+    <a href="#" onclick="quote_comment(this);return false;">回复</a>
+    
+  </div>
+  <div class="comment_content">我用了ext-2.0的jsp的左边的tree里调用Ext.ux.TabCloseMenu 。在右边的pannel里加一个tab ,这个tab里向服务器请求一个url，然后返回一个jsp。
+<br>那我遇到的问题，我想在加载这个jsp后，执行初始化的javascript,我用了 Eet.onReady()和window.onload也不行，是不是左边的tree在同一个页面有一个Ext.onReady,那我要怎么解决</div>
+</div>
+
+    
+    
+  </div>
+
+  <div class="blog_comment">
+    <h5>发表评论</h5>
+          
+      <form action="/blog/327978" id="comment_form" method="post" onsubmit="return false;">        
+
+
+  <input value="true" id="editor_bbcode_flag" type="hidden">
+
+
+
+<div id="editor_main"><div class="clearfix" id="editor_wrapper"><div id="bbcode_emotions"><h5>表情图标</h5><img src="TabPanel_right_click_files/icon_biggrin.gif"><img src="TabPanel_right_click_files/icon_smile.gif"><img src="TabPanel_right_click_files/icon_sad.gif"><img src="TabPanel_right_click_files/icon_surprised.gif"><img src="TabPanel_right_click_files/icon_eek.gif"><img src="TabPanel_right_click_files/icon_confused.gif"><img src="TabPanel_right_click_files/icon_cool.gif"><img src="TabPanel_right_click_files/icon_lol.gif"><img src="TabPanel_right_click_files/icon_mad.gif"><img src="TabPanel_right_click_files/icon_razz.gif"><img src="TabPanel_right_click_files/icon_redface.gif"><img src="TabPanel_right_click_files/icon_cry.gif"><img src="TabPanel_right_click_files/icon_evil.gif"><img src="TabPanel_right_click_files/icon_twisted.gif"><img src="TabPanel_right_click_files/icon_rolleyes.gif"><img src="TabPanel_right_click_files/icon_wink.gif"><img src="TabPanel_right_click_files/icon_exclaim.gif"><img src="TabPanel_right_click_files/icon_question.gif"><img src="TabPanel_right_click_files/icon_idea.gif"><img src="TabPanel_right_click_files/icon_arrow.gif"></div><div id="bbcode_controllers"><div id="bbcode_toolbar"><input id="button_bold" value="B" type="button"><input id="button_italic" value="I" type="button"><input id="button_underline" value="U" type="button"><input value="Quote" type="button"><input value="Code" type="button"><input value="List" type="button"><input value="List=" type="button"><input value="Img" type="button"><input value="URL" type="button"><input value="Flash" type="button"><br>字体颜色: <select id="select_color"><option value="black" style="color: black;">标准</option><option value="darkred" style="color: darkred;">深红</option><option value="red" style="color: red;">红色</option><option value="orange" style="color: orange;">橙色</option><option value="brown" style="color: brown;">棕色</option><option value="yellow" style="color: yellow;">黄色</option><option value="green" style="color: green;">绿色</option><option value="olive" style="color: olive;">橄榄</option><option value="cyan" style="color: cyan;">青色</option><option value="blue" style="color: blue;">蓝色</option><option value="darkblue" style="color: darkblue;">深蓝</option><option value="indigo" style="color: indigo;">靛蓝</option><option value="violet" style="color: violet;">紫色</option><option value="gray" style="color: gray;">灰色</option><option value="white" style="color: white;">白色</option><option value="black" style="color: black;">黑色</option></select>&nbsp;字体大小: <select id="select_font"><option value="0">标准</option><option value="xx-small">1 (xx-small)</option><option value="x-small">2 (x-small)</option><option value="small">3 (small)</option><option value="medium">4 (medium)</option><option value="large">5 (large)</option><option value="x-large">6 (x-large)</option><option value="xx-large">7 (xx-large)</option></select>&nbsp;对齐: <select id="select_align"><option value="0">标准</option><option value="left">居左</option><option value="center">居中</option><option value="right">居右</option></select></div><div id="bbcode_tooltip">提示：选择您需要装饰的文字, 按上列按钮即可添加上相应的标签</div><textarea class="validate-richeditor bad-words min-length-5" cols="40" id="editor_body" name="comment[body]" rows="20" style="width: 500px; height: 350px;"></textarea></div></div></div>
+
+
+<script type="text/javascript">
+  var editor = new Control.TextArea.Editor("editor_body", "bbcode", false);
+</script>
+        <p style="text-align: right; padding-right: 30px;"> <input class="submit" id="submit_button" name="commit" value="提交" type="submit"></p>
+      </form>
+      <script type="text/javascript">
+        new Validation("comment_form", {immediate: false, onFormValidate: function(result, form){
+  
+          if(result) {
+            new Ajax.Request('/blog/create_comment/327978', {
+              onSuccess:function(response){
+                Element.scrollTo($('comments'));
+                $('comments').insert({after:response.responseText})
+                $('editor_body').value = "";
+                form.spinner.hide();
+              }, parameters:Form.serialize(form)
+            });
+          }
+  
+      }});
+      </script>
+      </div>
+</div>
+
+
+<script type="text/javascript">
+  dp.SyntaxHighlighter.HighlightAll('code', true, true);
+
+  fix_image_size($$('div.blog_content img'), 700);
+  function quote_comment(link) {
+    var quote_user = $(link).previous(0).innerHTML;
+    var quote_body = $(link).up().next().innerHTML.stripTags();
+    editor.bbcode_editor.textarea.insertAfterSelection('[quote="'+quote_user+'"]\n' + quote_body + '\n[/quote]\n');
+  }
+</script>
+
+
+
+<script src="TabPanel_right_click_files/se_hilite.js" type="text/javascript"></script>
+<script type="text/javascript">
+document.observe('dom:loaded',function() {
+  Hilite.hiliteElement($("main"), "TabPanel 右键");
+      document.body.appendChild($('search_engine_box').remove());
+      $('search_engine_box').appear();
+});
+</script>
+      
+        </div>
+
+        <div id="local">
+          <div class="local_top"></div>
+          <div id="blog_owner">
+            <div id="blog_owner_logo"><a href="http://crabdave.javaeye.com/"><img alt="用户头像" class="logo" src="TabPanel_right_click_files/45aac3c3-7f21-3130-8001-d655837c6700.jpg" title="crabdave的博客: crabdave"></a></div>
+            <div id="blog_owner_name">crabdave</div>
+          </div>
+          
+          <div id="blog_actions">
+            <ul>
+              <li>浏览: 9073 次</li>
+              <li>性别: <img alt="Icon_minigender_1" src="TabPanel_right_click_files/icon_minigender_1.gif" title="男"></li>
+              <li>来自: 西安</li>
+              <li><img src="TabPanel_right_click_files/offline.gif"></li>
+              <li>
+                <a href="http://crabdave.javaeye.com/blog/profile" class="profile">详细资料</a>
+                <a href="http://crabdave.javaeye.com/blog/guest_book" class="guest_book">留言簿</a>
+              </li>
+              
+                <li>
+                  <a href="http://app.javaeye.com/messages/new?message%5Breceiver_name%5D=crabdave" class="message" title="发送站内短信">发短消息</a>
+                  
+                    <a href="http://app.javaeye.com/feed?subscription%5Bsubscribed_user_name%5D=crabdave" class="subscription" onclick="var f = document.createElement('form'); f.style.display = 'none'; this.parentNode.appendChild(f); f.method = 'POST'; f.action = this.href;f.submit();return false;">订阅</a>
+                  
+                </li>
+              
+            </ul>
+            <h5>搜索本博客</h5>
+            <form action="/blog/search" method="get">              <input class="text" id="query" name="query" style="margin-left: 10px; width: 110px;" type="text">
+              <input class="submit" value="搜索" type="submit">
+            </form>          </div>
+          
+            <div id="user_visits" class="clearfix">
+              <h5>最近访客</h5>
+              
+                <div class="left"><span class="logo"><a href="http://atealxt.javaeye.com/" target="_blank"><img alt="用户头像" class="logo" src="TabPanel_right_click_files/user-logo-thumb.gif" title="atealxt的博客: atealxt"></a></span> <a href="http://atealxt.javaeye.com/" target="_blank">atealxt</a></div>
+              
+                <div class="left"><span class="logo"><a href="http://javachs.javaeye.com/" target="_blank"><img alt="用户头像" class="logo" src="TabPanel_right_click_files/bd064ea4-7ddc-49f1-b55c-73634f09048b-thumb.jpg" title="javachs的博客: javachs"></a></span> <a href="http://javachs.javaeye.com/" target="_blank">javachs</a></div>
+              
+                <div class="left"><span class="logo"><a href="http://liqiotto.javaeye.com/" target="_blank"><img alt="用户头像" class="logo" src="TabPanel_right_click_files/user-logo-thumb.gif" title="liqiotto的博客: liqiotto"></a></span> <a href="http://liqiotto.javaeye.com/" target="_blank">liqiotto</a></div>
+              
+                <div class="left"><span class="logo"><a href="http://panhua2.javaeye.com/" target="_blank"><img alt="用户头像" class="logo" src="TabPanel_right_click_files/user-logo-thumb.gif" title="panhua2的博客: panhua2"></a></span> <a href="http://panhua2.javaeye.com/" target="_blank">panhua2</a></div>
+              
+              <div class="left" id="more_user_visits"><a href="http://crabdave.javaeye.com/blog/user_visits">&gt;&gt;更多访客</a></div>
+            </div>
+          
+                      <div id="blog_menu">
+              <h5>博客分类</h5>
+              <ul>
+                <li><a href="http://crabdave.javaeye.com/">全部博客 (51)</a></li>
+                
+                  <li><a href="http://crabdave.javaeye.com/category/31216">分页框架 (3)</a></li>
+                
+                  <li><a href="http://crabdave.javaeye.com/category/31217">JavaScript功能函数收集 (12)</a></li>
+                
+                  <li><a href="http://crabdave.javaeye.com/category/31405">数据库 (3)</a></li>
+                
+                  <li><a href="http://crabdave.javaeye.com/category/31433">报表组件 (1)</a></li>
+                
+                  <li><a href="http://crabdave.javaeye.com/category/43513">Java自定义标签 (2)</a></li>
+                
+                  <li><a href="http://crabdave.javaeye.com/category/43911">SVN点滴 (3)</a></li>
+                
+                  <li><a href="http://crabdave.javaeye.com/category/44350">Java常用功能代码收集 (2)</a></li>
+                
+                  <li><a href="http://crabdave.javaeye.com/category/46639">JavaScript学习 (2)</a></li>
+                
+                  <li><a href="http://crabdave.javaeye.com/category/46738">JXL组件 (1)</a></li>
+                
+                  <li><a href="http://crabdave.javaeye.com/category/55330">ExtJS (21)</a></li>
+                
+                  <li><a href="http://crabdave.javaeye.com/category/56055">CSS (1)</a></li>
+                
+              </ul>
+            </div>
+            
+              <div id="blog_album">
+                <h5>我的相册</h5>
+                <div class="picture_thumb" style="float: none;">
+                  <div><span class="thumb_box"><a href="http://crabdave.javaeye.com/album"><img alt="2593e911-1024-314e-a977-56a57bf19b2a-thumb" src="TabPanel_right_click_files/2593e911-1024-314e-a977-56a57bf19b2a-thumb.jpg"></a></span></div>
+                  <span>ExtJs_tabScrollerMenu<br> <a href="http://crabdave.javaeye.com/album">共 26 张</a></span>
+                </div>
+              </div>
+            
+            
+              <div id="guest_books">
+                <h5>我的留言簿 <span style="font-weight: normal; font-size: 12px; padding-left: 20px;"><a href="http://crabdave.javaeye.com/blog/guest_book">&gt;&gt;更多留言</a></span></h5>
+                <ul>
+                  
+                    <li>
+                      你好，刚看了你的可编辑的columntree，想问一下，可以指定columntre ...<br>
+                      -- by <a href="http://crabdave.javaeye.com/blog/guest_book#3597">kfliyangfan</a>
+                    </li>
+                  
+                </ul>
+              </div>
+            
+            <div id="blog_others">
+              <h5>其他分类</h5>
+              <ul>
+                <li><a href="http://crabdave.javaeye.com/blog/favorite">我的收藏</a> (0)</li>
+                                                <li><a href="http://crabdave.javaeye.com/blog/forum">我的论坛帖子</a> (8)</li>
+                <li><a href="http://crabdave.javaeye.com/blog/article">我的精华良好贴</a> (0)</li>
+                              </ul>
+            </div>
+            
+            <div id="recent_groups">
+              <h5>最近加入圈子</h5>
+              <ul>
+                
+                  <li><a href="http://grails.group.javaeye.com/">Groovy on Grails </a></li>
+                
+                  <li><a href="http://dojo.group.javaeye.com/">dojo</a></li>
+                
+                  <li><a href="http://srcgen.group.javaeye.com/">代码生成器</a></li>
+                
+                  <li><a href="http://jsi.group.javaeye.com/">JSI Side</a></li>
+                
+                  <li><a href="http://opendesign.group.javaeye.com/">开源设计组</a></li>
+                
+              </ul>
+            </div>
+            
+              <div id="user_links">
+                <h5>链接</h5>
+                <ul>
+                  
+                    <li><a href="http://www.cssrain.cn/" target="_blank">前沿技术</a></li>
+                  
+                    <li><a href="http://www.jdon.com/" target="_blank">Java解决之道</a></li>
+                  
+                    <li><a href="http://www.open-open.com/" target="_blank">Java开源大全</a></li>
+                  
+                    <li><a href="http://dev2dev.bea.com.cn/bbs/index.jspa" target="_blank">BEA</a></li>
+                  
+                </ul>
+              </div>
+            
+            
+                          <div id="month_blogs">
+                <h5>存档</h5>
+                <ul>
+                  
+                    <li><a href="http://crabdave.javaeye.com/blog/monthblog/2009-03">2009-03</a> (3)</li>
+                  
+                    <li><a href="http://crabdave.javaeye.com/blog/monthblog/2009-02">2009-02</a> (20)</li>
+                  
+                    <li><a href="http://crabdave.javaeye.com/blog/monthblog/2008-12">2008-12</a> (10)</li>
+                  
+                  <li><a href="http://crabdave.javaeye.com/blog/monthblog_more">更多存档...</a></li>
+                </ul>
+              </div>
+                        <div id="recent_comments">
+              <h5>最新评论</h5>
+              <ul>
+                
+                  <li>
+                    <a href="http://crabdave.javaeye.com/blog/333473#comments" title="ExtJS中editable-column-tree组件的使用 示例">ExtJS中editable-column- ...</a><br>
+                    文件损坏!<br>
+                    -- by <a href="http://youzi520.javaeye.com/" target="_blank">youzi520</a>
+                  </li>
+                
+                  <li>
+                    <a href="http://crabdave.javaeye.com/blog/325974#comments" title="ExtJS中如何给Label添加click事件">ExtJS中如何给Label添加 ...</a><br>
+                    太好了，谢谢，收藏一下！<br>
+                    -- by <a href="http://198191yt-163-com.javaeye.com/" target="_blank">telo.tao.yang</a>
+                  </li>
+                
+                  <li>
+                    <a href="http://crabdave.javaeye.com/blog/333911#comments" title="ExtJS GroupHeaderPlugin的使用 示例">ExtJS GroupHeaderPlugin ...</a><br>
+                    jfxia 写道有些bug，grid的列若是多了，显示会错位。区官方下载最新的1. ...<br>
+                    -- by <a href="http://379548695.javaeye.com/" target="_blank">379548695</a>
+                  </li>
+                
+                  <li>
+                    <a href="http://crabdave.javaeye.com/blog/333911#comments" title="ExtJS GroupHeaderPlugin的使用 示例">ExtJS GroupHeaderPlugin ...</a><br>
+                    有些bug，grid的列若是多了，显示会错位。<br>
+                    -- by <a href="http://jfxia.javaeye.com/" target="_blank">jfxia</a>
+                  </li>
+                
+                  <li>
+                    <a href="http://crabdave.javaeye.com/blog/327978#comments" title="Ext.ux.TabCloseMenu插件的使用（TabPanel右键关闭菜单） 示例">Ext.ux.TabCloseMenu插件 ...</a><br>
+                    我用了ext-2.0的jsp的左边的tree里调用Ext.ux.TabCloseM ...<br>
+                    -- by <a href="http://bevis-cn.javaeye.com/" target="_blank">bevis.cn</a>
+                  </li>
+                
+              </ul>
+            </div>
+            <div id="comments_top">
+              <h5>评论排行榜</h5>
+              <ul>
+                
+                  <li><a href="http://crabdave.javaeye.com/blog/189653">Open Flash Chart组件的使用</a></li>
+                
+                  <li><a href="http://crabdave.javaeye.com/blog/333911">ExtJS GroupHeaderPlugin的使用 示例</a></li>
+                
+                  <li><a href="http://crabdave.javaeye.com/blog/254309">如何理解js中temp = ( function(){ return  ...</a></li>
+                
+                  <li><a href="http://crabdave.javaeye.com/blog/299277">二级连动菜单</a></li>
+                
+                  <li><a href="http://crabdave.javaeye.com/blog/327978">Ext.ux.TabCloseMenu插件的使用（TabPanel ...</a></li>
+                
+              </ul>
+            </div>
+            <div id="rss">
+              <ul>
+                <li><a href="http://crabdave.javaeye.com/rss" target="_blank"><img alt="Rss" src="TabPanel_right_click_files/rss.png"></a></li>
+                <li><a href="http://fusion.google.com/add?feedurl=http://crabdave.javaeye.com/rss" target="_blank"><img alt="Rss_google" src="TabPanel_right_click_files/rss_google.gif"></a></li>
+                <li><a href="http://www.zhuaxia.com/add_channel.php?url=http://crabdave.javaeye.com/rss" target="_blank"><img alt="Rss_zhuaxia" src="TabPanel_right_click_files/rss_zhuaxia.gif"></a></li>
+                <li><a href="http://www.xianguo.com/subscribe.php?url=http://crabdave.javaeye.com/rss" target="_blank"><img alt="Rss_xianguo" src="TabPanel_right_click_files/rss_xianguo.jpg"></a></li>
+                <li><a href="http://www.google.com/search?hl=zh-CN&amp;q=RSS">[什么是RSS?]</a></li>
+              </ul>
+            </div>
+            <div class="local_bottom"></div>
+          
+        </div>
+      </div>
+
+      <div id="footer" class="clearfix">
+        <div id="copyright">
+          <hr>
+          声明：JavaEye文章版权属于作者，受法律保护。没有作者书面许可不得转载。若作者同意转载，必须以超链接形式标明文章原始出处和作者。<br>
+          © 2003-2009 JavaEye.com.   All rights reserved. 上海炯耐计算机软件有限公司 [ 沪ICP备05023328号 ]
+        </div>
+      </div>
+    </div>
+    
+  <div id="chat_input" style="display: none;">
+    <iframe id="chat_iframe" marginwidth="0" marginheight="0" allowtransparency="true" frameborder="0" scrolling="no"></iframe>
+  </div>
+  <div id="chat_button"><a href="#" onclick="$('chat_iframe').src='/chat/widget';return false;">闲聊一下 <img alt="Chat" src="TabPanel_right_click_files/chat.gif"></a></div>
+
+<script type="text/javascript">
+  document.write("<img src='http://stat.javaeye.com/?url="+ encodeURIComponent(document.location.href) + "&referrer=" + encodeURIComponent(document.referrer) + "&logged_in=yes" + "' width='0' height='0' />");
+</script><img src="TabPanel_right_click_files/a.gif" height="0" width="0">
+    
+  <div id="search_engine_box" style="">
+<h2>您正在搜索 <span class="hilite1">TabPanel</span> 右键 <a href="#" onclick="$('search_engine_box').hide();return false;">[ X ]</a></h2>
+<div>
+关键字已在页面上高亮显示<br>
+您可能对下列文章也感兴趣<ul><li><a href="http://www.javaeye.com/topic/143818" title="如何执行Ext.Panel 的 autoLoad 所加载的页面中的Js？？？" target="_blank">如何执行Ext.Panel 的 autoLoad  ...</a></li><li><a href="http://www.javaeye.com/topic/140757" title="基于Desktop风格设计的应用框架探索" target="_blank">基于Desktop风格设计的应用框架 ...</a></li><li><a href="http://www.javaeye.com/topic/145942" title="在下计划写一份extjs的使用教程，请诸位指教。" target="_blank">在下计划写一份extjs的使用教程 ...</a></li><li><a href="http://www.javaeye.com/topic/207542" title="终于可以在EXT中随便使用iframe了" target="_blank">终于可以在EXT中随便使用iframe ...</a></li><li><a href="http://www.javaeye.com/topic/48195" title="向大家介绍一个很棒的适合企业级开发的Ajax(yui-ext)" target="_blank">向大家介绍一个很棒的适合企业级 ...</a></li></ul>
+<a href="http://www.javaeye.com/search?type=all&amp;query=TabPanel%20%E5%8F%B3%E9%94%AE" target="_blank">站内搜索更多 <span class="hilite1">TabPanel</span> 右键</a>
+</div>
+</div></body></html>

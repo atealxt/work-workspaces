@@ -1,0 +1,158 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" type="text/css" href="extjs/resources/css/ext-all.css" /> 
+<link rel="stylesheet" href="common/common.css" type="text/css" media="all">
+<script type="text/javascript" src="extjs/adapter/ext/ext-base.js"></script>
+<script type="text/javascript" src="extjs/ext-all.js"></script>
+
+<script> 
+	
+	var tabs ;
+	
+	function fn() {
+ 	 	//test1: 
+ 	 	//alert('ExtJS库已加');
+
+ 	 	//test2: 
+ 		//Ext.MessageBox.alert("hello","Hello,easyjf open source");
+
+		//test3:
+ 		//var win=new Ext.Window({title:"hello",width:300,height:200,html:'<h1>Hello,easyjf open source</h1>'});
+ 		//win.show();
+
+ 		//test4:
+		//var panel=new Ext.Panel({title:"hello",width:300,height:200,html:'<h1>Hello,easyjf open source</h1>'});
+		//panel.render("FIRSTTEST");
+
+		//test5:
+		//var panel=new Ext.TabPanel({renderTo:"FIRSTTEST",width:300,height:200,items:[	
+		//	{title:"面板1",height:30},{title:"面板2",height:30},{title:"面板3",height:30}]
+		//});
+
+		//test6:
+		var b=new Ext.Button({	
+			id:"btn1",
+			renderTo:"divBtn",
+			text:"alert",		
+			handler:Ext.emptyFn	});		
+		Ext.get("btn1").on("click",funAlert,this,{delay:1000});
+		Ext.get("btnAlert").on("click",funAlert);
+
+		//test7:
+		var win=new Ext.Window({	
+			title:"关闭窗口",	
+			height:200,	
+			width:300,	
+			listeners:{"beforedestroy":function(obj){		
+				alert("beforedestroy!");			
+			}}		
+		});		
+		//win.show();
+		
+	    tabs = new Ext.TabPanel({
+	        renderTo: 'divtab',
+	        width:450,
+	        height:200,
+	        activeTab: 0,
+	        frame:true,
+	        items:[
+	            {contentEl:'baseinfo', title: 'base info'},
+	            {contentEl:'pswinfo', title: 'psw info'}
+	        ]
+	    });		
+		
+		
+ 			
+ 	 }
+
+	function funAlert(){
+		alert("abc!");
+	}
+	
+	function funPrompt(){
+		Ext.MessageBox.prompt('Name', 'Please enter your name:', showResultText);
+	}	
+	
+    	function showResultText(btn, text){
+    		alert(text);
+       	 	//Ext.example.msg('Button Click', 'You clicked the {0} button and entered the text "{1}".', btn, text);
+    	}
+    	
+    	function getSelTab(){
+    		if( tabs.activeTab.contentEl == "pswinfo" ){
+    			alert(tabs.activeTab.contentEl);
+    		}
+    	}
+
+	  
+ 	Ext.onReady(fn);
+
+ 	
+ </script>
+
+<title>title</title>
+</head>
+<body>
+	<h3>File created on : 2008/07/29, 13:51:59</h3>
+	
+	<div id="FIRSTTEST">&nbsp;</div>
+	
+	<div id="divBtn">&nbsp;</div>
+	<br/><input id="btnAlert" type="button" value="alert" />
+	<br/><input id="btnPrompt" type="button" value="alert" onclick="funPrompt()" />
+		
+		<br/>change:
+		<div id="divtab" class="defaultcontent">
+                        <div id="baseinfo" class="x-hide-display">
+                         	<table  align="left"  border="0" cellspacing="5">  
+			            <tr>			
+			                <td>face: <img src="picture/user/atealxt/face.png"></td>
+			                <td width="50" class="titleborder5"><input type="button" id="butImg" style="width:5em;" value="select" onclick="" disabled/></td>
+			            </tr> 
+			            <tr>			
+			                <td>Sex: </td>
+					  <td width="50" class="titleborder5">
+					   	<select name="select" id="sexsel"> 
+			                			<option value="0"> secret</option>
+			                			<option value="1"> male</option> 
+			                			<option value="2"> female</option>
+			                	</select>					   	
+					   </td>
+			            </tr>	
+			            <tr>			
+			                <td>Email: a@a.com</td>
+			                <td width="50" class="titleborder5"><input type="button" id="btnEma" style="width:5em;" value="select" onclick="" disabled/></td>
+			            </tr> 			            		            
+                             </table>
+                        </div>
+                        
+                        <div id="pswinfo" class="x-hide-display">
+                         	<p>
+                         	<table  align="left"  border="0" cellspacing="5">  
+			            <tr>			
+			                <td align="right">
+			                	old psw: <input type="password" id="password1" style="width:12em;" maxlength="16">
+			                </td>
+			                <td width="50" class="titleborder5"><input type="button" id="butOldp" style="width:5em;" value="forgot?" onclick="" disabled/></td>
+			            </tr>
+			            <tr>			
+			                <td align="right">
+			                	new psw: <input type="password" id="password1" style="width:12em;" maxlength="16">
+			                </td>
+			            </tr>	
+			            <tr>			
+			                <td align="right">
+			                	repeat: <input type="password" id="password1" style="width:12em;" maxlength="16">
+			                </td>
+			            </tr>		            
+                             </table>                         	
+                            </p>
+                        </div>                       
+                         
+		</div> 
+		<input type="submit" id="subUpdate" value="change!" onclick="" />			
+	
+</body>
+</html>

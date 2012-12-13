@@ -1,0 +1,111 @@
+#MySignature
+{
+	margin-top:10px;
+}
+
+#EntryTag
+{
+	margin-top:20px;
+	color:gray;
+	font-size:12px;
+}
+
+.topicListFooter
+{
+    	text-align:right;
+    	margin-right:10px;
+    	margin-top:10px;
+}
+
+#divRefreshComments
+{
+	text-align: right;
+	margin-right: 10px;
+	margin-bottom: 5px;
+	font-size: 12px;
+}
+
+.commentTextBox
+{
+	Width:480px;
+	height:220px;	
+}
+
+.commenttb
+{
+	width:320px;
+}
+
+#MyIng
+{
+    margin-top:5px;
+}
+
+.ing_title
+{
+    font-weight:bold;
+    text-align:center;
+    /*font-size:12px;*/
+}
+
+.ing_body
+{
+    margin-top:5px;
+    margin-bottom:5px;
+    /*font-size:12px;*/
+    word-break: break-all;
+}
+
+.ing_date
+{
+    text-align:center;
+    color: Gray;
+    font-size:11px;
+}
+
+.ing_footer
+{
+    text-align:right;
+    margin-right:5px;
+}
+
+#divNewMsg
+{
+    margin-top:2px;
+    text-align:center;
+}
+
+#divSendMsg
+{
+    
+}
+
+.commentform table td input{margin:2px auto;}
+
+.sendMsg2This:link,.sendMsg2This:visited,.sendMsg2This:active{
+	font-size:12px;
+	text-decoration:none;
+	background:url('/images/icoMsg.gif') no-repeat top left;
+}
+.sendMsg2This:hover{
+		background:url('/images/icoMsg.gif') no-repeat bottom left;
+}
+
+.RecentComment
+{
+    overflow:hidden;	
+}
+
+.cnblogs_code
+{
+	background-color: #eeeeee;
+	font-size: 13px;
+	border: 1px solid #CCCCCC;
+	padding-right: 5px;
+	padding-bottom: 4px;
+	padding-left: 4px;
+	padding-top: 4px;
+	width: 700px;
+	word-break: break-all;
+}
+

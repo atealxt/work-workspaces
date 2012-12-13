@@ -1,0 +1,17 @@
+<document>
+
+	<properties>
+		<title>Changes</title>
+	</properties>
+
+	<body>
+		<release version="2.4.1" date="2008-10-15"
+			description="Minor bugfixes and enhancements.">
+			<action dev="mosipov" type="fix" issue="2355">FCK:editor output is not XHTML 1.0 compliant</action>
+			<action dev="mosipov" type="fix" issue="2357">PropertiesLoader Exception when undeploying a webapp using FCKeditor.Java Integration</action>
+			<action dev="mosipov" type="fix" issue="2359">fckeditor-java-demo fails in Glassfish</action>
+			<action dev="mosipov" type="fix" issue="2372">Empty/non-set FCK:editor value causes NullPointerException</action>
+		</release>
+	</body>
+
+</document>

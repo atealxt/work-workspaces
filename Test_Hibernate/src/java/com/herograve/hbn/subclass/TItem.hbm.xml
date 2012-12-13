@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+  <class catalog="hibernatequickuse" name="com.herograve.hbn.subclass.TItem" table="item">
+    <id access="field" length="32" name="id" type="string">
+      <generator class="uuid"/>
+    </id>
+    <property length="32" name="name" type="string"/>
+    <property length="32" name="manufacturer" type="string"/>
+    <!--joined-subclass缺点：查询超类时子查询多，影响性能。-->
+    <joined-subclass name="com.herograve.hbn.subclass.TBook" table="hibernatequickuse.book">
+      <key column="id"/>
+      <property length="32" name="pageCount" type="integer"/>
+    </joined-subclass>
+    <joined-subclass name="com.herograve.hbn.subclass.TDvd" table="hibernatequickuse.dvd">
+      <key column="id"/>
+      <property length="32" name="regionCode" type="string"/>
+    </joined-subclass>
+    <discriminator column="dis_type" type="char"/>
+  </class>
+</hibernate-mapping>

@@ -1,0 +1,40 @@
+<html>
+<head>
+<title>Ext.ux.ManagedIFrame演示</title>
+<link rel="stylesheet" type="text/css" href="../../extjs2.0/resources/css/ext-all.css" />
+<script type="text/javascript" src="../../extjs2.0/adapter/ext/ext-base.js"></script>
+<script type="text/javascript" src="../../extjs2.0/ext-all.js"></script>
+<script type="text/javascript" src="miframe.js"></script>
+<script type="text/javascript">
+	Ext.onReady(function(){
+		var i = new Ext.ux.ManagedIFrame({
+			tagName:"IFRAME",
+			name:'myiframe',
+			id:'newiframe',
+			width:'400',
+			autoCreate:false
+		},{
+			listeners:{
+				'focus':function(){
+					alert("ok");
+				}
+			},
+			html:'将原有的iframe替成的新的iframe的内容'
+		});
+		
+		
+		var ifr = new Ext.ux.ManagedIFrame({
+			autoCreate:true,
+			border:'0'
+		});
+		ifr.update("自动创建的IFrame的内容");
+		ifr.applyStyles({overflow:'auto'});
+		ifr.applyStyles({width:'300'});
+	});
+</script>
+</head>
+<body>
+<iframe id="newiframe" frameborder="1" src="iframe.html"></iframe>
+<div id="newid"></div>
+</body>
+</html>

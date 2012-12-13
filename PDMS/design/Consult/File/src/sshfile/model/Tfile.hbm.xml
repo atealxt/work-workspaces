@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping>
+  <class name="sshfile.model.Tfile" table="T_FILE">
+    <id name="fileId" type="java.lang.String" column="FILE_ID">
+      <generator class="uuid.hex"/>
+    </id>
+    <property name="fileName"
+    type="java.lang.String"
+    column="FILE_NAME"
+    length="100"/>
+    <property name="fileContent"
+    type="org.springframework.orm.hibernate3.support.BlobByteArrayType"
+    column="FILE_CONTENT"
+    lazy="true"/>
+    <property name="remark"
+    type="java.lang.String"
+    column="REMARK"
+    length="400"/>
+  </class>
+</hibernate-mapping>

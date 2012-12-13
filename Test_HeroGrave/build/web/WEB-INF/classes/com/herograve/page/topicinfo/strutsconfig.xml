@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+
+    <package name="com.herograve.page.topicinfo" extends="struts-default">
+        <action name="Topicinfo" class="com.herograve.page.topicinfo.Topicinfo">
+            <result>/page/showtopicinfo.jsp</result>   
+            <result name="input">/page/error.jsp?errCode=${errCode}</result>
+        </action> 
+        
+        <action name="Reply" class="com.herograve.page.topicinfo.Reply">
+            <result>/page/${url}</result>   
+            <result name="input">/page/error.jsp?errCode=${errCode}</result>
+        </action>         
+        
+    </package>   
+    
+</struts>

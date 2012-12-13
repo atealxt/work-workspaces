@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE sqlMap PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN"
+    "http://ibatis.apache.org/dtd/sql-map-2.dtd">
+
+<sqlMap namespace="Resource">
+
+	<cacheModel id="resourceCache" type="LRU">
+		<flushInterval hours="24" />
+		<property name="size" value="1000" />
+	</cacheModel>
+
+	<typeAlias alias="resource"
+		type="com.test.system.resource.model.ResourceModel" />
+
+	<resultMap id="resourceResult" class="resource">
+		<result property="r_id" column="R_ID" />
+		<result property="p_rid" column="P_RID" />
+		<result property="r_name" column="R_NAME" />
+		<result property="r_desc" column="R_DESC" />
+		<result property="r_type" column="R_TYPE" />
+		<result property="linkaddress" column="LINKADDRESS" />
+		<result property="r_order" column="R_ORDER" />
+		<result property="status" column="STATUS" />
+	</resultMap>
+
+	<insert id="createResource" parameterClass="resource">
+		insert into T_SYS_RESOURCE ( R_ID
+		<isNotNull prepend="," property="p_rid">P_RID</isNotNull>
+		<isNotNull prepend="," property="r_name">R_NAME</isNotNull>
+		<isNotNull prepend="," property="r_desc">R_DESC</isNotNull>
+		<isNotNull prepend="," property="r_type">R_TYPE</isNotNull>
+		<isNotNull prepend="," property="linkaddress">
+			LINKADDRESS
+		</isNotNull>
+		<isNotNull prepend="," property="r_order">R_ORDER</isNotNull>
+		<isNotNull prepend="," property="status">STATUS</isNotNull>
+		)values( NEXT VALUE FOR T_SYS_RESOURCE_SEQ
+		<isNotNull prepend="," property="p_rid">#p_rid#</isNotNull>
+		<isNotNull prepend="," property="r_name">#r_name#</isNotNull>
+		<isNotNull prepend="," property="r_desc">#r_desc#</isNotNull>
+		<isNotNull prepend="," property="r_type">#r_type#</isNotNull>
+		<isNotNull prepend="," property="linkaddress">
+			#linkaddress#
+		</isNotNull>
+		<isNotNull prepend="," property="r_order">#r_order#</isNotNull>
+		<isNotNull prepend="," property="status">#status#</isNotNull>
+		)
+	</insert>
+
+	<update id="updateResource" parameterClass="resource">
+		update T_SYS_RESOURCE set R_ID=#r_id#
+		<isNotNull prepend="," property="p_rid">
+			P_RID=#p_rid#
+		</isNotNull>
+		<isNotNull prepend="," property="r_name">
+			R_NAME=#r_name#
+		</isNotNull>
+		<isNotNull prepend="," property="r_desc">
+			R_DESC=#r_desc#
+		</isNotNull>
+		<isNotNull prepend="," property="r_type">
+			R_TYPE=#r_type#
+		</isNotNull>
+		<isNotNull prepend="," property="linkaddress">
+			LINKADDRESS=#linkaddress#
+		</isNotNull>
+		<isNotNull prepend="," property="r_order">
+			R_ORDER=#r_order#
+		</isNotNull>
+		<isNotNull prepend="," property="status">
+			STATUS=#status#
+		</isNotNull>
+		where R_ID=#r_id#
+
+	</update>
+
+	<delete id="deleteResource" parameterClass="resource">
+		delete from T_SYS_RESOURCE where R_ID=#r_id#
+	</delete>
+
+	<select id="getResource" resultMap="resourceResult"
+		parameterClass="resource">
+		select * from T_SYS_RESOURCE where R_ID=#r_id#
+	</select>
+
+	<select id="getResourceList" resultMap="resourceResult"
+		parameterClass="resource">
+		select * from T_SYS_RESOURCE
+		<dynamic prepend="where">
+			<isNotNull prepend="and" property="r_id">
+				R_ID=#r_id#
+			</isNotNull>
+			<isNotNull prepend="and" property="p_rid">
+				P_RID=#p_rid#
+			</isNotNull>
+			<isNotNull prepend="and" property="r_name">
+				R_NAME=#r_name#
+			</isNotNull>
+			<isNotNull prepend="and" property="r_desc">
+				R_DESC=#r_desc#
+			</isNotNull>
+			<isNotNull prepend="and" property="r_type">
+				R_TYPE=#r_type#
+			</isNotNull>
+			<isNotNull prepend="and" property="linkaddress">
+				LINKADDRESS=#linkaddress#
+			</isNotNull>
+			<isNotNull prepend="and" property="r_order">
+				R_ORDER=#r_order#
+			</isNotNull>
+			<isNotNull prepend="and" property="status">
+				STATUS=#status#
+			</isNotNull>
+		</dynamic>
+		order by R_ORDER
+	</select>
+
+	<select id="getResourceCount" resultClass="int"
+		parameterClass="resource">
+		select count(*) from T_SYS_RESOURCE
+		<dynamic prepend="where">
+			<isNotNull prepend="and" property="r_id">
+				R_ID=#r_id#
+			</isNotNull>
+			<isNotNull prepend="and" property="p_rid">
+				P_RID=#p_rid#
+			</isNotNull>
+			<isNotNull prepend="and" property="r_name">
+				R_NAME=#r_name#
+			</isNotNull>
+			<isNotNull prepend="and" property="r_desc">
+				R_DESC=#r_desc#
+			</isNotNull>
+			<isNotNull prepend="and" property="r_type">
+				R_TYPE=#r_type#
+			</isNotNull>
+			<isNotNull prepend="and" property="linkaddress">
+				LINKADDRESS=#linkaddress#
+			</isNotNull>
+			<isNotNull prepend="and" property="r_order">
+				R_ORDER=#r_order#
+			</isNotNull>
+			<isNotNull prepend="and" property="status">
+				STATUS=#status#
+			</isNotNull>
+		</dynamic>
+	</select>
+	
+	<select id="getUserSourceList" resultMap="resourceResult"
+		parameterClass="resource">
+		select d.* from T_SYS_RESOURCE d,(
+			select distinct(c.s_id) 
+			from T_SYS_USER a,T_USER_ROLE b ,T_ROLE_RESOURCE c
+			where a.u_id = #u_id# 
+			and a.u_id = b.u_id
+			and b.r_id = c.r_id
+		) e 
+		where d.s_id = e.s_id
+		<isNotNull prepend="and" property="r_id">
+			d.R_ID=#r_id#
+		</isNotNull>
+		<isNotNull prepend="and" property="p_rid">
+			d.P_RID=#p_rid#
+		</isNotNull>
+		<isNotNull prepend="and" property="r_name">
+			d.R_NAME=#r_name#
+		</isNotNull>
+		<isNotNull prepend="and" property="r_desc">
+			d.R_DESC=#r_desc#
+		</isNotNull>
+		<isNotNull prepend="and" property="r_type">
+			d.R_TYPE=#r_type#
+		</isNotNull>
+		<isNotNull prepend="and" property="linkaddress">
+			d.LINKADDRESS=#linkaddress#
+		</isNotNull>
+		<isNotNull prepend="and" property="r_order">
+			d.R_ORDER=#r_order#
+		</isNotNull>
+		<isNotNull prepend="and" property="status">
+			d.STATUS=#status#
+		</isNotNull>
+		order by d.R_ORDER
+	</select>
+
+</sqlMap>

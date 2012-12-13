@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN" "http://struts.apache.org/dtds/struts-2.0.dtd" >
+<struts>
+    <constant name="struts.action.extension" value="yuetong" />
+
+    
+	<package name="m2-default"  namespace="/system" extends="struts-default">
+	    <interceptors>
+	        <interceptor name="userPermissionInterceptor" class="com.m2.web.interceptor.UserPermissionInterceptor">
+	        </interceptor>
+	        <interceptor-stack name="userPermissionStack">
+				<interceptor-ref name="defaultStack"></interceptor-ref>
+				<interceptor-ref name="userPermissionInterceptor"></interceptor-ref>
+			</interceptor-stack>
+	    </interceptors>
+	    <default-interceptor-ref name="defaultStack"></default-interceptor-ref>
+	    <global-results>
+	        <result name="syserror">/WEB-INF/sys/sysError.jsp</result>
+	        <result name="error">/WEB-INF/sys/sysError.jsp</result>
+	        <result name="sysError">/WEB-INF/sys/sysError.jsp</result>
+	    </global-results>
+	</package>    
+	
+	
+	<package name="user"  namespace="/system" extends="m2-default">
+	   
+	    <default-interceptor-ref name="userPermissionStack"></default-interceptor-ref>
+		<action name="searchUser" class="UserListAction">
+			<result name="success">/WEB-INF/sys/userList.jsp</result>
+		</action>	
+		<action name="user" class="UserAction">
+			<result name="forAdd">/WEB-INF/sys/userEdit.jsp</result>
+			<result name="forUpdate">/WEB-INF/sys/userEdit.jsp</result>
+			<result name="detail">/WEB-INF/sys/userDetail.jsp</result>
+			<result name="roleIndex">/WEB-INF/sys/userRoleSet.jsp</result>
+			<result name="success" type="redirect-action">searchUser</result>
+		</action>			
+	</package>
+	
+		
+	<package name="group"  namespace="/system" extends="m2-default">	
+	    
+	    <default-interceptor-ref name="userPermissionStack"></default-interceptor-ref>
+		<action name="searchGroup" class="GroupListAction">
+			<result name="success">/WEB-INF/m2/groupList.jsp</result>
+		</action>	
+		<action name="group" class="GroupAction">
+			<result name="input">/WEB-INF/m2/groupEdit.jsp</result>
+			<result name="detail">/WEB-INF/m2/groupDetail.jsp</result>
+			<result name="success" type="redirect-action">searchGroup</result>
+		</action>	
+	</package>	
+		
+		
+	<package name="org"  namespace="/system" extends="m2-default">	
+	    <default-interceptor-ref name="userPermissionStack"></default-interceptor-ref>
+	   
+		<action name="org" class="OrgAction">
+			<result name="success">/WEB-INF/sys/orgEdit.jsp</result>
+			<result name="input">/WEB-INF/sys/orgEdit.jsp</result>
+			<result name="error">/WEB-INF/sys/orgEdit.jsp</result>
+			<result name="view">/WEB-INF/sys/popOrgTree.jsp</result>
+		</action>		
+	</package>	
+		
+		
+		
+	<package name="permission"  namespace="/system" extends="m2-default">	
+	    
+	    <default-interceptor-ref name="userPermissionStack"></default-interceptor-ref>
+		<action name="searchPermission" class="PermissionListAction">
+			<result name="success">/WEB-INF/m2/permissionList.jsp</result>
+		</action>	
+
+		<action name="permission" class="PermissionAction">
+			<result name="input">/WEB-INF/m2/permissionEdit.jsp</result>
+			<result name="detail">/WEB-INF/m2/permissionDetail.jsp</result>
+			<result name="success" type="redirect-action">searchPermission</result>
+		</action>		
+	</package>	
+		
+		
+		
+	<package name="role"  namespace="/system" extends="m2-default">	
+	    <default-interceptor-ref name="userPermissionStack"></default-interceptor-ref>
+		<action name="searchRole" class="RoleListAction">
+			<result name="success">/WEB-INF/sys/roleList.jsp</result>
+		</action>	
+		<action name="role" class="RoleAction">
+		    <result name="forUpdate">/WEB-INF/sys/roleEdit.jsp</result>
+		    <result name="forAdd">/WEB-INF/sys/roleEdit.jsp</result>
+			<result name="input">/WEB-INF/sys/roleEdit.jsp</result>
+			<result name="forRoleSet">/WEB-INF/sys/roleSet.jsp</result>
+			<result name="forXMLData">/WEB-INF/sys/roleSetData.jsp</result>
+			<result name="success" type="redirect-action">searchRole</result>
+		</action>			    
+	</package>
+	
+	
+	<package name="login"  namespace="/system" extends="m2-default">
+	    <action name="login" class="LoginAction">
+			<result name="success">/menu.jsp</result>
+			<result name="input">/WEB-INF/m2/login.jsp</result>
+			<interceptor-ref name="defaultStack"></interceptor-ref>
+		</action>	
+	</package>
+	
+	
+	<package name="workflow"  namespace="/wf" extends="m2-default">
+	    <action name="processList" class="WFProcessListAction">
+				<result name="success">/WEB-INF/wf/processDefinition.jsp</result>
+		</action>	
+		
+	    <action name="applyLoan" class="WFApplyLoanAction">
+				<result name="input">/WEB-INF/wf/startApplyLoan.jsp</result>
+				<result name="start">/WEB-INF/wf/startApplyLoan.jsp</result>
+		</action>		
+		
+	</package>	
+	
+	<package name="function"  namespace="/system" extends="m2-default">	
+	   
+	    <default-interceptor-ref name="userPermissionStack"></default-interceptor-ref>
+		<action name="funcTree" class="FuncTreeAction">
+			<result name="input">/WEB-INF/sys/funcTree.jsp</result>
+			<result name="error">/WEB-INF/sys/funcTree.jsp</result>
+			<result name="success">/WEB-INF/sys/funcTree.jsp</result>
+		</action>		
+		
+		<action name="funcSet" class="FuncSetAction">
+			<result name="index">/WEB-INF/sys/funcSet.jsp</result>
+			<result name="input">/WEB-INF/sys/funcSet.jsp</result>
+			<result name="success">/WEB-INF/sys/funcSet.jsp</result>
+		</action>
+		
+			    
+	</package>	
+	
+	
+</struts>

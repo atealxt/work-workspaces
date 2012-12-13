@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Document   : readin.xml
+    Created on : December 30, 2008, 4:44 PM
+    Author     : Administrator
+    Description:
+        Purpose of the document follows.
+-->
+
+<root>
+    <nameset>
+        <name>AAA!</name>
+    </nameset>
+
+    <ipset msg="hahaha">
+        <server>172.16.98.193</server>
+    </ipset>
+</root>

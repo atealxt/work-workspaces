@@ -1,0 +1,749 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite errors="0" failures="0" hostname="a" name="org.py.hib.quickstart.QuickStartTest" tests="4" time="4.188" timestamp="2008-12-17T06:58:35">
+  <properties>
+    <property name="libs.Hibernate.classpath" value="E:\Tools\Java_tools\hibernate-3.2\hibernate3.jar;E:\Tools\Java_tools\hibernate-3.2\lib\dom4j-1.6.1.jar;E:\Tools\Java_tools\hibernate-3.2\lib\commons-logging-1.0.4.jar;E:\Tools\Java_tools\hibernate-3.2\lib\commons-collections-2.1.1.jar;E:\Tools\Java_tools\hibernate-3.2\lib\cglib-2.1.3.jar;E:\Tools\Java_tools\hibernate-3.2\lib\asm.jar;E:\Tools\Java_tools\hibernate-3.2\lib\antlr-2.7.6.jar;E:\Tools\Java_tools\hibernate-3.2\lib\c3p0-0.9.1.jar" />
+    <property name="javac.test.classpath" value="E:\Tools\Java_tools\hibernate-3.2\hibernate3.jar;E:\Tools\Java_tools\hibernate-3.2\lib\dom4j-1.6.1.jar;E:\Tools\Java_tools\hibernate-3.2\lib\commons-logging-1.0.4.jar;E:\Tools\Java_tools\hibernate-3.2\lib\commons-collections-2.1.1.jar;E:\Tools\Java_tools\hibernate-3.2\lib\cglib-2.1.3.jar;E:\Tools\Java_tools\hibernate-3.2\lib\asm.jar;E:\Tools\Java_tools\hibernate-3.2\lib\antlr-2.7.6.jar;E:\Tools\Java_tools\hibernate-3.2\lib\c3p0-0.9.1.jar:D:\NetBeans 6.5\ide10\modules\ext\mysql-connector-java-5.1.6-bin.jar:E:\Tools\Java_tools\spring-framework-2.0.1\lib\log4j\log4j-1.2.14.jar:..\..\..\oracle\product\10.2.0\client_3\jdbc\lib\ojdbc14.jar:web\WEB-INF\lib\p6spy.jar:web\WEB-INF\lib\sqlprofiler.jar:build/web/WEB-INF/classes:D:\NetBeans 6.5\platform9\modules\ext\junit-4.5.jar" />
+    <property name="source.root" value="src" />
+    <property name="do.display.browser" value="true" />
+    <property name="org.openide.TopManager.GUI" value="true" />
+    <property name="libs.theme-default.classpath" value="D:\NetBeans 6.5\visualweb2\modules\ext\defaulttheme.jar" />
+    <property name="libs.junit.javadoc" value="D:\NetBeans 6.5\java2\docs\junit-3.8.2-api.zip" />
+    <property name="javac.includes" value="org/py/hib/quickstart/QuickStartTest.java" />
+    <property name="ant.core.lib" value="D:\NetBeans 6.5\java2\ant\lib\ant.jar" />
+    <property name="libs.Struts2.src" value="" />
+    <property name="libs.swing-app-framework.src" value="" />
+    <property name="javadoc.windowtitle" value="" />
+    <property name="libs.toplink.classpath" value="D:\NetBeans 6.5\java2\modules\ext\toplink\toplink-essentials.jar;D:\NetBeans 6.5\java2\modules\ext\toplink\toplink-essentials-agent.jar" />
+    <property name="user.dir" value="D:\workspace\netbeans\Test_Hibernate" />
+    <property name="libs.theme-default-green.classpath" value="D:\NetBeans 6.5\visualweb2\modules\ext\defaulttheme-green.jar" />
+    <property name="libs.hibernate-persistence.javadoc" value="" />
+    <property name="java.vm.version" value="1.6.0_03-b05" />
+    <property name="libs.jstl11.maven-pom" value="" />
+    <property name="libs.MySQLDriver.classpath" value="D:\NetBeans 6.5\ide10\modules\ext\mysql-connector-java-5.1.6-bin.jar" />
+    <property name="libs.jstl11.src" value="" />
+    <property name="ant.file.Test_Hibernate" value="D:\workspace\netbeans\Test_Hibernate\build.xml" />
+    <property name="javadoc.notree" value="false" />
+    <property name="lib.dir" value="web/WEB-INF/lib" />
+    <property name="libs.hibernate-support.maven-pom" value="" />
+    <property name="libs.hibernate-support.javadoc" value="" />
+    <property name="libs.exceptionhandler-runtime.maven-pom" value="" />
+    <property name="jdk.home" value="C:\Program Files\Java\jdk1.6.0_03" />
+    <property name="directory.deployment.supported" value="true" />
+    <property name="libs.javac-api.src" value="" />
+    <property name="javadoc.noindex" value="false" />
+    <property name="libs.theme-default-green.runtime" value="D:\NetBeans 6.5\visualweb2\modules\ext\defaulttheme-green.jar" />
+    <property name="sun.os.patch.level" value="Service Pack 3" />
+    <property name="libs.log4j.src" value="" />
+    <property name="libs.theme-default-gray.runtime" value="D:\NetBeans 6.5\visualweb2\modules\ext\defaulttheme-gray.jar" />
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification" />
+    <property name="nb.show.statistics.ui" value="usageStatisticsEnabled" />
+    <property name="libs.jsf-extensions.maven-pom" value="" />
+    <property name="libs.jdbcsupport-runtime.classpath" value="D:\NetBeans 6.5\visualweb2\modules\ext\sqlx.jar" />
+    <property name="have.tests" value="true" />
+    <property name="libs.jdbcsupport-designtime.classpath" value="D:\NetBeans 6.5\visualweb2\modules\ext\sqlx.jar" />
+    <property name="org.xml.sax.driver" value="com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser" />
+    <property name="j2ee.server.instance" value="[C:\Program Files\glassfish-v2ur2]deployer:Sun:AppServer::localhost:4848" />
+    <property name="libs.javac-api.javadoc" value="" />
+    <property name="os.name" value="Windows XP" />
+    <property name="libs.beans-binding.classpath" value="D:\NetBeans 6.5\java2\modules\ext\beansbinding-1.2.1.jar" />
+    <property name="libs.restapi.javadoc" value="D:\NetBeans 6.5\enterprise5\docs\jsr311-api-doc.zip" />
+    <property name="libs.JWSAntTasks.maven-pom" value="" />
+    <property name="rave.build" value="thresher-fcs" />
+    <property name="ant.file.Test_Hibernate-impl" value="D:\workspace\netbeans\Test_Hibernate\nbproject\build-impl.xml" />
+    <property name="libs.restapi.classpath" value="D:\NetBeans 6.5\enterprise5\modules\ext\rest\jsr311-api.jar" />
+    <property name="runmain.jvmargs" value="" />
+    <property name="debug.server" value="false" />
+    <property name="java.vendor.url.bug" value="http://java.sun.com/cgi-bin/bugreport.cgi" />
+    <property name="libs.jaxb.maven-pom" value="" />
+    <property name="os.arch" value="x86" />
+    <property name="user.name" value="Administrator" />
+    <property name="libs.jsf12.javadoc" value="D:\NetBeans 6.5\enterprise5\docs\javaee5-doc-api.zip" />
+    <property name="libs.swing-layout.maven-pom" value="" />
+    <property name="build.classes.dir" value="build/web/WEB-INF/classes" />
+    <property name="netbeans.accept_license_class" value="org.netbeans.license.AcceptLicense" />
+    <property name="libs.jaxws21.javadoc" value="D:\NetBeans 6.5\java2\docs\jaxws-2_1-api-doc.zip" />
+    <property name="build.web.excludes" value="**/*.java,**/*.form" />
+    <property name="includes" value="**" />
+    <property name="j2ee.platform.wsimport.classpath" value="C:\Program Files\glassfish-v2ur2\lib\webservices-tools.jar:C:\Program Files\glassfish-v2ur2\lib\webservices-rt.jar:C:\Program Files\glassfish-v2ur2\lib\tools.jar:C:\Program Files\glassfish-v2ur2\lib\appserv-jstl.jar:C:\Program Files\glassfish-v2ur2\lib\javaee.jar:C:\Program Files\glassfish-v2ur2\lib\appserv-ws.jar:C:\Program Files\glassfish-v2ur2\lib\mail.jar:C:\Program Files\glassfish-v2ur2\lib\activation.jar" />
+    <property name="user.country" value="JP" />
+    <property name="libs.spring.classpath" value="E:\Tools\Java_tools\spring-framework-2.0.1\dist\spring.jar;E:\Tools\Java_tools\spring-framework-2.0.1\lib\commonj\commonj-twm.jar" />
+    <property name="libs.jstl11.javadoc" value="D:\NetBeans 6.5\enterprise5\docs\javaee5-doc-api.zip" />
+    <property name="javadoc.encoding" value="UTF-8" />
+    <property name="javac.classpath" value="E:\Tools\Java_tools\hibernate-3.2\hibernate3.jar;E:\Tools\Java_tools\hibernate-3.2\lib\dom4j-1.6.1.jar;E:\Tools\Java_tools\hibernate-3.2\lib\commons-logging-1.0.4.jar;E:\Tools\Java_tools\hibernate-3.2\lib\commons-collections-2.1.1.jar;E:\Tools\Java_tools\hibernate-3.2\lib\cglib-2.1.3.jar;E:\Tools\Java_tools\hibernate-3.2\lib\asm.jar;E:\Tools\Java_tools\hibernate-3.2\lib\antlr-2.7.6.jar;E:\Tools\Java_tools\hibernate-3.2\lib\c3p0-0.9.1.jar:D:\NetBeans 6.5\ide10\modules\ext\mysql-connector-java-5.1.6-bin.jar:E:\Tools\Java_tools\spring-framework-2.0.1\lib\log4j\log4j-1.2.14.jar:..\..\..\oracle\product\10.2.0\client_3\jdbc\lib\ojdbc14.jar:web\WEB-INF\lib\p6spy.jar:web\WEB-INF\lib\sqlprofiler.jar" />
+    <property name="libs.jsfsupport-designtime.javadoc" value="D:\NetBeans 6.5\visualweb2\docs\appbase-doc.zip;D:\NetBeans 6.5\visualweb2\docs\dataprovider-doc.zip;D:\NetBeans 6.5\visualweb2\docs\jsfcl-doc.zip" />
+    <property name="libs.JAVADB_DRIVER_LABEL.src" value="" />
+    <property name="do.debug.server" value="true" />
+    <property name="debug-transport" value="dt_shmem" />
+    <property name="netbeans.system_http_non_proxy_hosts" value="" />
+    <property name="netbeans.home" value="D:\NetBeans 6.5\platform9" />
+    <property name="build.compiler.emacs" value="true" />
+    <property name="libs.ejb3-persistence.src" value="" />
+    <property name="libs.jdbcsupport-runtime.javadoc" value="" />
+    <property name="java.endorsed.dirs" value="C:\Program Files\Java\jdk1.6.0_03\jre\lib\endorsed" />
+    <property name="libs.groovy-all.src" value="" />
+    <property name="test.includes" value="org/py/hib/quickstart/QuickStartTest.java" />
+    <property name="netbeans.dynamic.classpath" value="D:\NetBeans 6.5\platform9\core\core.jar;D:\NetBeans 6.5\platform9\core\org-openide-filesystems.jar;D:\NetBeans 6.5\platform9\core\locale\core_ja.jar;D:\NetBeans 6.5\platform9\core\locale\core_pt_BR.jar;D:\NetBeans 6.5\platform9\core\locale\core_zh_CN.jar;D:\NetBeans 6.5\platform9\core\locale\org-openide-filesystems_ja.jar;D:\NetBeans 6.5\platform9\core\locale\org-openide-filesystems_pt_BR.jar;D:\NetBeans 6.5\platform9\core\locale\org-openide-filesystems_zh_CN.jar;D:\NetBeans 6.5\nb6.5\core\org-netbeans-upgrader.jar;D:\NetBeans 6.5\nb6.5\core\locale\core_nb.jar;D:\NetBeans 6.5\nb6.5\core\locale\core_nb_ja.jar;D:\NetBeans 6.5\nb6.5\core\locale\core_nb_pt_BR.jar;D:\NetBeans 6.5\nb6.5\core\locale\core_nb_zh_CN.jar;D:\NetBeans 6.5\nb6.5\core\locale\org-netbeans-upgrader_ja.jar;D:\NetBeans 6.5\nb6.5\core\locale\org-netbeans-upgrader_pt_BR.jar;D:\NetBeans 6.5\nb6.5\core\locale\org-netbeans-upgrader_zh_CN.jar" />
+    <property name="java.vm.specification.version" value="1.0" />
+    <property name="jspcompilation.classpath" value="D:\NetBeans 6.5\java2\ant\lib\ant.jar:D:\NetBeans 6.5\enterprise5\modules\ext\servlet2.5-jsp2.1-api.jar:C:\Program Files\glassfish-v2ur2\lib\javaee.jar:C:\Program Files\glassfish-v2ur2\lib\jsf-impl.jar:C:\Program Files\glassfish-v2ur2\lib\activation.jar:C:\Program Files\glassfish-v2ur2\lib\appserv-tags.jar:C:\Program Files\glassfish-v2ur2\lib\mail.jar:C:\Program Files\glassfish-v2ur2\lib\appserv-jstl.jar:C:\Program Files\glassfish-v2ur2\lib\webservices-tools.jar:C:\Program Files\glassfish-v2ur2\lib\webservices-rt.jar:C:\Program Files\glassfish-v2ur2\lib\appserv-ws.jar:D:\NetBeans 6.5\enterprise5\modules\ext\glassfish-jspparser-2.0.jar:D:\NetBeans 6.5\enterprise5\modules\ext\glassfish-logging-2.0.jar:D:\NetBeans 6.5\ide10\modules\ext\commons-logging-1.1.jar:D:\NetBeans 6.5\java2\ant\lib\ant-launcher.jar:E:\Tools\Java_tools\hibernate-3.2\hibernate3.jar;E:\Tools\Java_tools\hibernate-3.2\lib\dom4j-1.6.1.jar;E:\Tools\Java_tools\hibernate-3.2\lib\commons-logging-1.0.4.jar;E:\Tools\Java_tools\hibernate-3.2\lib\commons-collections-2.1.1.jar;E:\Tools\Java_tools\hibernate-3.2\lib\cglib-2.1.3.jar;E:\Tools\Java_tools\hibernate-3.2\lib\asm.jar;E:\Tools\Java_tools\hibernate-3.2\lib\antlr-2.7.6.jar;E:\Tools\Java_tools\hibernate-3.2\lib\c3p0-0.9.1.jar:D:\NetBeans 6.5\ide10\modules\ext\mysql-connector-java-5.1.6-bin.jar:E:\Tools\Java_tools\spring-framework-2.0.1\lib\log4j\log4j-1.2.14.jar:..\..\..\oracle\product\10.2.0\client_3\jdbc\lib\ojdbc14.jar:web\WEB-INF\lib\p6spy.jar:web\WEB-INF\lib\sqlprofiler.jar" />
+    <property name="libs.groovy-all.maven-pom" value="" />
+    <property name="libs.hibernate-persistence.classpath" value="D:\NetBeans 6.5\java2\modules\ext\hibernate\antlr-2.7.6.jar;D:\NetBeans 6.5\java2\modules\ext\hibernate\asm.jar;D:\NetBeans 6.5\java2\modules\ext\hibernate\asm-attrs.jar;D:\NetBeans 6.5\java2\modules\ext\hibernate\cglib-2.1.3.jar;D:\NetBeans 6.5\java2\modules\ext\hibernate\commons-collections-2.1.1.jar;D:\NetBeans 6.5\ide10\modules\ext\commons-logging-1.1.jar;D:\NetBeans 6.5\java2\modules\ext\hibernate\dom4j-1.6.1.jar;D:\NetBeans 6.5\java2\modules\ext\hibernate\ehcache-1.2.3.jar;D:\NetBeans 6.5\java2\modules\ext\hibernate\jdbc2_0-stdext.jar;D:\NetBeans 6.5\java2\modules\ext\hibernate\jta.jar;D:\NetBeans 6.5\java2\modules\ext\hibernate\hibernate3.jar;D:\NetBeans 6.5\java2\modules\ext\hibernate\hibernate-tools.jar;D:\NetBeans 6.5\java2\modules\ext\hibernate\hibernate-annotations.jar;D:\NetBeans 6.5\java2\modules\ext\hibernate\hibernate-commons-annotations.jar;D:\NetBeans 6.5\java2\modules\ext\hibernate\hibernate-entitymanager.jar;D:\NetBeans 6.5\java2\modules\ext\hibernate\javassist.jar;D:\NetBeans 6.5\java2\modules\ext\hibernate\ejb3-persistence.jar" />
+    <property name="libs.jaxws21.src" value="" />
+    <property name="do.war.package.with.custom.manifest" value="true" />
+    <property name="libs.swing-app-framework.classpath" value="D:\NetBeans 6.5\java2\modules\ext\appframework-1.0.3.jar;D:\NetBeans 6.5\java2\modules\ext\swing-worker-1.1.jar" />
+    <property name="org.netbeans.core.startup.specialResource" value="nullcom.sun.jdo.api.persistence.mapping.ejb" />
+    <property name="java.vendor" value="Sun Microsystems Inc." />
+    <property name="javac.debug" value="true" />
+    <property name="javadoc.splitindex" value="true" />
+    <property name="file.separator" value="\" />
+    <property name="libs.IdentityAntTasks.src" value="" />
+    <property name="libs.log4j.maven-pom" value="" />
+    <property name="libs.junit_4.maven-pom" value="" />
+    <property name="resource.dir" value="setup" />
+    <property name="netbeans.buildnumber" value="200811100001" />
+    <property name="libs.JWSAntTasks.javadoc" value="" />
+    <property name="user.variant" value="" />
+    <property name="libs.webui-runtime.classpath" value="D:\NetBeans 6.5\visualweb2\modules\ext\webui.jar;D:\NetBeans 6.5\enterprise5\modules\ext\commons-fileupload-1.0.jar" />
+    <property name="sun.java.launcher" value="SUN_STANDARD" />
+    <property name="libs.junit.classpath" value="D:\NetBeans 6.5\java2\modules\ext\junit-3.8.2.jar" />
+    <property name="libs.jaxb.javadoc" value="" />
+    <property name="libs.struts.classpath" value="D:\NetBeans 6.5\enterprise5\modules\ext\struts\antlr.jar;D:\NetBeans 6.5\enterprise5\modules\ext\struts\commons-beanutils.jar;D:\NetBeans 6.5\enterprise5\modules\ext\struts\commons-digester.jar;D:\NetBeans 6.5\enterprise5\modules\ext\struts\commons-logging.jar;D:\NetBeans 6.5\enterprise5\modules\ext\struts\commons-validator.jar;D:\NetBeans 6.5\enterprise5\modules\ext\struts\jakarta-oro.jar;D:\NetBeans 6.5\enterprise5\modules\ext\struts\struts.jar;D:\NetBeans 6.5\enterprise5\modules\ext\commons-fileupload-1.0.jar" />
+    <property name="libs.woodstock-theme-default.classpath" value="D:\NetBeans 6.5\visualweb2\modules\ext\webui-jsf-suntheme.jar" />
+    <property name="application.args.param" value="" />
+    <property name="ant.home" value="D:\NetBeans 6.5\java2\ant" />
+    <property name="libs.junit_4.src" value="D:\NetBeans 6.5\java2\docs\junit-4.5-src.jar" />
+    <property name="conf.dir" value="src/conf" />
+    <property name="webinf.dir" value="web/WEB-INF" />
+    <property name="libs.absolutelayout.maven-pom" value="" />
+    <property name="ant.java.version" value="1.6" />
+    <property name="java.library.path" value="C:\Program Files\Java\jdk1.6.0_03\jre\bin;.;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files\Java\jdk1.6.0_03\bin;D:\oracle\product\10.2.0\client_2\bin;D:\oracle\product\10.2.0\client_1\bin;D:\oracle\product\10.2.0\client_3\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\Program Files\Microsoft SQL Server\90\Tools\binn\;C:\Program Files\IDM Computer Solutions\UltraEdit-32;C:\Program Files\grails\grails-1.0\bin;E:\Tools\masm5;C:\ant\apache-ant-1.7.0\bin;C:\Program Files\Ringz Studio\Storm Codec\Codec;C:\Program Files\Ringz Studio\Storm Codec" />
+    <property name="javadoc.author" value="false" />
+    <property name="libs.IdentityAntTasks.classpath" value="D:\NetBeans 6.5\identity2\ant\nblib\org-netbeans-modules-identity-ant.jar;D:\NetBeans 6.5\identity2\modules\org-netbeans-modules-identity-profile-api.jar" />
+    <property name="libs.Hibernate.src" value="" />
+    <property name="java.util.logging.config.class" value="org.netbeans.core.startup.TopLogging" />
+    <property name="libs.PostgreSQLDriver.src" value="" />
+    <property name="sun.arch.data.model" value="32" />
+    <property name="basedir" value="D:\workspace\netbeans\Test_Hibernate" />
+    <property name="jar.compress" value="false" />
+    <property name="file.reference.Tools-Java_tools" value="E:\Tools\Java_tools" />
+    <property name="libs.jstl11.classpath" value="D:\NetBeans 6.5\enterprise5\modules\ext\standard.jar;D:\NetBeans 6.5\enterprise5\modules\ext\jstl.jar" />
+    <property name="libs.spring.javadoc" value="" />
+    <property name="path.separator" value=";" />
+    <property name="dist.war" value="dist/Test_Hibernate.war" />
+    <property name="com.sun.aas.installRoot" value="C:\Program Files\glassfish-v2ur2" />
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle" />
+    <property name="libs.jaxws21.classpath" value="D:\NetBeans 6.5\ide10\modules\ext\jaxb\activation.jar;D:\NetBeans 6.5\ide10\modules\ext\jaxb\api\jaxb-api.jar;D:\NetBeans 6.5\ide10\modules\ext\jaxb\jaxb-impl.jar;D:\NetBeans 6.5\ide10\modules\ext\jaxb\jaxb-xjc.jar;D:\NetBeans 6.5\ide10\modules\ext\jaxb\api\jsr173_api.jar;D:\NetBeans 6.5\java2\modules\ext\jaxws21\FastInfoset.jar;D:\NetBeans 6.5\java2\modules\ext\jaxws21\http.jar;D:\NetBeans 6.5\java2\modules\ext\jaxws21\api\jaxws-api.jar;D:\NetBeans 6.5\java2\modules\ext\jaxws21\jaxws-rt.jar;D:\NetBeans 6.5\java2\modules\ext\jaxws21\jaxws-tools.jar;D:\NetBeans 6.5\java2\modules\ext\jaxws21\api\jsr181-api.jar;D:\NetBeans 6.5\java2\modules\ext\jaxws21\api\jsr250-api.jar;D:\NetBeans 6.5\java2\modules\ext\jaxws21\mimepull.jar;D:\NetBeans 6.5\java2\modules\ext\jaxws21\resolver.jar;D:\NetBeans 6.5\java2\modules\ext\jaxws21\api\saaj-api.jar;D:\NetBeans 6.5\java2\modules\ext\jaxws21\saaj-impl.jar;D:\NetBeans 6.5\java2\modules\ext\jaxws21\sjsxp.jar;D:\NetBeans 6.5\java2\modules\ext\jaxws21\stax-ex.jar;D:\NetBeans 6.5\java2\modules\ext\jaxws21\streambuffer.jar" />
+    <property name="libs.struts.src" value="" />
+    <property name="user.language" value="ja" />
+    <property name="libs.dojo.scriptpath" value="D:\NetBeans 6.5\webcommon1\modules\ext\javascript\dojo-1.1.1.zip" />
+    <property name="j2ee.platform.classpath" value="C:\Program Files\glassfish-v2ur2\lib\javaee.jar:C:\Program Files\glassfish-v2ur2\lib\jsf-impl.jar:C:\Program Files\glassfish-v2ur2\lib\activation.jar:C:\Program Files\glassfish-v2ur2\lib\appserv-tags.jar:C:\Program Files\glassfish-v2ur2\lib\mail.jar:C:\Program Files\glassfish-v2ur2\lib\appserv-jstl.jar:C:\Program Files\glassfish-v2ur2\lib\webservices-tools.jar:C:\Program Files\glassfish-v2ur2\lib\webservices-rt.jar:C:\Program Files\glassfish-v2ur2\lib\appserv-ws.jar" />
+    <property name="libs.spring-framework.classpath" value="D:\NetBeans 6.5\ide10\modules\ext\commons-logging-1.1.jar;D:\NetBeans 6.5\java2\modules\ext\cglib-2.2.jar;D:\NetBeans 6.5\java2\modules\ext\spring\spring-2.5.jar" />
+    <property name="build.meta.inf.dir" value="build/web/META-INF" />
+    <property name="persistence.xml.dir" value="src/conf" />
+    <property name="run.test.classpath" value="E:\Tools\Java_tools\hibernate-3.2\hibernate3.jar;E:\Tools\Java_tools\hibernate-3.2\lib\dom4j-1.6.1.jar;E:\Tools\Java_tools\hibernate-3.2\lib\commons-logging-1.0.4.jar;E:\Tools\Java_tools\hibernate-3.2\lib\commons-collections-2.1.1.jar;E:\Tools\Java_tools\hibernate-3.2\lib\cglib-2.1.3.jar;E:\Tools\Java_tools\hibernate-3.2\lib\asm.jar;E:\Tools\Java_tools\hibernate-3.2\lib\antlr-2.7.6.jar;E:\Tools\Java_tools\hibernate-3.2\lib\c3p0-0.9.1.jar:D:\NetBeans 6.5\ide10\modules\ext\mysql-connector-java-5.1.6-bin.jar:E:\Tools\Java_tools\spring-framework-2.0.1\lib\log4j\log4j-1.2.14.jar:..\..\..\oracle\product\10.2.0\client_3\jdbc\lib\ojdbc14.jar:web\WEB-INF\lib\p6spy.jar:web\WEB-INF\lib\sqlprofiler.jar:build/web/WEB-INF/classes:D:\NetBeans 6.5\platform9\modules\ext\junit-4.5.jar:build/test/classes" />
+    <property name="useJavaUtilZip" value="true" />
+    <property name="libs.swing-layout.javadoc" value="D:\NetBeans 6.5\platform9\docs\swing-layout-1.0.3-doc.zip" />
+    <property name="libs.swing-app-framework.javadoc" value="D:\NetBeans 6.5\java2\docs\appframework-1.0.3-doc.zip" />
+    <property name="libs.ejb3-persistence.maven-pom" value="" />
+    <property name="https.nonProxyHosts" value="localhost|127.0.0.1|a" />
+    <property name="libs.PostgreSQLDriver.maven-pom" value="" />
+    <property name="java.class.version" value="50.0" />
+    <property name="libs.JAVADB_DRIVER_LABEL.classpath" value="C:\Program Files\glassfish-v2\javadb\lib\derby.jar;C:\Program Files\glassfish-v2\javadb\lib\derbyclient.jar;C:\Program Files\glassfish-v2\javadb\lib\derbynet.jar" />
+    <property name="platforms.JDK_1.5.home" value="C:\Program Files\Java\jdk1.5.0_04" />
+    <property name="libs.spring.src" value="" />
+    <property name="netbeans.system_http_proxy" value="DIRECT" />
+    <property name="user.properties.file" value="C:\Documents and Settings\Administrator\.netbeans\6.5\build.properties" />
+    <property name="build.web.dir" value="build/web" />
+    <property name="libs.spring-framework.src" value="" />
+    <property name="libs.javac-api.maven-pom" value="" />
+    <property name="file.encoding.pkg" value="sun.io" />
+    <property name="sun.cpu.endian" value="little" />
+    <property name="libs.log4j.javadoc" value="" />
+    <property name="libs.JWSAntTasks.classpath" value="D:\NetBeans 6.5\java2\ant\extra\org-netbeans-modules-javawebstart-anttasks.jar" />
+    <property name="display.browser" value="true" />
+    <property name="libs.jsfsupport-designtime.classpath" value="D:\NetBeans 6.5\visualweb2\modules\ext\jsfcl.jar;D:\NetBeans 6.5\visualweb2\modules\ext\appbase.jar;D:\NetBeans 6.5\visualweb2\modules\ext\dataprovider.jar;D:\NetBeans 6.5\visualweb2\modules\ext\sqlx.jar" />
+    <property name="libs.scriptaculous.scriptpath" value="D:\NetBeans 6.5\webcommon1\modules\ext\javascript\scriptaculous-js-1.8.1.zip" />
+    <property name="version-output" value="java version &quot;1.6" />
+    <property name="libs.Hibernate.maven-pom" value="" />
+    <property name="debug.client" value="false" />
+    <property name="javadoc.preview" value="true" />
+    <property name="nbplatform.default.harness.dir" value="D:\NetBeans 6.5/harness" />
+    <property name="java.home" value="C:\Program Files\Java\jdk1.6.0_03\jre" />
+    <property name="libs.spring-webmvc.src" value="" />
+    <property name="debug.test.classpath" value="E:\Tools\Java_tools\hibernate-3.2\hibernate3.jar;E:\Tools\Java_tools\hibernate-3.2\lib\dom4j-1.6.1.jar;E:\Tools\Java_tools\hibernate-3.2\lib\commons-logging-1.0.4.jar;E:\Tools\Java_tools\hibernate-3.2\lib\commons-collections-2.1.1.jar;E:\Tools\Java_tools\hibernate-3.2\lib\cglib-2.1.3.jar;E:\Tools\Java_tools\hibernate-3.2\lib\asm.jar;E:\Tools\Java_tools\hibernate-3.2\lib\antlr-2.7.6.jar;E:\Tools\Java_tools\hibernate-3.2\lib\c3p0-0.9.1.jar:D:\NetBeans 6.5\ide10\modules\ext\mysql-connector-java-5.1.6-bin.jar:E:\Tools\Java_tools\spring-framework-2.0.1\lib\log4j\log4j-1.2.14.jar:..\..\..\oracle\product\10.2.0\client_3\jdbc\lib\ojdbc14.jar:web\WEB-INF\lib\p6spy.jar:web\WEB-INF\lib\sqlprofiler.jar:build/web/WEB-INF/classes:D:\NetBeans 6.5\platform9\modules\ext\junit-4.5.jar:build/test/classes" />
+    <property name="netbeans.importclass" value="org.netbeans.upgrade.AutoUpgrade" />
+    <property name="libs.webui-designtime.src" value="D:\NetBeans 6.5\visualweb2\docs\webui-src.zip" />
+    <property name="org.openide.TopManager" value="org.netbeans.core.NonGui" />
+    <property name="libs.toplink.maven-pom" value="" />
+    <property name="libs.PostgreSQLDriver.javadoc" value="" />
+    <property name="libs.restlib.classpath" value="D:\NetBeans 6.5\enterprise5\modules\ext\rest\jersey.jar;D:\NetBeans 6.5\enterprise5\modules\ext\rest\http.jar;D:\NetBeans 6.5\enterprise5\modules\ext\rest\wadl2java.jar;D:\NetBeans 6.5\enterprise5\modules\ext\rest\rome-0.9.jar;D:\NetBeans 6.5\enterprise5\modules\ext\rest\jdom-1.0.jar;D:\NetBeans 6.5\enterprise5\modules\ext\rest\jettison-1.0-RC1.jar;D:\NetBeans 6.5\enterprise5\modules\ext\rest\asm-3.1.jar;D:\NetBeans 6.5\enterprise5\modules\ext\rest\grizzly-servlet-webserver-1.7.3.2.jar;D:\NetBeans 6.5\enterprise5\modules\ext\rest\jersey-spring.jar;D:\NetBeans 6.5\ide10\modules\ext\jaxb\activation.jar;D:\NetBeans 6.5\ide10\modules\ext\jaxb\api\jaxb-api.jar;D:\NetBeans 6.5\ide10\modules\ext\jaxb\jaxb-impl.jar;D:\NetBeans 6.5\ide10\modules\ext\jaxb\jaxb-xjc.jar;D:\NetBeans 6.5\ide10\modules\ext\jaxb\api\jsr173_api.jar" />
+    <property name="libs.exceptionhandler-runtime.javadoc" value="" />
+    <property name="libs.jsfsupport-runtime.classpath" value="D:\NetBeans 6.5\visualweb2\modules\ext\jsfcl.jar;D:\NetBeans 6.5\visualweb2\modules\ext\appbase.jar;D:\NetBeans 6.5\visualweb2\modules\ext\dataprovider.jar;D:\NetBeans 6.5\visualweb2\modules\ext\sqlx.jar" />
+    <property name="libs.MySQLDriver.maven-pom" value="" />
+    <property name="j2ee.platform.wsgen.classpath" value="C:\Program Files\glassfish-v2ur2\lib\webservices-tools.jar:C:\Program Files\glassfish-v2ur2\lib\webservices-rt.jar:C:\Program Files\glassfish-v2ur2\lib\tools.jar:C:\Program Files\glassfish-v2ur2\lib\appserv-jstl.jar:C:\Program Files\glassfish-v2ur2\lib\javaee.jar:C:\Program Files\glassfish-v2ur2\lib\appserv-ws.jar:C:\Program Files\glassfish-v2ur2\lib\mail.jar:C:\Program Files\glassfish-v2ur2\lib\activation.jar" />
+    <property name="http.nonProxyHosts" value="localhost|127.0.0.1|a" />
+    <property name="libs.junit_4.javadoc" value="D:\NetBeans 6.5\java2\docs\junit-4.5-api.zip" />
+    <property name="libs.spring-webmvc.javadoc" value="" />
+    <property name="libs.toplink.src" value="" />
+    <property name="libs.webui.javadoc" value="D:\NetBeans 6.5\visualweb2\docs\webui-doc.zip" />
+    <property name="libs.jsf12-support.javadoc" value="D:\NetBeans 6.5\visualweb2\docs\appbase-doc.zip;D:\NetBeans 6.5\visualweb2\docs\dataprovider-doc.zip;D:\NetBeans 6.5\visualweb2\docs\jsfcl-doc.zip" />
+    <property name="libs.hibernate-support.src" value="" />
+    <property name="libs.theme-default.runtime" value="D:\NetBeans 6.5\visualweb2\modules\ext\defaulttheme.jar" />
+    <property name="libs.jdbcsupport-runtime.maven-pom" value="" />
+    <property name="libs.restapi.src" value="" />
+    <property name="sun.management.compiler" value="HotSpot Client Compiler" />
+    <property name="javac.deprecation" value="false" />
+    <property name="javadoc.use" value="true" />
+    <property name="libs.jdbcsupport-runtime.src" value="" />
+    <property name="libs.jdbcsupport-designtime.maven-pom" value="" />
+    <property name="libs.theme-default-gray.classpath" value="D:\NetBeans 6.5\visualweb2\modules\ext\defaulttheme-gray.jar" />
+    <property name="client.urlPart" value="" />
+    <property name="sun.java2d.noddraw" value="true" />
+    <property name="dist.ear.war" value="dist/Test_Hibernate.war" />
+    <property name="file.reference.log4j-1.2.14.jar" value="E:\Tools\Java_tools\spring-framework-2.0.1\lib\log4j\log4j-1.2.14.jar" />
+    <property name="libs.spring-webmvc.classpath" value="D:\NetBeans 6.5\enterprise5\modules\ext\spring\spring-webmvc-2.5.jar" />
+    <property name="javac.compilerargs" value="" />
+    <property name="ant.file" value="D:\workspace\netbeans\Test_Hibernate\build.xml" />
+    <property name="libs.beans-binding.maven-pom" value="" />
+    <property name="libs.Struts2.classpath" value="E:\Tools\Java_tools\struts-2.0.11.1\lib\commons-logging-1.0.4.jar;E:\Tools\Java_tools\struts-2.0.11.1\lib\freemarker-2.3.8.jar;E:\Tools\Java_tools\struts-2.0.11.1\lib\ognl-2.6.11.jar;E:\Tools\Java_tools\struts-2.0.11.1\lib\struts2-core-2.0.11.1.jar;E:\Tools\Java_tools\struts-2.0.11.1\lib\xwork-2.0.4.jar;E:\Tools\Java_tools\struts-2.0.11.1\lib\velocity-1.4.jar;E:\Tools\Java_tools\struts-2.0.11.1\lib\velocity-dep-1.4.jar;E:\Tools\Java_tools\struts-2.0.11.1\lib\velocity-tools-1.1.jar;E:\Tools\Java_tools\struts-2.0.11.1\lib\commons-fileupload-1.2.1\lib\commons-fileupload-1.2.1.jar;E:\Tools\Java_tools\struts-2.0.11.1\lib\commons-io-1.4\commons-io-1.4.jar;E:\Tools\Java_tools\struts-2.0.11.1\lib\struts2-dojo-plugin-2.1.2-javadoc.jar;E:\Tools\Java_tools\struts-2.0.11.1\lib\struts2-dojo-plugin-2.1.2.jar" />
+    <property name="libs.jsf12.classpath" value="D:\NetBeans 6.5\enterprise5\modules\ext\jsf-1_2\commons-beanutils.jar;D:\NetBeans 6.5\enterprise5\modules\ext\jsf-1_2\commons-collections.jar;D:\NetBeans 6.5\enterprise5\modules\ext\jsf-1_2\commons-digester.jar;D:\NetBeans 6.5\enterprise5\modules\ext\jsf-1_2\commons-logging.jar;D:\NetBeans 6.5\enterprise5\modules\ext\jsf-1_2\jsf-api.jar;D:\NetBeans 6.5\enterprise5\modules\ext\jsf-1_2\jsf-impl.jar" />
+    <property name="sun.awt.exception.handler" value="org.netbeans.core.startup.TopLogging$AWTHandler" />
+    <property name="has.custom.manifest" value="true" />
+    <property name="libs.restapi.maven-pom" value="" />
+    <property name="libs.beans-binding.src" value="" />
+    <property name="java.vm.specification.vendor" value="Sun Microsystems Inc." />
+    <property name="libs.swing-layout.src" value="D:\NetBeans 6.5\platform9\docs\swing-layout-1.0.3-src.zip" />
+    <property name="libs.webui.src" value="D:\NetBeans 6.5\visualweb2\docs\webui-src.zip" />
+    <property name="org.openide.major.version" value="IDE/1" />
+    <property name="java.vm.name" value="Java HotSpot(TM) Client VM" />
+    <property name="do.display.browser.debug" value="true" />
+    <property name="netbeans.user" value="C:\Documents and Settings\Administrator\.netbeans\6.5" />
+    <property name="javadoc.additionalparam" value="" />
+    <property name="java.io.tmpdir" value="C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\" />
+    <property name="java.vendor.url" value="http://java.sun.com/" />
+    <property name="j2ee.platform.wsit.classpath" value="" />
+    <property name="libs.prototype.scriptpath" value="D:\NetBeans 6.5\webcommon1\modules\ext\javascript\prototype-1.6.0.2.zip" />
+    <property name="compile.jsps" value="false" />
+    <property name="jspc.classpath" value="D:\NetBeans 6.5\java2\ant\lib\ant.jar:D:\NetBeans 6.5\enterprise5\modules\ext\servlet2.5-jsp2.1-api.jar:C:\Program Files\glassfish-v2ur2\lib\javaee.jar:C:\Program Files\glassfish-v2ur2\lib\jsf-impl.jar:C:\Program Files\glassfish-v2ur2\lib\activation.jar:C:\Program Files\glassfish-v2ur2\lib\appserv-tags.jar:C:\Program Files\glassfish-v2ur2\lib\mail.jar:C:\Program Files\glassfish-v2ur2\lib\appserv-jstl.jar:C:\Program Files\glassfish-v2ur2\lib\webservices-tools.jar:C:\Program Files\glassfish-v2ur2\lib\webservices-rt.jar:C:\Program Files\glassfish-v2ur2\lib\appserv-ws.jar:D:\NetBeans 6.5\enterprise5\modules\ext\glassfish-jspparser-2.0.jar:D:\NetBeans 6.5\enterprise5\modules\ext\glassfish-logging-2.0.jar:D:\NetBeans 6.5\ide10\modules\ext\commons-logging-1.1.jar:D:\NetBeans 6.5\java2\ant\lib\ant-launcher.jar" />
+    <property name="libs.jsf-extensions.src" value="" />
+    <property name="deploy.ant.properties.file" value="C:\Documents and Settings\Administrator\.netbeans\6.5\glassfish.properties" />
+    <property name="j2ee.platform.wscompile.classpath" value="C:\Program Files\glassfish-v2ur2\lib\j2ee.jar:C:\Program Files\glassfish-v2ur2\lib\saaj-api.jar:C:\Program Files\glassfish-v2ur2\lib\saaj-impl.jar:C:\Program Files\glassfish-v2ur2\lib\jaxrpc-api.jar:C:\Program Files\glassfish-v2ur2\lib\jaxrpc-impl.jar:C:\Program Files\glassfish-v2ur2\lib\endorsed\jaxp-api.jar:C:\Program Files\glassfish-v2ur2\lib\appserv-ws.jar:C:\Program Files\glassfish-v2ur2\lib\webservices-tools.jar:C:\Program Files\glassfish-v2ur2\lib\webservices-rt.jar" />
+    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.6.0_03\jre\bin" />
+    <property name="have.sources" value="true" />
+    <property name="debug.classpath" value="build/web/WEB-INF/classes:E:\Tools\Java_tools\hibernate-3.2\hibernate3.jar;E:\Tools\Java_tools\hibernate-3.2\lib\dom4j-1.6.1.jar;E:\Tools\Java_tools\hibernate-3.2\lib\commons-logging-1.0.4.jar;E:\Tools\Java_tools\hibernate-3.2\lib\commons-collections-2.1.1.jar;E:\Tools\Java_tools\hibernate-3.2\lib\cglib-2.1.3.jar;E:\Tools\Java_tools\hibernate-3.2\lib\asm.jar;E:\Tools\Java_tools\hibernate-3.2\lib\antlr-2.7.6.jar;E:\Tools\Java_tools\hibernate-3.2\lib\c3p0-0.9.1.jar:D:\NetBeans 6.5\ide10\modules\ext\mysql-connector-java-5.1.6-bin.jar:E:\Tools\Java_tools\spring-framework-2.0.1\lib\log4j\log4j-1.2.14.jar:..\..\..\oracle\product\10.2.0\client_3\jdbc\lib\ojdbc14.jar:web\WEB-INF\lib\p6spy.jar:web\WEB-INF\lib\sqlprofiler.jar" />
+    <property name="libs.woodstock-theme-default.runtime" value="D:\NetBeans 6.5\visualweb2\modules\ext\webui-jsf-suntheme.jar" />
+    <property name="war.name" value="Test_Hibernate.war" />
+    <property name="javadoc.private" value="false" />
+    <property name="test.src.dir" value="test" />
+    <property name="libs.spring.maven-pom" value="" />
+    <property name="javadoc.encoding.used" value="UTF-8" />
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment" />
+    <property name="ant.project.name" value="Test_Hibernate" />
+    <property name="libs.jdbcsupport-designtime.javadoc" value="" />
+    <property name="sun.cpu.isalist" value="" />
+    <property name="libs.CopyLibs.javadoc" value="" />
+    <property name="org.openide.specification.version" value="6.2" />
+    <property name="libs.hibernate-support.classpath" value="D:\NetBeans 6.5\java2\modules\ext\hibernate\antlr-2.7.6.jar;D:\NetBeans 6.5\java2\modules\ext\hibernate\asm.jar;D:\NetBeans 6.5\java2\modules\ext\hibernate\asm-attrs.jar;D:\NetBeans 6.5\java2\modules\ext\hibernate\cglib-2.1.3.jar;D:\NetBeans 6.5\java2\modules\ext\hibernate\commons-collections-2.1.1.jar;D:\NetBeans 6.5\ide10\modules\ext\commons-logging-1.1.jar;D:\NetBeans 6.5\java2\modules\ext\hibernate\dom4j-1.6.1.jar;D:\NetBeans 6.5\java2\modules\ext\hibernate\ehcache-1.2.3.jar;D:\NetBeans 6.5\java2\modules\ext\hibernate\jdbc2_0-stdext.jar;D:\NetBeans 6.5\java2\modules\ext\hibernate\jta.jar;D:\NetBeans 6.5\java2\modules\ext\hibernate\hibernate3.jar;D:\NetBeans 6.5\java2\modules\ext\hibernate\hibernate-tools.jar;D:\NetBeans 6.5\java2\modules\ext\hibernate\hibernate-annotations.jar;D:\NetBeans 6.5\java2\modules\ext\hibernate\hibernate-commons-annotations.jar;D:\NetBeans 6.5\java2\modules\ext\hibernate\hibernate-entitymanager.jar;D:\NetBeans 6.5\java2\modules\ext\hibernate\javassist.jar" />
+    <property name="user.home" value="C:\Documents and Settings\Administrator" />
+    <property name="libs.exceptionhandler-runtime.classpath" value="D:\NetBeans 6.5\visualweb2\modules\ext\errorhandler.jar" />
+    <property name="debug-args-line" value="-Xdebug" />
+    <property name="libs.JWSAntTasks.src" value="" />
+    <property name="libs.CopyLibs.maven-pom" value="" />
+    <property name="libs.hibernate-persistence.maven-pom" value="" />
+    <property name="libs.absolutelayout.javadoc" value="" />
+    <property name="java.specification.name" value="Java Platform API Specification" />
+    <property name="libs.webui.classpath" value="D:\NetBeans 6.5\visualweb2\modules\ext\webui.jar;D:\NetBeans 6.5\enterprise5\modules\ext\commons-fileupload-1.0.jar" />
+    <property name="libs.swing-app-framework.maven-pom" value="" />
+    <property name="no.dist.ear.dir" value="true" />
+    <property name="libs.yahooui.scriptpath" value="D:\NetBeans 6.5\webcommon1\modules\ext\javascript\yui-2.5.2.zip" />
+    <property name="libs.woodstock-components.classpath" value="D:\NetBeans 6.5\visualweb2\modules\ext\webui-jsf.jar;D:\NetBeans 6.5\enterprise5\modules\ext\commons-fileupload-1.0.jar;D:\NetBeans 6.5\visualweb2\modules\ext\json-2.jar;D:\NetBeans 6.5\visualweb2\modules\ext\jsf-extensions-common-0.1.jar;D:\NetBeans 6.5\visualweb2\modules\ext\jsf-extensions-dynamic-faces-0.1.jar" />
+    <property name="libs.jsf-extensions.javadoc" value="" />
+    <property name="libs.jsf-extensions.classpath" value="D:\NetBeans 6.5\visualweb2\modules\ext\jsf-extensions-dynamic-faces-0.1.jar;D:\NetBeans 6.5\visualweb2\modules\ext\jsf-extensions-common-0.1.jar;D:\NetBeans 6.5\enterprise5\modules\ext\jsf-1_2\commons-logging.jar;D:\NetBeans 6.5\enterprise5\modules\ext\shale-remoting-1.0.4.jar" />
+    <property name="java.specification.vendor" value="Sun Microsystems Inc." />
+    <property name="libs.jdbcsupport-designtime.src" value="" />
+    <property name="libs.javac-api.classpath" value="D:\NetBeans 6.5\java2\modules\ext\javac-api-nb-7.0-b07.jar" />
+    <property name="java.version" value="1.6.0_03" />
+    <property name="javadoc.version" value="false" />
+    <property name="libs.MySQLDriver.javadoc" value="" />
+    <property name="org.openide.version" value="deprecated" />
+    <property name="platforms.JDK_1.5.compiler" value="modern" />
+    <property name="source.encoding" value="UTF-8" />
+    <property name="libs.junit.maven-pom" value="" />
+    <property name="libs.jsf12-support.src" value="D:\NetBeans 6.5\visualweb2\docs\appbase-src.zip;D:\NetBeans 6.5\visualweb2\docs\dataprovider-src.zip;D:\NetBeans 6.5\visualweb2\docs\jsfcl-src.zip" />
+    <property name="libs.struts.maven-pom" value="" />
+    <property name="netbeans.home+have.tests" value="true" />
+    <property name="file.reference.sqlprofiler.jar" value="web\WEB-INF\lib\sqlprofiler.jar" />
+    <property name="libs.IdentityAntTasks.maven-pom" value="" />
+    <property name="libs.jaxb.src" value="" />
+    <property name="libs.jaxb.classpath" value="D:\NetBeans 6.5\ide10\modules\ext\jaxb\activation.jar;D:\NetBeans 6.5\ide10\modules\ext\jaxb\api\jaxb-api.jar;D:\NetBeans 6.5\ide10\modules\ext\jaxb\jaxb-impl.jar;D:\NetBeans 6.5\ide10\modules\ext\jaxb\jaxb-xjc.jar;D:\NetBeans 6.5\ide10\modules\ext\jaxb\api\jsr173_api.jar" />
+    <property name="php.global.include.path" value="" />
+    <property name="dist.javadoc.dir" value="dist/javadoc" />
+    <property name="libs.swing-layout.classpath" value="D:\NetBeans 6.5\platform9\modules\ext\swing-layout-1.0.3.jar" />
+    <property name="libs.restlib.src" value="" />
+    <property name="build.generated.dir" value="build/generated" />
+    <property name="javac.source" value="1.5" />
+    <property name="libs.Hibernate.javadoc" value="" />
+    <property name="libs.hibernate-persistence.src" value="" />
+    <property name="line.separator" value="
+" />
+    <property name="java.specification.version" value="1.6" />
+    <property name="libs.jaxws21.maven-pom" value="" />
+    <property name="java.vm.info" value="mixed mode, sharing" />
+    <property name="libs.jsf12-support.classpath" value="D:\NetBeans 6.5\visualweb2\modules\ext\jsfcl.jar;D:\NetBeans 6.5\visualweb2\modules\ext\appbase.jar;D:\NetBeans 6.5\visualweb2\modules\ext\dataprovider.jar;D:\NetBeans 6.5\visualweb2\modules\ext\sqlx.jar" />
+    <property name="libs.spring-framework.maven-pom" value="" />
+    <property name="sun.boot.class.path" value="C:\Program Files\Java\jdk1.6.0_03\jre\lib\resources.jar;C:\Program Files\Java\jdk1.6.0_03\jre\lib\rt.jar;C:\Program Files\Java\jdk1.6.0_03\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.6.0_03\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.6.0_03\jre\lib\jce.jar;C:\Program Files\Java\jdk1.6.0_03\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.6.0_03\jre\classes" />
+    <property name="javac.target" value="1.5" />
+    <property name="libs.woodstock-components.javadoc" value="D:\NetBeans 6.5\visualweb2\docs\webui-jsf-doc.zip;D:\NetBeans 6.5\visualweb2\docs\webui-jsf-tld.zip" />
+    <property name="build.test.classes.dir" value="build/test/classes" />
+    <property name="src.dir" value="src/java" />
+    <property name="libs.IdentityAntTasks.javadoc" value="" />
+    <property name="sun.awt.keepWorkingSetOnMinimize" value="true" />
+    <property name="libs.jsf12.src" value="" />
+    <property name="j2ee.platform" value="1.5" />
+    <property name="libs.JAVADB_DRIVER_LABEL.maven-pom" value="" />
+    <property name="nbplatform.default.netbeans.dest.dir" value="D:\NetBeans 6.5" />
+    <property name="libs.struts.javadoc" value="D:\NetBeans 6.5\enterprise5\docs\struts-1.2.9-javadoc.zip" />
+    <property name="jspctask.classpath" value="D:\NetBeans 6.5\enterprise5\ant\extra\jspcompile.jar" />
+    <property name="web.docbase.dir" value="web" />
+    <property name="libs.webui-designtime.classpath" value="D:\NetBeans 6.5\visualweb2\modules\ext\webui.jar;D:\NetBeans 6.5\enterprise5\modules\ext\commons-fileupload-1.0.jar" />
+    <property name="dist.dir" value="dist" />
+    <property name="libs.groovy-all.javadoc" value="" />
+    <property name="file.reference.ojdbc14.jar" value="..\..\..\oracle\product\10.2.0\client_3\jdbc\lib\ojdbc14.jar" />
+    <property name="libs.groovy-all.classpath" value="D:\NetBeans 6.5\groovy1\modules\ext\groovy-all.jar" />
+    <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob" />
+    <property name="default.javac.source" value="1.6" />
+    <property name="debug-transport-by-os" value="dt_shmem" />
+    <property name="javac.compilerargs.jaxws" value="" />
+    <property name="libs.MySQLDriver.src" value="" />
+    <property name="sun.jnu.encoding" value="MS932" />
+    <property name="libs.woodstock-components.src" value="D:\NetBeans 6.5\visualweb2\docs\webui-jsf-src.zip" />
+    <property name="build.test.results.dir" value="build/test/results" />
+    <property name="java.runtime.version" value="1.6.0_03-b05" />
+    <property name="libs.ejb3-persistence.javadoc" value="" />
+    <property name="libs.Struts2.javadoc" value="D:\NetBeans 6.0\enterprise4\docs\struts2_docs.zip" />
+    <property name="libs.log4j.classpath" value="E:\Tools\Java_tools\spring-framework-2.0.1\lib\log4j\log4j-1.2.14.jar" />
+    <property name="default.javac.target" value="1.6" />
+    <property name="libs.junit_4.classpath" value="D:\NetBeans 6.5\platform9\modules\ext\junit-4.5.jar" />
+    <property name="user.timezone" value="" />
+    <property name="libs.jsfsupport-designtime.src" value="D:\NetBeans 6.5\visualweb2\docs\appbase-src.zip;D:\NetBeans 6.5\visualweb2\docs\dataprovider-src.zip;D:\NetBeans 6.5\visualweb2\docs\jsfcl-src.zip" />
+    <property name="libs.JAVADB_DRIVER_LABEL.javadoc" value="" />
+    <property name="netbeans.dirs" value="D:\NetBeans 6.5\nb6.5;D:\NetBeans 6.5\ide10;D:\NetBeans 6.5\java2;D:\NetBeans 6.5\xml2;D:\NetBeans 6.5\apisupport1;D:\NetBeans 6.5\webcommon1;D:\NetBeans 6.5\websvccommon1;D:\NetBeans 6.5\enterprise5;D:\NetBeans 6.5\profiler3;D:\NetBeans 6.5\gsf1;D:\NetBeans 6.5\ruby2;D:\NetBeans 6.5\php1;D:\NetBeans 6.5\visualweb2;D:\NetBeans 6.5\identity2;D:\NetBeans 6.5\harness;D:\NetBeans 6.5\cnd2;D:\NetBeans 6.5\groovy1;D:\NetBeans 6.5\maven1" />
+    <property name="libs.exceptionhandler-runtime.src" value="" />
+    <property name="java.ext.dirs" value="C:\Program Files\Java\jdk1.6.0_03\jre\lib\ext;C:\WINDOWS\Sun\Java\lib\ext" />
+    <property name="libs.absolutelayout.classpath" value="D:\NetBeans 6.5\java2\modules\ext\AbsoluteLayout.jar" />
+    <property name="excludes" value="" />
+    <property name="libs.restlib.maven-pom" value="" />
+    <property name="apple.laf.useScreenMenuBar" value="true" />
+    <property name="java.class.path" value="E:\Tools\Java_tools\hibernate-3.2\hibernate3.jar;E:\Tools\Java_tools\hibernate-3.2\lib\dom4j-1.6.1.jar;E:\Tools\Java_tools\hibernate-3.2\lib\commons-logging-1.0.4.jar;E:\Tools\Java_tools\hibernate-3.2\lib\commons-collections-2.1.1.jar;E:\Tools\Java_tools\hibernate-3.2\lib\cglib-2.1.3.jar;E:\Tools\Java_tools\hibernate-3.2\lib\asm.jar;E:\Tools\Java_tools\hibernate-3.2\lib\antlr-2.7.6.jar;E:\Tools\Java_tools\hibernate-3.2\lib\c3p0-0.9.1.jar;D:\NetBeans 6.5\ide10\modules\ext\mysql-connector-java-5.1.6-bin.jar;E:\Tools\Java_tools\spring-framework-2.0.1\lib\log4j\log4j-1.2.14.jar;D:\oracle\product\10.2.0\client_3\jdbc\lib\ojdbc14.jar;D:\workspace\netbeans\Test_Hibernate\web\WEB-INF\lib\p6spy.jar;D:\workspace\netbeans\Test_Hibernate\web\WEB-INF\lib\sqlprofiler.jar;D:\workspace\netbeans\Test_Hibernate\build\web\WEB-INF\classes;D:\NetBeans 6.5\platform9\modules\ext\junit-4.5.jar;D:\workspace\netbeans\Test_Hibernate\build\test\classes;C:\Program Files\glassfish-v2ur2\lib\javaee.jar;C:\Program Files\glassfish-v2ur2\lib\jsf-impl.jar;C:\Program Files\glassfish-v2ur2\lib\activation.jar;C:\Program Files\glassfish-v2ur2\lib\appserv-tags.jar;C:\Program Files\glassfish-v2ur2\lib\mail.jar;C:\Program Files\glassfish-v2ur2\lib\appserv-jstl.jar;C:\Program Files\glassfish-v2ur2\lib\webservices-tools.jar;C:\Program Files\glassfish-v2ur2\lib\webservices-rt.jar;C:\Program Files\glassfish-v2ur2\lib\appserv-ws.jar;C:\Program Files\Java\jdk1.6.0_03\lib\tools.jar;D:\workspace\netbeans\Test_Hibernate;D:\NetBeans 6.5\java2\ant\lib\ant-launcher.jar;D:\NetBeans 6.5\java2\ant\lib\ant.jar;D:\NetBeans 6.5\java2\ant\patches\72080.jar" />
+    <property name="libs.webui-designtime.javadoc" value="D:\NetBeans 6.5\visualweb2\docs\webui-doc.zip" />
+    <property name="libs.absolutelayout.src" value="" />
+    <property name="j2ee.server.type" value="J2EE" />
+    <property name="os.version" value="5.1" />
+    <property name="libs.toplink.javadoc" value="D:\NetBeans 6.5\enterprise5\docs\javaee5-doc-api.zip" />
+    <property name="sun.desktop" value="windows" />
+    <property name="libs.restlib.javadoc" value="D:\NetBeans 6.5\enterprise5\docs\jersey-api-doc.zip" />
+    <property name="war.content.additional" value="" />
+    <property name="platforms.JDK_1.5.bootclasspath" value="C:\Program Files\Java\jdk1.5.0_04\jre\lib\rt.jar;C:\Program Files\Java\jdk1.5.0_04\jre\lib\i18n.jar;C:\Program Files\Java\jdk1.5.0_04\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.5.0_04\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.5.0_04\jre\lib\jce.jar;C:\Program Files\Java\jdk1.5.0_04\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.5.0_04\jre\classes;C:\Program Files\Java\jdk1.5.0_04\jre\lib\ext\dnsns.jar;C:\Program Files\Java\jdk1.5.0_04\jre\lib\ext\localedata.jar;C:\Program Files\Java\jdk1.5.0_04\jre\lib\ext\sunjce_provider.jar;C:\Program Files\Java\jdk1.5.0_04\jre\lib\ext\sunpkcs11.jar" />
+    <property name="file.reference.p6spy.jar" value="web\WEB-INF\lib\p6spy.jar" />
+    <property name="libs.beans-binding.javadoc" value="D:\NetBeans 6.5\java2\docs\beansbinding-1.2.1-doc.zip" />
+    <property name="rave.version" value="2.0.0" />
+    <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment" />
+    <property name="java.vm.vendor" value="Sun Microsystems Inc." />
+    <property name="libs.CopyLibs.classpath" value="D:\NetBeans 6.5\java2\ant\extra\org-netbeans-modules-java-j2seproject-copylibstask.jar" />
+    <property name="libs.spring-webmvc.maven-pom" value="" />
+    <property name="jaxws.endorsed.dir" value="D:\NetBeans 6.5\java2\modules\ext\jaxws21\api:D:\NetBeans 6.5\ide10\modules\ext\jaxb\api" />
+    <property name="libs.ejb3-persistence.classpath" value="D:\NetBeans 6.5\java2\modules\ext\hibernate\ejb3-persistence.jar" />
+    <property name="libs.spring-framework.javadoc" value="" />
+    <property name="libs.jquery.scriptpath" value="D:\NetBeans 6.5\webcommon1\modules\ext\javascript\jquery-1.2.6.zip" />
+    <property name="libs.Struts2.maven-pom" value="" />
+    <property name="libs.PostgreSQLDriver.classpath" value="D:\NetBeans 6.5\ide10\modules\ext\postgresql-8.3-603.jdbc3.jar" />
+    <property name="libs.jsf12.maven-pom" value="" />
+    <property name="libs.junit.src" value="" />
+    <property name="libs.CopyLibs.src" value="" />
+    <property name="build.dir" value="build" />
+    <property name="j2ee.platform.is.jsr109" value="true" />
+    <property name="ant.version" value="Apache Ant version 1.7.1 compiled on June 27 2008" />
+    <property name="file.encoding" value="MS932" />
+    <property name="build.classes.excludes" value="**/*.java,**/*.form" />
+    <property name="javadoc.nonavbar" value="false" />
+    <property name="platform.active" value="default_platform" />
+    <property name="awt.toolkit" value="sun.awt.windows.WToolkit" />
+    <property name="war.ear.name" value="Test_Hibernate.war" />
+  </properties>
+  <testcase classname="org.py.hib.quickstart.QuickStartTest" name="hello" time="2.172" />
+  <testcase classname="org.py.hib.quickstart.QuickStartTest" name="testFind" time="0.969" />
+  <testcase classname="org.py.hib.quickstart.QuickStartTest" name="testOne2One" time="0.406" />
+  <testcase classname="org.py.hib.quickstart.QuickStartTest" name="testOne2Many" time="0.5" />
+  <system-out><![CDATA[14:58:35,968 INFO Environment:509 - Hibernate 3.2.3
+14:58:35,968 INFO Environment:542 - hibernate.properties not found
+14:58:35,984 INFO Environment:676 - Bytecode provider name : cglib
+14:58:35,984 INFO Environment:593 - using JDK 1.4 java.sql.Timestamp handling
+14:58:36,078 INFO Configuration:585 - Reading mappings from resource: org/py/hib/quickstart/User.hbm.xml
+14:58:36,078 INFO Configuration:530 - Reading mappings from resource: org/py/hib/quickstart/User.hbm.xml
+14:58:36,343 INFO HbmBinder:300 - Mapping class: org.py.hib.quickstart.User -> user
+14:58:36,375 INFO Configuration:585 - Reading mappings from resource: org/py/hib/relation/one2one/Person.hbm.xml
+14:58:36,375 INFO Configuration:530 - Reading mappings from resource: org/py/hib/relation/one2one/Person.hbm.xml
+14:58:36,421 INFO HbmBinder:300 - Mapping class: org.py.hib.relation.one2one.Person -> person
+14:58:36,515 INFO Configuration:585 - Reading mappings from resource: org/py/hib/relation/one2many/Father.hbm.xml
+14:58:36,515 INFO Configuration:530 - Reading mappings from resource: org/py/hib/relation/one2many/Father.hbm.xml
+14:58:36,578 INFO HbmBinder:300 - Mapping class: org.py.hib.relation.one2many.Father -> father
+14:58:36,578 INFO Configuration:585 - Reading mappings from resource: org/py/hib/relation/one2many/Child.hbm.xml
+14:58:36,578 INFO Configuration:530 - Reading mappings from resource: org/py/hib/relation/one2many/Child.hbm.xml
+14:58:36,625 INFO HbmBinder:300 - Mapping class: org.py.hib.relation.one2many.Child -> child
+14:58:36,625 INFO Configuration:585 - Reading mappings from resource: org/py/hib/relation/many2many/Student.hbm.xml
+14:58:36,625 INFO Configuration:530 - Reading mappings from resource: org/py/hib/relation/many2many/Student.hbm.xml
+14:58:36,656 INFO HbmBinder:300 - Mapping class: org.py.hib.relation.many2many.Student -> student
+14:58:36,656 INFO HbmBinder:1412 - Mapping collection: org.py.hib.relation.many2many.Student.teachers -> teacher_student_relation
+14:58:36,656 INFO Configuration:585 - Reading mappings from resource: org/py/hib/relation/one2one/Card.hbm.xml
+14:58:36,656 INFO Configuration:530 - Reading mappings from resource: org/py/hib/relation/one2one/Card.hbm.xml
+14:58:36,671 INFO HbmBinder:300 - Mapping class: org.py.hib.relation.one2one.Card -> card
+14:58:36,687 INFO Configuration:585 - Reading mappings from resource: org/py/hib/relation/many2many/Teacher.hbm.xml
+14:58:36,687 INFO Configuration:530 - Reading mappings from resource: org/py/hib/relation/many2many/Teacher.hbm.xml
+14:58:36,703 INFO HbmBinder:300 - Mapping class: org.py.hib.relation.many2many.Teacher -> teacher
+14:58:36,703 INFO HbmBinder:1412 - Mapping collection: org.py.hib.relation.many2many.Teacher.students -> teacher_student_relation
+14:58:36,703 INFO Configuration:1426 - configuring from resource: /hibernate.cfg.xml
+14:58:36,703 INFO Configuration:1403 - Configuration resource: /hibernate.cfg.xml
+14:58:36,718 INFO Configuration:1541 - Configured SessionFactory: null
+14:58:36,718 INFO HbmBinder:2375 - Mapping collection: org.py.hib.relation.one2many.Father.children -> child
+14:58:36,734 INFO DriverManagerConnectionProvider:41 - Using Hibernate built-in connection pool (not for production use!)
+14:58:36,734 INFO DriverManagerConnectionProvider:42 - Hibernate connection pool size: 1
+14:58:36,734 INFO DriverManagerConnectionProvider:45 - autocommit mode: false
+14:58:36,843 INFO DriverManagerConnectionProvider:80 - using driver: com.p6spy.engine.spy.P6SpyDriver at URL: jdbc:mysql://localhost:3306/hibernatequickuse
+14:58:36,843 INFO DriverManagerConnectionProvider:86 - connection properties: {user=root, password=****}
+14:58:37,250 INFO SettingsFactory:89 - RDBMS: MySQL, version: 5.0.27-community-nt
+14:58:37,265 INFO SettingsFactory:90 - JDBC driver: MySQL-AB JDBC Driver, version: mysql-connector-java-5.1.6 ( Revision: ${svn.Revision} )
+14:58:37,296 INFO Dialect:152 - Using dialect: org.hibernate.dialect.MySQLDialect
+14:58:37,312 INFO TransactionFactoryFactory:31 - Using default transaction strategy (direct JDBC transactions)
+14:58:37,312 INFO TransactionManagerLookupFactory:33 - No TransactionManagerLookup configured (in JTA environment, use of read-write or transactional second-level cache is not recommended)
+14:58:37,312 INFO SettingsFactory:143 - Automatic flush during beforeCompletion(): disabled
+14:58:37,328 INFO SettingsFactory:147 - Automatic session close at end of transaction: disabled
+14:58:37,328 INFO SettingsFactory:154 - JDBC batch size: 4
+14:58:37,328 INFO SettingsFactory:157 - JDBC batch updates for versioned data: disabled
+14:58:37,328 INFO SettingsFactory:162 - Scrollable result sets: enabled
+14:58:37,328 INFO SettingsFactory:170 - JDBC3 getGeneratedKeys(): enabled
+14:58:37,328 INFO SettingsFactory:174 - JDBC result set fetch size: 30
+14:58:37,328 INFO SettingsFactory:178 - Connection release mode: auto
+14:58:37,328 INFO SettingsFactory:202 - Maximum outer join fetch depth: 2
+14:58:37,328 INFO SettingsFactory:205 - Default batch fetch size: 1
+14:58:37,328 INFO SettingsFactory:209 - Generate SQL with comments: disabled
+14:58:37,328 INFO SettingsFactory:213 - Order SQL updates by primary key: disabled
+14:58:37,328 INFO SettingsFactory:382 - Query translator: org.hibernate.hql.ast.ASTQueryTranslatorFactory
+14:58:37,328 INFO ASTQueryTranslatorFactory:24 - Using ASTQueryTranslatorFactory
+14:58:37,328 INFO SettingsFactory:221 - Query language substitutions: {}
+14:58:37,343 INFO SettingsFactory:226 - JPA-QL strict compliance: disabled
+14:58:37,343 INFO SettingsFactory:231 - Second-level cache: enabled
+14:58:37,343 INFO SettingsFactory:235 - Query cache: disabled
+14:58:37,343 INFO SettingsFactory:369 - Cache provider: org.hibernate.cache.NoCacheProvider
+14:58:37,343 INFO SettingsFactory:250 - Optimize cache for minimal puts: disabled
+14:58:37,343 INFO SettingsFactory:259 - Structured second-level cache entries: disabled
+14:58:37,343 INFO SettingsFactory:279 - Echoing all SQL to stdout
+14:58:37,343 INFO SettingsFactory:286 - Statistics: disabled
+14:58:37,343 INFO SettingsFactory:290 - Deleted entity synthetic identifier rollback: disabled
+14:58:37,359 INFO SettingsFactory:305 - Default entity-mode: pojo
+14:58:37,359 INFO SettingsFactory:309 - Named query checking : enabled
+14:58:37,406 INFO SessionFactoryImpl:161 - building session factory
+14:58:37,953 INFO SessionFactoryObjectFactory:82 - Not binding factory to JNDI, no JNDI name configured
+14:58:37,953 INFO SessionFactoryImpl:769 - closing
+14:58:37,953 INFO DriverManagerConnectionProvider:147 - cleaning up connection pool: jdbc:mysql://localhost:3306/hibernatequickuse
+14:58:37,968 INFO Configuration:585 - Reading mappings from resource: org/py/hib/quickstart/User.hbm.xml
+14:58:37,968 INFO Configuration:530 - Reading mappings from resource: org/py/hib/quickstart/User.hbm.xml
+14:58:38,000 INFO HbmBinder:300 - Mapping class: org.py.hib.quickstart.User -> user
+14:58:38,000 INFO Configuration:585 - Reading mappings from resource: org/py/hib/relation/one2one/Person.hbm.xml
+14:58:38,000 INFO Configuration:530 - Reading mappings from resource: org/py/hib/relation/one2one/Person.hbm.xml
+14:58:38,031 INFO HbmBinder:300 - Mapping class: org.py.hib.relation.one2one.Person -> person
+14:58:38,031 INFO Configuration:585 - Reading mappings from resource: org/py/hib/relation/one2many/Father.hbm.xml
+14:58:38,031 INFO Configuration:530 - Reading mappings from resource: org/py/hib/relation/one2many/Father.hbm.xml
+14:58:38,046 INFO HbmBinder:300 - Mapping class: org.py.hib.relation.one2many.Father -> father
+14:58:38,046 INFO Configuration:585 - Reading mappings from resource: org/py/hib/relation/one2many/Child.hbm.xml
+14:58:38,062 INFO Configuration:530 - Reading mappings from resource: org/py/hib/relation/one2many/Child.hbm.xml
+14:58:38,078 INFO HbmBinder:300 - Mapping class: org.py.hib.relation.one2many.Child -> child
+14:58:38,078 INFO Configuration:585 - Reading mappings from resource: org/py/hib/relation/many2many/Student.hbm.xml
+14:58:38,078 INFO Configuration:530 - Reading mappings from resource: org/py/hib/relation/many2many/Student.hbm.xml
+14:58:38,109 INFO HbmBinder:300 - Mapping class: org.py.hib.relation.many2many.Student -> student
+14:58:38,109 INFO HbmBinder:1412 - Mapping collection: org.py.hib.relation.many2many.Student.teachers -> teacher_student_relation
+14:58:38,109 INFO Configuration:585 - Reading mappings from resource: org/py/hib/relation/one2one/Card.hbm.xml
+14:58:38,109 INFO Configuration:530 - Reading mappings from resource: org/py/hib/relation/one2one/Card.hbm.xml
+14:58:38,125 INFO HbmBinder:300 - Mapping class: org.py.hib.relation.one2one.Card -> card
+14:58:38,125 INFO Configuration:585 - Reading mappings from resource: org/py/hib/relation/many2many/Teacher.hbm.xml
+14:58:38,125 INFO Configuration:530 - Reading mappings from resource: org/py/hib/relation/many2many/Teacher.hbm.xml
+14:58:38,140 INFO HbmBinder:300 - Mapping class: org.py.hib.relation.many2many.Teacher -> teacher
+14:58:38,140 INFO HbmBinder:1412 - Mapping collection: org.py.hib.relation.many2many.Teacher.students -> teacher_student_relation
+14:58:38,140 INFO Configuration:1426 - configuring from resource: /hibernate.cfg.xml
+14:58:38,140 INFO Configuration:1403 - Configuration resource: /hibernate.cfg.xml
+14:58:38,187 INFO Configuration:1541 - Configured SessionFactory: null
+14:58:38,187 INFO HbmBinder:2375 - Mapping collection: org.py.hib.relation.one2many.Father.children -> child
+14:58:38,203 INFO DriverManagerConnectionProvider:41 - Using Hibernate built-in connection pool (not for production use!)
+14:58:38,203 INFO DriverManagerConnectionProvider:42 - Hibernate connection pool size: 1
+14:58:38,203 INFO DriverManagerConnectionProvider:45 - autocommit mode: false
+14:58:38,203 INFO DriverManagerConnectionProvider:80 - using driver: com.p6spy.engine.spy.P6SpyDriver at URL: jdbc:mysql://localhost:3306/hibernatequickuse
+14:58:38,203 INFO DriverManagerConnectionProvider:86 - connection properties: {user=root, password=****}
+14:58:38,234 INFO SettingsFactory:89 - RDBMS: MySQL, version: 5.0.27-community-nt
+14:58:38,234 INFO SettingsFactory:90 - JDBC driver: MySQL-AB JDBC Driver, version: mysql-connector-java-5.1.6 ( Revision: ${svn.Revision} )
+14:58:38,234 INFO Dialect:152 - Using dialect: org.hibernate.dialect.MySQLDialect
+14:58:38,234 INFO TransactionFactoryFactory:31 - Using default transaction strategy (direct JDBC transactions)
+14:58:38,234 INFO TransactionManagerLookupFactory:33 - No TransactionManagerLookup configured (in JTA environment, use of read-write or transactional second-level cache is not recommended)
+14:58:38,234 INFO SettingsFactory:143 - Automatic flush during beforeCompletion(): disabled
+14:58:38,250 INFO SettingsFactory:147 - Automatic session close at end of transaction: disabled
+14:58:38,250 INFO SettingsFactory:154 - JDBC batch size: 4
+14:58:38,250 INFO SettingsFactory:157 - JDBC batch updates for versioned data: disabled
+14:58:38,250 INFO SettingsFactory:162 - Scrollable result sets: enabled
+14:58:38,250 INFO SettingsFactory:170 - JDBC3 getGeneratedKeys(): enabled
+14:58:38,250 INFO SettingsFactory:174 - JDBC result set fetch size: 30
+14:58:38,250 INFO SettingsFactory:178 - Connection release mode: auto
+14:58:38,250 INFO SettingsFactory:202 - Maximum outer join fetch depth: 2
+14:58:38,250 INFO SettingsFactory:205 - Default batch fetch size: 1
+14:58:38,250 INFO SettingsFactory:209 - Generate SQL with comments: disabled
+14:58:38,250 INFO SettingsFactory:213 - Order SQL updates by primary key: disabled
+14:58:38,250 INFO SettingsFactory:382 - Query translator: org.hibernate.hql.ast.ASTQueryTranslatorFactory
+14:58:38,250 INFO ASTQueryTranslatorFactory:24 - Using ASTQueryTranslatorFactory
+14:58:38,250 INFO SettingsFactory:221 - Query language substitutions: {}
+14:58:38,250 INFO SettingsFactory:226 - JPA-QL strict compliance: disabled
+14:58:38,265 INFO SettingsFactory:231 - Second-level cache: enabled
+14:58:38,265 INFO SettingsFactory:235 - Query cache: disabled
+14:58:38,359 INFO DriverManagerConnectionProvider:147 - cleaning up connection pool: jdbc:mysql://localhost:3306/hibernatequickuse
+14:58:38,375 INFO SettingsFactory:369 - Cache provider: org.hibernate.cache.NoCacheProvider
+14:58:38,375 INFO SettingsFactory:250 - Optimize cache for minimal puts: disabled
+14:58:38,375 INFO SettingsFactory:259 - Structured second-level cache entries: disabled
+14:58:38,375 INFO SettingsFactory:279 - Echoing all SQL to stdout
+14:58:38,375 INFO SettingsFactory:286 - Statistics: disabled
+14:58:38,375 INFO SettingsFactory:290 - Deleted entity synthetic identifier rollback: disabled
+14:58:38,375 INFO SettingsFactory:305 - Default entity-mode: pojo
+14:58:38,375 INFO SettingsFactory:309 - Named query checking : enabled
+14:58:38,406 INFO SessionFactoryImpl:161 - building session factory
+14:58:38,437 INFO SessionFactoryObjectFactory:82 - Not binding factory to JNDI, no JNDI name configured
+
+=== test find ===
+Hibernate: 
+    select
+        user0_.id as id15_,
+        user0_.name as name15_ 
+    from
+        hibernatequickuse.user user0_
+14:58:38,859DEBUG StringType:172 - returning '2c90e2411b0aafa1011b0aafa4450001' as column: id15_
+14:58:38,875DEBUG StringType:172 - returning '1' as column: name15_
+14:58:38,875DEBUG StringType:172 - returning '2c90e2411b0aafa1011b0aafa4540002' as column: id15_
+14:58:38,875DEBUG StringType:172 - returning '2' as column: name15_
+14:58:38,890DEBUG StringType:172 - returning '2c90e2411b0aafa1011b0aafa4540003' as column: id15_
+14:58:38,890DEBUG StringType:172 - returning '3' as column: name15_
+14:58:38,890DEBUG StringType:172 - returning '2c90e2411b0aafa1011b0aafa4540004' as column: id15_
+14:58:38,890DEBUG StringType:172 - returning '4' as column: name15_
+14:58:38,906DEBUG StringType:172 - returning '2c90e2411b0aafa1011b0aafa4830005' as column: id15_
+14:58:38,906DEBUG StringType:172 - returning '5' as column: name15_
+14:58:38,906DEBUG StringType:172 - returning '2c90e2411b0aafa1011b0aafa4830006' as column: id15_
+14:58:38,906DEBUG StringType:172 - returning '6' as column: name15_
+14:58:38,906DEBUG StringType:172 - returning '2c90e2411b0aafa1011b0aafa4830007' as column: id15_
+14:58:38,906DEBUG StringType:172 - returning '7' as column: name15_
+14:58:38,921DEBUG StringType:172 - returning '2c90e2411b0aafa1011b0aafa4830008' as column: id15_
+14:58:38,921DEBUG StringType:172 - returning '8' as column: name15_
+2c90e2411b0aafa1011b0aafa4450001 1
+2c90e2411b0aafa1011b0aafa4540002 2
+2c90e2411b0aafa1011b0aafa4540003 3
+2c90e2411b0aafa1011b0aafa4540004 4
+2c90e2411b0aafa1011b0aafa4830005 5
+2c90e2411b0aafa1011b0aafa4830006 6
+2c90e2411b0aafa1011b0aafa4830007 7
+2c90e2411b0aafa1011b0aafa4830008 8
+14:58:38,937 INFO SessionFactoryImpl:769 - closing
+14:58:38,937 INFO DriverManagerConnectionProvider:147 - cleaning up connection pool: jdbc:mysql://localhost:3306/hibernatequickuse
+14:58:38,937 INFO Configuration:585 - Reading mappings from resource: org/py/hib/quickstart/User.hbm.xml
+14:58:38,937 INFO Configuration:530 - Reading mappings from resource: org/py/hib/quickstart/User.hbm.xml
+14:58:38,953 INFO HbmBinder:300 - Mapping class: org.py.hib.quickstart.User -> user
+14:58:38,953 INFO Configuration:585 - Reading mappings from resource: org/py/hib/relation/one2one/Person.hbm.xml
+14:58:38,968 INFO Configuration:530 - Reading mappings from resource: org/py/hib/relation/one2one/Person.hbm.xml
+14:58:38,984 INFO HbmBinder:300 - Mapping class: org.py.hib.relation.one2one.Person -> person
+14:58:38,984 INFO Configuration:585 - Reading mappings from resource: org/py/hib/relation/one2many/Father.hbm.xml
+14:58:38,984 INFO Configuration:530 - Reading mappings from resource: org/py/hib/relation/one2many/Father.hbm.xml
+14:58:39,000 INFO HbmBinder:300 - Mapping class: org.py.hib.relation.one2many.Father -> father
+14:58:39,015 INFO Configuration:585 - Reading mappings from resource: org/py/hib/relation/one2many/Child.hbm.xml
+14:58:39,015 INFO Configuration:530 - Reading mappings from resource: org/py/hib/relation/one2many/Child.hbm.xml
+14:58:39,046 INFO HbmBinder:300 - Mapping class: org.py.hib.relation.one2many.Child -> child
+14:58:39,046 INFO Configuration:585 - Reading mappings from resource: org/py/hib/relation/many2many/Student.hbm.xml
+14:58:39,046 INFO Configuration:530 - Reading mappings from resource: org/py/hib/relation/many2many/Student.hbm.xml
+14:58:39,062 INFO HbmBinder:300 - Mapping class: org.py.hib.relation.many2many.Student -> student
+14:58:39,062 INFO HbmBinder:1412 - Mapping collection: org.py.hib.relation.many2many.Student.teachers -> teacher_student_relation
+14:58:39,062 INFO Configuration:585 - Reading mappings from resource: org/py/hib/relation/one2one/Card.hbm.xml
+14:58:39,062 INFO Configuration:530 - Reading mappings from resource: org/py/hib/relation/one2one/Card.hbm.xml
+14:58:39,078 INFO HbmBinder:300 - Mapping class: org.py.hib.relation.one2one.Card -> card
+14:58:39,078 INFO Configuration:585 - Reading mappings from resource: org/py/hib/relation/many2many/Teacher.hbm.xml
+14:58:39,078 INFO Configuration:530 - Reading mappings from resource: org/py/hib/relation/many2many/Teacher.hbm.xml
+14:58:39,109 INFO HbmBinder:300 - Mapping class: org.py.hib.relation.many2many.Teacher -> teacher
+14:58:39,109 INFO HbmBinder:1412 - Mapping collection: org.py.hib.relation.many2many.Teacher.students -> teacher_student_relation
+14:58:39,109 INFO Configuration:1426 - configuring from resource: /hibernate.cfg.xml
+14:58:39,109 INFO Configuration:1403 - Configuration resource: /hibernate.cfg.xml
+14:58:39,125 INFO Configuration:1541 - Configured SessionFactory: null
+14:58:39,125 INFO HbmBinder:2375 - Mapping collection: org.py.hib.relation.one2many.Father.children -> child
+14:58:39,125 INFO DriverManagerConnectionProvider:41 - Using Hibernate built-in connection pool (not for production use!)
+14:58:39,125 INFO DriverManagerConnectionProvider:42 - Hibernate connection pool size: 1
+14:58:39,125 INFO DriverManagerConnectionProvider:45 - autocommit mode: false
+14:58:39,125 INFO DriverManagerConnectionProvider:80 - using driver: com.p6spy.engine.spy.P6SpyDriver at URL: jdbc:mysql://localhost:3306/hibernatequickuse
+14:58:39,140 INFO DriverManagerConnectionProvider:86 - connection properties: {user=root, password=****}
+14:58:39,156 INFO SettingsFactory:89 - RDBMS: MySQL, version: 5.0.27-community-nt
+14:58:39,156 INFO SettingsFactory:90 - JDBC driver: MySQL-AB JDBC Driver, version: mysql-connector-java-5.1.6 ( Revision: ${svn.Revision} )
+14:58:39,156 INFO Dialect:152 - Using dialect: org.hibernate.dialect.MySQLDialect
+14:58:39,156 INFO TransactionFactoryFactory:31 - Using default transaction strategy (direct JDBC transactions)
+14:58:39,156 INFO TransactionManagerLookupFactory:33 - No TransactionManagerLookup configured (in JTA environment, use of read-write or transactional second-level cache is not recommended)
+14:58:39,156 INFO SettingsFactory:143 - Automatic flush during beforeCompletion(): disabled
+14:58:39,156 INFO SettingsFactory:147 - Automatic session close at end of transaction: disabled
+14:58:39,156 INFO SettingsFactory:154 - JDBC batch size: 4
+14:58:39,156 INFO SettingsFactory:157 - JDBC batch updates for versioned data: disabled
+14:58:39,156 INFO SettingsFactory:162 - Scrollable result sets: enabled
+14:58:39,171 INFO SettingsFactory:170 - JDBC3 getGeneratedKeys(): enabled
+14:58:39,171 INFO SettingsFactory:174 - JDBC result set fetch size: 30
+14:58:39,171 INFO SettingsFactory:178 - Connection release mode: auto
+14:58:39,171 INFO SettingsFactory:202 - Maximum outer join fetch depth: 2
+14:58:39,171 INFO SettingsFactory:205 - Default batch fetch size: 1
+14:58:39,171 INFO SettingsFactory:209 - Generate SQL with comments: disabled
+14:58:39,171 INFO SettingsFactory:213 - Order SQL updates by primary key: disabled
+14:58:39,171 INFO SettingsFactory:382 - Query translator: org.hibernate.hql.ast.ASTQueryTranslatorFactory
+14:58:39,171 INFO ASTQueryTranslatorFactory:24 - Using ASTQueryTranslatorFactory
+14:58:39,171 INFO SettingsFactory:221 - Query language substitutions: {}
+14:58:39,171 INFO SettingsFactory:226 - JPA-QL strict compliance: disabled
+14:58:39,171 INFO SettingsFactory:231 - Second-level cache: enabled
+14:58:39,171 INFO SettingsFactory:235 - Query cache: disabled
+14:58:39,187 INFO SettingsFactory:369 - Cache provider: org.hibernate.cache.NoCacheProvider
+14:58:39,187 INFO SettingsFactory:250 - Optimize cache for minimal puts: disabled
+14:58:39,187 INFO SettingsFactory:259 - Structured second-level cache entries: disabled
+14:58:39,187 INFO SettingsFactory:279 - Echoing all SQL to stdout
+14:58:39,187 INFO SettingsFactory:286 - Statistics: disabled
+14:58:39,187 INFO SettingsFactory:290 - Deleted entity synthetic identifier rollback: disabled
+14:58:39,187 INFO SettingsFactory:305 - Default entity-mode: pojo
+14:58:39,187 INFO SettingsFactory:309 - Named query checking : enabled
+14:58:39,187 INFO SessionFactoryImpl:161 - building session factory
+14:58:39,218 INFO SessionFactoryObjectFactory:82 - Not binding factory to JNDI, no JNDI name configured
+Hibernate: 
+    select
+        person0_.id as id31_,
+        person0_.name as name31_ 
+    from
+        person person0_
+14:58:39,234DEBUG StringType:172 - returning '1' as column: id31_
+14:58:39,234DEBUG StringType:172 - returning 'My name changed!' as column: name31_
+14:58:39,250DEBUG StringType:172 - returning '2' as column: id31_
+14:58:39,250DEBUG StringType:172 - returning 'person2' as column: name31_
+14:58:39,250DEBUG StringType:172 - returning '3' as column: id31_
+14:58:39,250DEBUG StringType:172 - returning 'person3' as column: name31_
+Hibernate: 
+    select
+        card0_.id as id36_0_,
+        card0_.cardDesc as cardDesc36_0_ 
+    from
+        card card0_ 
+    where
+        card0_.id=?
+14:58:39,265DEBUG StringType:133 - binding '1' to parameter: 1
+14:58:39,265DEBUG StringType:172 - returning 'card1' as column: cardDesc36_0_
+1 My name changed! org.py.hib.relation.one2one.Card@1049d3
+Hibernate: 
+    select
+        card0_.id as id36_0_,
+        card0_.cardDesc as cardDesc36_0_ 
+    from
+        card card0_ 
+    where
+        card0_.id=?
+14:58:39,281DEBUG StringType:133 - binding '2' to parameter: 1
+14:58:39,281DEBUG StringType:172 - returning 'card2' as column: cardDesc36_0_
+2 person2 org.py.hib.relation.one2one.Card@ebcdbb
+Hibernate: 
+    select
+        card0_.id as id36_0_,
+        card0_.cardDesc as cardDesc36_0_ 
+    from
+        card card0_ 
+    where
+        card0_.id=?
+14:58:39,328DEBUG StringType:133 - binding '3' to parameter: 1
+14:58:39,328DEBUG StringType:172 - returning 'card3' as column: cardDesc36_0_
+3 person3 org.py.hib.relation.one2one.Card@be41ec
+14:58:39,343 INFO SessionFactoryImpl:769 - closing
+14:58:39,343 INFO DriverManagerConnectionProvider:147 - cleaning up connection pool: jdbc:mysql://localhost:3306/hibernatequickuse
+14:58:39,359 INFO Configuration:585 - Reading mappings from resource: org/py/hib/quickstart/User.hbm.xml
+14:58:39,359 INFO Configuration:530 - Reading mappings from resource: org/py/hib/quickstart/User.hbm.xml
+14:58:39,484 INFO DriverManagerConnectionProvider:147 - cleaning up connection pool: jdbc:mysql://localhost:3306/hibernatequickuse
+14:58:39,484 INFO DriverManagerConnectionProvider:147 - cleaning up connection pool: jdbc:mysql://localhost:3306/hibernatequickuse
+14:58:39,484 INFO HbmBinder:300 - Mapping class: org.py.hib.quickstart.User -> user
+14:58:39,484 INFO Configuration:585 - Reading mappings from resource: org/py/hib/relation/one2one/Person.hbm.xml
+14:58:39,484 INFO Configuration:530 - Reading mappings from resource: org/py/hib/relation/one2one/Person.hbm.xml
+14:58:39,531 INFO HbmBinder:300 - Mapping class: org.py.hib.relation.one2one.Person -> person
+14:58:39,531 INFO Configuration:585 - Reading mappings from resource: org/py/hib/relation/one2many/Father.hbm.xml
+14:58:39,531 INFO Configuration:530 - Reading mappings from resource: org/py/hib/relation/one2many/Father.hbm.xml
+14:58:39,546 INFO HbmBinder:300 - Mapping class: org.py.hib.relation.one2many.Father -> father
+14:58:39,546 INFO Configuration:585 - Reading mappings from resource: org/py/hib/relation/one2many/Child.hbm.xml
+14:58:39,546 INFO Configuration:530 - Reading mappings from resource: org/py/hib/relation/one2many/Child.hbm.xml
+14:58:39,562 INFO HbmBinder:300 - Mapping class: org.py.hib.relation.one2many.Child -> child
+14:58:39,562 INFO Configuration:585 - Reading mappings from resource: org/py/hib/relation/many2many/Student.hbm.xml
+14:58:39,562 INFO Configuration:530 - Reading mappings from resource: org/py/hib/relation/many2many/Student.hbm.xml
+14:58:39,640 INFO HbmBinder:300 - Mapping class: org.py.hib.relation.many2many.Student -> student
+14:58:39,640 INFO HbmBinder:1412 - Mapping collection: org.py.hib.relation.many2many.Student.teachers -> teacher_student_relation
+14:58:39,640 INFO Configuration:585 - Reading mappings from resource: org/py/hib/relation/one2one/Card.hbm.xml
+14:58:39,640 INFO Configuration:530 - Reading mappings from resource: org/py/hib/relation/one2one/Card.hbm.xml
+14:58:39,656 INFO HbmBinder:300 - Mapping class: org.py.hib.relation.one2one.Card -> card
+14:58:39,656 INFO Configuration:585 - Reading mappings from resource: org/py/hib/relation/many2many/Teacher.hbm.xml
+14:58:39,656 INFO Configuration:530 - Reading mappings from resource: org/py/hib/relation/many2many/Teacher.hbm.xml
+14:58:39,671 INFO HbmBinder:300 - Mapping class: org.py.hib.relation.many2many.Teacher -> teacher
+14:58:39,671 INFO HbmBinder:1412 - Mapping collection: org.py.hib.relation.many2many.Teacher.students -> teacher_student_relation
+14:58:39,671 INFO Configuration:1426 - configuring from resource: /hibernate.cfg.xml
+14:58:39,671 INFO Configuration:1403 - Configuration resource: /hibernate.cfg.xml
+14:58:39,671 INFO Configuration:1541 - Configured SessionFactory: null
+14:58:39,671 INFO HbmBinder:2375 - Mapping collection: org.py.hib.relation.one2many.Father.children -> child
+14:58:39,687 INFO DriverManagerConnectionProvider:41 - Using Hibernate built-in connection pool (not for production use!)
+14:58:39,687 INFO DriverManagerConnectionProvider:42 - Hibernate connection pool size: 1
+14:58:39,687 INFO DriverManagerConnectionProvider:45 - autocommit mode: false
+14:58:39,687 INFO DriverManagerConnectionProvider:80 - using driver: com.p6spy.engine.spy.P6SpyDriver at URL: jdbc:mysql://localhost:3306/hibernatequickuse
+14:58:39,687 INFO DriverManagerConnectionProvider:86 - connection properties: {user=root, password=****}
+14:58:39,718 INFO SettingsFactory:89 - RDBMS: MySQL, version: 5.0.27-community-nt
+14:58:39,718 INFO SettingsFactory:90 - JDBC driver: MySQL-AB JDBC Driver, version: mysql-connector-java-5.1.6 ( Revision: ${svn.Revision} )
+14:58:39,718 INFO Dialect:152 - Using dialect: org.hibernate.dialect.MySQLDialect
+14:58:39,718 INFO TransactionFactoryFactory:31 - Using default transaction strategy (direct JDBC transactions)
+14:58:39,718 INFO TransactionManagerLookupFactory:33 - No TransactionManagerLookup configured (in JTA environment, use of read-write or transactional second-level cache is not recommended)
+14:58:39,718 INFO SettingsFactory:143 - Automatic flush during beforeCompletion(): disabled
+14:58:39,718 INFO SettingsFactory:147 - Automatic session close at end of transaction: disabled
+14:58:39,718 INFO SettingsFactory:154 - JDBC batch size: 4
+14:58:39,718 INFO SettingsFactory:157 - JDBC batch updates for versioned data: disabled
+14:58:39,718 INFO SettingsFactory:162 - Scrollable result sets: enabled
+14:58:39,734 INFO SettingsFactory:170 - JDBC3 getGeneratedKeys(): enabled
+14:58:39,734 INFO SettingsFactory:174 - JDBC result set fetch size: 30
+14:58:39,734 INFO SettingsFactory:178 - Connection release mode: auto
+14:58:39,734 INFO SettingsFactory:202 - Maximum outer join fetch depth: 2
+14:58:39,734 INFO SettingsFactory:205 - Default batch fetch size: 1
+14:58:39,734 INFO SettingsFactory:209 - Generate SQL with comments: disabled
+14:58:39,734 INFO SettingsFactory:213 - Order SQL updates by primary key: disabled
+14:58:39,734 INFO SettingsFactory:382 - Query translator: org.hibernate.hql.ast.ASTQueryTranslatorFactory
+14:58:39,734 INFO ASTQueryTranslatorFactory:24 - Using ASTQueryTranslatorFactory
+14:58:39,734 INFO SettingsFactory:221 - Query language substitutions: {}
+14:58:39,734 INFO SettingsFactory:226 - JPA-QL strict compliance: disabled
+14:58:39,734 INFO SettingsFactory:231 - Second-level cache: enabled
+14:58:39,734 INFO SettingsFactory:235 - Query cache: disabled
+14:58:39,734 INFO SettingsFactory:369 - Cache provider: org.hibernate.cache.NoCacheProvider
+14:58:39,734 INFO SettingsFactory:250 - Optimize cache for minimal puts: disabled
+14:58:39,734 INFO SettingsFactory:259 - Structured second-level cache entries: disabled
+14:58:39,734 INFO SettingsFactory:279 - Echoing all SQL to stdout
+14:58:39,734 INFO SettingsFactory:286 - Statistics: disabled
+14:58:39,734 INFO SettingsFactory:290 - Deleted entity synthetic identifier rollback: disabled
+14:58:39,734 INFO SettingsFactory:305 - Default entity-mode: pojo
+14:58:39,750 INFO SettingsFactory:309 - Named query checking : enabled
+14:58:39,750 INFO SessionFactoryImpl:161 - building session factory
+14:58:39,781 INFO SessionFactoryObjectFactory:82 - Not binding factory to JNDI, no JNDI name configured
+Hibernate: 
+    select
+        father0_.id as id47_,
+        father0_.name as name47_,
+        father0_.age as age47_ 
+    from
+        father father0_
+14:58:39,781DEBUG StringType:172 - returning '0' as column: id47_
+14:58:39,781DEBUG StringType:172 - returning 'WE.TeD' as column: name47_
+14:58:39,796DEBUG IntegerType:172 - returning '30' as column: age47_
+14:58:39,796DEBUG StringType:172 - returning '1' as column: id47_
+14:58:39,796DEBUG StringType:172 - returning 'WE.Sky' as column: name47_
+14:58:39,796DEBUG IntegerType:172 - returning '50' as column: age47_
+14:58:39,796DEBUG StringType:172 - returning '2' as column: id47_
+14:58:39,796DEBUG StringType:172 - returning 'WE.Like' as column: name47_
+14:58:39,796DEBUG IntegerType:172 - returning '40' as column: age47_
+14:58:39,812DEBUG StringType:172 - returning '3' as column: id47_
+14:58:39,812DEBUG StringType:172 - returning 'WE.Infi' as column: name47_
+14:58:39,812DEBUG IntegerType:172 - returning '30' as column: age47_
+14:58:39,828 INFO SessionFactoryImpl:769 - closing
+14:58:39,828 INFO DriverManagerConnectionProvider:147 - cleaning up connection pool: jdbc:mysql://localhost:3306/hibernatequickuse
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

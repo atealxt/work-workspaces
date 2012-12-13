@@ -1,0 +1,52 @@
+~~ FCKeditor - The text editor for Internet - http://www.fckeditor.net
+~~ Copyright (C) 2003-2008 Frederico Caldeira Knabben
+~~
+~~ == BEGIN LICENSE ==
+~~
+~~ Licensed under the terms of any of the following licenses at your
+~~ choice:
+~~
+~~  - GNU General Public License Version 2 or later (the "GPL")
+~~    http://www.gnu.org/licenses/gpl.html
+~~
+~~  - GNU Lesser General Public License Version 2.1 or later (the "LGPL")
+~~    http://www.gnu.org/licenses/lgpl.html
+~~
+~~  - Mozilla Public License Version 1.1 or later (the "MPL")
+~~    http://www.mozilla.org/MPL/MPL-1.1.html
+~~
+~~ == END LICENSE ==
+~~ @version $Id: index.apt 2539 2008-10-10 18:48:49Z mosipov $
+                                    ------------------------------
+												About
+                                    ------------------------------
+
+FCKeditor.Java Integration
+
+  The FCKeditor.Java Integration makes the deployment of the FCKeditor in your
+  Java environment a piece of cake.
+
+  A rich documentation, a well-designed Java library, and an out of the box demo
+  webapp will show you how to get started quickly and deploy the FCKeditor within
+  minutes without juggling with cryptic JSP scriptlets or any JavaScript API.
+  Although it's targeted to be used as a tag library within JSPs, it's a snap
+  within a template engine like {{{http://velocity.apache.org}Velocity}} or 
+  {{{http://freemarker.org}FreeMarker}} too.
+
+* Documentation Guideline
+  
+  This documentation is straight forward to use!\
+  Read the {{{changes-report.html}Changes}} in this release. Go over
+  and checkout the {{{demo.html}Demo}} and if you are ready to deploy the FCKeditor
+  in your webapp, {{{download.html}download}} it, follow the {{{installation.html}Installation 
+Guide}}
+  and the {{{overview.html}Integration Overview}}.
+
+Call To Action
+
+  Help us improve the FCKeditor.Java Integration!
+
+  If you think this documentation, the Java library or anything else is lacking 
+  something, contains errors, or can be improved do <not> hesitate to open a 
+  thread in our {{{http://www.fckeditor.net/forums/}forums}} or file a ticket in 
+  our {{{issue-tracking.html}issue tracker}}.

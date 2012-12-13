@@ -1,0 +1,379 @@
+/*
+ * Deluge website theme - designed by Dan Fuhry
+ * Copyright 2007
+ *
+ * This theme is Free Software, available under the terms of the GNU General Public License.
+ * See the page Special:GNU_General_Public_License on this website for details.
+ */
+
+body {
+/*  color: #425570;*/
+/*  color: #D1DAE5; */
+/*  background-color: #425570;*/
+  background-color: #f7f7f7;
+  margin: 0;
+  padding: 0;
+  font: normal 13px verdana,arial,'Bitstream Vera Sans',helvetica,sans-serif;
+}
+
+div#siteheader {
+  font-family: trebuchet ms, arial, helvetica, sans-serif;
+  font-size: 1.0em;
+  color: #D1DAE5;
+  height: 128px;
+  align: center;
+  background-image: url("/chrome/site/navbar.gif");
+  background-repeat: repeat-x;
+  background-position: bottom center;
+  background-color: #425570;
+  margin-bottom: 10px;
+}
+
+div#siteheader-inner {
+  height: 128px;
+  width: 728px;
+  margin: auto;
+  background-image: url("/chrome/site/droplet.png");
+  background-repeat: no-repeat;
+}
+
+div#siteheader-search a {
+  color: #D1DAE5;
+}
+
+div#siteheader-inner a span#msg_to_news {
+  color: #425570;
+  font-size: 16pt;
+  margin-left: -8px;
+}
+
+div#siteheader-inner a:hover span#msg_to_news {
+  color: #304663;
+}
+
+div#delugelogo {
+  padding: 10px 0 0 118px;
+  margin-bottom: -7px;
+  /* position: absolute; */
+}
+
+div#delugelogo a {
+  text-decoration: none;
+  color: #D1DAE5;
+}
+
+h1#delugetext {
+  display: inline;
+  font-family: trebuchet ms, arial, helvetica, sans-serif;
+  font-size: 64px;
+  border: none;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  z-index: 3;
+}
+
+h1#delugetext a {
+  display: inline;
+  font-family: trebuchet ms, arial, helvetica, sans-serif;
+  font-size: 64px;
+  border: none;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  z-index: 3;
+}
+
+/* Navbar at top */
+
+ul#navbar {
+  position: absolute;
+  top: 81px;
+  margin: 0 0 0 82px;
+  z-index: 2;
+}
+
+ul#navbar li {
+  list-style-type: none;
+  float: left;
+  line-height: 46px;
+}
+
+ul#navbar li a {
+  color: #D1DAE5;
+  text-decoration: none;
+  display: block;
+  padding: 0 14px;
+  border: none;
+}
+
+ul#navbar li a:hover {
+  color: #D9E2EB;
+  background-color: #384D63;
+}
+
+ul#navbar li a.currenttab {
+  background-image: url("/chrome/site/nav-current.gif");
+  color: #131e38;
+  font-weight: bold;
+}
+
+/* trac tweaks */
+#mainnav-deluge {
+  margin: 0 100px 0 100px;
+}
+
+#search-box {
+  color: #FFFFFF;
+  display: block;
+  float: none;
+  margin-right: 5px;
+  margin-top: 0;
+  position: normal;
+  text-align: left;
+  white-space: normal;
+}
+
+#search-box a {
+  display: inline !important;
+  padding: 0 3px !important;
+}
+
+#search-box a:hover {
+  background-color: transparent !important;
+}
+
+/* Content area */
+
+div#content {
+/*  width: 728px; */
+/*  width: 675px; */
+  margin: 10px 100px 0 100px;
+}
+div#content-f2 {
+  width: 728px;
+  margin: 10px auto 0 180;
+}
+
+div#content-inner {
+  padding: 0 160px 10px 160px;
+}
+
+div#content-inner a {
+  color: #D1DAE5;
+  text-decoration: underline;
+}
+
+div#content-inner a:hover {
+  color: #FFFFFF;
+  text-decoration: underline;
+  
+}
+
+div.mdg-comment {
+  background-color: #40556b;
+  border: 1px solid #131e38;
+}
+
+div#content h2#h2PageTitle {
+  margin: 0;
+  padding: 0;
+  border-bottom: 1px solid #131e38;
+}
+
+div#copyright {
+  text-align: center;
+  font-size: 0.6em;
+  color: #6c83a1;
+  padding: 10px 0;
+  width: 50%;
+  margin: 0 auto;
+  border-top: 1px dotted #889db8;
+  clear: both;
+}
+
+div#copyright a {
+  color: #889db8;
+  border-bottom: 1px dotted #4c6f9d;
+}
+
+div#copyright a:hover {
+  color: #FFFFFF;
+  border-bottom: 1px dotted #889db8;
+}
+
+div#copyright table#copyright-linktable {
+  margin: 0 auto;
+}
+
+div#copyright table#copyright-linktable a {
+  border-bottom-width: 0;
+}
+
+/* Enanoese tables */
+
+div.tblholder {
+  border: 1px solid #131e38;
+  background-color: #D1DAE5;
+}
+
+div.tblholder table {
+  background-color: #889db8;
+}
+
+div.tblholder table th {
+  background-color: #232e48;
+}
+
+div.tblholder table th.subhead {
+  background-color: #2b3e58;
+}
+
+div.tblholder table td.row1 {
+  background-color: #384D63;
+}
+
+div.tblholder table td.row2 {
+  background-color: #485D73;
+}
+
+div.tblholder table td.row3 {
+  background-color: #40556b;
+}
+
+/* Etc... */
+
+div#messageBox {
+  color: #202020;
+}
+
+div.breadcrumbs {
+  border: 1px solid #131e38;
+  background-color: #889db8;
+  color: #000000
+}
+div.breadcrumbs a {
+  color: #131e38 !important;
+}
+
+td#deluge_download_box a {
+  text-decoration: none !important;
+}
+
+/* Code style */
+
+pre.wiki, pre.literal-block {
+ background: #ffffff;
+ border: 1px solid #d7d7d7;
+ margin: 1em 1.75em;
+ padding: .25em;
+ overflow: auto;
+}
+
+/* Link styles */
+:link, :visited {
+ text-decoration: none;
+/* color: #FFF;*/
+ color: #425570;
+ border-bottom: 1px dotted #bbb;
+}
+:link:hover, :visited:hover { background-color: transparent; color: #000 }
+h1 :link, h1 :visited ,h2 :link, h2 :visited, h3 :link, h3 :visited,
+h4 :link, h4 :visited, h5 :link, h5 :visited, h6 :link, h6 :visited {
+ color: inherit;
+}
+
+h1, h2, h3, h4 {
+ color: #2c3f59;
+}
+
+/* Main navigation bar */
+#mainnav {
+ background: #f7f7f7 url(../topbar_gradient.png) 0 0;
+ border: 1px solid #425570;
+ font: normal 10px verdana,'Bitstream Vera Sans',helvetica,arial,sans-serif;
+ /*margin: .66em 0 .33em;*/
+ padding: .2em 0;
+}
+#mainnav li { border-right: none; padding: .25em 0 }
+#mainnav :link, #mainnav :visited {
+ background: url(../dots.gif) 0 0 no-repeat;
+ border-right: 1px solid #fff;
+ border-bottom: none;
+ border-left: 1px solid #555;
+ color: #000;
+ padding: .2em 20px;
+}
+* html #mainnav :link, * html #mainnav :visited { background-position: 1px 0 }
+#mainnav :link:hover, #mainnav :visited:hover {
+ background-color: #ccc;
+ border-right: 1px solid #ddd;
+}
+#mainnav .active :link, #mainnav .active :visited {
+ background: #2e425d url(../topbar_gradient2.png) 0 0 repeat-x;
+ border-top: none;
+ border-right: 1px solid #000;
+ color: #FFF;
+ font-weight: bold;
+}
+#mainnav .active :link:hover, #mainnav .active :visited:hover {
+ border-right: 1px solid #000;
+}
+
+/* Context-dependent navigation links */
+#ctxtnav { height: 1em; margin: 0 100px 0 0; }
+#ctxtnav li ul {
+ background: #f7f7f7;
+ color: #ccc;
+ border: 1px solid;
+ padding: 0;
+ display: inline;
+ margin: 0;
+}
+#ctxtnav li li { padding: 0; }
+#ctxtnav li li :link, #ctxtnav li li :visited { padding: 0 1em }
+#ctxtnav li li :link:hover, #ctxtnav li li :visited:hover {
+ background: #bba;
+ color: #fff;
+}
+dt em {
+ border-bottom: 1px dotted #bbb;
+ color: #425570;
+ font-style: normal;
+ text-decoration: none;
+}
+legend { color: #2c3f59; padding: 0 .25em; font-size: 90%; font-weight: bold }
+#ticket {
+ background: #fff;
+ border: 1px outset #000;
+ margin-top: 1em;
+ padding: .5em 1em;
+ position: relative;
+}
+
+#ticket table.properties th {
+ color: #2c3f59;
+ font-weight: normal;
+ text-align: left;
+ width: 20%;
+}
+
+#ticket table.properties .description { border-top: 1px solid #000 }
+
+#ticket .description h3 {
+ border-bottom: 1px solid #000;
+ color: #2c3f59;
+ font-size: 100%;
+ font-weight: normal;
+}
+
+#attachments { border: 1px outset #996; padding: 1em; background: #fff; }
+#changelog { border: 1px outset #996; padding: 1em; background: #fff; }
+
+
+table.wiki {
+ border: 2px solid #ccc;
+ border-collapse: collapse;
+ border-spacing: 0;
+ background-color: #fff;
+}

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd
+       http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.0.xsd
+       http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.0.xsd"
+       default-init-method="init"
+       default-destroy-method="destroy">
+
+    <bean id="A0000TestService" class="pdms.platform.service.impl.A0000TestServiceImpl" scope="prototype">
+        <property name="testDao" ref="ExampleDao" />
+    </bean>
+
+    <bean id="A0100LoginService" class="pdms.platform.service.impl.A0100LoginServiceImpl" scope="prototype">
+        <property name="userDao" ref="UserDao" />
+    </bean>
+
+    <bean id="A0200MainService" class="pdms.platform.service.impl.A0200MainServiceImpl" scope="prototype">
+        <property name="userDao" ref="UserDao" />
+        <property name="projectDao" ref="ProjectDao" />
+        <property name="topicDao" ref="TopicDao" />
+        <property name="replyDao" ref="ReplyDao" />
+    </bean>
+
+    <bean id="A0300ProjectService" class="pdms.platform.service.impl.A0300ProjectServiceImpl" scope="prototype">
+        <property name="projectDao" ref="ProjectDao" />
+        <property name="topicDao" ref="TopicDao" />
+        <property name="replyDao" ref="ReplyDao" />
+    </bean>
+
+    <bean id="A0400TopicService" class="pdms.platform.service.impl.A0400TopicServiceImpl" scope="prototype">
+        <property name="userDao" ref="UserDao" />
+        <property name="projectDao" ref="ProjectDao" />
+        <property name="topicDao" ref="TopicDao" />
+        <property name="replyDao" ref="ReplyDao" />
+    </bean>
+
+    <bean id="A0500UserMService" class="pdms.platform.service.impl.A0500UserMServiceImpl" scope="prototype">
+        <property name="userDao" ref="UserDao" />
+        <property name="identityDao" ref="IdentityDao" />
+        <property name="groupDao" ref="GroupDao" />
+        <property name="roleDao" ref="RoleDao" />
+    </bean>
+
+    <bean id="A0600ProjectMService" class="pdms.platform.service.impl.A0600ProjectMServiceImpl" scope="prototype">
+        <property name="userDao" ref="UserDao" />
+        <property name="identityDao" ref="IdentityDao" />
+        <property name="projectDao" ref="ProjectDao" />
+        <property name="uprDao" ref="UserProjectRelDao" />
+        <property name="missionDao" ref="MissionDao" />
+    </bean>
+
+    <bean id="A0700FProjectMService" class="pdms.platform.service.impl.A0700FProjectMServiceImpl" scope="prototype">
+        <property name="missionDao" ref="MissionDao" />
+        <property name="projectDao" ref="ProjectDao" />
+        <property name="userDao" ref="UserDao" />
+        <property name="fileDao" ref="FileDao" />
+    </bean>
+
+    <bean id="A0800UserService" class="pdms.platform.service.impl.A0800UserServiceImpl" scope="prototype">
+        <property name="userDao" ref="UserDao" />
+        <property name="projectDao" ref="ProjectDao" />
+        <property name="topicDao" ref="TopicDao" />
+        <property name="replyDao" ref="ReplyDao" />
+    </bean>
+
+    <bean id="A0900FileService" class="pdms.platform.service.impl.A0900FileServiceImpl" scope="prototype">
+        <property name="userDao" ref="UserDao" />
+        <property name="fileDao" ref="FileDao" />
+        <property name="missionDao" ref="MissionDao" />
+    </bean>
+
+    <bean id="A1000MyMissionService" class="pdms.platform.service.impl.A1000MyMissionServiceImpl" scope="prototype">
+        <property name="fileDao" ref="FileDao" />
+        <property name="missionDao" ref="MissionDao" />
+    </bean>
+
+    <bean id="A1100SearchService" class="pdms.platform.service.impl.A1100SearchServiceImpl" scope="prototype">
+        <property name="missionDao" ref="MissionDao" />
+        <property name="userDao" ref="UserDao" />
+        <property name="projectDao" ref="ProjectDao" />
+        <property name="topicDao" ref="TopicDao" />
+        <property name="replyDao" ref="ReplyDao" />
+    </bean>
+
+    <bean id="A1200GroupMService" class="pdms.platform.service.impl.A1200GroupMServiceImpl" scope="prototype">
+        <property name="userDao" ref="UserDao" />
+        <property name="identityDao" ref="IdentityDao" />
+        <property name="groupDao" ref="GroupDao" />
+        <property name="roleDao" ref="RoleDao" />
+    </bean>
+
+    <bean id="A1300ChartService" class="pdms.platform.service.impl.A1300ChartServiceImpl" scope="prototype">
+        <property name="missionDao" ref="MissionDao" />
+        <property name="userDao" ref="UserDao" />
+        <property name="projectDao" ref="ProjectDao" />
+    </bean>
+
+</beans>

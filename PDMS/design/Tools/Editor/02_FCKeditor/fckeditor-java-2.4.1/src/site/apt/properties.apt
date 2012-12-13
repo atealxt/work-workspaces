@@ -1,0 +1,142 @@
+~~ FCKeditor - The text editor for Internet - http://www.fckeditor.net
+~~ Copyright (C) 2003-2008 Frederico Caldeira Knabben
+~~ 
+~~ == BEGIN LICENSE ==
+~~ 
+~~ Licensed under the terms of any of the following licenses at your
+~~ choice:
+~~ 
+~~  - GNU General Public License Version 2 or later (the "GPL")
+~~    http://www.gnu.org/licenses/gpl.html
+~~ 
+~~  - GNU Lesser General Public License Version 2.1 or later (the "LGPL")
+~~    http://www.gnu.org/licenses/lgpl.html
+~~ 
+~~  - Mozilla Public License Version 1.1 or later (the "MPL")
+~~    http://www.mozilla.org/MPL/MPL-1.1.html
+~~ 
+~~ == END LICENSE ==
+~~ @version $Id: properties.apt 2191 2008-07-08 18:14:52Z mosipov $
+                   ------------------------------
+                       Configuration reference
+                   ------------------------------
+
+Configuration setting
+
+  In the meaning of 'convention over configuration' all properties are optional.
+  Define only those you intend to override for the <entire> web application.
+
+  There are two ways to override the default properties: 
+
+  * By creating a <<<fckeditor.properties>>> file in the classpath (usually 
+    <<<WEB-INF/classes>>>):
+
++------------------------------------------------------------------------------+
+  ...
+  fckeditor.toolbarSet=Basic
+  connector.userActionImpl=net.fckeditor.requestcycle.impl.UserActionImpl
+  ...
++------------------------------------------------------------------------------+
+
+  * By calling dynamically the <<<PropertiesHolder>>> class:
+
++------------------------------------------------------------------------------+
+  ...
+  import net.fckeditor.handlers.PropertiesLoader;
+  ...
+  PropertiesLoader.setProperty("fckeditor.toolbarSet", "Basic");
+  PropertiesLoader.setProperty("connector.userActionImpl", 
+                   "net.fckeditor.requestcycle.impl.UserActionImpl");
+  ...
++------------------------------------------------------------------------------+
+
+    [Attention:] It is essential to know how to use the <<<PropertiesHolder>>>.
+                 Like the common properties usage, you should use it only at the
+                 start of your web application. If you don't have a kind of 
+                 an 'initialization' servlet, where you could place the 
+                 <<<PropertiesLoader>>> calls, we suggest for you to write your own 
+                 <<<ServletContextListener>>>. So you guarantee, you call the 
+                 <<<PropertiesLoader>>> <before> the <<<ConnectorServlet>>> is
+                 initialized.
+
+  []
+
+  As you can see, setting a property is equal in both ways. The tables below 
+  list all configurable properties for the integration pack.
+
+Configuration properties
+
+* FCKeditor
+
+*------------------------------------+--------------------------------+-----------------------------+-----------------------------------+
+|| Property                          || Default                       || Valid Values               || Description                     ||
+||                                   ||                               ||                            ||                                 ||
+*------------------------------------+--------------------------------+-----------------------------+-----------------------------------+
+| fckeditor.toolbarSet \ \ \ \ \ \ 	 | Default                		  | any string \ \ \ \ \ \      | Indicates the toolbar set you want to load. If you provide a name which does not exist, the editor will fail to load. |
+*------------------------------------+--------------------------------+-----------------------------+-----------------------------------+
+| fckeditor.width	                 | 200	                          | any string					| Indicates the editor width. 		|
+*------------------------------------+--------------------------------+-----------------------------+-----------------------------------+
+| fckeditor.height	                 | 100%						      | any string                  | Indicates the editor height. 		|
+*------------------------------------+--------------------------------+-----------------------------+-----------------------------------+
+| fckeditor.basePath		         | /fckeditor \ \ \ \ \ \         | any path                    | The default path of the editor installation resides within your webapp. |
+|                                    | 							      |                             | Change this value only if you install the editor under a different name or maintain several editor installations. |
+*------------------------------------+--------------------------------+-----------------------------+-----------------------------------+
+
+* Connector
+
+  The integration library supports file, flash, image, and media resource types.
+  Replace <type name> in the property name with "file", "flash", "image", or 
+  "media".
+
+  Define <<either>> an allowed <<or>> denied list. If an allowed list is 
+  pre-defined overwrite it with an empty list and define your denied list as you
+  wish.
+
+*-------------------------------+-------------------------------------------+---------------------------+---------------------------------------------------+
+|| Property                     || Default									|| Valid Values             || Description                                     ||
+*-------------------------------+-------------------------------------------+---------------------------+---------------------------------------------------+
+| connector.resourceType.<type	| /<type name>								| any path					| Indicates the resource type path to retrieve and	|
+| name>.path					|											|							| store files.										|
+*-------------------------------+-------------------------------------------+---------------------------+---------------------------------------------------+
+| connector.resourceType.<type	|											| any extension				| List with extensions which should be denied.		|
+| name>.extensions.denied		|											|							| Separate extensions with a \| (pipe symbol).		|
+*-------------------------------+-------------------------------------------+---------------------------+---------------------------------------------------+
+| connector.resourceType.file.	| 7z\|aiff\|asf\|avi\|bmp\|csv\|doc\|fla\|	| any extension				| List with extensions which should be allowed.		|
+| extensions.allowed			| flv\|gif\|gz\|gzip\|jpeg\|jpg\|mid\|mov\|	|							| Separate extensions with a \| (pipe symbol).		|
+|								| mp3\|mp4\|mpc\|mpeg\| mpg\|ods\|			|							|													|
+|								| odt\|pdf\|png\|ppt\|pxd\|qt\|ram\|rar\|	|							|													|
+|								| rm\|rmi\|rmvb\|rtf\|sdc\|sitd\|swf\|		|							|													|
+|								| sxc\|sxw\|tar\|tgz\|tif\|tiff\|txt\|vsd\| |							|													|
+|								| wav\|wma\|wmv\|xls\|xml\|zip				|							|													|
+*-------------------------------+-------------------------------------------+---------------------------+---------------------------------------------------+
+| connector.resourceType.flash. | swf\|fla									| any extension		 	 	| See above.										|
+| extensions.allowed			|						 					|							|													|
+*-------------------------------+-------------------------------------------+---------------------------+---------------------------------------------------+
+| connector.resourceType.image.	| bmp\|gif\|jpeg\|jpg\|png					| any extension				| See above.										|
+| extensions.allowed			|											|							|													|
+*-------------------------------+-------------------------------------------+---------------------------+---------------------------------------------------+
+| connector.resourceType.media.	| aiff\|asf\|avi\|bmp\|fla\|flv\|gif\|jpeg\|| any extension				| See above.										|
+| extensions.allowed			| jpg\|mid\|mov\|mp3\|mp4\|mpc\|mpg\|		|							|													|
+|								| mpeg\|png\|qt\|ram\|rm\|rmi\|rmvb\|		|							|													|
+|								| swf\|tif\|tiff\|wav\|wma\|wmv				|							|													|
+*-------------------------------+-------------------------------------------+---------------------------+---------------------------------------------------+
+| connector.userFilesPath		| /userfiles								| any path					| Indicates the path where files are stored.		|
+*-------------------------------+-------------------------------------------+---------------------------+---------------------------------------------------+
+| connector.forceSingleExtension| true										| true, false (boolean)		| Indicates whether filenames with multiple 		|
+|								|											|							| extensions are sanitized.							|
+*-------------------------------+-------------------------------------------+-------------------------- +---------------------------------------------------+
+| connector.fullUrl      		| false										| true, false (boolean)		| Indicates whether the domain name will be			|
+|								|											|							| prepended. E.g. <<<http://www.mysite.com>>>		|
+*-------------------------------+-------------------------------------------+---------------------------+---------------------------------------------------+
+| connector.secureImageUploads	|true										| true, false (boolean)		| Checks uploaded images for validity.				|
+|								|											|							| I.e. the uploaded file is a real image and not any|
+|								|											|							| other renamed file type.							|
+*-------------------------------+-------------------------------------------+---------------------------+---------------------------------------------------+
+| connector.userActionImpl		|											| any fully-qualified class	| Provides custom security functions for the File	|
+|								|											| name of a valid {{{java-core/apidocs/net/fckeditor/requestcycle/UserAction.html}<<<UserAction>>>}}  | Browser Connector. For more details see {{{connector.html}here}}. |
+|								|											| implementation			|													|
+*-------------------------------+-------------------------------------------+---------------------------+---------------------------------------------------+
+| connector.userPathBuilderImpl |											| any fully-qualified class	| Provides a custom function for constructing a user-dependent <<<UserFilesPath>>> for the File |
+|								|											| name of a valid {{{java-core/apidocs/net/fckeditor/requestcycle/UserPathBuilder.html}<<<UserPathBuilder>>>}} | Browser Connector. For more details see {{{connector.html}here}}. |
+|								|											| implementation			|													|
+*-------------------------------+-------------------------------------------+---------------------------+---------------------------------------------------+

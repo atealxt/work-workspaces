@@ -1,0 +1,54 @@
+﻿<HTML>
+ <HEAD>
+  <TITLE>Ext.layout.ColumnLayout布局示例</TITLE>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <link rel="stylesheet" type="text/css" href="../../extjs2.0/resources/css/ext-all.css" />
+  <script type="text/javascript" src="../../extjs2.0/adapter/ext/ext-base.js"></script>
+  <script type="text/javascript" src="../../extjs2.0/ext-all.js"></script>
+  <script type="text/javascript" src="../../extjs2.0/source/locale/ext-lang-zh_CN.js"></script>
+  <script type="text/javascript">
+	Ext.onReady(function(){
+		Ext.BLANK_IMAGE_URL = '../../extjs2.0/resources/images/default/s.gif';
+		Ext.QuickTips.init();
+		var panel = new Ext.Panel({
+			title:'Ext.layout.ColumnLayout布局示例',
+			layout : 'column',
+			frame:true,//渲染面板
+			height : 150,
+			width : 350,
+			applyTo :'panel',
+			defaults : {//设置默认属性
+				bodyStyle:'background-color:#FFFFFF;',//设置面板体的背景色
+				frame : true
+			},
+			items: [
+				{
+					title:'子面板一',
+					width : 100,//指定列宽为100像素
+					height : 100
+				},
+				{
+					title:'子面板二',
+					width : 100,
+					columnWidth:.3,//指定列宽为容器剩余宽度的30%
+					height : 100
+				},
+				{
+					title:'子面板三',
+					columnWidth:.7,//指定列宽为容器剩余宽度的70%
+					height : 100
+				}
+			]
+		})
+	});
+  </script>
+ </HEAD>
+ <BODY>
+ 	<table >
+		<tr><td>&nbsp;<td></tr>
+		<tr><td width=100></td><td>
+		<div id='panel'>
+		<td></tr>
+	</table>
+ </BODY>
+</HTML>

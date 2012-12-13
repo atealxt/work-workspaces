@@ -1,0 +1,69 @@
+﻿<HTML>
+ <HEAD>
+  <TITLE>Ext.grid.GroupingView</TITLE>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <link rel="stylesheet" type="text/css" href="../../extjs2.0/resources/css/ext-all.css" />
+  <script type="text/javascript" src="../../extjs2.0/adapter/ext/ext-base.js"></script>
+  <script type="text/javascript" src="../../extjs2.0/ext-all.js"></script>
+  <script type="text/javascript" src="../../extjs2.0/source/locale/ext-lang-zh_CN.js"></script>
+  <script type="text/javascript">
+	Ext.onReady(function(){
+		
+		Ext.BLANK_IMAGE_URL = '../../extjs2.0/resources/images/default/s.gif';
+		
+		//创建表格数据
+		var data = [
+			[1,'张三','男',29],[2,'李四','女',30],
+			[3,'王五','男',27],[4,'赵六','女',31]
+		];
+		//创建记录类型Person，mapping值为字段值对应数组中数据的索引位置
+		var Person = Ext.data.Record.create([
+			{name: 'personId',mapping: 0},
+			{name: 'personName',mapping: 1},
+			{name: 'personSex',mapping: 2},
+			{name: 'personAge',mapping: 3}
+		]);
+		//创建Grid表格组件
+		var grid = new Ext.grid.GridPanel({
+			title : 'Ext.grid.GroupingView',
+			applyTo : 'grid-div',
+			width:330,
+			height:250,
+			frame:true,
+			tbar : [{
+				text : '收缩',
+				handler : function () {
+					var view = grid.getView();
+					var gId = view.getGroupId('男')
+					view.toggleGroup(gId);//收缩或展开指定分组
+				}
+			}],
+			store: new Ext.data.GroupingStore({//配置分组数据集
+				reader: new Ext.data.ArrayReader({id:0},Person),
+				sortInfo:{field: 'personId', direction: "ASC"},
+				groupField:'personSex',//指定分组字段
+				data: data
+			}),
+			//设置表格分组视图
+			view : new Ext.grid.GroupingView({
+				groupTextTpl : '{text}(共{[values.rs.length]}条)',//定义分组行模板
+				groupByText : '使用当前字段进行分组',//表头菜单提示信息
+				showGroupsText : '表格分组',//表头菜单提示信息
+				showGroupName : true,//显示分组字段名称
+				startCollapsed : false,//展开分组
+				hideGroupedColumn : true//隐藏分组列
+			}),
+			columns: [//配置表格列
+				{header: "id", width: 50, dataIndex: 'personId', sortable: true},
+				{header: "姓名", width: 80, dataIndex: 'personName', sortable: true},
+				{header: "性别", width: 80, dataIndex: 'personSex', sortable: true},
+				{header: "年龄", width: 80, dataIndex: 'personAge', sortable: true}
+			]
+		})
+	});
+  </script>
+ </HEAD>
+ <BODY style="margin=10 10 10 10;">
+	<div id='grid-div'></div>
+ </BODY>
+</HTML>

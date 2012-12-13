@@ -1,0 +1,54 @@
+﻿<HTML>
+ <HEAD>
+  <TITLE>多级菜单栏</TITLE>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <link rel="stylesheet" type="text/css" href="../../extjs2.0/resources/css/ext-all.css" />
+  <script type="text/javascript" src="../../extjs2.0/adapter/ext/ext-base.js"></script>
+  <script type="text/javascript" src="../../extjs2.0/ext-all.js"></script>
+  <script type="text/javascript" src="../../extjs2.0/source/locale/ext-lang-zh_CN.js"></script>
+  <script type="text/javascript">
+	Ext.onReady(function(){
+		Ext.BLANK_IMAGE_URL = '../../extjs2.0/resources/images/default/s.gif';
+		var Toolbar = new Ext.Toolbar({//创建工具栏
+			applyTo:'toolbar',
+			width:300
+		});
+		var infoMenu = new Ext.menu.Menu({//一级菜单
+			items : [
+				{
+					text: '个人信息',
+					menu: new Ext.menu.Menu({//二级菜单
+						items:[
+							{text: '身高',handler:onMenuItem},
+							{text: '体重',handler:onMenuItem},
+							{
+								text: '生日',
+								menu:new Ext.menu.DateMenu({//三级菜单	(FF3+ext2.0有Bug，FF3+ext2.1正常)
+									handler:onClickDate
+								})
+							}
+						]
+					})
+				},//添加菜单项
+				{text: '公司信息'}
+			]
+		});
+		Toolbar.add(
+			{text : '设置',	menu : infoMenu}//将菜单加入工具栏
+		);
+		function onClickDate(dm,date){//日期选择的处理函数
+			alert(date.format('Y-m-j'));
+		}
+		function onMenuItem(item){//选择菜单项的处理函数
+			alert(item.text);//取得菜单项的text属性
+		}
+	});
+  </script>
+ </HEAD>
+ <BODY>
+ 	<table width=100%>
+		<tr><td>&nbsp;<td></tr>
+		<tr><td width=100></td><td><div id='toolbar'></div><td></tr>
+	</table>
+ </BODY>
+</HTML>

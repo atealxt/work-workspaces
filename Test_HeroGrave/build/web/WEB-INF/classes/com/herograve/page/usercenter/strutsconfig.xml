@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+
+    <package name="com.herograve.page.usercenter" extends="struts-default">
+        <action name="Usercenter" class="com.herograve.page.usercenter.Usercenter">
+            <result>/page/usercenter.jsp</result>   
+            <result name="input">/page/error.jsp?errCode=${errCode}</result>
+        </action>  
+        
+        <action name="UpdateUserInfo" class="com.herograve.page.usercenter.UpdateUserInfo">
+            <result type="chain">Usercenter</result>   
+            <result name="input">/page/error.jsp?errCode=${errCode}</result>
+        </action>        
+        
+    </package>   
+    
+</struts>

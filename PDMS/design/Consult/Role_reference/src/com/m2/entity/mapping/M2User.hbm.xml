@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.m2.entity"  schema="m2">
+  <class name="User" table="M2_USER">
+    <id name="id" column="ID" type="java.lang.Integer">
+      <generator class="native"></generator>
+    </id>
+    <property name="realName" column="REAL_NAME" type="java.lang.String" length="50"/>
+    <property name="loginName" column="LOGIN_NAME" type="java.lang.String" length="20"/>
+    <property name="password" column="PASSWORD" type="java.lang.String" length="20"/>
+    <property name="rePassword" column="RE_PASSWORD" type="java.lang.String" length="20"/>
+    <property name="description" column="DESCRIPTION" type="java.lang.String" length="100"/>
+    <property name="isEnabled" column="IS_ENABLED" type="int" />
+    <many-to-one name="group" column="GROUP_ID" class="Group" />
+    <many-to-one name="org" column="ORG_ID" class="Org" />
+    <set name="roles" table="M2_USER_ROLE" cascade="save-update" lazy="true" fetch="select">
+      <key column="USER_ID"/>
+      <many-to-many column="ROLE_ID" class="Role"/>
+    </set>       
+  </class>
+</hibernate-mapping>

@@ -1,0 +1,14 @@
+var data=new Array();data[0]=new Array();data[0][0]='SD入门关键词理解';data[0][1]='http://kb.cnblogs.com/page/43180/';data[1]=new Array();data[1][0]='我对SAP培训的理解';data[1][1]='http://kb.cnblogs.com/page/43034/';data[2]=new Array();data[2][0]='理解 JMeter 聚合报告（Aggregate Report）';data[2][1]='http://www.cnblogs.com/jackei/archive/2007/01/17/623166.html';data[3]=new Array();data[3][0]='《JMeter从入门到精通》之一——开始你的第一个JMeter脚本';data[3][1]='http://www.cnblogs.com/jackei/archive/2006/11/10/557160.html';data[4]=new Array();data[4][0]='const这样理解对吗';data[4][1]='http://space.cnblogs.com/question/2647/';data[5]=new Array();data[5][0]='请问这个怎么理解?';data[5][1]='http://space.cnblogs.com/question/3776/';data[6]=new Array();data[6][0]='如何理解这段代码';data[6][1]='http://space.cnblogs.com/group/topic/6954/';data[7]=new Array();data[7][0]='Ext.fly 怎么理解？';data[7][1]='http://space.cnblogs.com/group/topic/395/';
+if(data.length > 0)
+{
+    for(var i = 0; i < data.length; i++)
+    {
+        if (i > 0)
+            document.write("<br>");
+        document.write("<a href='");
+        document.write(data[i][1]);
+        document.write("' target='_blank'>");
+        document.write(data[i][0]);
+        document.write("</a>");
+    }
+}

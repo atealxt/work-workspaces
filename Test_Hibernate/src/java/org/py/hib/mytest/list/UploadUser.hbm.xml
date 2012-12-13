@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+  <class name="org.py.hib.mytest.list.UploadUser" table="UploadUser">
+    <id column="id" length="32" name="id" type="java.lang.Integer">
+      <generator class="increment"/>
+    </id>
+    <property column="name" length="32" name="name" not-null="true" type="java.lang.String"/>
+    <list cascade="all" inverse="false" name="filenames" table="UploadFile">
+      <key column="id"/>
+      <index column="position"/>
+      <!--<one-to-many class="org.py.hib.mytest.list.UploadFile" />-->
+      <element column="name" not-null="true" type="java.lang.String"/>
+    </list>
+  </class>
+</hibernate-mapping>

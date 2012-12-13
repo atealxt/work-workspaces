@@ -1,0 +1,23 @@
+<html>
+<head>
+    <title>Hello</title>
+</head>
+<body>
+
+Hello, ${name}
+
+<!--
+<s:form action="updatePerson">
+    <s:textfield label="First name" name="firstName"/>
+    <s:submit value="Update"/>
+</s:form>
+-->
+
+#sform ("action=Test2_Velocity")
+    #stextfield ("label=First name" "name=firstName")
+    #ssubmit ("value=Update")
+#end
+
+</body>
+</html>
+

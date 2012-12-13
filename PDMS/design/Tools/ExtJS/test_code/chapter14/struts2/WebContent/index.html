@@ -1,0 +1,69 @@
+<html>
+<head>
+<title>Ext JS 与 Struts</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" type="text/css" href="extjs2.0/resources/css/ext-all.css" />
+<script type="text/javascript" src="extjs2.0/adapter/ext/ext-base.js"></script>
+<script type="text/javascript" src="extjs2.0/ext-all.js"></script>
+<script type="text/javascript">
+Ext.onReady(function(){
+	Ext.BLANK_IMAGE_URL = '/extjs2.0/resources/images/default/s.gif';
+	//定义数据集对象
+	var store = new Ext.data.Store({//配置分组数据集
+		autoLoad :true,
+		reader: new Ext.data.XmlReader({
+			totalRecords : "results",
+			record : "Person",
+			fields : [
+				{name: 'name'},
+				{name: 'age'},
+				{name: 'sex'},
+				{name: 'birthday'}
+			]
+		}),
+		proxy : new Ext.data.HttpProxy({
+			url : 'extjsXml.action'
+		})
+	})
+	/*
+  	//定义数据集对象
+	var store = new Ext.data.Store({//配置分组数据集
+		autoLoad :true,
+		reader: new Ext.data.JsonReader({
+			totalRecords : "results",
+			root : "items",
+			fields : [
+				{name: 'name'},
+				{name: 'age'},
+				{name: 'sex'},
+				{name: 'birthday'}
+			]
+		}),
+		proxy : new Ext.data.HttpProxy({
+			url : 'extjs.action'
+		})
+	})
+	*/
+	//创建Grid表格组件
+	var grid = new Ext.grid.GridPanel({
+		title : '人员列表',
+		applyTo : 'grid-div',
+		width:450,
+		height:200,
+		frame:true,
+		store: store,
+		columns: [//配置表格列
+			new Ext.grid.RowNumberer(),//表格行号组件
+			{header: "姓名", width: 80, dataIndex: 'name', sortable: true},
+			{header: "年龄", width: 80, dataIndex: 'age', sortable: true},
+			{header: "性别", width: 80, dataIndex: 'sex', sortable: true},
+			{header: "生日", width: 80, dataIndex: 'birthday', sortable: true}
+		]
+	})
+});
+</script>
+</head>
+<BODY style="margin=10 10 10 10;">
+<div id='grid-div'></div>
+</BODY>
+</html>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="pdms.components.pojo">
+  <class name="Project" table="Project">
+    <comment>项目(专区)表</comment>
+    <id access="field" column="id" name="id" type="int">
+      <generator class="native"/>
+    </id>
+    <property name="name" not-null="true" type="string" unique="true">
+      <column length="32" name="name">
+        <comment>名称</comment>
+      </column>
+    </property>
+    <property name="summary" type="string">
+      <column length="1024" name="summary">
+        <comment>项目简要</comment>
+      </column>
+    </property>
+    <property length="128" name="logo" type="string">
+      <column name="logo">
+        <comment>LOGO URL</comment>
+      </column>
+    </property>
+    <property name="announcement" type="string">
+      <column length="10240" name="announcement">
+        <comment>公告</comment>
+      </column>
+    </property>
+    <property name="status" not-null="true" type="int">
+      <column name="status">
+        <comment>状态 1开放 -1关闭 0其他</comment>
+      </column>
+    </property>
+    <property name="starttime" not-null="false" type="java.sql.Date">
+      <column name="starttime">
+        <comment>开发开始日</comment>
+      </column>
+    </property>
+    <property name="endtime" type="java.sql.Date">
+      <column name="endtime">
+        <comment>开发结束日</comment>
+      </column>
+    </property>
+    <!--
+        <set name="managers" table="User_Project_Relation">
+            <key column="project_id" not-null="true"/>
+            <many-to-many class="User" column="user_id"/>
+        </set>
+
+        <set name="users" table="User_Project_Relation">
+            <subselect>
+                SELECT user_id,project_id
+                FROM User_Project_Relation
+                WHERE can_manage = '0'
+            </subselect>
+            <key column="project_id" not-null="true"/>
+            <one-to-many class="User"/>
+        </set>
+        -->
+  </class>
+</hibernate-mapping>

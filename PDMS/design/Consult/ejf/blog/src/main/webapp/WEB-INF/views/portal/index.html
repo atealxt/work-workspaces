@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+	<title>$blog.title</title>
+#parse("/commons/header.html")
+	</head>
+	<body>
+#parse("/commons/nav.html")
+<div id="main">
+	<div id="content">
+<div class="entry">
+	<div id="post-announce">
+	<h2><font color="red">欢迎来到开源实验室!<img src="/images/new_icon.gif" /></font></h2>
+		<abbr title=""></abbr>
+$!{blog.announce}
+	</div>
+</div>
+
+#foreach( $entry in $list )
+<div class="entry">
+	<div id="post-$!{entry.id}">
+	<h2><a href="/portal.ejf?cmd=topicShow&id=$!{entry.id}" rel="bookmark" title="$!{entry.title}" target="_blank">$!{entry.title}</a></h2>
+		<abbr title="$!{entry.inputTime}">$!{entry.inputTime}</abbr>
+$!{entry.intro}
+		<p class="postmetadata">发表于 <span class="cty">
+			#if( $entry.category )
+			
+			<a href="/portal.ejf?cmd=topicList&amp;categoryId=$!{entry.category.id}" title="查看全部$!{entry.category.name}分类" rel="category tag">$!{entry.category.name}</a></span> | 
+
+			#if( $entry.comments.size()>0 )
+			<span class="cmt"><a href="/portal.ejf?cmd=topicShow&id=$!{entry.id}#respond" title="Comment on $!{entry.title}">#if ( ${entry.comments.size()}>=10 ) More than 10 #else ${entry.comments.size()} #end Comments &#187;</a></span></p>
+				#else
+			<span class="cmt"><a href="/portal.ejf?cmd=topicShow&id=$!{entry.id}#respond" title="Comment on $!{entry.title}">No Comments &#187;</a></span></p>
+			#end
+			#end
+	</div>
+</div>
+#end
+
+#if( $pages>1 )
+<div class="navigation">
+	<div class="alignleft">
+		<a href="/portal.ejf?cmd=index&amp;currentPage=$!{previousPage}"><span class="prev"> Previous Page</span></a>
+		<a href="/portal.ejf?cmd=index&amp;currentPage=$!{nextPage}"><span class="next"> Next Page</span></a>
+	</div>
+	<div class="alignright"></div>
+</div>
+#end
+</div>
+#parse("/commons/sidebar.html")
+</div>
+#parse("/commons/footer.html")
+</body>
+</html>

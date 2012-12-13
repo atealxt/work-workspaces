@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="ampie_export_images"
+  id="myeclipse.1218933091015"
+  context-root="/ampie_export_images"
+  j2ee-spec="1.4"
+  archive="ampie_export_images.war">
+  <attributes>
+    <attribute name="webrootdir" value="WebRoot" />
+  </attributes>
+</project-module>
+

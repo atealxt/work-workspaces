@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="pdms.components.pojo">
+  <class name="Topic" table="Topic">
+    <comment>帖子主题表</comment>
+    <id access="field" column="id" length="32" name="id" type="string">
+      <generator class="uuid"/>
+    </id>
+    <property name="name" not-null="true" type="string">
+      <column length="128" name="name">
+        <comment>名称</comment>
+      </column>
+    </property>
+    <property name="content" not-null="true" type="java.sql.Clob">
+      <column name="content">
+        <comment>主题内容</comment>
+      </column>
+    </property>
+    <property name="createtime" not-null="true" type="java.util.Date">
+      <column name="createtime">
+        <comment>发表时间</comment>
+      </column>
+    </property>
+    <property name="status" not-null="true" type="int">
+      <column name="status">
+        <comment>状态 1:开放 0:关闭 -1:删除</comment>
+      </column>
+    </property>
+    <property name="topictype" not-null="true" type="int">
+      <column name="topictype">
+        <comment>分类 1:private 0:public</comment>
+      </column>
+    </property>
+    <property name="topiclevel" not-null="true" type="int">
+      <column name="topiclevel">
+        <comment>等级(Position) 1:Position1 2:Position2</comment>
+      </column>
+    </property>
+    <many-to-one class="User" name="createuser" not-null="true">
+      <column name="user_id">
+        <comment>发表人(会员)ID</comment>
+      </column>
+    </many-to-one>
+    <many-to-one class="Project" name="project" not-null="true">
+      <column name="project_id">
+        <comment>所在专区ID</comment>
+      </column>
+    </many-to-one>
+  </class>
+</hibernate-mapping>

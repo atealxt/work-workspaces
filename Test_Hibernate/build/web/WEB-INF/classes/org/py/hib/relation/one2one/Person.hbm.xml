@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+  <class name="org.py.hib.relation.one2one.Person" table="person">
+    <id column="id" length="32" name="id" type="java.lang.String">
+      <generator class="uuid"/>
+    </id>
+    <property name="name" type="java.lang.String">
+      <column length="32" name="name"/>
+    </property>
+    <!--way 1-->
+    <one-to-one class="org.py.hib.relation.one2one.Card" constrained="true" name="card"/>
+    <!--way 2
+         <many-to-one name="card" class="org.py.hib.relation.one2one.Card" unique="true"  
+             cascade="all" column="card_id" />  
+         -->
+  </class>
+</hibernate-mapping>

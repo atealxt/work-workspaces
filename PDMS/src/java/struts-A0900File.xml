@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+    <!--我的文件页面-->
+    <package name="A0900" namespace="/file" extends="struts-default">
+
+        <result-types>
+            <result-type name="json" class="com.googlecode.jsonplugin.JSONResult"/>
+        </result-types>
+        
+        <default-class-ref class="A0900FileAction" />
+
+        <global-results>
+            <result name="input">/pages/login.jsp</result>
+            <result name="error">../pages/error.html</result>
+        </global-results>
+
+        <global-exception-mappings>
+            <exception-mapping  exception="java.lang.Exception" result="error"/>
+        </global-exception-mappings>
+
+        <!--main-->
+        <action name="A0900FileAction">
+            <result type="json"/>
+        </action>
+
+        <!--删除文件-->
+        <action name="A0901DelAction" method="delFile">
+        </action>
+
+        <!--上传新文件-->
+        <action name="A0902CreateAction" method="createFile">
+        </action>
+
+        <!--下载文件-->
+        <action name="A0903GetFAction" method="downloadFile">
+            <result>/pages/filedownload.jsp</result>
+            <result name="findout" type="stream">
+                <param name="contentDisposition">attachment;filename="${filePath}"</param>
+                <param name="contentType">application/octet-stream;</param>
+                <param name="inputName">inputStream</param>
+                <param name="bufferSize">4096</param>
+            </result>
+        </action>
+
+    </package>
+</struts>

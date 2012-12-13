@@ -1,0 +1,50 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>	
+	<title>$blog.title</title>
+#parse("/commons/header.html")
+	</head>
+	<body>
+
+#parse("/commons/nav.html")
+
+<div id="main">
+	<div id="content">	
+#foreach( $entry in $list )
+<div class="entry">
+	<div id="album-$!{entry.id}">
+<h2><a href="portal.ejf?cmd=albumShow&id=$!{entry.id}" rel="bookmark" title="$!{entry.title}" target="_blank">$!{entry.title}</a></h2> 
+上传于:${entry.inputTime}(hits:${entry.readTimes}) #if( $entry.category ) <span class="cty">
+					
+			<a href="/portal.ejf?cmd=albumList&categoryId=$!{entry.category.id}" title="查看全部$!{entry.category.name}分类" rel="category tag">$!{entry.category.name}($!entry.category.albums.size())</a></span>  		
+			#end
+			
+<center>
+<a href="portal.ejf?cmd=albumShow&id=$!{entry.id}" rel="bookmark" title="$!{entry.title}" target="_blank">
+<img id="list-$velocityCount" src="$!{entry.path}" alt="$!{entry.title} on $!{entry.inputTime}" border="0" onload="if(this.width>600)this.width=600"/></a> <br />
+$!{entry.intro}
+</center>
+<br />
+
+	</div>
+</div>
+		
+#end
+
+#if( $pages>1 )
+<div class="navigation">
+	<div class="alignleft">
+		<a href="/portal.ejf?cmd=albumList&amp;currentPage=$!{previousPage}"><span class="prev"> Previous Page</span></a>
+		<a href="/portal.ejf?cmd=albumList&amp;currentPage=$!{nextPage}"><span class="next"> Next Page</span></a>
+	</div>
+	<div class="alignright"></div>
+</div>
+#end
+</div>
+
+#parse("/commons/sidebar.html")
+
+</div>
+#parse("/commons/footer.html")
+</body>
+</html>

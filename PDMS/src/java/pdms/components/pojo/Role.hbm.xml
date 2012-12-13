@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="pdms.components.pojo">
+  <class name="Role" table="Role">
+    <cache usage="read-only"/>
+    <comment>权限表</comment>
+    <id access="field" column="id" length="32" name="id" type="int">
+      <generator class="native"/>
+    </id>
+    <property name="name" not-null="true" type="string">
+      <column length="32" name="name">
+        <comment>名称</comment>
+      </column>
+    </property>
+    <many-to-one class="Function" name="function" not-null="true">
+      <column name="func_id">
+        <comment>功能模块ID</comment>
+      </column>
+    </many-to-one>
+    <many-to-one class="Operate" name="operate" not-null="true">
+      <column name="oper_id">
+        <comment>操作ID</comment>
+      </column>
+    </many-to-one>
+  </class>
+</hibernate-mapping>

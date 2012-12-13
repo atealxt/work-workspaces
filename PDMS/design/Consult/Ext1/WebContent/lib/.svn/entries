@@ -1,0 +1,43 @@
+8
+
+dir
+11
+https://127.0.0.1:8443/svn/System/SOA/WebContent/lib
+https://127.0.0.1:8443/svn/System
+
+
+
+2008-12-09T00:30:20.388665Z
+8
+admin
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+6a5171dd-9f07-d045-9c23-843b323693ed
+
+main
+dir
+
+upload
+dir
+
+css
+dir
+
+report
+dir
+
+extjs
+dir
+

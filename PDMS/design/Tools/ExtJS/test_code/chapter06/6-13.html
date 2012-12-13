@@ -1,0 +1,42 @@
+﻿<!--ff3下失效-->
+<html>
+<head>
+<title>键盘绑定对象</title>
+<link rel="stylesheet" type="text/css" href="../../extjs2.0/resources/css/ext-all.css" />
+<script type="text/javascript" src="../../extjs2.0/adapter/ext/ext-base.js"></script>
+<script type="text/javascript" src="../../extjs2.0/ext-all.js"></script>
+<style type="text/css">
+	.div1{padding:5px;}
+</style>
+<script type="text/javascript">
+	Ext.onReady(function(){
+		var panel = new Ext.Panel({
+			title : '键盘绑定对象示例',
+			width : '260px',
+			renderTo : 'div1',
+			html : '<div style="width:200px;height:160px;padding:10px;"><div id="id01" style="background-color:#3399FF;height:20px;">请点击我,然后<br>按键盘" enter"键</div></div>'
+		});
+		var el = Ext.get("id01");
+		var nav = new Ext.KeyNav(el,{
+			"left" : function(e){
+				alert('向左的按键被按下了');
+				//this.moveLeft(e.ctrlKey);
+			},
+			"right" : function(e){
+				alert('向右的按键被按下了');
+				//this.moveRight(e.ctrlKey);
+			},
+			"enter" : function(e){
+				alert('回车键被按下了');
+				//this.save();
+			},
+			scope : el
+		});
+		nav.enable();
+	});
+</script>
+</head>
+<body>
+<div id="div1" class="div1"></div>
+</body>
+</html>

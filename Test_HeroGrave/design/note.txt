@@ -1,0 +1,40 @@
+***.maybe the official bug.***
+MySQL:
+ERROR 1406 (22001): Data too long for column
+
+------------------------------------------------------------------------
+
+1.multi request
+use <s:token /> is not enough. when a submit need long time(ep: db crud),it still can be multi request by click button crazy.
+suo yi qian hou tai dou yao kong zhi:
+a: use <s:token />.
+b: use <form onsubmit="this.submit.disabled='true';">
+
+2.
+use for loop in page.
+                            <s:bean name="org.apache.struts2.util.Counter">           
+                               <s:param name="last" value="***" />
+                               <s:iterator>
+                                   do sth..
+                               </s:iterator>
+                            </s:bean>
+notice that must set param last correct,or a dead loop is waiting for you..                            
+
+3. page show question.
+xian shi DB de shu ju,ru guo xu yao chu li kong ge de hua,ke yi:
+string = string.replaceAll(" ","&nbsp;");
+ran hou zai qian tai<s:property value="***" escape="false" />
+hai you yi zhong fang fa jiu shi bu zuo ren he zhuan huan,ba yuan shi shu ju quan bu jiao gei qian tai js chu li.zhe yang xiao lv hui geng gao.
+
+4. self-define interceptor  
+every action default call defaultStack interceptor(in struts-default.xml).but if you use self-define interceptor,the defaultStack will no longer be call.
+ru guo bu he ye mian jiao hu , ye xu mei wen ti. dan ru guo xu yao de hua,yao zhe yang zuo:
+use a stack contains the defaultStack:
+            <interceptor-stack name="Test_InterceptorStack">
+                <interceptor-ref name="Test_Interceptor"/>
+                <interceptor-ref name="defaultStack"/>
+            </interceptor-stack> 
+      
+
+
+------------------------------------------------------------------------

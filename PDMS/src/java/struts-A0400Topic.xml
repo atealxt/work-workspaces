@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+    <!--主题页面-->
+    <package name="A0400" namespace="/topic" extends="struts-default">
+
+        <result-types>
+            <result-type name="json" class="com.googlecode.jsonplugin.JSONResult"/>
+        </result-types>
+
+        <default-class-ref class="A0400TopicAction" />
+
+        <global-results>
+            <result name="input">/pages/login.jsp</result>
+            <result name="error">../pages/error.html</result>
+        </global-results>
+
+        <global-exception-mappings>
+            <exception-mapping  exception="java.lang.Exception" result="error"/>
+        </global-exception-mappings>
+
+        <!--main-->
+        <action name="A0400TopicAction">
+            <result type="json"/>
+        </action>
+
+        <!--回贴-->
+        <action name="A0401AddRepAction" method="addReply">
+        </action>
+
+        <!--修改主题-->
+        <action name="A0402EditAction" method="editTopic">
+        </action>
+
+        <!--发表主题-->
+        <action name="A0403AddTPAction" method="addTopic">
+        </action>
+
+        <!--关闭主题(锁帖)-->
+        <action name="A0404CloseAction" method="closeTopic">
+        </action>
+
+    </package>
+</struts>

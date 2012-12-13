@@ -1,0 +1,22 @@
+﻿<html>
+<head>
+<title>往items里加入对象</title>
+<link rel="stylesheet" type="text/css" href="../../extjs2.0/resources/css/ext-all.css" />
+<script type="text/javascript" src="../../extjs2.0/adapter/ext/ext-base.js"></script>
+<script type="text/javascript" src="../../extjs2.0/ext-all.js"></script>
+<script type="text/javascript">
+	Ext.onReady(function(){
+		var item = new Ext.util.MixedCollection();
+		var obja = {name:'a'};
+		item.add('obj1',obja);
+		item.add('obj2',{name:'b'});
+		item.each(function(tempObj){
+			tempObj.name='newA';
+			Ext.Msg.alert('提示','通过调用each后的名称为:'+tempObj.name);
+		});
+	});
+</script>
+</head>
+<body>
+</body>
+</html>

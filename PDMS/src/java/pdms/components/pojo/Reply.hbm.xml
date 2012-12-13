@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="pdms.components.pojo">
+  <class name="Reply" table="Reply">
+    <comment>帖子回复表</comment>
+    <id access="field" column="id" length="32" name="id" type="string">
+      <generator class="uuid"/>
+    </id>
+    <property name="content" not-null="true" type="java.sql.Clob">
+      <column name="content">
+        <comment>回复内容</comment>
+      </column>
+    </property>
+    <property name="createtime" not-null="true" type="java.util.Date">
+      <column name="createtime">
+        <comment>发表时间</comment>
+      </column>
+    </property>
+    <many-to-one class="User" name="createuser" not-null="true">
+      <column name="user_id">
+        <comment>发表人(会员)ID</comment>
+      </column>
+    </many-to-one>
+    <many-to-one class="Topic" name="topic" not-null="true">
+      <column name="topic_id">
+        <comment>所属主题ID</comment>
+      </column>
+    </many-to-one>
+  </class>
+</hibernate-mapping>

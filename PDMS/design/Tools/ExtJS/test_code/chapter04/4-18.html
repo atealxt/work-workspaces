@@ -1,0 +1,90 @@
+﻿<HTML>
+ <HEAD>
+  <TITLE>自定义验证示例</TITLE>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <link rel="stylesheet" type="text/css" href="../../extjs2.0/resources/css/ext-all.css" />  
+  <script type="text/javascript" src="../../extjs2.0/adapter/ext/ext-base.js"></script>
+  <script type="text/javascript" src="../../extjs2.0/ext-all.js"></script>
+  <script type="text/javascript" src="../../extjs2.0/source/locale/ext-lang-zh_CN.js"></script>
+  <script type="text/javascript">
+	Ext.onReady(function(){
+		//自定义VType类型，验证日期选择范围
+		Ext.apply(Ext.form.VTypes, {
+			//验证方法
+			dateRange : function(val, field) {
+				if(field.dateRange){
+
+					var beginId = field.dateRange.begin;
+					this.beginField = Ext.getCmp(beginId);
+
+					var endId = field.dateRange.end;
+					this.endField = Ext.getCmp(endId);
+
+					var beginDate = this.beginField.getValue();
+					var endDate = this.endField.getValue();
+				}
+				
+				if(beginDate <= endDate){
+					return true;
+				}else{
+					return false;
+				}
+			},
+			//验证提示信息
+			dateRangeText : '开始日期不能大于结束日期'
+		});
+		Ext.BLANK_IMAGE_URL = '../../extjs2.0/resources/images/default/s.gif';
+		Ext.QuickTips.init();
+		Ext.form.Field.prototype.msgTarget = 'side';//统一指定错误信息提示方式
+		var dateForm = new Ext.form.FormPanel({
+			title:'自定义验证示例',
+			labelSeparator :'：',//分隔符
+			labelWidth : 80,//标签宽度
+			bodyStyle:'padding:5 5 5 5',//表单边距
+			frame : true,
+			height:130,
+			width:300,
+			applyTo :'form',
+			items:[
+			new Ext.form.DateField({
+				id:'beginDate',
+				format:'Y年m月d日',//显示日期的格式
+				width : 150,
+				allowBlank : false,//不允许为空
+				readOnly:true,//设置只读
+				value : new Date(),//设置默认值
+				fieldLabel:'开始日期',
+				dateRange:{begin:'beginDate',end:'endDate'},//用于vtype类型dateRange
+				vtype:'dateRange'
+			}),
+			new Ext.form.DateField({
+				id:'endDate',
+				format:'Y年m月d日',//显示日期的格式
+				width : 150,
+				allowBlank : false,//不允许为空
+				readOnly:true,//设置只读
+				value : new Date(),//设置默认值
+				fieldLabel:'结束日期',
+				dateRange:{begin:'beginDate',end:'endDate'},//用于vtype类型dateRange
+				vtype:'dateRange'
+			})
+			],
+			buttons:[
+			new Ext.Button({
+				text : '提交',
+				handler:function(){
+					//先检查表单的基本验证是否完成
+					if(dateForm.form.isValid()){
+						Ext.Msg.alert('提示','验证通过提交表单');
+					}
+				}
+			})
+			]
+		})
+	});
+  </script>
+ </HEAD>
+ <BODY>
+	 <div style="padding: 20 20 20 20"><div id='form'/></div>
+ </BODY>
+</HTML>

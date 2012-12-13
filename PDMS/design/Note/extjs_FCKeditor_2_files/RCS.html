@@ -1,0 +1,14 @@
+var data=new Array();data[0]=new Array();data[0][0]='ExtJs+WCF+LINQ实现分页Grid';data[0][1]='http://kb.cnblogs.com/page/42588/';data[1]=new Array();data[1][0]='程序人生－－一个程序员对学弟学妹建议（转）';data[1][1]='http://kb.cnblogs.com/page/42108/';data[2]=new Array();data[2][0]='使用Visual Studio2005入门.Net2.0系列视频教程';data[2][1]='http://www.cnblogs.com/thcjp/archive/2006/08/29/489491.html';data[3]=new Array();data[3][0]='中国书信礼仪（转）';data[3][1]='http://www.cnblogs.com/laser_lu/articles/111379.html';data[4]=new Array();data[4][0]='谷歌软件精选抛弃Firefox 转推自家浏览器';data[4][1]='http://news.cnblogs.com/n/43938/';data[5]=new Array();data[5][0]='整数转字符串问题';data[5][1]='http://space.cnblogs.com/question/2396/';data[6]=new Array();data[6][0]='想转架构师，大家有什么建议不？';data[6][1]='http://space.cnblogs.com/question/785/';data[7]=new Array();data[7][0]='[转]也谈成功 ';data[7][1]='http://space.cnblogs.com/group/topic/2565/';data[8]=new Array();data[8][0]='老婆使用说明书(转)';data[8][1]='http://space.cnblogs.com/group/topic/3080/';
+if(data.length > 0)
+{
+    for(var i = 0; i < data.length; i++)
+    {
+        if (i > 0)
+            document.write("<br>");
+        document.write("<a href='");
+        document.write(data[i][1]);
+        document.write("' target='_blank'>");
+        document.write(data[i][0]);
+        document.write("</a>");
+    }
+}

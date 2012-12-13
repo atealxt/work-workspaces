@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   revision="83"
+   repos="http://132.159.205.82:1300/svn/hbyd"
+   url="http://132.159.205.82:1300/svn/hbyd/03%E7%BC%96%E7%A0%81%E4%B8%8E%E9%9B%86%E6%88%90/030%E5%BC%80%E5%8F%91%E5%BA%93/flower/WebRoot/system/source"
+   last-author="zmh"
+   uuid="35f87345-3e26-2848-a9f1-5a4e99f158bb"
+   committed-date="2008-12-25T07:18:09.515625Z"
+   kind="dir"
+   name=""
+   committed-rev="67"/>
+<entry
+   checksum="bf9143a812710783b93e6e08a0944be0"
+   revision="136"
+   last-author="zmh"
+   prop-time="2008-12-25T02:41:45.812000Z"
+   text-time="2008-12-30T07:18:55.187000Z"
+   committed-date="2008-12-30T07:16:25.546000Z"
+   kind="file"
+   name="source.jsp"
+   committed-rev="136"/>
+</wc-entries>

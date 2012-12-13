@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+
+<struts-config>
+
+	<data-sources />
+
+	<form-beans>
+		<!-- ******************************************公用功能************************************************ -->
+		<form-bean name="AnythingTypeForm"
+			type="com.source.struts.form.AnythingTypeForm" />
+		<!-- 产品内容Form -->
+
+	</form-beans>
+
+	<global-exceptions></global-exceptions>
+
+	<global-forwards></global-forwards>
+
+	<action-mappings>
+		<!-- ******************************************公用功能************************************************ -->
+		<action attribute="AnythingTypeForm" name="AnythingTypeForm"
+			parameter="method" scope="request" path="/anything/AnythingType"
+			type="org.springframework.web.struts.DelegatingActionProxy">
+			<forward name="list" path="/anything/listAnythingType.jsp" />
+			<forward name="edit" path="/anything/editAnythingType.jsp" />
+		</action>
+
+	</action-mappings>
+	<message-resources parameter="ApplicationResources" />
+	<plug-in
+		className="org.springframework.web.struts.ContextLoaderPlugIn">
+		<set-property property="contextConfigLocation"
+			value="/WEB-INF/classes/applicationContext.xml" />
+	</plug-in>
+</struts-config>
+

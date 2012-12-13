@@ -1,0 +1,43 @@
+﻿<HTML>
+ <HEAD>
+  <TITLE>简单的工具栏</TITLE>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <link rel="stylesheet" type="text/css" href="../../extjs2.0/resources/css/ext-all.css" />
+  <STYLE TYPE="text/css">
+	.newIcon { background-image: url(images/new.gif) !important; }
+	.openIcon {	background-image: url(images/open.gif) !important; }
+	.saveIcon {	background-image: url(images/save.gif) !important; }
+  </STYLE>
+  <script type="text/javascript" src="../../extjs2.0/adapter/ext/ext-base.js"></script>
+  <script type="text/javascript" src="../../extjs2.0/ext-all.js"></script>
+  <script type="text/javascript" src="../../extjs2.0/source/locale/ext-lang-zh_CN.js"></script>
+  <script type="text/javascript">
+	Ext.onReady(function(){
+		var Toolbar = new Ext.Toolbar({//创建工具栏
+			applyTo:'toolbar',
+			width:300
+		});
+
+		Toolbar.addButton([//向工具栏中添加按钮
+			{
+				text:'新建',//按钮上显示的文字
+				handler:onButtonClick,//点击按钮的处理函数
+				iconCls:'newIcon'//在按钮上显示的图标
+			},
+			{text:'打开',handler:onButtonClick,iconCls:'openIcon'},
+			{text:'保存',handler:onButtonClick,iconCls:'saveIcon'}
+		]);
+
+		function onButtonClick(btn){//点击按钮时调用的处理函数
+			alert(btn.text);//取得按钮上的文字
+		}
+	});
+  </script>
+ </HEAD>
+ <BODY>
+ 	<table width=100%>
+		<tr><td>&nbsp;<td></tr>
+		<tr><td width=100></td><td><div id='toolbar'></div><td></tr>
+	</table>
+ </BODY>
+</HTML>

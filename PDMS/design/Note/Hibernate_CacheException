@@ -1,0 +1,1 @@
+﻿org.hibernate.cache.CacheException: java.lang.IllegalStateException: The CacheManager is not alive.

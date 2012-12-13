@@ -1,0 +1,23 @@
+﻿<html>
+<head>
+<title>格式化字符串示例</title>
+<link rel="stylesheet" type="text/css" href="../../extjs2.0/resources/css/ext-all.css" />
+<script type="text/javascript" src="../../extjs2.0/adapter/ext/ext-base.js"></script>
+<script type="text/javascript" src="../../extjs2.0/ext-all.js"></script>
+<script type="text/javascript">
+	Ext.onReady(function(){
+		//通过用字符串描述一个对象
+		var jsonStr = "{name:'the json name', value: 'the json sample'}";
+		//将该字符串进行编码，这时将形成一个含有逻辑关系的对象
+		var obj = Ext.util.JSON.decode(jsonStr);
+		//定义一些对象，最后用数组包装起来
+		var g='g文本对象',h='h文本对象',e =[g,h],f='f文本对象',b=[e,f],a = [b,'c文本对象'];
+		//将该数组中存放的对象进行解码，打印该字符串
+		var endA = Ext.util.JSON.encode(a);
+		Ext.Msg.alert('提示',endA);
+	});
+</script>
+</head>
+<body>
+</body>
+</html>

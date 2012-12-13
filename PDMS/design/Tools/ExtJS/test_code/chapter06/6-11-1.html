@@ -1,0 +1,24 @@
+﻿<html>
+<head>
+<title>线程运行实例</title>
+<link rel="stylesheet" type="text/css" href="../../extjs2.0/resources/css/ext-all.css" />
+<script type="text/javascript" src="../../extjs2.0/adapter/ext/ext-base.js"></script>
+<script type="text/javascript" src="../../extjs2.0/ext-all.js"></script>
+<script type="text/javascript">
+	Ext.onReady(function(){
+		var task ={
+			run:function(){
+				Ext.Msg.alert('提示','线程已经运行!我将每次运行将重复5次!但10秒后我将停止!');
+			},
+			interval:1000,
+			repeat:5,
+			duration:10000
+		};
+		var task1 = new Ext.util.TaskRunner();
+		task1.start(task);
+	});
+</script>
+</head>
+<body>
+</body>
+</html>

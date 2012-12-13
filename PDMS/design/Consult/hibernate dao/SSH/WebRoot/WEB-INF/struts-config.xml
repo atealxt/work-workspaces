@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.3//EN" "http://struts.apache.org/dtds/struts-config_1_3.dtd">
+
+<struts-config>
+	<form-beans >
+	  <form-bean name="queryForm" type="org.apache.struts.action.DynaActionForm">
+	    <form-property name="query" type="java.lang.String"></form-property>
+	  </form-bean>
+	</form-beans>
+	<global-exceptions />
+	<global-forwards />
+	<action-mappings>
+		<action path="/user/userManager" name="queryForm"
+			type="org.springframework.web.struts.DelegatingActionProxy">
+			<forward name="success" path="/result.jsp" />
+			<forward name="error" path="/error.jsp" />
+			<forward name="list" path="/pagesplit.jsp" />
+			
+		</action>
+	</action-mappings>
+
+	<message-resources parameter="org.ywq.struts.ApplicationResources" />
+</struts-config>
+

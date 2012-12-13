@@ -1,0 +1,70 @@
+8
+
+dir
+8
+http://ext-ux-wiz.googlecode.com/svn/trunk
+http://ext-ux-wiz.googlecode.com/svn
+
+
+
+2008-05-30T23:07:10.062720Z
+7
+tsuckowhomberg
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+a8a69ebc-c04d-0410-ab99-e3a478b844e4
+
+LICENSE
+file
+
+
+
+
+2008-07-06T08:33:00.000000Z
+b2df1fd8af071a3dab82a1f9099643fe
+2008-05-21T17:38:57.025230Z
+2
+tsuckowhomberg
+
+src
+dir
+
+CHANGELOG
+file
+
+
+
+
+2008-07-06T08:33:00.000000Z
+39cfa85cff69de93ca8445a7ad51a74a
+2008-05-28T00:22:24.448239Z
+6
+tsuckowhomberg
+
+README
+file
+
+
+
+
+2008-07-06T08:33:00.000000Z
+946a342816d7a1fc7642ec4cd22b0c17
+2008-05-26T12:03:43.484367Z
+4
+tsuckowhomberg
+
+examples
+dir
+

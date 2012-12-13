@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/System/!svn/ver/10/SOA/src/com/soa/servlet
+END
+CollaboratorSet.java
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/System/!svn/ver/13/SOA/src/com/soa/servlet/CollaboratorSet.java
+END
+FileUpload.java
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/System/!svn/ver/16/SOA/src/com/soa/servlet/FileUpload.java
+END
+RequestInfo.java
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/System/!svn/ver/21/SOA/src/com/soa/servlet/RequestInfo.java
+END
+CheckLogin.java
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/System/!svn/ver/4/SOA/src/com/soa/servlet/CheckLogin.java
+END
+CollaborationCategory.java
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/System/!svn/ver/14/SOA/src/com/soa/servlet/CollaborationCategory.java
+END
+ApproveCheck.java
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/System/!svn/ver/8/SOA/src/com/soa/servlet/ApproveCheck.java
+END
+GetSequences.java
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/System/!svn/ver/2/SOA/src/com/soa/servlet/GetSequences.java
+END
+StateSet.java
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/System/!svn/ver/2/SOA/src/com/soa/servlet/StateSet.java
+END
+CooperateSet.java
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/System/!svn/ver/10/SOA/src/com/soa/servlet/CooperateSet.java
+END

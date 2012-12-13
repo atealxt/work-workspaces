@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   repos="http://132.159.205.82:1300/svn/hbyd"
+   revision="83"
+   url="http://132.159.205.82:1300/svn/hbyd/03%E7%BC%96%E7%A0%81%E4%B8%8E%E9%9B%86%E6%88%90/030%E5%BC%80%E5%8F%91%E5%BA%93/flower/WebRoot/system/role"
+   last-author="zmh"
+   uuid="35f87345-3e26-2848-a9f1-5a4e99f158bb"
+   committed-date="2008-12-26T08:03:26.000000Z"
+   name=""
+   kind="dir"
+   committed-rev="79"/>
+<entry
+   checksum="5117eed5ae76fbc88a35a5ea35a00427"
+   last-author="zmh"
+   prop-time="2008-12-25T07:02:21.000000Z"
+   text-time="2008-12-26T07:45:50.375000Z"
+   committed-date="2008-12-26T08:03:26.000000Z"
+   name="role.jsp"
+   kind="file"
+   committed-rev="79"/>
+</wc-entries>

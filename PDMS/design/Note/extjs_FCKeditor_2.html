@@ -1,0 +1,1067 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html><head id="Head">
+
+<title>
+	[转]ExtJs里使用FckEditor - 菩提树下的杨过.Net - 博客园
+</title><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta id="metaKeywords" name="keywords" content="ExtJs,Fck,转,ExtJs里使用FckEditor"><meta name="description" content="原贴见:http://ext.group.javaeye.com/group/post/37548http://extjs.com/forum/showthread.php?t=17423CodehighlightingproducedbyActiproCodeHighli"><meta name="description" content="菩提树下的杨过的cnblogs博客-菩提本无树，明镜亦非台，本来无一物，何处惹尘埃"><link id="CommondCss" type="text/css" rel="stylesheet" href="extjs_FCKeditor_2_files/common.css"><link id="MainCss" type="text/css" rel="stylesheet" href="extjs_FCKeditor_2_files/style.css"><link id="CommondCss2" type="text/css" rel="stylesheet" href="extjs_FCKeditor_2_files/common2.css"><link id="RSSLink" title="RSS" type="application/rss+xml" rel="alternate" href="http://www.cnblogs.com/yjmyzz/rss"><link id="RSDLink" title="RSD" type="application/rsd+xml" rel="EditURI" href="http://www.cnblogs.com/yjmyzz/rsd.xml">
+    <script src="extjs_FCKeditor_2_files/common.js" type="text/javascript"></script>
+</head><body>
+    <form name="Form1" method="post" action="1280760.html" onsubmit="javascript:return WebForm_OnSubmit();" id="Form1">
+<div>
+<input name="__EVENTTARGET" id="__EVENTTARGET" value="" type="hidden">
+<input name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" type="hidden">
+<input name="__VIEWSTATE" id="__VIEWSTATE" value="" type="hidden">
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['Form1'];
+if (!theForm) {
+    theForm = document.Form1;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="extjs_FCKeditor_2_files/WebResource.js" type="text/javascript"></script>
+
+<script language="JavaScript">
+									function ctlent(evt,id)
+											{
+												if(evt.ctrlKey && evt.keyCode == 13)
+												{	
+													try
+													{
+														TempSave(id);
+													}
+													catch(ex)
+													{
+													}
+													finally
+													{
+													    __doPostBack('AjaxHolder$PostComment$btnSubmit','')
+													}
+												}
+		
+												}</script>
+												<script language="JavaScript">function SetReplyAuhor(author){document.getElementById('AjaxHolder_PostComment_tbComment').value+="@"+author+"\n";document.getElementById('AjaxHolder_PostComment_tbComment').focus();return false}</script>
+<script src="extjs_FCKeditor_2_files/ScriptResource_002.js" type="text/javascript"></script>
+<script src="extjs_FCKeditor_2_files/ScriptResource_003.js" type="text/javascript"></script>
+<script src="extjs_FCKeditor_2_files/ScriptResource.js" type="text/javascript"></script>
+<script src="extjs_FCKeditor_2_files/js.js" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+function WebForm_OnSubmit() {
+if (typeof(ValidatorOnSubmit) == "function" && ValidatorOnSubmit() == false) return false;
+return true;
+}
+//]]>
+</script>
+
+        <center>We don't want to own the world,we just want to make it work better!</center>
+<!--done-->
+<span style="display: none;"><img src="extjs_FCKeditor_2_files/banner.html"></span>
+<div id="banner">
+<!--done-->
+<div class="header">
+	<div class="headerText">
+		<a id="Header1_HeaderTitle" class="headermaintitle" href="http://www.cnblogs.com/yjmyzz/">菩提树下的杨过.Net</a><br>
+		<div class="headerDis"></div>
+	</div>
+</div>
+</div>
+<div id="main">
+	<!-- right starts -->
+	<div id="right">
+		<div id="right_content">
+			<div id="mystats">
+				
+					
+<!--done-->
+<div class="blogStats">
+随笔- 192&nbsp;
+文章- 63&nbsp;
+评论- 90&nbsp;
+
+</div>
+				
+			</div>
+			<div id="mylinks">
+				
+<!--done-->
+&nbsp;&nbsp;<a id="MyLinks1_MyHomeLink" class="menu" href="http://www.cnblogs.com/yjmyzz/">首页</a>&nbsp;&nbsp;<a id="MyLinks1_NewPostLink" class="menu" href="http://www.cnblogs.com/yjmyzz/admin/EditPosts.aspx?opt=1">新随笔</a>&nbsp;&nbsp;<a id="MyLinks1_ContactLink" accesskey="9" class="menu" href="http://www.cnblogs.com/yjmyzz/contact.aspx?id=1">联系</a>&nbsp;&nbsp;<a id="MyLinks1_Admin" class="menu" href="http://www.cnblogs.com/yjmyzz/admin/EditPosts.aspx">管理</a>&nbsp;&nbsp;<a id="MyLinks1_Syndication" class="menu" href="http://www.cnblogs.com/yjmyzz/rss">订阅</a>&nbsp;<a id="MyLinks1_XMLLink" href="http://www.cnblogs.com/yjmyzz/rss"><img src="extjs_FCKeditor_2_files/xml.gif" alt="订阅" style="border-width: 0px;"></a>
+			</div>
+			<div id="topics">
+				
+					<script type="text/javascript">
+//<![CDATA[
+Sys.WebForms.PageRequestManager._initialize('AjaxHolder$scriptmanager1', document.getElementById('Form1'));
+Sys.WebForms.PageRequestManager.getInstance()._updateControls(['tAjaxHolder$UpdatePanel1'], [], [], 90);
+//]]>
+</script>
+
+<!--done-->
+<div id="topics">
+	<div class="post">
+		<h1 class="postTitle">
+			<a id="AjaxHolder_ctl01_TitleUrl" class="postTitle2" href="http://www.cnblogs.com/yjmyzz/archive/2008/08/31/1280760.html">[转]ExtJs里使用FckEditor</a>
+		</h1>
+		<div class="clear"></div>
+		<div class="postBody">
+			<p>原贴见:</p>
+<p><a href="http://ext.group.javaeye.com/group/post/37548">http://ext.group.javaeye.com/group/post/37548</a></p>
+<p><a href="http://extjs.com/forum/showthread.php?t=17423">http://extjs.com/forum/showthread.php?t=17423</a><br>
+</p>
+<div class="cnblogs_code"><!--<br /><br />Code highlighting produced by Actipro CodeHighlighter (freeware)<br />http://www.CodeHighlighter.com/<br /><br />--><span style="color: rgb(0, 0, 0);">Ext.onReady(</span><span style="color: rgb(0, 0, 255);">function</span><span style="color: rgb(0, 0, 0);">()&nbsp;{&nbsp;&nbsp;&nbsp;<br>
+&nbsp;</span><span style="color: rgb(0, 0, 255);">var</span><span style="color: rgb(0, 0, 0);">&nbsp;fckFormObj&nbsp;</span><span style="color: rgb(0, 0, 0);">=</span><span style="color: rgb(0, 0, 0);">&nbsp;</span><span style="color: rgb(0, 0, 255);">new</span><span style="color: rgb(0, 0, 0);">&nbsp;Ext.FormPanel({&nbsp;&nbsp;&nbsp;<br>
+&nbsp;&nbsp;labelWidth:</span><span style="color: rgb(0, 0, 0);">75</span><span style="color: rgb(0, 0, 0);">,&nbsp;&nbsp;&nbsp;<br>
+&nbsp;&nbsp;url:</span><span style="color: rgb(0, 0, 0);">""</span><span style="color: rgb(0, 0, 0);">,&nbsp;&nbsp;&nbsp;<br>
+&nbsp;&nbsp;title:</span><span style="color: rgb(0, 0, 0);">"</span><span style="color: rgb(0, 0, 0);">EXT/FCKEditor&nbsp;集成&nbsp;--&nbsp;vb2005xu&nbsp;|&nbsp;cdlinux.ys168.com</span><span style="color: rgb(0, 0, 0);">"</span><span style="color: rgb(0, 0, 0);">,&nbsp;&nbsp;&nbsp;<br>
+&nbsp;&nbsp;bodyStyle:</span><span style="color: rgb(0, 0, 0);">"</span><span style="color: rgb(0, 0, 0);">padding:5px&nbsp;5px&nbsp;0</span><span style="color: rgb(0, 0, 0);">"</span><span style="color: rgb(0, 0, 0);">,&nbsp;&nbsp;&nbsp;<br>
+&nbsp;&nbsp;defaultType:</span><span style="color: rgb(0, 0, 0);">"</span><span style="color: rgb(0, 0, 0);">form</span><span style="color: rgb(0, 0, 0);">"</span><span style="color: rgb(0, 0, 0);">,&nbsp;&nbsp;&nbsp;<br>
+&nbsp;&nbsp;buttons:[&nbsp;&nbsp;&nbsp;<br>
+&nbsp;&nbsp;&nbsp;{&nbsp;&nbsp;&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;text:</span><span style="color: rgb(0, 0, 0);">"</span><span style="color: rgb(0, 0, 0);">Save</span><span style="color: rgb(0, 0, 0);">"</span><span style="color: rgb(0, 0, 0);">&nbsp;,&nbsp;&nbsp;&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;type:</span><span style="color: rgb(0, 0, 0);">'</span><span style="color: rgb(0, 0, 0);">submit</span><span style="color: rgb(0, 0, 0);">'</span><span style="color: rgb(0, 0, 0);">,&nbsp;&nbsp;&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;handler:&nbsp;</span><span style="color: rgb(0, 0, 255);">function</span><span style="color: rgb(0, 0, 0);">(){&nbsp;&nbsp;&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: rgb(0, 128, 0);">//</span><span style="color: rgb(0, 128, 0);">获取fckeditor内容赋给textarea&nbsp;&nbsp;&nbsp;</span><span style="color: rgb(0, 128, 0);"><br>
+</span><span style="color: rgb(0, 0, 0);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ext.get(</span><span style="color: rgb(0, 0, 0);">'</span><span style="color: rgb(0, 0, 0);">fckInstance</span><span style="color: rgb(0, 0, 0);">'</span><span style="color: rgb(0, 0, 0);">).dom.value&nbsp;</span><span style="color: rgb(0, 0, 0);">=</span><span style="color: rgb(0, 0, 0);">&nbsp;</span><span style="color: rgb(0, 0, 0);">"</span><span style="color: rgb(0, 0, 0);">jjj</span><span style="color: rgb(0, 0, 0);">"</span><span style="color: rgb(0, 0, 0);">;</span><span style="color: rgb(0, 128, 0);">//</span><span style="color: rgb(0, 128, 0);">fckobj.GetXHTML(true)&nbsp;+&nbsp;'提交后';&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: rgb(0, 128, 0);"><br>
+</span><span style="color: rgb(0, 0, 0);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ext.MessageBox.alert(</span><span style="color: rgb(0, 0, 0);">'</span><span style="color: rgb(0, 0, 0);">FCK内容</span><span style="color: rgb(0, 0, 0);">'</span><span style="color: rgb(0, 0, 0);">,Ext.get(</span><span style="color: rgb(0, 0, 0);">'</span><span style="color: rgb(0, 0, 0);">fckInstance</span><span style="color: rgb(0, 0, 0);">'</span><span style="color: rgb(0, 0, 0);">).dom.value);&nbsp;&nbsp;&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: rgb(0, 0, 255);">if</span><span style="color: rgb(0, 0, 0);">&nbsp;(fckFormObj.form.isValid())&nbsp;&nbsp;&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;&nbsp;&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: rgb(0, 128, 0);">//</span><span style="color: rgb(0, 128, 0);">创建响应测试函数&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: rgb(0, 128, 0);"><br>
+</span><span style="color: rgb(0, 0, 0);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: rgb(0, 0, 255);">var</span><span style="color: rgb(0, 0, 0);">&nbsp;fckobj_temp&nbsp;</span><span style="color: rgb(0, 0, 0);">=</span><span style="color: rgb(0, 0, 0);">&nbsp;FCKeditorAPI.GetInstance(</span><span style="color: rgb(0, 0, 0);">'</span><span style="color: rgb(0, 0, 0);">fckInstance</span><span style="color: rgb(0, 0, 0);">'</span><span style="color: rgb(0, 0, 0);">);&nbsp;&nbsp;&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: rgb(0, 128, 0);">//</span><span style="color: rgb(0, 128, 0);">fckobj_temp.UpdateLinkedField();//此方法被绑定到submit事件&nbsp;&nbsp;&nbsp;</span><span style="color: rgb(0, 128, 0);"><br>
+</span><span style="color: rgb(0, 0, 0);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fckFormObj.form.doAction(</span><span style="color: rgb(0, 0, 0);">'</span><span style="color: rgb(0, 0, 0);">submit</span><span style="color: rgb(0, 0, 0);">'</span><span style="color: rgb(0, 0, 0);">,{&nbsp;&nbsp;&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;url:</span><span style="color: rgb(0, 0, 0);">'</span><span style="color: rgb(0, 0, 0);">submit.php</span><span style="color: rgb(0, 0, 0);">'</span><span style="color: rgb(0, 0, 0);">,&nbsp;&nbsp;&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;method:</span><span style="color: rgb(0, 0, 0);">'</span><span style="color: rgb(0, 0, 0);">post</span><span style="color: rgb(0, 0, 0);">'</span><span style="color: rgb(0, 0, 0);">,&nbsp;&nbsp;&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;waitMsg:</span><span style="color: rgb(0, 0, 0);">'</span><span style="color: rgb(0, 0, 0);">正在提交,请稍等<img src="extjs_FCKeditor_2_files/dot.gif" alt=""></span><span style="color: rgb(0, 0, 0);">'</span><span style="color: rgb(0, 0, 0);">,&nbsp;&nbsp;&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;success:</span><span style="color: rgb(0, 0, 255);">function</span><span style="color: rgb(0, 0, 0);">(form,action){</span><span style="color: rgb(0, 128, 0);">//</span><span style="color: rgb(0, 128, 0);">成功&nbsp;&nbsp;&nbsp;</span><span style="color: rgb(0, 128, 0);"><br>
+</span><span style="color: rgb(0, 0, 0);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;showInfo(</span><span style="color: rgb(0, 0, 0);">'</span><span style="color: rgb(0, 0, 0);">Success</span><span style="color: rgb(0, 0, 0);">'</span><span style="color: rgb(0, 0, 0);">,fckobj_temp.GetXHTML(</span><span style="color: rgb(0, 0, 255);">true</span><span style="color: rgb(0, 0, 0);">));&nbsp;&nbsp;&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;,&nbsp;&nbsp;&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;failure:</span><span style="color: rgb(0, 0, 255);">function</span><span style="color: rgb(0, 0, 0);">(form,action){</span><span style="color: rgb(0, 128, 0);">//</span><span style="color: rgb(0, 128, 0);">失败&nbsp;&nbsp;&nbsp;</span><span style="color: rgb(0, 128, 0);"><br>
+</span><span style="color: rgb(0, 0, 0);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;showInfo(</span><span style="color: rgb(0, 0, 0);">'</span><span style="color: rgb(0, 0, 0);">Failed</span><span style="color: rgb(0, 0, 0);">'</span><span style="color: rgb(0, 0, 0);">,</span><span style="color: rgb(0, 0, 0);">'</span><span style="color: rgb(0, 0, 0);">网络中断造成连接失败</span><span style="color: rgb(0, 0, 0);">'</span><span style="color: rgb(0, 0, 0);">);&nbsp;&nbsp;&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;});&nbsp;&nbsp;&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;&nbsp;<br>
+&nbsp;&nbsp;&nbsp;},&nbsp;&nbsp;&nbsp;<br>
+&nbsp;&nbsp;&nbsp;{&nbsp;&nbsp;&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;text:</span><span style="color: rgb(0, 0, 0);">"</span><span style="color: rgb(0, 0, 0);">Cancel</span><span style="color: rgb(0, 0, 0);">"</span><span style="color: rgb(0, 0, 0);">&nbsp;&nbsp;<br>
+&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;&nbsp;<br>
+&nbsp;&nbsp;],&nbsp;&nbsp;&nbsp;<br>
+&nbsp;&nbsp;items:[{&nbsp;&nbsp;&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;xtype:</span><span style="color: rgb(0, 0, 0);">"</span><span style="color: rgb(0, 0, 0);">textarea</span><span style="color: rgb(0, 0, 0);">"</span><span style="color: rgb(0, 0, 0);">,&nbsp;&nbsp;&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fieldLabel:</span><span style="color: rgb(0, 0, 0);">"</span><span style="color: rgb(0, 0, 0);">编辑</span><span style="color: rgb(0, 0, 0);">"</span><span style="color: rgb(0, 0, 0);">,&nbsp;&nbsp;&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;labelSeparator:</span><span style="color: rgb(0, 0, 0);">"</span><span style="color: rgb(0, 0, 0);">：</span><span style="color: rgb(0, 0, 0);">"</span><span style="color: rgb(0, 0, 0);">,&nbsp;&nbsp;&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id:</span><span style="color: rgb(0, 0, 0);">"</span><span style="color: rgb(0, 0, 0);">fckInstance</span><span style="color: rgb(0, 0, 0);">"</span><span style="color: rgb(0, 0, 0);">,&nbsp;</span><span style="color: rgb(0, 128, 0);">//</span><span style="color: rgb(0, 128, 0);">div节点，这里要挂接FCKeditor编辑器&nbsp;&nbsp;&nbsp;</span><span style="color: rgb(0, 128, 0);"><br>
+</span><span style="color: rgb(0, 0, 0);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;name:</span><span style="color: rgb(0, 0, 0);">"</span><span style="color: rgb(0, 0, 0);">fckInstance</span><span style="color: rgb(0, 0, 0);">"</span><span style="color: rgb(0, 0, 0);">,&nbsp;&nbsp;&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;width:</span><span style="color: rgb(0, 0, 0);">736</span><span style="color: rgb(0, 0, 0);">,&nbsp;&nbsp;&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;height:</span><span style="color: rgb(0, 0, 0);">371</span><span style="color: rgb(0, 0, 0);">&nbsp;&nbsp;<br>
+&nbsp;&nbsp;}]&nbsp;&nbsp;&nbsp;<br>
+&nbsp;});&nbsp;&nbsp;&nbsp;<br>
+&nbsp;fckFormObj.render(document.body);&nbsp;&nbsp;&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<br>
+&nbsp;</span><span style="color: rgb(0, 128, 0);">/*</span><span style="color: rgb(0, 128, 0);">创建Fckeditor对象&nbsp;--&nbsp;构造函数指出了Fckeditor要挂接的id,上文中的xtype&nbsp;:&nbsp;'textarea'指定</span><span style="color: rgb(0, 128, 0);">*/</span><span style="color: rgb(0, 0, 0);">&nbsp;&nbsp;<br>
+&nbsp;</span><span style="color: rgb(0, 128, 0);">//</span><span style="color: rgb(0, 128, 0);">在页面上要求挂载fckeditor/fckeditor.js文件&nbsp;&nbsp;&nbsp;</span><span style="color: rgb(0, 128, 0);"><br>
+</span><span style="color: rgb(0, 0, 0);">&nbsp;</span><span style="color: rgb(0, 0, 255);">var</span><span style="color: rgb(0, 0, 0);">&nbsp;fckobj&nbsp;</span><span style="color: rgb(0, 0, 0);">=</span><span style="color: rgb(0, 0, 0);">&nbsp;</span><span style="color: rgb(0, 0, 255);">new</span><span style="color: rgb(0, 0, 0);">&nbsp;FCKeditor(</span><span style="color: rgb(0, 0, 0);">'</span><span style="color: rgb(0, 0, 0);">fckInstance</span><span style="color: rgb(0, 0, 0);">'</span><span style="color: rgb(0, 0, 0);">,</span><span style="color: rgb(0, 0, 0);">810</span><span style="color: rgb(0, 0, 0);">,</span><span style="color: rgb(0, 0, 0);">350</span><span style="color: rgb(0, 0, 0);">);&nbsp;&nbsp;&nbsp;<br>
+&nbsp;fckobj.BasePath&nbsp;</span><span style="color: rgb(0, 0, 0);">=</span><span style="color: rgb(0, 0, 0);">&nbsp;</span><span style="color: rgb(0, 0, 0);">"</span><span style="color: rgb(0, 0, 0);">/ucren/fckeditor/</span><span style="color: rgb(0, 0, 0);">"</span><span style="color: rgb(0, 0, 0);">&nbsp;;&nbsp;&nbsp;&nbsp;<br>
+&nbsp;fckobj.ToolbarSet&nbsp;</span><span style="color: rgb(0, 0, 0);">=</span><span style="color: rgb(0, 0, 0);">&nbsp;</span><span style="color: rgb(0, 0, 0);">'</span><span style="color: rgb(0, 0, 0);">Default</span><span style="color: rgb(0, 0, 0);">'</span><span style="color: rgb(0, 0, 0);">&nbsp;;&nbsp;&nbsp;&nbsp;<br>
+&nbsp;fckobj.ReplaceTextarea();&nbsp;&nbsp;&nbsp;&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<br>
+&nbsp;</span><span style="color: rgb(0, 128, 0);">//</span><span style="color: rgb(0, 128, 0);">创建响应测试函数&nbsp;&nbsp;&nbsp;</span><span style="color: rgb(0, 128, 0);"><br>
+</span><span style="color: rgb(0, 0, 0);">&nbsp;</span><span style="color: rgb(0, 0, 255);">function</span><span style="color: rgb(0, 0, 0);">&nbsp;msgBox()&nbsp;&nbsp;&nbsp;<br>
+&nbsp;{&nbsp;&nbsp;&nbsp;<br>
+&nbsp;&nbsp;</span><span style="color: rgb(0, 0, 255);">var</span><span style="color: rgb(0, 0, 0);">&nbsp;fckobj_temp&nbsp;</span><span style="color: rgb(0, 0, 0);">=</span><span style="color: rgb(0, 0, 0);">&nbsp;FCKeditorAPI.GetInstance(</span><span style="color: rgb(0, 0, 0);">'</span><span style="color: rgb(0, 0, 0);">fckInstance</span><span style="color: rgb(0, 0, 0);">'</span><span style="color: rgb(0, 0, 0);">);&nbsp;&nbsp;&nbsp;<br>
+&nbsp;&nbsp;fckobj_temp.UpdateLinkedField();</span><span style="color: rgb(0, 128, 0);">//</span><span style="color: rgb(0, 128, 0);">此方法被绑定到submit事件&nbsp;&nbsp;&nbsp;</span><span style="color: rgb(0, 128, 0);"><br>
+</span><span style="color: rgb(0, 0, 0);">&nbsp;&nbsp;Ext.MessageBox.alert(</span><span style="color: rgb(0, 0, 0);">'</span><span style="color: rgb(0, 0, 0);">FCK内容</span><span style="color: rgb(0, 0, 0);">'</span><span style="color: rgb(0, 0, 0);">,fckobj_temp.GetXHTML(&nbsp;</span><span style="color: rgb(0, 0, 255);">true</span><span style="color: rgb(0, 0, 0);">&nbsp;));&nbsp;&nbsp;&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+&nbsp;}&nbsp;&nbsp;&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<br>
+&nbsp;</span><span style="color: rgb(0, 0, 255);">function</span><span style="color: rgb(0, 0, 0);">&nbsp;showInfo(tip,str){&nbsp;&nbsp;&nbsp;<br>
+&nbsp;&nbsp;</span><span style="color: rgb(0, 0, 255);">var</span><span style="color: rgb(0, 0, 0);">&nbsp;win&nbsp;</span><span style="color: rgb(0, 0, 0);">=</span><span style="color: rgb(0, 0, 0);">&nbsp;</span><span style="color: rgb(0, 0, 255);">new</span><span style="color: rgb(0, 0, 0);">&nbsp;Ext.Window({&nbsp;&nbsp;&nbsp;<br>
+&nbsp;&nbsp;&nbsp;title:&nbsp;</span><span style="color: rgb(0, 0, 0);">'</span><span style="color: rgb(0, 0, 0);">信息提交应答提示&nbsp;--&nbsp;</span><span style="color: rgb(0, 0, 0);">'</span><span style="color: rgb(0, 0, 0);">&nbsp;</span><span style="color: rgb(0, 0, 0);">+</span><span style="color: rgb(0, 0, 0);">&nbsp;tip,&nbsp;&nbsp;&nbsp;<br>
+&nbsp;&nbsp;&nbsp;width:&nbsp;</span><span style="color: rgb(0, 0, 0);">400</span><span style="color: rgb(0, 0, 0);">&nbsp;,&nbsp;height:&nbsp;</span><span style="color: rgb(0, 0, 0);">200</span><span style="color: rgb(0, 0, 0);">&nbsp;,autoScroll:&nbsp;</span><span style="color: rgb(0, 0, 255);">true</span><span style="color: rgb(0, 0, 0);">&nbsp;,&nbsp;&nbsp;&nbsp;<br>
+&nbsp;&nbsp;&nbsp;html:&nbsp;</span><span style="color: rgb(0, 0, 0);">'</span><span style="color: rgb(0, 0, 0);">&lt;h1&gt;</span><span style="color: rgb(0, 0, 0);">'</span><span style="color: rgb(0, 0, 0);">+</span><span style="color: rgb(0, 0, 0);">&nbsp;str&nbsp;</span><span style="color: rgb(0, 0, 0);">+</span><span style="color: rgb(0, 0, 0);">'</span><span style="color: rgb(0, 0, 0);">&lt;/h1&gt;</span><span style="color: rgb(0, 0, 0);">'</span><span style="color: rgb(0, 0, 0);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+&nbsp;&nbsp;});&nbsp;&nbsp;&nbsp;<br>
+&nbsp;&nbsp;win.show();&nbsp;&nbsp;&nbsp;<br>
+&nbsp;}&nbsp;&nbsp;&nbsp;<br>
+});&nbsp;&nbsp;<br>
+</span></div>
+<div id="EntryTag">Tag标签: <a href="http://www.cnblogs.com/yjmyzz/tag/ExtJs/">ExtJs</a>,<a href="http://www.cnblogs.com/yjmyzz/tag/Fck/">Fck</a></div>
+		</div>
+		<div class="postDesc">posted @ 2008-08-31 21:16 <a href="http://www.cnblogs.com/yjmyzz/">菩提树下的杨过</a> 阅读(446) <a href="#Post">评论(1)</a> &nbsp;<a href="http://www.cnblogs.com/yjmyzz/admin/EditPosts.aspx?postid=1280760">编辑</a> <a href="http://www.cnblogs.com/yjmyzz/AddToFavorite.aspx?id=1280760">收藏</a> <a href="#" onclick="PutInWz();return false;">网摘</a>  </div>
+	</div>
+	<img src="extjs_FCKeditor_2_files/1280760.jpeg" height="1" width="1">
+	
+<!--
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+xmlns:dc="http://purl.org/dc/elements/1.1/"
+xmlns:trackback="http://madskills.com/public/xml/rss/module/trackback/">
+<rdf:Description
+rdf:about="http://www.cnblogs.com/yjmyzz/archive/2008/08/31/1280760.html"
+dc:identifier="http://www.cnblogs.com/yjmyzz/archive/2008/08/31/1280760.html"
+dc:title=""
+trackback:ping="http://www.cnblogs.com/yjmyzz/services/trackbacks/1280760.aspx" />
+</rdf:RDF>
+-->
+
+</div><!--end: topics 文章、评论容器-->
+
+<div id="AjaxHolder_UpdatePanel1">
+	    
+    <a name="pagedcomment"></a>
+<!--done-->
+<div class="comment">
+<div class="feedback_area_title">发表评论</div>
+<div class="feedbackNoItems"></div>
+	
+
+		<div class="feedbackItem">
+			<div class="feedbackListSubtitle">
+				<div class="feedbackManage">
+					&nbsp;&nbsp;<a onclick='return SetReplyAuhor("vb2005xu")' href="http://www.cnblogs.com/yjmyzz/archive/2008/08/31/1280760.html#post">回复</a>&nbsp;&nbsp;<a onclick="GetQuote(1409759);return false" href="http://www.cnblogs.com/yjmyzz/archive/2008/08/31/1280760.html#post">引用</a>&nbsp;&nbsp;<a id="AjaxHolder_Comments_CommentList_ctl00_DeleteLink" href="javascript:__doPostBack('AjaxHolder$Comments$CommentList$ctl00$DeleteLink','')"></a>&nbsp;&nbsp;<a id="AjaxHolder_Comments_CommentList_ctl00_EditLink" causesvalidation="False"></a>
+				</div>
+				<a title="permalink: re: [转]ExtJs里使用FckEditor" href="http://www.cnblogs.com/yjmyzz/archive/2008/08/31/1280760.html#1409759">#1楼</a>&nbsp;<a name="1409759"></a><a name="Post"></a>2008-12-22 15:17 | <a id="AjaxHolder_Comments_CommentList_ctl00_NameLink" target="_blank">vb2005xu [未注册用户]</a>
+			</div>
+			<div class="feedbackCon">
+				转载我的文章请注明出处 
+<br>vb2005xu.javaeye.com<br>
+			</div>
+		</div>
+	
+</div>
+<style>
+    td
+    {
+        font-size: 12px;
+    }
+    .commentTextBox
+    {
+        font-family: Verdana;
+        font-size: 13px;
+    }
+    a.blue:visited, a.blue:active, a.blue:link, a.blue:hover
+    {
+        color: blue;
+    }
+</style>
+<!--Beging Temp Save-->
+<style>
+    .userData
+    {
+        behavior: url(#default#userdata);
+    }
+</style>
+<div class="userData" id="CommentsPersistDiv">
+</div>
+
+<script type="text/javascript">
+    function pageLoad() {
+        Sys.WebForms.PageRequestManager.getInstance().add_initializeRequest(handleInitializeRequest);
+        //Sys.WebForms.PageRequestManager.getInstance().add_endRequest(handleEndRequest);
+    }
+
+    function handleInitializeRequest(sender, args) {
+        var prm = Sys.WebForms.PageRequestManager.getInstance();
+        var eid = args.get_postBackElement().id;
+        /*if (eid.indexOf("DeleteLink")>0) 
+        {
+        args.get_postBackElement().innerHTML = "<font color='red'>正在删除...</font>";         
+        }    
+        else */
+        if (eid.indexOf("btnSubmit") > 0) {
+            document.getElementById("AjaxHolder_PostComment_ltSubmitMsg").innerHTML = "正在提交...";
+            document.getElementById("AjaxHolder_PostComment_btnSubmit").disabled = true;
+        }
+        else if (eid.indexOf("refreshList") > 0) {
+            document.getElementById("AjaxHolder_PostComment_refreshList").innerHTML = "<font color='red'>正在刷新...</font>";
+        }
+
+    }
+
+    function TempSave(ElementID) {
+        try {
+            CommentsPersistDiv.setAttribute("CommentContent", document.getElementById(ElementID).value);
+            CommentsPersistDiv.save("CommentXMLStore");
+        }
+        catch (ex) {
+        }
+
+    }
+    function Restore(ElementID) {
+        CommentsPersistDiv.load("CommentXMLStore");
+        document.getElementById(ElementID).value = CommentsPersistDiv.getAttribute("CommentContent");
+    }	
+			
+			
+</script>
+
+<!--Ene TempSave-->
+<div id="divRefreshComments" style="text-align: right; margin-right: 10px; margin-bottom: 5px; font-size: 12px;">
+    <a id="AjaxHolder_PostComment_refreshList" href="javascript:__doPostBack('AjaxHolder$PostComment$refreshList','')">刷新评论列表</a>&nbsp;&nbsp;</div>
+<div class="commentform">
+    
+    <span id="AjaxHolder_PostComment_ltSubmitMsg" style="color: Red;"></span>
+    <br>
+    <a name="Feedback"></a>
+    <div id="AjaxHolder_PostComment_panelAD">
+		
+        </div><table style="width: 600px;" border="0" cellpadding="1" cellspacing="1">
+        <tbody><tr>
+            <td colspan="3">
+                <div id="AjaxHolder_PostComment_panelADUper">
+		
+                    
+                
+	</div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                
+            </td>
+            <td>
+            </td>
+            <td>
+            </td>
+        </tr>
+        
+        <tr>
+            <td width="55">
+                姓名
+            </td>
+            <td colspan="2">
+                <input name="AjaxHolder$PostComment$tbName" id="AjaxHolder_PostComment_tbName" class="tb_comment_name" type="text"> <a href="http://passport.cnblogs.com/login.aspx?ReturnUrl=http%3a%2f%2fwww.cnblogs.com%2fyjmyzz%2farchive%2f2008%2f08%2f31%2f1280760.html">[登录]</a> <a href="http://passport.cnblogs.com/register.aspx?ReturnUrl=http%3a%2f%2fwww.cnblogs.com%2fyjmyzz%2farchive%2f2008%2f08%2f31%2f1280760.html%23Top">[注册]</a><span id="AjaxHolder_PostComment_RequiredFieldValidator2" style="color: Red; visibility: hidden;">请输入你的姓名</span>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                主页
+            </td>
+            <td>
+                <input name="AjaxHolder$PostComment$tbUrl" id="AjaxHolder_PostComment_tbUrl" class="commenttb" type="text">
+            </td>
+            <td>
+            </td>
+        </tr>
+        <tr id="AjaxHolder_PostComment_trEmail">
+		<td>
+                Email
+            </td>
+		<td colspan="2">
+                <input name="AjaxHolder$PostComment$tbEmail" id="AjaxHolder_PostComment_tbEmail" class="commenttb" type="text">(仅博主可见)<span id="AjaxHolder_PostComment_revContactMail" style="color: Red; visibility: hidden;">邮件地址无效</span>
+            </td>
+	</tr>
+	
+        <tr>
+            <td colspan="3" align="left">
+                <table id="AjaxHolder_PostComment_tbCaptchaImage" class="CommentForm" border="0" cellpadding="0" cellspacing="0">
+		<tbody><tr>
+			<td colspan="3">
+                            <span id="AjaxHolder_PostComment_Requiredfieldvalidator4" style="color: Red; display: none;">请输入验证码</span>
+                            <span id="AjaxHolder_PostComment_lblImage" style="color: Red; font-weight: bold;"></span>
+                        </td>
+		</tr>
+		<tr>
+			<td>
+                            验证码
+                        </td>
+			<td colspan="2">
+                            <input name="AjaxHolder$PostComment$CodeNumberTextBox" id="AjaxHolder_PostComment_CodeNumberTextBox" style="width: 100px;" type="text">*&nbsp;&nbsp;<img src="extjs_FCKeditor_2_files/JpegImage.jpeg" alt="验证码" align="absmiddle"><a id="AjaxHolder_PostComment_lkbChangeCode" href="javascript:__doPostBack('AjaxHolder$PostComment$lkbChangeCode','')">看不清,换一张</a>
+                            
+                        </td>
+		</tr>
+	</tbody></table>
+	
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3" style="text-align: left;">
+                <div style="width: 600px;">
+                    <div class="divPostCommentBox">
+                        内容(请不要发表任何与政治相关的内容)
+                        <span id="AjaxHolder_PostComment_RequiredFieldValidator3" style="color: Red; visibility: hidden;">请输入评论内容</span><br>
+                        <textarea name="AjaxHolder$PostComment$tbComment" rows="2" cols="20" id="AjaxHolder_PostComment_tbComment" class="commentTextBox" onkeydown="ctlent(event,'AjaxHolder_PostComment_tbComment')"></textarea>
+                    </div>
+                    <div class="CommentBoxNav">
+                        
+                        <a href="http://www.cnblogs.com/" target="_blank" tabindex="-1">网站首页</a><br>
+                        <br>
+                        <a href="http://news.cnblogs.com/" target="_blank" tabindex="-1">新闻频道</a><br>
+                        <br>
+                        <a href="http://space.cnblogs.com/" target="_blank" tabindex="-1">社区</a><br>
+                        <br>
+                        <a href="http://space.cnblogs.com/group.htm" target="_blank" tabindex="-1">小组</a><br>
+                        <br>
+                        <a href="http://space.cnblogs.com/q" target="_blank" tabindex="-1">博问</a><br>
+                        <br>
+                        <a href="http://wz.cnblogs.com/" target="_blank" tabindex="-1">网摘</a><br>
+                        <br>
+                        <a href="http://job.cnblogs.com/" target="_blank" tabindex="-1">人才</a><br>
+                        <br>
+                        <a href="http://zzk.cnblogs.com/" target="_blank" tabindex="-1">找找看</a><br>
+                        <br>
+                        
+                    </div>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3">
+                <span id="AjaxHolder_PostComment_Message" style="color: Red;"></span>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3">
+                <input id="AjaxHolder_PostComment_chkRemember" name="AjaxHolder$PostComment$chkRemember" checked="checked" tabindex="-1" type="checkbox"><label for="AjaxHolder_PostComment_chkRemember">Remember Me?</label>
+            </td>
+        </tr>
+        <tr>
+            <td height="23">
+                <input name="AjaxHolder$PostComment$btnSubmit" value="提交" onclick="TempSave('AjaxHolder_PostComment_tbComment');WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;AjaxHolder$PostComment$btnSubmit&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, false))" id="AjaxHolder_PostComment_btnSubmit" class="commentButton" type="submit">
+                
+            </td>
+            <td colspan="2" height="23">
+                &nbsp;
+                <a id="AjaxHolder_PostComment_lnkLogin" href="http://passport.cnblogs.com/login.aspx?ReturnURL=http%3a%2f%2fwww.cnblogs.com%2fyjmyzz%2farchive%2f2008%2f08%2f31%2f1280760.html">登录</a>&nbsp;&nbsp;<a id="AjaxHolder_PostComment_linkLoginComment" onclick="if(document.getElementById('AjaxHolder_PostComment_tbComment').value != '') return confirm('未提交的评论内容将会丢失, 你真的要进入高级评论吗?');" href="http://www.cnblogs.com/yjmyzz/archive/2008/08/31/1280760.html?login=1#Post">使用高级评论</a>&nbsp;&nbsp;
+                    
+                    <a href="http://passport.cnblogs.com/register.aspx?ReturnUrl=http%3a%2f%2fwww.cnblogs.com%2fyjmyzz%2farchive%2f2008%2f08%2f31%2f1280760.html%23Bottom">新用户注册</a>&nbsp;&nbsp;
+                    
+                    <a href="#Top">返回页首</a>&nbsp;&nbsp;<a id="AjaxHolder_PostComment_lbRestore" onclick="Restore('AjaxHolder_PostComment_tbComment'); return false;" href="http://www.cnblogs.com/yjmyzz/archive/2008/08/31/1280760.html#Post">恢复上次提交</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3">
+                <label class="CtrlEnter">
+                    [使用Ctrl+Enter键可以直接提交]</label>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3">
+                
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3">
+                
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3"><a href="http://a4.yeshj.com/rd/24287/" target="_blank"><span style="color: red;">IT“暖冬”计划紧急招募中</span></a><br>
+	    <span style="color: red;">推荐职位：</span><a href="http://job.cnblogs.com/offer/510/" target="_blank"><span style="color: red;">.NET开发工程师</span></a>&nbsp;&nbsp;
+	    <a href="http://job.cnblogs.com/offer/511/" target="_blank"><span style="color: red;">架构师</span></a>&nbsp;&nbsp;
+	    <a href="http://job.cnblogs.com/offer/509/" target="_blank"><span style="color: red;">Javascript开发工程师</span></a>
+	    </td>
+        </tr>
+        <tr>
+            <td colspan="3">
+                <a href="http://zzk.cnblogs.com/" target="_blank">找找看</a>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3">
+            <script type="text/javascript" src="extjs_FCKeditor_2_files/a.html"></script>
+            <script type="text/JavaScript">show_a4_zone("S4");</script><a href="http://a4.yeshj.com/rd/24503/" target="_blank"><img src="extjs_FCKeditor_2_files/YU-D-S4P-24503_54.gif" border="0"></a>
+            </td>
+        </tr>
+            <tr>
+                <td colspan="3" height="5">
+                    
+<script type="text/javascript"><!--
+google_ad_client = "pub-4210569241504288";
+google_ad_slot = "1397853083";
+google_ad_width = 468;
+google_ad_height = 60;
+//-->
+</script>
+<script type="text/javascript" src="extjs_FCKeditor_2_files/show_ads.js">
+</script><script src="extjs_FCKeditor_2_files/expansion_embed.js"></script><script src="extjs_FCKeditor_2_files/test_domain.js"></script><script>window.google_render_ad();</script><ins style="border: medium none ; margin: 0pt; padding: 0pt; display: inline-table; height: 60px; position: relative; visibility: visible; width: 468px;"><ins style="border: medium none ; margin: 0pt; padding: 0pt; display: block; height: 60px; position: relative; visibility: visible; width: 468px;"><iframe allowtransparency="true" hspace="0" id="google_ads_frame1" marginheight="0" marginwidth="0" name="google_ads_frame" src="extjs_FCKeditor_2_files/ads.html" style="left: 0pt; position: absolute; top: 0pt;" vspace="0" frameborder="0" height="60" scrolling="no" width="468"></iframe></ins></ins>
+<br>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3"> 
+                    <script type="text/JavaScript">show_a4_zone("S1");</script><a href="http://a4.yeshj.com/rd/23606/" target="_blank"><img src="extjs_FCKeditor_2_files/YU-D-S1P-23606_27.gif" border="0"></a>
+                    <br>
+                    <a href="http://www.china-pub.com/itbook/" target="_blank">China-pub 计算机图书网上专卖店！6.5万品种
+                        2-8折！</a><br>
+                    <a href="http://www.china-pub.com/static/zt_mb/zt_huodong_07_secondhandbook.asp?filename=jsj_hzold_081029" target="_blank">近千种 9-95 新二手计算图书火热销售中！</a><br>
+                </td>
+            </tr>
+        
+	
+        <tr>
+            <td colspan="3">
+                <br><div id="relative_posts"><b>相关文章:</b><br><script language="javascript" type="text/javascript" charset="utf-8" src="extjs_FCKeditor_2_files/RCS.html"></script><a href="http://kb.cnblogs.com/page/42588/" target="_blank">ExtJs+WCF+LINQ实现分页Grid</a><br><a href="http://kb.cnblogs.com/page/42108/" target="_blank">程序人生－－一个程序员对学弟学妹建议（转）</a><br><a href="http://www.cnblogs.com/thcjp/archive/2006/08/29/489491.html" target="_blank">使用Visual Studio2005入门.Net2.0系列视频教程</a><br><a href="http://www.cnblogs.com/laser_lu/articles/111379.html" target="_blank">中国书信礼仪（转）</a><br><a href="http://news.cnblogs.com/n/43938/" target="_blank">谷歌软件精选抛弃Firefox 转推自家浏览器</a><br><a href="http://space.cnblogs.com/question/2396/" target="_blank">整数转字符串问题</a><br><a href="http://space.cnblogs.com/question/785/" target="_blank">想转架构师，大家有什么建议不？</a><br><a href="http://space.cnblogs.com/group/topic/2565/" target="_blank">[转]也谈成功 </a><br><a href="http://space.cnblogs.com/group/topic/3080/" target="_blank">老婆使用说明书(转)</a><br><br><b>相关搜索:</b><br> <a href="http://zzk.cnblogs.com/s?w=ExtJs" target="_blank">ExtJs</a> <a href="http://zzk.cnblogs.com/s?w=Fck" target="_blank">Fck</a> </div>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3">
+                <div id="div_a4_ads">
+                    <br>
+                    <b>相关链接:</b>
+
+                    <script type="text/javascript">
+                        var title = document.title;
+                        document.write("<div id=\"a4_ads_output\">");
+                        document.write("<script type='text/javascript' src='http://a4.yeshj.com/adwords/EN017?num=7&title=" + encodeURIComponent(title) + "&tag=" + encodeURIComponent(GetMeta("keywords")) + "'></scri" + "pt>");
+                        document.write("</div>");
+                    </script><div id="a4_ads_output"><script type="text/javascript" src="extjs_FCKeditor_2_files/EN017.html"></script><a href="http://a4.yeshj.com/rd?aid=16569&amp;zid=0&amp;url=http%3a%2f%2fwww.cnblogs.com%2fcmsoft%2farticles%2f967323.html" target="_blank">ExtJS与.NET结合开发实例</a><br><a href="http://a4.yeshj.com/rd?aid=16899&amp;zid=0&amp;url=http%3a%2f%2fwww.cnblogs.com%2fcmsoft%2farticles%2f970947.html" target="_blank">ExtJS与.NET结合开发实例(Grid之批量删除篇)</a><br><a href="http://a4.yeshj.com/rd?aid=16898&amp;zid=0&amp;url=http%3a%2f%2fwww.cnblogs.com%2fxiaozhuang%2farchive%2f2007%2f12%2f07%2f987087.html" target="_blank">ExtJS调用WCF系列大全</a><br><a href="http://a4.yeshj.com/rd?aid=16236&amp;zid=0&amp;url=http%3a%2f%2fspace.cnblogs.com%2fquestion%2f24%2f" target="_blank">怎么优化使用asp.net ajax的网站速度</a><br><a href="http://a4.yeshj.com/rd?aid=17090&amp;zid=0&amp;url=http%3a%2f%2fwww.cnblogs.com%2fxbf321%2farchive%2f2007%2f10%2f29%2f941425.html" target="_blank">使用Vs.Net 的一些小技巧</a><br><a href="http://a4.yeshj.com/rd?aid=16234&amp;zid=0&amp;url=http%3a%2f%2fa8.yeshj.com%2fzt%2fefabroad%2f" target="_blank">一个连英语都不会的.NET程序员能走多远?</a><br><a href="http://a4.yeshj.com/rd?aid=16988&amp;zid=0&amp;url=http%3a%2f%2fts.hjenglish.com%2fmovie" target="_blank">一个连英语都不会的.NET程序员怎么提高？</a><br></div>
+
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3">
+                
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3">
+                
+
+<div class="itnews">
+<br><b>最新IT新闻:</b><br>
+
+            <a href="http://news.cnblogs.com/n/45108/" target="_blank">Google Chrome 工程师访谈录</a><br>
+	
+            <a href="http://news.cnblogs.com/n/45107/" target="_blank">盛大与金山发生游戏撞车</a><br>
+	
+            <a href="http://news.cnblogs.com/n/45106/" target="_blank">支付宝宣布牵手日本Netprice集团</a><br>
+	
+            <a href="http://news.cnblogs.com/n/45105/" target="_blank">2008年中国网页搜索请求量世界第一</a><br>
+	
+            <a href="http://news.cnblogs.com/n/45104/" target="_blank">微软内部邮件曝光Kumo搜索引擎特性及截图</a><br>
+	
+</div>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3" height="5">
+                &nbsp;
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3" height="5">
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3" height="1">
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3">
+                
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3">
+                
+            </td>
+        </tr>
+    </tbody></table>
+</div>
+<div id="AjaxHolder_PostComment_ValidationSummary1" style="color: Red; display: none;">
+
+	</div>
+
+</div>
+<script language="javascript">
+
+function GetQuote(id)
+{
+    //www.cnblogs.com.ICommentService.GetCommentText(id,SetQuote);
+    BlogServer.WebService.AjaxWS.GetComment(id,SetQuote);
+}
+
+ function SetQuote(result)
+{
+    document.getElementById('AjaxHolder_PostComment_tbComment').value+= ("--引用--------------------------------------------------\n"+result+"\n--------------------------------------------------------\n");
+    document.getElementById('AjaxHolder_PostComment_tbComment').focus(); 
+}
+
+function Favorite(entryID,title,url,element)
+{
+    document.getElementById(element.id).innerHTML = "<span style='color:red'>正在收藏...</span>";
+    BlogServer.WebService.AjaxWS.AddToFavorites(entryID,title,url,OnFavoriteSuccess);
+    document.getElementById(element.id).removeAttribute("href");
+    document.getElementById(element.id).removeAttribute("onclick");
+}
+
+function OnFavoriteSuccess(result)
+{
+    if(result == "请先登录")
+    {
+        window.location.href = "../../../../../login.aspx?ReturnUrl=" + window.location.href;
+    }
+    else
+    {
+        var returnstr = result.split(",");
+        var id = "lnkFavorite"+returnstr[0];
+        document.getElementById(id).innerHTML = "<span style='color:red'>" + returnstr[1] + "</span>";
+    }
+}
+
+function DelComment(id,element)
+{
+    if(confirm("确认要删除该评论吗?"))
+    {
+        document.getElementById(element.id).innerHTML = "<span style='color:red'>正在删除...</span>";
+        BlogServer.WebService.AjaxWS.DelComment(id,del_comment_callback);
+    }
+    return false;
+}
+
+function del_comment_callback(response)
+{
+    __doPostBack('AjaxHolder$PostComment$refreshList','');
+}
+</script>
+
+				
+			</div>
+			<div id="footer">
+				
+<!--done-->
+Copyright ©2009 菩提树下的杨过
+			</div>
+		</div>
+	</div>
+	<!-- right ends -->
+	<!-- left starts -->
+	<div id="left">
+		<!-- 左侧工具部分 -->
+		<div id="left_content">
+			
+			<div id="calendar"></div>
+			
+				<div id="leftcontentcontainer">
+					
+<div class="catListInteraction">
+<h3 class="catListTitle">与我联系</h3>
+<ul>
+ <li>
+     <a id="SingleColumn1_ctl00_lnkSendMsg" class="sendMsg" href="http://space.cnblogs.com/msg/send/%e8%8f%a9%e6%8f%90%e6%a0%91%e4%b8%8b%e7%9a%84%e6%9d%a8%e8%bf%87">发短消息</a>
+ </li>
+</ul>
+</div>
+<script type="text/javascript">
+function zzk_go()
+{
+	var blogapp = 'yjmyzz';
+	var keystr = encodeURIComponent("blog:"+blogapp+" "+document.getElementById('q').value);
+    window.location = "http://zzk.cnblogs.com/s?w="+keystr;
+}
+function zzk_go_enter(event)
+{
+	if(event.keyCode == 13)
+	{
+	    zzk_go();
+	    return false;
+	}
+}
+</script>
+<div class="mySearch">
+<h3 class="catListTitle">搜索</h3>
+<div class="div_my_zzk"><input id="q" onkeydown="return zzk_go_enter(event);" class="input_my_zzk" type="text">&nbsp;<input onclick="zzk_go()" value="找找看" id="btnZzk" class="btn_my_zzk" type="button"></div>
+</div>
+<div class="catListLink">
+<h3 class="catListTitle">常用链接</h3>
+<ul>
+
+		<li><a id="SingleColumn1_ctl02_rptMainLinks_ctl00_lnkLinkItem" href="http://www.cnblogs.com/yjmyzz/MyPosts.html">我的随笔</a></li>
+	
+		<li><a id="SingleColumn1_ctl02_rptMainLinks_ctl01_lnkLinkItem" href="http://space.cnblogs.com/yjmyzz">我的空间</a></li>
+	
+		<li><a id="SingleColumn1_ctl02_rptMainLinks_ctl02_lnkLinkItem" href="http://space.cnblogs.com/msg/recent">我的短信</a></li>
+	
+		<li><a id="SingleColumn1_ctl02_rptMainLinks_ctl03_lnkLinkItem" href="http://www.cnblogs.com/yjmyzz/MyComments.html">我的评论</a></li>
+	
+<li><a id="itemListLink" onclick="this.blur();WarpClass('itemListLink', 'itemListLin_con');return false;" href="#">更多链接</a></li>
+</ul>
+<div id="itemListLin_con" style="display: none;">
+<ul>
+
+		<li><a id="SingleColumn1_ctl02_repeaterLinks_ctl00_lnkLinkItem" href="http://www.cnblogs.com/yjmyzz/MyArticles.html">我的文章</a></li>
+	
+		<li><a id="SingleColumn1_ctl02_repeaterLinks_ctl01_lnkLinkItem" title="我发表过评论的随笔" href="http://www.cnblogs.com/yjmyzz/OtherPosts.html">我的参与</a></li>
+	
+		<li><a id="SingleColumn1_ctl02_repeaterLinks_ctl02_lnkLinkItem" href="http://www.cnblogs.com/yjmyzz/MyNews.html">我的新闻</a></li>
+	
+		<li><a id="SingleColumn1_ctl02_repeaterLinks_ctl03_lnkLinkItem" href="http://www.cnblogs.com/yjmyzz/RecentComments.html">最新评论</a></li>
+	
+		<li><a id="SingleColumn1_ctl02_repeaterLinks_ctl04_lnkLinkItem" href="http://www.cnblogs.com/yjmyzz/tag/">我的标签</a></li>
+	
+</ul>
+</div>
+</div>
+<div class="catListNoteBook">
+<h3 class="catListTitle">留言簿</h3>
+<ul>
+	<li><a id="SingleColumn1_ctl03_lnkMessages" class="sendMSG" href="http://www.cnblogs.com/yjmyzz/Contact.aspx?id=1">给我留言</a></li>
+	<!--<li><a id="SingleColumn1_ctl03_lnkPublicMsgView" class="viewPubMSG" href="http://www.cnblogs.com/yjmyzz/default.aspx?opt=msg">查看公开留言</a></li>-->
+	<li><a id="SingleColumn1_ctl03_lnkPrivateMsgView" class="viewPerMSG" href="http://www.cnblogs.com/yjmyzz/admin/MyMessages.aspx" target="_blank">查看留言</a></li>
+	</ul>
+</div>
+<div id="SingleColumn1__314a71ce1d48_panelMyAttendGroups" class="catListMyTeams">
+<h3 class="catListTitle">我参加的小组</h3>
+<ul>
+
+	        <li><a href="http://space.cnblogs.com/group/Lem/">Learn English with M</a></li>
+		
+	        <li><a href="http://space.cnblogs.com/group/100319/">WCF技术研究</a></li>
+		
+	        <li><a href="http://space.cnblogs.com/group/english/">每日一句英语</a></li>
+		
+	        <li><a href="http://space.cnblogs.com/group/mode/">设计模式</a></li>
+		
+	        <li><a href="http://space.cnblogs.com/group/dotnet3/">.NET 3.x</a></li>
+		
+	        <li><a href="http://space.cnblogs.com/group/ext/">Ext 2.0</a></li>
+		
+	        <li><a href="http://space.cnblogs.com/group/webdev/">Web技术联盟</a></li>
+		
+</ul>
+</div>
+
+<div class="catListMyTeams">
+<h3 class="catListTitle">我参与的团队</h3>
+<ul>
+
+			<li>
+				<a id="SingleColumn1_ctl05_TeamList_ctl00_lnkTeam" href="http://shanghai.cnblogs.com/">上海.NET俱乐部(4/2450)</a>
+			</li>
+		
+			<li>
+				<a id="SingleColumn1_ctl05_TeamList_ctl01_lnkTeam" href="http://wcfs.cnblogs.com/">WCF技术研究团队(1/230)</a>
+			</li>
+		
+</ul>
+</div>
+
+
+
+
+<div class="catListTag">
+<h3 class="catListTitle">我的标签</h3>
+<ul>
+<li><a href="http://www.cnblogs.com/yjmyzz/tag/ExtJs/">ExtJs</a>(27)</li><li><a href="http://www.cnblogs.com/yjmyzz/tag/wcf/">wcf</a>(20)</li><li><a href="http://www.cnblogs.com/yjmyzz/tag/silverlight/">silverlight</a>(4)</li><li><a href="http://www.cnblogs.com/yjmyzz/tag/Linq+to+SQL/">Linq to SQL</a>(3)</li><li><a href="http://www.cnblogs.com/yjmyzz/tag/linq/">linq</a>(2)</li><li><a href="http://www.cnblogs.com/yjmyzz/tag/Head+First/">Head First</a>(2)</li><li><a href="http://www.cnblogs.com/yjmyzz/tag/%e8%ae%be%e8%ae%a1%e6%a8%a1%e5%bc%8f/">设计模式</a>(2)</li><li><a href="http://www.cnblogs.com/yjmyzz/tag/c%23/">c#</a>(2)</li><li><a href="http://www.cnblogs.com/yjmyzz/tag/%e6%95%b0%e6%8d%ae%e5%ba%93/">数据库</a>(2)</li><li><a href="http://www.cnblogs.com/yjmyzz/tag/guid/">guid</a>(1)</li>
+</ul>
+</div>
+<!--done-->
+
+		<h1 class="catListTitle">随笔分类</h1>
+		
+				<ul class="catList">
+			
+				<li class="catListItem"> <a id="SingleColumn1_Categories_CatList_ctl00_LinkList_ctl01_Link" class="listitem" href="http://www.cnblogs.com/yjmyzz/category/115547.html">c#/FrameWork(75)</a><a id="SingleColumn1_Categories_CatList_ctl00_LinkList_ctl01_RssLink" title="Subscribe to c#/FrameWork(75)" class="listitem" href="http://www.cnblogs.com/yjmyzz/category/115547.html/rss"><img title="Subscribe to c#/FrameWork(75)" src="extjs_FCKeditor_2_files/xml_002.gif" style="border-width: 0px;"></a></li>
+			
+				<li class="catListItem"> <a id="SingleColumn1_Categories_CatList_ctl00_LinkList_ctl02_Link" class="listitem" href="http://www.cnblogs.com/yjmyzz/category/113788.html">Javascript/CSS(50)</a><a id="SingleColumn1_Categories_CatList_ctl00_LinkList_ctl02_RssLink" title="Subscribe to Javascript/CSS(50)" class="listitem" href="http://www.cnblogs.com/yjmyzz/category/113788.html/rss"><img title="Subscribe to Javascript/CSS(50)" src="extjs_FCKeditor_2_files/xml_002.gif" style="border-width: 0px;"></a></li>
+			
+				<li class="catListItem"> <a id="SingleColumn1_Categories_CatList_ctl00_LinkList_ctl03_Link" class="listitem" href="http://www.cnblogs.com/yjmyzz/category/174913.html">Silverlight2/WPF(4)</a><a id="SingleColumn1_Categories_CatList_ctl00_LinkList_ctl03_RssLink" title="Subscribe to Silverlight2/WPF(4)" class="listitem" href="http://www.cnblogs.com/yjmyzz/category/174913.html/rss"><img title="Subscribe to Silverlight2/WPF(4)" src="extjs_FCKeditor_2_files/xml_002.gif" style="border-width: 0px;"></a></li>
+			
+				<li class="catListItem"> <a id="SingleColumn1_Categories_CatList_ctl00_LinkList_ctl04_Link" class="listitem" href="http://www.cnblogs.com/yjmyzz/category/113789.html">SqlServer(14)</a><a id="SingleColumn1_Categories_CatList_ctl00_LinkList_ctl04_RssLink" title="Subscribe to SqlServer(14)" class="listitem" href="http://www.cnblogs.com/yjmyzz/category/113789.html/rss"><img title="Subscribe to SqlServer(14)" src="extjs_FCKeditor_2_files/xml_002.gif" style="border-width: 0px;"></a></li>
+			
+				<li class="catListItem"> <a id="SingleColumn1_Categories_CatList_ctl00_LinkList_ctl05_Link" class="listitem" href="http://www.cnblogs.com/yjmyzz/category/113786.html">Web开发(19)</a><a id="SingleColumn1_Categories_CatList_ctl00_LinkList_ctl05_RssLink" title="Subscribe to Web开发(19)" class="listitem" href="http://www.cnblogs.com/yjmyzz/category/113786.html/rss"><img title="Subscribe to Web开发(19)" src="extjs_FCKeditor_2_files/xml_002.gif" style="border-width: 0px;"></a></li>
+			
+				<li class="catListItem"> <a id="SingleColumn1_Categories_CatList_ctl00_LinkList_ctl06_Link" class="listitem" href="http://www.cnblogs.com/yjmyzz/category/113787.html">Winform(4)</a><a id="SingleColumn1_Categories_CatList_ctl00_LinkList_ctl06_RssLink" title="Subscribe to Winform(4)" class="listitem" href="http://www.cnblogs.com/yjmyzz/category/113787.html/rss"><img title="Subscribe to Winform(4)" src="extjs_FCKeditor_2_files/xml_002.gif" style="border-width: 0px;"></a></li>
+			
+				<li class="catListItem"> <a id="SingleColumn1_Categories_CatList_ctl00_LinkList_ctl07_Link" class="listitem" href="http://www.cnblogs.com/yjmyzz/category/114576.html">杂七杂八(25)</a><a id="SingleColumn1_Categories_CatList_ctl00_LinkList_ctl07_RssLink" title="Subscribe to 杂七杂八(25)" class="listitem" href="http://www.cnblogs.com/yjmyzz/category/114576.html/rss"><img title="Subscribe to 杂七杂八(25)" src="extjs_FCKeditor_2_files/xml_002.gif" style="border-width: 0px;"></a></li>
+			
+				</ul>
+			
+	
+		<h1 class="catListTitle">文章分类</h1>
+		
+				<ul class="catList">
+			
+				<li class="catListItem"> <a id="SingleColumn1_Categories_CatList_ctl01_LinkList_ctl01_Link" class="listitem" href="http://www.cnblogs.com/yjmyzz/category/113790.html">.net技术(28)</a><a id="SingleColumn1_Categories_CatList_ctl01_LinkList_ctl01_RssLink" title="Subscribe to .net技术(28)" class="listitem" href="http://www.cnblogs.com/yjmyzz/category/113790.html/rss"><img title="Subscribe to .net技术(28)" src="extjs_FCKeditor_2_files/xml_002.gif" style="border-width: 0px;"></a></li>
+			
+				<li class="catListItem"> <a id="SingleColumn1_Categories_CatList_ctl01_LinkList_ctl02_Link" class="listitem" href="http://www.cnblogs.com/yjmyzz/category/114439.html">个人励志(18)</a><a id="SingleColumn1_Categories_CatList_ctl01_LinkList_ctl02_RssLink" title="Subscribe to 个人励志(18)" class="listitem" href="http://www.cnblogs.com/yjmyzz/category/114439.html/rss"><img title="Subscribe to 个人励志(18)" src="extjs_FCKeditor_2_files/xml_002.gif" style="border-width: 0px;"></a></li>
+			
+				<li class="catListItem"> <a id="SingleColumn1_Categories_CatList_ctl01_LinkList_ctl03_Link" class="listitem" href="http://www.cnblogs.com/yjmyzz/category/117587.html">精彩网文(5)</a><a id="SingleColumn1_Categories_CatList_ctl01_LinkList_ctl03_RssLink" title="Subscribe to 精彩网文(5)" class="listitem" href="http://www.cnblogs.com/yjmyzz/category/117587.html/rss"><img title="Subscribe to 精彩网文(5)" src="extjs_FCKeditor_2_files/xml_002.gif" style="border-width: 0px;"></a></li>
+			
+				<li class="catListItem"> <a id="SingleColumn1_Categories_CatList_ctl01_LinkList_ctl04_Link" class="listitem" href="http://www.cnblogs.com/yjmyzz/category/114438.html">网页制作</a><a id="SingleColumn1_Categories_CatList_ctl01_LinkList_ctl04_RssLink" title="Subscribe to 网页制作" class="listitem" href="http://www.cnblogs.com/yjmyzz/category/114438.html/rss"><img title="Subscribe to 网页制作" src="extjs_FCKeditor_2_files/xml_002.gif" style="border-width: 0px;"></a></li>
+			
+				</ul>
+			
+	
+		<h1 class="catListTitle">友情链接</h1>
+		
+				<ul class="catList">
+			
+				<li class="catListItem"> <a id="SingleColumn1_Categories_CatList_ctl02_LinkList_ctl01_Link" class="listitem" href="http://jeffreyzhao.cnblogs.com/">JeffreyZhao</a></li>
+			
+				<li class="catListItem"> <a id="SingleColumn1_Categories_CatList_ctl02_LinkList_ctl02_Link" class="listitem" href="http://www.cnblogs.com/jillzhang/">jillzhang</a></li>
+			
+				<li class="catListItem"> <a id="SingleColumn1_Categories_CatList_ctl02_LinkList_ctl03_Link" class="listitem" href="http://www.cnblogs.com/Jax/">包建强</a></li>
+			
+				<li class="catListItem"> <a id="SingleColumn1_Categories_CatList_ctl02_LinkList_ctl04_Link" class="listitem" href="http://leadzen.cnblogs.com/">李战大师</a></li>
+			
+				<li class="catListItem"> <a id="SingleColumn1_Categories_CatList_ctl02_LinkList_ctl05_Link" class="listitem" href="http://www.cnblogs.com/anderslly/">一个程序员的自省</a></li>
+			
+				<li class="catListItem"> <a id="SingleColumn1_Categories_CatList_ctl02_LinkList_ctl06_Link" class="listitem" href="http://www.rainsts.net/" target="_blank">雨痕</a></li>
+			
+				<li class="catListItem"> <a id="SingleColumn1_Categories_CatList_ctl02_LinkList_ctl07_Link" class="listitem" href="http://wayfarer.cnblogs.com/">张逸:晴窗笔记</a></li>
+			
+				</ul>
+			
+	
+
+
+<div class="catListBlogRank">
+<h3 class="catListTitle">积分与排名</h3>
+<ul>
+	<li class="liScore">
+		积分 -	47977
+	</li><li class="liRank">
+		排名 -	1102
+	</li>
+</ul>
+</div>
+
+
+
+<div class="catListComment">
+<h3 class="catListTitle">最新评论<a id="SingleColumn1__227e154_RSSHyperlink1" title="RSS订阅最最新评论" href="http://www.cnblogs.com/yjmyzz/CommentsRSS.aspx"><img title="RSS订阅最最新评论" src="extjs_FCKeditor_2_files/xml.gif" style="border-width: 0px;"></a></h3>
+
+	
+			<div class="divRecentCommentAticle">
+				<a id="SingleColumn1__227e154_CommentList_ctl00_Hyperlink2" class="listitem" href="http://www.cnblogs.com/yjmyzz/archive/2009/03/02/1342836.html#1465109">1.&nbsp;re: 提高WCF服务并发能力的简单处理办法</a>
+			</div>
+			<div class="divRecentComment">
+				同一个站点，IIS本身就支持同时绑定多个IP地址，或多个端口，所以不需要多个web application
+<br> (菩提树下的杨过)
+			</div>		
+		
+			<div class="divRecentCommentAticle">
+				<a id="SingleColumn1__227e154_CommentList_ctl01_Hyperlink2" class="listitem" href="http://www.cnblogs.com/yjmyzz/archive/2009/03/02/1342836.html#1464771">2.&nbsp;re: 提高WCF服务并发能力的简单处理办法</a>
+			</div>
+			<div class="divRecentComment">
+				端口不同，如果是基于iis的服务，是否要建多个web application (drink)
+			</div>		
+		
+			<div class="divRecentCommentAticle">
+				<a id="SingleColumn1__227e154_CommentList_ctl02_Hyperlink2" class="listitem" href="http://www.cnblogs.com/yjmyzz/archive/2009/02/19/1285564.html#1455646">3.&nbsp;re: linq to sql中慎用Where(Func predicate)，小心被Linq给"骗"了!</a>
+			</div>
+			<div class="divRecentComment">
+				@ppchen（陈荣林）
+<br>看来微软在Complile方法上的处理确实有些问题，不知道如何反馈给MS？ (菩提树下的杨过)
+			</div>		
+		
+			<div class="divRecentCommentAticle">
+				<a id="SingleColumn1__227e154_CommentList_ctl03_Hyperlink2" class="listitem" href="http://www.cnblogs.com/yjmyzz/archive/2009/02/18/1285564.html#1455144">4.&nbsp;re: linq to sql中慎用Where(Func predicate)，小心被Linq给"骗"了!</a>
+			</div>
+			<div class="divRecentComment">
+				刚才是在Linq to Sql下测试的。
+现在我在Linq to Entity下测试，发现如果执行了Complile方法，监视到的sql并没有过滤条件，但如果不执行Complile方法，则报错：
+... (ppchen（陈荣林）)
+			</div>		
+		
+			<div class="divRecentCommentAticle">
+				<a id="SingleColumn1__227e154_CommentList_ctl04_Hyperlink2" class="listitem" href="http://www.cnblogs.com/yjmyzz/archive/2009/02/18/1285564.html#1455138">5.&nbsp;re: linq to sql中慎用Where(Func predicate)，小心被Linq给"骗"了!</a>
+			</div>
+			<div class="divRecentComment">
+				@ppchen（陈荣林）：
+<br>我从来就没怀疑Complile会引起这样的错误，刚才试了一把，果然如兄台所言，一切正常，非常感谢！
+<br> (菩提树下的杨过)
+			</div>		
+		
+			<div class="divRecentCommentAticle">
+				<a id="SingleColumn1__227e154_CommentList_ctl05_Hyperlink2" class="listitem" href="http://www.cnblogs.com/yjmyzz/archive/2009/02/18/1285564.html#1455024">6.&nbsp;re: linq to sql中慎用Where(Func predicate)，小心被Linq给"骗"了!</a>
+			</div>
+			<div class="divRecentComment">
+				用你的代码测试了一下：
+在 GetData 方法中的 ExpWhere.Compile() 修改成 ExpWhere ，就是不执行Complile方法，就可以正常的取数了，过滤条件正常生成。... (ppchen（陈荣林）)
+			</div>		
+		
+			<div class="divRecentCommentAticle">
+				<a id="SingleColumn1__227e154_CommentList_ctl06_Hyperlink2" class="listitem" href="http://www.cnblogs.com/yjmyzz/archive/2009/02/17/1144777.html#1453841">7.&nbsp;re: [原创]在msmq3.0中使用http协议发送消息</a>
+			</div>
+			<div class="divRecentComment">
+				简单来讲，发送方和接收方，都要安装msmq (菩提树下的杨过)
+			</div>		
+		
+			<div class="divRecentCommentAticle">
+				<a id="SingleColumn1__227e154_CommentList_ctl07_Hyperlink2" class="listitem" href="http://www.cnblogs.com/yjmyzz/archive/2009/02/17/1144777.html#1453829">8.&nbsp;re: [原创]在msmq3.0中使用http协议发送消息</a>
+			</div>
+			<div class="divRecentComment">
+				这种调用应该不会是b/s的吧,除非是Web服务器向其他服务器发.
+<br>不知您说的是不是这个意思, 但是和c/s有什么区别吗?  (wwwwwwwwwwwwwwww)
+			</div>		
+		
+			<div class="divRecentCommentAticle">
+				<a id="SingleColumn1__227e154_CommentList_ctl08_Hyperlink2" class="listitem" href="http://www.cnblogs.com/yjmyzz/archive/2009/02/17/1144777.html#1453824">9.&nbsp;re: [原创]在msmq3.0中使用http协议发送消息</a>
+			</div>
+			<div class="divRecentComment">
+				b/s环境不需要，c/s环境是需要安装msmq的(不过从xp开始，几乎所有xp和xp以上版本都可以安装) (菩提树下的杨过)
+			</div>		
+		
+			<div class="divRecentCommentAticle">
+				<a id="SingleColumn1__227e154_CommentList_ctl09_Hyperlink2" class="listitem" href="http://www.cnblogs.com/yjmyzz/archive/2009/02/17/1144777.html#1453806">10.&nbsp;re: [原创]在msmq3.0中使用http协议发送消息</a>
+			</div>
+			<div class="divRecentComment">
+				请问客户端要装MSMQ吗? (wwwwwwwwwwwwwwww)
+			</div>		
+		
+			<div class="divRecentCommentAticle">
+				<a id="SingleColumn1__227e154_CommentList_ctl10_Hyperlink2" class="listitem" href="http://www.cnblogs.com/yjmyzz/archive/2009/02/09/1280282.html#1446247">11.&nbsp;re: ExtJs学习笔记(6)_可分页的GridPanel</a>
+			</div>
+			<div class="divRecentComment">
+				给个调试的思路吧，希望对你有用：
+1.直接在浏览器里输入http://..../x.svc/GetDataByPage?start=1&amp;limit=10 这样测试下，有无数据返回--目的是确... (菩提树下的杨过)
+			</div>		
+		
+			<div class="divRecentCommentAticle">
+				<a id="SingleColumn1__227e154_CommentList_ctl11_Hyperlink2" class="listitem" href="http://www.cnblogs.com/yjmyzz/archive/2009/02/08/1280282.html#1445895">12.&nbsp;re: ExtJs学习笔记(6)_可分页的GridPanel</a>
+			</div>
+			<div class="divRecentComment">
+				老师您好，我看了您的这篇例子，并且也参照的做了一个。但是遇到一个问题，我用store.load({ params: { start: 0, limit: 15} });传递参数后，wcf接收不到参数，... (leisky)
+			</div>		
+		
+			<div class="divRecentCommentAticle">
+				<a id="SingleColumn1__227e154_CommentList_ctl12_Hyperlink2" class="listitem" href="http://www.cnblogs.com/yjmyzz/archive/2009/02/07/1385455.html#1445335">13.&nbsp;re: silverlight动态读取txt文件/解析json数据/调用wcf示例</a>
+			</div>
+			<div class="divRecentComment">
+				不错 (hahaer)
+			</div>		
+		
+			<div class="divRecentCommentAticle">
+				<a id="SingleColumn1__227e154_CommentList_ctl13_Hyperlink2" class="listitem" href="http://www.cnblogs.com/yjmyzz/archive/2009/02/02/1342836.html#1441005">14.&nbsp;re: 提高WCF服务并发能力的简单处理办法</a>
+			</div>
+			<div class="divRecentComment">
+				@菩提树下的杨过
+<br>呵呵，谢谢，明白了。回复得很及时。 (yiyisawa.liu)
+			</div>		
+		
+			<div class="divRecentCommentAticle">
+				<a id="SingleColumn1__227e154_CommentList_ctl14_Hyperlink2" class="listitem" href="http://www.cnblogs.com/yjmyzz/archive/2009/02/02/1342836.html#1440701">15.&nbsp;re: 提高WCF服务并发能力的简单处理办法</a>
+			</div>
+			<div class="divRecentComment">
+				并非你理解的那样，我的思路是仅仅简单的把同一个wcf部署在N个不同的端口上(即可以理解为同一个WCF有N个功能完全相同的“副本”)，客户端调用时，随便分配一个端口来请求一个“副本”对其处理，至于这样可... (菩提树下的杨过)
+			</div>		
+		
+			<div class="divRecentCommentAticle">
+				<a id="SingleColumn1__227e154_CommentList_ctl15_Hyperlink2" class="listitem" href="http://www.cnblogs.com/yjmyzz/archive/2009/02/02/1342836.html#1440690">16.&nbsp;re: 提高WCF服务并发能力的简单处理办法</a>
+			</div>
+			<div class="divRecentComment">
+				lz:不明之处请指教：
+文中“提高WCF服务并发能力”是指如果wcf 服务端有A.B.C三个功能，现在已经把wcf service host 到三个端口，那么在调用A.B.C功能的时候是不是要
+usi... (yiyisawa.liu)
+			</div>		
+		
+			<div class="divRecentCommentAticle">
+				<a id="SingleColumn1__227e154_CommentList_ctl16_Hyperlink2" class="listitem" href="http://www.cnblogs.com/yjmyzz/archive/2009/01/07/1313468.html#1424356">17.&nbsp;re: MaCfee导致Asp.net/Jmail无法发送邮件的解决办法</a>
+			</div>
+			<div class="divRecentComment">
+				顶，太好了，找了半天，解决问题了 (阿什顿)
+			</div>		
+		
+			<div class="divRecentCommentAticle">
+				<a id="SingleColumn1__227e154_CommentList_ctl17_Hyperlink2" class="listitem" href="http://www.cnblogs.com/yjmyzz/archive/2009/01/04/983265.html#1420359">18.&nbsp;re: javascript中如何正确将日期(Date)字符串，转换为日期(Date)对象? </a>
+			</div>
+			<div class="divRecentComment">
+				不错,学习了,用上了 (往事悠扬)
+			</div>		
+		
+</div>
+
+				</div>
+			
+		</div>
+		<!-- //右侧工具部分 -->
+	</div>
+	<!-- left ends -->	
+	<div class="clear"></div>
+</div>
+<center>好好学习，天天向上</center>
+    
+<script type="text/javascript">
+//<![CDATA[
+var Page_ValidationSummaries =  new Array(document.getElementById("AjaxHolder_PostComment_ValidationSummary1"));
+var Page_Validators =  new Array(document.getElementById("AjaxHolder_PostComment_RequiredFieldValidator2"), document.getElementById("AjaxHolder_PostComment_revContactMail"), document.getElementById("AjaxHolder_PostComment_Requiredfieldvalidator4"), document.getElementById("AjaxHolder_PostComment_RequiredFieldValidator3"));
+//]]>
+</script>
+
+<script type="text/javascript">
+//<![CDATA[
+var AjaxHolder_PostComment_RequiredFieldValidator2 = document.all ? document.all["AjaxHolder_PostComment_RequiredFieldValidator2"] : document.getElementById("AjaxHolder_PostComment_RequiredFieldValidator2");
+AjaxHolder_PostComment_RequiredFieldValidator2.controltovalidate = "AjaxHolder_PostComment_tbName";
+AjaxHolder_PostComment_RequiredFieldValidator2.errormessage = "请输入你的姓名";
+AjaxHolder_PostComment_RequiredFieldValidator2.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+AjaxHolder_PostComment_RequiredFieldValidator2.initialvalue = "";
+var AjaxHolder_PostComment_revContactMail = document.all ? document.all["AjaxHolder_PostComment_revContactMail"] : document.getElementById("AjaxHolder_PostComment_revContactMail");
+AjaxHolder_PostComment_revContactMail.controltovalidate = "AjaxHolder_PostComment_tbEmail";
+AjaxHolder_PostComment_revContactMail.errormessage = "邮件地址无效";
+AjaxHolder_PostComment_revContactMail.evaluationfunction = "RegularExpressionValidatorEvaluateIsValid";
+AjaxHolder_PostComment_revContactMail.validationexpression = "^([0-9a-zA-Z+-._]([+-._\\w]*[0-9a-zA-Z+-._])*@([0-9a-zA-Z][-\\w]*\\.)+[a-zA-Z]{2,9})$";
+var AjaxHolder_PostComment_Requiredfieldvalidator4 = document.all ? document.all["AjaxHolder_PostComment_Requiredfieldvalidator4"] : document.getElementById("AjaxHolder_PostComment_Requiredfieldvalidator4");
+AjaxHolder_PostComment_Requiredfieldvalidator4.controltovalidate = "AjaxHolder_PostComment_CodeNumberTextBox";
+AjaxHolder_PostComment_Requiredfieldvalidator4.errormessage = "请输入验证码";
+AjaxHolder_PostComment_Requiredfieldvalidator4.display = "Dynamic";
+AjaxHolder_PostComment_Requiredfieldvalidator4.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+AjaxHolder_PostComment_Requiredfieldvalidator4.initialvalue = "";
+var AjaxHolder_PostComment_RequiredFieldValidator3 = document.all ? document.all["AjaxHolder_PostComment_RequiredFieldValidator3"] : document.getElementById("AjaxHolder_PostComment_RequiredFieldValidator3");
+AjaxHolder_PostComment_RequiredFieldValidator3.controltovalidate = "AjaxHolder_PostComment_tbComment";
+AjaxHolder_PostComment_RequiredFieldValidator3.errormessage = "请输入评论内容";
+AjaxHolder_PostComment_RequiredFieldValidator3.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+AjaxHolder_PostComment_RequiredFieldValidator3.initialvalue = "";
+var AjaxHolder_PostComment_ValidationSummary1 = document.all ? document.all["AjaxHolder_PostComment_ValidationSummary1"] : document.getElementById("AjaxHolder_PostComment_ValidationSummary1");
+AjaxHolder_PostComment_ValidationSummary1.showmessagebox = "True";
+AjaxHolder_PostComment_ValidationSummary1.showsummary = "False";
+//]]>
+</script>
+
+
+<script type="text/javascript">
+//<![CDATA[
+
+var Page_ValidationActive = false;
+if (typeof(ValidatorOnLoad) == "function") {
+    ValidatorOnLoad();
+}
+
+function ValidatorOnSubmit() {
+    if (Page_ValidationActive) {
+        return ValidatorCommonOnSubmit();
+    }
+    else {
+        return true;
+    }
+}
+        
+document.getElementById('AjaxHolder_PostComment_ValidationSummary1').dispose = function() {
+    Array.remove(Page_ValidationSummaries, document.getElementById('AjaxHolder_PostComment_ValidationSummary1'));
+}
+Sys.Application.initialize();
+
+document.getElementById('AjaxHolder_PostComment_RequiredFieldValidator2').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('AjaxHolder_PostComment_RequiredFieldValidator2'));
+}
+
+document.getElementById('AjaxHolder_PostComment_revContactMail').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('AjaxHolder_PostComment_revContactMail'));
+}
+
+document.getElementById('AjaxHolder_PostComment_Requiredfieldvalidator4').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('AjaxHolder_PostComment_Requiredfieldvalidator4'));
+}
+
+document.getElementById('AjaxHolder_PostComment_RequiredFieldValidator3').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('AjaxHolder_PostComment_RequiredFieldValidator3'));
+}
+//]]>
+</script>
+</form>
+    <script type="text/javascript" src="extjs_FCKeditor_2_files/ShowHidden.js"></script>
+	<span style="display: none;"><script language="javascript" src="extjs_FCKeditor_2_files/click.html"></script><a href="http://count.51yes.com/index.aspx?id=47631097" target="_blank"><img src="extjs_FCKeditor_2_files/count1.gif" alt="51YES网站统计系统" border="0" height="20" hspace="0" vspace="0" width="20"></a><iframe marginwidth="0" marginheight="0" hspace="0" vspace="0" src="extjs_FCKeditor_2_files/sa.asc" frameborder="0" height="0" scrolling="no" width="0"></iframe></span>
+</body></html>

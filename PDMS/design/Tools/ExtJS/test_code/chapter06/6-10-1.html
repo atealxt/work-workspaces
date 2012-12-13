@@ -1,0 +1,23 @@
+﻿<html>
+<head>
+<title>往items里加入对象</title>
+<link rel="stylesheet" type="text/css" href="../../extjs2.0/resources/css/ext-all.css" />
+<script type="text/javascript" src="../../extjs2.0/adapter/ext/ext-base.js"></script>
+<script type="text/javascript" src="../../extjs2.0/ext-all.js"></script>
+<script type="text/javascript">
+	Ext.onReady(function(){
+		var item = new Ext.util.MixedCollection();
+		var item2 = new Ext.util.MixedCollection();
+		var a = {name:'a'};
+		var b = {name:'b'};
+		item.add('01',a);
+		item.add('01',b);
+		item2.add('01',a);
+		item2.add('02',a);
+		Ext.Msg.alert('提示','当已存在关联的索引时往01关联以象,item的个数为:'+item.length+'<br>'+'当不存在关联的索引往索引关联对象,item的个数为:'+item2.length);
+	});
+</script>
+</head>
+<body>
+</body>
+</html>

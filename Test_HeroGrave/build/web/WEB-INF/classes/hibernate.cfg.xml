@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+          "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+          "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+
+	<session-factory>
+
+            <property name="dialect">org.hibernate.dialect.MySQLDialect</property>
+            <property name="connection.url">jdbc:mysql://localhost:3306/herograve</property>
+            <property name="connection.username">root</property>
+            <property name="connection.password">sa</property>
+            <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+
+            <property name="show_sql">true</property>
+            <property name="format_sql">true</property>     
+            
+            <property name="hibernate.current_session_context_class">thread</property>  
+
+            <!--first test-->
+            <mapping resource="com/herograve/test/hibernateconfig.xml" />
+            
+            <!--user-->
+            <mapping resource="com/herograve/user/Userlevel.hbm.xml" />
+            <mapping resource="com/herograve/user/Userlevelshow.hbm.xml" />
+            <mapping resource="com/herograve/user/User.hbm.xml" />
+            <mapping resource="com/herograve/user/Userinfo.hbm.xml" />
+            <mapping resource="com/herograve/user/Usertemp.hbm.xml" />
+            
+            <!--topic-->
+            <mapping resource="com/herograve/topic/Topicarea.hbm.xml" />
+            <mapping resource="com/herograve/topic/Topictitle.hbm.xml" />
+            <mapping resource="com/herograve/topic/Topicinfo.hbm.xml" />
+                
+	</session-factory>
+
+</hibernate-configuration>
+
+
+
+
+
+

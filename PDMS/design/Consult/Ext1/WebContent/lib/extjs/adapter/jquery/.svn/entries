@@ -1,0 +1,40 @@
+8
+
+dir
+11
+https://127.0.0.1:8443/svn/System/SOA/WebContent/lib/extjs/adapter/jquery
+https://127.0.0.1:8443/svn/System
+
+
+
+2008-12-03T21:20:26.465394Z
+2
+admin
+
+
+svn:special svn:externals svn:needs-lock
+
+ext-jquery-adapter.js
+file
+
+
+
+
+2008-10-23T23:07:32.686701Z
+be08857c7bccdfcefd030721e24c679c
+2008-12-03T21:20:26.465394Z
+2
+admin
+
+jquery.js
+file
+
+
+
+
+2008-10-23T23:07:32.702325Z
+78068d39f1205a62fe7470537ecbabdd
+2008-12-03T21:20:26.465394Z
+2
+admin
+

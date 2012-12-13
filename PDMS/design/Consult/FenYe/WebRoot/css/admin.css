@@ -1,0 +1,40 @@
+body {
+	font-size: 12px;
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	color: #5A392E;
+}
+a:link {
+	color: #402820;
+	text-decoration: none;
+}
+a:visited {
+	color: #402820;
+	text-decoration: none;
+}
+a:hover {
+	color: #FFCC00;
+	text-decoration: none;
+}
+a:active {
+	color: #402820;
+	text-decoration: none;
+}
+.bg2 {
+	background-image: url(/manage/images/bg2.jpg);
+	background-repeat: no-repeat;
+	background-position: center bottom;
+}
+.left {
+	color: #FFFFFF;
+	font-weight: bold;
+}
+.reg_stedit {
+	border: 1px solid #BD9768;
+	font-size: 12px;
+	color: #5A392E;
+	font-weight: lighter;
+	height:18px;
+}

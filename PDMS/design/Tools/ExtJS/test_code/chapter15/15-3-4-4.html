@@ -1,0 +1,148 @@
+<html>
+<head>
+<title>Portal的标签页示例</title>
+<link rel="stylesheet" type="text/css" href="../../extjs2.0/resources/css/ext-all.css" />
+<link rel="stylesheet" type="text/css" href="portal.css"/>
+<script type="text/javascript" src="../../extjs2.0/adapter/ext/ext-base.js"></script>
+<script type="text/javascript" src="../../extjs2.0/ext-all.js"></script>
+<script type="text/javascript" src="miframe.js"></script>
+<script type="text/javascript" src="Portal.js"></script>
+<script type="text/javascript" src="MaximizeTool.js"></script>
+<script type="text/javascript" src="tab.js"></script>
+
+<style type="text/css">
+HR{
+    clear: both;
+    visibility: hidden
+}
+.block{
+    border: 0px red solid;
+    margin: 0px;
+    height: 100%;
+}
+td{
+	font-size: 12px;
+}
+</style>
+<script type="text/javascript">
+	Ext.onReady(function(){
+		//create tabPanel
+		var tabPanel = new Forcg.pccw.TabPanelEx({
+			id : 'mainview',
+			//region :'center',
+			deferredRender : false,
+			frame:true,
+			renderTo: 'tabdiv',
+			autoScroll: true,
+			style:'width=100%',
+			monitorResize : true,
+			margins : '0 0 0 0',
+			activeTab : 0,
+			iconCls: 'tabs',
+			border : false,
+			plain:false
+		});
+		tabPanel.add({
+			title : '第一个标签页',
+			id : 'portal_0',
+			height:600,
+			autoScroll : true,
+			iconCls : 'tabs',
+			closable : true,
+			iscur : true,
+			coltype : 2,
+			clstype : '',
+			menus : true,
+			items : [{
+				xtype : 'portal',
+				id : 'keyId_1',
+				entityId : 'portal_0',
+				items : [{columnWidth:'1',id:'01'}],
+				border : false
+			}]
+		}).show();
+		tabPanel.render();
+
+		/*portalId = 'theid';
+		var panePortal = new Ext.ux.Portal({
+			id : portalId,
+			title:'portlet初始化示例',
+			style : 'padding:0px 0px 0px 0px',
+			layout : 'column',
+			autoScroll : true,
+			cls : 'x-portal',
+			name : 'target panel',
+			width : '100%',
+			closable : true,
+			renderTo : 'targetdiv',
+			border : true,
+			items : [{
+				columnWidth : '0.48',//第一个宽为30%的列
+				style : 'padding:5px 5px 0px 5px',
+				id : 'col1',
+				items:[{//采用第一种方式实例化一个portlet到portal中
+					title: '第一个默认方式实例化的portet',
+					pInfo : {clumn:'col1'},
+					height : 200,
+					plugins : new Ext.ux.MaximizeTool(),
+					tools : [{
+						id : 'close',
+						handler : function(e, target, panel){
+							panel.ownerCt.remove(panel, true);
+							var col =Ext.ComponentMgr.get(panel.pInfo.clumn);
+							var colLeng=col.items.length;
+							if(panel.pInfo.seq<=colLeng&&colLeng!=0){
+								var temp;
+								for(var i=panel.pInfo.seq-1;i<colLeng;i++){
+									temp = col.items.itemAt(i);
+									temp.pInfo.seq = temp.pInfo.seq-1;
+								}
+								panel.pInfo.checked=false;
+								panel.pInfo.seq=-1;
+							}else{
+								panel.pInfo.checked=false;
+								panel.pInfo.seq=-1;
+							}
+						}
+					}],
+					html:'<table cellspacing="5" height="165" cellpadding="5"><tr><td valign="top">可拖拽的portlet内容部分，且可以选择在大窗口中浏览</td></tr></table>'
+				}]
+			},
+			{//第二个宽为70%的列
+				columnWidth : '0.52',
+				style : 'padding:5px 5px 0px 0px',
+				id : 'col2'
+			}]
+		});
+		panePortal.showPortlet(//通过showPortlet方法将portlet加载到portal中
+			{text:'通过调用Portal的showPortlet加载的portlet',height:200,clumn:'col2',checked:true},
+			[{
+				id : 'close',
+				handler : function(e, target, panel){
+					panel.ownerCt.remove(panel, true);
+					var col =Ext.ComponentMgr.get(panel.pInfo.clumn);
+					var colLeng=col.items.length;
+					if(panel.pInfo.seq<=colLeng&&colLeng!=0){
+						var temp;
+						for(var i=panel.pInfo.seq-1;i<colLeng;i++){
+							temp = col.items.itemAt(i);
+							temp.pInfo.seq = temp.pInfo.seq-1;
+						}
+						panel.pInfo.checked=false;
+						panel.pInfo.seq=-1;
+					}else{
+						panel.pInfo.checked=false;
+						panel.pInfo.seq=-1;
+					}
+				}
+			}],
+			null
+		);
+		panePortal.render();*/
+	});
+</script>
+</head>
+<body>
+	<div id="tabdiv"></div>
+</body>
+</html>

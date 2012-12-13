@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="com.herograve.user.Userinfo" table="userinfo">
+                                       
+		<id name="id" type="java.lang.Integer" column="user_id">
+                    <generator class="increment" />
+		</id>
+                                
+		<property name="iconpath" type="java.lang.String" column="iconpath" length="48" />
+		<property name="sex" type="java.lang.Integer" column="sex" /> 
+		<property name="article" type="java.lang.Integer" column="article" />
+		<property name="score" type="java.lang.Integer" column="score" />
+		<property name="money" type="java.lang.Integer" column="money" />
+		<property name="online_time" type="java.lang.Integer" column="online_time" />
+		
+		<one-to-one name="user" class="com.herograve.user.User" constrained="true" />
+		<many-to-one name="userlevelshow" class="com.herograve.user.Userlevelshow" column="level" />
+		
+	</class>
+</hibernate-mapping>

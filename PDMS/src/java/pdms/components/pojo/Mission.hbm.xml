@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="pdms.components.pojo">
+  <class name="Mission" table="Mission">
+    <comment>任务表</comment>
+    <id access="field" column="id" length="32" name="id" type="int">
+      <generator class="native"/>
+    </id>
+    <!--
+        <composite-id>
+            <key-property access="field"  column="id" name="id" type="int"/>
+            <key-property access="field"  column="modified" name="modified" type="int"/>
+        </composite-id>
+        -->
+    <property name="content" not-null="true" type="string">
+      <column length="10240" name="content">
+        <comment>任务内容</comment>
+      </column>
+    </property>
+    <property name="createtime" not-null="true" type="java.sql.Date">
+      <column name="createtime">
+        <comment>建立时间</comment>
+      </column>
+    </property>
+    <property name="completetimeLimit" not-null="true" type="java.sql.Date">
+      <column name="completetimeLimit">
+        <comment>完成日限</comment>
+      </column>
+    </property>
+    <property name="confirmtimeLimit" type="java.sql.Date">
+      <column name="confirmtimeLimit">
+        <comment>确认截至时间</comment>
+      </column>
+    </property>
+    <property name="distributionConfirm" type="int">
+      <column name="distributionConfirm">
+        <comment>分配确认状态(受取状态) 1:未确认 0:已确认 -1:确认失败</comment>
+      </column>
+    </property>
+    <property name="completeStatus" type="boolean">
+      <column name="completeStatus">
+        <comment>完成状态 false:未完成 true:已完成</comment>
+      </column>
+    </property>
+    <property name="inspectStatus" type="int">
+      <column name="inspectStatus">
+        <comment>验收确认状态 1:未验收 0:已验收 -1:验收未通过</comment>
+      </column>
+    </property>
+    <many-to-one class="User" name="distributor" not-null="true">
+      <column name="distributor_id">
+        <comment>分配人(会员)ID</comment>
+      </column>
+    </many-to-one>
+    <many-to-one class="User" name="receiver">
+      <column name="receiver_id">
+        <comment>接收人(会员)ID</comment>
+      </column>
+    </many-to-one>
+    <many-to-one class="User" name="inspector">
+      <column name="inspector_id">
+        <comment>验收人(会员)ID</comment>
+      </column>
+    </many-to-one>
+    <many-to-one class="MissionSubmit" name="submitInfo">
+      <column name="submit_id">
+        <comment>提交内容ID</comment>
+      </column>
+    </many-to-one>
+    <many-to-one class="Project" name="project">
+      <column name="project_id">
+        <comment>项目ID</comment>
+      </column>
+    </many-to-one>
+  </class>
+</hibernate-mapping>
