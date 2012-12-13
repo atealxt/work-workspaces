@@ -1,0 +1,8 @@
+@charset "UTF-8";
+#Subject {
+width:45.5em;
+}
+
+#from,#to {
+width:25em;
+}

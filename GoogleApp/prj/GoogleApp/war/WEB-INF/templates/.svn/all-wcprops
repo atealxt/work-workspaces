@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/!svn/ver/45/trunk/GoogleApp/war/WEB-INF/templates
+END
+contact.ftl
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/!svn/ver/55/trunk/GoogleApp/war/WEB-INF/templates/contact.ftl
+END
+guestbook.ftl
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/!svn/ver/60/trunk/GoogleApp/war/WEB-INF/templates/guestbook.ftl
+END
+blog.ftl
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/!svn/ver/6/trunk/GoogleApp/war/WEB-INF/templates/blog.ftl
+END
+index.ftl
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/!svn/ver/37/trunk/GoogleApp/war/WEB-INF/templates/index.ftl
+END
+article.ftl
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/!svn/ver/57/trunk/GoogleApp/war/WEB-INF/templates/article.ftl
+END
+mail.ftl
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/!svn/ver/37/trunk/GoogleApp/war/WEB-INF/templates/mail.ftl
+END
+error.ftl
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/!svn/ver/6/trunk/GoogleApp/war/WEB-INF/templates/error.ftl
+END
+releasenote.ftl
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/!svn/ver/53/trunk/GoogleApp/war/WEB-INF/templates/releasenote.ftl
+END
+about.ftl
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/!svn/ver/45/trunk/GoogleApp/war/WEB-INF/templates/about.ftl
+END

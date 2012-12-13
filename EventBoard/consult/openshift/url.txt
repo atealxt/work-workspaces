@@ -1,0 +1,23 @@
+https://openshift.redhat.com/app/control_panel
+
+https://github.com/openshift/jbossas-quickstart
+
+https://www.redhat.com/openshift/community/blogs/getting-started-with-the-openshift-eclipse-plug-in-for-java-applications-on-the-cloud
+
+http://www.jboss.org/jbossas/downloads/
+
+http://blog.csdn.net/fulinkster/article/details/6692595
+
+http://planetorion.org/news/2011/11/developing-for-openshift-on-orion/
+
+
+
+
+
+
+
+
+
+openshift eclipse the authenticity of host can't be established.
+
+ssh://a557f9b6fae0452685bc0e20ad2a096a@herograve-atealxt.rhcloud.com/~/git/herograve.git/

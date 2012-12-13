@@ -1,0 +1,7 @@
+﻿*学习
+
+当期望许多线程访问一个给定 collection 时，ConcurrentSkipListMap 通常优于同步的 TreeMap。当期望的读数和遍历远远大于列表的更新数时，CopyOnWriteArrayList 优于同步的 ArrayList。
+
+本地队列：一般常见的用于非及时性的数据批量写入，可以将获取的数据缓存在一个数组中等达到一定数量的时候在进行批量的一次写入，可以使用BlockingQueue或者List/Map来实现。
+
+*学习mina源代码

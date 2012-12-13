@@ -1,0 +1,55 @@
+10
+
+dir
+47
+https://herogravebygae.googlecode.com/svn/trunk/GoogleApp/src/com/hg
+https://herogravebygae.googlecode.com/svn
+
+
+
+2011-06-03T08:35:15.504435Z
+43
+atealxt
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+329b6602-79b1-11de-888d-2103c0e6b660
+
+aop
+dir
+
+constant
+dir
+
+core
+dir
+
+dao
+dir
+
+dto
+dir
+
+pojo
+dir
+
+service
+dir
+
+util
+dir
+
+web
+dir
+

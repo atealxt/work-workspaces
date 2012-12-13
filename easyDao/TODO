@@ -1,0 +1,7 @@
+JDBC
+针对MySQL的JDBC的参数在之前的文章中也有介绍过，在单台机器或者集群的环境下合理的使用JDBC中的配置参数对操作数据库也有很大的影响。
+一些所谓高性能的 Java ORM开源框架也就是打开了很多JDBC中的默认参数：
+ 1.例如：autoReconnect、prepStmtCacheSize、cachePrepStmts、useNewIO、blobSendChunkSize 等，
+ 2.例如集群环境下：roundRobinLoadBalance、failOverReadOnly、autoReconnectForPools、secondsBeforeRetryMaster。
+具体内容可以参阅MySQL的JDBC官方使用手册：
+http://dev.mysql.com/doc/refman/5.1/zh/connectors.html#cj-jdbc-reference

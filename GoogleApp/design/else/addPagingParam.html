@@ -1,0 +1,68 @@
+﻿<html>
+
+<head>
+
+<script type="text/javascript">
+
+/*
+XXX.html
+XXX.html?page=123
+
+XXX.html?p1=a
+XXX.html?p1=a&page=123
+
+XXX.html?page=456
+XXX.html?page=123
+
+XXX.html?p1=a&page=456
+XXX.html?p1=a&page=123
+*/
+function addPagingParam(oriUrl, currentPage){
+
+    if(currentPage == undefined){
+        currentPage = 0;
+    }
+
+    //匹配已有"?page=XXX"或"&page=XXX"的
+    var newUrl = oriUrl.replace(/([\?\&]page=?)(\d+)/g,"$1" + currentPage);
+
+    //匹配以"?"结尾的
+    newUrl = newUrl.replace(/([\?]{1})$/g, "?page=" + currentPage);
+
+    //匹配上述以外的
+    if(!newUrl.match(/[\?\&]/g)){//匹配目录
+        newUrl = newUrl + "?page=" + currentPage;
+    }else if(!newUrl.match(/[\?\&]{1}page=\d+/g)){//匹配已有参数但没有page参数的
+        newUrl = newUrl + "&page=" + currentPage;
+    }
+
+    return newUrl;
+}
+
+function testtest(){
+
+    var v1 = "XXX.html";
+    var v2 = "XXX.html?";
+    var v3 = "XXX.html?p1=a";
+    var v4 = "XXX.html?page=456";
+    var v5 = "XXX.html?p1=a&page=456";
+    var v6 = "XXX";
+
+    document.write(v1 + "<br>" + addPagingParam(v1, 123) + "<br><br>");
+    document.write(v2 + "<br>" + addPagingParam(v2, 123) + "<br><br>");
+    document.write(v3 + "<br>" + addPagingParam(v3, 123) + "<br><br>");
+    document.write(v4 + "<br>" + addPagingParam(v4, 123) + "<br><br>");
+    document.write(v5 + "<br>" + addPagingParam(v5, 123) + "<br><br>");
+    document.write(v6 + "<br>" + addPagingParam(v6, 123) + "<br><br>");
+}
+
+</script>
+
+
+</head>
+
+<body onload="testtest()">
+
+</body>
+
+</html>

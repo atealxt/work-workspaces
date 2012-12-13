@@ -1,0 +1,39 @@
+#nav {
+	position: absolute;
+    top: 0px;
+    right: 1em;
+    float: none;
+}
+
+.teaser img {
+	behavior: url(/css/iepngfix.htc);
+}
+
+/* Override background colour on link to avoid one pixel jog */
+a:hover,
+a:focus,
+a:active {
+	color: #6f850d;
+	background: none;
+}
+
+.columns {
+	height: 1%;
+}
+/* Adjust percentage widths due to rounding errors */
+.column,
+.colspan .secondary {
+	width: 31%;
+	margin-left: 2%;
+	display: inline;
+}
+.inverted .primary {
+	margin-left: 2%;
+}
+.colspan .primary {
+	width: 64%;
+}
+.what-we-do#teach .postamble ul li {
+	width: 9%;
+	margin-right: 9%;
+}

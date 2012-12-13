@@ -1,0 +1,56 @@
+<html>
+<head>
+    <script type="text/javascript" src="scripts/syntaxhighlighter.js"></script>
+    <link type="text/css" rel="stylesheet" href="styles/syntaxhighlighter.css"/>
+</head>
+
+<body>
+
+<div id="content">
+
+java:
+[code:java]<br />@BeforeTest<br />public void setUp() throws Exception {<br />&nbsp;&nbsp;&nbsp; ApiProxy.setEnvironmentForCurrentThread(new TestEnvironment());<br />&nbsp;&nbsp;&nbsp; ApiProxy.setDelegate(new ApiProxyLocalImpl(new File(".")) {});<br />}<br />@AfterTest<br />public void tearDown() throws Exception {<br />&nbsp;&nbsp;&nbsp; // not strictly necessary to null these out but there's no harm either<br />&nbsp;&nbsp;&nbsp; ApiProxy.setDelegate(null);<br />&nbsp;&nbsp;&nbsp; ApiProxy.setEnvironmentForCurrentThread(null);<br />}<br />[/code]
+
+html:
+[code:html]
+&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+   "http://www.w3.org/TR/html4/loose.dtd"&gt;
+  &lt;html xmlns="http://www.w3.org/1999/xhtml"&gt;
+  &lt;head&gt;
+    &lt;META HTTP-EQUIV="CONTENT-TYPE" CONTENT="TEXT/HTML; CHARSET=UTF-8"&gt;
+    &lt;META ID="metaKeywords" NAME="KEYWORDS" CONTENT="GAE, Java" /&gt;
+    &lt;META NAME="DESCRIPTION" CONTENT="atealxt's personal website" /&gt;
+    &lt;META NAME="AUTHOR" CONTENT="atealxt, LUSuo"&gt;
+    &lt;meta name="verify-v1" content="w+fF0JyTb5eFobwfbY6d98MzfBuw17QSGcXj263O/U0=" /&gt;
+    &lt;title&gt;Website Administer - Hero's Grave -&lt;/title&gt;
+
+    &lt;link type="text/css" rel="stylesheet" href="/stylesheets/common.css" /&gt;
+    &lt;link rel="icon" type="image/png" href="/images/favicon.png"&gt;
+    &lt;script src="prototype/prototype.js" type="text/javascript"&gt;&lt;/script&gt;
+    &lt;script src="javascripts/common.js" type="text/javascript"&gt;&lt;/script&gt;
+
+    &lt;!--Code Highlighting Example--&gt;
+
+  &lt;/head&gt;
+
+&lt;/html&gt;
+[/code]
+
+</div>
+
+<script type="text/javascript">
+
+    var content = document.getElementById("content");
+    content.innerHTML = content.innerHTML.replace(/(\[code:)([^\]]*)(\])([\s\S]*?)(\[\/code\])/g,"<pre class=\"brush:$2;\">$4</pre>");
+
+    SyntaxHighlighter.config.bloggerMode = true;
+    SyntaxHighlighter.config.taName = "pre";
+
+    SyntaxHighlighter.config.clipboardSwf = '/scripts/clipboard.swf';
+    SyntaxHighlighter.all();
+
+</script>
+
+
+</body>
+</html>

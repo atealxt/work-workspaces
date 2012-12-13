@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/!svn/ver/43/trunk/GoogleApp/src/com/hg/web
+END
+SystemInitialization.java
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/!svn/ver/43/trunk/GoogleApp/src/com/hg/web/SystemInitialization.java
+END
+CloseSessionInViewListener.java
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/!svn/ver/3/trunk/GoogleApp/src/com/hg/web/CloseSessionInViewListener.java
+END
+RoleResolver.java
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/!svn/ver/51/trunk/GoogleApp/src/com/hg/web/RoleResolver.java
+END
+LocaleFilter.java
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/!svn/ver/51/trunk/GoogleApp/src/com/hg/web/LocaleFilter.java
+END
+LiveConnector.java
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/!svn/ver/17/trunk/GoogleApp/src/com/hg/web/LiveConnector.java
+END

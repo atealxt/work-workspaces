@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/!svn/ver/45/trunk/GoogleApp/war/WEB-INF/templates/admin
+END
+guestbook.ftl
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/!svn/ver/55/trunk/GoogleApp/war/WEB-INF/templates/admin/guestbook.ftl
+END
+index.ftl
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/!svn/ver/45/trunk/GoogleApp/war/WEB-INF/templates/admin/index.ftl
+END
+articleInfo.ftl
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/!svn/ver/45/trunk/GoogleApp/war/WEB-INF/templates/admin/articleInfo.ftl
+END
+article.ftl
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/!svn/ver/45/trunk/GoogleApp/war/WEB-INF/templates/admin/article.ftl
+END
+type.ftl
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/!svn/ver/6/trunk/GoogleApp/war/WEB-INF/templates/admin/type.ftl
+END
+comment.ftl
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/!svn/ver/55/trunk/GoogleApp/war/WEB-INF/templates/admin/comment.ftl
+END
+menu.ftl
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/!svn/ver/6/trunk/GoogleApp/war/WEB-INF/templates/admin/menu.ftl
+END

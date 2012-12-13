@@ -1,0 +1,45 @@
+.images {
+	border:1px solid #ccc;
+	height:240px;
+	width:595px;
+	margin: 0px 0px 0px 10px;
+	position:relative;
+	float:left;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+	-moz-box-shadow:0 0 25px #666;
+	-webkit-box-shadow:0 0 25px #666;
+}
+
+.images img{
+	height:238px;
+	width:592px;
+	padding: 1px;
+}
+
+.images div {
+	display:none;
+	position:absolute;
+}
+
+.slidetabs {
+	clear:both;
+	margin-left:330px;
+	margin-right:10px;
+}
+
+.slidetabs a {
+	color: #000000;
+	cursor: pointer;
+	text-decoration: none;
+	border:1px solid #ccc;
+	position: relative;
+	top: -30px;
+	left: 226px;
+	padding: 3px;
+	margin: 3px;
+}
+
+.slidetabs a.current {
+	background-color: #48ACDE;
+}

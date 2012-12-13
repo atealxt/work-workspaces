@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/!svn/ver/42/trunk/GoogleApp/src/com/hg/service
+END
+ArticleService.java
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/!svn/ver/51/trunk/GoogleApp/src/com/hg/service/ArticleService.java
+END
+GreetingService.java
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/!svn/ver/3/trunk/GoogleApp/src/com/hg/service/GreetingService.java
+END
+TypeService.java
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/!svn/ver/3/trunk/GoogleApp/src/com/hg/service/TypeService.java
+END
+CommentService.java
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/!svn/ver/51/trunk/GoogleApp/src/com/hg/service/CommentService.java
+END

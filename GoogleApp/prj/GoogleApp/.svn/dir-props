@@ -1,0 +1,14 @@
+K 10
+svn:ignore
+V 123
+google_code
+TODO_spring3.0_rest
+有个人信息，不要完整的copy给别人
+.design
+.settings
+
+.springBeans
+
+.buildpath
+
+END

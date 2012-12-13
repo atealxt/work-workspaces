@@ -1,0 +1,1 @@
+memcached.exe -l 127.0.0.1 -m 32 -d stop

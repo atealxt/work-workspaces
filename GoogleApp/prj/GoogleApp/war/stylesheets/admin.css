@@ -1,0 +1,98 @@
+td,th,h3 {
+font-family:arial;
+font-size:12px;
+}
+
+table#BodyTable {
+color:#333;
+border:1px solid #666;
+clear:left;
+}
+
+table#Footer {
+color:#333;
+border:1px solid #666;
+margin-top:8px;
+}
+
+table#Footer td {
+border-bottom:1px solid #6B86B3;
+padding:4px 8px;
+}
+
+table.Listing {
+border-bottom:3px solid #6B86B3;
+width:100%;
+margin:0 0 8px;
+}
+
+table.Listing td,table.Listing th,table.Listing caption,h2 {
+text-align:left;
+padding:4px 12px;
+}
+
+table.Listing tr {
+color:inherit;
+}
+
+table.Listing th,table.Listing td.Header,table.Listing tr.Header td {
+font-weight:700;
+color:inherit;
+border-bottom:1px solid #6B86B3;
+}
+
+table.Listing tr.Alt {
+color:inherit;
+background-color:#000023;
+}
+
+tr.NoAlt {
+color:inherit;
+background-color:#003;
+}
+
+td div#LeftNavHeader {
+background:#6B86B3;
+border-bottom:1px solid #666;
+border-top:1px solid #666;
+color:#FFF;
+font-size:12px;
+text-transform:uppercase;
+height:17px;
+margin-top:23px;
+padding-top:4px;
+width:auto;
+font-weight:700;
+padding-left:40px;
+}
+
+td#Body {
+border-left:1px solid #333;
+}
+
+td#Header {
+border-top:3px solid #6B86B3;
+}
+
+#Listing a {
+color:#CCC;
+text-decoration:none;
+}
+
+#Listing a:hover {
+text-decoration:underline;
+}
+
+.Category {
+margin-left:0;
+}
+
+table.Listing td,table.Listing2 td {
+border-bottom:1px solid #E6E6E6;
+}
+
+td,tr {
+vertical-align:top;
+margin:0;
+padding:0;
+}
