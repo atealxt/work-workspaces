@@ -108,7 +108,7 @@ public final class DIManager {
                 return null;
             }
         } catch (RuntimeException re) {
-            logger.error(re.toString(), re); // FIXME fix this error: java.lang.IllegalStateException: BeanFactory not initialized or already closed - call 'refresh' before accessing beans via the ApplicationContext
+            logger.error(re.toString(), re);
             return null;
         }
     }
