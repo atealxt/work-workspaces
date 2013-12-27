@@ -26,10 +26,9 @@ public class Problem3 extends ProblemTemplate {
 			if (number % i == 0) {
 				if (smallestPrimeFactor == -1) {
 					largestPrimeFactor = smallestPrimeFactor = i;
+				} else if (i % smallestPrimeFactor == 0) {
+					break;
 				} else {
-					if (i % smallestPrimeFactor == 0) {
-						break;
-					}
 					largestPrimeFactor = i;
 				}
 			} else if (largestPrimeFactor != -1 && largestPrimeFactor * i > number) {
