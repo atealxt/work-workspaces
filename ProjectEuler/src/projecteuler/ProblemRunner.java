@@ -21,6 +21,7 @@ public class ProblemRunner {
 			System.out.println(obj);
 			String result = (String) clazz.getMethod("getResult").invoke(obj);
 			System.out.println("Result: " + result);
+			System.out.println();
 		}
 	}
 }
