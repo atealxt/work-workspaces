@@ -12,7 +12,7 @@ public abstract class ProblemTemplate {
 
 	@Override
 	public String toString() {
-		return "Problem: " + getTitle() + "\nURL: " + getURL();
+		return "Problem: " + getTitle();
 	}
 
 	@Test
