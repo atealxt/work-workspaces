@@ -18,7 +18,7 @@ public class Problem13 extends ProblemTemplate {
 
 	@Override
 	public String getResult() {
-		return String.valueOf(getFirstNDigits(500));
+		return String.valueOf(getFirstNDigits(10));
 	}
 
 	private String getFirstNDigits(int n) {
@@ -26,7 +26,7 @@ public class Problem13 extends ProblemTemplate {
 		for (int i = 0; i < ARRAY.length; i++) {
 			sum = sum.add(new BigInteger(ARRAY[i]));
 		}
-		return sum.toString();
+		return sum.toString().substring(0, Math.min(n, sum.toString().length()));
 	}
 
 	private static final String[] ARRAY = { "37107287533902102798797998220837590246510135740250",//
