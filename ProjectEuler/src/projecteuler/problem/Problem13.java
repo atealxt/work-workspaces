@@ -12,11 +12,6 @@ public class Problem13 extends ProblemTemplate {
 	}
 
 	@Override
-	public String getURL() {
-		return "http://projecteuler.net/problem=13";
-	}
-
-	@Override
 	public String getResult() {
 		return String.valueOf(getFirstNDigits(10));
 	}

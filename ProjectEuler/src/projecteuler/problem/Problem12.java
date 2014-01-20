@@ -10,11 +10,6 @@ public class Problem12 extends ProblemTemplate {
 	}
 
 	@Override
-	public String getURL() {
-		return "http://projecteuler.net/problem=12";
-	}
-
-	@Override
 	public String getResult() {
 		return String.valueOf(getFirstTriangleNum(500));
 	}

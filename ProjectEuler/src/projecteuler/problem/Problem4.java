@@ -10,11 +10,6 @@ public class Problem4 extends ProblemTemplate {
 	}
 
 	@Override
-	public String getURL() {
-		return "http://projecteuler.net/problem=4";
-	}
-
-	@Override
 	public String getResult() {
 		return String.valueOf(getLargestPalindrome(3));
 	}

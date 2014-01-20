@@ -10,11 +10,6 @@ public class Problem11 extends ProblemTemplate {
 	}
 
 	@Override
-	public String getURL() {
-		return "http://projecteuler.net/problem=11";
-	}
-
-	@Override
 	public String getResult() {
 		return String.valueOf(getLargestProduct(4));
 	}

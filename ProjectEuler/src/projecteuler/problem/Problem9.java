@@ -10,11 +10,6 @@ public class Problem9 extends ProblemTemplate {
 	}
 
 	@Override
-	public String getURL() {
-		return "http://projecteuler.net/problem=9";
-	}
-
-	@Override
 	public String getResult() {
 		return String.valueOf(getProductOfPythagoreanTriplet(1000));
 	}

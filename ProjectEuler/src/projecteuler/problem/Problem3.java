@@ -10,11 +10,6 @@ public class Problem3 extends ProblemTemplate {
 	}
 
 	@Override
-	public String getURL() {
-		return "http://projecteuler.net/problem=3";
-	}
-
-	@Override
 	public String getResult() {
 		return String.valueOf(getLargestPrimeFactor(600851475143L));
 	}

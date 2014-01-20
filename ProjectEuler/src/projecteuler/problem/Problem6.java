@@ -10,11 +10,6 @@ public class Problem6 extends ProblemTemplate {
 	}
 
 	@Override
-	public String getURL() {
-		return "http://projecteuler.net/problem=6";
-	}
-
-	@Override
 	public String getResult() {
 		return String.valueOf(getSumSquareDifference(100));
 	}

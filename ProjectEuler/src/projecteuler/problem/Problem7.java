@@ -10,11 +10,6 @@ public class Problem7 extends ProblemTemplate {
 	}
 
 	@Override
-	public String getURL() {
-		return "http://projecteuler.net/problem=7";
-	}
-
-	@Override
 	public String getResult() {
 		return String.valueOf(getPrime(10001));
 	}

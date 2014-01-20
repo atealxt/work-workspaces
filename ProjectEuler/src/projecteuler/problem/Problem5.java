@@ -14,11 +14,6 @@ public class Problem5 extends ProblemTemplate {
 	}
 
 	@Override
-	public String getURL() {
-		return "http://projecteuler.net/problem=5";
-	}
-
-	@Override
 	public String getResult() {
 		return String.valueOf(getSmallestMultipleWay2(20));
 	}

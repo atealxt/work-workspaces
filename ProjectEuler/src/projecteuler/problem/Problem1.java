@@ -10,11 +10,6 @@ public class Problem1 extends ProblemTemplate {
 	}
 
 	@Override
-	public String getURL() {
-		return "http://projecteuler.net/problem=1";
-	}
-
-	@Override
 	public String getResult() {
 		int sum = 0;
 		for (int i = 1; i < 1000; i++) {
