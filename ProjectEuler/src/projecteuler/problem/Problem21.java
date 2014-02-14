@@ -37,13 +37,16 @@ public class Problem21 extends ProblemTemplate {
 	}
 
 	/** @see Problem12#getNumOfFactor */
-	private int getSumOfDivisors(int n) {
+	static int getSumOfDivisors(int n) {
 		int sum = 1;
 		int maxLoop = (int) (Math.sqrt(n) + 1);
 		for (int i = 2; i < maxLoop; i++) {
 			if (n % i == 0) {
 				sum += i;
-				sum += n / i;
+				int divisor = n / i;
+				if (divisor != i) {
+					sum += divisor;
+				}
 			}
 		}
 		return sum;

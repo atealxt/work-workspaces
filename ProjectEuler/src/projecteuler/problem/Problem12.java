@@ -28,14 +28,19 @@ public class Problem12 extends ProblemTemplate {
 		}
 	}
 
+	/** @see Problem7#isPrime */
 	private int getNumOfFactor(int num) {
 		int n = 0;
 		int maxLoop = (int) (Math.sqrt(num) + 1);
 		for (int i = 2; i < maxLoop; i++) {
 			if (num % i == 0) {
 				n++;
+				int divisor = num / i;
+				if (divisor != i) {
+					n++;
+				}
 			}
 		}
-		return n * 2 + 2;
+		return n + 2;
 	}
 }
