@@ -28,8 +28,9 @@ public class Problem7 extends ProblemTemplate {
 		}
 	}
 
+	/** @see Problem3#getLargestPrimeFactor */
 	static boolean isPrime(long n) {
-		long maxLoop = (long) (Math.sqrt(n) + 1); // Here is why sqrt: http://bbs.csdn.net/topics/300142134
+		long maxLoop = (long) (Math.sqrt(n) + 1);
 		for (long i = 2; i < maxLoop; i++) {
 			if (n % i == 0) {
 				return false;
