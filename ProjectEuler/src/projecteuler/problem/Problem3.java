@@ -22,6 +22,9 @@ public class Problem3 extends ProblemTemplate {
 		long largestPrimeFactor = -1;
 		List<Long> primeFactors = new ArrayList<>();
 		for (long i = 2; i < number; i++) {
+			if (largestPrimeFactor != -1 && largestPrimeFactor * i > number) {
+				break;
+			}
 			if (number % i == 0) {
 				if (smallestPrimeFactor == -1) {
 					largestPrimeFactor = smallestPrimeFactor = i;
@@ -35,8 +38,6 @@ public class Problem3 extends ProblemTemplate {
 					primeFactors.add(i);
 					largestPrimeFactor = i;
 				}
-			} else if (largestPrimeFactor != -1 && largestPrimeFactor * i > number) {
-				break;
 			}
 		}
 		return largestPrimeFactor;
