@@ -32,7 +32,7 @@ public class Problem3 extends ProblemTemplate {
 				} else if (i % smallestPrimeFactor == 0) {
 					continue;
 				} else {
-					if (!isPrimeFactor(primeFactors, i)) {
+					if (!isPrime(primeFactors, i)) {
 						break;
 					}
 					primeFactors.add(i);
@@ -43,9 +43,9 @@ public class Problem3 extends ProblemTemplate {
 		return largestPrimeFactor;
 	}
 
-	private static boolean isPrimeFactor(List<Long> primeFactors, long i) {
+	private static boolean isPrime(List<Long> primeFactors, long factor) {
 		for (Long primeFactor : primeFactors) {
-			if (i % primeFactor == 0) {
+			if (factor % primeFactor == 0) {
 				return false;
 			}
 		}
