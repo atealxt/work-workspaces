@@ -28,7 +28,6 @@ public class Problem7 extends ProblemTemplate {
 		}
 	}
 
-	/** @see Problem3#getLargestPrimeFactor */
 	static boolean isPrime(long n) {
 		long maxLoop = (long) (Math.sqrt(n) + 1);
 		for (long i = 2; i < maxLoop; i++) {
@@ -39,3 +38,7 @@ public class Problem7 extends ProblemTemplate {
 		return true;
 	}
 }
+
+// why sqrt:
+// http://bbs.csdn.net/topics/300142134
+// http://stackoverflow.com/questions/5811151/why-do-we-check-upto-the-square-root-of-a-prime-number-to-determine-if-it-is-pri
