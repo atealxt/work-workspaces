@@ -1,5 +1,8 @@
 package projecteuler.problem;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import projecteuler.ProblemTemplate;
 
 public class Problem3 extends ProblemTemplate {
@@ -17,13 +20,19 @@ public class Problem3 extends ProblemTemplate {
 	private long getLargestPrimeFactor(long number) {
 		long smallestPrimeFactor = -1;
 		long largestPrimeFactor = -1;
+		List<Long> primeFactors = new ArrayList<>();
 		for (long i = 2; i < number; i++) {
 			if (number % i == 0) {
 				if (smallestPrimeFactor == -1) {
 					largestPrimeFactor = smallestPrimeFactor = i;
+					primeFactors.add(i);
 				} else if (i % smallestPrimeFactor == 0) {
-					break; // FIXME not correct. test 10
+					continue;
 				} else {
+					if (!isPrimeFactor(primeFactors, i)) {
+						break;
+					}
+					primeFactors.add(i);
 					largestPrimeFactor = i;
 				}
 			} else if (largestPrimeFactor != -1 && largestPrimeFactor * i > number) {
@@ -31,5 +40,14 @@ public class Problem3 extends ProblemTemplate {
 			}
 		}
 		return largestPrimeFactor;
+	}
+
+	private static boolean isPrimeFactor(List<Long> primeFactors, long i) {
+		for (Long primeFactor : primeFactors) {
+			if (i % primeFactor == 0) {
+				return false;
+			}
+		}
+		return true;
 	}
 }
