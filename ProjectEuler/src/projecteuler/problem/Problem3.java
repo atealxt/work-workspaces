@@ -14,36 +14,43 @@ public class Problem3 extends ProblemTemplate {
 
 	@Override
 	public String getResult() {
-		return String.valueOf(getLargestPrimeFactor(600851475143L));
+//		System.out.println(getLargestPrimeFactor(10));//5
+//		System.out.println(getLargestPrimeFactor(20));//5
+//		System.out.println(getLargestPrimeFactor(66));//11
+//		System.out.println(getLargestPrimeFactor(13195));//29
+		return String.valueOf(getLargestPrimeFactor(600851475143L));//6857
 	}
 
 	private long getLargestPrimeFactor(long number) {
 		long smallestPrimeFactor = -1;
 		long largestPrimeFactor = -1;
 		List<Long> primeFactors = new ArrayList<>();
+		long maxFactor = (long) (Math.sqrt(number) + 1);
 		for (long i = 2; i < number; i++) {
-			if (largestPrimeFactor != -1 && largestPrimeFactor * i > number) {
+			if (number % i != 0) {
+				continue;
+			}
+			if (smallestPrimeFactor == -1) {
+				// the first factor is prime
+				largestPrimeFactor = smallestPrimeFactor = i;
+				continue;
+			}
+			if (i % smallestPrimeFactor == 0) {
+				continue;
+			}
+			if (!isPrime(primeFactors, i)) {
 				break;
 			}
-			if (number % i == 0) {
-				if (smallestPrimeFactor == -1) {
-					largestPrimeFactor = smallestPrimeFactor = i;
-					primeFactors.add(i);
-				} else if (i % smallestPrimeFactor == 0) {
-					continue;
-				} else {
-					if (!isPrime(primeFactors, i)) {
-						break;
-					}
-					primeFactors.add(i);
-					largestPrimeFactor = i;
-				}
+			largestPrimeFactor = i;
+			if (largestPrimeFactor >= maxFactor) {
+				break;
 			}
+			primeFactors.add(i);
 		}
 		return largestPrimeFactor;
 	}
 
-	private static boolean isPrime(List<Long> primeFactors, long factor) {
+	static boolean isPrime(List<Long> primeFactors, long factor) {
 		for (Long primeFactor : primeFactors) {
 			if (factor % primeFactor == 0) {
 				return false;
@@ -52,3 +59,7 @@ public class Problem3 extends ProblemTemplate {
 		return true;
 	}
 }
+
+//why sqrt:
+//http://bbs.csdn.net/topics/300142134
+//http://stackoverflow.com/questions/5811151/why-do-we-check-upto-the-square-root-of-a-prime-number-to-determine-if-it-is-pri
