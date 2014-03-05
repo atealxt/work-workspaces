@@ -3,6 +3,8 @@ package projecteuler.problem;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.junit.Assert;
+
 import projecteuler.ProblemTemplate;
 
 public class Problem3 extends ProblemTemplate {
@@ -14,11 +16,11 @@ public class Problem3 extends ProblemTemplate {
 
 	@Override
 	public String getResult() {
-//		System.out.println(getLargestPrimeFactor(10));//5
-//		System.out.println(getLargestPrimeFactor(20));//5
-//		System.out.println(getLargestPrimeFactor(66));//11
-//		System.out.println(getLargestPrimeFactor(13195));//29
-		return String.valueOf(getLargestPrimeFactor(600851475143L));//6857
+		Assert.assertEquals(5, getLargestPrimeFactor(10));
+		Assert.assertEquals(5, getLargestPrimeFactor(20));
+		Assert.assertEquals(11, getLargestPrimeFactor(66));
+		Assert.assertEquals(29, getLargestPrimeFactor(13195));
+		return String.valueOf(getLargestPrimeFactor(600851475143L));// 6857
 	}
 
 	private long getLargestPrimeFactor(long number) {
@@ -60,6 +62,6 @@ public class Problem3 extends ProblemTemplate {
 	}
 }
 
-//why sqrt:
-//http://bbs.csdn.net/topics/300142134
-//http://stackoverflow.com/questions/5811151/why-do-we-check-upto-the-square-root-of-a-prime-number-to-determine-if-it-is-pri
+// why sqrt:
+// http://bbs.csdn.net/topics/300142134
+// http://stackoverflow.com/questions/5811151/why-do-we-check-upto-the-square-root-of-a-prime-number-to-determine-if-it-is-pri
