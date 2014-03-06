@@ -29,35 +29,22 @@ public class Problem26 extends ProblemTemplate {
 	private int getDecimalOfLongestCycle(int n) {
 		int longestCycle = -1;
 		int decimalOfLongestCycle = -1;
-		for (int i = 2; i < n; i++) {
-			List<Long> primeFactor = getPrimeFactors(i);
+		for (int i = 6; i < n; i++) {
 
-			if (have2Or5(primeFactor)) {
-				if (haveOther(primeFactor)) {
-					// mixed
-					BigDecimal x = BigDecimal.ONE.divide(new BigDecimal(i), i * 2, RoundingMode.HALF_UP);
-					int len = getCycleLength(x.toString().substring(2));
-//					System.out.println(i + " len " + len + " " + 1.0 / i);
-					if (len > longestCycle) {
-						longestCycle = len;
-						decimalOfLongestCycle = i;
-					}
-				} else {
-					// limited
-					continue;
-				}
-			} else if (i != 2 && i != 5) {
-				// pure
+			// http://blog.csdn.net/niushuai666/article/details/6691041
+			List<Long> primeFactor = getPrimeFactors(i);
+			boolean have2Or5 = have2Or5(primeFactor);
+			boolean haveOther = haveOther(primeFactor);
+			boolean mixed = have2Or5 && haveOther;
+			boolean pure = !have2Or5;
+
+			if (mixed || pure) {
 				BigDecimal x = BigDecimal.ONE.divide(new BigDecimal(i), i * 2, RoundingMode.HALF_UP);
 				int len = getCycleLength(x.toString().substring(2));
-//				System.out.println(i + " len " + len + " " + 1.0 / i);
 				if (len > longestCycle) {
 					longestCycle = len;
 					decimalOfLongestCycle = i;
 				}
-			} else {
-				// limited
-				continue;
 			}
 		}
 		return decimalOfLongestCycle;
@@ -133,5 +120,3 @@ public class Problem26 extends ProblemTemplate {
 		return false;
 	}
 }
-
-// http://blog.csdn.net/niushuai666/article/details/6691041
