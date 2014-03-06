@@ -5,6 +5,8 @@ import java.math.RoundingMode;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.junit.Assert;
+
 import projecteuler.ProblemTemplate;
 
 public class Problem26 extends ProblemTemplate {
@@ -16,7 +18,12 @@ public class Problem26 extends ProblemTemplate {
 
 	@Override
 	public String getResult() {
-		return String.valueOf(getDecimalOfLongestCycle(1000));
+		Assert.assertEquals(1, getCycleLength("3333333333333333"));// 3
+		Assert.assertEquals(1, getCycleLength("16666666666666666"));// 6
+		Assert.assertEquals(6, getCycleLength("07692307692307693"));// 13
+		Assert.assertEquals(2, getCycleLength("045454545454545456"));// 22
+		Assert.assertEquals(3, getCycleLength("0033783783783783786"));// 296
+		return String.valueOf(getDecimalOfLongestCycle(1000));// 983
 	}
 
 	private int getDecimalOfLongestCycle(int n) {
@@ -28,8 +35,9 @@ public class Problem26 extends ProblemTemplate {
 			if (have2Or5(primeFactor)) {
 				if (haveOther(primeFactor)) {
 					// mixed
-					BigDecimal x = BigDecimal.ONE.divide(new BigDecimal(i), SCALE, RoundingMode.HALF_UP);
+					BigDecimal x = BigDecimal.ONE.divide(new BigDecimal(i), i * 2, RoundingMode.HALF_UP);
 					int len = getCycleLength(x.toString().substring(2));
+//					System.out.println(i + " len " + len + " " + 1.0 / i);
 					if (len > longestCycle) {
 						longestCycle = len;
 						decimalOfLongestCycle = i;
@@ -40,8 +48,9 @@ public class Problem26 extends ProblemTemplate {
 				}
 			} else if (i != 2 && i != 5) {
 				// pure
-				BigDecimal x = BigDecimal.ONE.divide(new BigDecimal(i), SCALE, RoundingMode.HALF_UP);
+				BigDecimal x = BigDecimal.ONE.divide(new BigDecimal(i), i * 2, RoundingMode.HALF_UP);
 				int len = getCycleLength(x.toString().substring(2));
+//				System.out.println(i + " len " + len + " " + 1.0 / i);
 				if (len > longestCycle) {
 					longestCycle = len;
 					decimalOfLongestCycle = i;
@@ -123,8 +132,6 @@ public class Problem26 extends ProblemTemplate {
 		}
 		return false;
 	}
-
-	private static final int SCALE = 2000;
 }
 
 // http://blog.csdn.net/niushuai666/article/details/6691041
