@@ -18,12 +18,15 @@ public class Problem26 extends ProblemTemplate {
 
 	@Override
 	public String getResult() {
-		Assert.assertEquals(1, getCycleLength("3333333333333333"));// 3
-		Assert.assertEquals(1, getCycleLength("16666666666666666"));// 6
-		Assert.assertEquals(6, getCycleLength("07692307692307693"));// 13
-		Assert.assertEquals(2, getCycleLength("045454545454545456"));// 22
-		Assert.assertEquals(3, getCycleLength("0033783783783783786"));// 296
-		return String.valueOf(getDecimalOfLongestCycle(1000));// 983
+		Assert.assertEquals(1, getCycleLength("3333333333333333"));// 1/3
+		Assert.assertEquals(1, getCycleLength("16666666666666666"));// 1/6
+		Assert.assertEquals(6, getCycleLength("07692307692307693"));// 1/13
+		Assert.assertEquals(2, getCycleLength("045454545454545456"));// 1/22
+		Assert.assertEquals(3, getCycleLength("0033783783783783786"));// 1/296
+		int decimalOfLongestCycle = getDecimalOfLongestCycle(1000);
+		Assert.assertEquals(983, decimalOfLongestCycle);
+		Assert.assertEquals(decimalOfLongestCycle, getDecimalOfLongestCycleMath(1000));
+		return String.valueOf(decimalOfLongestCycle);
 	}
 
 	private int getDecimalOfLongestCycle(int n) {
@@ -95,6 +98,10 @@ public class Problem26 extends ProblemTemplate {
 			}
 			largestPrimeFactor = i;
 			primeFactors.add(i);
+			if (i > 5) {
+				// don't need to calculate any more for this specific problem.
+				break;
+			}
 			if (largestPrimeFactor >= maxFactor) {
 				break;
 			}
@@ -118,5 +125,28 @@ public class Problem26 extends ProblemTemplate {
 			}
 		}
 		return false;
+	}
+
+	private int getDecimalOfLongestCycleMath(int n) {
+		int i, j, len, maxlen, maxn = 0;
+		maxlen = 0;
+		for (i = 2; i < n; i++) {
+			int rest = 1;
+			int r0;
+			for (j = 0; j < i; j++) {
+				rest = rest * 10 % i;
+			}
+			r0 = rest;
+			len = 0;
+			do {
+				rest = rest * 10 % i;
+				len++;
+			} while (rest != r0);
+			if (len > maxlen) {
+				maxn = i;
+				maxlen = len;
+			}
+		}
+		return maxn;
 	}
 }
