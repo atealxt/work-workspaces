@@ -29,6 +29,9 @@ public class Problem7 extends ProblemTemplate {
 	}
 
 	static boolean isPrime(long n) {
+		if (n < 2) {
+			return false;
+		}
 		long maxLoop = (long) (Math.sqrt(n) + 1); // Refer to Problem 3 to see why sqrt
 		for (long i = 2; i < maxLoop; i++) {
 			if (n % i == 0) {
