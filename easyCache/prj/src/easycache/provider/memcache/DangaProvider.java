@@ -106,7 +106,7 @@ public class DangaProvider implements CacheProvider, ObjectLevelTimer, CacheConf
 
     @Override
     public boolean put(final String key, final Object value, final int expirySec) {
-        return cache.set(key, value, new Date(expirySec * 1000));
+        return cache.set(key, value, new Date(expirySec * 1000L));
     }
 
     @Override
