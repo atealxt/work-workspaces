@@ -6,7 +6,6 @@ import org.junit.Test;
 import easycache.wrapper.CacheWrapper;
 import easycache.wrapper.LocalCacheWrapper;
 
-
 public class EhCacheTest {
 
     @Test
@@ -18,7 +17,7 @@ public class EhCacheTest {
             Thread.sleep(5 * 1000);
             Assert.assertNull(businessCache.get("MyBean"));
         } catch (final CacheException e) {
-            e.printStackTrace();
+        	Assert.fail(e.getMessage());
         }
 
         try {
@@ -28,7 +27,7 @@ public class EhCacheTest {
             Thread.sleep(1 * 1000);
             Assert.assertNotNull(viewCache.get("MyBean"));
         } catch (final CacheException e) {
-            e.printStackTrace();
+        	Assert.fail(e.getMessage());
         }
     }
 }
