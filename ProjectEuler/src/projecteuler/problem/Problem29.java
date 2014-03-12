@@ -79,7 +79,7 @@ public class Problem29 extends ProblemTemplate {
 						continue;
 					}
 					if (bPlus / j > max) {
-						break;
+						return false;
 					}
 					if (Math.pow(i, j) <= a) {
 						// System.out.print("(" + a + ")^(" + b + ") ");
