@@ -44,10 +44,9 @@ public class Problem29 extends ProblemTemplate {
 		int n = 0;
 		for (int a = 2; a <= max; a++) {
 			for (int b = 2; b <= max; b++) {
-				if (duplicated(a, b, max)) {
-					continue;
+				if (!duplicated(a, b, max)) {
+					n++;
 				}
-				n++;
 			}
 		}
 		return n;
