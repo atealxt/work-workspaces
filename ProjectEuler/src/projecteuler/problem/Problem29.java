@@ -65,11 +65,11 @@ public class Problem29 extends ProblemTemplate {
 			}
 			int bPlus = b * root;
 			if (bPlus <= max) {
-//				 System.out.print("(" + a + ")^(" + b + ") ");
-//				 System.out.print("(" + i + "^" + root + ")^(" + b + ") ");
-//				 System.out.print("(" + i + ")^(" + b + "*" + root + ") ");
-//				 System.out.print("(" + i + ")^(" + bPlus + ") ");
-//				 System.out.println();
+				// System.out.print("(" + a + ")^(" + b + ") ");
+				// System.out.print("(" + i + "^" + root + ")^(" + b + ") ");
+				// System.out.print("(" + i + ")^(" + b + "*" + root + ") ");
+				// System.out.print("(" + i + ")^(" + bPlus + ") ");
+				// System.out.println();
 				return true;
 			} else {
 				for (int j = (int) Math.sqrt(bPlus); j >= 2; j--) {
@@ -93,17 +93,19 @@ public class Problem29 extends ProblemTemplate {
 						return true;
 					}
 				}
+				return false;
 			}
 		}
 		return false;
 	}
 
 	private int logn(int base, int num) {
-		int root = (int) (Math.log(num) / Math.log(base));
-		if (Math.pow(base, root) == num) {
-			return root;
+		double root = Math.log(num) / Math.log(base);
+		if (root % 1 == 0) {
+			return (int) root;
+		} else {
+			return -1;
 		}
-		return -1;
 	}
 }
 
