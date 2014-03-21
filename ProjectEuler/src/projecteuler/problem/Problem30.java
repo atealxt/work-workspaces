@@ -28,8 +28,8 @@ public class Problem30 extends ProblemTemplate {
 
 	private int getSumOfNum2(int pow) {
 		int total = 0;
-		int begin = (int) (Math.pow(10, pow - 1));
-		int end = (int) (Math.pow(10, pow) - 1);
+		int begin = 10;
+		int end = (int) (Math.pow(10, pow + 1) - 1);
 		while (begin++ <= end) {
 			List<Integer> numbers = split(begin);
 			int sumOfPowers = 0;
@@ -37,7 +37,6 @@ public class Problem30 extends ProblemTemplate {
 				sumOfPowers += Math.pow(i, pow);
 			}
 			if (sumOfPowers == begin) {
-				System.out.println(sumOfPowers + " " + numbers + " " + pow);
 				total += sumOfPowers;
 			}
 		}
@@ -51,6 +50,7 @@ public class Problem30 extends ProblemTemplate {
 			list.add(x % 10);
 			x = x / 10;
 		}
+//		Collections.reverse(list);
 		return list;
 	}
 
