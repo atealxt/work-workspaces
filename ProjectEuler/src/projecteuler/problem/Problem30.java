@@ -23,7 +23,7 @@ public class Problem30 extends ProblemTemplate {
 		Assert.assertTrue(validNumber(8208, Arrays.asList(8, 2, 0, 8)));
 		Assert.assertFalse(validNumber(4434, Arrays.asList(1, 3, 4, 8)));
 		Assert.assertEquals(19316, getSumOfNum2(4));
-		return String.valueOf(getSumOfNum(5));
+		return String.valueOf(getSumOfNum2(5));
 	}
 
 	private int getSumOfNum2(int pow) {
@@ -31,13 +31,13 @@ public class Problem30 extends ProblemTemplate {
 		int begin = (int) (Math.pow(10, pow - 1));
 		int end = (int) (Math.pow(10, pow) - 1);
 		while (begin++ <= end) {
-			List<Integer> combination = split(begin);
+			List<Integer> numbers = split(begin);
 			int sumOfPowers = 0;
-			for (Integer i : combination) {
+			for (Integer i : numbers) {
 				sumOfPowers += Math.pow(i, pow);
 			}
-			if (validNumber(sumOfPowers, combination)) {
-				System.out.println(combination + " " + sumOfPowers);
+			if (sumOfPowers == begin) {
+				System.out.println(sumOfPowers + " " + numbers + " " + pow);
 				total += sumOfPowers;
 			}
 		}
@@ -54,6 +54,7 @@ public class Problem30 extends ProblemTemplate {
 		return list;
 	}
 
+	@SuppressWarnings("unused")
 	private int getSumOfNum(int pow) {
 		int[] array = { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 };
 		int[] code = { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
@@ -72,7 +73,7 @@ public class Problem30 extends ProblemTemplate {
 				total += sumOfPowers;
 			}
 		}
-		return total;
+		throw new UnsupportedOperationException("Incorrect implementation");
 	}
 
 	private List<Integer> getCombination(int[] array, int[] code) {
