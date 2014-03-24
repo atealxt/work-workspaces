@@ -36,9 +36,6 @@ public class Problem30 extends ProblemTemplate {
 		int end = (int) (Math.pow(10, pow + 1) - 1);
 		while (begin++ <= end) {
 			int[] numbers = split(begin);
-			if (numbers.length == 1) {
-				continue;
-			}
 			String cacheKey = Arrays.toString(numbers);
 			if (existCache(cacheKey)) {
 				continue;
