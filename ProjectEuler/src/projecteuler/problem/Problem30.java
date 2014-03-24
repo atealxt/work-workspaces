@@ -55,30 +55,6 @@ public class Problem30 extends ProblemTemplate {
 		return total;
 	}
 
-	private boolean hasEq(int[] numbers, int sumOfPowers) {
-		int i = numbers.length - 1;
-		while (i != -1) {
-			int number = parseNumber(numbers);
-			if (number == sumOfPowers) {
-				if (numbers[0] == 0) {
-					return false;
-				} else {
-					return true;
-				}
-			}
-			i = Problem24.move(numbers, i);
-		}
-		return false;
-	}
-
-	private int parseNumber(int[] numbers) {
-		StringBuilder sb = new StringBuilder();
-		for (int i : numbers) {
-			sb.append(i);
-		}
-		return Integer.parseInt(sb.toString());
-	}
-
 	private int[] split(int begin) {
 		List<Integer> list = new ArrayList<>();
 		int x = begin;
@@ -102,6 +78,30 @@ public class Problem30 extends ProblemTemplate {
 
 	private boolean existCache(String key) {
 		return cache.containsKey(key);
+	}
+
+	private boolean hasEq(int[] numbers, int sumOfPowers) {
+		int i = numbers.length - 1;
+		while (i != -1) {
+			int number = parseNumber(numbers);
+			if (number == sumOfPowers) {
+				if (numbers[0] == 0) {
+					return false;
+				} else {
+					return true;
+				}
+			}
+			i = Problem24.move(numbers, i);
+		}
+		return false;
+	}
+
+	private int parseNumber(int[] numbers) {
+		StringBuilder sb = new StringBuilder();
+		for (int i : numbers) {
+			sb.append(i);
+		}
+		return Integer.parseInt(sb.toString());
 	}
 
 	/** Incorrect implementation with only considered combination (no repeat) case. Keep it in code base for combination algorithm. */
