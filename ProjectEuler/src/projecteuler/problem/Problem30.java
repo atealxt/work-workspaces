@@ -56,18 +56,17 @@ public class Problem30 extends ProblemTemplate {
 	}
 
 	private int[] split(int begin) {
-		List<Integer> list = new ArrayList<>();
-		int x = begin;
-		while (x != 0) {
-			list.add(x % 10);
-			x = x / 10;
-		}
-		int[] arr = new int[list.size()];
+		String s = String.valueOf(begin);
+		int[] arr = new int[s.length()];
 		for (int i = 0; i < arr.length; i++) {
-			arr[i] = list.get(i);
+			arr[i] = char2Int(s.charAt(i));
 		}
 		Arrays.sort(arr);
 		return arr;
+	}
+
+	private int char2Int(char c) {
+		return c - 48;
 	}
 
 	private final Map<String, Boolean> cache = new HashMap<>();
