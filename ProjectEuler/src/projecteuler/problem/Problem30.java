@@ -2,7 +2,9 @@ package projecteuler.problem;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import org.junit.Assert;
 
@@ -23,37 +25,89 @@ public class Problem30 extends ProblemTemplate {
 		Assert.assertTrue(validNumber(8208, Arrays.asList(8, 2, 0, 8)));
 		Assert.assertFalse(validNumber(4434, Arrays.asList(1, 3, 4, 8)));
 		Assert.assertEquals(19316, getSumOfNum2(4));
+		Assert.assertEquals(443839, getSumOfNum2(5));
 		return String.valueOf(getSumOfNum2(5));
 	}
 
 	private int getSumOfNum2(int pow) {
+		cache.clear();
 		int total = 0;
 		int begin = 10;
 		int end = (int) (Math.pow(10, pow + 1) - 1);
 		while (begin++ <= end) {
-			List<Integer> numbers = split(begin);
+			int[] numbers = split(begin);
+			if (numbers.length == 1) {
+				continue;
+			}
+			String cacheKey = Arrays.toString(numbers);
+			if (existCache(cacheKey)) {
+				continue;
+			}
 			int sumOfPowers = 0;
 			for (Integer i : numbers) {
 				sumOfPowers += Math.pow(i, pow);
 			}
-			if (sumOfPowers == begin) {
+			if (sumOfPowers == 1) {
+				continue;
+			}
+			if (hasEq(numbers, sumOfPowers)) {
 				total += sumOfPowers;
 			}
+			saveToCache(cacheKey);
 		}
 		return total;
 	}
 
-	private List<Integer> split(int begin) {
+	private boolean hasEq(int[] numbers, int sumOfPowers) {
+		int i = numbers.length - 1;
+		while (i != -1) {
+			int number = parseNumber(numbers);
+			if (number == sumOfPowers) {
+				if (numbers[0] == 0) {
+					return false;
+				} else {
+					return true;
+				}
+			}
+			i = Problem24.move(numbers, i);
+		}
+		return false;
+	}
+
+	private int parseNumber(int[] numbers) {
+		StringBuilder sb = new StringBuilder();
+		for (int i : numbers) {
+			sb.append(i);
+		}
+		return Integer.parseInt(sb.toString());
+	}
+
+	private int[] split(int begin) {
 		List<Integer> list = new ArrayList<>();
 		int x = begin;
 		while (x != 0) {
 			list.add(x % 10);
 			x = x / 10;
 		}
-//		Collections.reverse(list);
-		return list;
+		int[] arr = new int[list.size()];
+		for (int i = 0; i < arr.length; i++) {
+			arr[i] = list.get(i);
+		}
+		Arrays.sort(arr);
+		return arr;
 	}
 
+	private final Map<String, Boolean> cache = new HashMap<>();
+
+	private void saveToCache(String key) {
+		cache.put(key, true);
+	}
+
+	private boolean existCache(String key) {
+		return cache.containsKey(key);
+	}
+
+	/** Incorrect implementation with only considered combination (no repeat) case. Keep it in code base for combination algorithm. */
 	@SuppressWarnings("unused")
 	private int getSumOfNum(int pow) {
 		int[] array = { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 };
@@ -69,7 +123,6 @@ public class Problem30 extends ProblemTemplate {
 				sumOfPowers += Math.pow(i, pow);
 			}
 			if (validNumber(sumOfPowers, combination)) {
-				System.out.println(combination + " " + sumOfPowers);
 				total += sumOfPowers;
 			}
 		}
