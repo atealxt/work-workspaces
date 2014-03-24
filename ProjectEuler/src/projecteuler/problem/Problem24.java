@@ -2,6 +2,8 @@ package projecteuler.problem;
 
 import java.util.Arrays;
 
+import org.junit.Assert;
+
 import projecteuler.ProblemTemplate;
 
 public class Problem24 extends ProblemTemplate {
@@ -13,12 +15,19 @@ public class Problem24 extends ProblemTemplate {
 
 	@Override
 	public String getResult() {
-		return String.valueOf(getLexicographicPermutation(1000000));
+		Assert.assertEquals("[1, 1, 0, 0]", getLexicographicPermutation(new int[] { 0, 0, 1, 1 }, 6));
+		Assert.assertEquals("Not found!", getLexicographicPermutation(new int[] { 0, 0, 1, 1 }, 7));
+		Assert.assertEquals("[2, 7, 8, 3, 9, 1, 5, 4, 6, 0]", getPermutation(1000000));
+		return String.valueOf(getPermutation(1000000));
 	}
 
-	/** Base on ASC ordered with no duplicated item */
-	private String getLexicographicPermutation(int n) {
-		int[] array = Arrays.copyOf(DIC, DIC.length);
+	private String getPermutation(int n) {
+		return getLexicographicPermutation(DIC, n);
+	}
+
+	/** Base on ASC ordered */
+	private String getLexicographicPermutation(int[] arr, int n) {
+		int[] array = Arrays.copyOf(arr, arr.length);
 		int i = array.length - 1;
 		int cnt = 0;
 		do {
@@ -33,12 +42,23 @@ public class Problem24 extends ProblemTemplate {
 		return "Not found!";
 	}
 
-	private int move(int[] array, int i) {
+	public static int move(int[] array, int i) {
+		while (array[i - 1] == array[i]) {
+			i--;
+			if (i == 0) {
+				return -1;
+			}
+		}
 		if (i == array.length - 1) {
 			swap(array, i, i - 1);
-			return i - 1;
+			i--;
+			if (i == 0) {
+				return -1;
+			} else {
+				return i;
+			}
 		}
-		while (array[i - 1] > array[i]) {
+		while (array[i - 1] >= array[i]) {
 			i--;
 			if (i == 0) {
 				return -1;
@@ -56,7 +76,7 @@ public class Problem24 extends ProblemTemplate {
 		return array.length - 1;
 	}
 
-	private void swap(int[] array, int i, int j) {
+	private static void swap(int[] array, int i, int j) {
 		int x = array[i];
 		array[i] = array[j];
 		array[j] = x;
