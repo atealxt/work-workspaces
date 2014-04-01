@@ -125,7 +125,7 @@ public class Problem30 extends ProblemTemplate {
 		throw new UnsupportedOperationException("Incorrect implementation");
 	}
 
-	private List<Integer> getCombination(int[] array, int[] code) {
+	public static List<Integer> getCombination(int[] array, int[] code) {
 		List<Integer> combination = new ArrayList<>(array.length);
 		for (int i = 0; i < code.length; i++) {
 			if (code[i] != 0) {
@@ -135,7 +135,7 @@ public class Problem30 extends ProblemTemplate {
 		return combination;
 	}
 
-	private boolean next(int[] code) {
+	public static boolean next(int[] code) {
 		for (int i = code.length - 1; i >= 0; i--) {
 			if (code[i] != 0) {
 				continue;
@@ -155,7 +155,7 @@ public class Problem30 extends ProblemTemplate {
 		return false;
 	}
 
-	private void move1ToHead(int[] code, int range) {
+	private static void move1ToHead(int[] code, int range) {
 		for (int i = code.length - 1; i > range; i--) {
 			if (code[i] == 0) {
 				continue;
