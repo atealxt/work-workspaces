@@ -43,6 +43,9 @@ public class Problem24 extends ProblemTemplate {
 	}
 
 	public static int move(int[] array, int i) {
+		if (array.length <= 1) {
+			return -1;
+		}
 		while (array[i - 1] == array[i]) {
 			i--;
 			if (i == 0) {

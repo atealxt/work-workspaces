@@ -95,7 +95,7 @@ public class Problem30 extends ProblemTemplate {
 		return false;
 	}
 
-	private int parseNumber(int[] numbers) {
+	static int parseNumber(int[] numbers) {
 		StringBuilder sb = new StringBuilder();
 		for (int i : numbers) {
 			sb.append(i);

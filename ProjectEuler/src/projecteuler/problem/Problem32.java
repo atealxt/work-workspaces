@@ -56,5 +56,5 @@ public class Problem32 extends ProblemTemplate {
 	}
 
 	private static final List<String> DIC = Arrays.asList(new String[] { "1", "2", "3", "4", "5", "6", "7", "8", "9" });
-	private static final Pattern DIGIT = Pattern.compile("(?<=\\d)");
+	static final Pattern DIGIT = Pattern.compile("(?<=\\d)");
 }

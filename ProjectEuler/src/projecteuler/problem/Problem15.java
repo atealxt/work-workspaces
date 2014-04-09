@@ -21,7 +21,7 @@ public class Problem15 extends ProblemTemplate {
 		return factorial(2 * width).divide(factorial(width).pow(2)).toString();
 	}
 
-	public static BigInteger factorial(int n) {
+	static BigInteger factorial(int n) {
 		BigInteger x = new BigInteger("1");
 		for (int i = 2; i <= n; i++) {
 			x = x.multiply(new BigInteger(String.valueOf(i)));
