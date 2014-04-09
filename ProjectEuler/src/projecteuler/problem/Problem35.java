@@ -23,25 +23,15 @@ public class Problem35 extends ProblemTemplate {
 	}
 
 	private int getNumOfCircularPrimes(int max) {
-		int[] primeCache = new int[max];
-		for (int i = 0; i < primeCache.length; i++) {
-			primeCache[i] = EMPTY;
-		}
 		int count = 0;
 		for (int i = 2; i < max; i++) {
-			if (primeCache[i] == FALSE) {
+			if (!isPrimeable(i)) {
 				continue;
 			}
-			int[] numbers = getRotations(i);
+			int[] rotations = getRotations(i);
 			boolean isCircularPrime = true;
-			for (int n : numbers) {
-				if (primeCache[n] == TRUE) {
-					continue;
-				}
-				if (Problem7.isPrime(n)) {
-					primeCache[n] = TRUE;
-				} else {
-					primeCache[n] = FALSE;
+			for (int n : rotations) {
+				if (!Problem7.isPrime(n)) {
 					isCircularPrime = false;
 					break;
 				}
@@ -51,6 +41,30 @@ public class Problem35 extends ProblemTemplate {
 			}
 		}
 		return count;
+	}
+
+	private boolean isPrimeable(int n) {
+		if (n < 10) {
+			return true;
+		}
+		int[] numbers = getNumbers(n);
+		for (int i = 0; i < numbers.length; i++) {
+			int x = numbers[i];
+			switch (x) {
+				case 1:
+				case 3:
+				case 7:
+				case 9:
+					break;
+				default:
+					return false;
+			}
+		}
+		int mod = n % 6;
+		if (mod == 5 || mod == 1) {
+			return true;
+		}
+		return false;
 	}
 
 	private int[] getRotations(int n) {
@@ -78,8 +92,4 @@ public class Problem35 extends ProblemTemplate {
 		}
 		return numbers;
 	}
-
-	private static final int EMPTY = -1;
-	private static final int FALSE = 0;
-	private static final int TRUE = 1;
 }
