@@ -21,7 +21,7 @@ public class Problem4 extends ProblemTemplate {
 		for (int i = end - 1; i >= start; i--) {
 			for (int j = end - 1; j >= start; j--) {
 				int product = i * j;
-				if (!isPalindrome(product)) {
+				if (!isPalindrome(String.valueOf(product))) {
 					continue;
 				}
 				if (product > largestPalindrome) {
@@ -33,10 +33,9 @@ public class Problem4 extends ProblemTemplate {
 		return largestPalindrome;
 	}
 
-	private boolean isPalindrome(int number) {
-		String src = String.valueOf(number);
-		for (int i = 0; i < src.length() / 2; i++) {
-			if (src.charAt(i) != src.charAt(src.length() - 1 - i)) {
+	static boolean isPalindrome(String s) {
+		for (int i = 0; i <= s.length() / 2; i++) {
+			if (s.charAt(i) != s.charAt(s.length() - i - 1)) {
 				return false;
 			}
 		}
