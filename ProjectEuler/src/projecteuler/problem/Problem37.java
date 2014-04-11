@@ -27,6 +27,9 @@ public class Problem37 extends ProblemTemplate {
 				sum += i;
 			}
 			i += 2;
+			if (i % 5 == 0) { // All primes above 5 end with digit 1, 3, 7 or 9
+				i += 2;
+			}
 		}
 		return sum;
 	}
