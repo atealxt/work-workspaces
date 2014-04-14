@@ -26,9 +26,8 @@ public class Problem38 extends ProblemTemplate {
 				if (s.length() > 9) {
 					break;
 				}
-				int n = Integer.parseInt(s.toString());
-				if (Problem32.isPandigital(String.valueOf(n))) {
-					return n;
+				if (Problem32.isPandigital(s.toString())) {
+					return Integer.parseInt(s.toString());
 				}
 			}
 		}
