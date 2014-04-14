@@ -48,7 +48,7 @@ public class Problem32 extends ProblemTemplate {
 		return sum;
 	}
 
-	private boolean isPandigital(String s) {
+	static boolean isPandigital(String s) {
 		if (s.length() != DIC.size()) {
 			return false;
 		}
