@@ -1,0 +1,8 @@
+http://code.google.com/p/herogravebygae
+
+# Project members authenticate over HTTPS to allow committing changes.
+svn checkout https://herogravebygae.googlecode.com/svn/trunk/ herogravebygae --username atealxt
+Xd7uV4XB3pz4
+
+ # Non-members may check out a read-only working copy anonymously over HTTP.
+svn checkout http://herogravebygae.googlecode.com/svn/trunk/ herogravebygae-read-only 

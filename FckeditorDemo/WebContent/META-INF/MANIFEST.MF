@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Implementation-Vendor: Frederico Caldeira Knabben
+Implementation-Title: FCKeditor.Java Integration Demo Webapp
+Implementation-Version: 2.4.2
+Implementation-Vendor-Id: net.fckeditor
+Built-By: Frederico Caldeira Knabben
+Build-Jdk: 1.5.0_13
+Created-By: Apache Maven
+Implementation-URL: http://java.fckeditor.net/2.4.x
+Archiver-Version: Plexus Archiver
+

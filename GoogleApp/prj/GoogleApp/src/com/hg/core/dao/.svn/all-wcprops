@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/!svn/ver/39/trunk/GoogleApp/src/com/hg/core/dao
+END
+JdoManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/!svn/ver/52/trunk/GoogleApp/src/com/hg/core/dao/JdoManager.java
+END
+BaseDaoJdo.java
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/!svn/ver/52/trunk/GoogleApp/src/com/hg/core/dao/BaseDaoJdo.java
+END
+Pager.java
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/!svn/ver/3/trunk/GoogleApp/src/com/hg/core/dao/Pager.java
+END
+IBaseDaoOrm.java
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/!svn/ver/50/trunk/GoogleApp/src/com/hg/core/dao/IBaseDaoOrm.java
+END
+BaseDao.java
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/!svn/ver/50/trunk/GoogleApp/src/com/hg/core/dao/BaseDao.java
+END

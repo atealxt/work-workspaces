@@ -1,0 +1,30 @@
+div#dayin1 {
+height:300px;
+width:auto;
+float:center;
+margin-right:10px;
+background:url('/images/birds.gif') no-repeat center center;
+font-size:14px;
+line-height:35px;
+color:#000;
+display:block;
+padding:2px 150px;
+}
+
+div#dayin2 {
+padding-top:50px;
+padding-left:160px;
+float:left;
+color:#AAA;
+font-size:35px;
+font-weight:700;
+}
+
+div#dayin3 {
+padding-top:100px;
+padding-left:37%;
+float:left;
+color:#AAA;
+font-size:15px;
+font-weight:700;
+}

@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/!svn/ver/36/trunk/GoogleApp/src/com/hg/util
+END
+DateUtil.java
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/!svn/ver/3/trunk/GoogleApp/src/com/hg/util/DateUtil.java
+END
+GaeUtil.java
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/!svn/ver/59/trunk/GoogleApp/src/com/hg/util/GaeUtil.java
+END
+MailUtil.java
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/!svn/ver/32/trunk/GoogleApp/src/com/hg/util/MailUtil.java
+END
+RoleUtil.java
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/!svn/ver/3/trunk/GoogleApp/src/com/hg/util/RoleUtil.java
+END
+ServletUtil.java
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/!svn/ver/3/trunk/GoogleApp/src/com/hg/util/ServletUtil.java
+END
+CacheUtil.java
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/!svn/ver/51/trunk/GoogleApp/src/com/hg/util/CacheUtil.java
+END
+StringUtil.java
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/!svn/ver/3/trunk/GoogleApp/src/com/hg/util/StringUtil.java
+END

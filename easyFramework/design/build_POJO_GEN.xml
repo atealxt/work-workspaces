@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project name="xdoclet_example">
+
+	<!--不要随便执行-->
+	
+	<property name="xdoclet.plugin.install.dir" value="./lib/xdoclet" />
+	<property name="src.dir" value="./src" />
+	<property name="prj.dir" value="./" />
+
+	<path id="xdoclet.task.classpath" description="xdoclet的所有jar">
+		<fileset dir="${xdoclet.plugin.install.dir}">
+			<include name="**/*.jar" />
+		</fileset>
+	</path>
+	<path id="prj.jar" description="项目目录下的所有jar">
+		<fileset dir="${prj.dir}">
+			<include name="**/*.jar" />
+		</fileset>
+	</path>
+	<path id="runtime.path" description="SchemaExport用的jar和class文件">
+		<path refid="xdoclet.task.classpath" />
+		<path refid="prj.jar" />
+		<pathelement location="${prj.dir}/build/classes" />
+		<!--http://www.blogjava.net/boluobn/articles/136197.html-->
+	</path>
+
+	<target name="clean" description="清空已有的hbm.xml">
+		<echo message="清空已有的hbm.xml" />
+		<delete dir="src">
+			<include name="**/po/*.hbm.xml" />
+		</delete>
+	</target>
+
+	<target name="SchemaExport" description="根据hibernate.cfg.xml生成数据库环境">
+		<echo message="根据hibernate.cfg.xml生成数据库环境" />
+		<taskdef name="schemaexport" classname="org.hibernate.tool.hbm2ddl.SchemaExportTask" classpathref="runtime.path" />
+		<schemaexport config="${src.dir}/hibernate.cfg.xml" quiet="false" text="false" drop="false" delimiter=";" output="schema-export.sql" />
+	</target>
+
+	<target name="xdoclet2hbm" description="根据pojo生成hbm.xml" depends="clean">
+		<echo message="根据pojo生成hbm.xml" />
+		<taskdef name="xdoclet" classname="org.xdoclet.ant.XDocletTask" classpathref="xdoclet.task.classpath" />
+		<xdoclet encoding="utf-8">
+			<fileset dir="${src.dir}">
+				<include name="**/po/*.java" />
+			</fileset>
+			<component classname="org.xdoclet.plugin.hibernate.HibernateMappingPlugin" destdir="${basedir}/${src.dir}" version="3.0" />
+		</xdoclet>
+	</target>
+
+	<target name="hbm2java" description="根据hbm.xml文件生成pojo">
+		<echo message="根据hbm.xml文件生成pojo" />
+		<taskdef name="hbm2java" classname="org.hibernate.tool.ant.HibernateToolTask" classpathref="runtime.path" />
+		<hbm2java destdir="${src.dir}">
+			<configuration configurationfile="${src.dir}/hibernate.cfg.xml" />
+			<hbm2java />
+		</hbm2java>
+	</target>
+
+</project>

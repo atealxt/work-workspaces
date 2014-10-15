@@ -1,0 +1,9 @@
+User-Agent:*
+Disallow:/CLEditor/
+Disallow:/images/
+Disallow:/javascripts/
+Disallow:/prototype/
+Disallow:/stylesheets/
+Disallow:/syntaxhighlighter/
+Disallow:/tiny_mce/
+Sitemap:http://atealxt.appspot.com/sitemap.xml

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<web-app>
+
+	<session-config>
+		<session-timeout>10</session-timeout>
+	</session-config>
+	<welcome-file-list>
+		<welcome-file>index.jsp</welcome-file>
+	</welcome-file-list>
+
+	<error-page>
+		<exception-type>java.lang.Throwable</exception-type>
+		<location>/error.html</location>
+	</error-page>
+	<error-page>
+		<error-code>500</error-code>
+		<location>/error.html</location>
+	</error-page>
+	<error-page>
+		<error-code>403</error-code>
+		<location>/error.html?code=403</location>
+	</error-page>
+	<error-page>
+		<error-code>404</error-code>
+		<location>/error.html?code=404</location>
+	</error-page>
+
+	<servlet>
+		<servlet-name>StartUpServlet</servlet-name>
+		<servlet-class>com.hg.web.SystemInitialization</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+
+    <servlet>
+        <servlet-name>LiveConnector</servlet-name>
+        <servlet-class>com.hg.web.LiveConnector</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LiveConnector</servlet-name>
+        <url-pattern>/living</url-pattern>
+    </servlet-mapping>
+
+	<context-param>
+		<param-name>contextConfigLocation</param-name>
+		<param-value>
+			classpath:applicationContext.xml
+        </param-value>
+	</context-param>
+
+	<listener>
+		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+		<listener-class>org.springframework.web.context.request.RequestContextListener</listener-class>
+		<listener-class>com.hg.web.CloseSessionInViewListener</listener-class>
+	</listener>
+	<servlet>
+		<servlet-name>springmvc</servlet-name>
+		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+		<load-on-startup>2</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>springmvc</servlet-name>
+		<url-pattern>*.html</url-pattern>
+	</servlet-mapping>
+		<servlet-mapping>
+		<servlet-name>springmvc</servlet-name>
+		<url-pattern>/</url-pattern>
+	</servlet-mapping>
+
+</web-app>

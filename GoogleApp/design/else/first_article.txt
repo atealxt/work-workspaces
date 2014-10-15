@@ -1,0 +1,123 @@
+The exception i meet in Google App Engine for java
+
+The_exception_i_meet_in_Google_App_Engine_for_java
+
+1. pojo compile warning
+2. com.google.apphosting.api.ApiProxy$CallNotFoundException
+3. org.datanucleus.exceptions.NucleusUserException
+4. java.lang.NoClassDefFoundError: javax/naming/NamingException
+5. java.lang.ClassCastException: java.lang.Long cannot be cast to java.lang.String
+6. one to many relationship doesn't work
+
+The article in Chinese language:
+http://www.blogjava.net/atealxt/archive/2009/06/04/gae_exception_in_java.html
+
+My current used version is gae1.2.1 for java
+
+1. Compile warning when using eclipse(XXX has annotations but there is no registered AnnotationReader. Please check your CLASSPATH and the annotations in the class for validity. )
+Solution： changing ORM Enhancement（http://code.google.com/eclipse/docs/appengine_orm.html）
+Reference Links: http://groups.google.com/group/google-appengine-java/browse_thread/thread/90850aad49730245
+
+2. com.google.apphosting.api.ApiProxy$CallNotFoundException (when sending mail)
+Solution： if use UnitTest, must config the setUp and tearDown methods.
+[code:java]
+@BeforeTest
+public void setUp() throws Exception {
+    ApiProxy.setEnvironmentForCurrentThread(new TestEnvironment());
+    ApiProxy.setDelegate(new ApiProxyLocalImpl(new File(".")) {});
+}
+@AfterTest
+public void tearDown() throws Exception {
+    // not strictly necessary to null these out but there's no harm either
+    ApiProxy.setDelegate(null);
+    ApiProxy.setEnvironmentForCurrentThread(null);
+}
+[/code]Reference Links: http://groups.google.com/group/google-appengine-java/browse_thread/thread/debc5bcb69a6871f
+
+3. org.datanucleus.exceptions.NucleusUserException (when showing data in page)
+Solution： before PersistenceManager.close(), use PersistenceManager.detachCopy(DATA) to return
+
+4. java.lang.NoClassDefFoundError: javax/naming/NamingException when using SpringMVC
+Solution： do not use spring all-in-one.jar，use modules
+
+5. java.lang.ClassCastException: java.lang.Long cannot be cast to java.lang.String (when Collection.add() in one-to-many relationship)
+Solution： PrimaryKey do not use Long，use String or Key
+
+6. cannot insert "many" data in one-to-many relationship
+Solution： using by Steps:
+a. search "one"
+b. set "many" relation in "one"
+c. set "one" relation in "many"
+d. saving
+e. ensure that all above steps in one transaction
+
+Example code:
+[code:java]
+Child c = new Child();
+PersistenceManager manager = JdoUtil.getPMF().getPersistenceManager();
+Parent p = manager.getObjectById(Parent.class, Parent.getId());
+c.setParent(p);
+p.getChildren().add(c); // important
+manager.makePersistent(c);
+manager.close();
+[/code]
+Last, i suggest use OSIV to manage the transaction.
+OK, all aboveSmile
+
+
+The exception i meet in Google App Engine for java (Ⅱ)
+
+The_exception_i_meet_in_Google_App_Engine_for_java_2
+
+1. org.datanucleus.store.exceptions.NoTableManagedException
+2. org.datanucleus.exceptions.NucleusUserException A parent cannot be established or changed once an object has been persisted.
+3. java.lang.IllegalArgumentException: can't operate on multiple entity groups in a single transaction
+4. 404 happened when visit online but ok in local environment 
+
+The article in Chinese language:
+http://www.blogjava.net/atealxt/archive/2009/06/30/gae_exception_in_java_2.html
+
+My current used version is gae1.2.1 for java
+
+1. org.datanucleus.store.exceptions.NoTableManagedException: Persistent class XXX does not seem to have been enhanced.
+Solution: sometimes pojo will broken, save it again pleaseSmile
+Reference Links: http://groups.google.com/group/google-appengine-java/browse_thread/thread/45423b96b786264b
+
+2. org.datanucleus.exceptions.NucleusUserException
+A parent cannot be established or changed once an object has been persisted.
+This question leave me headache...
+Solution: no way currently, only set up a redundant field
+Reference Links: http://groups.google.com/group/google-appengine-java/browse_thread/thread/cf5821f1394f65a0/8ec90e9b84fcc8ee
+
+3. java.lang.IllegalArgumentException: can't operate on multiple entity groups in a single transaction
+Solution: Currently gae only support control one pojo in a single transaction
+Reference Links: http://groups.google.com/group/google-appengine-java/browse_thread/thread/04f35b443c15d531
+
+4. error welcome-file setting in web.xml. 404 happened when visit online but ok in local environment
+Perhaps only I can encounter this problem..
+Solution:[code:html]
+OK: <welcome-file>index.jsp</welcome-file>
+[/code][code:html]
+NG: <welcome-file>/index.jsp</welcome-file>
+[/code]Reference Links: http://groups.google.com/group/google-appengine-java/browse_thread/thread/31af226dcc0c57a4/6aff8f3e46468bec
+
+
+And gae not support FileWriter.
+I would like to create static html at first, but can only use url-rewriteTongue out
+Reference Links: http://groups.google.com/group/google-appengine-java/browse_thread/thread/ef91a0e8c32c576e
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<buildpath>
+	<buildpathentry kind="src" path="src"/>
+	<buildpathentry kind="src" path="resources"/>
+	<buildpathentry kind="con" path="org.eclipse.dltk.mod.launching.INTERPRETER_CONTAINER"/>
+	<buildpathentry kind="con" path="org.ebayopensource.vjet.eclipse.core.SDK_CONTAINER/DEFUALT_SDK"/>
+	<buildpathentry external="true" kind="lib" path="C:/appengine-java-sdk-1.5.0/lib/shared/appengine-local-runtime-shared.jar"/>
+	<buildpathentry external="true" kind="lib" path="C:/appengine-java-sdk-1.5.0/lib/user/appengine-api-labs-1.5.0.jar"/>
+</buildpath>

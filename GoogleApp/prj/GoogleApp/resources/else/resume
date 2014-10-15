@@ -1,0 +1,65 @@
+简    历
+
+基本信息
+姓名：      卢梭(LUSUO)
+性别：      男
+年龄：      25岁
+现居住地：  北京
+个人网站：  http://atealxt.appspot.com/
+技术博客：  http://www.blogjava.net/atealxt
+电子邮件：  iamlusuo@gmail.com
+QQ:         1211270824
+
+求职意向
+互联网行业、电子商务、云计算、NoSQL、数据抓取与分析、软硬件结合开发等
+
+自我介绍
+7年编程经验，4年以上工作经验，3年Web开发经验
+学习和应用过5种以上编程语言，(Java, Javascript, C, C#, Python, Ruby)
+一直对程序设计保持着高度的热情，对新技术、新趋势有着较高的关注度，喜欢设计模式与代码重构，向往敏捷开发与开源
+
+主要技能
+design patterns, concurrency, socket, regular expression
+spring, hibernate, struts, ant, maven, log4j, mina, business flow
+jsp/servlet, freemarker, jquery, prototype, extjs
+oracle, mysql
+linux, windows
+uml
+
+工作经历
+2009年7月至2011年2月：北京蓝深大业计算机网络有限公司    Java高级软件工程师
+2006年7月至2009年7月：北京融海通讯技术有限公司          Java软件工程师
+
+近期项目经验
+
+某银行短信平台
+项目描述：这是一个05年既有的系统，具有大数据量，多子系统交互等特点。为跟上手机的发展速度与银行业务的新需求，2010年对系统进行了如下拓展：
+联通短信上行，移动彩信，短信跟踪查询，多通道发送，队列缓存，短信模板，改造现有系统的权限、银行部门审批等模块。
+职责描述：全程跟踪客户需求，进行需求分析、架构设计、程序开发，上线及运维。
+使用技术：各运营商sp协议, multi thread, socket, jmx, ehcache, apache dbutils, jsp/servlet, jquery
+项目环境：redhat5 + jdk1.5 + oracle9g + tomcat5
+
+北京联通综合故障单管理系统
+项目描述：处理全北京的ADSL、固定电话、公用电话、集团专线等的故障报告与维修调度的业务管理系统。
+职责描述：主要负责系统的数据支持，包括出各种统计报表、业务流程图。其他还有开发与门户网站的单点登录接口，程序上线及运维等。
+使用技术：spring, hibernate, runa jbpm, eclipse birt等
+项目环境：redhat5 + jdk1.5 + oracle9g + weblogic9
+
+北京联通局内资源调度系统
+项目描述：局内电路管线的资源调度业务系统。
+职责描述：各种电路模型的建模，提供公共访问接口，包括拆、装、派发等业务操作、电路前台分页显示等。其他还有业务申请单模块的制作、开发与门户网站的单点登录接口等。
+使用技术：spring, hibernate, jsp/servlet, jquery
+项目环境：redhat5 + jdk1.5 + oracle9g + weblogic9
+
+加拿大家庭报税申报系统 http://www.easyctax.com
+项目描述：系统通过报税人/家庭通录入的个人信息、年内所得各项财产等，计算出应缴税项目金额与明细，并提交至CRA进行年度税务申报。公司完全自主知识产权系统，具有申报种类繁多复杂、计算准确性要求高等特点。
+职责描述：参与程序软件架构；少量的税务计算；全部计算结果的输出支持（页面预览、显示报错和提示信息、下载管理、导出PDF报税表等）
+使用技术：appfuse spring mvc application
+项目环境：ubuntu8.04 + jdk1.5 + mysql5 + tomcat6
+
+教育经历
+2007/03－2009/07 北京航空航天大学    计算机科学与技术专业  本科
+2003/09－2006/07 北京联合大学        计算机软件专业        专科
+
+获得证书
+Sun Certified Java Programmer(SCJP1.4 EN)

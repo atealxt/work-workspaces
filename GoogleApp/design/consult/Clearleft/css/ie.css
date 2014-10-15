@@ -1,0 +1,10 @@
+body {
+	font-size: 87.5%;
+}
+#contact-form,
+.icon-list li,
+.vcard-download,
+.columns,
+.colspan {
+	zoom: 1;
+}

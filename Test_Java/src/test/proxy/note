@@ -1,0 +1,5 @@
+
+		优点			缺点
+aspectj 功能最多		重量
+cglib	轻量			功能少
+proxy	java原生态	必须基于接口

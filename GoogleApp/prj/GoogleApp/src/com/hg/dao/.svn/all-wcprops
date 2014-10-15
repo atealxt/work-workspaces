@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/!svn/ver/40/trunk/GoogleApp/src/com/hg/dao
+END
+ArticleDao.java
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/!svn/ver/51/trunk/GoogleApp/src/com/hg/dao/ArticleDao.java
+END
+GreetingDao.java
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/!svn/ver/51/trunk/GoogleApp/src/com/hg/dao/GreetingDao.java
+END
+TypeDao.java
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/!svn/ver/51/trunk/GoogleApp/src/com/hg/dao/TypeDao.java
+END
+CommentDao.java
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/!svn/ver/51/trunk/GoogleApp/src/com/hg/dao/CommentDao.java
+END

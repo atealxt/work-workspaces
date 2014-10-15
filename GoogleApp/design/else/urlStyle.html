@@ -1,0 +1,44 @@
+﻿<html>
+
+<head>
+
+<script type="text/javascript">
+
+/* 
+TODO 判断原来是否已经套在a标签里了。
+*/
+function initHrefUrl(content, maxLen){   
+
+    alert(content.split(/http/g));
+
+    return content;
+
+}
+
+function getUrl(str){
+	
+	
+}
+
+function testtest(){
+    initHrefUrl(document.getElementById("aaa").innerHTML,30);
+}
+
+</script>
+
+
+</head>
+
+<body onload="testtest()">
+
+<div id="aaa">
+<p>The article in Chinese language:<br />http://www.blogjava.net/atealxt/archive/2009/06/30/gae_exception_in_java_2.html<br /></p>
+</div>
+
+<div id="bbb">
+<p>The article in Chinese language:<br /><a href="http://www.blogjava.net/atealxt/archive/2009/06/30/gae_exception_in_java_2.html" title="http://www.blogjava.net/atealxt/archive/2009/06/30/gae_exception_in_java_2.html">http://www.blogjava.net/atealx...html<br /> </p>
+</div>
+
+</body>
+
+</html>

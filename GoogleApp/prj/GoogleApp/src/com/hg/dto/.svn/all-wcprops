@@ -1,0 +1,71 @@
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/!svn/ver/3/trunk/GoogleApp/src/com/hg/dto
+END
+Topic.java
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/!svn/ver/3/trunk/GoogleApp/src/com/hg/dto/Topic.java
+END
+CommentInfo.java
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/!svn/ver/3/trunk/GoogleApp/src/com/hg/dto/CommentInfo.java
+END
+CalendarInfo.java
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/!svn/ver/3/trunk/GoogleApp/src/com/hg/dto/CalendarInfo.java
+END
+Paging.java
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/!svn/ver/3/trunk/GoogleApp/src/com/hg/dto/Paging.java
+END
+DateInfo.java
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/!svn/ver/3/trunk/GoogleApp/src/com/hg/dto/DateInfo.java
+END
+PageLink.java
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/!svn/ver/3/trunk/GoogleApp/src/com/hg/dto/PageLink.java
+END
+TypeInfo.java
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/!svn/ver/3/trunk/GoogleApp/src/com/hg/dto/TypeInfo.java
+END
+GreetingInfo.java
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/!svn/ver/3/trunk/GoogleApp/src/com/hg/dto/GreetingInfo.java
+END
+Mail.java
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/!svn/ver/3/trunk/GoogleApp/src/com/hg/dto/Mail.java
+END
+GreetingDto.java
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/!svn/ver/3/trunk/GoogleApp/src/com/hg/dto/GreetingDto.java
+END
+OpenId.java
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/!svn/ver/59/trunk/GoogleApp/src/com/hg/dto/OpenId.java
+END
