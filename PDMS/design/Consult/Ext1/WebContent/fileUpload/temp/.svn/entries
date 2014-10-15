@@ -1,16 +1,0 @@
-8
-
-dir
-11
-https://127.0.0.1:8443/svn/System/SOA/WebContent/fileUpload/temp
-https://127.0.0.1:8443/svn/System
-
-
-
-2008-12-03T21:20:26.465394Z
-2
-admin
-
-
-svn:special svn:externals svn:needs-lock
-

@@ -1,1 +1,0 @@
-%SystemRoot%\system32\cmd.exe /c java -jar "MailSendingRobot.jar" 

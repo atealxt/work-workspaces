@@ -1,9 +1,0 @@
-[PropertyInfo]
-fileContent,org.apache.struts.upload.FormFile,false,false, , ,false,<default>
-remark,String,false,false, , ,false,<default>
-fileId,String,false,false,fileId,fileId,true,<default>
-[IconNames]
-
-
-
-
