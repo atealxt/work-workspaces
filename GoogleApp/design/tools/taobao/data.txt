@@ -1,7 +1,0 @@
-﻿App Key
-12008180
-
-App Secret
-f02e7ac5155a58bd4da39e4c8d7801ca
-
-http://auth.open.taobao.com/?appkey={12008180}

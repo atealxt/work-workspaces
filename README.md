@@ -1,4 +1,4 @@
-work-workspaces-eclipse
+work-workspaces
 =======================
 
-My work workspaces folder, contains all eclipse test projects.
+My work workspaces folder, contains all test projects.

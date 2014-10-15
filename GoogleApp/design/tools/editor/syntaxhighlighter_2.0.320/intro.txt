@@ -1,5 +1,0 @@
-SyntaxHighlighter
-
-http://alexgorbatchev.com/wiki/SyntaxHighlighter
-
-a fully functional self-contained code syntax highlighter developed in JavaScript.

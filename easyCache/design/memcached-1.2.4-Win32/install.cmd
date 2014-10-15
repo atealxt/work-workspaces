@@ -1,1 +1,0 @@
-memcached.exe -d install
