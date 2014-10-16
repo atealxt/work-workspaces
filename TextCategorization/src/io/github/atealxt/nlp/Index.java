@@ -53,16 +53,48 @@ public class Index {
 	}
 
 	public void analysis() {
-		for (Term term : terms.values()) {
-			for (Document doc : docs) {
-				double tf = term.getDocs().count(doc);
-				if (tf == 0) {
-					continue;
-				}
-				double tfidf = tf * term.getIDF();
-//				System.out.println(term.getText() + " | " + doc.getName() + " | " + tfidf);
-				// TODO Vector COS
-			}
+
+		Document d1 = docs.get(2000);
+		Document d2 = docs.get(2001);
+
+		List<Double> d1TFIDF = getTFIDF(d1);
+		List<Double> d2TFIDF = getTFIDF(d2);
+
+		double cos = innerProducts(d1TFIDF, d2TFIDF) / vectorLen(d1TFIDF, d2TFIDF);
+		System.out.println(d1 + " " + d2 + " " + cos);
+
+		// TODO categorization
+	}
+
+	private double vectorLen(List<Double> d1tfidf, List<Double> d2tfidf) {
+		double dx = 0;
+		for (Double d : d1tfidf) {
+			dx += Math.pow(d, 2);
 		}
+		dx = Math.sqrt(dx);
+		double dy = 0;
+		for (Double d : d2tfidf) {
+			dy += Math.pow(d, 2);
+		}
+		dy = Math.sqrt(dy);
+		return dx * dy;
+	}
+
+	private double innerProducts(List<Double> d1tfidf, List<Double> d2tfidf) {
+		double d = 0;
+		for (int i = 0; i < d1tfidf.size(); i++) {
+			d += d1tfidf.get(i) * d2tfidf.get(i);
+		}
+		return d;
+	}
+
+	private List<Double> getTFIDF(Document doc) {
+		List<Double> list = new ArrayList<Double>();
+		for (Term term : terms.values()) {
+			double tf = term.getDocs().count(doc);
+			double tfidf = tf * term.getIDF();
+			list.add(tfidf);
+		}
+		return list;
 	}
 }
