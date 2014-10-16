@@ -57,8 +57,8 @@ public class Index {
 		Document d1 = docs.get(2000);
 		Document d2 = docs.get(2001);
 
-		List<Double> vector1 = getTFIDF(d1);
-		List<Double> vector2 = getTFIDF(d2);
+		List<Double> vector1 = getVector(d1);
+		List<Double> vector2 = getVector(d2);
 
 		double cos = innerProducts(vector1, vector2) / vectorLen(vector1, vector2);
 		System.out.println(d1 + " " + d2 + " " + cos);
@@ -88,7 +88,7 @@ public class Index {
 		return d;
 	}
 
-	private List<Double> getTFIDF(Document doc) {
+	private List<Double> getVector(Document doc) {
 		List<Double> list = new ArrayList<Double>();
 		for (Term term : terms.values()) {
 			double tf = term.getDocs().count(doc);
