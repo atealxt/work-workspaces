@@ -57,10 +57,10 @@ public class Index {
 		Document d1 = docs.get(2000);
 		Document d2 = docs.get(2001);
 
-		List<Double> d1TFIDF = getTFIDF(d1);
-		List<Double> d2TFIDF = getTFIDF(d2);
+		List<Double> vector1 = getTFIDF(d1);
+		List<Double> vector2 = getTFIDF(d2);
 
-		double cos = innerProducts(d1TFIDF, d2TFIDF) / vectorLen(d1TFIDF, d2TFIDF);
+		double cos = innerProducts(vector1, vector2) / vectorLen(vector1, vector2);
 		System.out.println(d1 + " " + d2 + " " + cos);
 
 		// TODO categorization
