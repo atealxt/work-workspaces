@@ -1,5 +1,7 @@
 package io.github.atealxt.nlp;
 
+import io.github.atealxt.nlp.analysis.statistics.DocCompareStatistics;
+
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.IOException;
@@ -37,7 +39,7 @@ public class TextCategorizationTest {
 		System.out.println("Time Cost " + (float) (System.currentTimeMillis() - rightnow) / 1000 + "s");
 		rightnow = System.currentTimeMillis();
 		System.out.println("Analysis Start");
-		index.analysis();
+		new DocCompareStatistics(index).analysis();
 		System.out.println("Analysis End");
 		System.out.println("Time Cost " + (float) (System.currentTimeMillis() - rightnow) / 1000 + "s");
 		System.out.println("Test End");

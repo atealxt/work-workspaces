@@ -8,7 +8,6 @@ import io.github.atealxt.nlp.analysis.filter.LengthFilter;
 import io.github.atealxt.nlp.analysis.filter.StopWordFilter;
 import io.github.atealxt.nlp.analysis.tokenizer.SpaceTokenizer;
 
-import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -20,7 +19,6 @@ public class Index {
 	private final Tokenizer tokenizer;
 	private final List<Document> docs = new ArrayList<Document>();
 	private final Map<String, Term> dict = new HashMap<String, Term>();
-	private final static double cosThreshold = 0.5;
 
 	public Index() {
 		filters = new ArrayList<Filter>();
@@ -58,62 +56,11 @@ public class Index {
 		}
 	}
 
-	public static int analysisCnt = 0;
-
-	public void analysis() {
-
-//		for (int i = 0; i < docs.size(); i++) {
-//			for (int j = i + 1; j < docs.size(); j++) {
-//				Document d1 = docs.get(i);
-//				Document d2 = docs.get(j);
-//				List<Double> vector1 = getVector(d1);
-//				List<Double> vector2 = getVector(d2);
-//				double cos = innerProducts(vector1, vector2) / (vectorLen(d1, vector1) * vectorLen(d2, vector2));
-//				System.out.println(d1 + " " + d2 + " " + cos);
-//				analysisCnt++;
-//			}
-//		}
-
-		Document d1 = docs.get(2000);
-		Document d2 = docs.get(2001);
-
-		List<Double> vector1 = getVector(d1);
-		List<Double> vector2 = getVector(d2);
-
-		double cos = innerProducts(vector1, vector2) / vectorLen(vector1, vector2);
-		System.out.println(d1 + " " + d2 + " " + new DecimalFormat("#.##").format(cos));
-
-		// TODO categorization
+	public Map<String, Term> getDict() {
+		return dict;
 	}
 
-	private double vectorLen(Document doc, List<Double> tfidf) {
-		if (doc.getVectorLen() >= 0) {
-			return doc.getVectorLen();
-		}
-		double len = 0;
-		for (Double d : tfidf) {
-			len += Math.pow(d, 2);
-		}
-		len = Math.sqrt(len);
-		doc.setVectorLen(len);
-		return len;
-	}
-
-	private double innerProducts(List<Double> d1tfidf, List<Double> d2tfidf) {
-		double d = 0;
-		for (int i = 0; i < d1tfidf.size(); i++) {
-			d += d1tfidf.get(i) * d2tfidf.get(i);
-		}
-		return d;
-	}
-
-	private List<Double> getVector(Document doc) {
-		List<Double> list = new ArrayList<Double>();
-		for (Term term : dict.values()) {
-			double tf = term.getDocs().count(doc);
-			double tfidf = tf * term.getIDF();
-			list.add(tfidf);
-		}
-		return list;
+	public List<Document> getDocs() {
+		return docs;
 	}
 }
