@@ -30,9 +30,12 @@ public class Index {
 	}
 
 	public void addDoc(String name, String content) {
-		Document doc = new Document(name, content);
+		addDoc(new Document(name, content));
+	}
+
+	public void addDoc(Document doc) {
 		docs.add(doc);
-		for (String term : tokenizer.splitToTerms(content)) {
+		for (String term : tokenizer.splitToTerms(doc.getContent())) {
 			addTerm(doc, term);
 		}
 	}
