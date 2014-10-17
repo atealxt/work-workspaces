@@ -29,7 +29,7 @@ public class Index {
 		tokenizer = new SpaceTokenizer();
 	}
 
-	public void add(String name, String content) {
+	public void addDoc(String name, String content) {
 		Document doc = new Document(name, content);
 		docs.add(doc);
 		for (String term : tokenizer.splitToTerms(content)) {
