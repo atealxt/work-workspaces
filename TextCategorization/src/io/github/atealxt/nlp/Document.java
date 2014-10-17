@@ -8,6 +8,7 @@ public class Document implements Comparable<Document> {
 	private String name;
 	private String content;
 	private final Multiset<Term> terms = TreeMultiset.create();
+	private double vectorLen = -1;
 
 	public Document(String name, String content) {
 		super();
@@ -47,5 +48,13 @@ public class Document implements Comparable<Document> {
 	@Override
 	public String toString() {
 		return name;
+	}
+
+	public double getVectorLen() {
+		return vectorLen;
+	}
+
+	public void setVectorLen(double vectorLen) {
+		this.vectorLen = vectorLen;
 	}
 }

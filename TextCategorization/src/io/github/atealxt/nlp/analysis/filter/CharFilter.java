@@ -1,4 +1,4 @@
-package io.github.atealxt.nlp.filter;
+package io.github.atealxt.nlp.analysis.filter;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
