@@ -1,6 +1,6 @@
 package io.github.atealxt.nlp.analysis.tokenizer;
 
-import io.github.atealxt.nlp.Tokenizer;
+import io.github.atealxt.nlp.analysis.Tokenizer;
 
 public class SpaceTokenizer implements Tokenizer {
 

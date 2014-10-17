@@ -1,4 +1,4 @@
-package io.github.atealxt.nlp.analysis.filter;
+package io.github.atealxt.nlp.analysis;
 
 public interface Filter {
 

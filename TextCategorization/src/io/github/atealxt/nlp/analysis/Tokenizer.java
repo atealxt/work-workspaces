@@ -1,4 +1,4 @@
-package io.github.atealxt.nlp;
+package io.github.atealxt.nlp.analysis;
 
 public interface Tokenizer {
 

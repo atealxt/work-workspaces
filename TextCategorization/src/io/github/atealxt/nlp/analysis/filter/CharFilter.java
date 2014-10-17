@@ -1,5 +1,7 @@
 package io.github.atealxt.nlp.analysis.filter;
 
+import io.github.atealxt.nlp.analysis.Filter;
+
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 

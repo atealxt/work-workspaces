@@ -1,8 +1,9 @@
 package io.github.atealxt.nlp;
 
+import io.github.atealxt.nlp.analysis.Filter;
+import io.github.atealxt.nlp.analysis.Tokenizer;
 import io.github.atealxt.nlp.analysis.filter.CaseFilter;
 import io.github.atealxt.nlp.analysis.filter.CharFilter;
-import io.github.atealxt.nlp.analysis.filter.Filter;
 import io.github.atealxt.nlp.analysis.filter.LengthFilter;
 import io.github.atealxt.nlp.analysis.filter.StopWordFilter;
 import io.github.atealxt.nlp.analysis.tokenizer.SpaceTokenizer;
@@ -83,20 +84,6 @@ public class Index {
 		System.out.println(d1 + " " + d2 + " " + new DecimalFormat("#.##").format(cos));
 
 		// TODO categorization
-	}
-
-	private double vectorLen(List<Double> d1tfidf, List<Double> d2tfidf) {
-		double dx = 0;
-		for (Double d : d1tfidf) {
-			dx += Math.pow(d, 2);
-		}
-		dx = Math.sqrt(dx);
-		double dy = 0;
-		for (Double d : d2tfidf) {
-			dy += Math.pow(d, 2);
-		}
-		dy = Math.sqrt(dy);
-		return dx * dy;
 	}
 
 	private double vectorLen(Document doc, List<Double> tfidf) {
