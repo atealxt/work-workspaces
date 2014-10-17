@@ -20,7 +20,7 @@ public class DocCompareStatistics extends Statistics {
 		List<Double> vector1 = getVector(d1);
 		List<Double> vector2 = getVector(d2);
 
-		double cos = innerProducts(vector1, vector2) / (vectorLen(d1, vector1) * vectorLen(d2, vector2));
+		double cos = innerProducts(vector1, vector2) / vectorLen(d1, vector1, d2, vector2);
 		System.out.println(d1 + " " + d2 + " " + cos);
 	}
 }

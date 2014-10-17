@@ -16,7 +16,23 @@ public abstract class Statistics {
 		this.index = index;
 	}
 
-	protected double vectorLen(Document doc, List<Double> tfidf) {
+	public abstract void analysis();
+
+	protected List<Double> getVector(Document doc) {
+		List<Double> list = new ArrayList<Double>();
+		for (Term term : index.getDict().values()) {
+			double tf = term.getDocs().count(doc);
+			double tfidf = tf * term.getIDF();
+			list.add(tfidf);
+		}
+		return list;
+	}
+
+	protected double vectorLen(Document doc1, List<Double> vector1, Document doc2, List<Double> vector2) {
+		return vectorLen(doc1, vector1) * vectorLen(doc2, vector2);
+	}
+
+	private double vectorLen(Document doc, List<Double> tfidf) {
 		if (doc.getVectorLen() >= 0) {
 			return doc.getVectorLen();
 		}
@@ -36,16 +52,4 @@ public abstract class Statistics {
 		}
 		return d;
 	}
-
-	protected List<Double> getVector(Document doc) {
-		List<Double> list = new ArrayList<Double>();
-		for (Term term : index.getDict().values()) {
-			double tf = term.getDocs().count(doc);
-			double tfidf = tf * term.getIDF();
-			list.add(tfidf);
-		}
-		return list;
-	}
-
-	public abstract void analysis();
 }
