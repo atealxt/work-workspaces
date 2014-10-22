@@ -11,7 +11,7 @@ For now all the data/computing are in memory.
 * [DocCompareStatisticsTest](test/io/github/atealxt/nlp/analysis/statistics/DocCompareStatisticsTest.java).
   Compare 2 docs with calculate the similarity, a double value between `0` to `1`. `0` means completely unrelated, `1` means exactly the same (except text order inside). 
 * [CategorizationStatisticsTest](test/io/github/atealxt/nlp/analysis/statistics/CategorizationStatisticsTest.java).
-  Randomly pick up 100 docs from each folder to estimate category possibility, accuracy is greater than 92%.
+  Randomly pick up 100 docs from each folder to estimate category, accuracy is greater than 92%.
 
 ### Step to run
 
