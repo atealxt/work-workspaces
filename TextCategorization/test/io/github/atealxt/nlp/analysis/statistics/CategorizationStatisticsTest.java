@@ -18,7 +18,7 @@ import java.util.zip.ZipFile;
 public class CategorizationStatisticsTest extends TestBase {
 
 	private final int idxStartToCategory = new Random(System.currentTimeMillis()).nextInt(200);
-	private final int lenToCategory = 30;
+	private final int lenToCategory = 100;
 
 	@Override
 	protected void execute() throws ZipException, IOException {

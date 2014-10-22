@@ -15,9 +15,6 @@ public class CategorizationStatistics extends Statistics {
 		this.docsToCategory = docsToCategory;
 	}
 
-	private final static double cosThreshold = 0.5;
-	private final int process = 0;
-
 	@Override
 	public void analysis() {
 
@@ -30,7 +27,7 @@ public class CategorizationStatistics extends Statistics {
 			List<Double> vector1 = getVector(d1);
 
 			double max = 0;
-			String category = null;
+			Document category = null;
 
 			for (int j = 0; j < index.getDocs().size() - 1; j++) {
 				Document d2 = index.getDocs().get(j);
@@ -39,20 +36,23 @@ public class CategorizationStatistics extends Statistics {
 				// System.out.println(d1 + " " + d2 + " " + cos);
 				if (max < cos) {
 					max = cos;
-					category = d2.getName();
+					category = d2;
 				}
 			}
-			System.out.println("\"" + d1 + "\" is label to \"" + category + "\"");
-			if (category != null && d1.getName().startsWith(category)) {
-				testTrue++;
+			if (category == null) {
+				System.out.println("\"" + d1 + "\" doen't match any category.");
+			} else {
+				// System.out.println("\"" + d1 + "\" is labelled \"" + category.getName() + "\"");
+				if (d1.getName().startsWith(category.getName())) {
+					testTrue++;
+					index.addTerms(category, d1.getContent()); // Add terms to index if category estimate is correct.
+				} else {
+					System.out.println("False match. \"" + d1 + "\" is labelled \"" + category.getName() + "\"");
+				}
 			}
 			index.removeDoc(d1);
 		}
 
-		System.out.println("Test " + docsToCategory.size() + " docs, " + testTrue + " docs classified as expect.");
-	}
-
-	public int getProcess() {
-		return process;
+		System.out.println("Test " + docsToCategory.size() + " docs, " + testTrue + " classified as expect.");
 	}
 }
