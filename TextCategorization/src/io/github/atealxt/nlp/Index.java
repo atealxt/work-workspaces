@@ -41,10 +41,7 @@ public class Index {
 	}
 
 	private void addTerm(Document doc, String term) {
-		String t = term;
-		for (Filter f : filters) {
-			t = f.filter(t);
-		}
+		String t = filter(term);
 		if (!t.isEmpty()) {
 			Term tt = dict.get(t);
 			if (tt == null) {
@@ -56,6 +53,37 @@ public class Index {
 			// System.out.println("Add: " + t + " | " + term);
 		} else {
 			// System.out.println("Pass: " + term);
+		}
+	}
+
+	private String filter(String term) {
+		String t = term;
+		for (Filter f : filters) {
+			t = f.filter(t);
+		}
+		return t;
+	}
+
+	public void removeDoc(Document doc) {
+		docs.remove(doc);
+		for (String term : tokenizer.splitToTerms(doc.getContent())) {
+			removeTerm(doc, term);
+		}
+		doc.getTerms().clear();
+	}
+
+	private void removeTerm(Document doc, String term) {
+		String t = filter(term);
+		if (t.isEmpty()) {
+			return;
+		}
+		Term tt = dict.get(t);
+		if (tt == null) {
+			return;
+		}
+		tt.removeDoc(doc, docs.size());
+		if (tt.getDocs().size() == 0) {
+			dict.remove(t);
 		}
 	}
 
