@@ -21,6 +21,8 @@ public class CategorizationStatistics extends Statistics {
 	@Override
 	public void analysis() {
 
+		int testTrue = 0;
+
 		for (int i = 0; i < docsToCategory.size(); i++) {
 
 			Document d1 = docsToCategory.get(i);
@@ -41,8 +43,13 @@ public class CategorizationStatistics extends Statistics {
 				}
 			}
 			System.out.println("\"" + d1 + "\" is label to \"" + category + "\"");
+			if (category != null && d1.getName().startsWith(category)) {
+				testTrue++;
+			}
 			index.removeDoc(d1);
 		}
+
+		System.out.println("Test " + docsToCategory.size() + " docs, " + testTrue + " docs classified as expect.");
 	}
 
 	public int getProcess() {

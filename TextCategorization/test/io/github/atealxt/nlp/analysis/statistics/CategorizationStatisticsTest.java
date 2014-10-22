@@ -17,12 +17,14 @@ import java.util.zip.ZipFile;
 
 public class CategorizationStatisticsTest extends TestBase {
 
+	private final int idxStartToCategory = new Random(System.currentTimeMillis()).nextInt(200);
+	private final int lenToCategory = 30;
+
 	@Override
 	protected void execute() throws ZipException, IOException {
 
 		System.out.println("Data Load Start");
 
-		int readyToCategory = new Random(System.currentTimeMillis()).nextInt(300);
 		Index index = new Index();
 		List<Document> docs = new ArrayList<Document>();
 
@@ -44,7 +46,7 @@ public class CategorizationStatisticsTest extends TestBase {
 					continue;
 				}
 				String content = read(file.getInputStream(entry));
-				if (sum == readyToCategory) {
+				if (sum >= idxStartToCategory && sum < idxStartToCategory + lenToCategory) {
 					docs.add(new Document(entry.getName(), content));
 				} else {
 					docContent.append(content).append(" ");
