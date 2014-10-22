@@ -17,7 +17,7 @@ public class DocCompareStatisticsTest extends TestBase {
 	protected void execute() throws ZipException, IOException {
 		System.out.println("Data Load Start");
 		Index index = new Index();
-		URL url = Thread.currentThread().getContextClassLoader().getResource("articles.zip");
+		URL url = Thread.currentThread().getContextClassLoader().getResource("data.zip");
 		try (ZipFile file = new ZipFile(new File(url.getFile()));) {
 			final Enumeration<? extends ZipEntry> entries = file.entries();
 			while (entries.hasMoreElements()) {

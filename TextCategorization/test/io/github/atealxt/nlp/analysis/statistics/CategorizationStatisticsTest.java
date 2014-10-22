@@ -28,7 +28,7 @@ public class CategorizationStatisticsTest extends TestBase {
 		Index index = new Index();
 		List<Document> docs = new ArrayList<Document>();
 
-		URL url = Thread.currentThread().getContextClassLoader().getResource("articles.zip");
+		URL url = Thread.currentThread().getContextClassLoader().getResource("data.zip");
 		try (ZipFile file = new ZipFile(new File(url.getFile()));) {
 			final Enumeration<? extends ZipEntry> entries = file.entries();
 			int sum = 0;
