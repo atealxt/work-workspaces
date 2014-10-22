@@ -40,7 +40,7 @@ public class CategorizationStatistics extends Statistics {
 				}
 			}
 			if (category == null) {
-				System.out.println("\"" + d1 + "\" doen't match any category.");
+				System.out.println("\"" + d1 + "\" doesn't match any category.");
 			} else {
 				// System.out.println("\"" + d1 + "\" is labelled \"" + category.getName() + "\"");
 				if (d1.getName().startsWith(category.getName())) {
