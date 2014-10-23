@@ -18,37 +18,62 @@ public abstract class Statistics {
 
 	public abstract void analysis();
 
-	protected List<Double> getVector(Document doc) {
-		List<Double> list = new ArrayList<Double>();
+	/***
+	 * @return dimension 1: array index of term dictionary; dimension 2: tfidf;
+	 */
+	protected Object[][] getVector(Document doc) {
+		List<Object[]> list = new ArrayList<Object[]>();
+		int i = -1;
 		for (Term term : index.getDict().values()) {
+			i++;
 			double tf = term.getDocs().count(doc);
+			if (tf == 0) {
+				continue;
+			}
 			double tfidf = tf * term.getIDF();
-			list.add(tfidf);
+			if (tfidf == 0) {
+				continue;
+			}
+			list.add(new Object[] { i, tfidf });
 		}
-		return list;
+		return list.toArray(new Object[][] {});
 	}
 
-	protected double vectorLen(Document doc1, List<Double> vector1, Document doc2, List<Double> vector2) {
+	protected double vectorLen(Document doc1, Object[][] vector1, Document doc2, Object[][] vector2) {
 		return vectorLen(doc1, vector1) * vectorLen(doc2, vector2);
 	}
 
-	private double vectorLen(Document doc, List<Double> tfidf) {
+	private double vectorLen(Document doc, Object[][] vector) {
 		if (doc.getVectorLen() >= 0) {
 			return doc.getVectorLen();
 		}
 		double len = 0;
-		for (Double d : tfidf) {
-			len += Math.pow(d, 2);
+		for (int i = 0; i < vector.length; i++) {
+			len += Math.pow((double) vector[i][1], 2);
 		}
 		len = Math.sqrt(len);
 		doc.setVectorLen(len);
 		return len;
 	}
 
-	protected double innerProducts(List<Double> d1tfidf, List<Double> d2tfidf) {
+	protected double innerProducts(Object[][] vector1, Object[][] vector2) {
 		double d = 0;
-		for (int i = 0; i < d1tfidf.size(); i++) {
-			d += d1tfidf.get(i) * d2tfidf.get(i);
+		int idx2Start = 0;
+		for (int i = 0; i < vector1.length; i++) {
+			int idx1 = (int) vector1[i][0];
+			for (int j = idx2Start; j < vector2.length; j++) {
+				int idx2 = (int) vector2[j][0];
+				if (idx2 < idx1) {
+					continue;
+				} else if (idx2 > idx1) {
+					idx2Start = j;
+					break;
+				} else {
+					d += (double) vector1[i][1] * (double) vector2[j][1];
+					idx2Start = j + 1;
+					break;
+				}
+			}
 		}
 		return d;
 	}

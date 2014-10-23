@@ -24,14 +24,14 @@ public class CategorizationStatistics extends Statistics {
 
 			Document d1 = docsToCategory.get(i);
 			index.addDoc(d1);
-			List<Double> vector1 = getVector(d1);
+			Object[][] vector1 = getVector(d1);
 
 			double max = 0;
 			Document category = null;
 
 			for (int j = 0; j < index.getDocs().size() - 1; j++) {
 				Document d2 = index.getDocs().get(j);
-				List<Double> vector2 = getVector(d2);
+				Object[][] vector2 = getVector(d2);
 				double cos = innerProducts(vector1, vector2) / vectorLen(d1, vector1, d2, vector2);
 				// System.out.println(d1 + " " + d2 + " " + cos);
 				if (max < cos) {
