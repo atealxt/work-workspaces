@@ -32,6 +32,10 @@ public abstract class TestBase {
 		stepTime = System.currentTimeMillis();
 	}
 
+	protected String getFilePath() {
+		return Thread.currentThread().getContextClassLoader().getResource("data.zip").getFile();
+	}
+
 	protected String read(InputStream inputStream) throws IOException {
 		String str = null;
 		StringBuilder sb = new StringBuilder();
@@ -42,5 +46,6 @@ public abstract class TestBase {
 		}
 		return sb.toString();
 	}
+
 	protected abstract void execute() throws Exception;
 }

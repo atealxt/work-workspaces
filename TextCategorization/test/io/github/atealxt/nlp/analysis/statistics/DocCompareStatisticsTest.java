@@ -5,7 +5,6 @@ import io.github.atealxt.nlp.TestBase;
 
 import java.io.File;
 import java.io.IOException;
-import java.net.URL;
 import java.util.Enumeration;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipException;
@@ -17,8 +16,7 @@ public class DocCompareStatisticsTest extends TestBase {
 	protected void execute() throws ZipException, IOException {
 		System.out.println("Data Load Start");
 		Index index = new Index();
-		URL url = Thread.currentThread().getContextClassLoader().getResource("data.zip");
-		try (ZipFile file = new ZipFile(new File(url.getFile()));) {
+		try (ZipFile file = new ZipFile(new File(getFilePath()));) {
 			final Enumeration<? extends ZipEntry> entries = file.entries();
 			while (entries.hasMoreElements()) {
 				final ZipEntry entry = entries.nextElement();

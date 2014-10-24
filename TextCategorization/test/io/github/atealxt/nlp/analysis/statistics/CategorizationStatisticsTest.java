@@ -6,7 +6,6 @@ import io.github.atealxt.nlp.TestBase;
 
 import java.io.File;
 import java.io.IOException;
-import java.net.URL;
 import java.util.ArrayList;
 import java.util.Enumeration;
 import java.util.List;
@@ -28,8 +27,7 @@ public class CategorizationStatisticsTest extends TestBase {
 		Index index = new Index();
 		List<Document> docs = new ArrayList<Document>();
 
-		URL url = Thread.currentThread().getContextClassLoader().getResource("data.zip");
-		try (ZipFile file = new ZipFile(new File(url.getFile()));) {
+		try (ZipFile file = new ZipFile(new File(getFilePath()));) {
 			final Enumeration<? extends ZipEntry> entries = file.entries();
 			int sum = 0;
 			String docName = null;
