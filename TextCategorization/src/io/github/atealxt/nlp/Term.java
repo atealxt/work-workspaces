@@ -1,12 +1,12 @@
 package io.github.atealxt.nlp;
 
+import com.google.common.collect.HashMultiset;
 import com.google.common.collect.Multiset;
-import com.google.common.collect.TreeMultiset;
 
-public class Term implements Comparable<Term> {
+public class Term {
 
 	private String text;
-	private final Multiset<Document> docs = TreeMultiset.create();
+	private final Multiset<Document> docs = HashMultiset.create();
 	private double idf;
 
 	public Term(String text) {
@@ -20,11 +20,6 @@ public class Term implements Comparable<Term> {
 
 	public void setText(String text) {
 		this.text = text;
-	}
-
-	@Override
-	public int compareTo(Term o) {
-		return this.getText().compareTo(o.getText());
 	}
 
 	@Override
