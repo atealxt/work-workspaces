@@ -5,6 +5,9 @@ import io.github.atealxt.nlp.Category;
 import io.github.atealxt.nlp.Index;
 import io.github.atealxt.nlp.analysis.Statistics;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class AutoCategorizationStatistics extends Statistics {
 
 	private final double threshold = 0.1;
@@ -17,16 +20,16 @@ public class AutoCategorizationStatistics extends Statistics {
 	public void analysis() {
 
 		int dimension = 1;
-		int categoryCnt = 0;
 
+		List<Category> categories = new ArrayList<Category>();
 		for (int i = 0; i < index.getDocs().size() - 1; i++) {
 			CategorizedDocument d1 = (CategorizedDocument) index.getDocs().get(i);
 			if (d1.getCategory() != null) {
 				continue;
 			}
 			Category category = new Category(dimension);
-			categoryCnt++;
 			d1.setCategory(category);
+			categories.add(category);
 			Object[][] vector1 = getVector(d1);
 			for (int j = i + 1; j < index.getDocs().size(); j++) {
 				CategorizedDocument d2 = (CategorizedDocument) index.getDocs().get(j);
@@ -38,12 +41,12 @@ public class AutoCategorizationStatistics extends Statistics {
 				// System.out.println(d1 + " " + d2 + " " + cos);
 				if (cos >= threshold) {
 					d2.setCategory(category);
-					System.out.println("Category " + categoryCnt + " - " + " " + d1 + " " + d2);
+					System.out.println("Category " + (categories.size() - 1) + " - " + " " + d1 + " " + d2);
 				}
 			}
 		}
 
-		System.out.println("Total category count: " + categoryCnt);
+		System.out.println("Total category count: " + categories.size());
 
 		// TODO convergent category
 		// TODO summarize category text
