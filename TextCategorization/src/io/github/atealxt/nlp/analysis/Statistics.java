@@ -9,7 +9,7 @@ import java.util.List;
 
 public abstract class Statistics {
 
-	protected final Index index;
+	protected Index index;
 
 	public Statistics(Index index) {
 		super();

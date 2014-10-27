@@ -21,6 +21,7 @@ public abstract class TestBase {
 			execute();
 		} catch (Exception e) {
 			System.out.println("Time Cost " + (float) (System.currentTimeMillis() - startTime) / 1000 + "s");
+			e.printStackTrace();
 			throw e;
 		}
 		System.out.println("Test End");
