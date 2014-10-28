@@ -7,8 +7,12 @@ import io.github.atealxt.nlp.Term;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 public abstract class Statistics {
 
+	protected Logger logger = LogManager.getLogger(getClass());
 	protected Index index;
 
 	public Statistics(Index index) {

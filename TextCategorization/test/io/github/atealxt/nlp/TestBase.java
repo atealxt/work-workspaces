@@ -6,30 +6,33 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.nio.charset.StandardCharsets;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.junit.Test;
 
 public abstract class TestBase {
 
 	protected long startTime;
 	protected long stepTime;
+	protected Logger logger = LogManager.getLogger(getClass());
 
 	@Test
 	public void test() throws Exception {
-		System.out.println("Test Start");
+		logger.info("Test Start");
 		startTime = stepTime = System.currentTimeMillis();
 		try {
 			execute();
 		} catch (Exception e) {
-			System.out.println("Time Cost " + (float) (System.currentTimeMillis() - startTime) / 1000 + "s");
+			logger.info("Time Cost " + (float) (System.currentTimeMillis() - startTime) / 1000 + "s");
 			e.printStackTrace();
 			throw e;
 		}
-		System.out.println("Test End");
-		System.out.println("Total Time Cost " + (float) (System.currentTimeMillis() - startTime) / 1000 + "s");
+		logger.info("Test End");
+		logger.info("Total Time Cost " + (float) (System.currentTimeMillis() - startTime) / 1000 + "s");
 	}
 
 	protected void time() {
-		System.out.println("Time Cost " + (float) (System.currentTimeMillis() - stepTime) / 1000 + "s");
+		logger.info("Time Cost " + (float) (System.currentTimeMillis() - stepTime) / 1000 + "s");
 		stepTime = System.currentTimeMillis();
 	}
 

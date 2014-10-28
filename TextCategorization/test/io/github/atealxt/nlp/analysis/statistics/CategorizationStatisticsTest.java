@@ -22,7 +22,7 @@ public class CategorizationStatisticsTest extends TestBase {
 	@Override
 	protected void execute() throws ZipException, IOException {
 
-		System.out.println("Data Load Start");
+		logger.info("Data Load Start");
 
 		Index index = new Index();
 		List<Document> docs = new ArrayList<Document>();
@@ -53,11 +53,11 @@ public class CategorizationStatisticsTest extends TestBase {
 			}
 			index.addDoc(docName, docContent.toString());
 		}
-		System.out.println("Data Load End");
+		logger.info("Data Load End");
 		time();
-		System.out.println("Analysis Start");
+		logger.info("Analysis Start");
 		new CategorizationStatistics(index, docs).analysis();
-		System.out.println("Analysis End");
+		logger.info("Analysis End");
 		time();
 	}
 }

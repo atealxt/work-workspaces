@@ -14,7 +14,7 @@ public class DocCompareStatisticsTest extends TestBase {
 
 	@Override
 	protected void execute() throws ZipException, IOException {
-		System.out.println("Data Load Start");
+		logger.info("Data Load Start");
 		Index index = new Index();
 		try (ZipFile file = new ZipFile(new File(getFilePath()));) {
 			final Enumeration<? extends ZipEntry> entries = file.entries();
@@ -26,11 +26,11 @@ public class DocCompareStatisticsTest extends TestBase {
 				}
 			}
 		}
-		System.out.println("Data Load End");
+		logger.info("Data Load End");
 		time();
-		System.out.println("Analysis Start");
+		logger.info("Analysis Start");
 		new DocCompareStatistics(index).analysis();
-		System.out.println("Analysis End");
+		logger.info("Analysis End");
 		time();
 	}
 

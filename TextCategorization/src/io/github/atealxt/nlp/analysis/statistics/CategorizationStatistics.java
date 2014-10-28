@@ -33,26 +33,26 @@ public class CategorizationStatistics extends Statistics {
 				Document d2 = index.getDocs().get(j);
 				Object[][] vector2 = getVector(d2);
 				double cos = innerProducts(vector1, vector2) / vectorLen(d1, vector1, d2, vector2);
-				// System.out.println(d1 + " " + d2 + " " + cos);
+				logger.trace(d1 + " " + d2 + " " + cos);
 				if (max < cos) {
 					max = cos;
 					category = d2;
 				}
 			}
 			if (category == null) {
-				System.out.println("\"" + d1 + "\" doesn't match any category.");
+				logger.info("\"" + d1 + "\" doesn't match any category.");
 			} else {
-				// System.out.println("\"" + d1 + "\" is labelled \"" + category.getName() + "\"");
+				logger.debug("\"" + d1 + "\" is labelled \"" + category.getName() + "\"");
 				if (d1.getName().startsWith(category.getName())) {
 					testTrue++;
 					index.addTerms(category, d1.getContent()); // Add terms to index if category estimate is correct.
 				} else {
-					System.out.println("False match. \"" + d1 + "\" is labelled \"" + category.getName() + "\"");
+					logger.info("False match. \"" + d1 + "\" is labelled \"" + category.getName() + "\"");
 				}
 			}
 			index.removeDoc(d1);
 		}
 
-		System.out.println("Test " + docsToCategory.size() + " docs, " + testTrue + " classified as expect.");
+		logger.info("Test " + docsToCategory.size() + " docs, " + testTrue + " classified as expect.");
 	}
 }

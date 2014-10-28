@@ -13,8 +13,12 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 public class Index {
 
+	protected Logger logger = LogManager.getLogger(getClass());
 	private final List<Filter> filters;
 	private final Tokenizer tokenizer;
 	private final List<Document> docs = new ArrayList<Document>();
@@ -54,9 +58,9 @@ public class Index {
 			}
 			doc.addTerm(tt);
 			tt.addDoc(doc, docs.size());
-			// System.out.println("Add: " + t + " | " + term);
+			logger.trace("Add: " + t + " | " + term);
 		} else {
-			// System.out.println("Pass: " + term);
+			logger.trace("Pass: " + term);
 		}
 	}
 
