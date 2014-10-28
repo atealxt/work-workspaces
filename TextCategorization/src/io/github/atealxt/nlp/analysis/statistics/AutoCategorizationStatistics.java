@@ -10,7 +10,7 @@ import java.util.List;
 
 public class AutoCategorizationStatistics extends Statistics {
 
-	private final double threshold = 0.1;
+	private final double THRESHOLD = 0.1;
 	private int categorySequence = 0;
 
 	public AutoCategorizationStatistics(Index index) {
@@ -21,12 +21,17 @@ public class AutoCategorizationStatistics extends Statistics {
 	public void analysis() {
 
 		int dimension = 1, categorySize = index.getDocs().size();
-
 		List<Category> categories = calcSuperCategories(index, dimension);
-		while (categorySize != categories.size()) {
+		List<Category> superCategories = categories;
+		while (categorySize != superCategories.size()) {
+			categories = superCategories;
+			categorySize = categories.size();
+//			System.out.println("Dimension " + dimension + " categories:");
+//			for (Category cat : categories) {
+//				System.out.println(cat.getDocs());
+//			}
 			dimension++;
 			System.out.println("Building iterate " + dimension + " index");
-			categorySize = categories.size();
 			clearIndex(index);
 			index = new Index();
 			for (Category cat : categories) {
@@ -35,14 +40,24 @@ public class AutoCategorizationStatistics extends Statistics {
 					docContent.append(doc.getContent()).append(" ");
 					clearDoc(doc);
 				}
-				index.addDoc(new CategorizedDocument("Category " + cat.getId(), docContent.toString()));
+				String name = getDocsName(cat.getDocs());
+				index.addDoc(new CategorizedDocument(name, docContent.toString()));
 				clearSubCategory(cat);
 			}
-			System.out.println("Calculate super categories");
-			categories = calcSuperCategories(index, dimension);
+			System.out.println("Calculate iterate " + dimension + " categories");
+			superCategories = calcSuperCategories(index, dimension);
 		}
 
 		// TODO summarize category name
+	}
+
+	private String getDocsName(List<CategorizedDocument> docs) {
+		StringBuilder name = new StringBuilder();
+		for (CategorizedDocument doc : docs) {
+			name.append(doc.getName()).append(", ");
+		}
+		name.delete(name.length() - 2, name.length());
+		return name.toString();
 	}
 
 	private void clearDoc(CategorizedDocument doc) {
@@ -78,9 +93,9 @@ public class AutoCategorizationStatistics extends Statistics {
 				Object[][] vector2 = getVector(d2);
 				double cos = innerProducts(vector1, vector2) / vectorLen(d1, vector1, d2, vector2);
 				// System.out.println(d1 + " " + d2 + " " + cos);
-				if (cos >= threshold) {
+				if (cos >= THRESHOLD) {
 					d2.setCategory(category);
-					System.out.println("Category " + categorySequence + " - " + d1 + " " + d2);
+					// System.out.println("Category " + categorySequence + " - " + d1 + " " + d2);
 				}
 			}
 		}
