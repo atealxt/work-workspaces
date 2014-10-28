@@ -49,8 +49,6 @@ public class AutoCategorizationStatistics extends Statistics {
 			logger.info("Calculate iterate {} categories", dimension);
 			superCategories = calcSuperCategories(index, dimension);
 		}
-
-		// TODO summarize category name
 	}
 
 	private String getDocsName(List<CategorizedDocument> docs) {
