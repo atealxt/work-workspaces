@@ -6,6 +6,9 @@
 		</Console>
 	</Appenders>
 	<Loggers>
+		<!-- <Logger name="io.github.atealxt.nlp.analysis.statistics.AutoCategorizationStatistics" level="debug" additivity="false">
+			<AppenderRef ref="Console" />
+		</Logger> -->
 		<Root level="INFO">
 			<AppenderRef ref="Console" />
 		</Root>
