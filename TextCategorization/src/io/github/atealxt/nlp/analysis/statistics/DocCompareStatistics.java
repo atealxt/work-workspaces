@@ -19,6 +19,6 @@ public class DocCompareStatistics extends Statistics {
 		Object[][] vector2 = getVector(d2);
 
 		double cos = innerProducts(vector1, vector2) / vectorLen(d1, vector1, d2, vector2);
-		logger.info(d1 + " " + d2 + " " + cos);
+		logger.info("{} {} {}", d1, d2, cos);
 	}
 }

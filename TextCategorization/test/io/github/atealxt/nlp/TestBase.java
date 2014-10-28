@@ -23,16 +23,16 @@ public abstract class TestBase {
 		try {
 			execute();
 		} catch (Exception e) {
-			logger.info("Time Cost " + (float) (System.currentTimeMillis() - startTime) / 1000 + "s");
+			logger.info("Time Cost {}s", (float) (System.currentTimeMillis() - startTime) / 1000);
 			e.printStackTrace();
 			throw e;
 		}
 		logger.info("Test End");
-		logger.info("Total Time Cost " + (float) (System.currentTimeMillis() - startTime) / 1000 + "s");
+		logger.info("Total Time Cost {}s", (float) (System.currentTimeMillis() - startTime) / 1000);
 	}
 
 	protected void time() {
-		logger.info("Time Cost " + (float) (System.currentTimeMillis() - stepTime) / 1000 + "s");
+		logger.info("Time Cost {}s", (float) (System.currentTimeMillis() - stepTime) / 1000);
 		stepTime = System.currentTimeMillis();
 	}
 

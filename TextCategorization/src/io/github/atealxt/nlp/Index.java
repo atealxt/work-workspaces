@@ -58,9 +58,9 @@ public class Index {
 			}
 			doc.addTerm(tt);
 			tt.addDoc(doc, docs.size());
-			logger.trace("Add: " + t + " | " + term);
+			logger.trace("Add: {} | {}", t, term);
 		} else {
-			logger.trace("Pass: " + term);
+			logger.trace("Pass: {}", term);
 		}
 	}
 

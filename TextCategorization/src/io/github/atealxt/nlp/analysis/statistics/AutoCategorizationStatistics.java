@@ -26,12 +26,14 @@ public class AutoCategorizationStatistics extends Statistics {
 		while (categorySize != superCategories.size()) {
 			categories = superCategories;
 			categorySize = categories.size();
-			logger.debug("Dimension " + dimension + " categories:");
-			for (Category cat : categories) {
-				logger.debug(cat.getDocs());
+			if (logger.isDebugEnabled()) {
+				logger.debug("Dimension {} categories:", dimension);
+				for (Category cat : categories) {
+					logger.debug(cat.getDocs());
+				}
 			}
 			dimension++;
-			logger.info("Building iterate " + dimension + " index");
+			logger.info("Building iterate {} index", dimension);
 			clearIndex(index);
 			index = new Index();
 			for (Category cat : categories) {
@@ -44,7 +46,7 @@ public class AutoCategorizationStatistics extends Statistics {
 				index.addDoc(new CategorizedDocument(name, docContent.toString()));
 				clearSubCategory(cat);
 			}
-			logger.info("Calculate iterate " + dimension + " categories");
+			logger.info("Calculate iterate {} categories", dimension);
 			superCategories = calcSuperCategories(index, dimension);
 		}
 
@@ -92,15 +94,15 @@ public class AutoCategorizationStatistics extends Statistics {
 				}
 				Object[][] vector2 = getVector(d2);
 				double cos = innerProducts(vector1, vector2) / vectorLen(d1, vector1, d2, vector2);
-				logger.trace(d1 + " " + d2 + " " + cos);
+				logger.trace("{} {} {}", d1, d2, cos);
 				if (cos >= THRESHOLD) {
 					d2.setCategory(category);
-					logger.trace("Category " + categorySequence + " - " + d1 + " " + d2);
+					logger.trace("Category {} - {} {}", categorySequence, d1, d2);
 				}
 			}
 		}
 
-		logger.info("Dimension " + dimension + " category count: " + categories.size());
+		logger.info("Dimension {} category count: {}", dimension, categories.size());
 		return categories;
 	}
 
