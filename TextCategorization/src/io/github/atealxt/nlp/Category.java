@@ -30,4 +30,9 @@ public class Category {
 	public List<CategorizedDocument> getDocs() {
 		return docs;
 	}
+
+	@Override
+	public String toString() {
+		return "Category [id=" + id + ", dimension=" + dimension + "]";
+	}
 }

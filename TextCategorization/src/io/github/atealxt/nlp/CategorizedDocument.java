@@ -15,7 +15,9 @@ public class CategorizedDocument extends Document {
 
 	public void setCategory(Category category) {
 		this.category = category;
-		category.addDocument(this);
+		if (category != null) {
+			category.addDocument(this);
+		}
 	}
 
 	public Object[][] getVector() {

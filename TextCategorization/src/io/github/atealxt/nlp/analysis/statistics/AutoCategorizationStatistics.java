@@ -2,7 +2,6 @@ package io.github.atealxt.nlp.analysis.statistics;
 
 import io.github.atealxt.nlp.CategorizedDocument;
 import io.github.atealxt.nlp.Category;
-import io.github.atealxt.nlp.Document;
 import io.github.atealxt.nlp.Index;
 import io.github.atealxt.nlp.analysis.Statistics;
 
@@ -28,13 +27,16 @@ public class AutoCategorizationStatistics extends Statistics {
 			dimension++;
 			System.out.println("Building iterate " + dimension + " index");
 			categorySize = categories.size();
-			index = new Index(); // TODO OOM!
+			clearIndex(index);
+			index = new Index();
 			for (Category cat : categories) {
 				StringBuilder docContent = new StringBuilder(100);
-				for (Document doc : cat.getDocs()) {
+				for (CategorizedDocument doc : cat.getDocs()) {
 					docContent.append(doc.getContent()).append(" ");
+					clearDoc(doc);
 				}
 				index.addDoc(new CategorizedDocument("Category " + cat.getId(), docContent.toString()));
+				clearSubCategory(cat);
 			}
 			System.out.println("Calculate super categories");
 			categories = calcSuperCategories(index, dimension);
@@ -43,9 +45,23 @@ public class AutoCategorizationStatistics extends Statistics {
 		// TODO summarize category name
 	}
 
+	private void clearDoc(CategorizedDocument doc) {
+		doc.getTerms().clear();
+		doc.setCategory(null);
+	}
+
+	private void clearSubCategory(Category cat) {
+		cat.getDocs().clear();
+	}
+
+	private void clearIndex(Index index) {
+		index.getDocs().clear();
+		index.getDict().clear();
+	}
+
 	private List<Category> calcSuperCategories(Index index, int dimension) {
 		List<Category> categories = new ArrayList<Category>();
-		for (int i = 0; i < index.getDocs().size() - 1; i++) {
+		for (int i = 0; i < index.getDocs().size(); i++) {
 			CategorizedDocument d1 = (CategorizedDocument) index.getDocs().get(i);
 			if (d1.getCategory() != null) {
 				continue;
