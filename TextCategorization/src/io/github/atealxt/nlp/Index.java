@@ -68,6 +68,9 @@ public class Index {
 		String t = term;
 		for (Filter f : filters) {
 			t = f.filter(t);
+			if (t.isEmpty()) {
+				return t;
+			}
 		}
 		return t;
 	}
