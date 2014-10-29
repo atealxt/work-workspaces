@@ -19,18 +19,18 @@ import org.apache.logging.log4j.Logger;
 public class Index {
 
 	protected Logger logger = LogManager.getLogger(getClass());
-	private final List<Filter> filters;
-	private final Tokenizer tokenizer;
+	private final static Tokenizer tokenizer;
+	private final static List<Filter> filters;
 	private final List<Document> docs = new ArrayList<Document>();
 	private final Map<String, Term> dict = new HashMap<String, Term>();
 
-	public Index() {
+	static {
+		tokenizer = new SpaceTokenizer();
 		filters = new ArrayList<Filter>();
 		filters.add(new StopWordFilter());
 		filters.add(new CharFilter());
 		filters.add(new LengthFilter());
 		filters.add(new CaseFilter());
-		tokenizer = new SpaceTokenizer();
 	}
 
 	public void addDoc(String name, String content) {

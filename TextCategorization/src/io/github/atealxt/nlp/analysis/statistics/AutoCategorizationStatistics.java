@@ -63,6 +63,7 @@ public class AutoCategorizationStatistics extends Statistics {
 	private void clearDoc(CategorizedDocument doc) {
 		doc.getTerms().clear();
 		doc.setCategory(null);
+		doc.setContent(null);
 	}
 
 	private void clearSubCategory(Category cat) {
