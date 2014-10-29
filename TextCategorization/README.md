@@ -1,8 +1,8 @@
 ## Text Categorization
 
-This is a Text (Document) Category machine learning program which is base on [Tf–idf](http://en.wikipedia.org/wiki/Tf%E2%80%93idf) and [Cosine similarity](http://en.wikipedia.org/wiki/Cosine_similarity) algorithm.
+This is a Text (Document) Category machine learning program which is base on algorithms [Tf–idf](http://en.wikipedia.org/wiki/Tf%E2%80%93idf) and [Cosine similarity](http://en.wikipedia.org/wiki/Cosine_similarity).
 
-[data.zip](data/data.zip) is a traning data zip file, which have 8 category folders with more than 3 hundred manual classified docs each one.  
+[data.zip](data/data.zip) is a training data zip file, which have 8 category folders with more than 3 hundred manual classified docs each one.  
 
 ### Features
 
