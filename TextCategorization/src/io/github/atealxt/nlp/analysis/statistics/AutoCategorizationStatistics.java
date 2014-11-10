@@ -28,46 +28,20 @@ public class AutoCategorizationStatistics extends Statistics {
 			categorySize = categories.size();
 			if (logger.isDebugEnabled()) {
 				logger.debug("Dimension {} categories:", dimension);
-				for (Category cat : categories) {
-					logger.debug(cat.getDocs());
-				}
 			}
 			dimension++;
 			logger.info("Building iterate {} index", dimension);
 			clearIndex(index);
 			index = new Index();
 			for (Category cat : categories) {
-				StringBuilder docContent = new StringBuilder(100);
-				for (CategorizedDocument doc : cat.getDocs()) {
-					docContent.append(doc.getContent()).append(" ");
-					clearDoc(doc);
-				}
-				String name = getDocsName(cat.getDocs());
+				String name = cat.getDocsName(", ");
+				String docContent = cat.getDocsContent(" ");
+				cat.clear();
 				index.addDoc(new CategorizedDocument(name, docContent.toString()));
-				clearSubCategory(cat);
 			}
 			logger.info("Calculate iterate {} categories", dimension);
 			superCategories = calcSuperCategories(index, dimension);
 		}
-	}
-
-	private String getDocsName(List<CategorizedDocument> docs) {
-		StringBuilder name = new StringBuilder();
-		for (CategorizedDocument doc : docs) {
-			name.append(doc.getName()).append(", ");
-		}
-		name.delete(name.length() - 2, name.length());
-		return name.toString();
-	}
-
-	private void clearDoc(CategorizedDocument doc) {
-		doc.getTerms().clear();
-		doc.setCategory(null);
-		doc.setContent(null);
-	}
-
-	private void clearSubCategory(Category cat) {
-		cat.getDocs().clear();
 	}
 
 	private void clearIndex(Index index) {

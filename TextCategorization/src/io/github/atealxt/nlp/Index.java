@@ -80,7 +80,7 @@ public class Index {
 		for (String term : tokenizer.splitToTerms(doc.getContent())) {
 			removeTerm(doc, term);
 		}
-		doc.getTerms().clear();
+		doc.clearTerms();
 	}
 
 	private void removeTerm(Document doc, String term) {
@@ -93,7 +93,7 @@ public class Index {
 			return;
 		}
 		tt.removeDoc(doc, docs.size());
-		if (tt.getDocs().size() == 0) {
+		if (tt.isNullDoc()) {
 			dict.remove(t);
 		}
 	}

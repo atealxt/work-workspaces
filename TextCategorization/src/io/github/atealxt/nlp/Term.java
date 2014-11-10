@@ -27,8 +27,12 @@ public class Term {
 		return text;
 	}
 
-	public Multiset<Document> getDocs() {
-		return docs;
+	public int count(Document doc) {
+		return docs.count(doc);
+	}
+
+	public boolean isNullDoc() {
+		return docs.size() == 0;
 	}
 
 	public void addDoc(Document doc, int total) {

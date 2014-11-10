@@ -30,7 +30,7 @@ public abstract class Statistics {
 		int i = -1;
 		for (Term term : index.getDict().values()) {
 			i++;
-			double tf = term.getDocs().count(doc);
+			int tf = term.count(doc);
 			if (tf == 0) {
 				continue;
 			}

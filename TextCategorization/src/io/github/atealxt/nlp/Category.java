@@ -27,8 +27,31 @@ public class Category {
 		docs.add(doc);
 	}
 
-	public List<CategorizedDocument> getDocs() {
-		return docs;
+	public String getDocsContent(String join) {
+		StringBuilder sb = new StringBuilder(100);
+		for (CategorizedDocument doc : docs) {
+			sb.append(doc.getContent()).append(join);
+		}
+		sb.delete(sb.length() - join.length(), sb.length());
+		return sb.toString();
+	}
+
+	public String getDocsName(String join) {
+		StringBuilder sb = new StringBuilder();
+		for (CategorizedDocument doc : docs) {
+			sb.append(doc.getName()).append(join);
+		}
+		sb.delete(sb.length() - join.length(), sb.length());
+		return sb.toString();
+	}
+
+	public void clear() {
+		for (CategorizedDocument doc : docs) {
+			doc.clearTerms();
+			doc.setCategory(null);
+			doc.setContent(null);
+		}
+		docs.clear();
 	}
 
 	@Override

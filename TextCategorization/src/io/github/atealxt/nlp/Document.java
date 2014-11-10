@@ -36,8 +36,8 @@ public class Document {
 		terms.add(t);
 	}
 
-	public Multiset<Term> getTerms() {
-		return terms;
+	public void clearTerms() {
+		terms.clear();
 	}
 
 	@Override
