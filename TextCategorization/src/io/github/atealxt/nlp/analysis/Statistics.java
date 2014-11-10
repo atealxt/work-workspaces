@@ -2,10 +2,6 @@ package io.github.atealxt.nlp.analysis;
 
 import io.github.atealxt.nlp.Document;
 import io.github.atealxt.nlp.Index;
-import io.github.atealxt.nlp.Term;
-
-import java.util.ArrayList;
-import java.util.List;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -21,27 +17,6 @@ public abstract class Statistics {
 	}
 
 	public abstract void analysis();
-
-	/***
-	 * @return dimension 1: array index of term dictionary; dimension 2: tfidf;
-	 */
-	protected Object[][] getVector(Document doc) {
-		List<Object[]> list = new ArrayList<Object[]>();
-		int i = -1;
-		for (Term term : index.getDict().values()) {
-			i++;
-			int tf = term.count(doc);
-			if (tf == 0) {
-				continue;
-			}
-			double tfidf = tf * term.getIDF();
-			if (tfidf == 0) {
-				continue;
-			}
-			list.add(new Object[] { i, tfidf });
-		}
-		return list.toArray(new Object[][] {});
-	}
 
 	protected double vectorLen(Document doc1, Object[][] vector1, Document doc2, Object[][] vector2) {
 		return vectorLen(doc1, vector1) * vectorLen(doc2, vector2);

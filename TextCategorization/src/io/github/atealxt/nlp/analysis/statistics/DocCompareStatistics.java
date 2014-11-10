@@ -15,8 +15,8 @@ public class DocCompareStatistics extends Statistics {
 		Document d1 = index.getDocs().get(0);
 		Document d2 = index.getDocs().get(1);
 
-		Object[][] vector1 = getVector(d1);
-		Object[][] vector2 = getVector(d2);
+		Object[][] vector1 = index.getVector(d1);
+		Object[][] vector2 = index.getVector(d2);
 
 		double cos = innerProducts(vector1, vector2) / vectorLen(d1, vector1, d2, vector2);
 		logger.info("{} {} {}", d1, d2, cos);

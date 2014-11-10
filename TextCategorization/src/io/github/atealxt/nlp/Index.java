@@ -98,11 +98,33 @@ public class Index {
 		}
 	}
 
-	public Map<String, Term> getDict() {
-		return dict;
-	}
-
 	public List<Document> getDocs() {
 		return docs;
+	}
+
+	/***
+	 * @return dimension 1: array index of term dictionary; dimension 2: tfidf;
+	 */
+	public Object[][] getVector(Document doc) {
+		List<Object[]> list = new ArrayList<Object[]>();
+		int i = -1;
+		for (Term term : dict.values()) {
+			i++;
+			int tf = term.count(doc);
+			if (tf == 0) {
+				continue;
+			}
+			double tfidf = tf * term.getIDF();
+			if (tfidf == 0) {
+				continue;
+			}
+			list.add(new Object[] { i, tfidf });
+		}
+		return list.toArray(new Object[][] {});
+	}
+
+	public void clear() {
+		docs.clear();
+		dict.clear();
 	}
 }

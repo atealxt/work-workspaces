@@ -31,7 +31,7 @@ public class AutoCategorizationStatistics extends Statistics {
 			}
 			dimension++;
 			logger.info("Building iterate {} index", dimension);
-			clearIndex(index);
+			index.clear();
 			index = new Index();
 			for (Category cat : categories) {
 				String name = cat.getDocsName(", ");
@@ -42,11 +42,6 @@ public class AutoCategorizationStatistics extends Statistics {
 			logger.info("Calculate iterate {} categories", dimension);
 			superCategories = calcSuperCategories(index, dimension);
 		}
-	}
-
-	private void clearIndex(Index index) {
-		index.getDocs().clear();
-		index.getDict().clear();
 	}
 
 	private List<Category> calcSuperCategories(Index index, int dimension) {
@@ -83,7 +78,7 @@ public class AutoCategorizationStatistics extends Statistics {
 		if (doc.getVector() != null) {
 			return doc.getVector();
 		}
-		Object[][] ret = super.getVector(doc);
+		Object[][] ret = index.getVector(doc);
 		doc.setVector(ret);
 		return ret;
 	}
