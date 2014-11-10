@@ -37,7 +37,7 @@ public class Category {
 	}
 
 	public String getDocsName(String join) {
-		StringBuilder sb = new StringBuilder();
+		StringBuilder sb = new StringBuilder(50);
 		for (CategorizedDocument doc : docs) {
 			sb.append(doc.getName()).append(join);
 		}
