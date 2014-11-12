@@ -2,12 +2,15 @@ package io.github.atealxt.nlp;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Set;
+import java.util.TreeSet;
 
 public class Category {
 
 	private final int id;
 	private final int dimension;
 	private final List<CategorizedDocument> docs = new ArrayList<CategorizedDocument>();
+	protected final Set<Term> allTerms = new TreeSet<Term>();
 
 	public Category(int id, int dimension) {
 		super();
@@ -25,6 +28,7 @@ public class Category {
 
 	public void addDocument(CategorizedDocument doc) {
 		docs.add(doc);
+		allTerms.addAll(doc.getTerms());
 	}
 
 	public String getDocsContent(String join) {
@@ -52,10 +56,29 @@ public class Category {
 			doc.setContent(null);
 		}
 		docs.clear();
+		allTerms.clear();
 	}
 
 	@Override
 	public String toString() {
-		return "Category [id=" + id + ", dimension=" + dimension + "]";
+		StringBuilder name = new StringBuilder();
+		name.append(dimension).append("_").append(id).append(" ");
+		if (allTerms.isEmpty()) {
+			if (docs.size() == 1) {
+				return name.append(docs.get(0).getName()).toString();
+			}
+			throw new IllegalStateException();
+		}
+		name.append("[");
+		List<Term> terms = new ArrayList<Term>(allTerms);
+		int loop = Math.min(3, terms.size());
+		for (int i = terms.size() - 1; i > (terms.size() - 1 - loop); i--) {
+			name.append(terms.get(i).getText());
+			if (i != terms.size() - loop) {
+				name.append(", ");
+			}
+		}
+		name.append("]");
+		return name.toString();
 	}
 }

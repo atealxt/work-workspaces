@@ -3,7 +3,7 @@ package io.github.atealxt.nlp;
 import com.google.common.collect.HashMultiset;
 import com.google.common.collect.Multiset;
 
-public class Term {
+public class Term implements Comparable<Term> {
 
 	private String text;
 	private final Multiset<Document> docs = HashMultiset.create();
@@ -51,5 +51,13 @@ public class Term {
 
 	public double getIDF() {
 		return idf;
+	}
+
+	@Override
+	public int compareTo(Term o) {
+		if (this.idf != 0 && o.getIDF() != 0 && this.idf != o.getIDF()) {
+			return (this.idf - o.getIDF()) > 0 ? 1 : -1;
+		}
+		return this.text.compareTo(o.getText());
 	}
 }

@@ -1,5 +1,7 @@
 package io.github.atealxt.nlp;
 
+import com.google.common.collect.Multiset;
+
 public class CategorizedDocument extends Document {
 
 	private Category category;
@@ -26,5 +28,9 @@ public class CategorizedDocument extends Document {
 
 	public void setVector(Object[][] vector) {
 		this.vector = vector;
+	}
+
+	Multiset<Term> getTerms() {
+		return terms;
 	}
 }

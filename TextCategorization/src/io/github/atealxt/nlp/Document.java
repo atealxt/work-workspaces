@@ -7,7 +7,7 @@ public class Document {
 
 	private String name;
 	private String content;
-	private final Multiset<Term> terms = HashMultiset.create();
+	protected final Multiset<Term> terms = HashMultiset.create();
 	private double vectorLen = -1;
 
 	public Document(String name, String content) {

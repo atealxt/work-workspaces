@@ -71,6 +71,7 @@ public class AutoCategorizationStatistics extends Statistics {
 		}
 
 		logger.info("Dimension {} category count: {}", dimension, categories.size());
+		logger.debug(categories);
 		return categories;
 	}
 
