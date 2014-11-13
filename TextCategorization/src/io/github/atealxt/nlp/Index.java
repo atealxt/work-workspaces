@@ -6,7 +6,7 @@ import io.github.atealxt.nlp.analysis.filter.CaseFilter;
 import io.github.atealxt.nlp.analysis.filter.CharFilter;
 import io.github.atealxt.nlp.analysis.filter.LengthFilter;
 import io.github.atealxt.nlp.analysis.filter.StopWordFilter;
-import io.github.atealxt.nlp.analysis.tokenizer.SpaceTokenizer;
+import io.github.atealxt.nlp.analysis.tokenizer.SimpleTokenizer;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -25,7 +25,7 @@ public class Index {
 	private final Map<String, Term> dict = new HashMap<String, Term>();
 
 	static {
-		tokenizer = new SpaceTokenizer();
+		tokenizer = new SimpleTokenizer();
 		filters = new ArrayList<Filter>();
 		filters.add(new StopWordFilter());
 		filters.add(new CharFilter());
