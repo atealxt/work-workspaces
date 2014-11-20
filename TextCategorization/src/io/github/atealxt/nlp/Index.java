@@ -50,18 +50,18 @@ public class Index {
 
 	private void addTerm(Document doc, String term) {
 		String t = filter(term);
-		if (!t.isEmpty()) {
-			Term tt = dict.get(t);
-			if (tt == null) {
-				tt = new Term(t);
-				dict.put(t, tt);
-			}
-			doc.addTerm(tt);
-			tt.addDoc(doc, docs.size());
-			logger.trace("Add: {} | {}", t, term);
-		} else {
-			logger.trace("Pass: {}", term);
+		if (t.isEmpty()) {
+			logger.trace("Skipped term: {}", term);
+			return;
 		}
+		Term tt = dict.get(t);
+		if (tt == null) {
+			tt = new Term(t);
+			dict.put(t, tt);
+		}
+		doc.addTerm(tt);
+		tt.addDoc(doc, docs.size());
+		logger.trace("Added term: {} | {}", t, term);
 	}
 
 	private String filter(String term) {
