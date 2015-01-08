@@ -18,4 +18,4 @@ Common database access API base on [Apache DbUtils](http://commons.apache.org/pr
 
 ### [easyCache](easyCache)
 
-A simple cache common java API for memcached and ehcache.
+A simple java API proxy framework for [Memcached](http://memcached.org/) and [Ehcache](http://ehcache.org/).
