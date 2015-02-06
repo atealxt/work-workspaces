@@ -10,10 +10,10 @@ For now all the data/computing are in memory.
 
 * [DocCompareStatisticsTest](test/io/github/atealxt/nlp/analysis/statistics/DocCompareStatisticsTest.java).
   Compare 2 docs with calculate the similarity, a double value between `0` to `1`. `0` means completely unrelated, `1` means exactly the same (except text order inside). 
-* [CategorizationStatisticsTest](test/io/github/atealxt/nlp/analysis/statistics/CategorizationStatisticsTest.java).
+* [ClassificationStatisticsTest](test/io/github/atealxt/nlp/analysis/statistics/ClassificationStatisticsTest.java).
   Randomly pick up 100 docs from each folder to estimate category, accuracy is about 95% for now. (With a [Stemmer](http://en.wikipedia.org/wiki/Stemming) like Lucene [PorterStemmer](http://svn.apache.org/repos/asf/lucene/dev/trunk/lucene/analysis/common/src/java/org/apache/lucene/analysis/en/PorterStemmer.java) result will be better.)
-* [AutoCategorizationStatisticsTest](test/io/github/atealxt/nlp/analysis/statistics/AutoCategorizationStatisticsTest.java).
-  Disregards the folder, collect all docs together to estimate the category convergently until no changes.
+* [ClusteringStatisticsTest](test/io/github/atealxt/nlp/analysis/statistics/ClusteringStatisticsTest.java).
+  Disregards the folder, collect all docs together and clustering convergently.
   At last almost all docs are gathered to one category (root), except noisy samples.
 
 ### Step to run

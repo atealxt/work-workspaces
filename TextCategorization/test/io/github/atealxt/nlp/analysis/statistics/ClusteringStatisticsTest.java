@@ -11,7 +11,7 @@ import java.util.zip.ZipEntry;
 import java.util.zip.ZipException;
 import java.util.zip.ZipFile;
 
-public class AutoCategorizationStatisticsTest extends TestBase {
+public class ClusteringStatisticsTest extends TestBase {
 
 	@Override
 	protected void execute() throws ZipException, IOException {
@@ -31,7 +31,7 @@ public class AutoCategorizationStatisticsTest extends TestBase {
 		logger.info("Data Load End");
 		time();
 		logger.info("Analysis Start");
-		AutoCategorizationStatistics statistics = new AutoCategorizationStatistics(index);
+		ClusteringStatistics statistics = new ClusteringStatistics(index);
 		statistics.analysis();
 		logger.info("Analysis End");
 		time();

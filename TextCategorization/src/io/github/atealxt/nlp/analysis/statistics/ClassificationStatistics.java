@@ -6,11 +6,11 @@ import io.github.atealxt.nlp.analysis.Statistics;
 
 import java.util.List;
 
-public class CategorizationStatistics extends Statistics {
+public class ClassificationStatistics extends Statistics {
 
 	private final List<Document> docsToCategory;
 
-	public CategorizationStatistics(Index index, List<Document> docsToCategory) {
+	public ClassificationStatistics(Index index, List<Document> docsToCategory) {
 		super(index);
 		this.docsToCategory = docsToCategory;
 	}

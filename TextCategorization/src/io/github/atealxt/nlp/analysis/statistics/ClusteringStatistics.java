@@ -8,12 +8,12 @@ import io.github.atealxt.nlp.analysis.Statistics;
 import java.util.ArrayList;
 import java.util.List;
 
-public class AutoCategorizationStatistics extends Statistics {
+public class ClusteringStatistics extends Statistics {
 
 	private final double THRESHOLD = 0.1;
 	private int categorySequence = 0;
 
-	public AutoCategorizationStatistics(Index index) {
+	public ClusteringStatistics(Index index) {
 		super(index);
 	}
 

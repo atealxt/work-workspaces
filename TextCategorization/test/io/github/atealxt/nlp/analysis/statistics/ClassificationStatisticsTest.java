@@ -14,7 +14,7 @@ import java.util.zip.ZipEntry;
 import java.util.zip.ZipException;
 import java.util.zip.ZipFile;
 
-public class CategorizationStatisticsTest extends TestBase {
+public class ClassificationStatisticsTest extends TestBase {
 
 	private final int idxStartToCategory = new Random(System.currentTimeMillis()).nextInt(200);
 	private final int lenToCategory = 100;
@@ -56,7 +56,7 @@ public class CategorizationStatisticsTest extends TestBase {
 		logger.info("Data Load End");
 		time();
 		logger.info("Analysis Start");
-		new CategorizationStatistics(index, docs).analysis();
+		new ClassificationStatistics(index, docs).analysis();
 		logger.info("Analysis End");
 		time();
 	}
