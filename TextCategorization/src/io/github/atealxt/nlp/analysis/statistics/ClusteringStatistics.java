@@ -22,9 +22,7 @@ public class ClusteringStatistics extends Statistics {
 
 		int dimension = 1, categorySize = index.getDocs().size();
 		List<Category> categories = calcSuperCategories(index, dimension);
-		List<Category> superCategories = categories;
-		while (categorySize != superCategories.size()) {
-			categories = superCategories;
+		while (categorySize != categories.size()) {
 			categorySize = categories.size();
 			if (logger.isDebugEnabled()) {
 				logger.debug("Dimension {} categories:", dimension);
@@ -40,7 +38,7 @@ public class ClusteringStatistics extends Statistics {
 				index.addDoc(new CategorizedDocument(name, docContent.toString()));
 			}
 			logger.info("Calculate iterate {} categories", dimension);
-			superCategories = calcSuperCategories(index, dimension);
+			categories = calcSuperCategories(index, dimension);
 		}
 	}
 
