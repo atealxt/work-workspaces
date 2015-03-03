@@ -18,7 +18,7 @@ public class TestDrawing {
 
 	@Test
 	public void test() throws IOException {
-		int itemCnt = 15, group = 3;
+		int itemCnt = 16, dimLevel = 3, groupByCnt = (int) Math.ceil((Math.log(itemCnt) / Math.log(dimLevel)));
 		int imagePadding = 5, width = 200, height = (int) (itemCnt * 40 / 3.0), lineMargin = 10, lineHeight = 3, tagLineWidth = 30;
 
 		BufferedImage bi = new BufferedImage(width, height, BufferedImage.TYPE_INT_ARGB);
@@ -42,10 +42,12 @@ public class TestDrawing {
 			if (lineYStart == 0) {
 				lineYStart = lineY;
 			}
-			if (i % (itemCnt/group) == 0) {
+			if (i % groupByCnt == 0 || i == itemCnt) {
 				g2.draw(new Line2D.Double(lineXTo, lineYStart, lineXTo, lineYEnd));
 				g2.draw(new Line2D.Double(lineXTo, (lineYStart + lineYEnd) / 2.0, lineXTo + tagLineWidth, (lineYStart + lineYEnd) / 2.0));
-				g2.drawString("Group " + iGroup++, lineXTo + tagLineWidth + imagePadding, (int)((lineYStart + lineYEnd) / 2.0 + fontMetrics.getAscent() / 2.0));
+				String groupName = "Group " + iGroup++;
+				int xGroupStart = lineXTo + tagLineWidth + imagePadding, yGroupStart = (int) ((lineYStart + lineYEnd) / 2.0 + stringHeight / 2.0);
+				g2.drawString(groupName, xGroupStart, yGroupStart);
 				lineYStart = 0;
 			}
 		}
