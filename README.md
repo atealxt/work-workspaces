@@ -6,7 +6,7 @@ Text (Document) Category machine learning program.
 
 ### [GoogleApp](GoogleApp)
 
-A simple CMS/Blog system, used to be my [blog](http://atealxt.appspot.com/) and hosted at [Google Code](http://code.google.com/p/herogravebygae/)
+A simple CMS/Blog system, used to be my blog and hosted at [Google Code](http://code.google.com/p/herogravebygae/)
 
 ### [easyFramework](easyFramework)
 
