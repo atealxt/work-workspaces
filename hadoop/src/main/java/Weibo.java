@@ -13,6 +13,12 @@ import org.apache.hadoop.mapreduce.Reducer;
 import org.apache.hadoop.mapreduce.lib.input.FileInputFormat;
 import org.apache.hadoop.mapreduce.lib.output.FileOutputFormat;
 
+/** 
+ *  MR read dataset file, list top K users whose have most posts.
+ *  Dataset file format:
+ *      ID NAME SID TIME CONTENT
+ *      ID NAME SID TIME CONTENT
+ */
 public class Weibo {
 
 	public static class TokenizerMapper extends Mapper<Object, Text, Text, IntWritable> {
@@ -52,8 +58,6 @@ public class Weibo {
 
 		@Override
 		protected void cleanup(Reducer<Text, IntWritable, Text, IntWritable>.Context context) throws IOException, InterruptedException {
-			System.out.println(topK.size());
-			System.out.println(topK);
 			for (Entry<Integer, Text> t : topK.descendingMap().entrySet()) {
 				result.set(t.getKey());
 				context.write(t.getValue(), result);
